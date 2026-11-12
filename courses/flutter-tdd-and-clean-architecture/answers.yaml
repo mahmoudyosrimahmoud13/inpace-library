@@ -1,0 +1,98 @@
+q1:
+  right:
+  - o8a8b5f
+  - oaa8bf1
+  why: Clean Architecture protects stable business logic by keeping infrastructure concerns outside the
+    inner layers.
+q2:
+  right:
+  - o05aa78
+  - o474e32
+  why: Entities belong to the stable domain and should represent business concepts rather than external
+    technologies.
+q3:
+  right:
+  - ob4a96a
+  - oa39c8e
+  why: The repository abstraction separates the domain's needs from the details of data retrieval.
+q4:
+  right:
+  - o1d89b6
+  - o5047b3
+  why: Well-isolated tests provide feedback about both behavior and the quality of component boundaries.
+q5:
+  right:
+  - o5a4eb8
+  - o1bd4b8
+  why: The repository is the application-facing data boundary that coordinates sources and normalizes
+    their failures.
+q6:
+  right:
+  - o6713bf
+  - o3a6491
+  why: Models isolate external representations while entities represent domain concepts.
+q7:
+  right:
+  - o0bb238
+  - o7d954b
+  why: Data-source abstractions create replaceable and testable infrastructure boundaries.
+q8:
+  right:
+  - o8a0fdf
+  - o4d0829
+  why: Failures provide a stable application-level representation while infrastructure exceptions remain
+    local to the data layer.
+q9:
+  right:
+  - ocbfaed
+  - o172b57
+  why: Repository unit tests should isolate repository policy from external network availability.
+q10:
+  right:
+  - o31f0e1
+  - o3510f2
+  why: The local data source handles persistence while the repository decides when cached data should
+    be used.
+q11:
+  right:
+  - o131e6f
+  - o082531
+  why: Remote data sources isolate communication with external APIs and convert responses into models.
+q12:
+  right:
+  - oe58911
+  - o6b9ef4
+  why: Fixtures provide deterministic external data for repeatable tests.
+q13:
+  right:
+  - o60592e
+  - o32690e
+  why: The architecture keeps external communication behind the repository and data-source boundaries.
+q14:
+  right:
+  - o2c42f1
+  - obf83e2
+  why: BLoC acts as presentation logic between user interaction and the application's use cases.
+q15:
+  right:
+  - o680960
+  - oabbbe3
+  why: Presentation input arrives in UI-oriented forms and should be converted or rejected before invoking
+    domain operations.
+q16:
+  right:
+  - o1f901f
+  - oc46358
+  why: BLoC tests are strongest when they verify observable state-transition behavior.
+q17:
+  right:
+  - o623bc8
+  - o2b7a4b
+  why: Dependency injection gives classes their dependencies from outside instead of making them construct
+    those dependencies internally.
+q18:
+  right:
+  - o06c400
+  - ofe9db9
+  why: Presentation logic often has a UI-scoped lifecycle, making a fresh instance appropriate for separate
+    contexts.

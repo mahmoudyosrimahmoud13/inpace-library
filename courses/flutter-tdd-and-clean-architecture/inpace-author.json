@@ -1,0 +1,10 @@
+{
+ "kind": "library-course",
+ "course": "flutter-tdd-and-clean-architecture",
+ "version": "1",
+ "hash": "d7c6320c1f509081c5f436afbf5568e37f25244ad8bf3199d1d2ee13a862d634",
+ "author": "4098b0aeda857b558680b26cc84129e122a7eab2839c10cc1d763477bd1630e2",
+ "name": "Mahmoud Yosri",
+ "at": "2026-11-12T11:02:52Z",
+ "sig": "10dd9ebaad2ce2551a289d0eac71775c0db881110eabdd75eb7ea6b628bfb5765037f4ae39a39a8af0ab7698f6816816c21820382bd0a19b4f5d279493ae0706"
+}
