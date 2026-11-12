@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: inPace app problems
+    url: https://github.com/mahmoudyosrimahmoud13/inpace/issues
+    about: Problems with the app itself go to the inPace repository.

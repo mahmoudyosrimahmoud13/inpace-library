@@ -1,0 +1,60 @@
+q1:
+  text: What does print("Hi") do?
+  show: 4
+  options:
+    a: Shows Hi on the screen
+    b: Displays the text Hi
+    c: Sends Hi to a printer
+    d: Saves Hi in a file
+    e: Deletes the word Hi
+    f: Asks the user to type Hi
+q2:
+  text: What does print(4 * 2) show?
+  show: 4
+  options:
+    a: "8"
+    b: The number eight
+    c: "42"
+    d: "6"
+    e: 4 * 2
+    f: "2"
+q3:
+  text: Which of these is text (a string) in Python?
+  show: 4
+  options:
+    a: '"hello"'
+    b: '"42"'
+    c: "42"
+    d: hello (without quotes)
+    e: "3.5"
+    f: print
+q4:
+  text: What does score = 10 do?
+  show: 4
+  options:
+    a: Puts 10 into a variable called score
+    b: Stores the value 10 under the name score
+    c: Checks whether score equals 10
+    d: Prints 10 on the screen
+    e: Deletes the variable score
+    f: Adds 10 to every number
+q5:
+  text: "groceries = [\"bread\", \"eggs\", \"milk\"]. What is groceries[0]?"
+  show: 4
+  options:
+    a: bread
+    b: The first item, bread
+    c: eggs
+    d: milk
+    e: "0"
+    f: An error
+q6:
+  text: How do you find out how many items a list has?
+  show: 4
+  options:
+    a: len(my_list)
+    b: Use the len() function on it
+    c: count(my_list)
+    d: my_list.size
+    e: size(my_list)
+    f: my_list[0]

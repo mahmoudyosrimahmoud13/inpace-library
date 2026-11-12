@@ -1,0 +1,75 @@
+name: Check a course submission
+
+# Runs when someone opens or edits a "Submit a course" issue. Checks the attached course and, if it's good,
+# opens a pull request that adds it. A maintainer reviews and merges it.
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: submission-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    if: contains(github.event.issue.labels.*.name, 'course-submission') && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: ${{ github.event.issue.number }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install inPace
+        run: pip install -q "git+https://github.com/mahmoudyosrimahmoud13/inpace.git" pyyaml
+      - name: Check the course
+        id: check
+        run: |
+          RESULT_FILE=result.json python scripts/library_tools.py submit "$GITHUB_EVENT_PATH"
+          echo "ok=$(python -c "import json;print(str(json.load(open('result.json'))['ok']).lower())")" >> "$GITHUB_OUTPUT"
+      - name: Tell the author what to fix
+        if: steps.check.outputs.ok != 'true'
+        run: |
+          python - <<'PY' > comment.md
+          import json
+          r = json.load(open("result.json"))
+          print("🐢 Thanks for sharing! I found something to fix before this course can go in the library:\n")
+          for p in r["problems"]:
+              print("- " + p.replace("\n", "\n  "))
+          print("\nEdit this issue when it's fixed (for example, attach a new course file), and I'll check again.")
+          PY
+          gh issue comment "$ISSUE" --body-file comment.md
+          gh issue edit "$ISSUE" --add-label "needs-changes" || true
+      - name: Open a pull request
+        if: steps.check.outputs.ok == 'true'
+        run: |
+          ID=$(python -c "import json;print(json.load(open('result.json'))['id'])")
+          TITLE=$(python -c "import json;print(json.load(open('result.json'))['title'])")
+          BRANCH="submission/issue-$ISSUE"
+          git config user.name "inpace-library-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add "courses/$ID"
+          git commit -m "Add course: $TITLE (closes #$ISSUE)" || { echo "nothing changed"; exit 0; }
+          git push -f origin "$BRANCH"
+          python - <<'PY' > pr.md
+          import json, os
+          r = json.load(open("result.json"))
+          print(f"Adds **{r['title']}** (version {r['version']}) by {r['author']}." + (" This is an update." if r["update"] else ""))
+          if r["downloads"]:
+              print("\nThe course points to these downloads. Please check they're the author's own and they work:")
+              for d in r["downloads"]:
+                  print(f"- [{d['title']}]({d['url']})" + (f" ({d['size']})" if d.get('size') else ""))
+          print(f"\nCloses #{os.environ['ISSUE']}")
+          PY
+          URL=$(gh pr list --head "$BRANCH" --json url --jq '.[0].url')
+          if [ -z "$URL" ]; then URL=$(gh pr create --head "$BRANCH" --title "Add course: $TITLE" --body-file pr.md); fi
+          gh issue comment "$ISSUE" --body "✅ The course looks good! I opened $URL. It goes live in the library when a maintainer merges it."
+          gh issue edit "$ISSUE" --remove-label "needs-changes" || true

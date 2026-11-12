@@ -1,0 +1,60 @@
+q1:
+  text: ماذا يفعل print("Hi")؟
+  show: 4
+  options:
+    a: يعرض Hi على الشاشة
+    b: يُظهر النص Hi
+    c: يرسل Hi إلى الطابعة
+    d: يحفظ Hi في ملف
+    e: يحذف الكلمة Hi
+    f: يطلب من المستخدم كتابة Hi
+q2:
+  text: ماذا يعرض print(4 * 2)؟
+  show: 4
+  options:
+    a: "8"
+    b: الرقم ثمانية
+    c: "42"
+    d: "6"
+    e: 4 * 2
+    f: "2"
+q3:
+  text: أيّ من هذه نص (string) في بايثون؟
+  show: 4
+  options:
+    a: '"hello"'
+    b: '"42"'
+    c: "42"
+    d: hello (بدون علامات تنصيص)
+    e: "3.5"
+    f: print
+q4:
+  text: ماذا يفعل score = 10؟
+  show: 4
+  options:
+    a: يضع 10 في متغير اسمه score
+    b: يخزّن القيمة 10 تحت الاسم score
+    c: يتحقق هل score يساوي 10
+    d: يطبع 10 على الشاشة
+    e: يحذف المتغير score
+    f: يضيف 10 إلى كل الأرقام
+q5:
+  text: "groceries = [\"bread\", \"eggs\", \"milk\"]. ما قيمة groceries[0]؟"
+  show: 4
+  options:
+    a: bread
+    b: العنصر الأول، bread
+    c: eggs
+    d: milk
+    e: "0"
+    f: خطأ
+q6:
+  text: كيف تعرف عدد العناصر في قائمة؟
+  show: 4
+  options:
+    a: len(my_list)
+    b: باستخدام الدالة len() عليها
+    c: count(my_list)
+    d: my_list.size
+    e: size(my_list)
+    f: my_list[0]

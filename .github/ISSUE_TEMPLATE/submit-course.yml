@@ -1,0 +1,72 @@
+name: Submit a course
+description: Share a course you made in inPace with everyone.
+title: "Course: "
+labels: ["course-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing! Make the course file in inPace with **My courses → More → Publish to the library…**,
+        then drop it into the **Course file** box below. A bot checks it within a few minutes and replies here.
+  - type: input
+    id: course_title
+    attributes:
+      label: Course title
+    validations:
+      required: true
+  - type: input
+    id: course_id
+    attributes:
+      label: Course id
+      description: Filled in by inPace. Leave it as it is.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One or two sentences about what people will learn.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - English
+        - Arabic
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: A few words separated by commas, like "python, web, beginner".
+  - type: dropdown
+    id: license
+    attributes:
+      label: License
+      description: What others may do with your course.
+      options:
+        - "CC-BY-4.0 (anyone can use and share it, and must credit you)"
+        - "CC-BY-SA-4.0 (like CC BY, and changed copies use the same license)"
+        - "CC0-1.0 (no rights reserved)"
+    validations:
+      required: true
+  - type: textarea
+    id: course_file
+    attributes:
+      label: Course file
+      description: Drag the .zip file from inPace here.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes for the reviewers (optional)
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Before you submit
+      options:
+        - label: I made this course myself (or with AI). It isn't copied from a book, a paid course or someone else's work.
+          required: true
+        - label: I understand everything in the library is public, including quiz answers.
+          required: true

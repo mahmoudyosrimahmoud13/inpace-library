@@ -1,0 +1,17 @@
+name: Report a course
+description: Something wrong with a course in the library (copied content, mistakes, broken links).
+title: "Report: "
+labels: ["report"]
+body:
+  - type: input
+    id: course
+    attributes:
+      label: Which course?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+    validations:
+      required: true

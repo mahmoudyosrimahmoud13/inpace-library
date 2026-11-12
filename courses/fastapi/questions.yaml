@@ -1,0 +1,362 @@
+q1:
+  text: What does FastAPI use to know which type a path or query parameter should be?
+  show: 4
+  options:
+    a: The type hints on the function's parameters
+    b: 'The annotations you write in the function signature, like book_id: int'
+    c: A separate XML schema file
+    d: The name of the function
+    e: Comments above the function
+    f: The order of the routes in the file
+q2:
+  text: Where are the interactive API docs of a FastAPI app by default?
+  show: 4
+  options:
+    a: /docs
+    b: At /docs (Swagger UI), with another style at /redoc
+    c: /admin
+    d: /help
+    e: Only in a README file you write yourself
+    f: /swagger.xml
+q3:
+  text: You have @app.get('/users/{user_id}') and @app.get('/users/me'). What should you do?
+  show: 4
+  options:
+    a: Declare /users/me before /users/{user_id}
+    b: Put the fixed path first, because FastAPI matches routes in order
+    c: Nothing, FastAPI picks the most specific path automatically
+    d: Rename user_id to me
+    e: Use POST for one of them
+    f: Put /users/{user_id} first
+q4:
+  text: 'A function is def search(q: str | None = None, limit: int = 10). Where does FastAPI read q and limit from?'
+  show: 4
+  options:
+    a: The query string, like ?q=dune&limit=5
+    b: From query parameters, because they aren't in the path and aren't models
+    c: The request body
+    d: Request headers
+    e: Cookies
+    f: The path, in the same order
+q5:
+  text: What does PATCH code usually do with model_dump(exclude_unset=True)?
+  show: 4
+  options:
+    a: Keeps only the fields the client actually sent
+    b: Avoids overwriting stored fields with None when they weren't sent
+    c: Deletes the fields that weren't sent
+    d: Removes every field with a default value from the database
+    e: Turns the model into JSON text
+    f: Validates the model a second time
+q6:
+  text: Why is Annotated[int, Query(ge=1)] preferred over int = Query(1, ge=1) in new code?
+  show: 4
+  options:
+    a: The type and the default stay in their normal places and the type can be reused
+    b: It works better with editors and type checkers, and you can make aliases like PageNumber
+    c: It makes requests faster
+    d: The older style no longer validates anything
+    e: Annotated is required for path parameters only
+    f: It turns the parameter into a body field
+q7:
+  text: What does response_model=UserOut do with extra fields like password_hash on the returned object?
+  show: 4
+  options:
+    a: Leaves them out of the response
+    b: Filters the output down to the fields defined in UserOut
+    c: Sends them anyway
+    d: Raises an error and returns 500 every time
+    e: Encrypts them
+    f: Moves them into the headers
+q8:
+  text: A user is logged in but tries to delete someone else's post. Which status code fits best?
+  show: 4
+  options:
+    a: 403 Forbidden
+    b: 403, because they are known but not allowed
+    c: 401 Unauthorized
+    d: 404 is the only correct answer
+    e: 422 Unprocessable Entity
+    f: 201 Created
+q9:
+  text: Inside a helper function you want to stop the request with a 404. What do you do?
+  show: 4
+  options:
+    a: raise HTTPException(status_code=404, detail='Not found')
+    b: Raise an HTTPException from the helper; FastAPI turns it into the response
+    c: return HTTPException(404)
+    d: print('404') and return None
+    e: sys.exit(404)
+    f: Change the route's status_code to 404
+q10:
+  text: Two dependencies in the same request both need get_current_user. How many times does FastAPI call it by
+    default?
+  show: 4
+  options:
+    a: Once, and the result is reused
+    b: One time per request, because results are cached within the request
+    c: Twice, once for each
+    d: Never, you must call it yourself
+    e: Once per endpoint in the whole app, forever
+    f: It depends on the order of imports
+q11:
+  text: What is the code after yield in a dependency used for?
+  show: 4
+  options:
+    a: Cleanup after the endpoint has run, like closing a database session
+    b: Running code once the response work is done, for example commit, rollback or close
+    c: Validating the request body
+    d: Choosing the status code
+    e: It never runs
+    f: Running before the endpoint starts
+q12:
+  text: How do you replace get_db with a test database in tests?
+  show: 4
+  options:
+    a: app.dependency_overrides[get_db] = get_test_db
+    b: Use dependency_overrides to point get_db at a test version
+    c: Edit get_db during the test run with sed
+    d: Delete the real database
+    e: Restart the server with a --test flag
+    f: Set app.debug = True
+q13:
+  text: Why does Base.metadata.create_all() stop being enough once an app is live?
+  show: 4
+  options:
+    a: It never changes existing tables, so schema changes need migrations
+    b: It only creates missing tables; adding or renaming columns needs a tool like Alembic
+    c: It deletes all data every time
+    d: It only works with SQLite
+    e: It is too slow to run
+    f: FastAPI blocks it in production
+q14:
+  text: 100 books are listed and each one reads book.author.name, causing 101 queries. What fixes it?
+  show: 4
+  options:
+    a: Eager load with select(Book).options(selectinload(Book.author))
+    b: Load the authors up front with selectinload or joinedload
+    c: Add more database workers
+    d: Use time.sleep between queries
+    e: Switch from GET to POST
+    f: Remove the response_model
+q15:
+  text: In async SQLAlchemy, what happens if you access a relationship that wasn't loaded?
+  show: 4
+  options:
+    a: It raises an error instead of quietly running a hidden query
+    b: You get an error, so you must load it up front with something like selectinload
+    c: It always returns None silently
+    d: It loads it with no problem, just like sync code
+    e: The server restarts
+    f: It deletes the relationship
+q16:
+  text: How should user passwords be stored?
+  show: 4
+  options:
+    a: As a slow salted hash, for example Argon2 or bcrypt
+    b: Hashed with a password hashing library like pwdlib or passlib
+    c: As plain text so you can email them back
+    d: Encrypted with a key in the code
+    e: Base64 encoded
+    f: Hashed once with plain MD5
+q17:
+  text: Which statement about JWT access tokens is true?
+  show: 4
+  options:
+    a: They are signed, not encrypted, so anyone can read the payload
+    b: Their content can be read by anyone, so never put secrets inside
+    c: They are encrypted and fully private
+    d: They can never expire
+    e: The server must store every token to check it
+    f: They let the client choose the algorithm safely
+q18:
+  text: A front end at https://app.example.com can't call your API from the browser. What do you configure?
+  show: 4
+  options:
+    a: CORSMiddleware with allow_origins including https://app.example.com
+    b: CORS, by allowing that origin in the API
+    c: A bigger database pool
+    d: OAuth2 scopes
+    e: A 429 status code
+    f: response_model_exclude_none
+q19:
+  text: An async def endpoint calls requests.get() (a blocking library). What's the effect?
+  show: 4
+  options:
+    a: It blocks the event loop, so other requests on that worker wait
+    b: Every other request on that worker is stuck until it finishes
+    c: Nothing, FastAPI moves it to a thread automatically
+    d: The request is cancelled
+    e: It runs twice as fast
+    f: FastAPI raises a SyntaxError
+q20:
+  text: Where should you load a large ML model so it isn't loaded on every request?
+  show: 4
+  options:
+    a: In the lifespan function, before yield
+    b: Once at startup in lifespan, stored on app.state
+    c: Inside each endpoint
+    d: In a BackgroundTask
+    e: In a response_model
+    f: In an exception handler
+q21:
+  text: When is BackgroundTasks not a good fit?
+  show: 4
+  options:
+    a: For important or long jobs that need retries and must survive a restart
+    b: When the work is heavy or must not be lost; use a task queue like Celery or RQ
+    c: For sending one quick email after signup
+    d: For writing a small audit log line
+    e: Whenever the endpoint returns 201
+    f: When the endpoint uses def instead of async def
+q22:
+  text: Why use poolclass=StaticPool with an in-memory SQLite database in tests?
+  show: 4
+  options:
+    a: So every session shares one connection and sees the same tables
+    b: Because each new connection to sqlite:// would get its own empty database
+    c: It makes SQLite encrypt the data
+    d: It's required by TestClient
+    e: It makes tests run in parallel
+    f: It turns SQLite into PostgreSQL
+q23:
+  text: Your app loads settings in lifespan. How do you make sure it runs in a TestClient test?
+  show: 4
+  options:
+    a: 'Use the client as a context manager: with TestClient(app) as client:'
+    b: Open TestClient with a with block so startup and shutdown run
+    c: Call app.startup() manually
+    d: Lifespan always runs, nothing to do
+    e: Mark the test with @pytest.mark.lifespan
+    f: Set app.debug = True
+q24:
+  text: What's the main reason to override get_current_user in tests?
+  show: 4
+  options:
+    a: To test protected endpoints without real logins or tokens
+    b: So each test can choose who is logged in
+    c: To make the API faster in production
+    d: Because tokens can't be created in tests at all
+    e: To hide the endpoint from /docs
+    f: To skip validation
+q25:
+  text: What does @lru_cache on get_settings() achieve?
+  show: 4
+  options:
+    a: The settings and .env file are read once and reused
+    b: Settings are created a single time instead of on every request
+    c: It encrypts the settings
+    d: It reloads the .env file on every request
+    e: It hides settings from tests
+    f: It makes settings optional
+q26:
+  text: Which change to an API needs a new version (like /v2)?
+  show: 4
+  options:
+    a: Renaming or removing a field clients already use
+    b: A breaking change, such as changing what a field means
+    c: Adding a new optional field
+    d: Adding a new endpoint
+    e: Fixing a typo in a description
+    f: Adding examples to the docs
+q27:
+  text: What does APIRouter(prefix='/books', tags=['books']) give you?
+  show: 4
+  options:
+    a: All its routes start with /books and are grouped under 'books' in /docs
+    b: A shared path prefix and a docs group for that part of the API
+    c: A separate server on another port
+    d: Automatic database tables for books
+    e: Login protection for every route
+    f: A second FastAPI app with its own docs
+q28:
+  text: You run 4 workers and a WebSocket chat keeps users in an in-memory list. What goes wrong?
+  show: 4
+  options:
+    a: Users connected to different workers don't get each other's messages
+    b: Each process only knows its own connections, so you need something shared like Redis pub/sub
+    c: Nothing, workers share memory automatically
+    d: WebSockets stop working with more than one worker at all
+    e: Messages are sent four times to everyone
+    f: The server switches to HTTP/1.0
+q29:
+  text: Why is cursor (keyset) pagination better than OFFSET for big tables?
+  show: 4
+  options:
+    a: It stays fast and doesn't skip or repeat rows when data changes
+    b: It continues after the last id instead of counting past many rows
+    c: It returns all rows at once
+    d: It needs no ORDER BY
+    e: It only works with MongoDB
+    f: It caches every page forever
+q30:
+  text: What problem do idempotency keys solve?
+  show: 4
+  options:
+    a: A retried request (like a payment) running twice
+    b: Repeated POSTs with the same key return the first result instead of doing the work again
+    c: Slow database queries
+    d: CORS errors in the browser
+    e: Expired JWT tokens
+    f: Missing OpenAPI examples
+q31:
+  text: Which of these belongs in a production start command?
+  show: 4
+  options:
+    a: fastapi run app/main.py --workers 4
+    b: uvicorn app.main:app --workers 4 without --reload
+    c: fastapi dev app/main.py
+    d: uvicorn app.main:app --reload
+    e: python main.py --debug
+    f: pytest app/main.py
+q32:
+  text: Your API runs behind Nginx doing HTTPS, but request.url shows http:// and client IPs are the proxy's. What
+    fixes it?
+  show: 4
+  options:
+    a: Run Uvicorn with --proxy-headers and allow the proxy in --forwarded-allow-ips
+    b: Trust the proxy's forwarded headers in Uvicorn
+    c: Add more workers
+    d: Turn off CORS
+    e: Use a StreamingResponse
+    f: Raise HTTPException(301)
+q33:
+  text: For latency, which numbers tell you most about real users' experience?
+  show: 4
+  options:
+    a: p95 and p99 latency
+    b: High percentiles, because averages hide the slow requests
+    c: Only the average
+    d: The fastest request of the day
+    e: The number of endpoints
+    f: The size of the Docker image
+q34:
+  text: A reader tries to borrow a book that's already on loan. What's a fitting response?
+  show: 4
+  options:
+    a: 409 Conflict with a clear message
+    b: A 409, because the request conflicts with the current state of the book
+    c: 200 OK and borrow it anyway
+    d: 500 Internal Server Error
+    e: 422 Unprocessable Entity, always
+    f: 301 redirect to another book
+q35:
+  text: Where should the rule 'only librarians can add books' live in a FastAPI app?
+  show: 4
+  options:
+    a: In a dependency like require_role('librarian') attached to those routes
+    b: In a reusable permission dependency on the router or endpoint
+    c: In the Pydantic output model
+    d: In the Dockerfile
+    e: In the CORS settings
+    f: In a comment so developers remember
+q36:
+  text: What makes the project easy for someone else to run?
+  show: 4
+  options:
+    a: docker compose up plus a README with the steps
+    b: A compose file with the database and clear setup instructions
+    c: Hard-coding your own passwords in the code
+    d: Committing your .env file with real secrets
+    e: Only running it on your laptop
+    f: Deleting the tests

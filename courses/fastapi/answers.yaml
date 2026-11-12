@@ -1,0 +1,180 @@
+q1:
+  right:
+  - a
+  - b
+  why: FastAPI reads the type hints in the function signature to convert and validate parameters.
+q2:
+  right:
+  - a
+  - b
+  why: Every FastAPI app serves Swagger UI at /docs and ReDoc at /redoc, generated from /openapi.json.
+q3:
+  right:
+  - a
+  - b
+  why: Routes are matched in the order they're declared, so the fixed path must come first.
+q4:
+  right:
+  - a
+  - b
+  why: Simple-typed parameters that aren't part of the path are query parameters.
+q5:
+  right:
+  - a
+  - b
+  why: exclude_unset leaves out fields the client didn't include, which is exactly what a partial update needs.
+q6:
+  right:
+  - a
+  - b
+  why: Annotated keeps metadata separate from the default value and makes types reusable.
+q7:
+  right:
+  - a
+  - b
+  why: The response model filters and validates the output, so fields not in the model are dropped.
+q8:
+  right:
+  - a
+  - b
+  why: 401 means not authenticated; 403 means authenticated but not permitted.
+q9:
+  right:
+  - a
+  - b
+  why: HTTPException must be raised, and it can be raised from anywhere in the call stack.
+q10:
+  right:
+  - a
+  - b
+  why: Within one request a dependency's result is cached unless use_cache=False.
+q11:
+  right:
+  - a
+  - b
+  why: Code after yield runs after the endpoint, which makes it ideal for cleanup.
+q12:
+  right:
+  - a
+  - b
+  why: dependency_overrides maps the original dependency to a replacement for the whole app.
+q13:
+  right:
+  - a
+  - b
+  why: create_all creates missing tables but never alters existing ones.
+q14:
+  right:
+  - a
+  - b
+  why: Eager loading fetches related rows in one extra query (or a join) instead of one per row.
+q15:
+  right:
+  - a
+  - b
+  why: Lazy loading would need implicit IO, which async SQLAlchemy doesn't allow, so it raises.
+q16:
+  right:
+  - a
+  - b
+  why: Password hashes must be slow and salted so stolen databases are hard to crack.
+q17:
+  right:
+  - a
+  - b
+  why: JWTs are signed to prevent tampering, but the payload is only base64-encoded.
+q18:
+  right:
+  - a
+  - b
+  why: Browsers enforce CORS; the API must list allowed origins.
+q19:
+  right:
+  - a
+  - b
+  why: Only plain def endpoints are run in a thread pool; blocking calls inside async def block the loop.
+q20:
+  right:
+  - a
+  - b
+  why: Lifespan runs once at startup; keep shared resources on app.state.
+q21:
+  right:
+  - a
+  - b
+  why: BackgroundTasks run in-process after the response, with no retries or persistence.
+q22:
+  right:
+  - a
+  - b
+  why: An in-memory SQLite database lives in a single connection; StaticPool reuses it.
+q23:
+  right:
+  - a
+  - b
+  why: TestClient runs lifespan events only inside a with block.
+q24:
+  right:
+  - a
+  - b
+  why: Overrides let tests pick the current user directly.
+q25:
+  right:
+  - a
+  - b
+  why: lru_cache caches the Settings object, so it isn't rebuilt for each request.
+q26:
+  right:
+  - a
+  - b
+  why: Only breaking changes require a new version; additive changes don't.
+q27:
+  right:
+  - a
+  - b
+  why: prefix is added to each path and tags group the operations in the docs.
+q28:
+  right:
+  - a
+  - b
+  why: In-memory state is per process; broadcasting across processes needs a shared broker.
+q29:
+  right:
+  - a
+  - b
+  why: Keyset pagination uses an indexed WHERE id > last, avoiding large OFFSET scans and shifting pages.
+q30:
+  right:
+  - a
+  - b
+  why: Idempotency keys make retries safe for non-idempotent operations.
+q31:
+  right:
+  - a
+  - b
+  why: dev and --reload are for development only.
+q32:
+  right:
+  - a
+  - b
+  why: Uvicorn reads X-Forwarded-* headers only from proxies it trusts.
+q33:
+  right:
+  - a
+  - b
+  why: Tail latency (p95/p99) shows how slow it gets for the unlucky users.
+q34:
+  right:
+  - a
+  - b
+  why: 409 signals a conflict with the resource's current state.
+q35:
+  right:
+  - a
+  - b
+  why: Permission checks belong in dependencies that run before the endpoint.
+q36:
+  right:
+  - a
+  - b
+  why: Containers and documentation make the app reproducible without leaking secrets.

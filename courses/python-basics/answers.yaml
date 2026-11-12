@@ -1,0 +1,6 @@
+q1: {right: [a, b], why: print() displays whatever is inside the brackets on the screen.}
+q2: {right: [a, b], why: "* means multiply, and 4 times 2 is 8."}
+q3: {right: [a, b], why: Anything inside quotes is text, even if it looks like a number.}
+q4: {right: [a, b], why: "A single = puts a value into a variable."}
+q5: {right: [a, b], why: Lists count from 0, so item 0 is the first one.}
+q6: {right: [a, b], why: len() gives the number of items.}

@@ -1,0 +1,52 @@
+id: python-basics-ar
+title: أساسيات بايثون
+version: 1
+language: ar
+description: دورة قصيرة للبداية. تعرّف على بايثون، واكتب أول سطور برمجية، واستخدم المتغيرات والقوائم.
+modules:
+  - id: m1
+    title: أول خطوة مع بايثون
+    lessons:
+      - id: m1-l1
+        title: ما هي بايثون؟
+        file: lessons/m1-l1.md
+        minutes: 10
+      - id: m1-l2
+        title: الطباعة والحساب البسيط
+        file: lessons/m1-l2.md
+        minutes: 15
+    requires:
+      - id: m1-practical
+        type: practical
+        prompt: اكتب برنامجًا صغيرًا يطبع اسمك وناتج 7 * 6. احفظه كملف ‎.py (أو خذ لقطة شاشة) وأضفه هنا.
+      - id: m1-explain
+        type: explain
+        prompt: بكلماتك أنت، ماذا تفعل print()، ولماذا يحتاجها البرنامج؟
+        min_words: 30
+      - id: m1-quiz
+        type: quiz
+        questions: [q1, q2, q3]
+        pass: 70
+  - id: m2
+    title: المتغيرات والقوائم
+    lessons:
+      - id: m2-l1
+        title: المتغيرات
+        file: lessons/m2-l1.md
+        minutes: 15
+      - id: m2-l2
+        title: القوائم
+        file: lessons/m2-l2.md
+        minutes: 20
+    requires:
+      - id: m2-practical
+        type: practical
+        prompt: اكتب قائمة بثلاثة أشياء تريد تعلّمها هذا العام، ثم اطبع القائمة وعدد عناصرها. أضف ملفك أو لقطة شاشة.
+      - id: m2-explain
+        type: explain
+        prompt: اشرح الفرق بين المتغير والقائمة، مع مثال من حياتك اليومية.
+        min_words: 30
+      - id: m2-quiz
+        type: quiz
+        questions: [q4, q5, q6]
+        pass: 70

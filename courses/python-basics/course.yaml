@@ -1,0 +1,52 @@
+id: python-basics
+title: Python Basics
+version: 1
+language: en
+description: A short starter course. Learn what Python is, write your first lines, and use variables and lists.
+modules:
+  - id: m1
+    title: Your first Python
+    lessons:
+      - id: m1-l1
+        title: What is Python?
+        file: lessons/m1-l1.md
+        minutes: 10
+      - id: m1-l2
+        title: Printing and simple math
+        file: lessons/m1-l2.md
+        minutes: 15
+    requires:
+      - id: m1-practical
+        type: practical
+        prompt: Write a small program that prints your name and the result of 7 * 6. Save it as a .py file (or take a screenshot) and add it here.
+      - id: m1-explain
+        type: explain
+        prompt: In your own words, what does print() do, and why would a program need it?
+        min_words: 30
+      - id: m1-quiz
+        type: quiz
+        questions: [q1, q2, q3]
+        pass: 70
+  - id: m2
+    title: Variables and lists
+    lessons:
+      - id: m2-l1
+        title: Variables
+        file: lessons/m2-l1.md
+        minutes: 15
+      - id: m2-l2
+        title: Lists
+        file: lessons/m2-l2.md
+        minutes: 20
+    requires:
+      - id: m2-practical
+        type: practical
+        prompt: Make a list of 3 things you want to learn this year, then print the list and how many items it has. Add your file or a screenshot.
+      - id: m2-explain
+        type: explain
+        prompt: Explain the difference between a variable and a list, with an example from your daily life.
+        min_words: 30
+      - id: m2-quiz
+        type: quiz
+        questions: [q4, q5, q6]
+        pass: 70

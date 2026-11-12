@@ -1,0 +1,394 @@
+id: fastapi
+title: 'FastAPI: from first API to production'
+version: 1
+language: en
+description: 'Build real web APIs with FastAPI: validation, databases, logins, async, testing, WebSockets, Docker
+  and monitoring. Ends with a portfolio project.'
+modules:
+- id: m1
+  title: Getting started
+  lessons:
+  - id: m1-l1
+    title: What FastAPI is
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Install and run your first app
+    file: lessons/m1-l2.md
+    minutes: 15
+  - id: m1-l3
+    title: Path operations and HTTP methods
+    file: lessons/m1-l3.md
+    minutes: 15
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build a small API with at least four path operations (GET list, GET one, POST, DELETE) for something
+      you like (books, movies, recipes). Run it, open /docs, and add a screenshot of the docs page or your main.py.
+  - id: m1-explain
+    type: explain
+    prompt: Explain what /docs is, where its information comes from, and why that's useful for the people who will
+      use your API.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    pass: 70
+- id: m2
+  title: Parameters and validation
+  lessons:
+  - id: m2-l1
+    title: Path and query parameters
+    file: lessons/m2-l1.md
+    minutes: 20
+  - id: m2-l2
+    title: Validation with Annotated, Query and Path
+    file: lessons/m2-l2.md
+    minutes: 20
+  - id: m2-l3
+    title: Request bodies with Pydantic models
+    file: lessons/m2-l3.md
+    minutes: 25
+  - id: m2-l4
+    title: Headers, cookies, forms and files
+    file: lessons/m2-l4.md
+    minutes: 20
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Build a POST /signup endpoint with a Pydantic model that checks: name 2 to 60 characters, a valid email,
+      age between 13 and 120, and a username without spaces. Send one good request and two bad ones from /docs,
+      and add screenshots of the 422 errors.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain how FastAPI decides whether a parameter comes from the path, the query string, or the request
+      body. Give one example of each.
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q4
+    - q5
+    - q6
+    pass: 70
+- id: m3
+  title: Responses and errors
+  lessons:
+  - id: m3-l1
+    title: 'Response models: control what goes out'
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: Status codes and HTTPException
+    file: lessons/m3-l2.md
+    minutes: 15
+  - id: m3-l3
+    title: Custom error handlers and other responses
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Add a books API with separate BookCreate and BookOut models, a 404 for missing books, a 409 for duplicate
+      titles using a custom exception and handler, and one endpoint that returns a file. Add your code or screenshots
+      of each response.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why an API should use a separate output model (like UserOut) instead of returning the database
+      object directly. What could go wrong without it?
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q7
+    - q8
+    - q9
+    pass: 70
+- id: m4
+  title: Dependency injection
+  lessons:
+  - id: m4-l1
+    title: 'Depends: share logic between endpoints'
+    file: lessons/m4-l1.md
+    minutes: 20
+  - id: m4-l2
+    title: Classes, sub-dependencies and where to attach them
+    file: lessons/m4-l2.md
+    minutes: 20
+  - id: m4-l3
+    title: Dependencies with yield, and overriding them
+    file: lessons/m4-l3.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Write three dependencies: pagination (skip, limit up to 100), get_current_user from an X-Token header,
+      and require_admin built on get_current_user. Protect a DELETE endpoint with require_admin. Add your code and
+      a screenshot of a 401 and a 403.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain dependency injection in FastAPI to a friend who has never heard of it. Why is it better than
+      calling the same helper function at the top of every endpoint?
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m5
+  title: Databases with SQLAlchemy
+  lessons:
+  - id: m5-l1
+    title: Models and sessions (SQLAlchemy 2.0)
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: Async databases and the N+1 problem
+    file: lessons/m5-l2.md
+    minutes: 25
+  - id: m5-l3
+    title: Migrations with Alembic
+    file: lessons/m5-l3.md
+    minutes: 20
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Connect your books API to a database with SQLAlchemy: authors and books with a relationship, full CRUD,
+      and an Alembic migration that adds one new column. Use selectinload where you return books with their authors.
+      Add your models file and the migration file.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain the N+1 query problem in your own words and how selectinload or joinedload fixes it.
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m6
+  title: Security and authentication
+  lessons:
+  - id: m6-l1
+    title: Passwords and the OAuth2 password flow
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: JWT tokens and the current user
+    file: lessons/m6-l2.md
+    minutes: 25
+  - id: m6-l3
+    title: Permissions, CORS and other protections
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Add real login to your API: users with hashed passwords, a /token endpoint, JWT access tokens, a /me
+      endpoint, and an ownership check so users can only edit their own books. Show in /docs (with Authorize) that
+      another user''s book returns 404.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain the difference between authentication and authorization, and give one example of each from your
+      API.
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    pass: 70
+- id: m7
+  title: Async, background work and app lifecycle
+  lessons:
+  - id: m7-l1
+    title: 'async def vs def: don''t block the event loop'
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: Background tasks and job queues
+    file: lessons/m7-l2.md
+    minutes: 15
+  - id: m7-l3
+    title: Lifespan, app state and middleware
+    file: lessons/m7-l3.md
+    minutes: 20
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Add a lifespan that creates one shared httpx.AsyncClient, an endpoint that calls two outside APIs at
+      the same time with asyncio.gather, a middleware that adds X-Request-ID and X-Process-Time headers, and a background
+      task that writes an audit line after each signup. Add your code and a screenshot of the headers.
+  - id: m7-explain
+    type: explain
+    prompt: Explain what happens to other users when an async def endpoint calls time.sleep(5), and two different
+      ways to fix it.
+    min_words: 40
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q19
+    - q20
+    - q21
+    pass: 70
+- id: m8
+  title: Testing
+  lessons:
+  - id: m8-l1
+    title: Testing with TestClient and pytest
+    file: lessons/m8-l1.md
+    minutes: 20
+  - id: m8-l2
+    title: A test database and fake users
+    file: lessons/m8-l2.md
+    minutes: 25
+  - id: m8-l3
+    title: Async tests
+    file: lessons/m8-l3.md
+    minutes: 15
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Write a test suite for your API with a conftest.py that uses an in-memory database and overrides get_current_user.
+      Cover at least: create, read, a 404, a 422, and a permission check. Add a screenshot of pytest passing.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain how dependency_overrides makes FastAPI apps easier to test, using your own tests as the example.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m9
+  title: Structuring bigger apps
+  lessons:
+  - id: m9-l1
+    title: Routers and project layout
+    file: lessons/m9-l1.md
+    minutes: 20
+  - id: m9-l2
+    title: Settings and configuration
+    file: lessons/m9-l2.md
+    minutes: 15
+  - id: m9-l3
+    title: A great OpenAPI and API versioning
+    file: lessons/m9-l3.md
+    minutes: 20
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'Restructure your API into the layout from this module: routers, schemas, models, services, deps and
+      config with pydantic-settings and a .env.example. Add tags, summaries and examples so /docs reads well. Add
+      a screenshot of your folder tree and of /docs.'
+  - id: m9-explain
+    type: explain
+    prompt: Explain why business logic should live in service functions instead of directly inside the endpoint
+      functions.
+    min_words: 40
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    pass: 70
+- id: m10
+  title: Real-time and advanced HTTP
+  lessons:
+  - id: m10-l1
+    title: WebSockets
+    file: lessons/m10-l1.md
+    minutes: 25
+  - id: m10-l2
+    title: Streaming and Server-Sent Events
+    file: lessons/m10-l2.md
+    minutes: 20
+  - id: m10-l3
+    title: Pagination, caching and idempotency
+    file: lessons/m10-l3.md
+    minutes: 20
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'Add a live feature to your API: a WebSocket room or an SSE endpoint that reports progress of a background
+      job, plus cursor pagination on your biggest list endpoint. Add your code and a short screen recording or screenshots
+      of it working.'
+  - id: m10-explain
+    type: explain
+    prompt: Compare WebSockets and Server-Sent Events. Which would you pick for a live progress bar, and which for
+      a chat? Why?
+    min_words: 40
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m11
+  title: Production and deployment
+  lessons:
+  - id: m11-l1
+    title: Running FastAPI in production
+    file: lessons/m11-l1.md
+    minutes: 20
+  - id: m11-l2
+    title: Docker
+    file: lessons/m11-l2.md
+    minutes: 20
+  - id: m11-l3
+    title: Logging, metrics and tracing
+    file: lessons/m11-l3.md
+    minutes: 20
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: 'Ship it: write a Dockerfile and a compose.yaml with PostgreSQL for your API, add /health and /ready,
+      JSON logs with a request id, and run migrations as a deploy step. Add your Dockerfile, compose.yaml and a
+      screenshot of the app running in containers.'
+  - id: m11-explain
+    type: explain
+    prompt: Write the launch checklist you would use before putting your API in front of real users, and explain
+      the one item you think people skip most often.
+    min_words: 40
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    pass: 70
+- id: m12
+  title: Final project
+  lessons:
+  - id: m12-l1
+    title: Build the Library API
+    file: lessons/m12-l1.md
+    minutes: 30
+  requires:
+  - id: m12-practical
+    type: practical
+    prompt: Build the Library API from the final project lesson and push it to a public GitHub repository. Add the
+      repository link (or a zip of the code) and a screenshot of /docs and of your tests passing.
+  - id: m12-explain
+    type: explain
+    prompt: Describe the hardest problem you hit while building the final project and exactly how you solved it.
+      What would you do differently next time?
+    min_words: 40
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - q34
+    - q35
+    - q36
+    pass: 70
