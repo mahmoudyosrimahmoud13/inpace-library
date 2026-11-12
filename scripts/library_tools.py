@@ -223,74 +223,137 @@ def build(out: Path) -> None:
     print(f"Built {len(entries)} courses into {out}")
 
 
+SITE_MAIN = "https://mahmoudyosrimahmoud13.github.io/inPace/"
+FORM = "https://github.com/mahmoudyosrimahmoud13/inpace-library/issues/new?template=submit-course.yml"
+REPORT = "https://github.com/mahmoudyosrimahmoud13/inpace-library/issues/new?template=report.yml"
+
+
+def t(en: str, ar: str) -> str:
+    """Both languages; the page shows the one the visitor picked."""
+    return f'<span class="en">{en}</span><span class="ar">{ar}</span>'
+
+
 def page(entries: list[dict]) -> str:
     e = html.escape
     cards = []
     for c in entries:
         cover = (f'<img src="{e(c["cover"])}" alt="" loading="lazy">' if c["cover"]
                  else f'<span class="blank">{e(c["title"][:1].upper())}</span>')
-        tags = "".join(f"<span class=chip>{e(t)}</span>" for t in c["tags"][:5])
+        tags = "".join(f"<span class=chip>{e(x)}</span>" for x in c["tags"][:5])
         dl = ""
         if c["downloads"]:
             d = c["downloads"][0]
-            dl = f'<p class="dl">Videos download separately{" · " + e(d["size"]) if d.get("size") else ""}</p>'
+            size = " · " + e(d["size"]) if d.get("size") else ""
+            dl = f'<p class="dl">🎬 {t("Videos download separately", "الفيديوهات تُحمّل منفصلة")}{size}</p>'
         words = " ".join([c["id"], c["title"], c["description"], c["author"]["name"]] + c["tags"]).lower()
-        cards.append(f'''<article class="card" id="{e(c["id"])}" data-q="{e(words)}" dir="auto">
+        lang = t("Arabic", "العربية") if c["language"] == "ar" else t("English", "الإنجليزية")
+        tick = " ✓" if c["author"]["verified"] else ""
+        cards.append(f"""<article class="card" id="{e(c["id"])}" data-q="{e(words)}">
   {cover}
   <div class="body">
-    <h2>{e(c["title"])}</h2>
-    <p>{e(c["description"])}</p>
-    <p class="meta">{c["modules"]} modules · {c["lessons"]} lessons · {"العربية" if c["language"] == "ar" else "English"}
-      · by {e(c["author"]["name"])}{" ✓" if c["author"]["verified"] else ""} · {e(c["license"] or "")}</p>
+    <h2 dir="auto">{e(c["title"])}</h2>
+    <p dir="auto">{e(c["description"])}</p>
+    <p class="meta">{c["modules"]} {t("modules", "وحدة")} · {c["lessons"]} {t("lessons", "درس")} · {lang}
+      · {t("by", "من إعداد")} <bdi>{e(c["author"]["name"])}</bdi>{tick} · <bdi>{e(c["license"] or "")}</bdi></p>
     {dl}<p>{tags}</p>
-    <p class="actions"><a class="btn primary" href="{e(c["link"])}">Add to inPace</a>
-      <button class="btn" type="button" data-copy="{e(c["link"])}">Copy link</button>
-      <a class="btn" href="{e(c["pack"])}" download>Download</a></p>
+    <p class="actions"><a class="btn primary" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a>
+      <button class="btn" type="button" data-copy="{e(c["link"])}">{t("Copy link", "انسخ الرابط")}</button>
+      <a class="btn quiet" href="{e(c["pack"])}" download>{t("Download file", "حمّل الملف")}</a></p>
   </div>
-</article>''')
-    return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+</article>""")
+    return f"""<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>inPace course library</title>
-<meta name="description" content="Free courses made and shared by inPace learners.">
-<link rel="icon" href="https://mahmoudyosrimahmoud13.github.io/inPace/assets/icon.svg" type="image/svg+xml">
+<meta name="description" content="Free courses made and shared by inPace learners. Add one to inPace with a click.">
+<link rel="icon" href="{SITE_MAIN}assets/icon.svg" type="image/svg+xml">
+<script>
+  (function () {{
+    var lang = null;
+    try {{ lang = localStorage.getItem("inpace-site-lang"); }} catch (e) {{}}
+    if (!lang) lang = (navigator.language || "").toLowerCase().indexOf("ar") === 0 ? "ar" : "en";
+    document.documentElement.lang = lang; document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  }})();
+</script>
 <style>
-:root {{ --ink:#111; --paper:#F7F3EA; --surface:#fff; --sun:#FFD43B; --muted:#4F4A40; color-scheme: light; }}
-@media (prefers-color-scheme: dark) {{ :root {{ --ink:#F2EDE2; --paper:#12110E; --surface:#1C1A15; --muted:#B5AD9C; color-scheme: dark; }} }}
+:root {{ --ink:#111; --paper:#F7F3EA; --cream:#F2EDE2; --surface:#fff; --sun:#FFD43B; --muted:#4F4A40; color-scheme: light; }}
+@media (prefers-color-scheme: dark) {{ :root {{ --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --muted:#B5AD9C; color-scheme: dark; }} }}
 * {{ box-sizing: border-box; }}
-body {{ margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 system-ui, sans-serif; }}
-header {{ padding: 2.5rem 16px 1rem; max-width: 1000px; margin: 0 auto; }}
-h1 {{ font-size: clamp(2rem, 6vw, 3.2rem); margin: 0 0 .4rem; line-height:1.1; }}
-header p {{ color: var(--muted); max-width: 40em; }}
+html[lang=ar] .en, html[lang=en] .ar {{ display: none !important; }}
+body {{ margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 system-ui, "Segoe UI", Tahoma, sans-serif; }}
+a {{ color: inherit; }}
+.top {{ position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 1rem; padding: .7rem 16px; background: var(--cream); border-bottom: 3px solid var(--ink); }}
+.brand {{ display: flex; align-items: center; gap: .5rem; text-decoration: none; font-size: 1.35rem; font-weight: 800; }}
+.brand span {{ font-weight: 300; }}
+.top nav {{ margin-inline-start: auto; display: flex; gap: 1rem; font-weight: 600; }}
+.top nav a {{ text-decoration: none; }}
+.lang {{ font: inherit; font-weight: 700; cursor: pointer; background: var(--surface); color: var(--ink); border: 3px solid var(--ink); padding: .25rem .8rem; }}
+@media (max-width: 640px) {{ .top nav {{ display: none; }} .lang {{ margin-inline-start: auto; }} }}
+header, main, .share {{ max-width: 1000px; margin: 0 auto; padding-inline: 16px; }}
+header {{ padding-block: 2.5rem 1rem; }}
+h1 {{ font-size: clamp(2rem, 6vw, 3.2rem); margin: 0 0 .5rem; line-height: 1.15; }}
+header p {{ color: var(--muted); max-width: 42em; margin: 0 0 1.2rem; }}
 input {{ font: inherit; width: 100%; max-width: 480px; padding: .7rem .9rem; border: 3px solid var(--ink); background: var(--surface); color: var(--ink); }}
-main {{ max-width: 1000px; margin: 0 auto; padding: 1rem 16px 4rem; display: grid; gap: 1.2rem; }}
-.card {{ display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 1.2rem; background: var(--surface); border: 3px solid var(--ink);
-  box-shadow: 6px 6px 0 var(--ink); padding: 1.2rem; }}
+main {{ padding-block: 1rem 3rem; display: grid; gap: 1.2rem; }}
+.card {{ display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 1.2rem; background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 1.2rem; }}
+[dir=rtl] .card {{ box-shadow: -6px 6px 0 var(--ink); }}
 .card:target {{ box-shadow: 6px 6px 0 var(--sun); }}
 .card img, .blank {{ width: 100%; aspect-ratio: 16/10; object-fit: cover; border: 2px solid var(--ink); }}
 .blank {{ display: grid; place-items: center; font-size: 3rem; font-weight: 800; background: var(--sun); color: #111; }}
 h2 {{ margin: 0 0 .3rem; font-size: 1.35rem; }} .card p {{ margin: .3rem 0; }}
 .meta {{ color: var(--muted); font-size: .92rem; }} .dl {{ font-size: .92rem; font-weight: 600; }}
-.chip {{ display: inline-block; border: 2px solid var(--ink); padding: 0 .45rem; margin: 0 .3rem .3rem 0; font-size: .82rem; }}
-.btn {{ display: inline-block; padding: .5rem .9rem; border: 3px solid var(--ink); text-decoration: none; color: var(--ink);
-  font-weight: 700; margin: .3rem .4rem 0 0; background: var(--surface); }}
+.chip {{ display: inline-block; border: 2px solid var(--ink); padding: 0 .45rem; margin: 0 0 .3rem .3rem; font-size: .82rem; }}
+.btn {{ display: inline-block; padding: .5rem .9rem; border: 3px solid var(--ink); text-decoration: none; color: var(--ink); font: inherit; font-weight: 700;
+  margin: .3rem 0 0 .4rem; background: var(--surface); cursor: pointer; }}
 .btn.primary {{ background: var(--ink); color: var(--paper); }}
-button.btn {{ font: inherit; font-weight: 700; cursor: pointer; }}
+.btn.quiet {{ border-color: transparent; text-decoration: underline; }}
 .empty {{ color: var(--muted); }}
+.share {{ padding-block: 1rem 4rem; }}
+.share > div {{ background: var(--sun); color: #111; border: 3px solid var(--ink); padding: 1.5rem; }}
+.share h2 {{ font-size: 1.6rem; margin-bottom: .6rem; }}
+.share ol {{ margin: .5rem 0 1rem; padding-inline-start: 1.3rem; }} .share li {{ margin: .35rem 0; }}
+.share .btn {{ margin-inline: 0 .5rem; }}
+footer {{ text-align: center; padding: 2rem 16px; color: var(--muted); font-size: .92rem; }}
 @media (max-width: 640px) {{ .card {{ grid-template-columns: 1fr; }} }}
 </style></head><body>
+<div class="top">
+  <a class="brand" href="{SITE_MAIN}"><img src="{SITE_MAIN}assets/icon.svg" width="30" height="30" alt=""><b><span>in</span>Pace</b></a>
+  <nav><a href="{SITE_MAIN}">{t("Home", "الرئيسية")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
+    <a href="#share">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
+  <button class="lang" type="button" id="lang">{t("عربي", "English")}</button>
+</div>
 <header>
-  <h1>The inPace course library</h1>
-  <p>Free courses made and shared by people who learn with <a href="https://mahmoudyosrimahmoud13.github.io/inPace/">inPace</a>.
-     Press <b>Add to inPace</b>, or open the Course library inside the app. To share your own course, use
-     <b>My courses → More → Publish to the library</b> in inPace.</p>
-  <input type="search" id="q" placeholder="Search courses" aria-label="Search courses">
+  <h1>{t("The inPace course library", "مكتبة دورات inPace")}</h1>
+  <p>{t("Free courses made and shared by people who learn with inPace. Press <b>Add to inPace</b>, and the course opens in the app, ready to start. Your progress stays on your computer.",
+        "دورات مجانية صنعها وشاركها متعلمون يستخدمون inPace. اضغط <b>أضف إلى inPace</b> فتفتح الدورة في التطبيق جاهزة للبدء. ويبقى تقدّمك على جهازك.")}</p>
+  <input type="search" id="q" placeholder="Search courses" aria-label="Search courses" dir="auto">
 </header>
 <main id="list">
-{"".join(cards) or '<p class="empty">No courses yet.</p>'}
-<p class="empty" id="none" hidden>No course matches that.</p>
+{"".join(cards) or '<p class="empty">' + t("No courses yet.", "لا توجد دورات بعد.") + '</p>'}
+<p class="empty" id="none" hidden>{t("No course matches that.", "لا توجد دورة تطابق ذلك.")}</p>
 </main>
+<section class="share" id="share"><div>
+  <h2>{t("Share your own course", "شارك دورتك")}</h2>
+  <ol>
+    <li>{t("Make your course in inPace: by hand, with AI, or from a folder of videos.", "اصنع دورتك في inPace: بنفسك، أو بالذكاء الاصطناعي، أو من مجلد فيديوهات.")}</li>
+    <li>{t("In <b>My courses</b>, open <b>More</b> on the course and choose <b>Publish to the library</b>.", "في <b>دوراتي</b>، افتح <b>المزيد</b> على الدورة واختر <b>انشر في المكتبة</b>.")}</li>
+    <li>{t("Download the course file, open the form, drop the file in and submit. A bot checks it in a few minutes.", "حمّل ملف الدورة، وافتح النموذج، واسحب الملف إليه وأرسله. يفحصه روبوت خلال دقائق.")}</li>
+  </ol>
+  <p>{t("Big videos? Upload them to Google Drive, MEGA or archive.org and add the download link in the course details. Only share what you made yourself.",
+        "فيديوهات كبيرة؟ ارفعها إلى Google Drive أو MEGA أو archive.org وأضف رابط التحميل في تفاصيل الدورة. شارك فقط ما صنعته بنفسك.")}</p>
+  <p><a class="btn" href="{SITE_MAIN}#download">{t("Get inPace", "احصل على inPace")}</a>
+     <a class="btn" href="{FORM}">{t("Open the submission form", "افتح نموذج الإرسال")}</a></p>
+</div></section>
+<footer>{t("Something wrong with a course?", "مشكلة في دورة؟")} <a href="{REPORT}">{t("Report it", "أبلغ عنها")}</a> ·
+  <a href="https://github.com/mahmoudyosrimahmoud13/inpace-library">GitHub</a></footer>
 <script>
-var q = document.getElementById("q"), cards = [].slice.call(document.querySelectorAll(".card"));
+var html = document.documentElement, q = document.getElementById("q"), cards = [].slice.call(document.querySelectorAll(".card"));
+function labels() {{ var ar = html.lang === "ar"; q.placeholder = ar ? "ابحث في الدورات" : "Search courses"; q.setAttribute("aria-label", q.placeholder); }}
+labels();
+document.getElementById("lang").addEventListener("click", function () {{
+  var next = html.lang === "ar" ? "en" : "ar"; html.lang = next; html.dir = next === "ar" ? "rtl" : "ltr";
+  try {{ localStorage.setItem("inpace-site-lang", next); }} catch (e) {{}}
+  labels();
+}});
 q.addEventListener("input", function () {{
   var w = q.value.toLowerCase().split(/\\s+/).filter(Boolean), shown = 0;
   cards.forEach(function (c) {{ var ok = w.every(function (x) {{ return c.dataset.q.indexOf(x) >= 0; }}); c.hidden = !ok; shown += ok; }});
@@ -298,13 +361,15 @@ q.addEventListener("input", function () {{
 }});
 [].forEach.call(document.querySelectorAll("[data-copy]"), function (b) {{
   b.addEventListener("click", function () {{
-    navigator.clipboard.writeText(b.dataset.copy).then(function () {{ b.textContent = "Copied!"; setTimeout(function () {{ b.textContent = "Copy link"; }}, 1600); }});
+    var old = b.innerHTML;
+    navigator.clipboard.writeText(b.dataset.copy).then(function () {{
+      b.textContent = html.lang === "ar" ? "تم النسخ!" : "Copied!"; setTimeout(function () {{ b.innerHTML = old; }}, 1600); }});
   }});
 }});
-if (location.hash) {{ var t = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (t) t.scrollIntoView(); }}
+if (location.hash) {{ var el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }}
 </script>
 </body></html>
-'''
+"""
 
 
 if __name__ == "__main__":

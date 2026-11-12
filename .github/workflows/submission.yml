@@ -27,16 +27,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Say the check started
+        run: gh issue comment "$ISSUE" --body "🐢 Got it! Checking your course now. I'll reply here in a minute or two."
       - name: Install inPace
         run: pip install -q "git+https://github.com/mahmoudyosrimahmoud13/inpace.git" pyyaml
       - name: Check the course
         id: check
         run: |
-          RESULT_FILE=result.json python scripts/library_tools.py submit "$GITHUB_EVENT_PATH"
+          RESULT_FILE=result.json python scripts/library_tools.py submit "$GITHUB_EVENT_PATH" || true
+          if [ ! -s result.json ]; then
+            echo '{"ok": false, "problems": ["The library bot hit an error while checking (see the Actions tab). A maintainer will look at it, and you don't need to do anything yet."]}' > result.json
+          fi
           echo "ok=$(python -c "import json;print(str(json.load(open('result.json'))['ok']).lower())")" >> "$GITHUB_OUTPUT"
       - name: Tell the author what to fix
-        if: steps.check.outputs.ok != 'true'
+        if: always() && steps.check.outputs.ok != 'true'
         run: |
+          [ -s result.json ] || echo '{"ok": false, "problems": ["The library bot couldn'"'"'t start (see the Actions tab). A maintainer will look at it."]}' > result.json
           python - <<'PY' > comment.md
           import json
           r = json.load(open("result.json"))

@@ -2,7 +2,7 @@
 
 <h1 align="center">inPace course library</h1>
 <p align="center"><b>Free courses made and shared by people who learn with <a href="https://github.com/mahmoudyosrimahmoud13/inpace">inPace</a>.</b><br>
-<a href="https://mahmoudyosrimahmoud13.github.io/inpace-library/"><b>Browse the library</b></a> · <a href="../../issues/new?template=submit-course.yml"><b>Share your course</b></a></p>
+<a href="https://mahmoudyosrimahmoud13.github.io/inpace-library/"><b>Browse the library</b></a> (English and Arabic) · <a href="../../issues/new?template=submit-course.yml"><b>Share your course</b></a></p>
 
 ---
 
