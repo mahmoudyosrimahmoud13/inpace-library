@@ -272,11 +272,19 @@ def page(entries: list[dict]) -> str:
     try {{ lang = localStorage.getItem("inpace-site-lang"); }} catch (e) {{}}
     if (!lang) lang = (navigator.language || "").toLowerCase().indexOf("ar") === 0 ? "ar" : "en";
     document.documentElement.lang = lang; document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    var th = null; try {{ th = localStorage.getItem("inpace-site-theme"); }} catch (e) {{}}
+    if (th === "light" || th === "dark") document.documentElement.setAttribute("data-theme", th);
   }})();
 </script>
 <style>
 :root {{ --ink:#111; --paper:#F7F3EA; --cream:#F2EDE2; --surface:#fff; --sun:#FFD43B; --muted:#4F4A40; color-scheme: light; }}
-@media (prefers-color-scheme: dark) {{ :root {{ --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --muted:#B5AD9C; color-scheme: dark; }} }}
+@media (prefers-color-scheme: dark) {{ :root:not([data-theme=light]) {{ --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --muted:#B5AD9C; color-scheme: dark; }} }}
+:root[data-theme=dark] {{ --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --muted:#B5AD9C; color-scheme: dark; }}
+:root[data-theme=light] {{ color-scheme: light; }}
+.theme {{ display: inline-grid; place-items: center; width: 40px; height: 40px; padding: 0; cursor: pointer; background: var(--surface); color: var(--ink); border: 3px solid var(--ink); }}
+.theme svg {{ width: 20px; height: 20px; }} .theme .sun {{ display: none; }}
+:root[data-theme=dark] .theme .sun {{ display: block; }} :root[data-theme=dark] .theme .moon {{ display: none; }}
+@media (prefers-color-scheme: dark) {{ :root:not([data-theme=light]) .theme .sun {{ display: block; }} :root:not([data-theme=light]) .theme .moon {{ display: none; }} }}
 * {{ box-sizing: border-box; }}
 html[lang=ar] .en, html[lang=en] .ar {{ display: none !important; }}
 body {{ margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 system-ui, "Segoe UI", Tahoma, sans-serif; }}
@@ -287,7 +295,7 @@ a {{ color: inherit; }}
 .top nav {{ margin-inline-start: auto; display: flex; gap: 1rem; font-weight: 600; }}
 .top nav a {{ text-decoration: none; }}
 .lang {{ font: inherit; font-weight: 700; cursor: pointer; background: var(--surface); color: var(--ink); border: 3px solid var(--ink); padding: .25rem .8rem; }}
-@media (max-width: 640px) {{ .top nav {{ display: none; }} .lang {{ margin-inline-start: auto; }} }}
+@media (max-width: 640px) {{ .top nav {{ display: none; }} .theme {{ margin-inline-start: auto; }} }}
 header, main, .share {{ max-width: 1000px; margin: 0 auto; padding-inline: 16px; }}
 header {{ padding-block: 2.5rem 1rem; }}
 h1 {{ font-size: clamp(2rem, 6vw, 3.2rem); margin: 0 0 .5rem; line-height: 1.15; }}
@@ -319,6 +327,7 @@ footer {{ text-align: center; padding: 2rem 16px; color: var(--muted); font-size
   <a class="brand" href="{SITE_MAIN}"><img src="{SITE_MAIN}assets/icon.svg" width="30" height="30" alt=""><b><span>in</span>Pace</b></a>
   <nav><a href="{SITE_MAIN}">{t("Home", "الرئيسية")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
     <a href="#share">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
+  <button class="theme" type="button" id="theme" aria-label="Light or dark mode" title="Light or dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
   <button class="lang" type="button" id="lang">{t("عربي", "English")}</button>
 </div>
 <header>
@@ -353,6 +362,11 @@ document.getElementById("lang").addEventListener("click", function () {{
   var next = html.lang === "ar" ? "en" : "ar"; html.lang = next; html.dir = next === "ar" ? "rtl" : "ltr";
   try {{ localStorage.setItem("inpace-site-lang", next); }} catch (e) {{}}
   labels();
+}});
+document.getElementById("theme").addEventListener("click", function () {{
+  var now = html.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  var next = now === "dark" ? "light" : "dark"; html.setAttribute("data-theme", next);
+  try {{ localStorage.setItem("inpace-site-theme", next); }} catch (e) {{}}
 }});
 q.addEventListener("input", function () {{
   var w = q.value.toLowerCase().split(/\\s+/).filter(Boolean), shown = 0;
