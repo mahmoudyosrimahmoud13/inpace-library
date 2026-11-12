@@ -1,0 +1,180 @@
+q1:
+  text: What is the main dependency-direction principle of Clean Architecture?
+  options:
+    o244ffa: The domain layer should import the HTTP client
+    o517ab7: All dependencies should point toward the presentation layer
+    o7873e2: UI widgets should own all application dependencies
+    o8a8b5f: Outer layers depend on abstractions defined by inner layers
+    oaa8bf1: Business logic should remain independent from infrastructure details
+    ob2b942: Every layer should depend directly on the database
+  show: 4
+q2:
+  text: What is an entity responsible for?
+  options:
+    o05aa78: Representing an important domain concept
+    o38cc79: Constructing the application's service locator
+    o474e32: Holding business-relevant data without depending on infrastructure
+    o607bbc: Managing Flutter widget state
+    o793e1f: Decoding every HTTP response
+    o9cb737: Writing values directly to SharedPreferences
+  show: 4
+q3:
+  text: Why does the domain define a repository contract?
+  options:
+    o0c95c4: To make every repository a singleton
+    o11a231: To store JSON inside entities
+    o7b1573: To force the domain to use HTTP
+    o9a951e: To make widgets construct database clients
+    oa39c8e: To allow concrete data implementations to be replaced or mocked
+    ob4a96a: To let domain code request data without knowing its implementation
+  show: 4
+q4:
+  text: Why is TDD useful when designing architecture?
+  options:
+    o09d8d2: TDD eliminates the need for architecture
+    o13f0b0: TDD requires every class to be a singleton
+    o1d89b6: Tests expose whether responsibilities and dependencies are easy to isolate
+    o5047b3: Tests provide confidence while internal implementations are refactored
+    o546a55: TDD means never refactoring working code
+    o9bd257: TDD means testing only the UI
+  show: 4
+q5:
+  text: What is a repository responsible for in this architecture?
+  options:
+    o1bd4b8: Translating infrastructure-level problems into domain-level failures
+    o24d33a: Rendering Flutter widgets
+    o5a4eb8: Coordinating data sources according to application data-access policy
+    o5dd999: Owning every HTTP request directly from the UI
+    o6eac00: Parsing every screen's text input
+    obfa4c9: Replacing all use cases
+  show: 4
+q6:
+  text: Why are data models separated from domain entities?
+  options:
+    o3a6491: The domain entity can remain independent of JSON or other transport formats
+    o46a782: Entities cannot contain any fields
+    o6713bf: Models can contain serialization logic specific to external data
+    obe6bf6: Models are always database tables
+    obfef84: Entities must inherit from HTTP response classes
+    of0ca31: Models exist only for widget styling
+  show: 4
+q7:
+  text: Why define contracts for remote and local data sources?
+  options:
+    o0bb238: They allow the repository to be tested with mocks
+    o7d954b: They isolate the repository from concrete infrastructure libraries
+    o81a00b: They make JSON parsing unnecessary
+    o992815: They force the app to use two databases
+    oe5f99b: They remove the need for repositories
+    oeab2ed: They make network calls faster
+  show: 4
+q8:
+  text: What is the purpose of converting data-layer exceptions into failures?
+  options:
+    o218aec: To convert successful results into exceptions
+    o4d0829: To give the application a stable representation of expected failure outcomes
+    o5cf480: To make HTTP requests synchronous
+    o6d6cde: To force every failure to be a UI error message
+    o8a0fdf: To keep infrastructure-specific exception types from leaking into higher layers
+    o959565: To hide all errors permanently
+  show: 4
+q9:
+  text: Why should repository tests avoid real network requests?
+  options:
+    o0a4acc: Real APIs always return incorrect data
+    o172b57: Mocked dependencies let tests focus on repository behavior
+    o2a2fb3: Repositories should never handle network data
+    o616410: HTTP APIs cannot be tested
+    ocbfaed: Real networks make tests slower and less deterministic
+    ocf888d: Mocking is required only for widget tests
+  show: 4
+q10:
+  text: What is the purpose of a local data source in the Number Trivia architecture?
+  options:
+    o2c4997: To define the application's domain entities
+    o31f0e1: To persist cached trivia for later retrieval
+    o3510f2: To isolate local-storage operations from the repository and domain
+    o42bb07: To replace every use case
+    od6f73a: To render cached trivia directly as widgets
+    oee646f: To decide whether the user is online
+  show: 4
+q11:
+  text: What does a remote data source normally handle?
+  options:
+    o082531: Converting successful external responses into data models
+    o131e6f: HTTP communication and response parsing
+    o1809e2: Choosing between cache and network policy
+    o19d75e: Rendering the Flutter screen
+    o5870b7: Defining business rules for every feature
+    ob535a4: Managing BLoC state
+  show: 4
+q12:
+  text: Why are JSON fixtures useful in tests?
+  options:
+    o6b9ef4: They allow tests to avoid depending on a live API
+    oa198b7: They are required for every Flutter widget
+    oada804: They make HTTP requests faster
+    obb2dfc: They automatically replace production APIs
+    oe58911: They provide repeatable examples of external responses
+    ofeefea: They eliminate the need for model classes
+  show: 4
+q13:
+  text: Which sequence correctly represents a typical online data request?
+  options:
+    o32690e: Use case → repository → remote data source → external API
+    o60592e: Repository → remote data source → HTTP client → API
+    ob75df3: Widget → SharedPreferences → API → entity
+    oc7460b: BLoC → API directly → database → widget
+    oea5f63: API → widget → repository → use case
+    ofcbe92: Entity → HTTP client → widget → repository
+  show: 4
+q14:
+  text: What is the main role of a BLoC in this architecture?
+  options:
+    o06ee77: Replace the repository layer
+    o1cad86: Render every Flutter widget itself
+    o2c42f1: Translate presentation events into application operations and states
+    o6cc733: Create HTTP clients inside every event handler
+    o7da872: Store every database record
+    obf83e2: Keep UI widgets from directly coordinating domain and data dependencies
+  show: 4
+q15:
+  text: Why should user input conversion be handled before calling the relevant use case?
+  options:
+    o50dca1: It removes the need for BLoC tests
+    o680960: It prevents invalid presentation input from reaching lower layers
+    oa3edb1: It makes all input valid automatically
+    oabbbe3: It keeps UI-specific parsing concerns outside the domain
+    oda5560: It replaces repository validation in every situation
+    ofcb404: It guarantees the network is available
+  show: 4
+q16:
+  text: What should a BLoC test primarily verify?
+  options:
+    o1f901f: The observable sequence of states produced for given events and dependency results
+    o23cd09: The implementation of SharedPreferences
+    o4db33b: The real HTTP server's uptime
+    o67f0f8: The pixel dimensions of every widget
+    oc46358: That success and failure cases produce the expected presentation states
+    ofc5c64: The exact private variable names inside the BLoC
+  show: 4
+q17:
+  text: What problem does dependency injection solve?
+  options:
+    o2999a2: It removes the need for constructors
+    o2b7a4b: It makes dependencies explicit and easier to replace in tests
+    o43f7c2: It automatically fixes bad business logic
+    o623bc8: It separates object construction from the classes that use those objects
+    ocd463d: It makes external APIs unnecessary
+    oe63758: It requires all objects to be global
+  show: 4
+q18:
+  text: Why is a BLoC often registered as a factory rather than a singleton?
+  options:
+    o06c400: Different UI contexts may need separate BLoC instances
+    o8505a5: BLoCs cannot contain state
+    oc0acd4: Factories are always faster than singletons
+    oe34344: Singletons cannot have methods
+    of130aa: Every dependency in Clean Architecture must be a factory
+    ofe9db9: A BLoC can have a lifecycle that should end when its associated UI is disposed
+  show: 4

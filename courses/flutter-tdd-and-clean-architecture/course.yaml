@@ -1,0 +1,159 @@
+id: flutter-tdd-and-clean-architecture
+title: Flutter TDD and Clean Architecture
+version: '1'
+description: An advanced hands-on course based on Reso Coder's Flutter TDD Clean Architecture playlist.
+  You will build a Number Trivia application while learning test-driven development, layered architecture,
+  repositories, data sources, BLoC, dependency injection, and maintainable Flutter UI design.
+language: en
+modules:
+- id: m1
+  title: Clean Architecture and the Domain Layer
+  lessons:
+  - id: m1-l1
+    title: Explanation & Project Structure
+    file: lessons/m1-l1.md
+    minutes: 35
+  - id: m1-l2
+    title: Entities & Use Cases
+    file: lessons/m1-l2.md
+    minutes: 35
+  - id: m1-l3
+    title: Domain Layer Refactoring
+    file: lessons/m1-l3.md
+    minutes: 30
+  requires:
+  - id: m1-r1
+    type: practical
+    prompt: Create the domain layer of a small Flutter feature with an entity, repository contract, Failure
+      type, and at least two use cases. Add tests for the use cases and save the project as proof.
+  - id: m1-r2
+    type: explain
+    prompt: Explain in your own words why the domain layer should not depend on HTTP clients, Flutter
+      widgets, or SharedPreferences.
+    min_words: 40
+  - id: m1-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: Data Layer, Repositories, and External Data
+  lessons:
+  - id: m2-l1
+    title: Data Layer Overview & Models
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Contracts of Data Sources
+    file: lessons/m2-l2.md
+    minutes: 30
+  - id: m2-l3
+    title: Repository Implementation
+    file: lessons/m2-l3.md
+    minutes: 35
+  - id: m2-l4
+    title: Network Info
+    file: lessons/m2-l4.md
+    minutes: 25
+  requires:
+  - id: m2-r1
+    type: practical
+    prompt: Implement a repository for a small feature using mocked remote and local data sources. Write
+      tests for online, offline, successful, and failure paths, leaving the completed test files as proof.
+  - id: m2-r2
+    type: explain
+    prompt: Explain why a repository should decide data-access policy instead of letting UI widgets choose
+      between remote and local data sources.
+    min_words: 40
+  - id: m2-r3
+    type: quiz
+    prompt: 'Quiz: 5 questions, 70% to pass.'
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    - q9
+    pass: 70
+- id: m3
+  title: Local and Remote Data Sources with TDD
+  lessons:
+  - id: m3-l1
+    title: Local Data Source
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Remote Data Source
+    file: lessons/m3-l2.md
+    minutes: 35
+  - id: m3-l3
+    title: Completing the Data Layer
+    file: lessons/m3-l3.md
+    minutes: 30
+  requires:
+  - id: m3-r1
+    type: practical
+    prompt: Build a complete remote-plus-cache data flow for a small Flutter feature. Include a JSON fixture,
+      model serialization, mocked HTTP tests, mocked local-storage tests, and repository integration tests.
+  - id: m3-r2
+    type: explain
+    prompt: Trace one request from a Flutter UI event to an HTTP response and back, naming which layer
+      owns each responsibility.
+    min_words: 40
+  - id: m3-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q10
+    - q11
+    - q12
+    - q13
+    pass: 70
+- id: m4
+  title: BLoC, Dependency Injection, and the UI
+  lessons:
+  - id: m4-l1
+    title: BLoC Scaffolding & Input Conversion
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: BLoC Implementation 1/2
+    file: lessons/m4-l2.md
+    minutes: 30
+  - id: m4-l3
+    title: BLoC Implementation 2/2
+    file: lessons/m4-l3.md
+    minutes: 30
+  - id: m4-l4
+    title: Dependency Injection
+    file: lessons/m4-l4.md
+    minutes: 30
+  - id: m4-l5
+    title: User Interface
+    file: lessons/m4-l5.md
+    minutes: 35
+  requires:
+  - id: m4-r1
+    type: practical
+    prompt: Finish a small Flutter feature using BLoC, dependency injection, and a Clean Architecture
+      flow from UI to use case to repository. Include automated tests for BLoC state transitions and save
+      the completed project as proof.
+  - id: m4-r2
+    type: explain
+    prompt: Explain why dependency injection and BLoC make the UI less dependent on concrete repositories,
+      HTTP clients, and storage libraries.
+    min_words: 40
+  - id: m4-r3
+    type: quiz
+    prompt: 'Quiz: 5 questions, 70% to pass.'
+    questions:
+    - q14
+    - q15
+    - q16
+    - q17
+    - q18
+    pass: 70
