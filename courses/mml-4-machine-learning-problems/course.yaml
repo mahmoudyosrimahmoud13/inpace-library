@@ -1,0 +1,414 @@
+id: mml-4-machine-learning-problems
+title: 'Maths for ML 4: regression, PCA, mixtures and SVMs'
+version: 1
+language: en
+description: 'Part 4 of 4, following the free book Mathematics for Machine Learning (Deisenroth, Faisal, Ong). When
+  models meet data (empirical risk, maximum likelihood, MAP, graphical models, model selection), then the four classic
+  problems worked out from first principles: linear regression (and its Bayesian version), principal component analysis,
+  Gaussian mixture models with EM, and support vector machines with kernels. Each lesson opens your own copy of
+  the book (free from mml-book.com; inPace finds it), with notes, 3Blue1Brown videos, interactive explorers, worked
+  exercises with instant feedback, and charts. Plan: 10 days.'
+image: cover.jpg
+book: mml-book.pdf
+book_info:
+  title: Mathematics for Machine Learning
+  url: https://mml-book.com
+  pages: 412
+modules:
+- id: m1
+  title: 'Day 1: Data, models and learning'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: data, models and learning (8.1)'
+    file: lessons/m1-l2.md
+    minutes: 35
+    media: mml-book.pdf#pages=255-264
+  - id: m1-l3
+    title: 'Read: empirical risk minimization (8.2)'
+    file: lessons/m1-l3.md
+    minutes: 40
+    media: mml-book.pdf#pages=264-271
+  - id: m1-l4
+    title: 'Watch: But what is a neural network?'
+    file: lessons/m1-l4.md
+    minutes: 18
+    media: https://www.youtube.com/watch?v=aircAruvnKk
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: |-
+      You want to predict house prices from size (m²), number of rooms, and neighbourhood (one of 5 names).
+
+      1. How would you turn one house into a feature vector x? What do you do with the neighbourhood?
+      2. Write the empirical risk for a linear model with squared loss, with and without an L2 penalty.
+      3. Describe how you would use 5-fold cross-validation to choose λ, step by step.
+      4. Name one way you could accidentally "leak" test information into training.
+  - id: m1-explain
+    type: explain
+    prompt: Explain empirical risk minimization in your own words, and why minimizing training error alone is not
+      the goal. What do regularization and cross-validation each add?
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Maximum likelihood and MAP'
+  lessons:
+  - id: m2-l1
+    title: 'Read: parameter estimation (8.3)'
+    file: lessons/m2-l1.md
+    minutes: 40
+    media: mml-book.pdf#pages=271-278
+  - id: m2-l2
+    title: 'Read: probabilistic modeling and inference (8.4)'
+    file: lessons/m2-l2.md
+    minutes: 35
+    media: mml-book.pdf#pages=278-284
+  - id: m2-l3
+    title: 'Explore: MLE vs MAP with a coin'
+    file: lessons/m2-l3.md
+    minutes: 10
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: |-
+      You observe N values y₁, …, y_N from N(μ, σ²) with σ known.
+
+      1. Write the negative log-likelihood of μ and minimize it. (You should get the sample mean.)
+      2. Now add a prior μ ~ N(0, τ²). Write the negative log-posterior and minimize it. What is μ_MAP?
+      3. What happens to μ_MAP as N → ∞? As τ → ∞? As τ → 0? Explain each in one sentence.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between maximum likelihood, MAP and full Bayesian inference. Why does a Gaussian
+      prior on the weights of linear regression lead to the same answer as ridge regression?
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Graphical models and model selection'
+  lessons:
+  - id: m3-l1
+    title: 'Read: directed graphical models (8.5)'
+    file: lessons/m3-l1.md
+    minutes: 30
+    media: mml-book.pdf#pages=284-289
+  - id: m3-l2
+    title: 'Read: model selection (8.6)'
+    file: lessons/m3-l2.md
+    minutes: 35
+    media: mml-book.pdf#pages=289-294
+  - id: m3-l3
+    title: 'Check yourself: chapter 8'
+    file: lessons/m3-l3.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: |-
+      Draw the directed graphical model for this story, and write the factorized joint distribution:
+
+      "A student's **talent** and the **difficulty** of an exam both affect their **grade**. The grade affects whether they
+      get a **recommendation letter**."
+
+      Then answer, using d-separation:
+      1. Are talent and difficulty independent if you know nothing else?
+      2. Are they independent if you know the grade? Explain the "explaining away" effect in one or two sentences.
+  - id: m3-explain
+    type: explain
+    prompt: Explain how Bayesian model selection prefers simpler models without an explicit penalty (the Occam's
+      razor effect of the evidence). Use a picture of how a simple and a complex model spread probability over datasets.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Linear regression, fitting the parameters'
+  lessons:
+  - id: m4-l1
+    title: 'Read: problem formulation and parameter estimation (9.1–9.2)'
+    file: lessons/m4-l1.md
+    minutes: 70
+    media: mml-book.pdf#pages=295-309
+  - id: m4-l2
+    title: 'Explore: fit a curve'
+    file: lessons/m4-l2.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: |-
+      In Python with NumPy (Colab is fine):
+
+      1. Make 15 points: x uniform in [−1, 1], y = sin(2.5x) + Gaussian noise with σ = 0.25.
+      2. Fit polynomials of degree 1, 3 and 12 with the normal equations (build Φ with columns 1, x, x², …). Use
+         `np.linalg.solve(Phi.T @ Phi, Phi.T @ y)`.
+      3. Add ridge with λ = 1e-3 and 1e-1 for degree 12.
+      4. Measure RMSE on 200 new points. Paste your table of results and say which model you'd pick.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why linear regression can fit curves, what makes it "linear", and how the normal equations come
+      out of maximum likelihood with Gaussian noise.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Bayesian linear regression, and least squares as projection'
+  lessons:
+  - id: m5-l1
+    title: 'Read: Bayesian linear regression (9.3)'
+    file: lessons/m5-l1.md
+    minutes: 55
+    media: mml-book.pdf#pages=309-319
+  - id: m5-l2
+    title: 'Read: maximum likelihood as orthogonal projection (9.4) and further reading (9.5)'
+    file: lessons/m5-l2.md
+    minutes: 20
+    media: mml-book.pdf#pages=319-322
+  - id: m5-l3
+    title: 'Check yourself: chapter 9'
+    file: lessons/m5-l3.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: |-
+      Using your code from yesterday (degree 5 polynomial features, 8 data points, σ = 0.25 known, prior N(0, I)):
+
+      1. Compute the posterior S_N and m_N with the formulas above.
+      2. On a grid of x from −1.3 to 1.3, compute the predictive mean and standard deviation, and plot mean ± 2 sd with the
+         data.
+      3. Draw 5 parameter vectors from the posterior (`np.random.multivariate_normal`) and plot their functions.
+      4. Where is the band widest, and why?
+  - id: m5-explain
+    type: explain
+    prompt: Explain the two sources of uncertainty in the Bayesian predictive distribution φ*ᵀS_Nφ* + σ², and why
+      only one of them shrinks as you collect more data.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: PCA, maximum variance and projection views'
+  lessons:
+  - id: m6-l1
+    title: 'Read: PCA problem setting and maximum variance (10.1–10.2)'
+    file: lessons/m6-l1.md
+    minutes: 40
+    media: mml-book.pdf#pages=323-331
+  - id: m6-l2
+    title: 'Read: the projection perspective (10.3)'
+    file: lessons/m6-l2.md
+    minutes: 40
+    media: mml-book.pdf#pages=331-339
+  - id: m6-l3
+    title: 'Explore: choose a direction'
+    file: lessons/m6-l3.md
+    minutes: 15
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: |-
+      Data (already centered): (2, 1), (−2, −1), (1, 1), (−1, −1), (0, 1), (0, −1).
+
+      1. Compute the data covariance S = (1/N) Σ xₙxₙᵀ.
+      2. Find its eigenvalues and eigenvectors.
+      3. What fraction of the variance does the first component keep?
+      4. Project each point onto the first component (code zₙ and reconstruction x̃ₙ) and check that the average squared
+         reconstruction error equals λ₂.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why the direction of maximum variance is an eigenvector of the data covariance matrix. Use the
+      Lagrangian of "maximize bᵀSb subject to bᵀb = 1".
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: PCA in practice, and as a latent variable model'
+  lessons:
+  - id: m7-l1
+    title: 'Read: eigenvectors, low-rank approximations and high dimensions (10.4–10.5)'
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: mml-book.pdf#pages=339-342
+  - id: m7-l2
+    title: 'Read: key steps in practice, and probabilistic PCA (10.6–10.8)'
+    file: lessons/m7-l2.md
+    minutes: 45
+    media: mml-book.pdf#pages=342-353
+  - id: m7-l3
+    title: 'Check yourself: chapter 10'
+    file: lessons/m7-l3.md
+    minutes: 25
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: |-
+      In Python with scikit-learn (Colab is fine):
+
+      1. Load the digits dataset (`sklearn.datasets.load_digits`, 8 × 8 images, 64 dimensions).
+      2. Run PCA yourself with NumPy: center, compute the SVD of the data matrix, and take the top 2 components. Check your
+         result against `sklearn.decomposition.PCA(2)` (directions may differ by a sign).
+      3. Plot the 2D codes coloured by digit. Which digits overlap?
+      4. Plot the cumulative explained variance. How many components keep 90%? Rebuild one image with that many and show
+         it next to the original.
+  - id: m7-explain
+    type: explain
+    prompt: Explain the practical steps of PCA from raw data to a reconstruction, and when you should standardize
+      features first. Then say in one or two sentences what probabilistic PCA adds.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: Gaussian mixture models and EM'
+  lessons:
+  - id: m8-l1
+    title: 'Read: GMMs and parameter learning by maximum likelihood (11.1–11.2)'
+    file: lessons/m8-l1.md
+    minutes: 55
+    media: mml-book.pdf#pages=354-366
+  - id: m8-l2
+    title: 'Read: the EM algorithm and the latent variable view (11.3–11.5)'
+    file: lessons/m8-l2.md
+    minutes: 40
+    media: mml-book.pdf#pages=366-375
+  - id: m8-l3
+    title: 'Explore: EM step by step'
+    file: lessons/m8-l3.md
+    minutes: 20
+  - id: m8-l4
+    title: 'Check yourself: chapter 11'
+    file: lessons/m8-l4.md
+    minutes: 20
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: |-
+      1D data: 0, 0.5, 1, 4, 4.5, 5. Two components with σ² = 1 fixed, equal weights, starting means μ₁ = 1 and μ₂ = 2.
+
+      1. E-step: compute the responsibilities r_n1 for all six points (r_n2 = 1 − r_n1).
+      2. M-step: update μ₁ and μ₂ (and the weights).
+      3. Do one more round. Where are the means heading?
+      4. Optional: check with `sklearn.mixture.GaussianMixture(2)` on the same data.
+  - id: m8-explain
+    type: explain
+    prompt: 'Explain the EM algorithm for Gaussian mixtures in your own words: what the E-step and M-step compute,
+      why we can''t just solve for the parameters directly, and why the result can depend on the starting point.'
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Day 9: Support vector machines, margins and the primal'
+  lessons:
+  - id: m9-l1
+    title: 'Read: separating hyperplanes and the primal SVM (12.1–12.2)'
+    file: lessons/m9-l1.md
+    minutes: 70
+    media: mml-book.pdf#pages=376-389
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: |-
+      Points: class +1 at (2, 2) and (3, 3); class −1 at (0, 0) and (1, 0).
+
+      1. Sketch them. Guess the maximum-margin line by eye.
+      2. Check that w = (1, 1), b = −3 separates them, and compute yₙ(⟨w, xₙ⟩ + b) for each point.
+      3. Rescale (w, b) so the closest points have value exactly 1. What is the margin 1/‖w‖ then? Which points are the
+         support vectors?
+      4. Optional: fit `sklearn.svm.SVC(kernel="linear", C=1000)` and compare `coef_`, `intercept_` and `support_vectors_`.
+  - id: m9-explain
+    type: explain
+    prompt: Explain why maximizing the margin is the same as minimizing ‖w‖ (with the scaling convention), and what
+      the soft-margin constant C trades off.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'Day 10: The dual SVM and kernels'
+  lessons:
+  - id: m10-l1
+    title: 'Read: the dual SVM, kernels and numerical solutions (12.3–12.6)'
+    file: lessons/m10-l1.md
+    minutes: 60
+    media: mml-book.pdf#pages=389-400
+  - id: m10-l2
+    title: 'Check yourself: chapter 12'
+    file: lessons/m10-l2.md
+    minutes: 25
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: |-
+      1. For the polynomial kernel k(x, y) = (xᵀy)² in 2D, find the feature map φ(x) with k(x, y) = ⟨φ(x), φ(y)⟩ (it has 3
+         components). Check it on x = (1, 2), y = (3, 1).
+      2. Compute the Gram matrix of the RBF kernel (σ = 1) for the points (0, 0), (1, 0), (0, 2). Is it symmetric? Are its
+         eigenvalues ≥ 0?
+      3. In scikit-learn, make `make_circles(noise=0.1, factor=0.4)` data. Fit an SVC with a linear kernel and with an RBF
+         kernel. Report both accuracies and the number of support vectors, and explain the difference.
+  - id: m10-explain
+    type: explain
+    prompt: 'Explain the kernel trick in your own words: why the dual SVM only needs inner products, and how a kernel
+      lets a linear method draw curved boundaries without computing high-dimensional features.'
+    min_words: 60
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

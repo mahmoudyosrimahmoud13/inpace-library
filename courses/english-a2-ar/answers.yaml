@@ -40,121 +40,127 @@ q8:
   why: will + فعل مجرد.
 q9:
   right:
-  - o1c47f2
-  - oe34a35
-  why: -er/-est للقصيرة، more/most للطويلة.
+  - o085d97
+  - o7a3b73
+  - o4c3ca9
+  why: 'big ← bigger (تكرار g)، happy ← happiest (y تصبح i)، و receive: e قبل i بعد c.'
 q10:
   right:
-  - o29530b
-  - o942ba3
-  why: good → better → best، bad → worse → worst.
+  - o47c108
+  - oa038e2
+  why: -er/-est للقصيرة، more/most للطويلة.
 q11:
   right:
-  - oad7dea
-  - o72080d
-  why: too + صفة، صفة + enough.
+  - o4abf8d
+  - od1156a
+  why: good → better → best، bad → worse → worst.
 q12:
   right:
-  - o7f01a5
-  - o52e480
-  why: What is he like? للشخصية.
+  - o93326c
+  - oe3524e
+  why: too + صفة، صفة + enough.
 q13:
   right:
-  - o61303a
-  - o20364e
-  why: وقت محدد ← past simple.
+  - o08755e
+  - o878cc4
+  why: What is he like? للشخصية.
 q14:
   right:
-  - o50c933
-  - o4482fb
-  why: have + التصريف الثالث، و just بين have والفعل.
+  - o4c3169
+  - o3f3f7a
+  why: وقت محدد ← past simple.
 q15:
   right:
-  - od32dc9
-  - oa1145e
-  why: gone = ذهب ولم يرجع.
+  - o2d44ef
+  - o5aac04
+  why: have + التصريف الثالث، و just بين have والفعل.
 q16:
   right:
-  - o9446ca
-  - oa56476
-  why: تجربة ← perfect، متى ← past simple.
+  - odfc7ee
+  - o6d203d
+  why: gone = ذهب ولم يرجع.
 q17:
   right:
-  - o0f9b00
-  - oee3267
-  why: don't have to = غير ضروري.
+  - o691bcf
+  - o2db580
+  why: تجربة ← perfect، متى ← past simple.
 q18:
   right:
-  - o15b5f7
-  - od2bf36
-  why: have to تتصرف، should + فعل مجرد.
+  - oc93b38
+  - oed2f33
+  why: don't have to = غير ضروري.
 q19:
   right:
-  - o63d574
-  - oe91685
-  why: would you mind + ing.
+  - odb0884
+  - odcbd5c
+  why: have to تتصرف، should + فعل مجرد.
 q20:
   right:
-  - o755d81
-  - o86c2b2
-  why: might / may + فعل مجرد.
+  - o8b1eea
+  - o1edc7b
+  why: would you mind + ing.
 q21:
   right:
-  - o97d0e2
-  - o564b61
-  why: الكلام العام بدون the.
+  - o30bcfe
+  - o4b31d9
+  why: might / may + فعل مجرد.
 q22:
   right:
-  - o24521e
-  - o85e007
-  why: much لغير المعدود، a few للمعدود.
+  - oac8dc9
+  - ob15523
+  why: الكلام العام بدون the.
 q23:
   right:
-  - o3ca6b8
-  - ob8e97b
-  why: the لما هو واحد فقط، و go to work بدون أداة.
+  - o5c6a91
+  - od798a3
+  why: much لغير المعدود، a few للمعدود.
 q24:
   right:
-  - o8f30a2
-  - od0a504
-  why: a أول مرة، ثم the.
+  - o263a93
+  - o3fc7da
+  why: the لما هو واحد فقط، و go to work بدون أداة.
 q25:
   right:
-  - o32f8b4
-  - oc9e71a
-  why: لا will بعد if و when.
+  - o3710cd
+  - ocf5a98
+  why: a أول مرة، ثم the.
 q26:
   right:
-  - o91a6d5
-  - oc90522
-  why: enjoy + ing، want + to.
+  - o7edb17
+  - o4765ac
+  why: لا will بعد if و when.
 q27:
   right:
-  - o08dadb
-  - oc294c2
-  why: decide + to، stop + ing (توقف عن).
+  - oc5abb8
+  - o028eda
+  why: enjoy + ing، want + to.
 q28:
   right:
-  - o2e52ce
-  - o2069ec
-  why: بعد حرف الجر ← ing.
+  - o1a5398
+  - oa158ac
+  why: decide + to، stop + ing (توقف عن).
 q29:
   right:
-  - oab9fb1
-  - o6632e3
-  why: 'مراجعة: perfect، والماضي المستمر.'
+  - od120d7
+  - o162fbb
+  why: بعد حرف الجر ← ing.
 q30:
   right:
-  - oa705a2
-  - o59a90d
-  why: as + صفة + as، و -est للقصيرة.
+  - o488eeb
+  - oec0e2a
+  why: 'مراجعة: perfect، والماضي المستمر.'
 q31:
   right:
-  - o02d012
-  - o9c72b1
-  why: Could + فعل مجرد.
+  - oc84ef4
+  - o034356
+  why: as + صفة + as، و -est للقصيرة.
 q32:
   right:
-  - o52af8d
-  - o36696a
+  - o641ff4
+  - o829b07
+  why: Could + فعل مجرد.
+q33:
+  right:
+  - oe8ee42
+  - o96e004
   why: 'مراجعة: if، و have to.'

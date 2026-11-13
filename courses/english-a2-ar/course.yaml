@@ -83,12 +83,17 @@ modules:
     file: lessons/m3-l1.md
     minutes: 30
   - id: m3-l2
-    title: as...as, too, enough
+    title: 'فيديو: قواعد التهجئة الأربع وأخطاء شائعة'
     file: lessons/m3-l2.md
     minutes: 25
+    media: https://www.youtube.com/watch?v=IWPfD2WcAXg
   - id: m3-l3
-    title: صف الأشخاص والأماكن
+    title: as...as, too, enough
     file: lessons/m3-l3.md
+    minutes: 25
+  - id: m3-l4
+    title: صف الأشخاص والأماكن
+    file: lessons/m3-l4.md
     minutes: 25
   requires:
   - id: m3-practical
@@ -106,6 +111,7 @@ modules:
     - q10
     - q11
     - q12
+    - q13
     pass: 70
 - id: m4
   title: 'الأيام 13-17: المضارع التام'
@@ -135,10 +141,10 @@ modules:
   - id: m4-quiz
     type: quiz
     questions:
-    - q13
     - q14
     - q15
     - q16
+    - q17
     pass: 70
 - id: m5
   title: 'الأيام 18-21: must, have to, should, might'
@@ -167,10 +173,10 @@ modules:
   - id: m5-quiz
     type: quiz
     questions:
-    - q17
     - q18
     - q19
     - q20
+    - q21
     pass: 70
 - id: m6
   title: 'الأيام 22-25: الكميات والأدوات'
@@ -200,10 +206,10 @@ modules:
   - id: m6-quiz
     type: quiz
     questions:
-    - q21
     - q22
     - q23
     - q24
+    - q25
     pass: 70
 - id: m7
   title: 'الأيام 26-29: if للمستقبل، و ing أم to'
@@ -229,10 +235,10 @@ modules:
   - id: m7-quiz
     type: quiz
     questions:
-    - q25
     - q26
     - q27
     - q28
+    - q29
     pass: 70
 - id: m8
   title: 'الأيام 30-32: مهارات A2 الحقيقية واختبار'
@@ -257,8 +263,8 @@ modules:
   - id: m8-quiz
     type: quiz
     questions:
-    - q29
     - q30
     - q31
     - q32
+    - q33
     pass: 70

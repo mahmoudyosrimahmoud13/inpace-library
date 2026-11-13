@@ -1,0 +1,302 @@
+q1:
+  text: A system of linear equations Ax = b can have …
+  show: 4
+  options:
+    o5e9099: exactly two solutions
+    o7fd4e1: a number of solutions that depends on the order of the equations
+    o6d99ee: exactly three solutions, if A is 3 × 3
+    o8a0365: no solution
+    o55f41c: infinitely many solutions
+    o100d02: exactly one solution
+    oac83c5: a solution only if b = 0
+q2:
+  text: In the "columns view", Ax = b asks …
+  show: 4
+  options:
+    o2df15a: how to sort the columns of A
+    o54e9e8: how much of each column of A you need to build b
+    o18eb6e: which combination of A's columns gives b
+    o6f9563: whether A is square
+    oe87bd9: which rows of A are equal to b
+    ofe990c: whether b is a column of A
+q3:
+  text: Two equations in two unknowns describe two parallel, different lines. Then …
+  show: 4
+  options:
+    o6a5a23: there are infinitely many solutions
+    o0bbd66: the solution is x = 0
+    ob10478: the lines meet at infinity, which counts as one solution
+    o3528e7: there is exactly one solution
+    o9864d8: the system is inconsistent
+    o77ae55: there is no solution
+q4:
+  text: Which are the four big machine learning problems in Part II of the book?
+  show: 4
+  options:
+    o77a8a8: density estimation (Gaussian mixtures)
+    od9d8ac: database design
+    o47864f: web scraping
+    oef5cfb: classification (SVMs)
+    o6e109e: dimensionality reduction (PCA)
+    oecc028: regression
+    oa91b0b: reinforcement learning
+    o577b6c: sorting
+q5:
+  text: For matrices of compatible sizes, which statements are always true?
+  show: 4
+  options:
+    oc6e645: AB = BA
+    o0e9385: every square matrix has an inverse
+    o254693: (A + B)⁻¹ = A⁻¹ + B⁻¹
+    o8921ac: (AB)ᵀ = BᵀAᵀ
+    o5c2a00: (AB)ᵀ = AᵀBᵀ
+    o1c6c3c: (AB)C = A(BC)
+    o4da37f: (AB)⁻¹ = B⁻¹A⁻¹ when A and B are invertible
+q6:
+  text: A is 3 × 4 and B is 4 × 2. Which is true?
+  show: 4
+  options:
+    od5d230: AB and BA are both 3 × 3
+    o8c8703: BA is 2 × 3
+    o8f430e: AB is not defined
+    ob1b7de: AB is 3 × 2
+    of233f7: AB is 4 × 4
+    o805006: BA is not defined
+q7:
+  text: Which elementary row operations keep the solution set of a linear system the same?
+  show: 4
+  options:
+    oc1f00e: swapping two columns without renaming the variables
+    ofda7bf: deleting a row that has no zeros
+    of5455b: swapping two rows
+    o550069: adding a multiple of one row to another
+    o9dba36: squaring every entry
+    o320028: multiplying a row by a non-zero number
+    o4e742f: multiplying a row by 0
+q8:
+  text: In reduced row-echelon form, free variables correspond to …
+  show: 4
+  options:
+    o5e13f2: the pivot columns
+    o49457f: columns without a pivot
+    o21719b: the diagonal of A
+    o69033c: directions in the kernel of A
+    o4a924f: the right-hand side b
+    ob6128e: rows full of zeros only
+q9:
+  text: To solve Ax = b numerically you should usually …
+  show: 4
+  options:
+    o11dd07: use the 2 × 2 inverse formula for any size
+    ofbdbc8: guess and check
+    o81768a: avoid computing A⁻¹ explicitly
+    o33abb4: transpose A and multiply by b
+    o62cf7b: use a solver like np.linalg.solve (elimination/LU) or an iterative method
+    o7550e3: always compute A⁻¹ first
+q10:
+  text: Which of these subsets of ℝ² are vector subspaces?
+  show: 4
+  options:
+    offc781: the first quadrant (x ≥ 0 and y ≥ 0)
+    o63623f: the line y = 3x + 1
+    obf2e6b: the two axes together
+    o10b17b: the set {0} containing only the origin
+    oc7a998: the line y = 3x
+    o2c74ba: all of ℝ²
+    of22db3: the unit circle
+q11:
+  text: Vectors v₁, …, v_k are linearly independent when …
+  show: 4
+  options:
+    oc2cb6b: every column is a pivot column when you put them in a matrix and eliminate
+    o17144c: none of them is the zero vector
+    oc08fcf: they are all unit vectors
+    odcbf5f: no two of them are equal
+    odb5841: the only combination that gives 0 has all weights 0
+    of7588e: they all have different lengths
+q12:
+  text: A is 4 × 6 with rank 4. Which are true?
+  show: 4
+  options:
+    oc556a0: the columns are linearly independent
+    o443334: dim(kernel A) = 2
+    o8338c1: Ax = b has exactly one solution
+    o4ebf0b: dim(kernel A) = 4
+    o5e4f1b: Ax = b has a solution for every b in ℝ⁴
+    o859e55: the rows of A are linearly independent
+    o43b8c1: A is invertible
+q13:
+  text: Which statements about a basis of a vector space V are true?
+  show: 4
+  options:
+    ob373a2: it must be orthonormal
+    o7077f4: it is linearly independent and spans V
+    o4bfad3: all bases of V have the same number of vectors
+    o67837c: every vector of V has unique coordinates in it
+    o66ae9c: it must contain the standard basis vectors
+    oc0ed23: it can contain the zero vector
+    oeaeb07: V has exactly one basis
+q14:
+  text: Which maps from ℝ² to ℝ² are linear?
+  show: 4
+  options:
+    obeaf72: x ↦ (|x₁|, x₂)
+    oaa1e63: x ↦ x + (1, 0)
+    od0d36e: rotation about the origin
+    o68686f: x ↦ (x₁², x₂)
+    o08ad4a: reflection across the x-axis
+    oba8231: x ↦ Ax + b with b ≠ 0
+    o22d8fd: x ↦ Ax for any 2 × 2 matrix A
+q15:
+  text: The j-th column of the transformation matrix of Φ (in bases B and C) is …
+  show: 4
+  options:
+    of41e94: the j-th row of Φ
+    od0f672: the inverse of b_j
+    od39d69: the coordinates of Φ(b_j) in the basis C
+    o8daf15: where the j-th basis vector lands, written in the output basis
+    o31dffa: b_j itself
+    o5ca90c: the kernel of Φ
+q16:
+  text: A and Ã = S⁻¹AS are similar. Which is true?
+  show: 4
+  options:
+    o3edc58: Ã = A for any S
+    o124a6d: Ã is always diagonal
+    o3958cf: they have the same rank
+    o68779e: they describe the same linear map in different bases
+    o88df8f: S must be orthogonal
+    o84ce7a: they always have the same entries
+q17:
+  text: Which are affine but not linear subspaces of ℝ³?
+  show: 4
+  options:
+    o2ccd00: the kernel of a matrix
+    o563edf: the plane x + y + z = 1
+    ob7150d: '{0}'
+    o53ef33: the column space of a matrix
+    o0e9dd3: the solution set of Ax = b when b ≠ 0 and a solution exists
+    o8d464d: the plane x + y + z = 0
+q18:
+  text: For x = (3, 4), which are correct?
+  show: 4
+  options:
+    o2aa45c: ‖x‖∞ = 4
+    o7b118b: ‖x‖₁ = 7
+    o84096f: ‖x‖₂ = 7
+    oc8427e: ‖x‖₁ = 5
+    o203efb: ‖x‖₂ = 5
+    of3bd8c: ‖x‖∞ = 3
+    oedd2e7: ‖x‖₂ = 25
+q19:
+  text: ⟨x, y⟩ = xᵀAy is an inner product on ℝⁿ exactly when A is …
+  show: 4
+  options:
+    od6f9a7: orthogonal
+    o7aefb7: the identity
+    o84fe94: positive definite
+    o5086b9: symmetric
+    o6906e9: invertible but possibly not symmetric
+    o4bb500: diagonal
+q20:
+  text: Which follow from the Cauchy-Schwarz inequality?
+  show: 4
+  options:
+    od35d12: the cosine of the angle ⟨x,y⟩/(‖x‖‖y‖) is between −1 and 1
+    o024d2c: '|⟨x, y⟩| ≤ ‖x‖‖y‖'
+    o1c5275: ‖x‖ = ‖y‖
+    o580238: ⟨x, y⟩ is always positive
+    o713108: every two vectors are orthogonal
+    ob50d22: ‖x + y‖ = ‖x‖ + ‖y‖
+q21:
+  text: Two vectors are orthogonal with the dot product. With a different inner product they …
+  show: 4
+  options:
+    o3ad870: are always still orthogonal
+    o7510ec: have the same lengths as before, always
+    o0486f5: have an angle that depends on the chosen inner product
+    ofa61bb: can't be compared at all
+    o9ac290: may not be orthogonal any more
+    o23a5ea: become parallel
+q22:
+  text: For the projection of x onto the line spanned by b (dot product), which are true?
+  show: 4
+  options:
+    o5fc652: x − π(x) is parallel to b
+    o1efa10: π(x) = (bᵀb / bᵀx)·b
+    o7e6701: the projection matrix bbᵀ/bᵀb has rank 1
+    o4b5d44: π(x) changes if you replace b by 2b
+    o28758b: x − π(x) is orthogonal to b
+    o3be95c: the projection matrix is invertible
+    o4825b4: π(x) = (bᵀx / bᵀb)·b
+q23:
+  text: Which are properties of an orthogonal projection matrix P?
+  show: 4
+  options:
+    ob4ab04: P is symmetric (for the dot product)
+    oe574e8: P = I for any subspace
+    oef3bbf: P² = I
+    o59df7f: det(P) = 1
+    of65846: P² = P
+    o25c44e: P is always invertible
+q24:
+  text: To project x onto the column space of B (independent columns), you solve …
+  show: 4
+  options:
+    o196bec: the normal equations
+    o72ea15: Bᵀλ = x
+    oadb88f: λ = Bx
+    obab7cc: Bλ = x exactly
+    o3dc5fa: BBᵀλ = x
+    o91a10a: BᵀBλ = Bᵀx
+q25:
+  text: What does Gram-Schmidt do?
+  show: 4
+  options:
+    o77b696: finds the eigenvalues of a matrix
+    ob04a0f: makes any set of vectors independent
+    oedfbf8: sorts vectors by length
+    o9f550e: turns a basis into an orthogonal (or orthonormal) basis of the same space
+    o58a85b: subtracts from each vector its projections onto the previous ones
+    o3d2604: computes the determinant
+q26:
+  text: Which are true for a rotation matrix R in ℝ²?
+  show: 4
+  options:
+    od7e939: det R = −1
+    o846151: det R = 1
+    o460c43: R is symmetric for every angle
+    o319b59: R⁻¹ = Rᵀ
+    o69ab25: RᵀR = I
+    oe52c1e: R changes lengths
+    of3b592: R² = I for every angle
+q27:
+  text: An orthogonal matrix A (AᵀA = I) …
+  show: 4
+  options:
+    o8b3190: must be diagonal
+    o631693: keeps angles between vectors
+    o299089: always has determinant 1
+    o05f9b1: doubles areas
+    o8a96dd: 'keeps lengths: ‖Ax‖ = ‖x‖'
+    odac19e: has orthogonal but not unit-length columns
+q28:
+  text: Which statements about rotations in 3D are true?
+  show: 4
+  options:
+    o4d8ce0: any two rotations commute
+    o57436a: they have determinant 0
+    of38dc6: they can't be written as matrices
+    o45c032: a Givens rotation turns within one plane
+    o851a4a: they change the length of the rotation axis
+    od547c9: their order matters in general
+q29:
+  text: In ℝ², the first column of R(θ) is …
+  show: 4
+  options:
+    o0e211d: always (1, 0)
+    o2dec78: (cos θ, −sin θ)
+    o0e5a19: (sin θ, cos θ)
+    o94fd24: (cos θ, sin θ)
+    oe325fd: (−sin θ, cos θ)
+    o6c1d6d: where e₁ lands after the rotation

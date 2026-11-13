@@ -1,0 +1,189 @@
+q1:
+  right:
+  - o35e6be
+  - o231f23
+  - oe8e462
+  why: Densities integrate to 1; probabilities are areas, not heights.
+q2:
+  right:
+  - ofa1c38
+  - oa7a781
+  why: Bayesians treat probability as belief; frequentists as long-run frequency. ML uses both views.
+q3:
+  right:
+  - oebb215
+  - o9b02b8
+  why: 'Probability: model → data. Statistics (and learning): data → model.'
+q4:
+  right:
+  - o2b5439
+  - o02621f
+  why: It exists for both discrete and continuous variables; its derivative is the density when one exists.
+q5:
+  right:
+  - o32b3b9
+  - oc2b75b
+  - o73691d
+  why: Sum rule, product rule, and Bayes' theorem; the conditional probability isn't symmetric.
+q6:
+  right:
+  - o00821a
+  - o804e62
+  - o1c3ea9
+  why: Posterior ∝ likelihood × prior; p(D) is the evidence (marginal likelihood).
+q7:
+  right:
+  - o9362c1
+  - o94abab
+  why: 0.009 / (0.009 + 0.0495) ≈ 0.154.
+q8:
+  right:
+  - ofa70a0
+  - ob14b0f
+  why: It doesn't depend on θ, so for finding the best θ it can be ignored; for comparing models it matters.
+q9:
+  right:
+  - od504c0
+  - o261b41
+  - o8a169c
+  why: Expectation is linear; variances add only when the covariance is 0.
+q10:
+  right:
+  - oe9f71a
+  - obadde4
+  why: The shift moves the mean but not the spread.
+q11:
+  right:
+  - o4e9d35
+  - od5e6e6
+  why: E[XY] = E[X³] = 0 = E[X]E[Y], yet Y is a function of X.
+q12:
+  right:
+  - o245bc5
+  - o1d0a0a
+  why: Off-diagonal entries can be negative; it can be singular when variables are perfectly correlated.
+q13:
+  right:
+  - o2343e0
+  - o2a58d5
+  - o726444
+  why: Marginals and conditionals of Gaussians are Gaussian, with closed forms.
+q14:
+  right:
+  - o020132
+  - oc3a5cb
+  why: Linear transformations keep Gaussians Gaussian.
+q15:
+  right:
+  - o87b0af
+  - o319692
+  why: Cov[Lz] = LLᵀ = Σ. Independent coordinates only work when Σ is diagonal.
+q16:
+  right:
+  - ofc93f2
+  - o198068
+  why: A mixture of densities isn't the density of a sum; the sum of the variables would be Gaussian.
+q17:
+  right:
+  - o4a53a5
+  - o2e7399
+  - o246613
+  why: Add heads to α and tails to β. Posterior mean α/(α+β); MLE heads/flips.
+q18:
+  right:
+  - oe4bacc
+  - o52d330
+  why: That's the definition; it keeps updating in closed form.
+q19:
+  right:
+  - o20fd3b
+  - o37fff7
+  - ofcb857
+  why: Mixtures and distributions whose support depends on θ are not in the exponential family.
+q20:
+  right:
+  - o106e37
+  - o193459
+  why: 'The likelihood is μʰ(1 − μ)ᵗ: only h and t matter.'
+q21:
+  right:
+  - of59c6f
+  - o2faa18
+  why: Use F_Y(y) = P(g(X) ≤ y) and differentiate.
+q22:
+  right:
+  - o711893
+  - oc45408
+  why: The probability integral transform, run backwards.
+q23:
+  right:
+  - o174ba9
+  - o3b7b77
+  why: Densities change inversely to volume so that probability is conserved.
+q24:
+  right:
+  - o657254
+  - o70d32c
+  why: g⁻¹(y) = (y − 3)/2 with derivative 1/2; variance scales by 2² = 4.
+q25:
+  right:
+  - of608bc
+  - oe1a29f
+  - o25470d
+  why: On f = x², γ must be below 1; strongly curved directions need smaller steps.
+q26:
+  right:
+  - o4d022b
+  - o80f103
+  why: Momentum is a memory of past steps; it doesn't make non-convex problems convex.
+q27:
+  right:
+  - o456b7f
+  - o0c2b5d
+  why: The mini-batch gradient is a noisy but unbiased estimate of the full one.
+q28:
+  right:
+  - o9c5257
+  - o6ef3e5
+  why: x − γ·2x = (1 − 2γ)x; converges when |1 − 2γ| < 1.
+q29:
+  right:
+  - o338ffa
+  - ofbe263
+  why: You can't improve f along the constraint, so ∇f has no component along it.
+q30:
+  right:
+  - of0c72a
+  - oe116ea
+  why: 1 = 2λx and 1 = 2λy give x = y; on the circle, x = y = 1/√2.
+q31:
+  right:
+  - o48c393
+  - od43b4d
+  why: Equality (strong duality) needs extra conditions like convexity + Slater.
+q32:
+  right:
+  - o0d5885
+  - o7ee5bd
+  why: λᵢ ≥ 0, and λᵢgᵢ(x) = 0 at the optimum.
+q33:
+  right:
+  - oc2a159
+  - o52a619
+  - o96ae98
+  why: Norms, convex quadratics and the exponential are convex; the others curve down somewhere.
+q34:
+  right:
+  - o4ae309
+  - ob9d0fd
+  why: Strict convexity would give uniqueness; plain convexity allows a flat set of minimizers.
+q35:
+  right:
+  - obcde72
+  - od087d6
+  why: The second-order and chord definitions are equivalent for smooth functions.
+q36:
+  right:
+  - o1fdb3a
+  - o892431
+  why: With a positive (semi)definite quadratic term, a QP is convex.

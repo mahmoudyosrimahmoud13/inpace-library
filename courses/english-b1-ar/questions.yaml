@@ -239,82 +239,93 @@ q24:
     oe8af35: She must forgot.
     o59e3f3: She must have forgotten.
 q25:
-  text: أي جمل صحيحة؟
+  text: أي جمل مكتوبة صحيحًا؟
   show: 4
   options:
-    obffe1c: We've run out of sugar.
-    odefc2d: She turned down the job offer.
-    o4e7922: We've run out sugar.
-    obe184c: We've run off sugar.
-    oec9592: She turned down it.
-    ob596ef: She turned off the job offer.
+    o3c029b: It's colder than yesterday.
+    o15c3d1: Its colder then yesterday.
+    oe1c9ce: She preferred to stay home.
+    ob1ce6f: They're waiting for their friends.
+    o4ae86e: She prefered to stay home.
+    o83e4e2: Your right, it's you're turn.
+    oefb90d: Their waiting for there friends.
 q26:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o07bb0a: Could you pick me up at 7?
-    ob5ed5d: Could you pick up me at 7?
-    o5ecd18: I'll look after the kids.
-    o3ea719: I'll look after of the kids.
-    o96cead: I'll look for the kids while you're out.
-    o3e941a: Could you pick me at 7 up?
+    o962c0b: We've run out of sugar.
+    of01601: We've run off sugar.
+    o4dd1fc: She turned off the job offer.
+    o2efe4a: She turned down the job offer.
+    oe4a4b1: We've run out sugar.
+    o0d896b: She turned down it.
 q27:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    of65aa9: Despite the traffic, we arrived on time.
-    o52b626: Despite of the traffic, we arrived on time.
-    od7c51a: Although he was tired, he kept working.
-    o034376: Although of being tired, he kept working.
-    o69164f: Although tired he was, but he kept working.
-    o232aba: Despite there was traffic, we arrived.
+    of18ff7: Could you pick me at 7 up?
+    oa905d7: I'll look after the kids.
+    o7a812d: I'll look after of the kids.
+    oaf5814: I'll look for the kids while you're out.
+    od46171: Could you pick me up at 7?
+    ob4235d: Could you pick up me at 7?
 q28:
-  text: إيميل يبدأ 'Dear Sir or Madam'. أي ختام صحيح؟
-  show: 4
-  options:
-    ob52f06: Bye for now,
-    o214fc2: Yours friendly,
-    oc43aa9: Love, Mona
-    o34c3c4: See ya,
-    oab09ec: Yours faithfully, Mona Hassan
-    o802db3: Yours faithfully,
-q29:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o04f4e0: If I knew, I would have told you yesterday.
-    offc181: I'm learning English since 2022.
-    o823377: If I would have known, I told you.
-    o03e551: If I had known, I would have told you.
-    o1c10f9: I've been learning English since 2022.
-    obf648d: I've been learning English for 2022.
+    o74e663: Although of being tired, he kept working.
+    o5b9d2c: Although he was tired, he kept working.
+    oe582a7: Although tired he was, but he kept working.
+    oc35e7f: Despite there was traffic, we arrived.
+    ofe6f3d: Despite the traffic, we arrived on time.
+    o40b419: Despite of the traffic, we arrived on time.
+q29:
+  text: إيميل يبدأ 'Dear Sir or Madam'. أي ختام صحيح؟
+  show: 4
+  options:
+    o5fb687: See ya,
+    o2fc463: Bye for now,
+    o6994bf: Yours friendly,
+    oc8b9e2: Yours faithfully,
+    ofbd6bd: Yours faithfully, Mona Hassan
+    of89833: Love, Mona
 q30:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    of90775: He said me he was making a mistake.
-    of36b32: He told that he makes a mistake.
-    o2816fd: The bakery is run from their kitchen.
-    oec9869: The bakery is running from their kitchen by them.
-    oecb073: He told me he was making a mistake.
-    oceaf58: The bakery runs from their kitchen by them.
+    ob6711f: I've been learning English since 2022.
+    o1dc324: If I had known, I would have told you.
+    od88019: If I would have known, I told you.
+    offb3c3: I'm learning English since 2022.
+    ocf4cb5: If I knew, I would have told you yesterday.
+    o354d11: I've been learning English for 2022.
 q31:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    oaf649a: That must to be his brother.
-    oca12c8: She use to work in a bank.
-    o66a7ab: That must be his brother.
-    oee518c: She was used to work in a bank.
-    oe914a0: That mustn't be his brother, I'm sure he isn't.
-    o33b1d8: She used to work in a bank.
+    o3423b5: He told me he was making a mistake.
+    of6cbca: He told that he makes a mistake.
+    o3f1dc7: The bakery is run from their kitchen.
+    o6fb18c: The bakery runs from their kitchen by them.
+    o7c5025: He said me he was making a mistake.
+    o92b772: The bakery is running from their kitchen by them.
 q32:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    of73322: Despite it was expensive, we bought it.
-    o620264: I wish I had more free time.
-    oa2f0c6: I wish I have more free time.
-    o7515fb: I wish I will have more free time.
-    o6dcbe7: Although it was expensive, we bought it.
-    o5048b9: Although it was expensive, but we bought it.
+    o887013: That must to be his brother.
+    o8a0e40: She was used to work in a bank.
+    ob27883: She use to work in a bank.
+    oca4159: That mustn't be his brother, I'm sure he isn't.
+    o01e67e: That must be his brother.
+    o3f4ae0: She used to work in a bank.
+q33:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    ocd6f27: Although it was expensive, but we bought it.
+    oa35241: Despite it was expensive, we bought it.
+    ob22329: I wish I had more free time.
+    od43376: I wish I have more free time.
+    oee7f03: I wish I will have more free time.
+    od9d6dc: Although it was expensive, we bought it.

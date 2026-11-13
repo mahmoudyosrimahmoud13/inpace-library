@@ -217,11 +217,18 @@ def build(out: Path) -> None:
         entry["sample"] = sample(course)
         if meta.get("credit"):
             entry["credit"] = str(meta["credit"])
+        if course.extra.get("book_info"):  # a book each learner gets themselves (never inside the course)
+            entry["book"] = course.extra["book_info"]
         entry["link"] = to_link(share_data(entry))
         entries.append(entry)
     index = {"inpace": "library", "v": 1, "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
              "courses": entries}
     (out / "library.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
+    # A tiny summary other pages can read (inPace's website shows the number of courses from it).
+    stats = {"courses": len(entries), "lessons": sum(c["lessons"] for c in entries),
+             "hours": round(sum(c.get("minutes") or 0 for c in entries) / 60),
+             "languages": sorted({c["language"] for c in entries}), "updated": index["updated"]}
+    (out / "stats.json").write_text(json.dumps(stats), encoding="utf-8")
     (out / "index.html").write_text(page(entries), encoding="utf-8")
     (out / "c").mkdir()
     for entry in entries:
@@ -688,6 +695,12 @@ def course_page(c: dict) -> str:
         d = c["downloads"][0]
         dl = f'<p class="by">{ic("video")} {t("Videos download separately", "الفيديوهات تُحمّل منفصلة")}{" · " + e(d["size"]) if d.get("size") else ""}</p>'
     credit = f'<p>{e(c["credit"])}</p>' if c.get("credit") else ""
+    if c.get("book"):
+        b = c["book"]
+        link = f' <a href="{e(b["url"])}">{e(b["url"].split("//", 1)[-1])}</a>' if b.get("url") else ""
+        dl += (f'<p class="by">{ic("doc")} {t("Uses a book you download yourself, free:", "تستخدم كتابًا تحمّله بنفسك مجانًا:")} '
+               f'<b dir="auto">{e(b.get("title", ""))}</b>.{link} '
+               f'{t("inPace 1.20 or newer finds it on your device.", "يجده inPace 1.20 أو أحدث على جهازك.")}</p>')
     actions = f"""<a class="btn primary" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a>
       <button class="btn" type="button" data-copy="{e(c["link"])}">{t("Copy link", "انسخ الرابط")}</button>
       <a class="btn quiet" href="{e(c["pack"])}" download>{t("Download file", "حمّل الملف")}</a>"""

@@ -1,0 +1,19 @@
+official: true
+author: inPace
+license: CC-BY-SA-4.0
+tags:
+- math
+- machine learning
+- linear algebra
+- mml book
+- 3blue1brown
+- probability
+- statistics
+- bayes
+- gaussian
+- optimization
+- gradient descent
+updated: '2026-11-13'
+credit: 'Book (not included): Mathematics for Machine Learning by Marc Peter Deisenroth, A. Aldo Faisal and Cheng
+  Soon Ong, Cambridge University Press 2020, free to download for personal use at mml-book.com. Videos: 3Blue1Brown
+  (Grant Sanderson) on YouTube. Notes, charts, interactive pages, tasks and questions: inPace.'

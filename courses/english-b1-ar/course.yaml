@@ -219,6 +219,16 @@ modules:
     title: أدوات الربط والكتابة المترابطة
     file: lessons/m7-l2.md
     minutes: 30
+  - id: m7-l3
+    title: 'فيديو: 5 قواعد تهجئة واستثناءاتها'
+    file: lessons/m7-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=esvAfv1W7x8
+  - id: m7-l4
+    title: 'فيديو: الحروف الصامتة (silent letters)'
+    file: lessons/m7-l4.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=3dTEHEo2n_Q
   requires:
   - id: m7-practical
     type: practical
@@ -236,6 +246,7 @@ modules:
     - q26
     - q27
     - q28
+    - q29
     pass: 70
 - id: m8
   title: 'الأيام 36-40: اختبار تجريبي B1'
@@ -260,8 +271,8 @@ modules:
   - id: m8-quiz
     type: quiz
     questions:
-    - q29
     - q30
     - q31
     - q32
+    - q33
     pass: 70

@@ -1,0 +1,211 @@
+q1:
+  right:
+  - ob472ed
+  - oc49de8
+  - o36914f
+  why: The test set must stay untouched until the end.
+q2:
+  right:
+  - oe3fd24
+  - o69449d
+  why: 'Too few parameters gives underfitting: high error on both.'
+q3:
+  right:
+  - o820d19
+  - o88349c
+  why: K models, each validated on a different held-out fold.
+q4:
+  right:
+  - o020588
+  - o154f28
+  why: Regularization trades a bit of training fit for simpler models.
+q5:
+  right:
+  - o7b7975
+  - o815738
+  - o26d6ad
+  why: MLE uses no prior; MAP does.
+q6:
+  right:
+  - o8abb6a
+  - of50398
+  why: −log of a Gaussian prior is a squared norm; a Laplace prior gives L1.
+q7:
+  right:
+  - o3f3e30
+  - of5aab8
+  why: It integrates out the parameters instead of picking one.
+q8:
+  right:
+  - o2ae75a
+  - o24dca4
+  why: GMMs (which cluster) and PCA (the low-dimensional code) both use them.
+q9:
+  right:
+  - oaa4a07
+  - oc64dab
+  why: A chain is blocked by observing the middle node.
+q10:
+  right:
+  - oe56c27
+  - o24ba0a
+  why: '"Explaining away": knowing the effect couples its causes.'
+q11:
+  right:
+  - oe3ad48
+  - obac7d7
+  - o87f5cc
+  why: All valid methods account for generalization or complexity.
+q12:
+  right:
+  - ofcb878
+  - of1bb1a
+  why: p(D | M) = ∫ p(D | θ, M) p(θ | M) dθ; flexibility spreads probability thin.
+q13:
+  right:
+  - o50ad51
+  - oe57258
+  - oba2da4
+  why: Linear in θ; polynomial features make curved fits.
+q14:
+  right:
+  - o993371
+  - ob34a32
+  why: Setting the gradient of the squared error to zero gives the normal equations.
+q15:
+  right:
+  - oefeb37
+  - o1ea62b
+  why: 'λ = σ²/b²: a narrow prior means strong regularization.'
+q16:
+  right:
+  - o75daa5
+  - o6e8a54
+  - od19f1e
+  why: More data or a simpler / regularized model reduce variance.
+q17:
+  right:
+  - ode1f27
+  - oe59284
+  - o34fcee
+  why: Conjugacy keeps everything Gaussian; noise variance σ² stays even at the data.
+q18:
+  right:
+  - o4fa02e
+  - o0c5369
+  why: The parameter-uncertainty part depends on x*; the noise part is constant.
+q19:
+  right:
+  - o92a8de
+  - o38c036
+  why: Least squares = projection; the residual is orthogonal to the feature columns.
+q20:
+  right:
+  - of3195e
+  - o140ff1
+  why: Integrating out θ from a linear-Gaussian model gives a Gaussian over y.
+q21:
+  right:
+  - occ308e
+  - o31e9e2
+  - oaae8ef
+  why: Maximize bᵀSb with ‖b‖ = 1 → Sb = λb; pick the largest λ.
+q22:
+  right:
+  - o813b91
+  - o4afc90
+  why: Kept + error = trace(S).
+q23:
+  right:
+  - obafb18
+  - o54b1c7
+  why: Maximizing one is minimizing the other.
+q24:
+  right:
+  - o4b09cc
+  - o7e79a9
+  why: PCA is unsupervised; standardizing is optional and depends on units.
+q25:
+  right:
+  - ode4cbc
+  - o5dc494
+  - od894f1
+  why: SVD and eigendecomposition give the same directions; power iteration finds the top one.
+q26:
+  right:
+  - o814f18
+  - o353638
+  why: If XXᵀc = λc, then Xᵀc is an eigenvector of XᵀX with the same λ.
+q27:
+  right:
+  - o4bbb99
+  - o828d52
+  why: PCA follows variance; unit choices change variance.
+q28:
+  right:
+  - o6940ca
+  - o172a0d
+  why: Its maximum likelihood solution spans the principal subspace.
+q29:
+  right:
+  - oc2d40b
+  - ob2d380
+  - oa98e42
+  why: Soft assignments, normalized over components.
+q30:
+  right:
+  - obf9ecc
+  - o623872
+  why: Each point contributes in proportion to its responsibility.
+q31:
+  right:
+  - o8c342b
+  - oa721aa
+  why: 'Monotone improvement, but local optima are possible: use several starts.'
+q32:
+  right:
+  - o152623
+  - o841a84
+  why: The coupled equations are solved by alternating, which is EM.
+q33:
+  right:
+  - o480cfb
+  - o22484c
+  why: w is the normal vector; b shifts the hyperplane away from the origin.
+q34:
+  right:
+  - o4f1aff
+  - o457056
+  why: Maximizing the margin 1/‖w‖ = minimizing ‖w‖²/2 under the constraints.
+q35:
+  right:
+  - oa4266f
+  - o87952d
+  why: Only points with y·f(x) < 1 are penalized.
+q36:
+  right:
+  - o25a37a
+  - o3665eb
+  why: C weighs slack against ‖w‖².
+q37:
+  right:
+  - o47a654
+  - oce9dad
+  - o6c45e5
+  why: Points with αₙ = 0 don't affect the solution.
+q38:
+  right:
+  - of3271f
+  - od314bc
+  why: 'Mercer''s condition: positive semidefinite Gram matrices.'
+q39:
+  right:
+  - o515cc5
+  - oee9c2c
+  why: xᵀy = 5.
+q40:
+  right:
+  - oa11f14
+  - oe0e3b1
+  - o689fc6
+  why: Its feature space is infinite-dimensional; σ sets how local the boundary is.

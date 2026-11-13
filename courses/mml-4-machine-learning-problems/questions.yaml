@@ -1,0 +1,411 @@
+q1:
+  text: Which are parts of empirical risk minimization?
+  show: 4
+  options:
+    oc49de8: choosing a loss function
+    oc6168a: minimizing the loss on the test set
+    ob472ed: choosing a hypothesis class
+    of70c35: using the test set to pick λ
+    o36914f: minimizing the average training loss (plus a regularizer)
+    obef2fe: maximizing the number of parameters
+    of1d25f: always using the hinge loss
+q2:
+  text: Overfitting shows up as …
+  show: 4
+  options:
+    o69449d: a model that fits the noise in the training data
+    ob109c8: equal training and test error
+    od0d10e: a model with too few parameters
+    obb3a5e: high training error and high test error, always
+    o69cf0d: training error that goes up as the model grows
+    oe3fd24: low training error but high test error
+q3:
+  text: In K-fold cross-validation …
+  show: 4
+  options:
+    o820d19: each fold is used once for validation
+    o132e65: K must equal the number of features
+    o345eb0: you train one model on all data and test on all data
+    o1b689c: the test set is one of the folds
+    o34f2fd: the folds must overlap
+    o88349c: you train K models and average their validation scores
+q4:
+  text: Adding λ‖θ‖² to the empirical risk …
+  show: 4
+  options:
+    o154f28: can reduce overfitting
+    o5c3567: changes the hypothesis class to decision trees
+    oa3b586: makes the model fit the training data perfectly
+    o020588: discourages large parameter values
+    oda4ef6: removes the need for data
+    o5271c6: always increases test error
+q5:
+  text: Which are true about maximum likelihood estimation?
+  show: 4
+  options:
+    ofad71f: it maximizes p(θ | data) using a prior
+    oc0a467: it can never overfit
+    o7b7975: it maximizes p(data | θ)
+    o815738: with Gaussian noise it is equivalent to least squares
+    o9c64f9: it always gives the posterior distribution
+    o8a4b67: it requires a conjugate prior
+    o26d6ad: in practice we minimize the negative log-likelihood
+q6:
+  text: MAP estimation with prior θ ~ N(0, b²I) adds which term to the negative log-likelihood?
+  show: 4
+  options:
+    ofd651b: nothing
+    o1f69d3: −‖θ‖²
+    of50398: an L2 penalty on θ
+    o4c58a7: a penalty on the number of data points
+    of696c9: an L1 penalty |θ|
+    o8abb6a: ‖θ‖²/(2b²) (plus a constant)
+q7:
+  text: A fully Bayesian prediction …
+  show: 4
+  options:
+    o3f3e30: averages predictions over the posterior of θ
+    of5aab8: uses ∫ p(y* | x*, θ) p(θ | data) dθ
+    ob7ab42: uses only the single best θ
+    o4552f5: needs no data
+    oa15bf1: is the same as the MLE prediction, always
+    o5bd06e: ignores the prior
+q8:
+  text: Latent variables are …
+  show: 4
+  options:
+    o4598f8: the labels in supervised learning
+    o016bc9: always the same as the parameters
+    o24dca4: useful for describing hidden structure, like cluster membership
+    o2ae75a: variables in the model that are never observed
+    o0d8688: the hyperparameters chosen by cross-validation
+    o5722f3: variables we delete before training
+q9:
+  text: For the graph a → b → c, which statements hold?
+  show: 4
+  options:
+    oca8345: c is a parent of a
+    oc64dab: a and c are independent given b
+    oe8ad0d: observing b makes a and c dependent
+    oc61064: a and c are independent with nothing observed, always
+    oaa4a07: p(a, b, c) = p(a) p(b | a) p(c | b)
+    o0d4f90: p(a, b, c) = p(a) p(b) p(c)
+q10:
+  text: In a collider a → b ← c …
+  show: 4
+  options:
+    oeb39be: b is a parent of a and c
+    o88fbd2: observing b makes a and c independent
+    o24ba0a: observing b can make a and c dependent
+    o8c3bd4: there is no factorization
+    o71f00e: a and c are always dependent
+    oe56c27: a and c are independent when b is not observed
+q11:
+  text: Which are ways to choose between models?
+  show: 4
+  options:
+    o469c7d: evaluating on the training data twice
+    oe3ad48: cross-validation
+    obac7d7: comparing the evidence (Bayes factors)
+    o63ae49: picking the model with the most parameters
+    obcdb61: picking the model with the lowest training error
+    o87f5cc: information criteria like AIC or BIC
+    o3a2388: picking the model that trains fastest
+q12:
+  text: The marginal likelihood (evidence) of a model …
+  show: 4
+  options:
+    of1bb1a: naturally penalizes overly flexible models
+    ofcb878: integrates the likelihood over the prior of the parameters
+    oa44a29: always prefers the most complex model
+    o9338e5: is the same as the training error
+    o787cab: is the likelihood at the MLE
+    o37fa13: ignores the prior
+q13:
+  text: In the book's linear regression, which are true?
+  show: 4
+  options:
+    od95506: θ must be one-dimensional
+    o5916f4: there can be no intercept
+    o9819b0: the model must be a straight line in x
+    o50ad51: the model is linear in the parameters θ
+    o6115a5: the noise must be uniform
+    oba2da4: the noise is assumed Gaussian
+    oe57258: the features φ(x) can be non-linear in x
+q14:
+  text: The maximum likelihood estimate satisfies …
+  show: 4
+  options:
+    o993371: ΦᵀΦθ = Φᵀy
+    o07c5f0: θ = 0
+    od2eab9: θ = Φᵀy
+    ob34a32: θ = (ΦᵀΦ)⁻¹Φᵀy when ΦᵀΦ is invertible
+    o0b913a: Φθ = y exactly, always
+    o363c87: θ = (ΦΦᵀ)⁻¹y
+q15:
+  text: MAP with a Gaussian prior on θ gives …
+  show: 4
+  options:
+    oefeb37: θ = (ΦᵀΦ + λI)⁻¹Φᵀy
+    o1ea62b: the same answer as ridge regression
+    o5fda8c: the same answer as MLE, for any prior
+    ofbaaf1: a model with no parameters
+    od50482: a solution that ignores the data
+    of3f523: θ = (ΦᵀΦ − λI)⁻¹Φᵀy
+q16:
+  text: Which help against overfitting in polynomial regression?
+  show: 4
+  options:
+    o6e8a54: a lower polynomial degree
+    o381aaf: setting λ = 0
+    o16ea9d: a smaller training set
+    o58c38e: removing the test set
+    o75daa5: more training data
+    o3ec202: a higher polynomial degree
+    od19f1e: regularization (a larger λ)
+q17:
+  text: In Bayesian linear regression with a Gaussian prior and Gaussian noise …
+  show: 4
+  options:
+    ode1f27: the posterior over θ is Gaussian
+    odb5ba7: the posterior has no closed form
+    o88d576: the prior is ignored
+    oa94958: the posterior mean always equals the prior mean
+    of5d59b: predictions have zero variance at the data points
+    o34fcee: predictions are Gaussian
+    oe59284: the posterior precision is S₀⁻¹ + σ⁻²ΦᵀΦ
+q18:
+  text: The predictive variance φ*ᵀS_Nφ* + σ² …
+  show: 4
+  options:
+    o2a2b3f: is the same everywhere
+    off1d76: is always zero with enough data
+    oa194b2: doesn't depend on x*
+    o4fa02e: grows away from the training data
+    o0c5369: never drops below the noise variance σ²
+    of47df4: shrinks as you move away from the data
+q19:
+  text: Geometrically, the maximum likelihood fit Φθ_ML is …
+  show: 4
+  options:
+    o92a8de: the orthogonal projection of y onto the column space of Φ
+    o1c5bc7: orthogonal to y
+    o38c036: the closest vector to y that the model can produce
+    o77c635: the longest vector in the column space
+    o510458: the first column of Φ
+    o0c74af: always equal to y
+q20:
+  text: The marginal likelihood p(y | X) in Bayesian linear regression …
+  show: 4
+  options:
+    o2ad031: is the same as the prior
+    of3195e: is Gaussian and can be computed in closed form
+    o140ff1: can be used to compare models, such as polynomial degrees
+    oab3554: always prefers the highest degree
+    o1fc0fc: depends on a single best θ
+    o658d07: can't be computed
+q21:
+  text: Which are true about the first principal component of centered data?
+  show: 4
+  options:
+    o31e9e2: it maximizes the variance of the projected data
+    oaae8ef: the variance along it equals the largest eigenvalue
+    ocdc483: it is the mean of the data
+    ob5015d: it is always the x-axis
+    o5bce9f: it is the direction of smallest variance
+    occ308e: it is the eigenvector of the covariance S with the largest eigenvalue
+    of733db: it maximizes the reconstruction error
+q22:
+  text: Keeping M of D principal components, the average squared reconstruction error is …
+  show: 4
+  options:
+    oebc0b4: the sum of the M largest eigenvalues
+    o813b91: the sum of the D − M smallest eigenvalues
+    o8a45c3: always zero
+    o8eed3b: the largest eigenvalue
+    o4afc90: total variance minus the variance kept
+    of9014d: the number of discarded dimensions
+q23:
+  text: The maximum-variance and projection (minimum-error) views of PCA …
+  show: 4
+  options:
+    o54b1c7: are linked because kept variance + error = total variance
+    obafb18: give the same subspace
+    oda7aec: only agree in 2D
+    o88dca5: require labels
+    o5563ab: need a Gaussian assumption
+    o5269de: give different subspaces
+q24:
+  text: Which are required for PCA as in the book?
+  show: 4
+  options:
+    of8c4bb: a Gaussian prior on B
+    o1d6b29: integer-valued data
+    o4b09cc: centering the data (subtracting the mean)
+    o4f3b50: more dimensions than data points
+    o8e3733: labels for every example
+    o7e79a9: an orthonormal basis B for the subspace
+q25:
+  text: To compute PCA in practice, you can …
+  show: 4
+  options:
+    od3a775: invert the data matrix
+    ofbcb5d: run gradient descent on the labels
+    of30ec0: sort the features by their mean
+    od894f1: use power iteration for the top component
+    o5dc494: eigendecompose the data covariance matrix
+    ode4cbc: take the SVD of the centered data matrix
+    o4d361a: use the Cholesky factor of X
+q26:
+  text: When the number of points N is much smaller than the dimension D …
+  show: 4
+  options:
+    o814f18: you can eigendecompose the N × N matrix XXᵀ instead of the D × D covariance
+    o4ff185: you must add more features
+    o0919cb: you must use labels
+    o353638: the nonzero eigenvalues of XXᵀ and XᵀX are the same
+    of1f5ba: the covariance matrix has full rank
+    o1dbdd6: PCA can't be used
+q27:
+  text: You should standardize features before PCA when …
+  show: 4
+  options:
+    o4bbb99: they are measured in different units
+    ob42119: you have exactly 2 features
+    o828d52: one feature's scale would otherwise dominate the variance
+    o78ea84: the data are already centered
+    o14a463: you want more components
+    oe09863: never
+q28:
+  text: Probabilistic PCA models data as …
+  show: 4
+  options:
+    o0affe2: a decision tree over features
+    o5bb10a: a uniform distribution
+    o8afb7e: x = z exactly, with no noise
+    o172a0d: a Gaussian with covariance BBᵀ + σ²I
+    oe6c00f: a mixture of K Gaussians
+    o6940ca: x = Bz + μ + ε with a low-dimensional latent z ~ N(0, I)
+q29:
+  text: Which are true about the responsibility r_nk in a GMM?
+  show: 4
+  options:
+    ofa9584: it is the weight πₖ itself
+    o2723c9: it is computed in the M-step from the means only
+    o556a60: it ignores the covariances
+    oe366a8: it is always 0 or 1
+    ob2d380: the responsibilities of one point sum to 1
+    oc2d40b: it is the posterior probability that component k generated point n
+    oa98e42: it is computed in the E-step
+q30:
+  text: In the M-step, the new mean of component k is …
+  show: 4
+  options:
+    oe95ba8: μₖ + r_nk
+    o623872: a weighted average of all points, weighted by responsibility
+    o6553fb: the point with the highest responsibility
+    obf9ecc: Σₙ r_nk xₙ / Σₙ r_nk
+    o930946: the median of the cluster
+    oe69b65: the average of all points, unweighted
+q31:
+  text: What does EM guarantee?
+  show: 4
+  options:
+    o131bfe: that every component gets equal weight
+    obd6c28: exactly 10 iterations
+    oa721aa: convergence to a stationary point (often a local optimum)
+    o8c342b: the log-likelihood does not decrease from round to round
+    o06beb1: zero training error
+    o30d331: the global maximum, always
+q32:
+  text: Why does maximum likelihood for a GMM need an iterative method?
+  show: 4
+  options:
+    o83e683: there are no parameters
+    o189127: Gaussians aren't differentiable
+    o152623: the log-likelihood contains the log of a sum
+    ob1f896: the evidence is always 1
+    o957c80: the data must be sorted first
+    o841a84: the update for each parameter depends on the responsibilities, which depend on the parameters
+q33:
+  text: For the hyperplane ⟨w, x⟩ + b = 0, which are true?
+  show: 4
+  options:
+    of9053a: w lies inside the hyperplane
+    o4dd2b0: the hyperplane always passes through the origin
+    o480cfb: w is orthogonal to the hyperplane
+    o26ded0: the distance is ⟨w, x⟩ + b without dividing
+    o22484c: the distance from x to it is |⟨w, x⟩ + b| / ‖w‖
+    oe52a8a: b is the slope
+q34:
+  text: The hard-margin SVM primal problem is …
+  show: 4
+  options:
+    o85d7e4: minimize the number of misclassified points directly
+    o1f4c61: only solvable by EM
+    o73d433: an unconstrained linear problem
+    o4f1aff: minimize ½‖w‖² subject to yₙ(⟨w, xₙ⟩ + b) ≥ 1
+    o457056: a convex quadratic program
+    ob6fa21: maximize ‖w‖²
+q35:
+  text: Hinge loss max(0, 1 − y·f(x)) …
+  show: 4
+  options:
+    o944e76: is the squared error
+    oe714d5: is 0 for misclassified points
+    o87952d: is positive for points inside the margin, even if correctly classified
+    o3c4a57: is always positive
+    oa4266f: is 0 for points correctly classified beyond the margin
+    ob639cb: doesn't depend on the label y
+q36:
+  text: In the soft-margin SVM, a very large C …
+  show: 4
+  options:
+    of903aa: makes the margin as wide as possible regardless of errors
+    o128808: removes the regularizer
+    oa4c088: allows many violations
+    o39272d: turns the SVM into PCA
+    o25a37a: makes margin violations expensive
+    o3665eb: behaves like the hard-margin SVM
+q37:
+  text: In the dual SVM, which are true?
+  show: 4
+  options:
+    oce9dad: support vectors are the points with αₙ > 0
+    of84698: αₙ can be negative
+    o8dfe7e: w is the mean of the positive class
+    o47a654: w = Σₙ αₙyₙxₙ
+    o6c45e5: the data appear only through inner products
+    o5b80aa: every training point is a support vector
+    o073c70: the dual doesn't use Lagrange multipliers
+q38:
+  text: A valid kernel k(x, y) …
+  show: 4
+  options:
+    o7dfa39: must be negative for distant points
+    o5399b2: requires computing φ(x) explicitly
+    o7372ff: can be any function of two vectors
+    of3271f: equals an inner product ⟨φ(x), φ(y)⟩ in some feature space
+    oabc958: must be linear
+    od314bc: gives symmetric positive semidefinite Gram matrices
+q39:
+  text: For k(x, y) = (xᵀy + 1)² with x = (1, 2) and y = (3, 1), k equals …
+  show: 4
+  options:
+    oe947f3: '25'
+    oaacf40: '49'
+    o515cc5: '36'
+    o36a176: '10'
+    oee9c2c: (5 + 1)²
+    ob58b79: '6'
+q40:
+  text: The RBF kernel exp(−‖x − y‖²/(2σ²)) …
+  show: 4
+  options:
+    o46b671: grows without limit for distant points
+    oa11f14: equals 1 when x = y
+    oe0e3b1: goes to 0 for far-apart points
+    o332446: is always 0 when x = y
+    oaac034: only gives straight-line boundaries
+    oc1ba86: has a finite, 2-dimensional feature map
+    o689fc6: allows curved decision boundaries

@@ -79,242 +79,253 @@ q8:
     o7c0667: Will you open the door, please?
     ob53e43: Do you will open the door?
 q9:
-  text: أي جمل صحيحة؟
+  text: أي كلمات مكتوبة صحيحًا؟
   show: 4
   options:
-    o1c47f2: Aswan is hotter than Cairo in summer.
-    oe34a35: This is the most beautiful beach.
-    ofe3b40: Aswan is more hotter than Cairo.
-    ocec219: Aswan is hotter from Cairo.
-    o14c52f: This is the beautifulest beach.
-    o1a0032: This is most beautiful beach the.
+    o0c6c9f: biger
+    o7a3b73: happiest
+    o085d97: bigger
+    od6341d: recieved
+    o8b1f69: happyest
+    o4c3ca9: received
+    o343464: nicest-er
 q10:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o29530b: She's better at maths than me.
-    odfcc8e: She's more good at maths.
-    oa8c523: It's the baddest day.
-    o7acb09: She's gooder at maths.
-    o942ba3: It's the worst day of my life.
-    of66f5b: It's the most bad day.
+    o36a1a3: This is the beautifulest beach.
+    o47c108: Aswan is hotter than Cairo in summer.
+    oa038e2: This is the most beautiful beach.
+    odb9dd9: Aswan is more hotter than Cairo.
+    o3c71cb: Aswan is hotter from Cairo.
+    oc79a37: This is most beautiful beach the.
 q11:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o063cf2: The tea is too much hot.
-    oa0dee1: The tea is very hot to drink it.
-    o9ee0eb: He isn't enough old to vote.
-    o58247c: He isn't old to enough vote.
-    o72080d: He isn't old enough to vote.
-    oad7dea: The tea is too hot to drink.
+    o7dd0ad: She's more good at maths.
+    oa695a1: She's gooder at maths.
+    o78c824: It's the baddest day.
+    o4abf8d: She's better at maths than me.
+    o1f127c: It's the most bad day.
+    od1156a: It's the worst day of my life.
 q12:
-  text: 'لتسأل عن شخصية شخص:'
-  show: 4
-  options:
-    o52e480: What's she like as a person?
-    o7f01a5: What is he like?
-    o87769a: What does he like?
-    o59defa: How is he like?
-    o969d17: What he is like?
-    o7ddd9c: How he looks like?
-q13:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o27b29f: I went to Aswan ever.
-    o20364e: I went to Aswan last year.
-    ob9848c: I've been to Aswan last year.
-    o823bcf: I have be to Aswan.
-    o61303a: I've been to Aswan twice.
-    of5b471: I've went to Aswan.
+    od45359: He isn't enough old to vote.
+    oe3524e: He isn't old enough to vote.
+    o93326c: The tea is too hot to drink.
+    o2032b7: The tea is too much hot.
+    ofa4ed8: He isn't old to enough vote.
+    o919edf: The tea is very hot to drink it.
+q13:
+  text: 'لتسأل عن شخصية شخص:'
+  show: 4
+  options:
+    o98e339: What does he like?
+    o08755e: What is he like?
+    o878cc4: What's she like as a person?
+    ocabe59: What he is like?
+    o1bca96: How he looks like?
+    ofb0cc5: How is he like?
 q14:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o60c663: She's left just.
-    o790af3: Have you finish yet?
-    o50c933: Have you finished yet?
-    o4482fb: She's just left.
-    o13f131: Did you finished yet?
-    o135fcc: She just has leaved.
+    o74002c: I went to Aswan ever.
+    obc8db2: I've been to Aswan last year.
+    o4c3169: I've been to Aswan twice.
+    o531bb4: I have be to Aswan.
+    o3f3f7a: I went to Aswan last year.
+    o3ce67b: I've went to Aswan.
 q15:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o2d44ef: Have you finished yet?
+    o2767ac: She's left just.
+    ofe2741: Did you finished yet?
+    of54ced: She just has leaved.
+    o8b823e: Have you finish yet?
+    o5aac04: She's just left.
+q16:
   text: صديقك في دبي الآن. أي جملة صحيحة؟
   show: 4
   options:
-    oc94022: He has be in Dubai.
-    oa1145e: He's gone to Dubai.
-    o79c787: He has been to Dubai.
-    o55df66: He goes to Dubai ago.
-    o7db90b: He has went to Dubai.
-    od32dc9: He has gone to Dubai.
-q16:
+    o248ae2: He goes to Dubai ago.
+    oaf77cf: He has went to Dubai.
+    o6d203d: He's gone to Dubai.
+    oc59711: He has be in Dubai.
+    o334bf2: He has been to Dubai.
+    odfc7ee: He has gone to Dubai.
+q17:
   text: أي أسئلة صحيحة؟
   show: 4
   options:
-    obce291: Have you ever ate camel meat?
-    o69fec0: When have you started this job?
-    o14d289: When you started this job?
-    oa56476: When did you start this job?
-    o9446ca: Have you ever eaten camel meat?
-    o081b7e: Did you ever ate camel meat?
-q17:
+    o4df371: When have you started this job?
+    o59f994: Did you ever ate camel meat?
+    o691bcf: Have you ever eaten camel meat?
+    o2db580: When did you start this job?
+    o1a174e: When you started this job?
+    od9f88f: Have you ever ate camel meat?
+q18:
   text: أي جمل تعني 'مش لازم'؟
   show: 4
   options:
-    o0d95e6: You mustn't pay.
-    o11a949: You have to not pay.
-    oef2713: You must not to pay.
-    o0f9b00: You don't have to pay.
-    o115971: You shouldn't to pay.
-    oee3267: You don't need to pay.
-q18:
+    of7b1a6: You must not to pay.
+    oed2f33: You don't need to pay.
+    ob51415: You mustn't pay.
+    o2fb131: You have to not pay.
+    oc93b38: You don't have to pay.
+    o64f119: You shouldn't to pay.
+q19:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    oa4a979: She have to wear a uniform.
-    o6f2801: You should drinks more water.
-    o15b5f7: She has to wear a uniform.
-    o4457eb: You should to drink more water.
-    o212ba6: She must to wear a uniform.
-    od2bf36: You should drink more water.
-q19:
+    oed52c6: She have to wear a uniform.
+    o9fbfac: You should drinks more water.
+    odb0884: She has to wear a uniform.
+    oa041db: She must to wear a uniform.
+    odaca8e: You should to drink more water.
+    odcbd5c: You should drink more water.
+q20:
   text: أي طلبات مهذبة وصحيحة؟
   show: 4
   options:
-    o656fea: Would you mind to wait?
-    od02b42: You can send me the file?
-    o1203f3: Would you mind wait?
-    oe91685: Would you mind waiting a moment?
-    of33d4a: Could you to send me the file?
-    o63d574: Could you send me the file, please?
-q20:
+    o8b1eea: Could you send me the file, please?
+    obbbad0: You can send me the file?
+    o53e630: Could you to send me the file?
+    o8083af: Would you mind wait?
+    o1edc7b: Would you mind waiting a moment?
+    oabb5b1: Would you mind to wait?
+q21:
   text: أي جمل تعني احتمالًا؟
   show: 4
   options:
-    oa84a64: We must be late.
-    oc6d237: It has to snow tonight.
-    o393564: We might are late.
-    o01378c: It mays snow.
-    o86c2b2: It may snow tonight.
-    o755d81: We might be late.
-q21:
-  text: أي جمل صحيحة؟
-  show: 4
-  options:
-    obb5a67: A life is short.
-    occf5fc: I love a music.
-    o97d0e2: Life is short.
-    o564b61: I love music.
-    o284365: The life is short.
-    o858b96: I love the music in general.
+    o4a61a8: We must be late.
+    oae8ef3: It has to snow tonight.
+    o30bcfe: We might be late.
+    oe9c2ad: We might are late.
+    o4b31d9: It may snow tonight.
+    o75ab82: It mays snow.
 q22:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    oe3eb82: I don't have many money.
-    odc3897: There is a few people here.
-    o24521e: I don't have much money.
-    o515ad7: There are a little people here.
-    o478769: I don't have much moneys.
-    o85e007: There are a few people here.
+    o93303d: A life is short.
+    o8f0b30: I love a music.
+    ob15523: I love music.
+    oac8dc9: Life is short.
+    oad8c9e: I love the music in general.
+    ofd3d53: The life is short.
 q23:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o767567: She goes to a work by bus.
-    o3ca6b8: The sun rises in the east.
-    ob8e97b: She goes to work by bus.
-    o08e7fa: Sun rises in the east.
-    oa5ef48: She goes to the work by the bus.
-    of70e11: A sun rises in east.
+    oa5edf8: There are a little people here.
+    od798a3: There are a few people here.
+    o540172: I don't have much moneys.
+    o691e36: I don't have many money.
+    o5c6a91: I don't have much money.
+    oadcc82: There is a few people here.
 q24:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    od0a504: He's an engineer.
-    o15502e: He's engineer.
-    o6919f8: He's the engineer in general.
-    o8f30a2: I saw a film. The film was boring.
-    o9023ea: I saw the film. A film was boring.
-    off03a3: I saw film. Film was boring.
+    o58bfce: Sun rises in the east.
+    ocdbfbb: She goes to the work by the bus.
+    of4ed3e: A sun rises in east.
+    o3fc7da: She goes to work by bus.
+    o263a93: The sun rises in the east.
+    ofacc47: She goes to a work by bus.
 q25:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o32f8b4: If I see him, I'll tell him.
-    o042ce1: We'll start when everyone will arrive.
-    o197e92: If I will see him, I'll tell him.
-    oa64938: If I'll see him, I tell him.
-    o3c025b: If I see him, I tell him tomorrow.
-    oc9e71a: We'll start when everyone arrives.
+    o247371: He's engineer.
+    ocf5a98: He's an engineer.
+    o3710cd: I saw a film. The film was boring.
+    od2dddf: I saw film. Film was boring.
+    o8cb7b1: He's the engineer in general.
+    ob289fd: I saw the film. A film was boring.
 q26:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o91a6d5: I enjoy reading.
-    o511b63: I enjoy read.
-    o4ab0dd: I enjoy to read.
-    o821e48: I want travel.
-    oc90522: I want to travel.
-    oc8389f: I want traveling.
+    o716304: If I will see him, I'll tell him.
+    o20a961: If I'll see him, I tell him.
+    o7edb17: If I see him, I'll tell him.
+    o53bce7: If I see him, I tell him tomorrow.
+    o4765ac: We'll start when everyone arrives.
+    o7846fb: We'll start when everyone will arrive.
 q27:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o08dadb: She decided to leave.
-    ofc2d98: He stopped smoke.
-    od863f2: She decided leave.
-    oc294c2: He stopped smoking.
-    obaa38b: She decided leaving.
-    o4507c5: He stopped to smoking.
+    of00ac5: I want travel.
+    ofb9384: I enjoy read.
+    oe2a38b: I enjoy to read.
+    o028eda: I want to travel.
+    oc5abb8: I enjoy reading.
+    o0c7e79: I want traveling.
 q28:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o9a0e56: She's good to singing.
-    o89391c: I'm looking forward to meet you.
-    o2069ec: She's good at singing.
-    o2e52ce: I'm looking forward to meeting you.
-    o1ed439: She's good at sing.
-    o343dba: I'm looking forward meeting you.
+    oe02f1e: She decided leaving.
+    oa158ac: He stopped smoking.
+    oacb9f6: He stopped to smoking.
+    o3e9254: He stopped smoke.
+    o348e7d: She decided leave.
+    o1a5398: She decided to leave.
 q29:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    oab9fb1: We've already visited the museum.
-    o6632e3: While I was waiting, I read a book.
-    odf4e8b: We already have visit the museum.
-    o462bdc: We've already visit the museum.
-    o0c6645: While I waited, I was read a book.
-    o099cd8: While I was wait, I read a book.
+    o606c2c: She's good at sing.
+    od120d7: I'm looking forward to meeting you.
+    o3bbf77: She's good to singing.
+    o162fbb: She's good at singing.
+    o834c9f: I'm looking forward to meet you.
+    o12211e: I'm looking forward meeting you.
 q30:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o33a0c8: This hotel isn't as quieter as the old one.
-    o0074c5: It's the most cheap room.
-    o1bd03c: This hotel isn't quiet as the old one.
-    o59a90d: It's the cheapest room.
-    oa705a2: This hotel isn't as quiet as the old one.
-    o15dc26: It's cheapest room the.
+    o3edc02: We already have visit the museum.
+    o488eeb: We've already visited the museum.
+    oe2247d: While I was wait, I read a book.
+    o9c6efc: We've already visit the museum.
+    o9e3256: While I waited, I was read a book.
+    oec0e2a: While I was waiting, I read a book.
 q31:
-  text: على الهاتف، أي جمل صحيحة ومهذبة؟
-  show: 4
-  options:
-    oae230d: Can you calling me back?
-    o0bd024: You call me back?
-    o09f4b5: Could I to speak to Mr Ali?
-    o71f907: Give me Mr Ali.
-    o9c72b1: Could you call me back?
-    o02d012: Could I speak to Mr Ali, please?
-q32:
   text: أي جمل صحيحة؟
   show: 4
   options:
-    o354214: If it's sunny, we going to the beach.
-    o7c51ba: We have to leaving early.
-    o36696a: We have to leave early.
-    of6582a: If it will be sunny, we go to the beach.
-    o52af8d: If it's sunny, we'll go to the beach.
-    od498f7: We must to leave early.
+    oc84ef4: This hotel isn't as quiet as the old one.
+    o99dbf0: This hotel isn't quiet as the old one.
+    o034356: It's the cheapest room.
+    o8570e9: It's cheapest room the.
+    oe2c2c2: This hotel isn't as quieter as the old one.
+    o159434: It's the most cheap room.
+q32:
+  text: على الهاتف، أي جمل صحيحة ومهذبة؟
+  show: 4
+  options:
+    o4afec7: Could I to speak to Mr Ali?
+    o829b07: Could you call me back?
+    o8cb50e: You call me back?
+    o826b77: Can you calling me back?
+    o641ff4: Could I speak to Mr Ali, please?
+    o92cd07: Give me Mr Ali.
+q33:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o1bdb7d: We must to leave early.
+    o96e004: We have to leave early.
+    oed32da: If it's sunny, we going to the beach.
+    o1bfed7: We have to leaving early.
+    oe8ee42: If it's sunny, we'll go to the beach.
+    oca3470: If it will be sunny, we go to the beach.

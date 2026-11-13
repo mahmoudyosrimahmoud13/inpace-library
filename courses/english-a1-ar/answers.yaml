@@ -1,160 +1,171 @@
 q1:
   right:
-  - o0916f0
-  - o31a9e5
-  why: العمر بالإنجليزي مع to be وليس have.
+  - oae14ae
+  - o65ce7b
+  why: '@ تُقال at، والنقطة dot، والشرطة السفلية underscore.'
 q2:
   right:
-  - oaef169
-  - o97d507
-  why: Good night تقال قبل النوم فقط.
+  - o2c26cd
+  - o33c8a1
+  why: العمر بالإنجليزي مع to be وليس have.
 q3:
   right:
-  - oaf79d1
-  - obafbcf
-  why: لا تنسَ are و is في السؤال.
+  - o8babd5
+  - o97a322
+  why: Good night تقال قبل النوم فقط.
 q4:
   right:
-  - o6f9116
-  - o03a874
-  why: 'انتبه للضغط: thirTEEN و THIRty.'
+  - o7ab85b
+  - ob6e4f6
+  why: لا تنسَ are و is في السؤال.
 q5:
   right:
-  - o0a24b6
-  - o978f0f
-  why: 'لازم to be: am / is / are.'
+  - oc0c59a
+  - o361f9e
+  why: 'انتبه للضغط: thirTEEN و THIRty.'
 q6:
   right:
-  - o082ae5
-  - o30ca71
-  why: a/an حسب الصوت، ولازمة مع الوظائف.
+  - oe45b38
+  - occ7390
+  why: 'لازم to be: am / is / are.'
 q7:
   right:
-  - o8ba72d
-  - o4209ed
-  why: في السؤال is/are أولًا.
+  - o40f8d3
+  - o4e78c7
+  why: a/an حسب الصوت، ولازمة مع الوظائف.
 q8:
   right:
-  - ob839eb
-  - oc2b4a0
-  why: this/that للمفرد، these/those للجمع، والصفة قبل الاسم.
+  - o3e0b6f
+  - oa067a0
+  why: في السؤال is/are أولًا.
 q9:
   right:
-  - o8db5c7
-  - o664313
-  why: he/she/it + s (أو es).
+  - o371bc8
+  - o2a0b61
+  why: this/that للمفرد، these/those للجمع، والصفة قبل الاسم.
 q10:
   right:
-  - of119b1
-  - o26d43c
-  why: مع does/doesn't يعود الفعل بدون s.
+  - o0cb5c2
+  - oada306
+  why: he/she/it + s (أو es).
 q11:
   right:
-  - oa88ca6
-  - o523a0e
-  why: قبل الفعل العادي، وبعد to be.
+  - o878141
+  - odebbeb
+  why: مع does/doesn't يعود الفعل بدون s.
 q12:
   right:
-  - o167f75
-  - oc00e1c
-  why: at للساعة، on للأيام، in للشهور وأجزاء اليوم.
+  - o15eabe
+  - o6fe553
+  why: قبل الفعل العادي، وبعد to be.
 q13:
   right:
-  - o202ed0
-  - o72ee53
-  why: has مع he/she/it، والسؤال بـ do.
+  - o1914f6
+  - oae4935
+  why: at للساعة، on للأيام، in للشهور وأجزاء اليوم.
 q14:
   right:
-  - ob5dcc3
-  - o7d34f0
-  why: '''s للملكية، و their (ملكهم) غير there (هناك).'
+  - o3eca56
+  - o6c72d0
+  why: has مع he/she/it، والسؤال بـ do.
 q15:
   right:
-  - ob5a76d
-  - od7ea76
-  why: احفظ الجمع الشاذ.
+  - ocb392c
+  - obeec85
+  why: '''s للملكية، و their (ملكهم) غير there (هناك).'
 q16:
   right:
-  - o8a06e0
-  - o99b0fb
-  why: its للملكية، it's = it is.
+  - o67c46a
+  - ofae243
+  why: احفظ الجمع الشاذ.
 q17:
   right:
-  - o58cb6b
-  - of8264d
-  why: There is للمفرد، there are للجمع.
+  - od837dd
+  - o39975f
+  why: its للملكية، it's = it is.
 q18:
   right:
-  - o52d09c
-  - oaa90fc
-  why: can + فعل مجرد.
+  - odfb045
+  - oeb124e
+  why: There is للمفرد، there are للجمع.
 q19:
   right:
-  - oa233e8
-  - o195539
-  why: any في النفي والسؤال.
+  - obb4cc2
+  - o2c1a47
+  why: can + فعل مجرد.
 q20:
   right:
-  - oe6a2f6
-  - odaff9b
-  why: الأمر = الفعل وحده.
+  - o60e43f
+  - o34f302
+  why: any في النفي والسؤال.
 q21:
   right:
-  - o9c1b52
-  - o0d2c54
-  why: am/is/are + ing.
+  - oc7f02f
+  - ob05c84
+  why: الأمر = الفعل وحده.
 q22:
   right:
-  - oe2f3e3
-  - oecf7c8
-  why: want لا تأتي مع ing، و water غير معدود.
+  - of8d2c3
+  - oc572ce
+  why: am/is/are + ing.
 q23:
   right:
-  - o129bd9
-  - o8d33cb
-  why: much لغير المعدود، many للمعدود.
+  - odc169d
+  - oaf4940
+  why: want لا تأتي مع ing، و water غير معدود.
 q24:
   right:
-  - o587b04
-  - oc45757
-  why: كرر الحرف الأخير في الأفعال القصيرة مثل swim و sit.
+  - of18b85
+  - o8ecb68
+  why: much لغير المعدود، many للمعدود.
 q25:
   right:
-  - o8a1c6f
-  - oad3d27
-  why: go → went، و we were.
+  - o1c7927
+  - of29077
+  why: كرر الحرف الأخير في الأفعال القصيرة مثل swim و sit.
 q26:
   right:
-  - of44764
-  - o036076
-  why: بعد did الفعل في أصله.
+  - o7bad25
+  - of6d31b
+  - o3bfe2a
+  why: كرر الساكن في stop، وy بعد ساكن تصبح ied، واحذف e قبل ing. play ← played لأن قبل y حرف علة.
 q27:
   right:
-  - ob1c03d
-  - o58c51e
-  why: ago بعد المدة، و last بدون the.
+  - oa3ec16
+  - o53c7da
+  why: go → went، و we were.
 q28:
   right:
-  - ob22182
-  - o2fafb2
-  why: أفعال شاذة شائعة.
+  - oface81
+  - o184a34
+  why: بعد did الفعل في أصله.
 q29:
   right:
-  - oe00176
-  - ob6a637
-  why: 'مراجعة: s مع she، و there are.'
+  - o73f578
+  - oe2d7aa
+  why: ago بعد المدة، و last بدون the.
 q30:
   right:
-  - oa3c9e5
-  - oadb3ee
-  why: 'مراجعة: did + أصل الفعل، و can + فعل.'
+  - ocfcf32
+  - of9a4cb
+  why: أفعال شاذة شائعة.
 q31:
   right:
-  - o6e3eef
-  - o99f53c
-  why: a/an مع الوظائف، والعمر مع to be.
+  - obdd2a7
+  - o992b32
+  why: 'مراجعة: s مع she، و there are.'
 q32:
   right:
-  - oeec841
-  - o43bbaf
+  - o212c05
+  - ob905f5
+  why: 'مراجعة: did + أصل الفعل، و can + فعل.'
+q33:
+  right:
+  - o56896d
+  - o51c5ba
+  why: a/an مع الوظائف، والعمر مع to be.
+q34:
+  right:
+  - o50e5b5
+  - ofe0086
   why: الآن ← ing، العادة ← المضارع البسيط.

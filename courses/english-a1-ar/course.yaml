@@ -19,8 +19,13 @@ modules:
     file: lessons/m1-l2.md
     minutes: 30
   - id: m1-l3
-    title: التحية وتقديم نفسك
+    title: 'فيديو: تهجئة اسمك وإيميلك وعنوانك'
     file: lessons/m1-l3.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=NfXEUrI33us
+  - id: m1-l4
+    title: التحية وتقديم نفسك
+    file: lessons/m1-l4.md
     minutes: 30
   requires:
   - id: m1-practical
@@ -38,6 +43,7 @@ modules:
     - q2
     - q3
     - q4
+    - q5
     pass: 70
 - id: m2
   title: 'الأيام 4-6: الفعل to be'
@@ -67,10 +73,10 @@ modules:
   - id: m2-quiz
     type: quiz
     questions:
-    - q5
     - q6
     - q7
     - q8
+    - q9
     pass: 70
 - id: m3
   title: 'الأيام 7-9: المضارع البسيط وروتينك اليومي'
@@ -100,10 +106,10 @@ modules:
   - id: m3-quiz
     type: quiz
     questions:
-    - q9
     - q10
     - q11
     - q12
+    - q13
     pass: 70
 - id: m4
   title: 'الأيام 10-12: have، الملكية، العائلة، والجمع'
@@ -133,10 +139,10 @@ modules:
   - id: m4-quiz
     type: quiz
     questions:
-    - q13
     - q14
     - q15
     - q16
+    - q17
     pass: 70
 - id: m5
   title: 'الأيام 13-15: there is / there are، الأماكن، و can'
@@ -165,10 +171,10 @@ modules:
   - id: m5-quiz
     type: quiz
     questions:
-    - q17
     - q18
     - q19
     - q20
+    - q21
     pass: 70
 - id: m6
   title: 'الأيام 16-18: ما يحدث الآن، الأكل، والتسوق'
@@ -197,10 +203,10 @@ modules:
   - id: m6-quiz
     type: quiz
     questions:
-    - q21
     - q22
     - q23
     - q24
+    - q25
     pass: 70
 - id: m7
   title: 'الأيام 19-21: الماضي'
@@ -214,8 +220,13 @@ modules:
     file: lessons/m7-l2.md
     minutes: 35
   - id: m7-l3
-    title: تمرين على الماضي
+    title: 'فيديو: تهجئة نهايات الكلمات s و ing و ed'
     file: lessons/m7-l3.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=-RJwS2KAsRQ
+  - id: m7-l4
+    title: تمرين على الماضي
+    file: lessons/m7-l4.md
     minutes: 20
   requires:
   - id: m7-practical
@@ -229,10 +240,11 @@ modules:
   - id: m7-quiz
     type: quiz
     questions:
-    - q25
     - q26
     - q27
     - q28
+    - q29
+    - q30
     pass: 70
 - id: m8
   title: 'الأيام 22-24: مراجعة واختبار A1'
@@ -256,8 +268,8 @@ modules:
   - id: m8-quiz
     type: quiz
     questions:
-    - q29
-    - q30
     - q31
     - q32
+    - q33
+    - q34
     pass: 70

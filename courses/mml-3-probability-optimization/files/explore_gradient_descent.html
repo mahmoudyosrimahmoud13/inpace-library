@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gradient descent, step by step</title><style>
+:root { --bg:#ffffff; --fg:#141414; --muted:#5d636b; --line:#141414; --soft:#f3f1ec; --blue:#2B6CB0; --pink:#D6336C;
+  --green:#1F9D6A; --yellow:#E0A800; --grey:#8A8F98; --grid:#e3e1dc; --ok:#1F9D6A; --bad:#D6336C; --hl:#FFD43B; }
+@media (prefers-color-scheme: dark) { :root { --bg:#16171a; --fg:#f0ede6; --muted:#a7abb2; --line:#f0ede6; --soft:#202226;
+  --blue:#6ea8ff; --pink:#ff6b9a; --green:#3fd29a; --yellow:#ffd43b; --grey:#8a8f98; --grid:#2b2e33; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 980px; margin: 0 auto; padding: 14px 16px 28px; }
+h1 { font-size: 1.25rem; margin: 0 0 .2rem; }
+p.lead { margin: 0 0 .8rem; color: var(--muted); }
+.wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 720px) { .wrap { grid-template-columns: 1fr; } }
+canvas { display: block; width: 100%; aspect-ratio: 1 / 1; border: 3px solid var(--line); background: var(--bg); touch-action: none; }
+canvas.wide { aspect-ratio: 16 / 9; }
+canvas.short { aspect-ratio: 3 / 1; margin-top: 10px; }
+.panel { border: 3px solid var(--line); padding: 10px 12px; background: var(--soft); }
+.panel h2 { font-size: .95rem; margin: .2rem 0 .4rem; }
+label.s { display: grid; grid-template-columns: 7.5em 1fr 4.2em; gap: 8px; align-items: center; margin: 4px 0; font-size: .92rem; }
+label.s output { font-variant-numeric: tabular-nums; text-align: end; }
+input[type=range] { width: 100%; accent-color: var(--blue); }
+.btns { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+button { font: inherit; font-size: .88rem; padding: 5px 10px; border: 2px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+button:hover, button:focus-visible { background: var(--hl); color: #141414; outline: none; }
+button.on { background: var(--fg); color: var(--bg); }
+.read { font-variant-numeric: tabular-nums; font-size: .92rem; }
+.read b { font-weight: 650; }
+.read .row { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--grid); padding: 3px 0; }
+.note { font-size: .88rem; color: var(--muted); margin-top: 8px; }
+.try { margin-top: 10px; border-left: 5px solid var(--hl); padding: 6px 10px; font-size: .9rem; background: var(--soft); }
+.try b { display: block; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em; }
+/* Check yourself */
+.q { border: 3px solid var(--line); padding: 12px 14px; margin: 12px 0; }
+.q .n { font-weight: 700; margin-right: .4em; }
+.q .opts { display: grid; gap: 6px; margin: 10px 0 6px; }
+.q .opts button { text-align: start; }
+.q .opts button.right { background: var(--ok); color: #fff; border-color: var(--ok); }
+.q .opts button.wrong { background: var(--bad); color: #fff; border-color: var(--bad); }
+.q .nums { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 6px; }
+.q .nums input { width: 6.5em; font: inherit; padding: 4px 6px; border: 2px solid var(--line); background: var(--bg); color: var(--fg); }
+.q .fb { font-weight: 650; min-height: 1.4em; }
+.q .fb.ok { color: var(--ok); } .q .fb.no { color: var(--bad); }
+.q details { margin-top: 6px; } .q summary { cursor: pointer; font-weight: 600; }
+.q .steps { margin-top: 6px; padding: 8px 10px; background: var(--soft); border-left: 5px solid var(--blue); }
+.q .steps p { margin: .25rem 0; }
+.score { position: sticky; top: 0; background: var(--bg); padding: 8px 0; border-bottom: 3px solid var(--line); font-weight: 700; z-index: 2; display: flex; justify-content: space-between; align-items: center; }
+.mat { display: inline-block; vertical-align: middle; border-left: 2px solid currentColor; border-right: 2px solid currentColor; padding: 0 5px; margin: 0 2px; border-radius: 3px; }
+.mat span { display: block; text-align: center; font-family: ui-monospace, Menlo, Consolas, monospace; white-space: pre; }
+</style></head>
+<body><main><h1>Gradient descent, step by step</h1><p class="lead">Pick a function, a step size and a starting point. Shading shows f (darker = higher); the pink path is gradient descent.</p>
+
+<div class="wrap"><div><canvas id="cv"></canvas><canvas id="loss" class="short"></canvas></div>
+<div class="panel"><h2>Gradient descent: x ← x − γ·∇f(x)  (+ momentum)</h2>
+<div class="btns" id="fs"><button data-f="0" class="on">round bowl</button><button data-f="1">long valley</button>
+<button data-f="2">two valleys</button><button data-f="3">banana (Rosenbrock)</button></div>
+<label class="s"><span>step size γ</span><input type="range" id="lr" min="-3" max="0.3" step="0.01" value="-1"><output></output></label>
+<label class="s"><span>momentum α</span><input type="range" id="mom" min="0" max="0.95" step="0.05" value="0"><output></output></label>
+<label class="s"><span>steps</span><input type="range" id="n" min="1" max="200" step="1" value="40"><output></output></label>
+<p class="note">Click or tap the picture to choose where to start.</p>
+<div class="read" id="read"></div>
+<div class="try"><b>Try this</b>On the long valley, raise γ until the path zig-zags, then until it blows up. Now add momentum
+0.8 with a smaller γ: it rolls down the valley floor much faster.</div></div></div>
+</main><script>
+const C = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const $ = id => document.getElementById(id);
+const f2 = (x, d = 2) => (Math.abs(x) < 5e-10 ? 0 : x).toFixed(d);
+function Plane(canvas, view, opts = {}) {
+  const p = { canvas, view, ctx: canvas.getContext('2d'), equal: opts.equal !== false };
+  p.fit = () => {
+    const r = canvas.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+    canvas.width = Math.max(10, r.width * d); canvas.height = Math.max(10, r.height * d);
+    p.W = r.width; p.H = r.height; p.ctx.setTransform(d, 0, 0, d, 0, 0);
+    const v = p.view, sx = p.W / (v[1] - v[0]), sy = p.H / (v[3] - v[2]);
+    if (p.equal) { const s = Math.min(sx, sy); p.sx = p.sy = s; } else { p.sx = sx; p.sy = sy; }
+    p.ox = p.W / 2 - p.sx * (v[0] + v[1]) / 2; p.oy = p.H / 2 + p.sy * (v[2] + v[3]) / 2;
+  };
+  p.X = x => p.ox + p.sx * x; p.Y = y => p.oy - p.sy * y;
+  p.inv = (px, py) => [(px - p.ox) / p.sx, (p.oy - py) / p.sy];
+  p.clear = () => { p.ctx.fillStyle = C('--bg'); p.ctx.fillRect(0, 0, p.W, p.H); };
+  p.grid = (step = 1, axes = true) => {
+    const c = p.ctx, [x0, y0] = p.inv(0, p.H), [x1, y1] = p.inv(p.W, 0);
+    c.lineWidth = 1; c.strokeStyle = C('--grid'); c.beginPath();
+    for (let x = Math.ceil(x0 / step) * step; x <= x1; x += step) { c.moveTo(p.X(x), 0); c.lineTo(p.X(x), p.H); }
+    for (let y = Math.ceil(y0 / step) * step; y <= y1; y += step) { c.moveTo(0, p.Y(y)); c.lineTo(p.W, p.Y(y)); }
+    c.stroke();
+    if (axes) { c.strokeStyle = C('--grey'); c.lineWidth = 1.2; c.beginPath(); c.moveTo(p.X(x0), p.Y(0)); c.lineTo(p.X(x1), p.Y(0));
+      c.moveTo(p.X(0), p.Y(y0)); c.lineTo(p.X(0), p.Y(y1)); c.stroke(); }
+  };
+  p.line = (pts, color, w = 2, dash = []) => { const c = p.ctx; c.strokeStyle = color; c.lineWidth = w; c.setLineDash(dash);
+    c.beginPath(); pts.forEach((q, i) => i ? c.lineTo(p.X(q[0]), p.Y(q[1])) : c.moveTo(p.X(q[0]), p.Y(q[1]))); c.stroke(); c.setLineDash([]); };
+  p.fill = (pts, color, alpha = .3) => { const c = p.ctx; c.globalAlpha = alpha; c.fillStyle = color; c.beginPath();
+    pts.forEach((q, i) => i ? c.lineTo(p.X(q[0]), p.Y(q[1])) : c.moveTo(p.X(q[0]), p.Y(q[1]))); c.closePath(); c.fill(); c.globalAlpha = 1; };
+  p.dot = (x, y, color, r = 4, ring) => { const c = p.ctx; c.fillStyle = color; c.beginPath(); c.arc(p.X(x), p.Y(y), r, 0, 7); c.fill();
+    if (ring) { c.strokeStyle = ring; c.lineWidth = 2; c.stroke(); } };
+  p.text = (s, x, y, color, size = 14, dx = 6, dy = -6) => { const c = p.ctx; c.fillStyle = color; c.font = `600 ${size}px system-ui, sans-serif`;
+    c.fillText(s, p.X(x) + dx, p.Y(y) + dy); };
+  p.arrow = (x0, y0, x1, y1, color, w = 3, label) => {
+    const c = p.ctx, X0 = p.X(x0), Y0 = p.Y(y0), X1 = p.X(x1), Y1 = p.Y(y1), a = Math.atan2(Y1 - Y0, X1 - X0), L = Math.hypot(X1 - X0, Y1 - Y0);
+    c.strokeStyle = c.fillStyle = color; c.lineWidth = w; c.beginPath(); c.moveTo(X0, Y0);
+    const h = Math.min(12, L * .45); c.lineTo(X1 - h * .8 * Math.cos(a), Y1 - h * .8 * Math.sin(a)); c.stroke();
+    c.beginPath(); c.moveTo(X1, Y1); c.lineTo(X1 - h * Math.cos(a - .38), Y1 - h * Math.sin(a - .38));
+    c.lineTo(X1 - h * Math.cos(a + .38), Y1 - h * Math.sin(a + .38)); c.closePath(); c.fill();
+    if (label) p.text(label, x1, y1, color, 15, 6 * Math.sign(Math.cos(a) || 1), 16 * (Math.sin(a) > 0 ? 1 : -.3));
+  };
+  p.fit();
+  return p;
+}
+function onResize(fn) { let t; new ResizeObserver(() => { clearTimeout(t); t = setTimeout(fn, 30); }).observe(document.body); }
+function bindSliders(ids, fn, fmt = {}) {
+  ids.forEach(id => { const el = $(id), out = el.parentElement.querySelector('output');
+    const show = () => { if (out) out.textContent = fmt[id] ? fmt[id](+el.value) : el.value; };
+    el.addEventListener('input', () => { show(); fn(); }); show(); });
+}
+function setSliders(vals) { for (const k in vals) { const el = $(k); el.value = vals[k]; el.dispatchEvent(new Event('input')); } }
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ t >>> 15, t | 1);
+  t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function normals(n, seed) { const r = rng(seed), out = []; for (let i = 0; i < n; i++) { const u = Math.max(r(), 1e-12), v = r();
+  out.push([Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v), Math.sqrt(-2 * Math.log(u)) * Math.sin(2 * Math.PI * v)]); } return out; }
+function eig2sym(a, b, d) { // eigenvalues and unit eigenvectors of [[a, b], [b, d]], largest first
+  const t = (a + d) / 2, r = Math.hypot((a - d) / 2, b), l1 = t + r, l2 = t - r;
+  let v = Math.abs(b) > 1e-12 ? [b, l1 - a] : (a >= d ? [1, 0] : [0, 1]); const n = Math.hypot(...v); v = [v[0] / n, v[1] / n];
+  return [[l1, v], [l2, [-v[1], v[0]]]];
+}
+function ellipse(cx, cy, a, b, d, k) { // points of {x : (x-c)^T S^-1 (x-c) = k^2} for S = [[a, b], [b, d]]
+  const [[l1, v1], [l2, v2]] = eig2sym(a, b, d), pts = [];
+  for (let i = 0; i <= 80; i++) { const t = i / 80 * 2 * Math.PI, u = k * Math.sqrt(Math.max(l1, 0)) * Math.cos(t), w = k * Math.sqrt(Math.max(l2, 0)) * Math.sin(t);
+    pts.push([cx + u * v1[0] + w * v2[0], cy + u * v1[1] + w * v2[1]]); } return pts;
+}
+
+
+const FS = [
+  { f: (x, y) => x * x + y * y, g: (x, y) => [2 * x, 2 * y], v: [-3, 3, -3, 3], s: [2.5, 2] },
+  { f: (x, y) => .5 * x * x + 5 * y * y, g: (x, y) => [x, 10 * y], v: [-3, 3, -3, 3], s: [-2.8, 1.5] },
+  { f: (x, y) => (x * x - 1) ** 2 + .6 * y * y + .3 * x, g: (x, y) => [4 * x * (x * x - 1) + .3, 1.2 * y], v: [-2, 2, -2, 2], s: [.2, 1.5] },
+  { f: (x, y) => (1 - x) ** 2 + 10 * (y - x * x) ** 2, g: (x, y) => [-2 * (1 - x) - 40 * x * (y - x * x), 20 * (y - x * x)], v: [-2, 2, -1, 3], s: [-1.5, 2] },
+];
+let fi = 0, start = FS[0].s.slice(), bg = null;
+const P = Plane($('cv'), FS[0].v), Lp = Plane($('loss'), [0, 1, 0, 1], { equal: false });
+function heat() { // contour shading of f, drawn once per function and size
+  const F = FS[fi], w = Math.round(P.W), h = Math.round(P.H), img = P.ctx.createImageData(w, h), vals = [];
+  let lo = Infinity, hi = -Infinity;
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) { const [x, y] = P.inv(i, j), v = Math.log(1 + F.f(x, y) - FMIN()); vals.push(v); lo = Math.min(lo, v); hi = Math.max(hi, v); }
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  vals.forEach((v, k) => { const t = (v - lo) / (hi - lo + 1e-9), band = Math.floor(t * 14) % 2 ? .06 : 0;
+    const base = dark ? [22, 23, 26] : [255, 255, 255], tint = [43, 108, 176];
+    const m = Math.min(1, t * .9 + band); for (let c = 0; c < 3; c++) img.data[4 * k + c] = base[c] * (1 - m * .55) + tint[c] * m * .55; img.data[4 * k + 3] = 255; });
+  bg = { img, w, h, fi };
+}
+function FMIN() { return fi === 2 ? -0.35 : 0; }
+function draw() {
+  P.view = FS[fi].v; P.fit();
+  if (!bg || bg.fi !== fi || bg.w !== Math.round(P.W) || bg.h !== Math.round(P.H)) heat();
+  const d = window.devicePixelRatio || 1; P.ctx.setTransform(1, 0, 0, 1, 0, 0);
+  const tmp = document.createElement('canvas'); tmp.width = bg.w; tmp.height = bg.h; tmp.getContext('2d').putImageData(bg.img, 0, 0);
+  P.ctx.drawImage(tmp, 0, 0, P.W * d, P.H * d); P.ctx.setTransform(d, 0, 0, d, 0, 0); P.grid(1);
+  const F = FS[fi], lr = 10 ** +$('lr').value, mom = +$('mom').value, n = +$('n').value;
+  let x = start.slice(), v = [0, 0]; const path = [x.slice()], fs = [F.f(...x)]; let blew = false;
+  for (let k = 0; k < n; k++) { const g = F.g(...x); v = [mom * v[0] - lr * g[0], mom * v[1] - lr * g[1]]; x = [x[0] + v[0], x[1] + v[1]];
+    if (!isFinite(x[0]) || Math.hypot(...x) > 1e3) { blew = true; break; } path.push(x.slice()); fs.push(F.f(...x)); }
+  P.line(path, C('--pink'), 2); path.forEach((q, i) => P.dot(q[0], q[1], i ? C('--pink') : C('--fg'), i ? 2.8 : 6));
+  // loss curve
+  Lp.fit(); Lp.clear(); const lo = Math.log10(Math.max(1e-8, Math.min(...fs) - FMIN() + 1e-8)), hi = Math.log10(Math.max(...fs) - FMIN() + 1e-8);
+  Lp.view = [0, Math.max(1, fs.length - 1), lo, hi + 1e-6]; Lp.fit(); Lp.clear();
+  Lp.line(fs.map((v, i) => [i, Math.log10(v - FMIN() + 1e-8)]), C('--pink'), 2);
+  Lp.ctx.fillStyle = C('--muted'); Lp.ctx.font = '12px system-ui'; Lp.ctx.fillText('f(x) − min, log scale, by step', 8, 16);
+  const last = path[path.length - 1];
+  $('read').innerHTML = `<div class="row"><span>γ</span><b>${f2(lr, 4)}</b></div>
+  <div class="row"><span>start</span><b>(${f2(start[0])}, ${f2(start[1])})</b></div>
+  <div class="row"><span>after ${path.length - 1} steps</span><b>(${f2(last[0], 3)}, ${f2(last[1], 3)})</b></div>
+  <div class="row"><span>f there</span><b>${f2(fs[fs.length - 1], 4)}</b></div>
+  ${blew ? '<p class="note" style="color:var(--bad);font-weight:700">Diverged: the step size is too big for how curved this function is.</p>' : ''}`;
+}
+document.querySelectorAll('#fs button').forEach(bt => bt.onclick = () => { document.querySelectorAll('#fs button').forEach(o => o.classList.remove('on'));
+  bt.classList.add('on'); fi = +bt.dataset.f; start = FS[fi].s.slice(); draw(); });
+$('cv').addEventListener('pointerdown', ev => { const r = $('cv').getBoundingClientRect(); start = P.inv(ev.clientX - r.left, ev.clientY - r.top); draw(); });
+bindSliders(['lr', 'mom', 'n'], draw, { lr: v => f2(10 ** v, 3) });
+onResize(() => { bg = null; draw(); }); draw();
+</script></body></html>

@@ -1,0 +1,160 @@
+q1:
+  right:
+  - o8a0365
+  - o100d02
+  - o55f41c
+  why: 'Linear systems have 0, 1 or infinitely many solutions: if two different solutions exist, every point on
+    the line through them is a solution too.'
+q2:
+  right:
+  - o18eb6e
+  - o54e9e8
+  why: 'Ax = x₁a₁ + x₂a₂ + … + xₙaₙ: the unknowns are the weights on the columns.'
+q3:
+  right:
+  - o77ae55
+  - o9864d8
+  why: Parallel distinct lines never meet, so no x satisfies both equations.
+q4:
+  right:
+  - oecc028
+  - o6e109e
+  - o77a8a8
+  - oef5cfb
+  why: Part II covers linear regression, PCA, Gaussian mixture models and support vector machines.
+q5:
+  right:
+  - o1c6c3c
+  - o8921ac
+  - o4da37f
+  why: Matrix products are associative but not commutative; transposes and inverses reverse the order.
+q6:
+  right:
+  - ob1b7de
+  - o805006
+  why: 'Inner sizes must match: (3 × 4)(4 × 2) = 3 × 2. For BA, (4 × 2)(3 × 4): 2 ≠ 3.'
+q7:
+  right:
+  - of5455b
+  - o320028
+  - o550069
+  why: Those three operations are reversible, so no solution is gained or lost.
+q8:
+  right:
+  - o49457f
+  - o69033c
+  why: Each non-pivot column gives a free parameter, and with the Minus-1 trick a kernel vector.
+q9:
+  right:
+  - o62cf7b
+  - o81768a
+  why: Explicit inverses are slower and less accurate; solvers factorize A instead.
+q10:
+  right:
+  - oc7a998
+  - o10b17b
+  - o2c74ba
+  why: 'A subspace must contain 0 and be closed under addition and scaling. The axes together fail addition: (1,0)+(0,1).'
+q11:
+  right:
+  - odb5841
+  - oc2cb6b
+  why: 'Pairwise differences are not enough: (1,0), (0,1), (1,1) are pairwise different but dependent.'
+q12:
+  right:
+  - o443334
+  - o5e4f1b
+  - o859e55
+  why: 'Rank 4 = number of rows, so the columns span ℝ⁴. Rank-nullity: 6 − 4 = 2 kernel dimensions, so solutions
+    are not unique.'
+q13:
+  right:
+  - o7077f4
+  - o67837c
+  - o4bfad3
+  why: Bases aren't unique and needn't be orthogonal, but they always have dim(V) vectors.
+q14:
+  right:
+  - o22d8fd
+  - od0d36e
+  - o08ad4a
+  why: A shift moves 0 away from 0, so it can't be linear (it's affine); squares and absolute values break additivity.
+q15:
+  right:
+  - od39d69
+  - o8daf15
+  why: That's the definition of A_Φ and 3Blue1Brown's "track where the basis vectors go".
+q16:
+  right:
+  - o68779e
+  - o3958cf
+  why: Similar matrices are one map in two coordinate systems, so basis-free properties (rank, determinant, eigenvalues)
+    agree.
+q17:
+  right:
+  - o563edf
+  - o0e9dd3
+  why: Affine subspaces are shifted subspaces; anything that contains 0 here is a genuine subspace.
+q18:
+  right:
+  - o203efb
+  - o7b118b
+  - o2aa45c
+  why: 'ℓ₂: √(9+16); ℓ₁: 3+4; ℓ∞: the largest absolute entry.'
+q19:
+  right:
+  - o5086b9
+  - o84fe94
+  why: Symmetry gives ⟨x,y⟩ = ⟨y,x⟩; positive definiteness gives ⟨x,x⟩ > 0 for x ≠ 0.
+q20:
+  right:
+  - od35d12
+  - o024d2c
+  why: It bounds the inner product by the product of lengths, which is what makes angles well defined.
+q21:
+  right:
+  - o9ac290
+  - o0486f5
+  why: Orthogonality, angles and lengths are all defined by the inner product you pick.
+q22:
+  right:
+  - o4825b4
+  - o28758b
+  - o7e6701
+  why: The projection depends only on the line; the projection matrix squashes ℝⁿ onto it (rank 1, not invertible).
+q23:
+  right:
+  - of65846
+  - ob4ab04
+  why: Projecting twice changes nothing (idempotent). Only the projection onto the whole space is I.
+q24:
+  right:
+  - o91a10a
+  - o196bec
+  why: 'The error x − Bλ must be orthogonal to every column: Bᵀ(x − Bλ) = 0.'
+q25:
+  right:
+  - o9f550e
+  - o58a85b
+  why: It keeps the span and builds orthogonal vectors one at a time.
+q26:
+  right:
+  - o69ab25
+  - o319b59
+  - o846151
+  why: Rotations are orthogonal with determinant +1. R² = I only for 0° and 180°.
+q27:
+  right:
+  - o8a96dd
+  - o631693
+  why: '⟨Ax, Ay⟩ = xᵀAᵀAy = xᵀy. Its determinant is ±1: −1 for reflections.'
+q28:
+  right:
+  - od547c9
+  - o45c032
+  why: In 3D, rotating about x then z differs from z then x.
+q29:
+  right:
+  - o94fd24
+  - o6c1d6d
+  why: e₁ = (1, 0) rotated by θ lands on (cos θ, sin θ).

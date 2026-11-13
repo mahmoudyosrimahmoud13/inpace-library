@@ -1,0 +1,329 @@
+q1:
+  text: Which statements about the determinant are true?
+  show: 4
+  options:
+    o7f9c64: the determinant is defined for any rectangular matrix
+    o4e9c08: det(Aᵀ) = det(A)
+    oef536a: det(2A) = 2·det(A) for any 3 × 3 matrix
+    odd5cd6: det(AB) = det(A)·det(B)
+    oa0c0c3: det(A) ≠ 0 exactly when A is invertible
+    odb3d3a: swapping two rows leaves det unchanged
+    o97c773: det(A + B) = det(A) + det(B)
+q2:
+  text: Geometrically, |det A| for a 2 × 2 matrix is …
+  show: 4
+  options:
+    o1681a0: the factor by which A scales areas
+    o2dee2c: the angle between the columns
+    oa81ebf: the number of solutions of Ax = 0
+    oc979f1: the area of the image of the unit square
+    o526774: the largest entry of A
+    o78e082: the length of the first column
+q3:
+  text: Which are true about the trace?
+  show: 4
+  options:
+    o491d2b: tr(AB) = tr(A)·tr(B)
+    of996e8: tr(A) is the sum of the diagonal entries
+    o4debaa: the trace is only defined for diagonal matrices
+    o0fbc4c: tr(A) changes when you change the basis
+    o497c20: tr(A) = det(A) for every matrix
+    o3059bb: tr(AB) = tr(BA)
+q4:
+  text: A triangular matrix has diagonal 1, 4, −2. Its determinant is …
+  show: 4
+  options:
+    o5bf8d6: the sum of the diagonal entries
+    o69f62e: '0'
+    o9b3407: '8'
+    oe8a3d4: the product of the diagonal entries
+    oaa81b7: '3'
+    o971657: −8
+q5:
+  text: Which are true for eigenvalues of a square matrix A?
+  show: 4
+  options:
+    o7adc70: their sum is tr(A)
+    ob1fc6a: a matrix with det 0 has no eigenvalues
+    o3db75a: they are always real
+    o9b4f7a: they are the roots of det(A − λI)
+    ob5160f: their product is det(A)
+    o86ebeb: they are the diagonal entries of A
+    o2139fb: they are always distinct
+q6:
+  text: What does the spectral theorem say about a real symmetric matrix?
+  show: 4
+  options:
+    o754043: all its eigenvalues are positive
+    o0c5226: it is always invertible
+    o34fff0: its eigenvectors are the standard basis
+    oa12ea8: it has an orthonormal basis of eigenvectors
+    o70079e: it has only one eigenvalue
+    o6ef811: its eigenvalues are real
+q7:
+  text: Which matrices have no real eigenvectors?
+  show: 4
+  options:
+    of7405e: a reflection across a line
+    o19e32c: a 45° rotation of the plane
+    o9bccc1: the identity
+    o2e926e: a 90° rotation of the plane
+    o65ef66: a stretch by 2 along x
+    o70327f: a projection onto a line
+q8:
+  text: '[[1, 1], [0, 1]] (a shear) …'
+  show: 4
+  options:
+    oa2b98f: has two independent eigenvectors
+    oe55e17: is symmetric
+    of21853: has no eigenvalues
+    oeefe2a: has only one independent eigenvector, so it is defective
+    o175151: has eigenvalue 1 with algebraic multiplicity 2
+    o6fb1f3: has eigenvalues 1 and −1
+q9:
+  text: The Cholesky decomposition A = LLᵀ …
+  show: 4
+  options:
+    o822cd8: requires A to be diagonal
+    od15de4: has L lower triangular with a positive diagonal
+    o2c336d: is the same as the eigendecomposition
+    o6f2895: exists for symmetric positive definite matrices
+    of9050a: exists for every square matrix
+    oee9c9f: has L orthogonal
+q10:
+  text: A = PDP⁻¹ (D diagonal). Which are true?
+  show: 4
+  options:
+    o524a7c: every square matrix can be written this way
+    o6464bc: the columns of P are eigenvectors of A
+    oc11641: P must always be orthogonal
+    o7c34db: Aᵏ = PDᵏP⁻¹
+    o481c8a: the columns of P are the rows of A
+    oa7f056: D = A when A is symmetric
+    o510b60: the diagonal of D holds the eigenvalues
+q11:
+  text: For a symmetric matrix the eigendecomposition can be written as …
+  show: 4
+  options:
+    oad90bf: A = D
+    ofa8c5d: A = PDPᵀ with P orthogonal
+    oa0f914: A = PD
+    o702b5a: A = PᵀP
+    o981452: A = Σ λᵢ pᵢpᵢᵀ (a sum of rank-1 pieces)
+    ob58ee7: A = LLᵀ with L diagonal
+q12:
+  text: Which matrices are NOT diagonalizable (over the real numbers)?
+  show: 4
+  options:
+    o0523ab: the identity
+    o57cf59: '[[1, 1], [0, 1]] (a shear)'
+    ob67ecf: '[[2, 0], [0, 3]]'
+    o5065d3: a 90° rotation [[0, −1], [1, 0]]
+    o050c33: any symmetric matrix
+    o5c9b24: '[[2, 1], [1, 2]]'
+q13:
+  text: For A = UΣVᵀ (any real m × n matrix), which are true?
+  show: 4
+  options:
+    obc7cd4: the columns of V are eigenvectors of AᵀA
+    o669c1c: A must be square
+    od56d23: U and V are orthogonal
+    o6261de: the singular values are the eigenvalues of A
+    od7d36e: Σ is m × m for any n
+    o59e198: U = V always
+    o9e0629: the singular values are ≥ 0
+q14:
+  text: The number of non-zero singular values of A equals …
+  show: 4
+  options:
+    o2f91da: the dimension of A's column space
+    o89665f: the rank of A
+    obd8184: det(A)
+    obe7356: the number of columns
+    oece72c: the trace of A
+    oe4a4b6: the number of rows
+q15:
+  text: When do the SVD and the eigendecomposition of A coincide?
+  show: 4
+  options:
+    o59240c: when A is a rotation
+    o99b01f: never
+    o50b6ab: only for diagonal matrices with negative entries
+    oc520e8: when A is symmetric positive semidefinite
+    oa5418b: when A = PDPᵀ with all eigenvalues ≥ 0
+    o809601: for every square matrix
+q16:
+  text: In the book's movie-ratings example, the SVD …
+  show: 4
+  options:
+    o7a9ef3: needs the ratings to be symmetric
+    oe72e74: writes the ratings as a sum of rank-1 patterns
+    o9282ee: removes all users with few ratings
+    o8be5b1: predicts box office revenue
+    o136f14: finds a few "taste" directions that explain the ratings
+    oc8b656: sorts the movies by title
+q17:
+  text: Â(k) = σ₁u₁v₁ᵀ + … + σ_ku_kv_kᵀ. Which are true?
+  show: 4
+  options:
+    oaaaa7b: the spectral-norm error ‖A − Â(k)‖₂ is σ_{k+1}
+    o4fc6d7: it is the best rank-k approximation of A (Eckart-Young)
+    oaa08c8: its error is σ_k
+    o9c9bc9: it has rank k (if σ_k > 0)
+    oa56bd8: it is the best approximation of any rank
+    o8d7a73: it keeps the k smallest singular values
+    ofa1517: it needs A to be square
+q18:
+  text: The spectral norm ‖A‖₂ is …
+  show: 4
+  options:
+    o4b5b5a: the number of non-zero rows
+    o873ad8: the determinant
+    o7afb6c: the smallest singular value
+    oece7bb: the most A can stretch a unit vector
+    odf3663: the sum of all entries
+    o700812: the largest singular value σ₁
+q19:
+  text: Storing a rank-k approximation of an m × n matrix takes about …
+  show: 4
+  options:
+    o858871: exactly m·n numbers, whatever k is
+    ob6af9f: k² numbers
+    odf4d95: k·(m + n + 1) numbers
+    o47a829: m·n·k numbers
+    occac3c: much less than m·n when k is small
+    ode38dc: m + n numbers, whatever k is
+q20:
+  text: When is a low-rank approximation a poor idea?
+  show: 4
+  options:
+    oa7ff13: when σ₁ is much bigger than σ₂
+    o3fc7f8: when the matrix is a photo with large smooth areas
+    o30473b: when every direction carries similar information
+    o5adedb: when the singular values decrease slowly
+    o78efdd: when the data has a few strong patterns
+    o141bba: when the singular values drop quickly
+q21:
+  text: 'Which are true about the gradient ∇f of f: ℝⁿ → ℝ?'
+  show: 4
+  options:
+    oa96818: it is a single number
+    od64673: it is orthogonal to the contour lines (level sets) of f
+    oed1eef: it is parallel to contour lines
+    o98831f: it points to the minimum
+    ocb820d: it collects all partial derivatives
+    o357b61: it points in the direction of steepest increase
+    oae2f95: its length is always 1
+q22:
+  text: The chain rule for h(x) = g(f(x)) says …
+  show: 4
+  options:
+    o0699cd: h′(x) = f′(g(x))
+    o44da17: h′(x) = g′(f(x))·f′(x)
+    o373607: h′(x) = g(f′(x))
+    o6666b0: h′(x) = g′(x) + f′(x)
+    oe95e3e: you multiply the derivatives of the pieces, each at the right point
+    o91de58: h′(x) = g′(x)·f′(x)
+q23:
+  text: 'In the book, the gradient of f: ℝⁿ → ℝ is written as …'
+  show: 4
+  options:
+    oc4f743: an n × 1 column, always
+    o8426c8: an n × n matrix
+    o0badbb: an n × n diagonal matrix
+    o430420: a row, so the chain rule becomes a matrix product
+    of94608: a single number
+    ob7eddb: a 1 × n row vector
+q24:
+  text: The first-order Taylor approximation of f near x₀ is …
+  show: 4
+  options:
+    o2fc613: f′(x₀) + f″(x₀)(x − x₀)
+    o7a7943: the tangent line at x₀
+    o444691: the secant through x₀ and 0
+    o131b56: f(x₀)·f′(x₀)
+    o740620: f(x₀) + f′(x₀)(x − x₀)
+    o0610d8: f(x₀) + (x − x₀)²
+q25:
+  text: 'f: ℝ³ → ℝ² is differentiable. Its Jacobian …'
+  show: 4
+  options:
+    o8d3ef7: is 3 × 2
+    o1e94a5: is a single number
+    o88941f: is 3 × 3
+    ob3126a: has the gradient of each output as a row
+    o5c9902: has the gradient of each input as a row
+    oc0632a: is a 2 × 3 matrix
+q26:
+  text: Which identities are correct (x a vector, a a constant vector, A a constant matrix)?
+  show: 4
+  options:
+    oc29a70: ∂(xᵀAx)/∂x = xᵀ(A + Aᵀ)
+    o65d1b8: ∂(aᵀx)/∂x = aᵀ
+    o8fcf79: ∂(Ax)/∂x = Aᵀ
+    occ765f: ∂(xᵀAx)/∂x = 2xᵀA for every A
+    obb1477: ∂(aᵀx)/∂x = x
+    obdcd1a: ∂(Ax)/∂x = A
+    ob52b74: ∂(xᵀx)/∂x = x
+q27:
+  text: For L(θ) = ‖y − Φθ‖², the gradient with respect to θ is …
+  show: 4
+  options:
+    o53a4b0: −2(y − Φθ)ᵀΦ
+    o948569: zero exactly when ΦᵀΦθ = Φᵀy
+    o2fda3e: Φᵀy
+    o019dfa: 2(y − Φθ)
+    oead3bf: zero for every θ
+    o38f10f: −2Φθ
+q28:
+  text: A good way to check a hand-derived gradient is …
+  show: 4
+  options:
+    oa16d00: check that it is positive
+    o501d61: test it on random inputs in code
+    o3db530: trust it if the shapes look right
+    oe2a20e: check it only at x = 0
+    oa24bb5: compare it with finite differences
+    of984be: check that it is symmetric
+q29:
+  text: Reverse-mode automatic differentiation (backpropagation) …
+  show: 4
+  options:
+    o39ac7e: is what loss.backward() does in PyTorch
+    oae8b6e: computes derivatives with finite differences
+    o9868d3: works only for neural networks
+    od7988e: approximates the gradient by random sampling
+    o853bad: needs a separate pass for every parameter
+    ob3e10f: reuses intermediate values from the forward pass
+    od186b4: gives the gradient with respect to all inputs in one backward pass
+q30:
+  text: At a critical point of f, the Hessian has eigenvalues 3 and −2. The point is …
+  show: 4
+  options:
+    ofdab32: always the global minimum
+    oab8095: not a critical point
+    o298808: neither a minimum nor a maximum
+    o0042c4: a saddle point
+    o053237: a minimum
+    o96174d: a maximum
+q31:
+  text: 'Which are true about the Hessian of a smooth f: ℝⁿ → ℝ?'
+  show: 4
+  options:
+    oc9c191: it is a row vector
+    o2b25d7: it is symmetric
+    o86053d: it describes the curvature of f
+    oef2990: it is the n × n matrix of second partial derivatives
+    o6515c2: it is always positive definite
+    o773de5: it is the Jacobian of f itself
+    of4ac0b: it is always diagonal
+q32:
+  text: The second-order Taylor approximation of f around x₀ is …
+  show: 4
+  options:
+    o169aaf: a quadratic function of the step δ
+    o712d30: f(x₀) + ∇f(x₀)δ + ½δᵀH(x₀)δ
+    o6df862: ∇f(x₀) + ½δᵀδ
+    o5ce9e6: a straight line
+    o777100: f(x₀) + H(x₀)δ
+    o109441: f(x₀)·∇f(x₀)·H(x₀)

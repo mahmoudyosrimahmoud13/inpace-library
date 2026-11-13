@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 2D Gaussian, marginals and conditionals</title><style>
+:root { --bg:#ffffff; --fg:#141414; --muted:#5d636b; --line:#141414; --soft:#f3f1ec; --blue:#2B6CB0; --pink:#D6336C;
+  --green:#1F9D6A; --yellow:#E0A800; --grey:#8A8F98; --grid:#e3e1dc; --ok:#1F9D6A; --bad:#D6336C; --hl:#FFD43B; }
+@media (prefers-color-scheme: dark) { :root { --bg:#16171a; --fg:#f0ede6; --muted:#a7abb2; --line:#f0ede6; --soft:#202226;
+  --blue:#6ea8ff; --pink:#ff6b9a; --green:#3fd29a; --yellow:#ffd43b; --grey:#8a8f98; --grid:#2b2e33; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 980px; margin: 0 auto; padding: 14px 16px 28px; }
+h1 { font-size: 1.25rem; margin: 0 0 .2rem; }
+p.lead { margin: 0 0 .8rem; color: var(--muted); }
+.wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 720px) { .wrap { grid-template-columns: 1fr; } }
+canvas { display: block; width: 100%; aspect-ratio: 1 / 1; border: 3px solid var(--line); background: var(--bg); touch-action: none; }
+canvas.wide { aspect-ratio: 16 / 9; }
+canvas.short { aspect-ratio: 3 / 1; margin-top: 10px; }
+.panel { border: 3px solid var(--line); padding: 10px 12px; background: var(--soft); }
+.panel h2 { font-size: .95rem; margin: .2rem 0 .4rem; }
+label.s { display: grid; grid-template-columns: 7.5em 1fr 4.2em; gap: 8px; align-items: center; margin: 4px 0; font-size: .92rem; }
+label.s output { font-variant-numeric: tabular-nums; text-align: end; }
+input[type=range] { width: 100%; accent-color: var(--blue); }
+.btns { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+button { font: inherit; font-size: .88rem; padding: 5px 10px; border: 2px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+button:hover, button:focus-visible { background: var(--hl); color: #141414; outline: none; }
+button.on { background: var(--fg); color: var(--bg); }
+.read { font-variant-numeric: tabular-nums; font-size: .92rem; }
+.read b { font-weight: 650; }
+.read .row { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--grid); padding: 3px 0; }
+.note { font-size: .88rem; color: var(--muted); margin-top: 8px; }
+.try { margin-top: 10px; border-left: 5px solid var(--hl); padding: 6px 10px; font-size: .9rem; background: var(--soft); }
+.try b { display: block; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em; }
+/* Check yourself */
+.q { border: 3px solid var(--line); padding: 12px 14px; margin: 12px 0; }
+.q .n { font-weight: 700; margin-right: .4em; }
+.q .opts { display: grid; gap: 6px; margin: 10px 0 6px; }
+.q .opts button { text-align: start; }
+.q .opts button.right { background: var(--ok); color: #fff; border-color: var(--ok); }
+.q .opts button.wrong { background: var(--bad); color: #fff; border-color: var(--bad); }
+.q .nums { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 6px; }
+.q .nums input { width: 6.5em; font: inherit; padding: 4px 6px; border: 2px solid var(--line); background: var(--bg); color: var(--fg); }
+.q .fb { font-weight: 650; min-height: 1.4em; }
+.q .fb.ok { color: var(--ok); } .q .fb.no { color: var(--bad); }
+.q details { margin-top: 6px; } .q summary { cursor: pointer; font-weight: 600; }
+.q .steps { margin-top: 6px; padding: 8px 10px; background: var(--soft); border-left: 5px solid var(--blue); }
+.q .steps p { margin: .25rem 0; }
+.score { position: sticky; top: 0; background: var(--bg); padding: 8px 0; border-bottom: 3px solid var(--line); font-weight: 700; z-index: 2; display: flex; justify-content: space-between; align-items: center; }
+.mat { display: inline-block; vertical-align: middle; border-left: 2px solid currentColor; border-right: 2px solid currentColor; padding: 0 5px; margin: 0 2px; border-radius: 3px; }
+.mat span { display: block; text-align: center; font-family: ui-monospace, Menlo, Consolas, monospace; white-space: pre; }
+</style></head>
+<body><main><h1>The 2D Gaussian, marginals and conditionals</h1><p class="lead">Move the mean, the spreads and the correlation. The green line conditions on a value of x₁.</p>
+
+<div class="wrap"><div><canvas id="cv"></canvas><canvas id="side" class="short"></canvas></div>
+<div class="panel"><h2>A 2D Gaussian N(μ, Σ)</h2>
+<label class="s"><span>μ₁</span><input type="range" id="m1" min="-2" max="2" step="0.1" value="0"><output></output></label><label class="s"><span>μ₂</span><input type="range" id="m2" min="-2" max="2" step="0.1" value="0"><output></output></label>
+<label class="s"><span>σ₁</span><input type="range" id="s1" min="0.3" max="2.5" step="0.05" value="1"><output></output></label><label class="s"><span>σ₂</span><input type="range" id="s2" min="0.3" max="2.5" step="0.05" value="1.3"><output></output></label>
+<label class="s"><span>correlation ρ</span><input type="range" id="rho" min="-0.95" max="0.95" step="0.05" value="0.7"><output></output></label>
+<label class="s"><span>condition on x₁ =</span><input type="range" id="c" min="-3" max="3" step="0.1" value="1"><output></output></label>
+<div class="read" id="read"></div>
+<div class="try"><b>Try this</b>Set ρ = 0: the green conditional curve is the same as the grey marginal (knowing x₁ tells you
+nothing about x₂). Push ρ to 0.95: the conditional gets very narrow.</div></div></div>
+</main><script>
+const C = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const $ = id => document.getElementById(id);
+const f2 = (x, d = 2) => (Math.abs(x) < 5e-10 ? 0 : x).toFixed(d);
+function Plane(canvas, view, opts = {}) {
+  const p = { canvas, view, ctx: canvas.getContext('2d'), equal: opts.equal !== false };
+  p.fit = () => {
+    const r = canvas.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+    canvas.width = Math.max(10, r.width * d); canvas.height = Math.max(10, r.height * d);
+    p.W = r.width; p.H = r.height; p.ctx.setTransform(d, 0, 0, d, 0, 0);
+    const v = p.view, sx = p.W / (v[1] - v[0]), sy = p.H / (v[3] - v[2]);
+    if (p.equal) { const s = Math.min(sx, sy); p.sx = p.sy = s; } else { p.sx = sx; p.sy = sy; }
+    p.ox = p.W / 2 - p.sx * (v[0] + v[1]) / 2; p.oy = p.H / 2 + p.sy * (v[2] + v[3]) / 2;
+  };
+  p.X = x => p.ox + p.sx * x; p.Y = y => p.oy - p.sy * y;
+  p.inv = (px, py) => [(px - p.ox) / p.sx, (p.oy - py) / p.sy];
+  p.clear = () => { p.ctx.fillStyle = C('--bg'); p.ctx.fillRect(0, 0, p.W, p.H); };
+  p.grid = (step = 1, axes = true) => {
+    const c = p.ctx, [x0, y0] = p.inv(0, p.H), [x1, y1] = p.inv(p.W, 0);
+    c.lineWidth = 1; c.strokeStyle = C('--grid'); c.beginPath();
+    for (let x = Math.ceil(x0 / step) * step; x <= x1; x += step) { c.moveTo(p.X(x), 0); c.lineTo(p.X(x), p.H); }
+    for (let y = Math.ceil(y0 / step) * step; y <= y1; y += step) { c.moveTo(0, p.Y(y)); c.lineTo(p.W, p.Y(y)); }
+    c.stroke();
+    if (axes) { c.strokeStyle = C('--grey'); c.lineWidth = 1.2; c.beginPath(); c.moveTo(p.X(x0), p.Y(0)); c.lineTo(p.X(x1), p.Y(0));
+      c.moveTo(p.X(0), p.Y(y0)); c.lineTo(p.X(0), p.Y(y1)); c.stroke(); }
+  };
+  p.line = (pts, color, w = 2, dash = []) => { const c = p.ctx; c.strokeStyle = color; c.lineWidth = w; c.setLineDash(dash);
+    c.beginPath(); pts.forEach((q, i) => i ? c.lineTo(p.X(q[0]), p.Y(q[1])) : c.moveTo(p.X(q[0]), p.Y(q[1]))); c.stroke(); c.setLineDash([]); };
+  p.fill = (pts, color, alpha = .3) => { const c = p.ctx; c.globalAlpha = alpha; c.fillStyle = color; c.beginPath();
+    pts.forEach((q, i) => i ? c.lineTo(p.X(q[0]), p.Y(q[1])) : c.moveTo(p.X(q[0]), p.Y(q[1]))); c.closePath(); c.fill(); c.globalAlpha = 1; };
+  p.dot = (x, y, color, r = 4, ring) => { const c = p.ctx; c.fillStyle = color; c.beginPath(); c.arc(p.X(x), p.Y(y), r, 0, 7); c.fill();
+    if (ring) { c.strokeStyle = ring; c.lineWidth = 2; c.stroke(); } };
+  p.text = (s, x, y, color, size = 14, dx = 6, dy = -6) => { const c = p.ctx; c.fillStyle = color; c.font = `600 ${size}px system-ui, sans-serif`;
+    c.fillText(s, p.X(x) + dx, p.Y(y) + dy); };
+  p.arrow = (x0, y0, x1, y1, color, w = 3, label) => {
+    const c = p.ctx, X0 = p.X(x0), Y0 = p.Y(y0), X1 = p.X(x1), Y1 = p.Y(y1), a = Math.atan2(Y1 - Y0, X1 - X0), L = Math.hypot(X1 - X0, Y1 - Y0);
+    c.strokeStyle = c.fillStyle = color; c.lineWidth = w; c.beginPath(); c.moveTo(X0, Y0);
+    const h = Math.min(12, L * .45); c.lineTo(X1 - h * .8 * Math.cos(a), Y1 - h * .8 * Math.sin(a)); c.stroke();
+    c.beginPath(); c.moveTo(X1, Y1); c.lineTo(X1 - h * Math.cos(a - .38), Y1 - h * Math.sin(a - .38));
+    c.lineTo(X1 - h * Math.cos(a + .38), Y1 - h * Math.sin(a + .38)); c.closePath(); c.fill();
+    if (label) p.text(label, x1, y1, color, 15, 6 * Math.sign(Math.cos(a) || 1), 16 * (Math.sin(a) > 0 ? 1 : -.3));
+  };
+  p.fit();
+  return p;
+}
+function onResize(fn) { let t; new ResizeObserver(() => { clearTimeout(t); t = setTimeout(fn, 30); }).observe(document.body); }
+function bindSliders(ids, fn, fmt = {}) {
+  ids.forEach(id => { const el = $(id), out = el.parentElement.querySelector('output');
+    const show = () => { if (out) out.textContent = fmt[id] ? fmt[id](+el.value) : el.value; };
+    el.addEventListener('input', () => { show(); fn(); }); show(); });
+}
+function setSliders(vals) { for (const k in vals) { const el = $(k); el.value = vals[k]; el.dispatchEvent(new Event('input')); } }
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ t >>> 15, t | 1);
+  t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function normals(n, seed) { const r = rng(seed), out = []; for (let i = 0; i < n; i++) { const u = Math.max(r(), 1e-12), v = r();
+  out.push([Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v), Math.sqrt(-2 * Math.log(u)) * Math.sin(2 * Math.PI * v)]); } return out; }
+function eig2sym(a, b, d) { // eigenvalues and unit eigenvectors of [[a, b], [b, d]], largest first
+  const t = (a + d) / 2, r = Math.hypot((a - d) / 2, b), l1 = t + r, l2 = t - r;
+  let v = Math.abs(b) > 1e-12 ? [b, l1 - a] : (a >= d ? [1, 0] : [0, 1]); const n = Math.hypot(...v); v = [v[0] / n, v[1] / n];
+  return [[l1, v], [l2, [-v[1], v[0]]]];
+}
+function ellipse(cx, cy, a, b, d, k) { // points of {x : (x-c)^T S^-1 (x-c) = k^2} for S = [[a, b], [b, d]]
+  const [[l1, v1], [l2, v2]] = eig2sym(a, b, d), pts = [];
+  for (let i = 0; i <= 80; i++) { const t = i / 80 * 2 * Math.PI, u = k * Math.sqrt(Math.max(l1, 0)) * Math.cos(t), w = k * Math.sqrt(Math.max(l2, 0)) * Math.sin(t);
+    pts.push([cx + u * v1[0] + w * v2[0], cy + u * v1[1] + w * v2[1]]); } return pts;
+}
+
+
+const Z = normals(400, 7), P = Plane($('cv'), [-4.5, 4.5, -4.5, 4.5]), Q = Plane($('side'), [-5, 5, 0, 1], { equal: false });
+function draw() {
+  const m1 = +$('m1').value, m2 = +$('m2').value, s1 = +$('s1').value, s2 = +$('s2').value, r = +$('rho').value, c = +$('c').value;
+  const a = s1 * s1, b = r * s1 * s2, d = s2 * s2;
+  P.fit(); P.clear(); P.grid(1);
+  // samples: x = μ + L z with L the Cholesky factor of Σ
+  const l11 = s1, l21 = r * s2, l22 = s2 * Math.sqrt(1 - r * r);
+  P.ctx.globalAlpha = .55; Z.forEach(z => P.dot(m1 + l11 * z[0], m2 + l21 * z[0] + l22 * z[1], C('--blue'), 2.2)); P.ctx.globalAlpha = 1;
+  [1, 2, 3].forEach(k => P.line(ellipse(m1, m2, a, b, d, k), C('--pink'), k === 1 ? 2.5 : 1.4));
+  const [[L1, v1], [L2, v2]] = eig2sym(a, b, d);
+  P.arrow(m1, m2, m1 + Math.sqrt(L1) * v1[0], m2 + Math.sqrt(L1) * v1[1], C('--fg'), 2);
+  P.arrow(m1, m2, m1 + Math.sqrt(L2) * v2[0], m2 + Math.sqrt(L2) * v2[1], C('--fg'), 2);
+  P.line([[c, -9], [c, 9]], C('--green'), 2.5);
+  const cm = m2 + r * s2 / s1 * (c - m1), cv = d * (1 - r * r);
+  P.dot(c, cm, C('--green'), 6, C('--bg'));
+  // side panel: densities of x2
+  Q.fit(); Q.clear(); const pdf = (x, m, v) => Math.exp(-((x - m) ** 2) / (2 * v)) / Math.sqrt(2 * Math.PI * v);
+  const top = pdf(cm, cm, cv) * 1.1; Q.view = [-5, 5, 0, top]; Q.fit(); Q.clear(); Q.grid(1, false);
+  const xs = Array.from({ length: 300 }, (_, i) => -5 + i / 299 * 10);
+  Q.line(xs.map(x => [x, pdf(x, m2, d)]), C('--grey'), 2); Q.line(xs.map(x => [x, pdf(x, cm, cv)]), C('--green'), 2.5);
+  Q.ctx.fillStyle = C('--muted'); Q.ctx.font = '12px system-ui'; Q.ctx.fillText('x₂: grey = marginal p(x₂), green = conditional p(x₂ | x₁)', 8, 16);
+  $('read').innerHTML = `<div class="row"><span>Σ</span><b>[[${f2(a)}, ${f2(b)}], [${f2(b)}, ${f2(d)}]]</b></div>
+  <div class="row"><span>det Σ</span><b>${f2(a * d - b * b, 3)}</b></div>
+  <div class="row"><span>eigenvalues of Σ (axes²)</span><b>${f2(L1)}, ${f2(L2)}</b></div>
+  <div class="row"><span>marginal p(x₂)</span><b>N(${f2(m2)}, ${f2(d)})</b></div>
+  <div class="row"><span>conditional mean μ₂ + ρσ₂/σ₁·(x₁ − μ₁)</span><b>${f2(cm)}</b></div>
+  <div class="row"><span>conditional variance σ₂²(1 − ρ²)</span><b>${f2(cv, 3)}</b></div>
+  <p class="note">Pink ellipses: 1, 2 and 3 "standard deviations" (Mahalanobis distance). Black arrows: eigenvectors of Σ,
+  scaled by √λ. The 400 dots are the same random draws, reshaped by Σ.</p>`;
+}
+bindSliders(['m1', 'm2', 's1', 's2', 'rho', 'c'], draw); onResize(draw); draw();
+</script></body></html>

@@ -1,0 +1,349 @@
+id: mml-2-decompositions-calculus
+title: 'Maths for ML 2: matrix decompositions and vector calculus'
+version: 1
+language: en
+description: 'Part 2 of 4, following the free book Mathematics for Machine Learning (Deisenroth, Faisal, Ong). Determinants
+  and trace, eigenvalues and eigenvectors, Cholesky, eigendecomposition, the singular value decomposition and low-rank
+  approximation; then derivatives, gradients, Jacobians, matrix calculus identities, backpropagation and automatic
+  differentiation, Hessians and Taylor series. Each lesson opens your own copy of the book (free from mml-book.com;
+  inPace finds it), with notes, 3Blue1Brown videos, interactive explorers, worked exercises with instant feedback,
+  and charts. Plan: 8 days.'
+image: cover.jpg
+book: mml-book.pdf
+book_info:
+  title: Mathematics for Machine Learning
+  url: https://mml-book.com
+  pages: 412
+modules:
+- id: m1
+  title: 'Day 1: Determinant and trace'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: determinant and trace (4.1)'
+    file: lessons/m1-l2.md
+    minutes: 45
+    media: mml-book.pdf#pages=104-111
+  - id: m1-l3
+    title: 'Watch: The determinant'
+    file: lessons/m1-l3.md
+    minutes: 10
+    media: https://www.youtube.com/watch?v=Ip3X9LOh2dk
+  - id: m1-l4
+    title: 'Explore: watch the determinant'
+    file: lessons/m1-l4.md
+    minutes: 10
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: |-
+      1. Compute det of [[2, 0, 1], [1, 3, 2], [1, 1, 1]] twice: by Laplace expansion along the first row, and by
+         elimination to triangular form. Do they agree?
+      2. Without computing, what is det(2A) for this 3 × 3 matrix? And det(Aᵀ)?
+      3. Check tr(AB) = tr(BA) for A = [[1, 2], [3, 4]], B = [[0, 1], [1, 0]], even though AB ≠ BA.
+  - id: m1-explain
+    type: explain
+    prompt: Explain what the determinant means geometrically, and use that meaning to say why det(A) = 0 exactly
+      when A has no inverse.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Eigenvalues and eigenvectors'
+  lessons:
+  - id: m2-l1
+    title: 'Read: eigenvalues and eigenvectors (4.2)'
+    file: lessons/m2-l1.md
+    minutes: 60
+    media: mml-book.pdf#pages=111-120
+  - id: m2-l2
+    title: 'Watch: Eigenvectors and eigenvalues'
+    file: lessons/m2-l2.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=PFDu9oVAE-g
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: |-
+      Take A = [[2, 1], [1, 2]].
+
+      1. Find both eigenvalues from det(A − λI) = 0, and an eigenvector for each.
+      2. Check: their product is det A and their sum is tr A.
+      3. Check that the two eigenvectors are orthogonal. Which theorem promised that?
+      4. Use the explorer from day 1: enter this matrix (press "symmetric") and compare with your answer.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what an eigenvector is to someone who has seen matrices but not this idea. Why is det(A − λI)
+      = 0 the equation that finds eigenvalues?
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Cholesky and eigendecomposition'
+  lessons:
+  - id: m3-l1
+    title: 'Read: Cholesky decomposition (4.3)'
+    file: lessons/m3-l1.md
+    minutes: 15
+    media: mml-book.pdf#pages=120-121
+  - id: m3-l2
+    title: 'Read: eigendecomposition and diagonalization (4.4)'
+    file: lessons/m3-l2.md
+    minutes: 35
+    media: mml-book.pdf#pages=121-125
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: |-
+      1. Find the Cholesky factor of A = [[4, 2, 2], [2, 5, 3], [2, 3, 6]] (column by column). Check LLᵀ = A.
+      2. Diagonalize B = [[2, 1], [1, 2]] (you found its eigenvectors yesterday): write P (normalize the columns), D, and
+         check B = PDPᵀ.
+      3. Use it to compute B⁵ with almost no work.
+  - id: m3-explain
+    type: explain
+    prompt: Explain A = PDP⁻¹ as three steps of geometry (what each factor does to a vector), and why it makes computing
+      A¹⁰⁰ easy.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: The singular value decomposition'
+  lessons:
+  - id: m4-l1
+    title: 'Read: the SVD (4.5)'
+    file: lessons/m4-l1.md
+    minutes: 70
+    media: mml-book.pdf#pages=125-135
+  - id: m4-l2
+    title: 'Explore: the SVD in the matrix explorer'
+    file: lessons/m4-l2.md
+    minutes: 10
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: |-
+      Compute the SVD of A = [[3, 0], [4, 5]] by hand.
+
+      1. Compute AᵀA and its eigenvalues. Take square roots to get σ₁ ≥ σ₂ (you should get √45 and √5).
+      2. Find the unit eigenvectors v₁, v₂ of AᵀA.
+      3. Compute u₁ = Av₁/σ₁ and u₂ = Av₂/σ₂, and check they are orthonormal.
+      4. Check with NumPy: `np.linalg.svd(A)` (signs may differ: that's fine).
+  - id: m4-explain
+    type: explain
+    prompt: Explain the SVD as "rotate, stretch, rotate" in your own words. Why does every matrix (even a non-square
+      or non-diagonalizable one) have an SVD, while not every matrix has an eigendecomposition?
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Matrix approximation and the big picture'
+  lessons:
+  - id: m5-l1
+    title: 'Read: matrix approximation (4.6)'
+    file: lessons/m5-l1.md
+    minutes: 35
+    media: mml-book.pdf#pages=135-140
+  - id: m5-l2
+    title: 'Read: matrix phylogeny and further reading (4.7–4.8)'
+    file: lessons/m5-l2.md
+    minutes: 20
+    media: mml-book.pdf#pages=140-144
+  - id: m5-l3
+    title: 'Check yourself: chapter 4'
+    file: lessons/m5-l3.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: |-
+      In Python (or Colab), take any grayscale photo, or make one with `np.add.outer(np.sin(np.arange(200)/9), np.cos(np.arange(200)/13))`.
+
+      1. Compute its SVD with `np.linalg.svd`.
+      2. Rebuild it with k = 1, 5, 20, 50 singular values and plot them side by side.
+      3. For each k, print the relative error ‖A − Â(k)‖_F / ‖A‖_F and the storage (k·(m + n + 1) numbers vs m·n).
+      4. Which k would you choose, and why? Paste your numbers and your reasoning.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why keeping the largest singular values gives a good approximation of a matrix. What does the
+      Eckart-Young theorem promise, and how would you decide how many to keep?
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Derivatives, partial derivatives and gradients'
+  lessons:
+  - id: m6-l1
+    title: 'Read: differentiation of univariate functions (5.1)'
+    file: lessons/m6-l1.md
+    minutes: 40
+    media: mml-book.pdf#pages=145-152
+  - id: m6-l2
+    title: 'Read: partial derivatives and gradients (5.2)'
+    file: lessons/m6-l2.md
+    minutes: 30
+    media: mml-book.pdf#pages=152-155
+  - id: m6-l3
+    title: 'Watch: The essence of calculus'
+    file: lessons/m6-l3.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=WUvTyaaNkzM
+  - id: m6-l4
+    title: 'Watch: The paradox of the derivative'
+    file: lessons/m6-l4.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=9vKqVkMQHKk
+  - id: m6-l5
+    title: 'Watch: Visualizing the chain rule and product rule'
+    file: lessons/m6-l5.md
+    minutes: 16
+    media: https://www.youtube.com/watch?v=YG15m2VwSjA
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: |-
+      Let f(x, y) = x²y + eˣʸ.
+
+      1. Compute ∂f/∂x and ∂f/∂y, and the gradient at (1, 0).
+      2. In which direction should you move from (1, 0) to increase f fastest? To decrease it fastest?
+      3. Now let x = cos t and y = sin t. Use the multivariate chain rule to get df/dt at t = 0, and check by plugging x(t),
+         y(t) into f and differentiating directly.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why the gradient points in the direction of steepest increase, using the first-order Taylor
+      approximation f(x + h) ≈ f(x) + ∇f(x)·h.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Gradients of vectors and matrices'
+  lessons:
+  - id: m7-l1
+    title: 'Read: gradients of vector-valued functions (5.3)'
+    file: lessons/m7-l1.md
+    minutes: 45
+    media: mml-book.pdf#pages=155-161
+  - id: m7-l2
+    title: 'Read: gradients of matrices and useful identities (5.4–5.5)'
+    file: lessons/m7-l2.md
+    minutes: 35
+    media: mml-book.pdf#pages=161-165
+  - id: m7-l3
+    title: 'Watch: Derivative formulas through geometry'
+    file: lessons/m7-l3.md
+    minutes: 18
+    media: https://www.youtube.com/watch?v=S0_qX4VJhMQ
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: |-
+      1. For f(x) = xᵀAx with A = [[1, 2], [0, 3]] (not symmetric!), derive ∇f by hand using the identity table.
+      2. In NumPy, check it at x = (1, −2) with finite differences: f(x + 1e-6·eᵢ) − f(x), divided by 1e-6, for i = 1, 2.
+      3. Derive the gradient of L(θ) = ‖y − Φθ‖² + λ‖θ‖² and set it to 0. What formula for θ do you get?
+      Paste your derivation and the numbers.
+  - id: m7-explain
+    type: explain
+    prompt: Explain what a Jacobian is, what its shape is and why, and how the chain rule for vector-valued functions
+      becomes a product of Jacobians.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: Backpropagation, Hessians and Taylor series'
+  lessons:
+  - id: m8-l1
+    title: 'Read: backpropagation and automatic differentiation (5.6)'
+    file: lessons/m8-l1.md
+    minutes: 45
+    media: mml-book.pdf#pages=165-171
+  - id: m8-l2
+    title: 'Watch: Backpropagation, intuitively'
+    file: lessons/m8-l2.md
+    minutes: 13
+    media: https://www.youtube.com/watch?v=Ilg3gGewQ5U
+  - id: m8-l3
+    title: 'Watch: Backpropagation calculus'
+    file: lessons/m8-l3.md
+    minutes: 10
+    media: https://www.youtube.com/watch?v=tIeHLnjs5U8
+  - id: m8-l4
+    title: 'Read: higher-order derivatives, linearization and Taylor series (5.7–5.9)'
+    file: lessons/m8-l4.md
+    minutes: 40
+    media: mml-book.pdf#pages=170-177
+  - id: m8-l5
+    title: 'Watch: Taylor series'
+    file: lessons/m8-l5.md
+    minutes: 22
+    media: https://www.youtube.com/watch?v=3d6DsjIBzJ4
+  - id: m8-l6
+    title: 'Check yourself: chapter 5'
+    file: lessons/m8-l6.md
+    minutes: 25
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: |-
+      Take f(x) = σ(wx + b) with σ(z) = 1/(1 + e⁻ᶻ), and the loss L = (f(x) − y)².
+
+      1. Draw the computation graph: z = wx + b, a = σ(z), L = (a − y)².
+      2. With x = 2, w = 0.5, b = −1, y = 1: do the forward pass (write z, a, L).
+      3. Do the backward pass by hand: ∂L/∂a, ∂a/∂z (use σ′ = σ(1 − σ)), ∂L/∂z, then ∂L/∂w and ∂L/∂b.
+      4. Optional: check with PyTorch (`requires_grad=True`, `L.backward()`) or with finite differences.
+  - id: m8-explain
+    type: explain
+    prompt: 'Explain backpropagation in your own words: why going backwards from the loss is efficient, and what
+      it has to do with the chain rule.'
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70

@@ -1,0 +1,369 @@
+q1:
+  text: Which are true for a continuous random variable X with density f?
+  show: 4
+  options:
+    o231f23: P(X = a) = 0 for any single value a
+    oe8e462: f(x) can be larger than 1
+    oadc368: f(x) is the probability that X = x
+    o66fe0b: f must be at most 1 everywhere
+    od9a68c: the values of f sum to 1
+    o6135f0: P(X ≤ a) is always 0.5
+    o35e6be: P(a ≤ X ≤ b) is the integral of f from a to b
+q2:
+  text: In the Bayesian interpretation, a probability is …
+  show: 4
+  options:
+    o452d4a: always 0 or 1
+    o1f7a42: only a long-run frequency of repeated experiments
+    oa7a781: something you update when you see data
+    o3ef55b: undefined for one-off events
+    ofa1c38: a degree of belief
+    ofea06f: the same as a density value
+q3:
+  text: Which describe statistics rather than probability (in the book's sense)?
+  show: 4
+  options:
+    o9b02b8: going from data to model parameters
+    o72f679: defining a sample space
+    ocff9e6: computing how likely data are under a known model
+    o1672c6: sampling from a known distribution
+    o088d5b: listing all outcomes of a die
+    oebb215: finding a model that explains observed data
+q4:
+  text: A cumulative distribution function F(x) = P(X ≤ x) …
+  show: 4
+  options:
+    o2b5439: never decreases
+    oe39c03: can be negative
+    oa579c3: is the same as the density
+    o02621f: goes from 0 (far left) to 1 (far right)
+    o385ce3: is always a straight line
+    o8591bd: only exists for discrete variables
+q5:
+  text: Which are correct statements of the basic rules?
+  show: 4
+  options:
+    o32b3b9: p(x) = Σ_y p(x, y)
+    of471d8: p(x | y) = p(y | x)
+    o7a7294: p(x) = Σ_y p(x | y)
+    oc2b75b: p(x, y) = p(y | x) p(x)
+    oadd7d9: p(x, y) = p(x) + p(y)
+    o73691d: p(x | y) = p(y | x) p(x) / p(y)
+    od8cbbf: p(x | y) = p(x) p(y)
+q6:
+  text: In Bayes' theorem for learning a parameter θ from data D, which names are right?
+  show: 4
+  options:
+    o804e62: p(D | θ) is the likelihood
+    o9507ef: p(D | θ) is the posterior
+    o1c3ea9: p(θ | D) is the posterior
+    o00821a: p(θ) is the prior
+    o32714c: p(θ | D) is the likelihood
+    o59c840: p(θ) is the evidence
+    o802bff: p(D) is the prior
+q7:
+  text: 1% prevalence, 90% sensitivity, 5% false positives. After a positive test, the chance of disease is …
+  show: 4
+  options:
+    oadc23d: 95%
+    o9362c1: about 15%
+    o98e31d: exactly 1%
+    o7a8b77: 90%
+    o852044: about 50%
+    o94abab: much lower than 90%
+q8:
+  text: The evidence p(D) = ∫ p(D | θ) p(θ) dθ …
+  show: 4
+  options:
+    ob14b0f: is often hard to compute
+    o0c4d80: depends on θ
+    o2bd20c: is the most likely θ
+    o4a52fd: is always 1
+    oe07022: is the same as the prior
+    ofa70a0: makes the posterior integrate to 1
+q9:
+  text: Which are always true (no independence assumed)?
+  show: 4
+  options:
+    o261b41: E[aX + b] = aE[X] + b
+    o53eefe: V[X + Y] = V[X] + V[Y]
+    od74ce5: V[X] = E[X]²
+    o8a169c: V[aX + b] = a²V[X]
+    o6e79a8: E[XY] = E[X]E[Y]
+    od504c0: E[X + Y] = E[X] + E[Y]
+    o60cace: Cov[X, Y] = 0
+q10:
+  text: For y = Ax + b with E[x] = μ and V[x] = Σ, which are correct?
+  show: 4
+  options:
+    oa6d548: V[y] = AΣ + b
+    off0814: V[y] = ΣA
+    o4bc9f0: E[y] = Aμ
+    oe9f71a: E[y] = Aμ + b
+    obadde4: V[y] = AΣAᵀ
+    o0a9cbe: V[y] = A²Σ
+q11:
+  text: X is symmetric around 0 and Y = X². Then …
+  show: 4
+  options:
+    o4e9d35: Cov[X, Y] = 0
+    od5e6e6: X and Y are not independent
+    oc0fe62: Cov[X, Y] = 1
+    oa5c237: X and Y are independent
+    o458258: Cov[X, Y] > 0
+    obbf9c5: Y has the same distribution as X
+q12:
+  text: A covariance matrix is always …
+  show: 4
+  options:
+    o245bc5: symmetric
+    o8443bc: invertible
+    o1d0a0a: positive semidefinite
+    od8193e: filled with positive entries
+    o006109: diagonal
+    o37e3e9: orthogonal
+q13:
+  text: x = (a, b) is jointly Gaussian. Which are true?
+  show: 4
+  options:
+    o9e05e4: a and b are always independent
+    o22f149: the conditional mean of a doesn't depend on b
+    o2343e0: p(a) is Gaussian
+    o726444: the conditional variance of a does not depend on the observed b
+    obbc12f: p(a | b) has the same variance as p(a), always
+    o2a58d5: p(a | b) is Gaussian
+    of5d76f: p(a) needs an integral that has no closed form
+q14:
+  text: If x ~ N(μ, Σ), then Ax + b is distributed as …
+  show: 4
+  options:
+    o020132: N(Aμ + b, AΣAᵀ)
+    o799460: N(Aμ + b, AΣ)
+    o27f342: N(μ + b, A²Σ)
+    o6c5e18: not Gaussian in general
+    o448989: N(Aμ, Σ)
+    oc3a5cb: a Gaussian whose covariance is AΣAᵀ
+q15:
+  text: How do you draw samples from N(μ, Σ) with a standard normal generator?
+  show: 4
+  options:
+    odf2f30: draw each coordinate independently with its own variance, always
+    o596c11: x = Σ⁻¹(z − μ)
+    o87b0af: x = μ + Lz with Σ = LLᵀ (Cholesky) and z ~ N(0, I)
+    o319692: transform standard normal draws by a square root of Σ and add μ
+    oce4d22: x = μ + Σz
+    od93619: x = μ·z
+q16:
+  text: Which are true about a mixture 0.5·N(−2, 1) + 0.5·N(2, 1)?
+  show: 4
+  options:
+    oc6776e: it is the same as the sum of two Gaussian variables
+    o30011d: its mean is 2
+    ofc93f2: it is not a Gaussian
+    o36b8cf: it is N(0, 1)
+    o198068: it has two peaks
+    o9dceb7: it is N(0, 2)
+q17:
+  text: 'Prior Beta(2, 2); data: 7 heads, 3 tails. Which are correct?'
+  show: 4
+  options:
+    o2e7399: the posterior mean is 9/14
+    oe8c5e2: the posterior mean is 0.7
+    o246613: the MLE is 0.7
+    o4676a4: the posterior is Beta(7, 3)
+    o12e124: the MAP equals the prior mean
+    o4a53a5: the posterior is Beta(9, 5)
+    o07e46f: the posterior is Gaussian
+q18:
+  text: A prior is conjugate to a likelihood when …
+  show: 4
+  options:
+    oe4bacc: the posterior is in the same family as the prior
+    o52d330: updating just changes the prior's parameters
+    o3a6067: the prior is uniform
+    oa23bf9: prior and posterior are identical
+    o72ca89: the evidence is 1
+    o6563bf: the likelihood is Gaussian
+q19:
+  text: Which distributions belong to the exponential family?
+  show: 4
+  options:
+    o2df264: the distribution of a fair 7-sided die with unknown sides
+    o37fff7: Gaussian
+    ofba751: any mixture of two Gaussians
+    oc1d6b1: the uniform distribution on [0, θ] with unknown θ
+    o81bba8: a distribution with no density
+    o20fd3b: Bernoulli
+    ofcb857: Beta
+q20:
+  text: Sufficient statistics for a sequence of coin flips (Bernoulli, unknown μ) are …
+  show: 4
+  options:
+    o106e37: the number of heads and the number of flips
+    o3ceee8: only the first flip
+    o39e491: the order of the flips
+    ofd24f7: the last 3 flips
+    o4297ae: the time of each flip
+    o193459: a summary that keeps everything the likelihood needs
+q21:
+  text: X ~ Uniform(0, 1). Which are true?
+  show: 4
+  options:
+    o302e49: Y = 2X is uniform on (0, 1)
+    o0bf8b9: Y = −ln X is Gaussian
+    of59c6f: Y = X² has density 1/(2√y) on (0, 1)
+    ofa18d4: Y = X² has density 2y
+    o2faa18: Y = −ln X has an exponential distribution
+    o228391: Y = X² is also uniform on (0, 1)
+q22:
+  text: Inverse transform sampling works by …
+  show: 4
+  options:
+    o78dc53: computing the density at random points
+    o8c9b25: rejecting samples until one is Gaussian
+    o431bd9: averaging many uniforms, always
+    oc45408: using the fact that F(X) is uniform when F is X's CDF
+    o740d4a: drawing x uniformly and returning F(x)
+    o711893: drawing u ~ Uniform(0, 1) and returning F⁻¹(u)
+q23:
+  text: In the change-of-variables formula f_Y(y) = f_X(g⁻¹(y))·|det J|, the Jacobian determinant …
+  show: 4
+  options:
+    o3b7b77: keeps the total probability equal to 1
+    o174ba9: accounts for how g stretches or squashes volume
+    oabc74c: can be dropped when g is non-linear
+    o14a01f: is always 1
+    oc06400: only matters for discrete variables
+    o5fbae4: is the variance of Y
+q24:
+  text: X ~ N(0, 1) and Y = 2X + 3. Then …
+  show: 4
+  options:
+    o601edd: f_Y(y) = f_X(2y + 3)
+    o70d32c: f_Y(y) = f_X((y − 3)/2) · 1/2
+    o3e4a74: Y is uniform
+    o018f8a: Y ~ N(2, 3)
+    o657254: Y ~ N(3, 4)
+    o2625a4: Y ~ N(3, 2)
+q25:
+  text: Which are true about the step size γ in gradient descent?
+  show: 4
+  options:
+    o97e4d1: larger is always better
+    o5e6c6d: it should grow every step, always
+    o25470d: the safe range depends on how curved the function is
+    oe1a29f: too large can make it oscillate or diverge
+    of608bc: too small makes progress slow
+    oa6788f: it must equal 1
+    of52866: it has no effect on convergence
+q26:
+  text: Gradient descent with momentum …
+  show: 4
+  options:
+    o4d022b: adds a fraction of the previous step to the current one
+    ob0dc08: always finds the global minimum
+    o361d85: uses no gradients
+    o83a43a: uses the Hessian at every step
+    o80f103: damps oscillations in narrow valleys
+    ob5d865: requires the step size to be 0
+q27:
+  text: Stochastic gradient descent …
+  show: 4
+  options:
+    o772cf3: computes the exact gradient over all data at each step
+    o7abe5a: needs second derivatives
+    o0c2b5d: makes each step much cheaper on big datasets
+    o456b7f: estimates the gradient from a mini-batch of examples
+    o8c96f3: gives the same path as full gradient descent
+    o2ecec3: only works for convex functions
+q28:
+  text: On f(x) = x² with step size γ, each step multiplies x by …
+  show: 4
+  options:
+    od430f4: 1 + 2γ
+    o9c5257: 1 − 2γ
+    o483d8b: 2γ
+    oea8ff0: 1/γ
+    o6ef3e5: a factor whose absolute value must be below 1 for convergence
+    o456c12: γ
+q29:
+  text: At a constrained optimum of f subject to g(x) = 0 (regular case), which are true?
+  show: 4
+  options:
+    o338ffa: ∇f = λ∇g for some λ
+    o6cd647: ∇g = 0 always
+    ofbe263: the contour of f through the point is tangent to the constraint curve
+    oe320b9: λ must be 0
+    o7d9765: f has a global minimum there, whatever f is
+    ofe60db: ∇f = 0 always
+q30:
+  text: Maximize x + y subject to x² + y² = 1. Which are correct?
+  show: 4
+  options:
+    oe116ea: it's reached at x = y = 1/√2
+    o8dd6fb: the maximum is 2
+    o4dc651: there is no maximum
+    of0c72a: the maximum is √2
+    oa1ab85: the maximum is 1
+    o3a50b6: it's reached at (1, 0)
+q31:
+  text: Weak duality says that for a minimization problem …
+  show: 4
+  options:
+    o5819e8: the Lagrangian is always linear
+    o1bd195: primal and dual always have equal value
+    oe95396: the dual problem has no solution
+    o455a27: the dual is always larger than the primal
+    o48c393: the dual function D(λ) is a lower bound on the primal optimum (for λ ≥ 0)
+    od43b4d: max over λ of D(λ) ≤ min of the primal
+q32:
+  text: Inequality constraints gᵢ(x) ≤ 0 in the Lagrangian need multipliers that are …
+  show: 4
+  options:
+    oaa0f5a: complex numbers
+    o9f357a: negative
+    o74651e: equal to the gradient of f
+    o129028: always exactly 1
+    o7ee5bd: zero when the constraint isn't active (complementary slackness)
+    o0d5885: non-negative
+q33:
+  text: Which functions are convex on their whole domain?
+  show: 4
+  options:
+    o52a619: x² + 3x
+    oe132c1: −x² on ℝ
+    od87ed7: sin x on ℝ
+    o9e9c5f: x³ on ℝ
+    oc2a159: ‖x‖₂
+    o787fca: x⁴ − x² on ℝ
+    o96ae98: eˣ
+q34:
+  text: For a convex function on a convex set, which are true?
+  show: 4
+  options:
+    o4ae309: every local minimum is a global minimum
+    o96248f: gradient descent always diverges
+    ob9d0fd: the set of minimizers is convex
+    o1c1150: there is always exactly one minimum
+    o550a12: the Hessian must be zero
+    ofa62f6: it can't be minimized with gradients
+q35:
+  text: 'A twice-differentiable f: ℝⁿ → ℝ is convex exactly when …'
+  show: 4
+  options:
+    od087d6: every chord of its graph lies on or above the graph
+    o992582: its Hessian is negative definite
+    o242392: f(0) = 0
+    o968694: its gradient is zero somewhere
+    obcde72: its Hessian is positive semidefinite everywhere
+    o33f589: it has a single critical point
+q36:
+  text: Which are true about quadratic programs (QPs)?
+  show: 4
+  options:
+    o892431: the SVM training problem is a QP
+    o0120dd: linear programs are harder than QPs, always
+    offe7d2: the constraints must be quadratic
+    oab40fe: a QP has no dual
+    o1fdb3a: the objective is quadratic and the constraints are linear
+    oc20605: they can't be convex

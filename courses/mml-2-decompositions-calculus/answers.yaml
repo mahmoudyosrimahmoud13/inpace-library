@@ -1,0 +1,169 @@
+q1:
+  right:
+  - odd5cd6
+  - oa0c0c3
+  - o4e9c08
+  why: For n × n, det(2A) = 2ⁿ det(A). Swapping rows flips the sign. Only square matrices have determinants.
+q2:
+  right:
+  - o1681a0
+  - oc979f1
+  why: The unit square maps to the parallelogram spanned by the columns; its area is |ad − bc|.
+q3:
+  right:
+  - of996e8
+  - o3059bb
+  why: The cyclic property is the one used in matrix calculus; the trace is basis-independent.
+q4:
+  right:
+  - o971657
+  - oe8a3d4
+  why: 'For triangular matrices, det = product of the diagonal: 1·4·(−2).'
+q5:
+  right:
+  - ob5160f
+  - o7adc70
+  - o9b4f7a
+  why: Rotations have complex eigenvalues; det 0 means 0 is an eigenvalue.
+q6:
+  right:
+  - o6ef811
+  - oa12ea8
+  why: Symmetric → real eigenvalues and orthogonal eigenvectors. Positivity needs positive definiteness.
+q7:
+  right:
+  - o2e926e
+  - o19e32c
+  why: Rotations by angles other than 0° or 180° turn every direction; projections and reflections fix some.
+q8:
+  right:
+  - o175151
+  - oeefe2a
+  why: det(A − λI) = (1 − λ)²; the kernel of A − I is only the x-axis.
+q9:
+  right:
+  - o6f2895
+  - od15de4
+  why: It's a triangular "square root" for SPD matrices, used for Gaussian sampling and fast solves.
+q10:
+  right:
+  - o6464bc
+  - o510b60
+  - o7c34db
+  why: Only diagonalizable matrices have it; P is orthogonal for symmetric A.
+q11:
+  right:
+  - ofa8c5d
+  - o981452
+  why: Orthonormal eigenvectors make P⁻¹ = Pᵀ; expanding gives a sum of rank-1 projections scaled by λᵢ.
+q12:
+  right:
+  - o57cf59
+  - o5065d3
+  why: The shear lacks a second eigenvector; the rotation has no real eigenvalues. Symmetric matrices always diagonalize.
+q13:
+  right:
+  - od56d23
+  - o9e0629
+  - obc7cd4
+  why: Σ has the shape of A; singular values are square roots of the eigenvalues of AᵀA.
+q14:
+  right:
+  - o89665f
+  - o2f91da
+  why: Σ keeps exactly as many independent directions as A has.
+q15:
+  right:
+  - oc520e8
+  - oa5418b
+  why: Then the orthonormal eigenbasis serves as both U and V and the eigenvalues are the singular values.
+q16:
+  right:
+  - o136f14
+  - oe72e74
+  why: Each singular triple (σᵢ, uᵢ, vᵢ) is a pattern linking a group of users to a group of movies.
+q17:
+  right:
+  - o9c9bc9
+  - o4fc6d7
+  - oaaaa7b
+  why: Keep the largest; the first discarded singular value is the spectral-norm error.
+q18:
+  right:
+  - o700812
+  - oece7bb
+  why: ‖A‖₂ = max over unit x of ‖Ax‖ = σ₁.
+q19:
+  right:
+  - odf4d95
+  - occac3c
+  why: k left vectors (m each), k right vectors (n each) and k singular values.
+q20:
+  right:
+  - o5adedb
+  - o30473b
+  why: If the spectrum is flat, dropping terms throws away as much as you keep.
+q21:
+  right:
+  - ocb820d
+  - o357b61
+  - od64673
+  why: The gradient is perpendicular to level sets; it points to the minimum only for special functions.
+q22:
+  right:
+  - o44da17
+  - oe95e3e
+  why: Derivative of the outer function at the inner value, times the derivative of the inner function.
+q23:
+  right:
+  - ob7eddb
+  - o430420
+  why: 'The book uses the numerator layout: gradients are rows. Other books use columns; track the shapes.'
+q24:
+  right:
+  - o740620
+  - o7a7943
+  why: The best linear approximation; adding f″(x₀)(x − x₀)²/2 gives the second-order one.
+q25:
+  right:
+  - oc0632a
+  - ob3126a
+  why: Rows = outputs, columns = inputs.
+q26:
+  right:
+  - o65d1b8
+  - oc29a70
+  - obdcd1a
+  why: 2xᵀA only for symmetric A; ∂(xᵀx)/∂x = 2xᵀ.
+q27:
+  right:
+  - o53a4b0
+  - o948569
+  why: 'Chain rule through e = y − Φθ: dL/de = 2eᵀ, de/dθ = −Φ. Setting it to 0 gives the normal equations.'
+q28:
+  right:
+  - oa24bb5
+  - o501d61
+  why: Finite differences catch most sign and transpose mistakes; shapes alone don't.
+q29:
+  right:
+  - od186b4
+  - ob3e10f
+  - o39ac7e
+  why: It applies the chain rule on the computation graph from the output back.
+q30:
+  right:
+  - o0042c4
+  - o298808
+  why: Mixed curvature signs mean up in one direction and down in another.
+q31:
+  right:
+  - oef2990
+  - o2b25d7
+  - o86053d
+  why: The Hessian is the Jacobian of the gradient; positive definite only for strictly convex directions.
+q32:
+  right:
+  - o712d30
+  - o169aaf
+  why: Value, slope and curvature at x₀; it's the model behind Newton's method.

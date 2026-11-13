@@ -1,0 +1,375 @@
+id: mml-3-probability-optimization
+title: 'Maths for ML 3: probability and optimization'
+version: 1
+language: en
+description: 'Part 3 of 4, following the free book Mathematics for Machine Learning (Deisenroth, Faisal, Ong). Probability
+  spaces, discrete and continuous distributions, the sum and product rules, Bayes'' theorem, expectations and covariance,
+  the Gaussian (marginals, conditionals, sums), conjugate priors and the exponential family, change of variables;
+  then gradient descent, momentum and SGD, Lagrange multipliers, convexity and duality. Each lesson opens your own
+  copy of the book (free from mml-book.com; inPace finds it), with notes, 3Blue1Brown videos, interactive explorers,
+  worked exercises with instant feedback, and charts. Plan: 9 days.'
+image: cover.jpg
+book: mml-book.pdf
+book_info:
+  title: Mathematics for Machine Learning
+  url: https://mml-book.com
+  pages: 412
+modules:
+- id: m1
+  title: 'Day 1: Probability spaces, discrete and continuous'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: construction of a probability space (6.1)'
+    file: lessons/m1-l2.md
+    minutes: 35
+    media: mml-book.pdf#pages=178-184
+  - id: m1-l3
+    title: 'Read: discrete and continuous probabilities (6.2)'
+    file: lessons/m1-l3.md
+    minutes: 35
+    media: mml-book.pdf#pages=184-189
+  - id: m1-l4
+    title: 'Watch: Why "probability of 0" does not mean "impossible"'
+    file: lessons/m1-l4.md
+    minutes: 10
+    media: https://www.youtube.com/watch?v=ZA4JkHKZM50
+  - id: m1-l5
+    title: 'Watch: Binomial distributions'
+    file: lessons/m1-l5.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=8idr1WZ1A7Q
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: |-
+      Roll two fair dice; let X be the sum.
+
+      1. Write the probability mass function of X as a table (X from 2 to 12).
+      2. Draw its cumulative distribution function F(x).
+      3. Now let U be uniform on [0, 2]. What is its density? What is P(0.5 ≤ U ≤ 1.2)? Why is f(u) = 0.5, not 1, and why is
+         P(U = 1) = 0?
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between a probability mass function and a probability density function. Why can
+      a density be bigger than 1, while a probability can't?
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Sum rule, product rule and Bayes'' theorem'
+  lessons:
+  - id: m2-l1
+    title: 'Read: sum rule, product rule and Bayes'' theorem (6.3)'
+    file: lessons/m2-l1.md
+    minutes: 35
+    media: mml-book.pdf#pages=189-192
+  - id: m2-l2
+    title: 'Watch: Bayes theorem, the geometry of changing beliefs'
+    file: lessons/m2-l2.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=HZGCoVF3YvM
+  - id: m2-l3
+    title: 'Watch: The medical test paradox'
+    file: lessons/m2-l3.md
+    minutes: 21
+    media: https://www.youtube.com/watch?v=lG4VkPoG3ko
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: |-
+      A spam filter: 20% of emails are spam. The word "prize" appears in 30% of spam emails and in 1% of normal emails.
+
+      1. Use the sum rule to get P("prize").
+      2. Use Bayes' theorem to get P(spam | "prize").
+      3. Redo it with odds: prior odds 1 : 4, likelihood ratio 30 : 1. Do you get the same answer?
+      4. If the filter also sees the word "meeting" (in 5% of spam and 20% of normal emails), and we assume the words are
+         independent given the class, what is P(spam | "prize" and "meeting")?
+  - id: m2-explain
+    type: explain
+    prompt: Explain Bayes' theorem with the words prior, likelihood, posterior and evidence, using an example of
+      your own. Why does a rare condition stay fairly unlikely even after a positive result from a good test?
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Means, variances and independence'
+  lessons:
+  - id: m3-l1
+    title: 'Read: summary statistics and independence (6.4)'
+    file: lessons/m3-l1.md
+    minutes: 55
+    media: mml-book.pdf#pages=192-203
+  - id: m3-l2
+    title: 'Watch: Convolutions: adding random variables'
+    file: lessons/m3-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=IaSGqQa5O-M
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: |-
+      Data (x, y): (1, 2), (2, 4), (3, 5), (4, 4), (5, 7).
+
+      1. Compute the sample means, the sample variances and the sample covariance (use 1/N as the book does).
+      2. Write the 2 × 2 covariance matrix and compute the correlation.
+      3. Let z = 2x − y. Use V[aX + bY] = a²V[X] + b²V[Y] + 2ab·Cov[X, Y] to get V[z], then check by computing z for each
+         point directly.
+      4. Give an example (your own) of two variables that are uncorrelated but not independent.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why "uncorrelated" does not mean "independent". Use an example, and say what correlation actually
+      measures.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: The Gaussian distribution'
+  lessons:
+  - id: m4-l1
+    title: 'Read: the Gaussian distribution (6.5)'
+    file: lessons/m4-l1.md
+    minutes: 60
+    media: mml-book.pdf#pages=203-211
+  - id: m4-l2
+    title: 'Explore: marginals and conditionals'
+    file: lessons/m4-l2.md
+    minutes: 15
+  - id: m4-l3
+    title: 'Watch: But what is the Central Limit Theorem?'
+    file: lessons/m4-l3.md
+    minutes: 31
+    media: https://www.youtube.com/watch?v=zeJD6dqJ5lo
+  - id: m4-l4
+    title: 'See it: averages become Gaussian'
+    file: lessons/m4-l4.md
+    minutes: 5
+  - id: m4-l5
+    title: 'Watch: Why π is in the normal distribution'
+    file: lessons/m4-l5.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=cy8r7WSuT1I
+  - id: m4-l6
+    title: 'Watch: A pretty reason why Gaussian + Gaussian = Gaussian'
+    file: lessons/m4-l6.md
+    minutes: 13
+    media: https://www.youtube.com/watch?v=d_qvLDhkg00
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: |-
+      (x₁, x₂) is Gaussian with mean (1, 0) and covariance Σ = [[2, 1], [1, 2]].
+
+      1. What are the marginal distributions of x₁ and x₂?
+      2. Find p(x₂ | x₁ = 3): its mean and variance, using the conditioning formula.
+      3. Let y = x₁ + x₂. What is its distribution? (Use A = [1, 1].)
+      4. Find the eigenvectors of Σ. Along which direction are the contour ellipses longest? Check in the explorer.
+  - id: m4-explain
+    type: explain
+    prompt: 'Explain in your own words what conditioning on x₁ does to a 2D Gaussian: why the mean of x₂ moves,
+      why its variance shrinks, and why the amount of shrinking doesn''t depend on the observed value.'
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Conjugate priors and the exponential family'
+  lessons:
+  - id: m5-l1
+    title: 'Read: conjugacy and the exponential family (6.6)'
+    file: lessons/m5-l1.md
+    minutes: 55
+    media: mml-book.pdf#pages=211-220
+  - id: m5-l2
+    title: 'Explore: learn a coin''s bias'
+    file: lessons/m5-l2.md
+    minutes: 15
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: |-
+      Your prior on a coin is Beta(3, 3). You flip it 12 times and get 9 heads.
+
+      1. What is the posterior? Write its mean, its mode (MAP estimate) and the MLE. Which is closest to 0.5, and why?
+      2. You flip 12 more times and get 5 heads. Update again. Is it the same as updating once with all 24 flips?
+      3. Write the Bernoulli distribution in exponential-family form: what are φ(x) and θ (the natural parameter)?
+  - id: m5-explain
+    type: explain
+    prompt: What does it mean for a prior to be conjugate, and why is it convenient? Explain with the Beta–Bernoulli
+      example, including what α and β "mean".
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Change of variables'
+  lessons:
+  - id: m6-l1
+    title: 'Read: change of variables and inverse transform (6.7–6.8)'
+    file: lessons/m6-l1.md
+    minutes: 50
+    media: mml-book.pdf#pages=220-230
+  - id: m6-l2
+    title: 'Check yourself: chapter 6'
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: |-
+      1. X is uniform on (0, 1). Find the density of Y = −ln(X). Which famous distribution is it?
+      2. Use that result to write a two-line Python function that samples from it using only `random.random()`, draw 10,000
+         samples and compare their mean with the theory.
+      3. X ~ N(0, 1) and Y = 2X + 3. Use the change-of-variables formula to get the density of Y, and check it matches
+         N(3, 4).
+  - id: m6-explain
+    type: explain
+    prompt: Explain why a density has to be multiplied by |det J| when you change variables, using the idea that
+      probability mass must be conserved when space is stretched or squashed.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Gradient descent'
+  lessons:
+  - id: m7-l1
+    title: 'Read: optimization using gradient descent (7.1)'
+    file: lessons/m7-l1.md
+    minutes: 45
+    media: mml-book.pdf#pages=231-239
+  - id: m7-l2
+    title: 'Explore: gradient descent with your own step size'
+    file: lessons/m7-l2.md
+    minutes: 20
+  - id: m7-l3
+    title: 'Watch: Gradient descent, how neural networks learn'
+    file: lessons/m7-l3.md
+    minutes: 21
+    media: https://www.youtube.com/watch?v=IHZwWFHWa-w
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: |-
+      f(x) = ½xᵀAx with A = [[1, 0], [0, 10]], starting from x₀ = (10, 1).
+
+      1. Show that gradient descent multiplies each coordinate by (1 − γ·aᵢᵢ) at every step.
+      2. For which γ does it converge? Which γ is best (makes the slowest coordinate shrink fastest)?
+      3. Write 10 lines of Python to run 50 steps with γ = 0.1, 0.18 and 0.21, printing f each time. Describe what you see.
+      4. Add momentum α = 0.7 with γ = 0.05 and compare.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why gradient descent zig-zags in a long, narrow valley, and how momentum helps. Use the idea
+      that the gradient is steep across the valley and gentle along it.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: Constrained optimization and Lagrange multipliers'
+  lessons:
+  - id: m8-l1
+    title: 'Read: constrained optimization (7.2)'
+    file: lessons/m8-l1.md
+    minutes: 35
+    media: mml-book.pdf#pages=239-242
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: |-
+      1. Find the point on the line 2x + y = 5 closest to the origin, using a Lagrange multiplier (minimize x² + y²).
+      2. Check your answer with course 1: it's the projection of the origin onto that line.
+      3. Maximize the entropy H = −p₁ln p₁ − p₂ln p₂ − p₃ln p₃ subject to p₁ + p₂ + p₃ = 1. Which distribution do you get, and
+         does it make sense?
+  - id: m8-explain
+    type: explain
+    prompt: Explain why, at the best point of f on a curve g(x) = 0, the gradients of f and g must be parallel.
+      Use a picture of contour lines touching the curve.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Day 9: Convex optimization'
+  lessons:
+  - id: m9-l1
+    title: 'Read: convex optimization (7.3) and further reading (7.4)'
+    file: lessons/m9-l1.md
+    minutes: 60
+    media: mml-book.pdf#pages=242-254
+  - id: m9-l2
+    title: 'Check yourself: chapter 7'
+    file: lessons/m9-l2.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: |-
+      For each function, say whether it is convex on the given domain, and justify with the second derivative (or Hessian)
+      or the chord definition:
+
+      1. f(x) = eˣ + x² on ℝ
+      2. f(x) = x⁴ − x² on ℝ
+      3. f(x, y) = x² + xy + y² on ℝ²
+      4. f(x) = ‖Ax − b‖² + λ‖x‖² on ℝⁿ (λ > 0)
+
+      For the one that isn't convex, find two local minima.
+  - id: m9-explain
+    type: explain
+    prompt: Why is convexity so valuable in optimization? Explain what goes wrong with gradient descent on a non-convex
+      function, and why deep learning still works in practice even though its loss isn't convex.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

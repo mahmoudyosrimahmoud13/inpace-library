@@ -4,6 +4,8 @@
 <p align="center"><b>Free courses made and shared by people who learn with <a href="https://github.com/mahmoudyosrimahmoud13/inpace">inPace</a>.</b><br>
 <a href="https://mahmoudyosrimahmoud13.github.io/inpace-library/"><b>Browse the library</b></a> (English and Arabic) · <a href="../../issues/new?template=submit-course.yml"><b>Share your course</b></a></p>
 
+<p align="center"><a href="https://mahmoudyosrimahmoud13.github.io/inpace-library/"><img alt="Courses in the library" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmahmoudyosrimahmoud13.github.io%2Finpace-library%2Fstats.json&query=%24.courses&label=courses&color=FFD43B&labelColor=111111&style=for-the-badge"> <img alt="Hours of lessons" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmahmoudyosrimahmoud13.github.io%2Finpace-library%2Fstats.json&query=%24.hours&label=hours%20of%20lessons&color=CDE8F2&labelColor=111111&style=for-the-badge"></a></p>
+
 ---
 
 ## Add a course to your inPace
@@ -31,6 +33,10 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/dl-3-ml-projects/files/cover.jpg" width="160" alt=""> | [Deep Learning 3: structuring ML projects](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-3-ml-projects.html) | 6 days |
 | <img src="courses/dl-4-cnns/files/cover.jpg" width="160" alt=""> | [Deep Learning 4: convolutional networks and computer vision](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-4-cnns.html) | 9 days |
 | <img src="courses/dl-5-sequence-models/files/cover.jpg" width="160" alt=""> | [Deep Learning 5: sequence models, attention and transformers](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-5-sequence-models.html) | 9 days |
+| <img src="courses/mml-1-linear-algebra-geometry/files/cover.jpg" width="160" alt=""> | [Maths for ML 1: linear algebra and analytic geometry](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-1-linear-algebra-geometry.html) | 7 days |
+| <img src="courses/mml-2-decompositions-calculus/files/cover.jpg" width="160" alt=""> | [Maths for ML 2: matrix decompositions and vector calculus](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-2-decompositions-calculus.html) | 8 days |
+| <img src="courses/mml-3-probability-optimization/files/cover.jpg" width="160" alt=""> | [Maths for ML 3: probability and optimization](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-3-probability-optimization.html) | 9 days |
+| <img src="courses/mml-4-machine-learning-problems/files/cover.jpg" width="160" alt=""> | [Maths for ML 4: regression, PCA, mixtures and SVMs](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-4-machine-learning-problems.html) | 10 days |
 | <img src="courses/flutter-advanced-interview/files/cover.jpg" width="160" alt=""> | [Advanced Flutter and interview revision](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-advanced-interview.html) | 4 weeks |
 | <img src="courses/docker-kubernetes-ar/files/cover.jpg" width="160" alt=""> | [دورة Docker و Kubernetes بالعربي](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-kubernetes-ar.html) (video by Ahmed Sami, Big Data بالعربي) | 3 weeks |
 | <img src="courses/docker-kubernetes-en/files/cover.jpg" width="160" alt=""> | [Docker and Kubernetes: from a container to a cluster](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-kubernetes-en.html) (same video, in Egyptian Arabic, with English notes) | 3 weeks |
@@ -43,6 +49,8 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/flutter-tdd-and-clean-architecture/files/cover.jpg" width="160" alt=""> | [Flutter TDD and Clean Architecture](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-tdd-and-clean-architecture.html) | about 8 hours |
 | <img src="courses/python-basics/files/cover.jpg" width="160" alt=""> | [Python Basics](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics.html) | 1 hour |
 | <img src="courses/python-basics-ar/files/cover.jpg" width="160" alt=""> | [أساسيات بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics-ar.html) | ساعة |
+
+The four Maths for ML courses follow the free book *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong). The book is **not** included: its licence allows personal use only. Each learner downloads it from [mml-book.com](https://mml-book.com), and inPace 1.20 or newer finds it on their computer or phone. The courses add notes, 3Blue1Brown videos, interactive explorers and exercises.
 
 The three Machine Learning refresh courses include the original slides of Andrew Ng's Machine Learning Specialization, by DeepLearning.AI and Stanford Online, shared under Creative Commons BY-SA 2.0 for non-commercial educational use.
 
