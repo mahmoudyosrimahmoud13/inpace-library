@@ -1,0 +1,360 @@
+q1:
+  text: What do all containers on one machine share?
+  show: 4
+  options:
+    off3df7: The host's kernel, not a full OS per container
+    o598daf: The same file system
+    o84d13b: The same database
+    o5a332a: The operating system kernel
+    o746877: Always the same IP address
+    od2a41d: The same processes
+q2:
+  text: Which two Linux features are containers built on?
+  show: 4
+  options:
+    oea13ca: Swap
+    o9a8a5e: BIOS
+    o7e3763: Cron
+    o533b76: Namespaces
+    oe28e7f: Hypervisor
+    o805e14: Control groups (cgroups)
+q3:
+  text: Why does a container start faster than a VM?
+  show: 4
+  options:
+    obcffd5: Because it needs no CPU
+    oee14e2: Because it uses no memory
+    o9db0c1: Because it runs on the internet
+    o6de39f: Because it's always under 1 MB
+    o7c1b40: It's a process starting on a kernel that's already running
+    o055a0a: It doesn't boot a full operating system
+q4:
+  text: When does a container stop?
+  show: 4
+  options:
+    oc424ff: Always after an hour
+    o6dc16e: Never
+    o050f0d: When you close the browser
+    o6db916: When PID 1 inside it exits
+    oc45f5d: When its main process ends
+    o73ded6: When the screen fills up
+q5:
+  text: How are images and containers related?
+  show: 4
+  options:
+    o1b09ba: A container is a running instance of an image
+    o66e835: They're the same thing
+    ob95278: Images only run on Windows
+    ob3d711: One image can run many containers
+    oc9aa2d: An image is a running container
+    ob2e062: Containers are stored on Docker Hub
+q6:
+  text: What does seeing both Client and Server in docker version mean?
+  show: 4
+  options:
+    o73a570: The CLI is connected to the Docker engine
+    o9d9f02: There's always a permission error
+    o7acfb0: The daemon is running
+    o5ea1b7: Docker isn't installed
+    oc72f9c: Kubernetes is running
+    o737123: There's no internet
+q7:
+  text: Why does the OCI standard matter?
+  show: 4
+  options:
+    o98724f: You're not tied to one company
+    o0e371c: It blocks Docker on Linux
+    o3a8017: It replaces networking
+    oaa7cd4: It's an operating system
+    o38f4fd: Images and containers work with different tools
+    oac244f: It always makes containers faster
+q8:
+  text: How do you leave an interactive container without stopping it?
+  show: 4
+  options:
+    oc18a27: exit
+    oae4ca9: docker rm
+    oe025c8: Ctrl+P then Ctrl+Q
+    o1b2f4b: Turn off the computer
+    o89794a: Detach the terminal and leave it running
+    o4a56dd: Always Ctrl+C
+q9:
+  text: What does runc do?
+  show: 4
+  options:
+    oe014c9: A low-level runtime that follows the OCI spec
+    oad7564: Routes traffic between servers
+    o614dcf: Draws the user interface
+    ode9468: Writes the Dockerfile
+    o690dd3: Creates the container by talking to the kernel
+    o14e0ac: Stores images online
+q10:
+  text: Why does the shim exist?
+  show: 4
+  options:
+    o1663ca: So containers keep running if the daemon restarts
+    occ7394: To compress images
+    o21b915: To connect to Docker Hub
+    o6335a1: To encrypt the network
+    o64b7e4: To delete old containers
+    o1742e7: It stays with the container after runc exits
+q11:
+  text: Why are images made of layers?
+  show: 4
+  options:
+    o846846: To encrypt data
+    o7870bf: Builds reuse unchanged layers
+    oca57fc: Because they always need internet
+    od87f62: To allow only one container
+    oc0cb35: So images can be edited while running
+    oed8e8e: Shared layers aren't downloaded or stored twice
+q12:
+  text: 'Tag vs digest:'
+  show: 4
+  options:
+    oebd201: A digest pins the exact content
+    o972a01: No difference
+    o25529a: A tag can be moved to another image
+    ob836a3: A tag is safer
+    o00c30f: A digest is a human-friendly name
+    oe9fbaf: Digests only exist on Windows
+q13:
+  text: What does -p 8080:80 do?
+  show: 4
+  options:
+    o0ed343: Sets network speed
+    o336fde: Links two containers
+    occbe04: Makes the service reachable from outside
+    o889d11: Opens port 80 on the host
+    oe28023: Forwards host port 8080 to port 80 in the container
+    o649262: Changes Docker's own port
+q14:
+  text: When can containers reach each other by name?
+  show: 4
+  options:
+    o2e9136: On the none network
+    o78c7dd: On an overlay network in Swarm
+    o006432: Never
+    oba7f47: Always on the default bridge
+    obfc8a9: On a user-defined bridge network
+    od5e8e2: Only across different machines
+q15:
+  text: Where should a database keep its data so it outlives the container?
+  show: 4
+  options:
+    oa97a2b: In the image
+    o18895b: In a volume
+    o02239e: In storage outside the container's writable layer
+    o3c9723: In the container layer
+    o349452: In docker logs
+    o100980: In tmpfs
+q16:
+  text: What does unless-stopped mean?
+  show: 4
+  options:
+    o1d2d0d: It's removed after stopping
+    o1f11a7: The container comes back after any stop or reboot
+    oefc6d2: Except when you stopped it yourself
+    oac3a94: Only after errors
+    o389b9a: It never comes back
+    o173dd4: It runs once a day
+q17:
+  text: Why copy requirements.txt before the rest of the code?
+  show: 4
+  options:
+    oca8aeb: It always shrinks the image
+    o575e2c: Docker refuses otherwise
+    o49ce07: Faster rebuilds
+    o3b031c: To encrypt dependencies
+    o461f5f: The dependency layer stays cached when only code changes
+    o607ce5: To run as root
+q18:
+  text: What does a multi-stage build give you?
+  show: 4
+  options:
+    oe58b82: It needs Kubernetes
+    o3684eb: No cache
+    o20a486: Source code in production
+    o7cf313: A smaller final image without build tools
+    oade9ed: A smaller attack surface
+    o600097: Always slower builds
+q19:
+  text: What does EXPOSE do?
+  show: 4
+  options:
+    o636ba6: Creates a network
+    o4b3d0e: Documents the port the app listens on
+    oefa193: It doesn't publish the port by itself
+    o06bea6: Opens the port to the internet
+    ofe3464: Closes all ports
+    od82393: Sets an IP address
+q20:
+  text: Why not add a password in one RUN and delete it in the next?
+  show: 4
+  options:
+    o7c34cf: Anyone with the image can extract it
+    o35d699: Layers are encrypted automatically
+    o51a950: That's fine
+    ob5c3ab: Docker refuses to delete
+    o51ae09: It only slows startup
+    o29636d: It stays saved in an earlier layer
+q21:
+  text: How does the web service reach db in the same compose file?
+  show: 4
+  options:
+    o3a1537: Through the network Compose creates
+    o371bfe: Always through localhost
+    o2dd57a: By the service name db
+    o544464: It can't
+    o1e3b7e: Through Docker Hub
+    oe7661c: Always by a fixed IP
+q22:
+  text: What does docker compose down -v do?
+  show: 4
+  options:
+    o5cd60a: Only stops containers
+    ob03fa9: Updates services
+    ofd90af: And removes the volumes too
+    o3fca6c: Removes the containers and the network
+    of132e2: Makes a backup
+    o254b85: Deletes images from Docker Hub
+q23:
+  text: What doesn't depends_on guarantee on its own?
+  show: 4
+  options:
+    of49f3a: That the other service is ready for connections
+    oc6a8d5: Startup order
+    o64322c: The network
+    oa54352: Waiting for a healthcheck
+    o5caa5b: That the service exists
+    oa85410: The service name
+q24:
+  text: Where do passwords belong in a Compose project?
+  show: 4
+  options:
+    o1fc0e4: In the container name
+    oe96341: In a .env file kept out of git
+    o7d1c38: In the README
+    oc68f59: In the image
+    of7ecb6: In the Dockerfile
+    oa39971: In secrets
+q25:
+  text: Why use an odd number of managers (3 or 5)?
+  show: 4
+  options:
+    oce177e: To always save bandwidth
+    o07a61f: So the cluster survives losing some managers
+    o4ca17c: To keep a Raft majority
+    o59e1be: To make containers faster
+    o14109a: No reason
+    od0252a: Docker rejects even numbers
+q26:
+  text: What does the routing mesh do?
+  show: 4
+  options:
+    o93ee5d: Blocks outside access
+    oe60b9a: Any node accepts the request and forwards it to a replica
+    oe9e90c: Encrypts volumes
+    ob81741: Deletes old services
+    o3730fb: Builds images
+    offe696: Spreads requests across replicas
+q27:
+  text: 'docker compose up vs docker stack deploy:'
+  show: 4
+  options:
+    ofcf188: stack can't read compose files
+    o192b84: No difference
+    oce370a: 'stack doesn''t build images from build:'
+    o295f61: stack deploys across a multi-node Swarm
+    offb727: compose only works on Swarm
+    o207164: stack runs without Docker
+q28:
+  text: Why use rolling updates?
+  show: 4
+  options:
+    obfe465: Roll back if something goes wrong
+    ob72f9c: Build the image
+    o7e55d7: Update the kernel
+    oa32771: Update replicas gradually without downtime
+    o89b1f8: Delete everything then restart
+    o408452: Rename the service
+q29:
+  text: What does the Kubernetes scheduler do?
+  show: 4
+  options:
+    o7fd1b3: Chooses the node each Pod runs on
+    o396b02: Routes traffic from the internet
+    ode6ede: Builds images
+    oe45157: Deletes namespaces
+    o84ea77: Places Pods by resources and constraints
+    o2701fb: Stores the cluster state
+q30:
+  text: Why put a Service in front of Pods?
+  show: 4
+  options:
+    od82416: To store data
+    o0af485: To encrypt Pods
+    obd82ff: To build images
+    o8955d7: It gives a stable address and spreads traffic
+    o8ccf5b: Pod addresses change when Pods are recreated
+    o7280d9: Because Pods have no network
+q31:
+  text: You delete a Pod that belongs to a Deployment. What happens?
+  show: 4
+  options:
+    od5a16a: The cluster restarts
+    obaa6e8: The ReplicaSet restores the desired count
+    o0d4b2a: The app stops forever
+    o4727e5: A new Pod is created automatically
+    oba7dfd: The Deployment is deleted
+    odc48cf: The Service is deleted
+q32:
+  text: 'requests vs limits:'
+  show: 4
+  options:
+    oa0da8f: limits are for the network only
+    oefccd8: requests are a Compose feature
+    o3e4c9c: requests set the replica count
+    o99e986: requests are reserved for scheduling
+    odcd92a: No difference
+    oe6f5ee: limits are the maximum allowed
+q33:
+  text: 'Liveness vs readiness probe:'
+  show: 4
+  options:
+    o568315: Both are network-only
+    o5070d1: Readiness restarts the container
+    oed5512: 'Liveness: should the container be restarted?'
+    of25356: No difference
+    of6e6cb: 'Readiness: should it receive traffic now?'
+    o3f85c7: Liveness sets replicas
+q34:
+  text: A Pod is in CrashLoopBackOff. What do you check first?
+  show: 4
+  options:
+    o46d37a: Reinstall Docker
+    o763c73: Scale to 100 replicas
+    o2ebf2c: kubectl logs --previous
+    o608ec6: kubectl describe pod for events
+    od1ce62: Delete the cluster
+    o4ec82e: Rename the namespace
+q35:
+  text: Where does a database that needs lasting data go on Kubernetes?
+  show: 4
+  options:
+    o6990d2: In an emptyDir
+    o51da13: A Deployment with no volume
+    o010e65: A managed service outside the cluster
+    o6db753: A StatefulSet with a PersistentVolume
+    oc43804: In a ConfigMap
+    o3dd65d: Inside the image
+q36:
+  text: Are Kubernetes Secrets encrypted by default?
+  show: 4
+  options:
+    o60b721: They expire after an hour
+    oe141aa: They're stored in the image
+    oec8b26: No, only base64-encoded unless you enable encryption
+    o375cc5: Enable encryption at rest or use a secrets manager
+    o00b3dd: They can never be read
+    of0ce06: Yes, always with AES

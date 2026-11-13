@@ -1,0 +1,320 @@
+q1:
+  text: Which are measures in this dataset?
+  show: 4
+  options:
+    ob8e752: payment
+    o496a53: branch
+    o7e2384: sales
+    o43cb5f: category
+    o1a3d49: customer_type
+    oaef2fc: quantity
+q2:
+  text: Which are specific, answerable questions?
+  show: 4
+  options:
+    o6b3f99: Which branch had the highest average order in July 2025?
+    ob2c0d4: How are things going?
+    o80019d: How much did cold drinks sell per month in 2025?
+    o51eb06: Why do people like us?
+    o0e8c92: What will happen next year?
+    o375bcf: Is our coffee good?
+q3:
+  text: What does one row in coffee_sales_2025.csv represent?
+  show: 4
+  options:
+    o463519: One day
+    o5cd9c5: The grain of the table is the order
+    o6ae89b: One branch
+    oa16eaf: One customer
+    oaac976: One month
+    oac602e: One order
+q4:
+  text: Which break the 'tidy data' rules?
+  show: 4
+  options:
+    oc549c9: One row per order
+    o80722b: A date column
+    oba997d: A column for branch
+    od3f1d1: A total row in the middle of the data
+    o8e139c: Merged header cells across columns
+    o7f1618: Numbers stored as numbers
+q5:
+  text: How do you keep the header visible while scrolling?
+  show: 4
+  options:
+    o53ae6d: Merge the header cells
+    oab6ef4: Sort the data
+    o0e977c: View → Freeze Panes / Freeze Cells
+    o15547b: Freeze the top row
+    o4f2c85: Make the header red
+    o0ff3cf: Bold the header
+q6:
+  text: What does Ctrl + T do in Excel?
+  show: 4
+  options:
+    oe7c9f4: Adds a total row in the middle
+    o22a74c: Turns the range into a Table
+    oa155ea: Deletes duplicates
+    o4df91b: Opens Power BI
+    o5657b1: Sorts by date
+    oaa7ef5: Adds filters and makes the range grow with new rows
+q7:
+  text: 'Quick ways to check a number without a formula:'
+  show: 4
+  options:
+    obdeff1: Count the rows by eye
+    o931066: Type the number again
+    o5ed3f8: Print the sheet
+    o3990a3: Ask the database admin
+    o06a6fb: Select the cells and read Sum in the status bar
+    o5605f2: Filter, then select the visible cells
+q8:
+  text: What happens if you sort only the sales column?
+  show: 4
+  options:
+    o8ab337: The data is silently broken
+    o8abdf1: It makes a pivot table
+    o78a4c9: Nothing
+    o85c264: Sales values no longer match their rows
+    o370a62: It deletes duplicates
+    ob0756a: Excel refuses
+q9:
+  text: Which formulas give total sales for Maadi?
+  show: 4
+  options:
+    o5938e9: =SUMIFS(J:J, C:C, "Maadi")
+    o77b54d: =AVERAGE(Maadi)
+    occ90b0: =SUMIFS(sales_column, branch_column, "Maadi")
+    odf22b0: =SUM("Maadi")
+    ob531e6: =VLOOKUP("Maadi", J:J)
+    o8ef361: =COUNTIFS(C:C, "Maadi")
+q10:
+  text: Why use $J$2:$J$20839 in a formula you copy down?
+  show: 4
+  options:
+    o5e58f7: To format as money
+    o528fb5: To hide the formula
+    o01ae74: It's an absolute reference
+    o3302a8: So the range doesn't move when copied
+    o45e27d: To make it faster always
+    obb3d76: Excel requires $ in every formula
+q11:
+  text: 'Advantages of XLOOKUP over VLOOKUP:'
+  show: 4
+  options:
+    oad88ac: It's slower
+    oe40465: It can return a column to the left
+    oa3f7d4: It works without exact matches only
+    offe867: It can't return text
+    o277c44: It needs sorted data
+    o5d2af5: It doesn't break when columns are inserted
+q12:
+  text: Why use exact match (FALSE) in VLOOKUP?
+  show: 4
+  options:
+    oc455dd: It's faster
+    odd689b: It removes duplicates
+    o7de357: You want the exact branch, not the nearest
+    o135635: It sorts the data
+    o9adddc: It's required for numbers
+    o4d1331: Approximate match on unsorted data gives wrong results silently
+q13:
+  text: Which turns '  maadi ' into 'Maadi'?
+  show: 4
+  options:
+    o716e74: =UPPER(C2)
+    oa6438d: =PROPER(TRIM(C2))
+    oe55db6: =LEN(C2)
+    o84d496: TRIM to remove spaces, then PROPER to fix the case
+    oe287b5: =SUM(C2)
+    of61367: =VALUE(C2)
+q14:
+  text: Why are '  maadi ' and 'Maadi' a problem in a pivot table?
+  show: 4
+  options:
+    o93fba2: Totals per branch are split and wrong
+    o5d1169: Pivot tables ignore text
+    o3f3da1: Only colours change
+    of90fe8: They show up as two different branches
+    o3a907b: They're merged automatically
+    oe0eed6: It's not a problem
+q15:
+  text: 'Good ways to handle repeated monthly cleaning:'
+  show: 4
+  options:
+    o37f4a7: A documented cleaning log
+    o17baa6: Ignoring the problems
+    od97292: Deleting all rows with any blank
+    o7658ad: Power Query steps that replay on new files
+    od9a2d4: Cleaning by hand from memory every month
+    o32c091: Sorting one column
+q16:
+  text: A row has a blank payment but a real sale. What's usually best?
+  show: 4
+  options:
+    o4b41cb: Type 'Card' to fill it
+    o9a7e1f: Delete the row
+    od0e723: Keep the row so the sales total stays right
+    o05c58e: Copy the payment from the row above
+    o1d6eec: Delete the column
+    od72eeb: Fill payment with 'Unknown'
+q17:
+  text: 'Best chart to show sales changing over 12 months:'
+  show: 4
+  options:
+    o9fcb20: A pie chart
+    obf08ae: A scatter of random points
+    o3c0099: A table only
+    ob73270: A chart with time on the horizontal axis
+    o5132ca: A line chart
+    o905974: A 3D cone chart
+q18:
+  text: Which are true about pivot tables?
+  show: 4
+  options:
+    oe2da67: They can't count
+    o6d576c: They summarize many rows by dragging fields
+    oca3e53: They must be refreshed when the data changes
+    o1c6086: They change the original data
+    o4395ac: They update by themselves always
+    oe054fc: They only work on numbers
+q19:
+  text: 'Good chart habits:'
+  show: 4
+  options:
+    o9ac297: Use 3D to look professional
+    o5bf3d9: Bar charts start at zero
+    o246ad6: The title says the message
+    o017e3d: Hide the axis labels
+    o6f65fd: Put 12 slices in a pie
+    oe42615: Use many colours for decoration
+q20:
+  text: July sales jumped. What should a good analyst check?
+  show: 4
+  options:
+    oab0ef4: Delete July as an outlier
+    o8ead8e: The font of the report
+    o996e3f: Only the colours of the chart
+    ocb22cb: The 10% price rise in July
+    o656551: Whether the number of orders also rose
+    o71081e: Nothing, more sales is good
+q21:
+  text: Why build a separate Date table?
+  show: 4
+  options:
+    oec5dba: Time intelligence functions need one
+    o30ffc3: It's only for decoration
+    ocbc753: To replace the sales table
+    o87efda: Every visual can slice by month, weekday, year consistently
+    oc89eea: Power BI can't read dates otherwise
+    o6a1ade: To make the file bigger
+q22:
+  text: In a star schema, which tables are dimensions here?
+  show: 4
+  options:
+    oec0ebc: Date
+    oeafdd3: branch_targets
+    oda212b: The report page
+    o7eafe3: A card visual
+    o0a0162: coffee_sales_2025
+    o93419c: The DAX measure
+q23:
+  text: Why use DIVIDE ( a, b ) instead of a / b?
+  show: 4
+  options:
+    ob128d2: It rounds automatically
+    odfd3e0: It returns blank instead of an error
+    oc1d627: It only works on text
+    o08e804: It changes filter context
+    o4bd97c: It handles division by zero
+    o162aff: It's faster to type
+q24:
+  text: What does CALCULATE do?
+  show: 4
+  options:
+    oe65b2a: Creates a relationship
+    o34fb41: Evaluates an expression with changed filters
+    o5fc6c2: Adds or replaces filters, like category = Coffee
+    o14dc97: Imports a CSV
+    o07c355: Sorts a table
+    odfc6f5: Formats a number
+q25:
+  text: What does df.info() show?
+  show: 4
+  options:
+    oc77a19: The first rows only
+    ob04e04: How many non-missing values each column has
+    o6944c0: The sum of sales
+    o93a4a1: A chart
+    o2f4696: Each column's type
+    o76419b: Duplicates removed
+q26:
+  text: Which fix '  maadi ' to 'Maadi' in pandas?
+  show: 4
+  options:
+    ob4dc28: df['branch'].str.strip().str.title()
+    oe73606: Strip spaces, then title case
+    oca282c: df.drop_duplicates()
+    oc5857a: df['branch'].astype(int)
+    o07d0fb: df['branch'].mean()
+    od34368: df['branch'].sum()
+q27:
+  text: What's the pandas equivalent of SUMIFS by branch?
+  show: 4
+  options:
+    o5be39f: df['branch'].unique()
+    of16962: A pivot_table with index='branch' and aggfunc='sum'
+    oec975f: df.groupby('branch')['sales'].sum()
+    oa2bef5: df.head()
+    o54bcd0: df.sort_values('branch')
+    o83869a: df.shape
+q28:
+  text: What does merge do?
+  show: 4
+  options:
+    oa89d3a: Draws a chart
+    o4e0a75: Sorts a table
+    o3354c6: Saves to Excel
+    o963689: Removes duplicates
+    o09b5a7: Joins two tables on a shared column
+    obfef70: Works like VLOOKUP or SQL JOIN
+q29:
+  text: When is the median better than the mean?
+  show: 4
+  options:
+    odd3d9e: Always
+    ofe94b6: Never
+    of7247d: For skewed data like order size or income
+    oc1386a: When a few extreme values pull the mean
+    o47a032: Only for text
+    o24191e: When there are no numbers
+q30:
+  text: Cold drink sales and total sales both rise in summer. What can you say?
+  show: 4
+  options:
+    od40b33: Total sales cause cold drinks
+    obc2af9: They're correlated
+    od48730: Summer may drive both; it doesn't prove one causes the other
+    o2ab510: Delete summer
+    o5c762d: It's random
+    oe96422: Cold drinks cause all sales
+q31:
+  text: 'Good ways to check your own analysis:'
+  show: 4
+  options:
+    oc79fc8: Round everything
+    oefaad4: Trust the first number
+    oc36493: Remove odd rows without saying
+    o56e84d: Make the chart bigger
+    odc9fd3: Totals match the source data
+    o558abc: Get the same answer two different ways
+q32:
+  text: Which SQL matches a pivot of sales by branch?
+  show: 4
+  options:
+    o7a0eb4: SELECT branch, SUM(sales) FROM t GROUP BY branch
+    oeab19e: GROUP BY with SUM per branch
+    o95ad0d: DELETE FROM t
+    o02f429: ORDER BY branch only
+    oc5fef0: SELECT SUM(branch) FROM t
+    ocff313: SELECT * FROM t

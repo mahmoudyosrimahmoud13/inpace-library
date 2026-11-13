@@ -1,0 +1,160 @@
+q1:
+  right:
+  - o7e2384
+  - oaef2fc
+  why: Measures are numbers you add or average.
+q2:
+  right:
+  - o6b3f99
+  - o80019d
+  why: 'Specific: a measure, a dimension, a time.'
+q3:
+  right:
+  - oac602e
+  - o5cd9c5
+  why: Always know the grain before you sum.
+q4:
+  right:
+  - o8e139c
+  - od3f1d1
+  why: Keep reports separate from data.
+q5:
+  right:
+  - o15547b
+  - o0e977c
+  why: Freezing keeps rows or columns on screen.
+q6:
+  right:
+  - o22a74c
+  - oaa7ef5
+  why: Excel Tables are the best habit for data ranges.
+q7:
+  right:
+  - o06a6fb
+  - o5605f2
+  why: The status bar shows Sum, Average and Count.
+q8:
+  right:
+  - o85c264
+  - o8ab337
+  why: Sort the whole table together.
+q9:
+  right:
+  - o5938e9
+  - occ90b0
+  why: SUMIFS(sum range, criteria range, criteria).
+q10:
+  right:
+  - o3302a8
+  - o01ae74
+  why: Relative references shift; absolute ones stay.
+q11:
+  right:
+  - oe40465
+  - o5d2af5
+  why: And it has a built-in 'not found' value.
+q12:
+  right:
+  - o4d1331
+  - o7de357
+  why: Silent wrong answers are the worst kind.
+q13:
+  right:
+  - oa6438d
+  - o84d496
+  why: TRIM + PROPER.
+q14:
+  right:
+  - of90fe8
+  - o93fba2
+  why: To software, different text is a different value.
+q15:
+  right:
+  - o7658ad
+  - o37f4a7
+  why: Make cleaning repeatable.
+q16:
+  right:
+  - od72eeb
+  - od0e723
+  why: Don't invent data; don't throw away real sales.
+q17:
+  right:
+  - o5132ca
+  - ob73270
+  why: Time series → line.
+q18:
+  right:
+  - o6d576c
+  - oca3e53
+  why: Right-click → Refresh.
+q19:
+  right:
+  - o5bf3d9
+  - o246ad6
+  why: Truthful and clear.
+q20:
+  right:
+  - ocb22cb
+  - o656551
+  why: Separate price effects from volume.
+q21:
+  right:
+  - oec5dba
+  - o87efda
+  why: Mark it as a date table and relate it to the fact.
+q22:
+  right:
+  - oec0ebc
+  - oeafdd3
+  why: Facts are events (orders); dimensions describe them.
+q23:
+  right:
+  - o4bd97c
+  - odfd3e0
+  why: Safe division.
+q24:
+  right:
+  - o34fb41
+  - o5fc6c2
+  why: The most important DAX function.
+q25:
+  right:
+  - o2f4696
+  - ob04e04
+  why: info() for structure, describe() for number summaries.
+q26:
+  right:
+  - ob4dc28
+  - oe73606
+  why: The .str accessor works on whole columns.
+q27:
+  right:
+  - oec975f
+  - of16962
+  why: Split, apply, combine.
+q28:
+  right:
+  - o09b5a7
+  - obfef70
+  why: Bring columns from another table by a key.
+q29:
+  right:
+  - oc1386a
+  - of7247d
+  why: The median resists outliers.
+q30:
+  right:
+  - obc2af9
+  - od48730
+  why: Correlation isn't causation.
+q31:
+  right:
+  - odc9fd3
+  - o558abc
+  why: Reconcile and cross-check.
+q32:
+  right:
+  - o7a0eb4
+  - oeab19e
+  why: GROUP BY is the pivot table of SQL.

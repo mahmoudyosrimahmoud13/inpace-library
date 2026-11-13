@@ -1,0 +1,267 @@
+id: english-b1-ar
+title: 'الإنجليزي مستوى B1: من الكلام اليومي إلى الطلاقة'
+version: 1
+language: ar
+description: 'كورس إنجليزي لمتحدثي العربية بعد مستوى A2: الشرح بالعربي، والأمثلة والتمارين بالإنجليزي. المضارع التام
+  المستمر و used to، الماضي التام، الشرط الثاني والثالث و wish، المبني للمجهول، الكلام المنقول، جمل الوصل والاستنتاج،
+  phrasal verbs وأدوات الربط والكتابة الرسمية، ثم اختبار تجريبي. تمارين بإجاباتها واختبار لكل وحدة. الخطة: 6 أسابيع،
+  45 إلى 60 دقيقة يوميًا.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'الأيام 1-5: المدة والعادات القديمة'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Present perfect continuous
+    file: lessons/m1-l2.md
+    minutes: 30
+  - id: m1-l3
+    title: used to و would و be used to
+    file: lessons/m1-l3.md
+    minutes: 30
+  - id: m1-l4
+    title: تمرين
+    file: lessons/m1-l4.md
+    minutes: 20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'سجّل (دقيقتين) مقارنة بين حياتك قبل 10 سنوات والآن: used to و didn''t use to، وأشياء تفعلها منذ مدة
+      (have been + ing for/since)، وشيء ما زلت تتعود عليه. ارفع التسجيل.'
+  - id: m1-explain
+    type: explain
+    prompt: Write about how your life has changed in the last ten years (100 words). Use used to, the present perfect
+      continuous and be used to.
+    min_words: 80
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'الأيام 6-10: الماضي التام والحكي المتقدم'
+  lessons:
+  - id: m2-l1
+    title: 'Past perfect: had + التصريف الثالث'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: احكِ بحرفية
+    file: lessons/m2-l2.md
+    minutes: 30
+  - id: m2-l3
+    title: تمرين
+    file: lessons/m2-l3.md
+    minutes: 20
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: سجّل قصة حقيقية أو متخيلة (2 إلى 3 دقائق) عن يوم سار فيه كل شيء بشكل خاطئ، واستعمل الأزمنة الأربعة وأدوات
+      الحكي. ارفع التسجيل.
+  - id: m2-explain
+    type: explain
+    prompt: Write the story from your recording (120 words). Underline in your head each past perfect and check
+      it describes an earlier event.
+    min_words: 100
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'الأيام 11-15: الشرط و wish'
+  lessons:
+  - id: m3-l1
+    title: Zero و second conditional
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Third conditional و wish
+    file: lessons/m3-l2.md
+    minutes: 30
+  - id: m3-l3
+    title: تمرين
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'سجّل 3 إجابات (دقيقة لكل واحدة): What would you do if you could live anywhere? / Describe a decision
+      you regret: what would have happened if...? / What do you wish were different in your city? ارفع التسجيلات.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Write 100 words: ''If I could change one thing about my education, I would...'' Use the second and
+      third conditional and wish.'
+    min_words: 80
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'الأيام 16-20: المبني للمجهول'
+  lessons:
+  - id: m4-l1
+    title: be + التصريف الثالث
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: have something done و it is said
+    file: lessons/m4-l2.md
+    minutes: 25
+  - id: m4-l3
+    title: تمرين
+    file: lessons/m4-l3.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اختر منتجًا (قهوة، هاتف، خبز) واكتب كيف يُصنع في 8 خطوات بالمبني للمجهول (is picked, is roasted, is
+      packed...). سجّلها كأنك تشرح في فيديو. ارفع النص والتسجيل.
+  - id: m4-explain
+    type: explain
+    prompt: Write a short news report (100 words) about an event in your city, using at least five passive forms.
+    min_words: 80
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'الأيام 21-25: الكلام المنقول'
+  lessons:
+  - id: m5-l1
+    title: نقل الجمل
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: نقل الأسئلة والأوامر
+    file: lessons/m5-l2.md
+    minutes: 30
+  - id: m5-l3
+    title: تمرين
+    file: lessons/m5-l3.md
+    minutes: 20
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'تذكّر محادثة حقيقية حدثت هذا الأسبوع (عمل، أهل، أصدقاء) واحكها بالكلام المنقول في 8 جمل على الأقل:
+      said, told, asked, suggested, promised. سجّلها وارفعها.'
+  - id: m5-explain
+    type: explain
+    prompt: 'Report a job interview you had (real or imagined) in 100 words: what they asked you and what you told
+      them.'
+    min_words: 80
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'الأيام 26-30: جمل الوصل والاستنتاج'
+  lessons:
+  - id: m6-l1
+    title: who, which, that, whose, where
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: must be, can't be, might be
+    file: lessons/m6-l2.md
+    minutes: 25
+  - id: m6-l3
+    title: تمرين
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: صوّر 3 صور من حولك (شارع، مكتب، غرفة) واكتب لكل صورة 3 استنتاجات (must / might / can't) وجملتي وصل تصف
+      شيئًا فيها. ارفع الصور والنص.
+  - id: m6-explain
+    type: explain
+    prompt: Describe a person who has influenced you (100 words) using who, which, whose and where.
+    min_words: 80
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'الأيام 31-35: Phrasal verbs والكتابة'
+  lessons:
+  - id: m7-l1
+    title: 30 phrasal verb شائعًا
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: أدوات الربط والكتابة المترابطة
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: اكتب إيميلًا رسميًا حقيقيًا (طلب وظيفة، شكوى، استفسار) بين 120 و150 كلمة، واستعمل 4 phrasal verbs و5
+      أدوات ربط. ارفع النص.
+  - id: m7-explain
+    type: explain
+    prompt: 'Opinion essay (130 words): ''Is it better to work for a big company or start your own business?'' Use
+      the essay plan from the lesson.'
+    min_words: 110
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'الأيام 36-40: اختبار تجريبي B1'
+  lessons:
+  - id: m8-l1
+    title: القراءة والكتابة
+    file: lessons/m8-l1.md
+    minutes: 40
+  - id: m8-l2
+    title: المحادثة والاستماع، وما بعد B1
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: سجّل إجاباتك على أسئلة المحادثة الستة (دقيقة لكل سؤال) وارفع التسجيل. استمع له بعد يوم ودوّن 5 أخطاء
+      صححتها بنفسك.
+  - id: m8-explain
+    type: explain
+    prompt: Write the essay or story from the test task (120-150 words).
+    min_words: 110
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70

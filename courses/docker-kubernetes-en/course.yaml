@@ -1,0 +1,368 @@
+id: docker-kubernetes-en
+title: 'Docker and Kubernetes: from a container to a cluster'
+version: 1
+language: en
+description: 'A course built on Ahmed Sami''s Docker and Kubernetes video (Big Data بالعربي), cut into short lessons
+  that each play their own piece of the video and continue where you stopped. The video is in Arabic (use YouTube''s
+  auto-translated captions); every lesson has English notes with the commands that matter, a practical task, a written
+  answer and a quiz, and it ends with an interview review. Plan: 3 weeks, about 1 to 1.5 hours a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: Containers from zero'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: What containers are
+    file: lessons/m1-l2.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=30&end=1189
+  - id: m1-l3
+    title: Container architecture (part 1 of 2)
+    file: lessons/m1-l3.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=1189&end=2100
+  - id: m1-l4
+    title: Container architecture (part 2 of 2)
+    file: lessons/m1-l4.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=2100&end=3014
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Draw (on paper or any tool) a VM next to a container: every layer from the hardware up to the app.
+      Under it, write 3 lines: when you''d pick a VM and when a container. Upload a picture.'
+  - id: m1-explain
+    type: explain
+    prompt: 'Explain to a friend who doesn''t code: what is a container, and why is it lighter than a virtual machine?'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Docker, installing it, and your first app'
+  lessons:
+  - id: m2-l1
+    title: Introduction to Docker
+    file: lessons/m2-l1.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=3014&end=4058
+  - id: m2-l2
+    title: Installing Docker
+    file: lessons/m2-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=4058&end=5237
+  - id: m2-l3
+    title: A container is an application
+    file: lessons/m2-l3.md
+    minutes: 16
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=5237&end=6201
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Install Docker, then run docker version, docker run hello-world and an interactive ubuntu container,
+      and get back into it with docker exec. Upload a screenshot of the commands and their output.
+  - id: m2-explain
+    type: explain
+    prompt: What's the difference between an image, a container and a registry? Use your own comparison, not class
+      and object.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Days 3-4: The Docker Engine and images in depth'
+  lessons:
+  - id: m3-l1
+    title: Docker Engine architecture
+    file: lessons/m3-l1.md
+    minutes: 8
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=6201&end=6677
+  - id: m3-l2
+    title: Images in depth (part 1 of 2)
+    file: lessons/m3-l2.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=6677&end=8040
+  - id: m3-l3
+    title: Images in depth (part 2 of 2)
+    file: lessons/m3-l3.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=8040&end=9437
+  - id: m3-l4
+    title: Docker in VS Code
+    file: lessons/m3-l4.md
+    minutes: 11
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=9437&end=10108
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Pull nginx:alpine and nginx:latest, compare them with docker image ls and docker history, and find shared
+      layers if any. Upload the output with two lines on the size difference and why.
+  - id: m3-explain
+    type: explain
+    prompt: Why is relying on a tag like latest risky on servers, and what's the safe alternative?
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Days 5-6: Containers, networks and storage'
+  lessons:
+  - id: m4-l1
+    title: Containers in depth
+    file: lessons/m4-l1.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=10108&end=11020
+  - id: m4-l2
+    title: Networking (part 1 of 2)
+    file: lessons/m4-l2.md
+    minutes: 22
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=11020&end=12330
+  - id: m4-l3
+    title: Networking (part 2 of 2)
+    file: lessons/m4-l3.md
+    minutes: 22
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=12330&end=13651
+  - id: m4-l4
+    title: Storage (part 1 of 2)
+    file: lessons/m4-l4.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=13651&end=14700
+  - id: m4-l5
+    title: Storage (part 2 of 2)
+    file: lessons/m4-l5.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=14700&end=15742
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Run postgres with a volume, create a table and add a row, remove the container, start a new one on the
+      same volume and prove the row is still there. Then reach the database by name from a second container on a
+      custom network. Upload the commands and output.
+  - id: m4-explain
+    type: explain
+    prompt: Why is a container's data lost when it's removed, and what's the difference between a volume and a bind
+      mount?
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Days 7-9: Building images'
+  lessons:
+  - id: m5-l1
+    title: Containerizing an application
+    file: lessons/m5-l1.md
+    minutes: 33
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=15742&end=17723
+  - id: m5-l2
+    title: Dockerfile in depth (part 1 of 3)
+    file: lessons/m5-l2.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=17723&end=19140
+  - id: m5-l3
+    title: Dockerfile in depth (part 2 of 3)
+    file: lessons/m5-l3.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=19140&end=20520
+  - id: m5-l4
+    title: Dockerfile in depth (part 3 of 3)
+    file: lessons/m5-l4.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=20520&end=21938
+  - id: m5-l5
+    title: Image registries
+    file: lessons/m5-l5.md
+    minutes: 11
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=21938&end=22570
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Write a Dockerfile for a small app (Python or Node) twice: simple, then multi-stage with .dockerignore
+      and a non-root USER. Compare sizes with docker image ls and push one to Docker Hub or ghcr.io. Upload both
+      files and the output.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain Docker's build cache and why the order of Dockerfile instructions affects build speed.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 10: Docker Compose'
+  lessons:
+  - id: m6-l1
+    title: Docker Compose (part 1 of 2)
+    file: lessons/m6-l1.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=22570&end=24030
+  - id: m6-l2
+    title: Docker Compose (part 2 of 2)
+    file: lessons/m6-l2.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=24030&end=25492
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Write a compose.yaml with at least two services (an app plus a database or Redis), a volume and a healthcheck.
+      Run docker compose up and upload the file and a screenshot of docker compose ps.
+  - id: m6-explain
+    type: explain
+    prompt: Why isn't depends_on enough to make sure the database is ready, and how do you fix it?
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Days 11-12: Docker Swarm, Stack and Portainer'
+  lessons:
+  - id: m7-l1
+    title: Docker Swarm (part 1 of 2)
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=25492&end=27270
+  - id: m7-l2
+    title: Docker Swarm (part 2 of 2)
+    file: lessons/m7-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=27270&end=29057
+  - id: m7-l3
+    title: Docker Stack
+    file: lessons/m7-l3.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=29057&end=30435
+  - id: m7-l4
+    title: Portainer
+    file: lessons/m7-l4.md
+    minutes: 9
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=30435&end=30997
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Create a one-node Swarm, deploy a service with 3 replicas, do a rolling update and a rollback, then
+      deploy a stack from a Compose file. Upload the commands and output.
+  - id: m7-explain
+    type: explain
+    prompt: What does 'desired state' mean in Swarm, and what happens if a node running one of your replicas goes
+      down?
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Days 13-14: Kubernetes'
+  lessons:
+  - id: m8-l1
+    title: Kubernetes intro and architecture
+    file: lessons/m8-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=30997&end=32170
+  - id: m8-l2
+    title: Installing Minikube
+    file: lessons/m8-l2.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=32170&end=32876
+  - id: m8-l3
+    title: 'Logical architecture: Pods, Deployments, Services'
+    file: lessons/m8-l3.md
+    minutes: 16
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=32876&end=33806
+  - id: m8-l4
+    title: Deploying on Kubernetes (part 1 of 2)
+    file: lessons/m8-l4.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=33806&end=34940
+  - id: m8-l5
+    title: Deploying on Kubernetes (part 2 of 2)
+    file: lessons/m8-l5.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=34940&end=36081
+  - id: m8-l6
+    title: Kubernetes in VS Code
+    file: lessons/m8-l6.md
+    minutes: 5
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=36081&end=36352
+  - id: m8-l7
+    title: Jupyter in a container
+    file: lessons/m8-l7.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=36352
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'On Minikube: deploy a 3-replica Deployment and a NodePort Service, open the app, delete a Pod and watch
+      it come back, then update the image and roll back. Upload the YAML files and screenshots of the commands.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain Pod, Deployment and Service to someone who only knows Docker, using Docker examples.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Day 15: Review and interview questions'
+  lessons:
+  - id: m9-l1
+    title: 20 interview questions
+    file: lessons/m9-l1.md
+    minutes: 45
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Record yourself (or write) answering 10 of the 20 questions, each in under a minute, then answer the
+      design question with a diagram. Upload the recording or file.
+  - id: m9-explain
+    type: explain
+    prompt: 'Interview: ''Your app on Kubernetes is in CrashLoopBackOff. What do you do, step by step?'''
+    min_words: 80
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

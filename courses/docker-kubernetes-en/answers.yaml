@@ -1,0 +1,180 @@
+q1:
+  right:
+  - o5a332a
+  - off3df7
+  why: Containers are isolated processes sharing the host kernel.
+q2:
+  right:
+  - o533b76
+  - o805e14
+  why: Namespaces isolate; cgroups limit resources.
+q3:
+  right:
+  - o055a0a
+  - o7c1b40
+  why: A VM boots a whole guest OS.
+q4:
+  right:
+  - oc45f5d
+  - o6db916
+  why: A container's life is tied to its main process.
+q5:
+  right:
+  - o1b09ba
+  - ob3d711
+  why: Template vs running instance.
+q6:
+  right:
+  - o73a570
+  - o7acfb0
+  why: The CLI talks to the daemon through its API.
+q7:
+  right:
+  - o38f4fd
+  - o98724f
+  why: An open format and runtime spec.
+q8:
+  right:
+  - oe025c8
+  - o89794a
+  why: exit ends the main process, which stops the container.
+q9:
+  right:
+  - o690dd3
+  - oe014c9
+  why: runc creates the container, then exits and leaves the shim.
+q10:
+  right:
+  - o1663ca
+  - o1742e7
+  why: It decouples container life from daemon life.
+q11:
+  right:
+  - oed8e8e
+  - o7870bf
+  why: Sharing and caching.
+q12:
+  right:
+  - oebd201
+  - o25529a
+  why: The digest is a hash of the content.
+q13:
+  right:
+  - oe28023
+  - occbe04
+  why: host:container.
+q14:
+  right:
+  - obfc8a9
+  - o78c7dd
+  why: User-defined networks have built-in DNS.
+q15:
+  right:
+  - o18895b
+  - o02239e
+  why: The writable layer is removed with the container.
+q16:
+  right:
+  - o1f11a7
+  - oefc6d2
+  why: Like always, but respects a manual stop.
+q17:
+  right:
+  - o461f5f
+  - o49ce07
+  why: A changed layer rebuilds only what comes after it.
+q18:
+  right:
+  - o7cf313
+  - oade9ed
+  why: Only the output is copied to the last stage.
+q19:
+  right:
+  - o4b3d0e
+  - oefa193
+  why: Publishing is done with -p.
+q20:
+  right:
+  - o29636d
+  - o7c34cf
+  why: Layers are additive.
+q21:
+  right:
+  - o2dd57a
+  - o3a1537
+  why: DNS on the project network.
+q22:
+  right:
+  - o3fca6c
+  - ofd90af
+  why: -v deletes data.
+q23:
+  right:
+  - of49f3a
+  - oa54352
+  why: 'Use condition: service_healthy.'
+q24:
+  right:
+  - oe96341
+  - oa39971
+  why: Never in files you commit.
+q25:
+  right:
+  - o4ca17c
+  - o07a61f
+  why: 3 tolerate 1 failure, 5 tolerate 2.
+q26:
+  right:
+  - oe60b9a
+  - offe696
+  why: Published ports work on every node.
+q27:
+  right:
+  - o295f61
+  - oce370a
+  why: Stacks are for clusters and need ready images.
+q28:
+  right:
+  - oa32771
+  - obfe465
+  why: One replica at a time.
+q29:
+  right:
+  - o7fd1b3
+  - o84ea77
+  why: State lives in etcd; running is kubelet's job.
+q30:
+  right:
+  - o8ccf5b
+  - o8955d7
+  why: Services pick Pods by labels.
+q31:
+  right:
+  - o4727e5
+  - obaa6e8
+  why: Desired state is restored.
+q32:
+  right:
+  - o99e986
+  - oe6f5ee
+  why: Going over the memory limit gets the container OOMKilled.
+q33:
+  right:
+  - oed5512
+  - of6e6cb
+  why: One for being alive, one for being ready.
+q34:
+  right:
+  - o2ebf2c
+  - o608ec6
+  why: Logs and events say why it crashes.
+q35:
+  right:
+  - o010e65
+  - o6db753
+  why: Data needs storage that outlives Pods.
+q36:
+  right:
+  - oec8b26
+  - o375cc5
+  why: base64 is an encoding, not encryption.

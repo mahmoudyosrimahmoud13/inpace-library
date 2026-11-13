@@ -1,0 +1,1531 @@
+order_id,date,branch,product,category,quantity,unit_price,customer_type,payment
+10001,2025-01-01,Maadi,Iced Latte,Cold drinks,1,80,Member,Cash
+10002,2025-01-01,Maadi,Iced Latte,Cold drinks,1,80,Guest,Cash
+10002,2025-01-01,Maadi,Iced Latte,Cold drinks,1,80,Guest,Cash
+10003,2025-01-01,  maadi ,Green Tea,Tea,1,35,Member,Cash
+10004,2025-01-01,Maadi,Cappuccino,Coffee,2,70,Guest,Wallet
+10005,2025-01-01,Maadi,Lemon Mint,Cold drinks,1,55,Member,Wallet
+10006,2025-01-01,Maadi,Chocolate Muffin,Pastry,2,60,Guest,Cash
+10007,2025-01-01,Maadi,Espresso,Coffee,1,45,Guest,Card
+10008,2025-01-01,Maadi,Spanish Latte,Coffee,2,85,Guest,Cash
+10009,2025-01-01,Maadi,Espresso,Coffee,2,45,Guest,Card
+10010,01/01/2025,Maadi,Turkish Coffee,Coffee,1,40,Guest,Card
+10011,2025-01-01,MAADI,Spanish Latte ,Coffee,2,85,Guest,Cash
+10011,2025-01-01,MAADI,Spanish Latte ,Coffee,2,85,Guest,Cash
+10012,2025-01-01,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10013,2025-01-01,Maadi,Spanish Latte,Coffee,1,85,Member,Card
+10014,2025-01-01,Maadi,Cappuccino,Coffee,1,70,Guest,Wallet
+10015,2025-01-01,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+10016,2025-01-01,Zamalek,Latte,Coffee,2,75,Guest,Cash
+10017,2025-01-01,Zamalek,Spanish Latte,Coffee,3,85,Guest,Cash
+10018,2025-01-01,Zamalek,Iced Latte,Cold drinks,1,80,Guest,Cash
+10019,2025-01-01,ZAMALEK,Spanish Latte,Coffee,2,85,Guest,Card
+10020,2025-01-01,Zamalek,Latte,Coffee,1,75,Guest,Cash
+10021,2025-01-01,Zamalek,Spanish Latte,Coffee,1,85,Guest,Wallet
+10022,2025-01-01,Zamalek,Latte,Coffee,1,75,Guest,Wallet
+10023,2025-01-01,Zamalek,Mint Tea,Tea,1,30,Guest,Wallet
+10024,2025-01-01,Zamalek,Latte,Coffee,3,75,Member,Cash
+10025,2025-01-01,Zamalek,Mint Tea,Tea,1,30,Guest,Wallet
+10026,2025-01-01,Zamalek,Cheesecake,Pastry,2,95,Guest,Card
+10027,2025-01-01,Zamalek,Latte,Coffee,1,75,Member,Cash
+10028,2025-01-01,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+10029,2025-01-01,Zamalek,Iced Latte,Cold drinks,1,80,Guest,Card
+10030,2025-01-01,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+10031,2025-01-01,Nasr City,Latte,Coffee,1,75,Guest,Wallet
+10032,2025-01-01,Nasr City,Spanish Latte,Coffee,2,85,Member,Card
+10033,2025-01-01,Nasr City,Mango Smoothie,Cold drinks,2,90,Guest,Card
+10034,01/01/2025,Nasr City,Lemon Mint,Cold drinks,2,55,Guest,
+10035,2025-01-01,Nasr City,Turkish Coffee,Coffee,2,40,Guest,Card
+10036,2025-01-01,Nasr City,Espresso,Coffee,1,45,Guest,Card
+10037,2025-01-01,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10038,2025-01-01,Heliopolis,Latte,Coffee,1,75,Member,Wallet
+10039,2025-01-01,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Card
+10040,2025-01-01,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10041,2025-01-01,Heliopolis,Turkish Coffee ,Coffee,1,40,Guest,Card
+10042,2025-01-01,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Card
+10043,2025-01-02,Maadi,Cappuccino,Coffee,1,70,Guest,Cash
+10044,2025-01-02,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Card
+10045,2025-01-02,Maadi,Turkish Coffee,Coffee,1,40,Member,Card
+10046,2025-01-02,Maadi,Turkish Coffee,Coffee,1,40,Guest,Cash
+10047,2025-01-02,Maadi,Turkish Coffee,Coffee,1,40,Member,Cash
+10048,2025-01-02,Maadi,Cappuccino,Coffee,2,70,Guest,Wallet
+10049,2025-01-02,Maadi,Croissant,Pastry,1,50,Guest,Wallet
+10050,2025-01-02,  maadi ,Mint Tea,Tea,2,30,Guest,Wallet
+10051,2025-01-02,Maadi,Turkish Coffee,Coffee,1,40,Guest,Cash
+10052,2025-01-02,Maadi,Green Tea,Tea,1,35,Guest,Card
+10053,2025-01-02,Maadi,Latte,Coffee,1,75,Guest,Card
+10054,2025-01-02,Maadi,Latte ,Coffee,3,75,Member,Cash
+10055,2025-01-02,Maadi,Green Tea,Tea,2,35,Member,Cash
+10056,2025-01-02,  zamalek ,Spanish Latte,Coffee,1,85,Guest,Card
+10057,2025-01-02,Zamalek,Latte,Coffee,1,75,Member,Card
+10058,2025-01-02,Zamalek,Croissant,Pastry,2,50,Guest,Card
+10059,2025-01-02,  zamalek ,Cappuccino,Coffee,1,70,Member,Cash
+10060,2025-01-02,Zamalek,Iced Latte,Cold drinks,1,80,Guest,Cash
+10061,2025-01-02,Zamalek,Lemon Mint,Cold drinks,3,55,Member,Card
+10062,2025-01-02,Zamalek,Spanish Latte,Coffee,4,85,Guest,Cash
+10063,2025-01-02,  zamalek ,Croissant,Pastry,1,50,Guest,Card
+10064,2025-01-02,Nasr City,Green Tea,Tea,1,35,Member,Cash
+10065,2025-01-02,Nasr City,Latte,Coffee,3,75,Guest,Card
+10066,2025-01-02,Nasr City,Mint Tea,Tea,1,30,Guest,Cash
+10067,2025-01-02,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10068,2025-01-02,Nasr City,Cappuccino,Coffee,1,70,Guest,Cash
+10069,2025-01-02,Nasr City,Espresso,Coffee,1,45,Guest,Card
+10070,2025-01-02,Nasr City,Latte,Coffee,1,75,Member,Card
+10070,2025-01-02,Nasr City,Latte,Coffee,1,75,Member,Card
+10071,2025-01-02,Nasr City,Iced Latte,Cold drinks,3,80,Guest,Card
+10072,2025-01-02,Nasr City,Latte,Coffee,1,75,Member,Card
+10073,2025-01-02,Nasr City,Spanish Latte,Coffee,1,85,Member,Wallet
+10074,2025-01-02,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Wallet
+10075,2025-01-02,Nasr City,Mango Smoothie,Cold drinks,2,90,Member,Cash
+10076,2025-01-02,Nasr City,Espresso ,Coffee,4,45,Guest,Wallet
+10077,2025-01-02,Nasr City,Lemon Mint,Cold drinks,3,55,Guest,Card
+10077,2025-01-02,Nasr City,Lemon Mint,Cold drinks,3,55,Guest,Card
+10078,02/01/2025,Nasr City,Cheesecake,Pastry,3,95,Member,Wallet
+10079,2025-01-02,  nasr city ,Turkish Coffee,Coffee,1,40,Guest,Cash
+10080,2025-01-02,Heliopolis,Mint Tea,Tea,1,30,Member,Cash
+10081,2025-01-02,Heliopolis,Cappuccino,Coffee,2,70,Guest,Wallet
+10082,2025-01-02,Heliopolis,Croissant,Pastry,2,50,Guest,Cash
+10083,2025-01-02,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10084,2025-01-02,Heliopolis,Green Tea,Tea,4,35,Member,Card
+10085,2025-01-02,Heliopolis,Croissant,Pastry,1,50,Guest,Wallet
+10086,2025-01-02,Heliopolis,Turkish Coffee,Coffee,3,40,Guest,Cash
+10087,2025-01-02,Heliopolis,Cappuccino,Coffee,1,70,Member,Cash
+10088,2025-01-02,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Cash
+10089,2025-01-02,Heliopolis,Mint Tea,Tea,1,30,Member,Cash
+10090,02/01/2025,Heliopolis,Turkish Coffee,Coffee,4,40,Member,Cash
+10091,2025-01-03,Maadi,Spanish Latte,Coffee,1,85,Guest,
+10092,2025-01-03,Maadi,Cheesecake,Pastry,4,95,Member,Cash
+10093,2025-01-03,Maadi,Cappuccino,Coffee,1,70,Member,Wallet
+10094,2025-01-03,Maadi,Iced Latte,Cold drinks,1,80,Member,Card
+10095,2025-01-03,Maadi,Turkish Coffee,Coffee,1,40,Member,Cash
+10096,2025-01-03,Maadi,Cappuccino,Coffee,4,70,Guest,Wallet
+10097,2025-01-03,MAADI,Green Tea,Tea,1,35,Guest,Cash
+10098,2025-01-03,Maadi,Turkish Coffee,Coffee,3,40,Member,Cash
+10099,2025-01-03,Maadi,Croissant,Pastry,1,50,Guest,Cash
+10100,2025-01-03,Maadi,Cappuccino,Coffee,2,70,Member,Cash
+10101,2025-01-03,Maadi,Latte,Coffee,2,75,Member,Card
+10102,2025-01-03,Maadi,Spanish Latte,Coffee,1,85,Guest,Cash
+10103,03/01/2025,Maadi,Croissant,Pastry,1,50,Member,Wallet
+10104,2025-01-03,Maadi,Latte,Coffee,1,75,Member,Cash
+10105,2025-01-03,Maadi,Turkish Coffee,Coffee,2,40,Guest,Card
+10106,2025-01-03,Maadi,Green Tea,Tea,1,35,Member,Card
+10107,2025-01-03,Maadi,Croissant,Pastry,1,50,Guest,Card
+10108,03/01/2025,Maadi,Cappuccino,Coffee,1,70,Member,Wallet
+10109,2025-01-03,Maadi,Latte,Coffee,1,75,Guest,Card
+10109,2025-01-03,Maadi,Latte,Coffee,1,75,Guest,Card
+10110,2025-01-03,Maadi,Green Tea,Tea,1,35,Member,Cash
+10111,2025-01-03,Zamalek,Chocolate Muffin,Pastry,3,60,Guest,Wallet
+10112,2025-01-03,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Card
+10113,2025-01-03,Zamalek,Chocolate Muffin,Pastry,2,60,Member,Cash
+10114,2025-01-03,Zamalek,Latte,Coffee,1,75,Guest,Card
+10115,2025-01-03,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+10116,2025-01-03,Zamalek,Espresso,Coffee,1,45,Member,Wallet
+10117,2025-01-03,Zamalek,Latte,Coffee,1,75,Member,Cash
+10118,2025-01-03,Zamalek,Latte,Coffee,1,75,Member,Cash
+10119,2025-01-03,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+10120,2025-01-03,Zamalek,Latte,Coffee,1,75,Guest,Cash
+10121,2025-01-03,Zamalek,Latte,Coffee,1,75,Member,Cash
+10122,2025-01-03,Zamalek,Cheesecake,Pastry,4,95,Guest,
+10123,2025-01-03,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10124,2025-01-03,Zamalek,Croissant,Pastry,2,50,Member,Cash
+10125,2025-01-03,Zamalek,Espresso,Coffee,2,45,Member,Cash
+10126,2025-01-03,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10127,2025-01-03,Zamalek,Latte,Coffee,1,75,Guest,Card
+10128,2025-01-03,Nasr City,Lemon Mint,Cold drinks,1,55,Guest,Card
+10129,2025-01-03,Nasr City,Iced Latte,Cold drinks,1,80,Member,Card
+10130,2025-01-03,Nasr City,Cappuccino,Coffee,4,70,Guest,Card
+10131,2025-01-03,Nasr City,Latte,Coffee,3,75,Guest,Cash
+10132,2025-01-03,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10133,2025-01-03,Nasr City,Spanish Latte,Coffee,1,85,Guest,Cash
+10134,2025-01-03,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Cash
+10135,2025-01-03,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Card
+10136,2025-01-03,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Wallet
+10137,2025-01-03,Nasr City,Green Tea,Tea,1,35,Guest,Cash
+10138,2025-01-03,Nasr City,Espresso,Coffee,1,45,Member,Cash
+10139,2025-01-03,Nasr City,Chocolate Muffin ,Pastry,1,60,Member,Cash
+10140,2025-01-03,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Card
+10141,2025-01-03,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10142,2025-01-03,Heliopolis,Latte,Coffee,1,75,Guest,Cash
+10143,2025-01-03,Heliopolis,Green Tea,Tea,1,35,Member,Cash
+10144,2025-01-03,Heliopolis,Espresso,Coffee,1,45,Member,Cash
+10145,2025-01-03,Heliopolis,Lemon Mint,Cold drinks,1,55,Guest,Card
+10146,2025-01-03,Heliopolis,Cappuccino,Coffee,2,70,Guest,Card
+10147,2025-01-04,Maadi,Latte,Coffee,3,75,Member,Card
+10148,2025-01-04,Maadi,Cheesecake,Pastry,1,95,Guest,Wallet
+10149,2025-01-04,Maadi,Lemon Mint,Cold drinks,1,55,Guest,Wallet
+10150,2025-01-04,Maadi,Croissant,Pastry,2,50,Member,Card
+10151,2025-01-04,Maadi,Green Tea,Tea,1,35,Member,
+10152,2025-01-04,Maadi,Chocolate Muffin,Pastry,4,60,Member,Wallet
+10153,2025-01-04,Maadi,Lemon Mint,Cold drinks,2,55,Member,Card
+10154,2025-01-04,Maadi,Espresso ,Coffee,1,45,Guest,Wallet
+10155,04/01/2025,Maadi,Spanish Latte,Coffee,1,85,Guest,
+10156,2025-01-04,Maadi,Cheesecake,Pastry,1,95,Guest,Cash
+10157,2025-01-04,  maadi ,Chocolate Muffin,Pastry,1,60,Member,Card
+10158,2025-01-04,Maadi,Turkish Coffee,Coffee,2,40,Guest,Cash
+10159,04/01/2025,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+10160,2025-01-04,Zamalek,Espresso,Coffee,3,45,Guest,Card
+10161,2025-01-04,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Card
+10162,2025-01-04,Zamalek,Croissant,Pastry,1,50,Member,Card
+10163,2025-01-04,Zamalek,Cheesecake,Pastry,2,95,Member,Cash
+10164,2025-01-04,ZAMALEK,Cappuccino,Coffee,3,70,Guest,Cash
+10165,2025-01-04,Zamalek,Latte,Coffee,1,75,Member,Wallet
+10166,2025-01-04,Zamalek,Iced Latte,Cold drinks,2,80,Guest,Cash
+10167,2025-01-04,Zamalek,Mint Tea,Tea,1,30,Guest,Cash
+10168,2025-01-04,Zamalek,Espresso,Coffee,3,45,Guest,Card
+10169,2025-01-04,Zamalek,Spanish Latte,Coffee,1,85,Member,Cash
+10170,2025-01-04,Nasr City,Green Tea,Tea,1,35,Guest,Cash
+10171,2025-01-04,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+10172,2025-01-04,Nasr City,Espresso,Coffee,1,45,Guest,Card
+10173,2025-01-04,Nasr City,Cappuccino,Coffee,4,70,Guest,Card
+10174,2025-01-04,Nasr City,Cappuccino,Coffee,1,70,Guest,Cash
+10175,2025-01-04,Nasr City,Chocolate Muffin,Pastry,1,60,Member,Wallet
+10176,2025-01-04,Nasr City,Latte,Coffee,2,75,Guest,Cash
+10177,2025-01-04,Nasr City,Croissant ,Pastry,1,50,Member,Wallet
+10178,2025-01-04,Nasr City,Cheesecake,Pastry,1,95,Guest,Cash
+10179,2025-01-04,Heliopolis,Chocolate Muffin,Pastry,3,60,Guest,Wallet
+10180,2025-01-04,Heliopolis,Lemon Mint,Cold drinks,1,55,Member,Cash
+10181,2025-01-04,Heliopolis,Latte,Coffee,1,75,Guest,Card
+10182,2025-01-04,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Cash
+10183,2025-01-04,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Card
+10184,2025-01-04,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10185,2025-01-04,Heliopolis,Espresso,Coffee,1,45,Member,Cash
+10186,2025-01-04,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10187,2025-01-04,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10188,2025-01-04,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10189,2025-01-04,Heliopolis,Chocolate Muffin,Pastry,2,60,Guest,Wallet
+10190,2025-01-05,Maadi,Spanish Latte,Coffee,1,85,Member,Card
+10191,2025-01-05,Maadi,Cheesecake,Pastry,1,95,Guest,Cash
+10192,2025-01-05,Maadi,Green Tea,Tea,1,35,Guest,Card
+10193,2025-01-05,MAADI,Turkish Coffee,Coffee,1,40,Member,Cash
+10194,2025-01-05,Maadi,Lemon Mint,Cold drinks,1,55,Guest,Wallet
+10195,2025-01-05,Maadi,Turkish Coffee,Coffee,2,40,Guest,Cash
+10196,2025-01-05,Maadi,Latte,Coffee,1,75,Guest,Cash
+10197,05/01/2025,Zamalek,Spanish Latte,Coffee,1,85,Member,Card
+10198,2025-01-05,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10199,2025-01-05,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+10200,2025-01-05,ZAMALEK,Cappuccino,Coffee,2,70,Guest,Card
+10201,2025-01-05,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Cash
+10202,2025-01-05,Zamalek,Croissant,Pastry,1,50,Guest,Card
+10203,2025-01-05,Zamalek,Latte,Coffee,1,75,Member,Cash
+10204,2025-01-05,Zamalek,Espresso,Coffee,1,45,Guest,Cash
+10205,2025-01-05,Zamalek,Green Tea,Tea,1,35,Guest,Cash
+10206,2025-01-05,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+10207,2025-01-05,Zamalek,Mango Smoothie,Cold drinks,1,90,Guest,Wallet
+10208,2025-01-05,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,
+10209,2025-01-05,  zamalek ,Cappuccino,Coffee,1,70,Guest,Card
+10210,2025-01-05,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+10211,2025-01-05,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10212,2025-01-05,  nasr city ,Mango Smoothie,Cold drinks,2,90,Guest,Card
+10213,2025-01-05,Nasr City,Lemon Mint,Cold drinks,1,55,Guest,Card
+10214,2025-01-05,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10215,2025-01-05,Nasr City,Mango Smoothie,Cold drinks,2,90,Guest,Cash
+10216,2025-01-05,  nasr city ,Turkish Coffee,Coffee,2,40,Guest,Card
+10217,2025-01-05,Nasr City,Latte,Coffee,1,75,Guest,Cash
+10218,2025-01-05,Nasr City,Mint Tea,Tea,1,30,Member,Card
+10219,2025-01-05,Nasr City,Cappuccino,Coffee,1,70,Member,Card
+10220,2025-01-05,Nasr City,Mango Smoothie ,Cold drinks,4,90,Guest,Card
+10221,2025-01-05,Nasr City,Latte,Coffee,2,75,Member,Card
+10222,2025-01-05,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10223,2025-01-05,Nasr City,Cappuccino,Coffee,2,70,Guest,Cash
+10224,2025-01-05,Heliopolis,Spanish Latte,Coffee,1,85,Member,Card
+10225,2025-01-05,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10226,2025-01-05,Heliopolis,Cheesecake ,Pastry,2,95,Guest,Wallet
+10227,2025-01-05,Heliopolis,Cappuccino,Coffee,1,70,Guest,Wallet
+10228,2025-01-05,  heliopolis ,Spanish Latte,Coffee,1,85,Guest,Cash
+10229,2025-01-05,Heliopolis,Cheesecake,Pastry,1,95,Guest,Card
+10230,05/01/2025,Heliopolis,Green Tea,Tea,1,35,Guest,Card
+10231,2025-01-05,Heliopolis,Cappuccino,Coffee,2,70,Guest,Cash
+10232,2025-01-05,Heliopolis,Latte,Coffee,2,75,Guest,Cash
+10233,2025-01-06,Maadi,Turkish Coffee,Coffee,1,40,Guest,Cash
+10233,2025-01-06,Maadi,Turkish Coffee,Coffee,1,40,Guest,Cash
+10234,2025-01-06,MAADI,Latte,Coffee,2,75,Guest,Card
+10235,06/01/2025,Maadi,Green Tea,Tea,1,35,Member,Card
+10236,2025-01-06,Maadi,Espresso,Coffee,1,45,Guest,Card
+10237,2025-01-06,Maadi,Green Tea,Tea,2,35,Member,Wallet
+10238,2025-01-06,Maadi,Green Tea,Tea,1,35,Guest,Cash
+10239,2025-01-06,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Card
+10240,2025-01-06,Maadi,Chocolate Muffin,Pastry,1,60,Member,Card
+10241,2025-01-06,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+10242,2025-01-06,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10243,2025-01-06,Zamalek,Turkish Coffee,Coffee,2,40,Guest,Cash
+10244,2025-01-06,Zamalek,Iced Latte ,Cold drinks,1,80,Guest,Card
+10245,2025-01-06,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10246,2025-01-06,Zamalek,Spanish Latte,Coffee,1,85,Guest,Card
+10247,2025-01-06,Zamalek,Cheesecake,Pastry,2,95,Member,Card
+10248,2025-01-06,Zamalek,Latte,Coffee,1,75,Guest,Cash
+10249,2025-01-06,Zamalek,Espresso,Coffee,1,45,Member,Card
+10250,2025-01-06,Zamalek,Green Tea,Tea,3,35,Guest,Cash
+10251,2025-01-06,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+10252,2025-01-06,Zamalek,Latte,Coffee,1,75,Guest,Card
+10253,2025-01-06,Zamalek,Cheesecake,Pastry,3,95,Guest,Card
+10254,2025-01-06,ZAMALEK,Mango Smoothie,Cold drinks,1,90,Member,Wallet
+10255,2025-01-06,Zamalek,Mint Tea,Tea,1,30,Guest,Cash
+10256,2025-01-06,Zamalek,Croissant,Pastry,1,50,Guest,Card
+10257,06/01/2025,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10258,2025-01-06,  nasr city ,Spanish Latte,Coffee,1,85,Guest,Card
+10259,2025-01-06,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+10260,2025-01-06,Nasr City,Spanish Latte,Coffee,1,85,Guest,Cash
+10261,2025-01-06,Nasr City,Cappuccino,Coffee,1,70,Guest,Cash
+10262,2025-01-06,Nasr City,Espresso,Coffee,1,45,Guest,Card
+10263,2025-01-06,  nasr city ,Turkish Coffee,Coffee,1,40,Guest,Card
+10264,2025-01-06,Nasr City,Latte,Coffee,1,75,Member,Cash
+10264,2025-01-06,Nasr City,Latte,Coffee,1,75,Member,Cash
+10265,2025-01-06,  nasr city ,Cappuccino,Coffee,1,70,Guest,Cash
+10266,2025-01-06,Nasr City,Turkish Coffee,Coffee,2,40,Member,Card
+10267,2025-01-06,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Cash
+10268,2025-01-06,  heliopolis ,Cappuccino,Coffee,2,70,Guest,Cash
+10269,2025-01-06,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Card
+10270,2025-01-06,Heliopolis,Cheesecake,Pastry,1,95,Guest,Card
+10271,2025-01-06,Heliopolis,Chocolate Muffin,Pastry,2,60,Guest,Wallet
+10272,2025-01-06,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10273,2025-01-06,Heliopolis,Chocolate Muffin,Pastry,2,60,Member,Card
+10274,2025-01-06,Heliopolis,Cheesecake,Pastry,2,95,Member,Card
+10275,2025-01-06,Heliopolis,Latte,Coffee,4,75,Guest,Wallet
+10276,2025-01-07,Maadi,Spanish Latte,Coffee,2,85,Guest,Wallet
+10277,2025-01-07,Maadi,Espresso,Coffee,4,45,Member,Cash
+10278,2025-01-07,Maadi,Latte,Coffee,1,75,Guest,Wallet
+10279,2025-01-07,Maadi,Lemon Mint,Cold drinks,1,55,Member,Wallet
+10280,2025-01-07,Maadi,Lemon Mint,Cold drinks,1,55,Member,Cash
+10281,2025-01-07,Maadi,Croissant,Pastry,1,50,Guest,Cash
+10282,2025-01-07,Maadi,Iced Latte,Cold drinks,1,80,Guest,Cash
+10283,2025-01-07,Maadi,Croissant,Pastry,2,50,Guest,Wallet
+10284,07/01/2025,Maadi,Espresso,Coffee,1,45,Guest,Wallet
+10285,2025-01-07,Maadi,Spanish Latte,Coffee,1,85,Guest,Wallet
+10286,2025-01-07,Maadi,Chocolate Muffin,Pastry,1,60,Member,Card
+10287,2025-01-07,Maadi,Cappuccino,Coffee,4,70,Guest,Cash
+10288,2025-01-07,Maadi,Cappuccino,Coffee,2,70,Guest,Card
+10289,2025-01-07,Zamalek,Turkish Coffee,Coffee,2,40,Guest,Wallet
+10290,2025-01-07,Zamalek,Latte,Coffee,1,75,Guest,Card
+10291,2025-01-07,Zamalek,Spanish Latte,Coffee,1,85,Guest,Card
+10292,2025-01-07,Zamalek,Latte,Coffee,1,75,Guest,Cash
+10293,2025-01-07,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Cash
+10294,2025-01-07,Zamalek,Green Tea,Tea,2,35,Guest,Card
+10295,2025-01-07,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+10296,2025-01-07,Zamalek,Cappuccino,Coffee,2,70,Member,Card
+10297,2025-01-07,Zamalek,Turkish Coffee,Coffee,2,40,Member,Card
+10298,2025-01-07,Zamalek,Cheesecake,Pastry,2,95,Member,Card
+10299,2025-01-07,Zamalek,Espresso,Coffee,2,45,Guest,Card
+10300,2025-01-07,Zamalek,Mint Tea,Tea,2,30,Guest,Cash
+10301,2025-01-07,Nasr City,Cappuccino,Coffee,1,70,Member,Card
+10302,2025-01-07,Nasr City,Croissant,Pastry,1,50,Member,
+10303,2025-01-07,Nasr City,Latte,Coffee,1,75,Guest,Card
+10304,2025-01-07,Nasr City,Lemon Mint,Cold drinks,1,55,Member,Cash
+10305,2025-01-07,Nasr City,Spanish Latte,Coffee,1,85,Guest,Cash
+10306,2025-01-07,Nasr City,Mint Tea,Tea,1,30,Guest,Card
+10307,2025-01-07,Nasr City,Cappuccino,Coffee,3,70,Guest,Card
+10308,2025-01-07,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Wallet
+10309,2025-01-07,Nasr City,Espresso,Coffee,1,45,Member,Card
+10310,2025-01-07,Nasr City,Espresso,Coffee,1,45,Guest,Card
+10311,2025-01-07,Heliopolis,Espresso,Coffee,2,45,Guest,Cash
+10312,2025-01-07,Heliopolis,Cheesecake,Pastry,1,95,Guest,Card
+10313,2025-01-07,Heliopolis,Latte,Coffee,4,75,Guest,Cash
+10314,2025-01-07,HELIOPOLIS,Turkish Coffee,Coffee,2,40,Guest,Wallet
+10315,2025-01-07,Heliopolis,Latte,Coffee,1,75,Member,Card
+10316,2025-01-07,Heliopolis,Espresso,Coffee,1,45,Guest,Card
+10317,2025-01-08,Maadi,Espresso,Coffee,1,45,Member,Card
+10318,2025-01-08,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+10319,2025-01-08,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10320,2025-01-08,Maadi,Cappuccino,Coffee,4,70,Guest,Card
+10321,2025-01-08,Maadi,Lemon Mint,Cold drinks,2,55,Guest,Card
+10322,2025-01-08,Maadi,Espresso,Coffee,1,45,Guest,Cash
+10323,2025-01-08,Maadi,Iced Latte,Cold drinks,1,80,Guest,Card
+10324,2025-01-08,Maadi,Croissant,Pastry,1,50,Guest,Wallet
+10325,2025-01-08,Maadi,Cheesecake,Pastry,1,95,Member,Card
+10326,2025-01-08,Maadi,Turkish Coffee,Coffee,2,40,Member,Cash
+10327,2025-01-08,Zamalek,Croissant,Pastry,1,50,Guest,Wallet
+10328,2025-01-08,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+10329,2025-01-08,Zamalek,Latte,Coffee,3,75,Member,Card
+10330,2025-01-08,Zamalek,Cheesecake,Pastry,2,95,Member,Cash
+10331,2025-01-08,Zamalek,Mint Tea,Tea,1,30,Guest,Wallet
+10332,2025-01-08,Zamalek,Iced Latte,Cold drinks,1,80,Member,Cash
+10333,2025-01-08,Zamalek,Cheesecake,Pastry,1,95,Guest,Card
+10334,2025-01-08,ZAMALEK,Latte,Coffee,2,75,Guest,Card
+10335,2025-01-08,Zamalek,Mint Tea,Tea,1,30,Member,Card
+10336,2025-01-08,Zamalek,Lemon Mint,Cold drinks,4,55,Member,Cash
+10337,2025-01-08,Zamalek,Green Tea,Tea,1,35,Guest,Card
+10338,2025-01-08,Zamalek,Cappuccino,Coffee,2,70,Member,Card
+10339,2025-01-08,Zamalek,Latte,Coffee,1,75,Guest,Cash
+10340,2025-01-08,Zamalek,Lemon Mint,Cold drinks,1,55,Member,Card
+10341,2025-01-08,Zamalek,Cheesecake ,Pastry,1,95,Guest,Cash
+10342,2025-01-08,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10343,08/01/2025,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10344,2025-01-08,Nasr City,Croissant,Pastry,1,50,Guest,Wallet
+10345,2025-01-08,Nasr City,Spanish Latte,Coffee,3,85,Guest,Wallet
+10346,2025-01-08,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10347,2025-01-08,Nasr City,Croissant,Pastry,1,50,Member,Card
+10348,2025-01-08,Nasr City,Espresso,Coffee,1,45,Member,Card
+10349,2025-01-08,Nasr City,Turkish Coffee,Coffee,2,40,Guest,Cash
+10350,2025-01-08,Nasr City,Turkish Coffee,Coffee,1,40,Member,Card
+10351,2025-01-08,Nasr City,Turkish Coffee,Coffee,1,40,Member,Card
+10352,2025-01-08,Nasr City,Croissant,Pastry,2,50,Member,Cash
+10353,2025-01-08,Nasr City,Cheesecake,Pastry,1,95,Member,Wallet
+10354,2025-01-08,Nasr City,Spanish Latte,Coffee,1,85,Guest,Wallet
+10355,2025-01-08,Heliopolis,Spanish Latte,Coffee,3,85,Member,Cash
+10356,2025-01-08,Heliopolis,Croissant,Pastry,1,50,Guest,Card
+10356,2025-01-08,Heliopolis,Croissant,Pastry,1,50,Guest,Card
+10357,2025-01-08,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Cash
+10358,2025-01-08,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10359,2025-01-08,Heliopolis,Latte,Coffee,1,75,Member,Wallet
+10360,2025-01-08,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Card
+10361,2025-01-08,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Cash
+10362,2025-01-08,Heliopolis,Cappuccino,Coffee,1,70,Member,Cash
+10363,2025-01-08,  heliopolis ,Mint Tea,Tea,2,30,Guest,Card
+10364,2025-01-08,HELIOPOLIS,Iced Latte,Cold drinks,1,80,Member,Cash
+10365,08/01/2025,Heliopolis,Green Tea,Tea,1,35,Member,Cash
+10366,2025-01-09,Maadi,Cappuccino,Coffee,1,70,Member,Wallet
+10367,2025-01-09,Maadi,Iced Latte,Cold drinks,1,80,Guest,Wallet
+10368,2025-01-09,Maadi,Mint Tea,Tea,1,30,Guest,
+10369,09/01/2025,Maadi,Espresso ,Coffee,1,45,Member,Wallet
+10370,09/01/2025,Maadi,Lemon Mint,Cold drinks,1,55,Guest,Card
+10371,2025-01-09,Maadi,Croissant,Pastry,1,50,Guest,Cash
+10372,2025-01-09,Maadi,Croissant,Pastry,1,50,Guest,Card
+10373,2025-01-09,Maadi,Espresso,Coffee,2,45,Guest,Cash
+10374,2025-01-09,Maadi,Latte,Coffee,1,75,Guest,Cash
+10375,2025-01-09,Maadi,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10376,2025-01-09,  maadi ,Espresso,Coffee,1,45,Member,Card
+10377,2025-01-09,MAADI,Latte,Coffee,1,75,Guest,Cash
+10378,2025-01-09,Maadi,Iced Latte,Cold drinks,1,80,Member,Cash
+10379,2025-01-09,Maadi,Chocolate Muffin,Pastry,1,60,Member,Card
+10380,2025-01-09,Zamalek,Mango Smoothie,Cold drinks,1,90,Member,Card
+10381,2025-01-09,Zamalek,Latte,Coffee,1,75,Guest,Wallet
+10382,09/01/2025,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+10383,2025-01-09,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10383,2025-01-09,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10384,2025-01-09,Zamalek,Turkish Coffee,Coffee,1,40,Member,Cash
+10385,2025-01-09,  zamalek ,Cappuccino,Coffee,1,70,Guest,
+10386,2025-01-09,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+10387,2025-01-09,Nasr City,Latte,Coffee,3,75,Guest,Cash
+10388,09/01/2025,Nasr City,Cappuccino,Coffee,1,70,Guest,Cash
+10389,09/01/2025,Nasr City,Spanish Latte,Coffee,1,85,Member,Cash
+10390,2025-01-09,Nasr City,Mint Tea,Tea,1,30,Member,Cash
+10391,2025-01-09,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10391,2025-01-09,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10392,2025-01-09,Nasr City,Cappuccino,Coffee,1,70,Member,Card
+10393,2025-01-09,Nasr City,Spanish Latte,Coffee,1,85,Guest,Cash
+10394,2025-01-09,Nasr City,Mint Tea,Tea,1,30,Member,Card
+10395,2025-01-09,Nasr City,Spanish Latte,Coffee,1,85,Guest,Wallet
+10396,2025-01-09,Heliopolis,Latte,Coffee,1,75,Member,Card
+10397,2025-01-09,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Card
+10398,2025-01-09,Heliopolis,Cappuccino,Coffee,1,70,Guest,Wallet
+10399,2025-01-09,Heliopolis,Green Tea,Tea,1,35,Guest,Cash
+10400,2025-01-09,Heliopolis,Cheesecake,Pastry,1,95,Member,Card
+10401,2025-01-09,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10402,2025-01-09,Heliopolis,Cappuccino,Coffee,1,70,Member,Card
+10403,2025-01-09,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10404,2025-01-09,Heliopolis,Cappuccino,Coffee,2,70,Member,Card
+10405,2025-01-09,  heliopolis ,Mint Tea,Tea,1,30,Guest,Cash
+10406,2025-01-09,Heliopolis,Spanish Latte,Coffee,1,85,Member,Wallet
+10407,2025-01-09,Heliopolis,Cappuccino,Coffee,2,70,Guest,Card
+10408,2025-01-09,Heliopolis,Cappuccino,Coffee,1,70,Member,Card
+10409,2025-01-10,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+10410,2025-01-10,  maadi ,Latte,Coffee,1,75,Guest,Cash
+10411,2025-01-10,  maadi ,Croissant,Pastry,1,50,Member,Wallet
+10412,10/01/2025,Maadi,Espresso,Coffee,1,45,Guest,Card
+10413,2025-01-10,Maadi,Espresso,Coffee,3,45,Guest,Card
+10414,2025-01-10,Maadi,Green Tea,Tea,3,35,Member,Cash
+10415,2025-01-10,Maadi,Green Tea,Tea,1,35,Guest,Cash
+10416,2025-01-10,Maadi,Cheesecake,Pastry,1,95,Guest,Card
+10417,2025-01-10,Maadi,Mint Tea,Tea,1,30,Member,Cash
+10418,2025-01-10,Maadi,Iced Latte,Cold drinks,2,80,Guest,Wallet
+10419,2025-01-10,Maadi,Mango Smoothie,Cold drinks,2,90,Guest,Card
+10420,2025-01-10,Maadi,Chocolate Muffin,Pastry,1,60,Member,Cash
+10421,2025-01-10,Maadi,Chocolate Muffin,Pastry,2,60,Guest,Wallet
+10422,2025-01-10,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Card
+10423,2025-01-10,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10424,2025-01-10,Zamalek,Espresso,Coffee,1,45,Guest,Cash
+10425,2025-01-10,Zamalek,Green Tea,Tea,2,35,Guest,Wallet
+10426,2025-01-10,Zamalek,Chocolate Muffin,Pastry,2,60,Guest,Cash
+10427,2025-01-10,Zamalek,Mint Tea,Tea,2,30,Member,Cash
+10428,2025-01-10,Zamalek,Latte,Coffee,1,75,Member,Card
+10429,2025-01-10,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10430,2025-01-10,Zamalek,Cheesecake,Pastry,1,95,Member,Wallet
+10431,2025-01-10,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+10432,2025-01-10,  zamalek ,Espresso,Coffee,1,45,Guest,Cash
+10433,2025-01-10,Zamalek,Green Tea,Tea,1,35,Guest,Card
+10434,2025-01-10,Zamalek,Spanish Latte,Coffee,2,85,Member,Card
+10435,2025-01-10,Zamalek,Mint Tea,Tea,1,30,Guest,Wallet
+10436,2025-01-10,Zamalek,Lemon Mint,Cold drinks,1,55,Member,Cash
+10437,2025-01-10,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10438,2025-01-10,Zamalek,Lemon Mint,Cold drinks,1,55,Member,Card
+10439,10/01/2025,Zamalek,Cappuccino,Coffee,1,70,Guest,Wallet
+10440,2025-01-10,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Card
+10441,2025-01-10,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+10442,2025-01-10,Zamalek,Iced Latte,Cold drinks,1,80,Member,Cash
+10443,2025-01-10,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+10444,2025-01-10,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+10445,2025-01-10,Nasr City,Latte,Coffee,4,75,Member,Cash
+10446,2025-01-10,Nasr City,Croissant,Pastry,1,50,Member,Card
+10447,2025-01-10,Nasr City,Green Tea,Tea,1,35,Guest,
+10448,2025-01-10,  nasr city ,Turkish Coffee,Coffee,1,40,Member,Cash
+10449,2025-01-10,Nasr City,Cheesecake,Pastry,1,95,Guest,Card
+10450,2025-01-10,Nasr City,Cappuccino,Coffee,1,70,Guest,Wallet
+10451,2025-01-10,Nasr City,Cappuccino,Coffee,2,70,Guest,Card
+10452,2025-01-10,NASR CITY,Cheesecake,Pastry,2,95,Member,Card
+10453,2025-01-10,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10454,2025-01-10,NASR CITY,Spanish Latte ,Coffee,1,85,Guest,Cash
+10455,2025-01-10,Nasr City,Spanish Latte,Coffee,1,85,Guest,Wallet
+10456,2025-01-10,Heliopolis,Mint Tea,Tea,1,30,Guest,Cash
+10457,2025-01-10,Heliopolis,Croissant,Pastry,1,50,Guest,Card
+10458,2025-01-10,Heliopolis,Espresso,Coffee,1,45,Guest,Card
+10458,2025-01-10,Heliopolis,Espresso,Coffee,1,45,Guest,Card
+10459,2025-01-10,Heliopolis,Iced Latte,Cold drinks,2,80,Guest,Cash
+10460,2025-01-10,Heliopolis,Lemon Mint,Cold drinks,1,55,Member,Cash
+10461,2025-01-10,Heliopolis,Spanish Latte,Coffee,1,85,Member,Wallet
+10462,2025-01-10,Heliopolis,Latte,Coffee,1,75,Guest,Card
+10463,2025-01-10,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Card
+10464,2025-01-10,Heliopolis,Latte,Coffee,2,75,Member,Card
+10465,2025-01-10,Heliopolis,Cappuccino,Coffee,1,70,Member,Card
+10466,2025-01-10,Heliopolis,Mint Tea,Tea,1,30,Member,Cash
+10467,2025-01-11,Maadi,Iced Latte,Cold drinks,1,80,Member,Cash
+10468,2025-01-11,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+10469,2025-01-11,Maadi,Croissant,Pastry,1,50,Guest,Cash
+10470,2025-01-11,Maadi,Cheesecake,Pastry,1,95,Guest,Wallet
+10471,2025-01-11,Maadi,Croissant,Pastry,1,50,Guest,Wallet
+10472,2025-01-11,Maadi,Latte,Coffee,1,75,Member,
+10473,2025-01-11,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+10474,2025-01-11,MAADI,Spanish Latte,Coffee,2,85,Guest,Card
+10475,2025-01-11,Zamalek,Espresso,Coffee,4,45,Member,Card
+10476,2025-01-11,Zamalek,Cappuccino,Coffee,2,70,Guest,Wallet
+10477,2025-01-11,Zamalek,Chocolate Muffin,Pastry,2,60,Guest,Cash
+10478,2025-01-11,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10479,2025-01-11,ZAMALEK,Croissant,Pastry,1,50,Member,Card
+10480,2025-01-11,Zamalek,Mint Tea,Tea,1,30,Guest,
+10481,2025-01-11,Zamalek,Chocolate Muffin,Pastry,2,60,Guest,Wallet
+10482,2025-01-11,Zamalek,Croissant,Pastry,1,50,Guest,Wallet
+10483,2025-01-11,Zamalek,Iced Latte,Cold drinks,3,80,Member,Card
+10484,2025-01-11,Zamalek,Spanish Latte,Coffee,2,85,Guest,Card
+10485,2025-01-11,Zamalek,Mint Tea,Tea,3,30,Guest,Card
+10486,2025-01-11,Zamalek,Cappuccino,Coffee,1,70,Member,Wallet
+10487,2025-01-11,Zamalek,Green Tea,Tea,1,35,Guest,Wallet
+10488,2025-01-11,Nasr City,Mint Tea,Tea,2,30,Member,Wallet
+10489,11/01/2025,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Wallet
+10490,2025-01-11,  nasr city ,Spanish Latte,Coffee,1,85,Guest,Card
+10491,2025-01-11,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Card
+10492,2025-01-11,Nasr City,Latte,Coffee,1,75,Guest,Cash
+10493,2025-01-11,Nasr City,Espresso,Coffee,4,45,Guest,Cash
+10494,2025-01-11,Nasr City,Latte ,Coffee,1,75,Guest,Wallet
+10495,2025-01-11,Nasr City,Spanish Latte,Coffee,1,85,Member,Wallet
+10496,2025-01-11,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Card
+10497,2025-01-11,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10498,2025-01-11,Nasr City,Latte,Coffee,2,75,Member,Cash
+10499,2025-01-11,Nasr City,Turkish Coffee,Coffee,2,40,Guest,Card
+10500,2025-01-11,Nasr City,Turkish Coffee,Coffee,3,40,Member,Wallet
+10501,2025-01-11,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Cash
+10502,11/01/2025,Heliopolis,Latte,Coffee,1,75,Guest,Card
+10503,2025-01-11,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10504,2025-01-11,Heliopolis,Chocolate Muffin,Pastry,2,60,Guest,Cash
+10505,2025-01-11,Heliopolis,Green Tea,Tea,2,35,Guest,Wallet
+10506,2025-01-11,Heliopolis,Green Tea,Tea,1,35,Guest,Cash
+10507,2025-01-11,Heliopolis,Espresso ,Coffee,1,45,Guest,Wallet
+10508,2025-01-11,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Cash
+10509,2025-01-11,Heliopolis,Espresso,Coffee,2,45,Member,Cash
+10510,2025-01-11,Heliopolis,Green Tea,Tea,1,35,Guest,Card
+10511,2025-01-12,Maadi,Mint Tea,Tea,2,30,Guest,Cash
+10512,2025-01-12,Maadi,Green Tea,Tea,1,35,Member,Card
+10513,2025-01-12,Maadi,Espresso,Coffee,1,45,Member,Cash
+10514,2025-01-12,Maadi,Cappuccino,Coffee,1,70,Member,Card
+10515,2025-01-12,Maadi,Latte,Coffee,1,75,Guest,Cash
+10516,2025-01-12,Maadi,Latte,Coffee,1,75,Member,Cash
+10517,2025-01-12,Maadi,Spanish Latte,Coffee,1,85,Member,Cash
+10518,2025-01-12,MAADI,Cappuccino,Coffee,3,70,Member,Card
+10519,2025-01-12,Maadi,Croissant,Pastry,1,50,Guest,Cash
+10520,2025-01-12,Maadi,Spanish Latte,Coffee,2,85,Guest,Wallet
+10521,2025-01-12,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10522,2025-01-12,Maadi,Cappuccino,Coffee,3,70,Guest,Cash
+10523,2025-01-12,Zamalek,Latte,Coffee,1,75,Guest,Card
+10524,2025-01-12,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+10525,2025-01-12,Zamalek,Cappuccino,Coffee,1,70,Member,Wallet
+10526,2025-01-12,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10527,2025-01-12,Zamalek,Cheesecake ,Pastry,1,95,Member,Card
+10528,2025-01-12,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+10529,2025-01-12,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Card
+10530,2025-01-12,Zamalek,Espresso,Coffee,3,45,Guest,Card
+10531,2025-01-12,Zamalek,Latte,Coffee,2,75,Guest,Cash
+10532,2025-01-12,Zamalek,Espresso,Coffee,1,45,Guest,Wallet
+10533,2025-01-12,Zamalek,Turkish Coffee,Coffee,2,40,Member,Card
+10534,2025-01-12,Zamalek,Latte,Coffee,1,75,Member,Cash
+10535,2025-01-12,Zamalek,Spanish Latte,Coffee,2,85,Guest,Card
+10536,2025-01-12,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Cash
+10537,2025-01-12,ZAMALEK,Latte,Coffee,1,75,Guest,Card
+10538,2025-01-12,Zamalek,Spanish Latte,Coffee,2,85,Member,Cash
+10539,2025-01-12,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+10540,2025-01-12,Zamalek,Croissant,Pastry,1,50,Member,Card
+10541,2025-01-12,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+10542,2025-01-12,  nasr city ,Lemon Mint,Cold drinks,4,55,Guest,Card
+10543,2025-01-12,Nasr City,Latte,Coffee,2,75,Guest,Cash
+10544,2025-01-12,Nasr City,Croissant,Pastry,3,50,Guest,Card
+10545,2025-01-12,Nasr City,Mango Smoothie,Cold drinks,1,90,Member,Card
+10546,2025-01-12,Nasr City,Green Tea,Tea,1,35,Guest,Card
+10547,2025-01-12,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+10548,2025-01-12,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10549,2025-01-12,Nasr City,Spanish Latte,Coffee,1,85,Guest,Cash
+10550,2025-01-12,Nasr City,Espresso,Coffee,1,45,Guest,Cash
+10551,2025-01-12,Heliopolis,Espresso ,Coffee,1,45,Guest,Card
+10552,2025-01-12,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10553,2025-01-12,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10554,2025-01-12,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Card
+10555,2025-01-12,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Card
+10556,2025-01-12,Heliopolis,Cappuccino,Coffee,2,70,Member,Wallet
+10557,2025-01-12,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Card
+10558,2025-01-13,Maadi,Chocolate Muffin,Pastry,3,60,Member,Cash
+10559,2025-01-13,Maadi,Croissant,Pastry,4,50,Guest,Card
+10560,2025-01-13,Maadi,Chocolate Muffin,Pastry,1,60,Member,Card
+10561,2025-01-13,Maadi,Spanish Latte,Coffee,3,85,Guest,Card
+10562,2025-01-13,Maadi,Latte,Coffee,1,75,Guest,Card
+10563,2025-01-13,MAADI,Spanish Latte,Coffee,1,85,Guest,Wallet
+10564,2025-01-13,Maadi,Mint Tea,Tea,2,30,Guest,Card
+10565,2025-01-13,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Cash
+10566,2025-01-13,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Card
+10567,2025-01-13,Maadi,Spanish Latte,Coffee,1,85,Guest,Wallet
+10568,2025-01-13,Maadi,Green Tea,Tea,1,35,Guest,Cash
+10569,2025-01-13,Maadi,Croissant,Pastry,1,50,Guest,Wallet
+10570,2025-01-13,  zamalek ,Chocolate Muffin,Pastry,1,60,Member,Card
+10571,2025-01-13,Zamalek,Cheesecake,Pastry,1,95,Member,Card
+10572,2025-01-13,Zamalek,Latte,Coffee,1,75,Guest,Cash
+10573,2025-01-13,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+10574,13/01/2025,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10575,2025-01-13,Zamalek,Iced Latte,Cold drinks,2,80,Guest,Wallet
+10576,2025-01-13,Zamalek,Cappuccino,Coffee,2,70,Guest,Card
+10577,2025-01-13,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Card
+10578,2025-01-13,Nasr City,Spanish Latte,Coffee,1,85,Member,Card
+10579,2025-01-13,Nasr City,Espresso,Coffee,2,45,Guest,Wallet
+10580,2025-01-13,Nasr City,Cheesecake,Pastry,2,95,Guest,Card
+10581,2025-01-13,Nasr City,Latte,Coffee,1,75,Guest,Card
+10582,2025-01-13,Nasr City,Espresso,Coffee,1,45,Member,Wallet
+10583,2025-01-13,Nasr City,Cappuccino,Coffee,1,70,Guest,Card
+10584,2025-01-13,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10585,2025-01-13,Nasr City,Spanish Latte,Coffee,1,85,Member,Cash
+10586,2025-01-13,Nasr City,Cappuccino,Coffee,2,70,Guest,Cash
+10587,2025-01-13,Heliopolis,Lemon Mint,Cold drinks,1,55,Member,Wallet
+10588,2025-01-13,Heliopolis,Latte,Coffee,3,75,Member,Card
+10588,2025-01-13,Heliopolis,Latte,Coffee,3,75,Member,Card
+10589,2025-01-13,Heliopolis,Mint Tea,Tea,2,30,Member,Card
+10590,2025-01-13,  heliopolis ,Croissant,Pastry,1,50,Member,Card
+10591,2025-01-13,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10592,2025-01-13,Heliopolis,Spanish Latte,Coffee,1,85,Member,Card
+10593,2025-01-13,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10594,2025-01-13,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10595,2025-01-13,Heliopolis,Lemon Mint,Cold drinks,1,55,Guest,Card
+10596,2025-01-13,Heliopolis,Espresso,Coffee,3,45,Guest,Cash
+10597,2025-01-14,Maadi,Lemon Mint,Cold drinks,1,55,Guest,Cash
+10598,2025-01-14,Maadi,Lemon Mint,Cold drinks,1,55,Member,Cash
+10599,2025-01-14,Maadi,Turkish Coffee,Coffee,1,40,Guest,Cash
+10600,2025-01-14,Maadi,Turkish Coffee,Coffee,2,40,Guest,
+10601,2025-01-14,Maadi,Iced Latte,Cold drinks,1,80,Guest,Card
+10602,2025-01-14,Maadi,Latte,Coffee,1,75,Guest,Card
+10603,2025-01-14,Maadi,Cheesecake,Pastry,2,95,Member,Cash
+10604,2025-01-14,Maadi,Latte,Coffee,1,75,Guest,Card
+10605,2025-01-14,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10606,2025-01-14,Maadi,Mint Tea,Tea,1,30,Guest,Cash
+10607,2025-01-14,Maadi,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+10608,2025-01-14,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+10609,2025-01-14,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+10610,2025-01-14,Zamalek,Turkish Coffee,Coffee,1,40,Member,Cash
+10611,2025-01-14,Zamalek,Latte,Coffee,1,75,Member,Card
+10612,2025-01-14,Zamalek,Cappuccino,Coffee,2,70,Guest,Card
+10613,2025-01-14,Zamalek,Croissant,Pastry,1,50,Guest,Cash
+10614,2025-01-14,Zamalek,Croissant,Pastry,2,50,Guest,Card
+10615,2025-01-14,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10616,2025-01-14,Zamalek,Espresso,Coffee,1,45,Member,Cash
+10617,2025-01-14,Zamalek,Latte,Coffee,1,75,Guest,Cash
+10618,2025-01-14,Zamalek,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+10619,2025-01-14,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+10620,2025-01-14,Zamalek,Espresso,Coffee,1,45,Guest,Cash
+10621,2025-01-14,Zamalek,Latte,Coffee,2,75,Guest,Card
+10622,2025-01-14,Nasr City,Mint Tea,Tea,1,30,Guest,Card
+10623,2025-01-14,Nasr City,Croissant ,Pastry,1,50,Guest,Card
+10624,2025-01-14,Nasr City,Cappuccino,Coffee,1,70,Guest,Card
+10625,2025-01-14,Nasr City,Espresso,Coffee,1,45,Guest,Card
+10626,2025-01-14,Nasr City,Espresso,Coffee,1,45,Member,Cash
+10627,2025-01-14,Nasr City,Latte,Coffee,1,75,Member,Cash
+10628,2025-01-14,Nasr City,Spanish Latte,Coffee,1,85,Member,Card
+10629,2025-01-14,Nasr City,Cappuccino,Coffee,1,70,Guest,Card
+10630,14/01/2025,Nasr City,Cheesecake,Pastry,1,95,Guest,Card
+10631,2025-01-14,Nasr City,Latte,Coffee,1,75,Member,Cash
+10632,2025-01-14,Nasr City,Espresso,Coffee,4,45,Member,Cash
+10633,2025-01-14,Nasr City,Spanish Latte,Coffee,2,85,Guest,Card
+10634,2025-01-14,Nasr City,Spanish Latte,Coffee,2,85,Member,Cash
+10635,2025-01-14,Heliopolis,Cappuccino,Coffee,2,70,Guest,Wallet
+10636,2025-01-14,Heliopolis,Latte,Coffee,2,75,Member,Card
+10637,2025-01-14,Heliopolis,Cappuccino,Coffee,1,70,Member,Wallet
+10638,2025-01-14,Heliopolis,Espresso,Coffee,1,45,Member,Card
+10639,2025-01-14,Heliopolis,Latte,Coffee,1,75,Member,Card
+10640,2025-01-15,Maadi,Espresso,Coffee,1,45,Guest,Wallet
+10641,2025-01-15,Maadi,Latte,Coffee,2,75,Guest,Wallet
+10642,2025-01-15,Maadi,Turkish Coffee,Coffee,1,40,Guest,Card
+10643,2025-01-15,Maadi,Iced Latte,Cold drinks,1,80,Guest,Card
+10644,2025-01-15,Maadi,Latte,Coffee,3,75,Member,Card
+10645,2025-01-15,Maadi,Mint Tea,Tea,3,30,Member,Wallet
+10646,2025-01-15,Maadi,Mint Tea,Tea,1,30,Guest,Cash
+10647,2025-01-15,Maadi,Green Tea,Tea,1,35,Guest,
+10648,2025-01-15,Maadi,Latte,Coffee,1,75,Member,Wallet
+10649,2025-01-15,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+10650,2025-01-15,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+10651,2025-01-15,Zamalek,Latte,Coffee,1,75,Member,Cash
+10652,2025-01-15,Zamalek,Latte,Coffee,2,75,Member,Card
+10653,2025-01-15,Zamalek,Latte,Coffee,2,75,Guest,Card
+10654,2025-01-15,Zamalek,Cappuccino,Coffee,2,70,Guest,Cash
+10655,15/01/2025,Zamalek,Turkish Coffee,Coffee,2,40,Guest,Cash
+10656,2025-01-15,Zamalek,Espresso,Coffee,2,45,Guest,Card
+10657,2025-01-15,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+10658,2025-01-15,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Cash
+10659,2025-01-15,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10660,2025-01-15,Zamalek,Chocolate Muffin,Pastry,2,60,Guest,Card
+10661,2025-01-15,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+10662,2025-01-15,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+10663,2025-01-15,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10664,2025-01-15,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10665,2025-01-15,Nasr City,Latte,Coffee,1,75,Guest,Cash
+10666,2025-01-15,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Cash
+10667,2025-01-15,Nasr City,Latte,Coffee,1,75,Guest,Card
+10668,2025-01-15,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Cash
+10669,2025-01-15,Nasr City,Lemon Mint,Cold drinks,1,55,Guest,Card
+10670,2025-01-15,Heliopolis,Spanish Latte,Coffee,2,85,Guest,Card
+10671,2025-01-15,Heliopolis,Mango Smoothie,Cold drinks,1,90,Guest,Card
+10672,2025-01-15,HELIOPOLIS,Cappuccino,Coffee,2,70,Guest,Cash
+10673,15/01/2025,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10674,2025-01-15,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Card
+10675,15/01/2025,Heliopolis,Croissant,Pastry,1,50,Member,Card
+10676,2025-01-15,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10677,2025-01-16,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+10678,2025-01-16,Maadi,Turkish Coffee,Coffee,1,40,Member,Card
+10679,2025-01-16,Maadi,Turkish Coffee,Coffee,1,40,Guest,Card
+10680,2025-01-16,Maadi,Mint Tea,Tea,2,30,Guest,Cash
+10681,2025-01-16,Maadi,Iced Latte,Cold drinks,1,80,Guest,Card
+10682,2025-01-16,Maadi,Cheesecake,Pastry,2,95,Guest,Wallet
+10683,2025-01-16,Maadi,Espresso,Coffee,1,45,Member,Cash
+10683,2025-01-16,Maadi,Espresso,Coffee,1,45,Member,Cash
+10684,2025-01-16,Maadi,Croissant,Pastry,1,50,Member,Card
+10685,2025-01-16,Maadi,Latte,Coffee,2,75,Guest,Card
+10686,2025-01-16,Maadi,Mint Tea,Tea,1,30,Guest,Cash
+10687,2025-01-16,Maadi,Chocolate Muffin,Pastry,2,60,Guest,Cash
+10688,2025-01-16,Maadi,Chocolate Muffin,Pastry,3,60,Guest,Card
+10689,2025-01-16,Maadi,Latte,Coffee,4,75,Guest,Card
+10690,2025-01-16,Maadi,Mint Tea,Tea,1,30,Guest,Cash
+10691,2025-01-16,Maadi,Green Tea,Tea,1,35,Member,Card
+10692,2025-01-16,Maadi,Cappuccino,Coffee,1,70,Guest,Cash
+10693,2025-01-16,Maadi,Latte,Coffee,1,75,Guest,Cash
+10694,2025-01-16,Zamalek,Cappuccino,Coffee,1,70,Guest,
+10695,2025-01-16,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Cash
+10696,2025-01-16,Zamalek,Mint Tea,Tea,1,30,Member,Cash
+10697,2025-01-16,Zamalek,Croissant,Pastry,1,50,Member,Cash
+10698,2025-01-16,Zamalek,Mint Tea,Tea,1,30,Guest,Cash
+10699,2025-01-16,ZAMALEK,Espresso,Coffee,1,45,Guest,
+10700,2025-01-16,Zamalek,Latte,Coffee,2,75,Member,Wallet
+10701,2025-01-16,Zamalek,Cheesecake,Pastry,1,95,Guest,Wallet
+10702,2025-01-16,Zamalek,Cheesecake,Pastry,1,95,Guest,Wallet
+10703,2025-01-16,Zamalek,Iced Latte,Cold drinks,1,80,Member,Cash
+10704,2025-01-16,Zamalek,Latte,Coffee,1,75,Member,Card
+10705,2025-01-16,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+10706,2025-01-16,Zamalek,Latte,Coffee,1,75,Member,
+10707,2025-01-16,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+10708,2025-01-16,Zamalek,Green Tea,Tea,1,35,Member,Wallet
+10709,2025-01-16,Zamalek,Spanish Latte,Coffee,2,85,Guest,Cash
+10710,2025-01-16,Zamalek,Croissant,Pastry,1,50,Guest,
+10711,2025-01-16,Nasr City,Spanish Latte,Coffee,1,85,Guest,Card
+10712,2025-01-16,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Wallet
+10713,2025-01-16,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10714,2025-01-16,Nasr City,Espresso,Coffee,1,45,Guest,Cash
+10715,2025-01-16,NASR CITY,Mango Smoothie,Cold drinks,1,90,Member,Card
+10716,2025-01-16,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10717,2025-01-16,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Cash
+10718,2025-01-16,Nasr City,Cappuccino,Coffee,1,70,Member,Card
+10719,2025-01-16,Nasr City,Cappuccino,Coffee,1,70,Guest,Card
+10720,2025-01-16,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Card
+10721,2025-01-16,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+10722,2025-01-16,Nasr City,Green Tea,Tea,3,35,Member,Wallet
+10723,2025-01-16,Nasr City,Latte,Coffee,3,75,Guest,Cash
+10724,16/01/2025,Nasr City,Cheesecake,Pastry,1,95,Guest,Cash
+10725,2025-01-16,  nasr city ,Turkish Coffee,Coffee,4,40,Member,Wallet
+10726,2025-01-16,Nasr City,Cheesecake,Pastry,2,95,Guest,Card
+10727,2025-01-16,Nasr City,Croissant,Pastry,1,50,Guest,Cash
+10728,2025-01-16,Nasr City,Latte,Coffee,1,75,Member,Cash
+10729,2025-01-16,Heliopolis,Croissant,Pastry,1,50,Member,Card
+10730,2025-01-16,Heliopolis,Cappuccino,Coffee,2,70,Guest,Wallet
+10730,2025-01-16,Heliopolis,Cappuccino,Coffee,2,70,Guest,Wallet
+10731,16/01/2025,Heliopolis,Cappuccino ,Coffee,4,70,Guest,Cash
+10732,2025-01-16,Heliopolis,Mango Smoothie ,Cold drinks,1,90,Guest,Cash
+10733,2025-01-16,Heliopolis,Latte,Coffee,2,75,Member,Cash
+10734,2025-01-16,Heliopolis,Espresso,Coffee,1,45,Member,Card
+10735,2025-01-16,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Wallet
+10736,2025-01-16,Heliopolis,Spanish Latte,Coffee,1,85,Member,Wallet
+10737,2025-01-16,Heliopolis,Cappuccino ,Coffee,1,70,Member,Wallet
+10738,2025-01-16,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Card
+10739,2025-01-16,Heliopolis,Green Tea,Tea,1,35,Guest,Wallet
+10740,2025-01-16,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Card
+10741,2025-01-16,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10742,2025-01-17,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+10743,2025-01-17,MAADI,Espresso,Coffee,1,45,Member,Cash
+10744,2025-01-17,  maadi ,Cappuccino,Coffee,3,70,Member,Card
+10745,2025-01-17,Maadi,Cappuccino,Coffee,2,70,Guest,Cash
+10746,2025-01-17,Maadi,Spanish Latte,Coffee,1,85,Guest,Cash
+10747,17/01/2025,Maadi,Mint Tea,Tea,2,30,Member,Cash
+10748,2025-01-17,Maadi,Cappuccino,Coffee,2,70,Guest,Card
+10749,2025-01-17,Maadi,Spanish Latte,Coffee,1,85,Member,Card
+10750,2025-01-17,Maadi,Turkish Coffee,Coffee,1,40,Member,Card
+10751,2025-01-17,Maadi,Mint Tea,Tea,3,30,Member,Wallet
+10752,2025-01-17,Maadi,Latte,Coffee,1,75,Guest,Cash
+10753,2025-01-17,Maadi,Espresso,Coffee,3,45,Guest,Wallet
+10754,2025-01-17,  maadi ,Green Tea,Tea,2,35,Guest,Cash
+10755,2025-01-17,Maadi,Cappuccino,Coffee,3,70,Member,Wallet
+10756,2025-01-17,Maadi,Latte,Coffee,1,75,Member,Cash
+10757,2025-01-17,Maadi,Latte,Coffee,1,75,Member,Wallet
+10758,2025-01-17,Maadi,Espresso,Coffee,4,45,Guest,Cash
+10759,17/01/2025,Maadi,Cappuccino,Coffee,1,70,Member,Cash
+10760,2025-01-17,Maadi,Mint Tea,Tea,1,30,Guest,Card
+10761,2025-01-17,Maadi,Croissant,Pastry,1,50,Guest,Wallet
+10762,2025-01-17,Maadi,Cappuccino,Coffee,2,70,Member,Wallet
+10763,2025-01-17,Maadi,Chocolate Muffin,Pastry,1,60,Member,Wallet
+10764,2025-01-17,Maadi,Turkish Coffee,Coffee,2,40,Member,Cash
+10765,2025-01-17,Zamalek,Cappuccino,Coffee,2,70,Member,Cash
+10766,2025-01-17,Zamalek,Spanish Latte,Coffee,1,85,Member,Wallet
+10767,2025-01-17,Zamalek,Mint Tea,Tea,1,30,Member,Card
+10768,2025-01-17,  zamalek ,Cappuccino,Coffee,1,70,Guest,Card
+10769,17/01/2025,Zamalek,Espresso,Coffee,1,45,Guest,Card
+10770,2025-01-17,Zamalek,Iced Latte,Cold drinks,1,80,Guest,Card
+10771,2025-01-17,Zamalek,Spanish Latte,Coffee,2,85,Guest,Card
+10772,2025-01-17,Zamalek,Green Tea,Tea,3,35,Member,Card
+10773,2025-01-17,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Cash
+10774,17/01/2025,Zamalek,Croissant,Pastry,1,50,Guest,Card
+10775,2025-01-17,Zamalek,Mint Tea ,Tea,1,30,Member,Wallet
+10776,2025-01-17,Zamalek,Turkish Coffee,Coffee,3,40,Guest,Card
+10777,2025-01-17,Zamalek,Spanish Latte,Coffee,2,85,Member,Card
+10778,2025-01-17,Zamalek,Mint Tea,Tea,2,30,Guest,Wallet
+10779,2025-01-17,Zamalek,Green Tea,Tea,1,35,Guest,Card
+10780,2025-01-17,Zamalek,Cappuccino,Coffee,2,70,Member,Card
+10781,2025-01-17,Zamalek,Cheesecake,Pastry,1,95,Guest,Card
+10782,2025-01-17,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Card
+10783,2025-01-17,Nasr City,Espresso,Coffee,1,45,Guest,Card
+10784,2025-01-17,Nasr City,Cappuccino,Coffee,2,70,Member,Card
+10785,2025-01-17,Nasr City,Turkish Coffee,Coffee,4,40,Guest,Card
+10786,2025-01-17,Nasr City,Espresso,Coffee,2,45,Member,Wallet
+10787,2025-01-17,Nasr City,Cheesecake,Pastry,1,95,Guest,Card
+10788,2025-01-17,Nasr City,Cappuccino,Coffee,2,70,Member,Card
+10789,2025-01-17,Nasr City,Espresso,Coffee,2,45,Guest,Cash
+10790,2025-01-17,Nasr City,Iced Latte,Cold drinks,3,80,Guest,Cash
+10791,2025-01-17,Nasr City,Cheesecake,Pastry,4,95,Guest,Cash
+10791,2025-01-17,Nasr City,Cheesecake,Pastry,4,95,Guest,Cash
+10792,2025-01-17,Nasr City,Mango Smoothie,Cold drinks,2,90,Guest,Cash
+10793,2025-01-17,Heliopolis,Croissant,Pastry,1,50,Guest,Wallet
+10794,2025-01-17,Heliopolis,Espresso,Coffee,2,45,Member,Cash
+10795,2025-01-17,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Cash
+10796,2025-01-17,Heliopolis,Cappuccino,Coffee,1,70,Member,Card
+10797,2025-01-17,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Cash
+10798,2025-01-17,Heliopolis,Mint Tea,Tea,1,30,Guest,Cash
+10799,2025-01-17,Heliopolis,Cappuccino,Coffee,1,70,Member,Cash
+10800,2025-01-17,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Cash
+10801,2025-01-17,Heliopolis,Chocolate Muffin,Pastry,1,60,Guest,Card
+10802,2025-01-17,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10803,2025-01-17,Heliopolis,Cappuccino,Coffee,1,70,Member,Card
+10804,2025-01-17,Heliopolis,Espresso,Coffee,1,45,Guest,Wallet
+10805,2025-01-17,Heliopolis,Croissant,Pastry,1,50,Guest,Card
+10806,2025-01-17,Heliopolis,Spanish Latte,Coffee,1,85,Member,Wallet
+10807,2025-01-17,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10808,2025-01-18,Maadi,Croissant,Pastry,2,50,Guest,Card
+10809,2025-01-18,Maadi,Mint Tea,Tea,2,30,Guest,Cash
+10810,2025-01-18,Maadi,Latte,Coffee,1,75,Guest,Cash
+10811,2025-01-18,Maadi,Mint Tea,Tea,2,30,Guest,Cash
+10812,2025-01-18,Maadi,Mint Tea,Tea,1,30,Member,Card
+10813,2025-01-18,Maadi,Latte,Coffee,1,75,Guest,
+10814,2025-01-18,Maadi,Cappuccino,Coffee,3,70,Guest,Cash
+10815,2025-01-18,Maadi,Spanish Latte,Coffee,1,85,Guest,Cash
+10816,2025-01-18,Maadi,Cheesecake,Pastry,1,95,Guest,Card
+10817,2025-01-18,  maadi ,Croissant,Pastry,2,50,Guest,Wallet
+10818,2025-01-18,Maadi,Cheesecake,Pastry,2,95,Guest,Cash
+10819,2025-01-18,Maadi,Croissant,Pastry,1,50,Guest,Card
+10820,2025-01-18,Maadi,Latte,Coffee,3,75,Guest,Wallet
+10821,2025-01-18,Maadi,Croissant,Pastry,1,50,Guest,Cash
+10822,2025-01-18,Zamalek,Croissant,Pastry,2,50,Member,Card
+10823,2025-01-18,Zamalek,Turkish Coffee,Coffee,1,40,Member,Cash
+10824,2025-01-18,Zamalek,Cappuccino,Coffee,2,70,Guest,
+10825,2025-01-18,Zamalek,Iced Latte,Cold drinks,2,80,Guest,Card
+10826,2025-01-18,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Card
+10827,2025-01-18,Zamalek,Iced Latte,Cold drinks,1,80,Guest,Card
+10828,2025-01-18,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Cash
+10829,2025-01-18,  zamalek ,Cappuccino,Coffee,1,70,Guest,Cash
+10830,18/01/2025,Zamalek,Latte,Coffee,1,75,Guest,Wallet
+10831,2025-01-18,Zamalek,Latte,Coffee,1,75,Member,Card
+10832,2025-01-18,Zamalek,Croissant,Pastry,1,50,Guest,Wallet
+10833,2025-01-18,Nasr City,Cheesecake,Pastry,1,95,Member,Cash
+10834,2025-01-18,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+10835,2025-01-18,Nasr City,Cappuccino ,Coffee,1,70,Member,Wallet
+10836,2025-01-18,Nasr City,Cappuccino,Coffee,2,70,Member,Wallet
+10837,2025-01-18,Nasr City,Lemon Mint,Cold drinks,1,55,Guest,Cash
+10838,2025-01-18,Nasr City,Cappuccino,Coffee,2,70,Guest,Card
+10839,2025-01-18,Nasr City,Iced Latte,Cold drinks,3,80,Guest,Cash
+10839,2025-01-18,Nasr City,Iced Latte,Cold drinks,3,80,Guest,Cash
+10840,2025-01-18,Nasr City,Croissant,Pastry,1,50,Guest,Card
+10841,2025-01-18,Nasr City,Lemon Mint,Cold drinks,2,55,Member,Card
+10842,2025-01-18,Nasr City,Green Tea,Tea,1,35,Member,Cash
+10843,2025-01-18,Nasr City,Latte,Coffee,1,75,Member,Card
+10844,2025-01-18,  nasr city ,Cappuccino,Coffee,1,70,Guest,Cash
+10845,2025-01-18,Nasr City,Spanish Latte,Coffee,1,85,Guest,Cash
+10846,2025-01-18,NASR CITY,Cappuccino,Coffee,2,70,Member,Card
+10847,2025-01-18,Heliopolis,Chocolate Muffin,Pastry,2,60,Guest,Cash
+10848,2025-01-18,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10849,2025-01-18,Heliopolis,Mint Tea,Tea,1,30,Guest,Wallet
+10850,2025-01-18,Heliopolis,Lemon Mint,Cold drinks,1,55,Guest,Card
+10851,2025-01-18,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+10852,2025-01-18,Heliopolis,Green Tea,Tea,1,35,Member,Cash
+10852,2025-01-18,Heliopolis,Green Tea,Tea,1,35,Member,Cash
+10853,2025-01-18,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Cash
+10854,19/01/2025,Maadi,Espresso,Coffee,1,45,Guest,Card
+10855,2025-01-19,Maadi,Croissant,Pastry,1,50,Guest,Wallet
+10856,2025-01-19,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+10857,2025-01-19,Maadi,Iced Latte,Cold drinks,2,80,Guest,Wallet
+10858,2025-01-19,Maadi,Mint Tea,Tea,1,30,Guest,Card
+10859,2025-01-19,Maadi,Turkish Coffee,Coffee,1,40,Guest,Cash
+10860,2025-01-19,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+10861,2025-01-19,Maadi,Cappuccino,Coffee,1,70,Guest,Cash
+10862,2025-01-19,Maadi,Mint Tea,Tea,2,30,Member,Card
+10863,2025-01-19,  maadi ,Spanish Latte,Coffee,3,85,Member,Wallet
+10864,2025-01-19,Maadi,Latte,Coffee,1,75,Member,Cash
+10865,2025-01-19,Maadi,Cappuccino,Coffee,1,70,Member,Card
+10866,2025-01-19,Zamalek,Espresso,Coffee,1,45,Member,Wallet
+10867,2025-01-19,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+10868,2025-01-19,Zamalek,Espresso,Coffee,1,45,Guest,Cash
+10869,2025-01-19,Zamalek,Mango Smoothie,Cold drinks,2,90,Guest,Card
+10870,2025-01-19,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10871,2025-01-19,Zamalek,Mint Tea,Tea,3,30,Member,
+10872,2025-01-19,Zamalek,Spanish Latte,Coffee,1,85,Member,Cash
+10873,2025-01-19,Zamalek,Turkish Coffee,Coffee,2,40,Guest,Cash
+10874,2025-01-19,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+10875,2025-01-19,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+10876,2025-01-19,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+10877,2025-01-19,Nasr City,Iced Latte,Cold drinks,4,80,Guest,Cash
+10878,2025-01-19,Nasr City,Croissant,Pastry,1,50,Guest,Card
+10879,2025-01-19,Nasr City,Latte,Coffee,2,75,Guest,Card
+10880,2025-01-19,Nasr City,Cappuccino,Coffee,1,70,Member,Cash
+10881,2025-01-19,Nasr City,Croissant,Pastry,2,50,Guest,Cash
+10882,2025-01-19,Heliopolis,Chocolate Muffin,Pastry,1,60,Member,
+10883,2025-01-19,Heliopolis,Latte,Coffee,1,75,Guest,Cash
+10884,2025-01-19,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10885,2025-01-19,Heliopolis,Croissant,Pastry,1,50,Guest,Cash
+10886,2025-01-19,Heliopolis,Spanish Latte,Coffee,3,85,Member,Card
+10887,2025-01-19,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Card
+10888,2025-01-19,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Cash
+10889,2025-01-19,Heliopolis,Cheesecake,Pastry,1,95,Guest,Card
+10890,2025-01-19,Heliopolis,Croissant,Pastry,1,50,Guest,Cash
+10891,2025-01-19,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Wallet
+10892,2025-01-20,Maadi,Latte,Coffee,2,75,Member,Cash
+10893,2025-01-20,Maadi,Turkish Coffee,Coffee,2,40,Member,Card
+10894,2025-01-20,Maadi,Green Tea,Tea,1,35,Guest,Cash
+10895,2025-01-20,Maadi,Espresso,Coffee,2,45,Member,Wallet
+10896,2025-01-20,Maadi,Spanish Latte,Coffee,3,85,Guest,Card
+10897,2025-01-20,Maadi,Turkish Coffee,Coffee,3,40,Guest,Card
+10898,2025-01-20,Maadi,Mint Tea,Tea,1,30,Guest,Card
+10899,2025-01-20,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+10900,2025-01-20,Maadi,Chocolate Muffin,Pastry,2,60,Guest,Wallet
+10901,2025-01-20,Maadi,Croissant,Pastry,1,50,Guest,Cash
+10902,2025-01-20,Maadi,Cheesecake,Pastry,1,95,Guest,Card
+10903,2025-01-20,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+10904,2025-01-20,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+10905,2025-01-20,Maadi,Green Tea,Tea,1,35,Guest,Card
+10906,2025-01-20,Zamalek,Cappuccino,Coffee,4,70,Guest,Cash
+10907,2025-01-20,Zamalek,Turkish Coffee ,Coffee,1,40,Member,Card
+10908,2025-01-20,Zamalek,Croissant,Pastry,1,50,Guest,Card
+10909,2025-01-20,  zamalek ,Green Tea,Tea,1,35,Member,Wallet
+10910,2025-01-20,ZAMALEK,Spanish Latte,Coffee,3,85,Member,Wallet
+10911,2025-01-20,Zamalek,Latte,Coffee,1,75,Member,Cash
+10912,2025-01-20,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10913,2025-01-20,Zamalek,Latte,Coffee,1,75,Guest,Wallet
+10914,2025-01-20,Zamalek,Spanish Latte,Coffee,1,85,Guest,Card
+10915,2025-01-20,Zamalek,Iced Latte,Cold drinks,1,80,Member,Cash
+10916,2025-01-20,Zamalek,Latte,Coffee,1,75,Member,Cash
+10917,2025-01-20,Nasr City,Mango Smoothie,Cold drinks,1,90,Member,Card
+10918,2025-01-20,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Cash
+10919,2025-01-20,Nasr City,Croissant,Pastry,1,50,Guest,Cash
+10920,2025-01-20,Nasr City,Spanish Latte,Coffee,1,85,Guest,Card
+10921,2025-01-20,Nasr City,Mint Tea,Tea,1,30,Member,Card
+10922,2025-01-20,  nasr city ,Latte,Coffee,2,75,Guest,Card
+10923,2025-01-20,Nasr City,Lemon Mint,Cold drinks,1,55,Guest,Card
+10924,2025-01-20,Nasr City,Turkish Coffee,Coffee,1,40,Member,Cash
+10925,2025-01-20,Nasr City,Cheesecake,Pastry,1,95,Member,Wallet
+10926,2025-01-20,Nasr City,Croissant,Pastry,1,50,Guest,Cash
+10927,20/01/2025,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Cash
+10928,2025-01-20,Heliopolis,Spanish Latte,Coffee,1,85,Member,Card
+10929,2025-01-20,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10930,2025-01-20,Heliopolis,Latte,Coffee,2,75,Guest,Wallet
+10931,2025-01-20,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10932,2025-01-20,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Wallet
+10933,2025-01-20,Heliopolis,Lemon Mint,Cold drinks,1,55,Member,Card
+10934,2025-01-20,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Wallet
+10935,2025-01-20,Heliopolis,Cappuccino,Coffee,1,70,Member,Wallet
+10936,2025-01-20,  heliopolis ,Cappuccino,Coffee,1,70,Guest,Card
+10937,2025-01-21,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+10938,2025-01-21,Maadi,Espresso,Coffee,1,45,Member,Wallet
+10939,21/01/2025,Maadi,Cappuccino,Coffee,3,70,Member,Card
+10940,2025-01-21,Maadi,Green Tea,Tea,1,35,Member,Cash
+10941,2025-01-21,Maadi,Iced Latte,Cold drinks,1,80,Member,Card
+10942,2025-01-21,Maadi,Turkish Coffee,Coffee,3,40,Guest,Wallet
+10943,2025-01-21,  maadi ,Green Tea,Tea,1,35,Member,Wallet
+10944,2025-01-21,Maadi,Cappuccino,Coffee,1,70,Guest,Wallet
+10945,2025-01-21,Maadi,Latte,Coffee,1,75,Member,Card
+10945,2025-01-21,Maadi,Latte,Coffee,1,75,Member,Card
+10946,2025-01-21,Maadi,Espresso,Coffee,1,45,Guest,Cash
+10947,2025-01-21,Maadi,Turkish Coffee,Coffee,2,40,Guest,Cash
+10948,2025-01-21,Maadi,Turkish Coffee,Coffee,1,40,Guest,Cash
+10949,2025-01-21,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+10950,2025-01-21,Zamalek,Latte,Coffee,2,75,Guest,Cash
+10951,2025-01-21,ZAMALEK,Turkish Coffee,Coffee,1,40,Guest,Card
+10952,2025-01-21,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Cash
+10953,2025-01-21,Zamalek,Latte ,Coffee,1,75,Guest,Wallet
+10954,2025-01-21,Zamalek,Croissant,Pastry,1,50,Guest,Card
+10955,2025-01-21,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+10956,2025-01-21,Zamalek,Espresso,Coffee,1,45,Member,Card
+10957,2025-01-21,Zamalek,Croissant,Pastry,1,50,Guest,Card
+10958,2025-01-21,Zamalek,Espresso,Coffee,1,45,Guest,Wallet
+10959,2025-01-21,Zamalek,Espresso,Coffee,1,45,Guest,Card
+10960,2025-01-21,Zamalek,Latte,Coffee,1,75,Member,Cash
+10961,2025-01-21,Zamalek,Lemon Mint,Cold drinks,1,55,Member,Card
+10962,2025-01-21,Zamalek,Espresso,Coffee,2,45,Guest,Card
+10963,2025-01-21,Zamalek,Lemon Mint,Cold drinks,1,55,Member,Card
+10964,2025-01-21,Zamalek,Spanish Latte,Coffee,3,85,Guest,Card
+10965,2025-01-21,Nasr City,Espresso,Coffee,1,45,Guest,Cash
+10966,2025-01-21,NASR CITY,Cappuccino,Coffee,3,70,Guest,Cash
+10967,2025-01-21,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+10968,2025-01-21,Nasr City,Latte,Coffee,1,75,Member,Cash
+10969,2025-01-21,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Cash
+10970,2025-01-21,Nasr City,Cappuccino,Coffee,2,70,Guest,Card
+10971,2025-01-21,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+10972,2025-01-21,Nasr City,Cappuccino,Coffee,1,70,Guest,Cash
+10973,2025-01-21,Nasr City,Cappuccino,Coffee,2,70,Guest,Card
+10974,2025-01-21,Nasr City,Croissant,Pastry,3,50,Guest,Cash
+10975,2025-01-21,Nasr City,Chocolate Muffin,Pastry,4,60,Member,Cash
+10976,2025-01-21,Nasr City,Latte,Coffee,1,75,Guest,Wallet
+10977,2025-01-21,Heliopolis,Cheesecake,Pastry,1,95,Member,Card
+10978,2025-01-21,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+10979,21/01/2025,Heliopolis,Green Tea,Tea,1,35,Guest,Card
+10980,2025-01-21,Heliopolis,Mango Smoothie,Cold drinks,3,90,Member,Cash
+10981,2025-01-21,Heliopolis,Latte,Coffee,1,75,Guest,Card
+10982,2025-01-21,Heliopolis,Green Tea,Tea,1,35,Guest,Cash
+10983,2025-01-21,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+10984,2025-01-21,Heliopolis,Iced Latte,Cold drinks,2,80,Guest,Card
+10985,2025-01-21,Heliopolis,Green Tea,Tea,1,35,Guest,Wallet
+10986,2025-01-21,HELIOPOLIS,Lemon Mint,Cold drinks,1,55,Guest,Cash
+10987,2025-01-21,Heliopolis,Mango Smoothie,Cold drinks,3,90,Member,Cash
+10988,2025-01-21,Heliopolis,Latte,Coffee,1,75,Guest,Card
+10989,2025-01-22,Maadi,Spanish Latte,Coffee,1,85,Guest,Wallet
+10990,2025-01-22,Maadi,Cappuccino,Coffee,1,70,Guest,Cash
+10991,2025-01-22,Maadi,Cheesecake,Pastry,1,95,Guest,Card
+10992,2025-01-22,Maadi,Green Tea,Tea,1,35,Guest,Card
+10993,2025-01-22,Maadi,Turkish Coffee,Coffee,4,40,Guest,Card
+10994,2025-01-22,Maadi,Cappuccino,Coffee,2,70,Guest,Cash
+10995,2025-01-22,Maadi,Cheesecake ,Pastry,1,95,Guest,Card
+10996,2025-01-22,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+10997,2025-01-22,  maadi ,Turkish Coffee,Coffee,1,40,Guest,Cash
+10998,2025-01-22,Maadi,Latte,Coffee,1,75,Member,Card
+10999,2025-01-22,Maadi,Croissant,Pastry,2,50,Guest,Card
+11000,2025-01-22,Maadi,Latte,Coffee,1,75,Member,Card
+11001,2025-01-22,Maadi,Latte,Coffee,1,75,Guest,Cash
+11002,2025-01-22,Maadi,Latte,Coffee,1,75,Guest,Cash
+11003,2025-01-22,Zamalek,Turkish Coffee,Coffee,1,40,Member,Cash
+11004,2025-01-22,Zamalek,Croissant,Pastry,1,50,Member,Cash
+11005,2025-01-22,Zamalek,Iced Latte,Cold drinks,1,80,Member,Cash
+11006,2025-01-22,Zamalek,Latte,Coffee,1,75,Member,Cash
+11007,2025-01-22,Zamalek,Latte,Coffee,2,75,Member,Cash
+11008,2025-01-22,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Cash
+11009,2025-01-22,Zamalek,Latte,Coffee,2,75,Guest,Cash
+11010,2025-01-22,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+11011,2025-01-22,Zamalek,Latte,Coffee,1,75,Guest,Cash
+11012,2025-01-22,  zamalek ,Croissant,Pastry,1,50,Guest,Card
+11013,2025-01-22,Zamalek,Iced Latte,Cold drinks,1,80,Guest,Cash
+11014,2025-01-22,Nasr City,Mint Tea,Tea,1,30,Guest,Card
+11015,2025-01-22,Nasr City,Green Tea,Tea,1,35,Guest,Cash
+11016,2025-01-22,Nasr City,Green Tea,Tea,1,35,Guest,Cash
+11017,2025-01-22,Nasr City,Mint Tea,Tea,2,30,Guest,Cash
+11018,2025-01-22,Nasr City,Mint Tea,Tea,1,30,Guest,Cash
+11019,2025-01-22,Nasr City,Cappuccino,Coffee,1,70,Guest,
+11020,2025-01-22,Nasr City,Latte,Coffee,1,75,Member,
+11021,2025-01-22,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Cash
+11021,2025-01-22,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Cash
+11022,2025-01-22,Heliopolis,Cheesecake,Pastry,3,95,Guest,Cash
+11023,2025-01-22,Heliopolis,Espresso,Coffee,2,45,Guest,Card
+11024,2025-01-22,Heliopolis,Spanish Latte ,Coffee,1,85,Member,Cash
+11025,2025-01-22,Heliopolis,Croissant,Pastry,1,50,Guest,Card
+11026,2025-01-22,HELIOPOLIS,Turkish Coffee,Coffee,1,40,Member,Card
+11027,2025-01-22,Heliopolis,Lemon Mint,Cold drinks,2,55,Member,Card
+11028,2025-01-22,Heliopolis,Croissant,Pastry,1,50,Member,Card
+11029,2025-01-22,Heliopolis,Latte,Coffee,1,75,Member,Card
+11030,2025-01-22,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Card
+11031,2025-01-22,Heliopolis,Latte,Coffee,1,75,Guest,Cash
+11032,23/01/2025,Maadi,Cappuccino,Coffee,1,70,Member,Cash
+11033,2025-01-23,Maadi,Cheesecake,Pastry,1,95,Guest,Card
+11034,2025-01-23,MAADI,Iced Latte,Cold drinks,2,80,Guest,Cash
+11035,2025-01-23,Maadi,Cappuccino,Coffee,1,70,Guest,Wallet
+11036,2025-01-23,Maadi,Green Tea,Tea,1,35,Member,Cash
+11037,2025-01-23,Maadi,Turkish Coffee,Coffee,4,40,Member,Card
+11038,2025-01-23,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11039,2025-01-23,Maadi,Espresso,Coffee,1,45,Guest,Card
+11040,2025-01-23,  maadi ,Turkish Coffee,Coffee,2,40,Guest,Card
+11041,2025-01-23,Maadi,Espresso,Coffee,1,45,Member,Cash
+11042,2025-01-23,Maadi,Mint Tea,Tea,2,30,Member,Card
+11043,2025-01-23,Zamalek,Iced Latte,Cold drinks,2,80,Member,Card
+11044,2025-01-23,Zamalek,Mint Tea,Tea,1,30,Member,Cash
+11045,2025-01-23,Zamalek,Cappuccino,Coffee,2,70,Guest,Card
+11046,2025-01-23,Zamalek,Turkish Coffee ,Coffee,1,40,Member,
+11047,2025-01-23,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+11048,2025-01-23,Zamalek,Spanish Latte,Coffee,3,85,Guest,Cash
+11049,2025-01-23,Zamalek,Croissant,Pastry,1,50,Guest,Wallet
+11050,2025-01-23,Zamalek,Croissant,Pastry,1,50,Guest,Cash
+11051,2025-01-23,Zamalek,Croissant,Pastry,2,50,Guest,Card
+11052,2025-01-23,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11053,2025-01-23,Zamalek,Latte,Coffee,1,75,Member,Card
+11054,2025-01-23,Zamalek,Latte,Coffee,2,75,Member,Cash
+11055,2025-01-23,Zamalek,Mint Tea,Tea,1,30,Member,Cash
+11055,2025-01-23,Zamalek,Mint Tea,Tea,1,30,Member,Cash
+11056,2025-01-23,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+11057,2025-01-23,Zamalek,Cappuccino,Coffee,3,70,Guest,Card
+11058,2025-01-23,Nasr City,Cappuccino,Coffee,1,70,Member,Wallet
+11059,2025-01-23,Nasr City,Lemon Mint ,Cold drinks,1,55,Guest,Cash
+11060,2025-01-23,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+11061,2025-01-23,Nasr City,Latte,Coffee,3,75,Guest,Card
+11062,2025-01-23,Nasr City,Espresso,Coffee,2,45,Guest,Cash
+11063,2025-01-23,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11064,23/01/2025,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Cash
+11065,2025-01-23,Nasr City,Cappuccino,Coffee,1,70,Member,Card
+11066,2025-01-23,Nasr City,Cappuccino,Coffee,1,70,Member,Card
+11067,2025-01-23,Nasr City,Cheesecake,Pastry,1,95,Guest,Card
+11068,2025-01-23,Nasr City,Chocolate Muffin,Pastry,1,60,Member,Card
+11069,2025-01-23,Nasr City,Spanish Latte,Coffee,2,85,Guest,Cash
+11070,2025-01-23,Nasr City,Espresso,Coffee,1,45,Member,Cash
+11071,2025-01-23,Nasr City,Croissant,Pastry,1,50,Member,
+11072,2025-01-23,Heliopolis,Latte,Coffee,1,75,Member,Cash
+11073,2025-01-23,HELIOPOLIS,Iced Latte,Cold drinks,1,80,Guest,Card
+11074,2025-01-23,Heliopolis,Cappuccino ,Coffee,1,70,Member,Cash
+11075,2025-01-23,Heliopolis,Latte,Coffee,3,75,Guest,Wallet
+11076,2025-01-23,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Wallet
+11077,2025-01-23,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+11078,2025-01-23,  heliopolis ,Latte,Coffee,1,75,Member,Card
+11079,2025-01-23,Heliopolis,Espresso,Coffee,3,45,Guest,Card
+11080,2025-01-23,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+11081,2025-01-23,Heliopolis,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+11082,2025-01-24,Maadi,Green Tea,Tea,1,35,Guest,Wallet
+11083,2025-01-24,Maadi,Espresso,Coffee,1,45,Member,Cash
+11084,2025-01-24,Maadi,Green Tea,Tea,1,35,Guest,Cash
+11085,2025-01-24,Maadi,Espresso,Coffee,1,45,Member,Card
+11086,2025-01-24,Maadi,Mint Tea,Tea,1,30,Guest,Wallet
+11087,2025-01-24,Maadi,Croissant,Pastry,1,50,Guest,Cash
+11088,2025-01-24,Maadi,Espresso,Coffee,2,45,Guest,Card
+11089,24/01/2025,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Card
+11090,2025-01-24,Zamalek,Mint Tea,Tea,1,30,Member,Card
+11091,2025-01-24,Zamalek,Espresso,Coffee,1,45,Guest,Wallet
+11092,2025-01-24,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11093,2025-01-24,Zamalek,Croissant,Pastry,2,50,Member,Cash
+11094,2025-01-24,Zamalek,Spanish Latte,Coffee,2,85,Member,Cash
+11094,2025-01-24,Zamalek,Spanish Latte,Coffee,2,85,Member,Cash
+11095,2025-01-24,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+11096,2025-01-24,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+11096,2025-01-24,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+11097,2025-01-24,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+11098,2025-01-24,Zamalek,Spanish Latte,Coffee,1,85,Guest,Card
+11099,2025-01-24,ZAMALEK,Latte,Coffee,1,75,Guest,Card
+11100,2025-01-24,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+11101,2025-01-24,Zamalek,Cappuccino,Coffee,1,70,Guest,
+11102,2025-01-24,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+11103,2025-01-24,Zamalek,Cappuccino,Coffee,2,70,Member,Cash
+11104,2025-01-24,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Card
+11105,2025-01-24,Zamalek,Iced Latte,Cold drinks,2,80,Guest,Card
+11106,2025-01-24,Zamalek,Croissant,Pastry,1,50,Guest,Card
+11107,2025-01-24,Zamalek,Latte,Coffee,2,75,Member,Card
+11108,2025-01-24,ZAMALEK,Cappuccino,Coffee,1,70,Guest,Card
+11109,2025-01-24,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11110,2025-01-24,Nasr City,Cappuccino,Coffee,1,70,Guest,Card
+11111,2025-01-24,  nasr city ,Croissant,Pastry,1,50,Guest,Cash
+11112,2025-01-24,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+11113,2025-01-24,Nasr City,Spanish Latte,Coffee,4,85,Member,Wallet
+11114,24/01/2025,Nasr City,Chocolate Muffin,Pastry,2,60,Member,Wallet
+11115,2025-01-24,Nasr City,Cappuccino,Coffee,1,70,Guest,Cash
+11116,2025-01-24,Nasr City,Croissant,Pastry,1,50,Guest,Card
+11117,2025-01-24,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+11118,2025-01-24,  nasr city ,Spanish Latte,Coffee,2,85,Guest,Wallet
+11119,2025-01-24,Nasr City,Latte ,Coffee,1,75,Member,
+11120,2025-01-24,NASR CITY,Mint Tea,Tea,2,30,Guest,Card
+11121,2025-01-24,Nasr City,Chocolate Muffin,Pastry,2,60,Guest,Card
+11122,2025-01-24,Heliopolis,Croissant,Pastry,1,50,Member,Cash
+11123,2025-01-24,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Wallet
+11124,2025-01-24,  heliopolis ,Espresso,Coffee,1,45,Member,Card
+11125,2025-01-24,Heliopolis,Croissant,Pastry,1,50,Guest,Cash
+11125,2025-01-24,Heliopolis,Croissant,Pastry,1,50,Guest,Cash
+11126,24/01/2025,Heliopolis,Turkish Coffee,Coffee,4,40,Guest,Card
+11127,2025-01-24,Heliopolis,Cheesecake,Pastry,1,95,Guest,Wallet
+11128,2025-01-24,Heliopolis,Croissant,Pastry,1,50,Guest,Cash
+11129,2025-01-24,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+11129,2025-01-24,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+11130,24/01/2025,Heliopolis,Green Tea,Tea,1,35,Member,Cash
+11131,24/01/2025,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Cash
+11132,2025-01-24,Heliopolis,Croissant,Pastry,1,50,Member,Wallet
+11133,2025-01-25,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+11134,2025-01-25,MAADI,Spanish Latte,Coffee,4,85,Guest,Cash
+11135,2025-01-25,Maadi,Cappuccino,Coffee,2,70,Guest,Cash
+11136,2025-01-25,Maadi,Spanish Latte,Coffee,1,85,Guest,Card
+11137,2025-01-25,Maadi,Espresso,Coffee,1,45,Member,Cash
+11138,2025-01-25,Maadi,Cappuccino,Coffee,1,70,Member,Cash
+11139,2025-01-25,Maadi,Cheesecake,Pastry,2,95,Guest,Cash
+11140,2025-01-25,Maadi,Cappuccino,Coffee,1,70,Guest,
+11141,2025-01-25,Maadi,Turkish Coffee,Coffee,1,40,Guest,Wallet
+11142,2025-01-25,Maadi,Espresso,Coffee,1,45,Guest,Wallet
+11143,2025-01-25,  maadi ,Mint Tea,Tea,1,30,Guest,Card
+11144,2025-01-25,Maadi,Croissant,Pastry,1,50,Member,Wallet
+11145,2025-01-25,Maadi,Turkish Coffee,Coffee,4,40,Guest,Cash
+11146,2025-01-25,Maadi,Croissant,Pastry,1,50,Guest,Cash
+11146,2025-01-25,Maadi,Croissant,Pastry,1,50,Guest,Cash
+11147,2025-01-25,Maadi,Latte,Coffee,1,75,Member,Card
+11148,2025-01-25,Maadi,Cappuccino,Coffee,3,70,Member,Cash
+11149,2025-01-25,Maadi,Spanish Latte,Coffee,1,85,Member,
+11150,2025-01-25,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+11151,2025-01-25,Zamalek,Spanish Latte,Coffee,1,85,Guest,Card
+11152,2025-01-25,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11153,2025-01-25,  zamalek ,Latte,Coffee,1,75,Guest,Cash
+11154,2025-01-25,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+11155,2025-01-25,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+11156,2025-01-25,Zamalek,Green Tea,Tea,1,35,Member,Cash
+11157,2025-01-25,Zamalek,Latte,Coffee,1,75,Guest,Card
+11158,2025-01-25,Zamalek,Spanish Latte,Coffee,1,85,Member,Cash
+11159,2025-01-25,Zamalek,Chocolate Muffin,Pastry,3,60,Member,Card
+11160,2025-01-25,Zamalek,Latte,Coffee,1,75,Member,Card
+11161,2025-01-25,Zamalek,Latte,Coffee,1,75,Member,Card
+11162,2025-01-25,  zamalek ,Cappuccino,Coffee,1,70,Guest,Card
+11163,2025-01-25,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+11164,25/01/2025,Zamalek,Cheesecake,Pastry,1,95,Guest,Card
+11165,2025-01-25,Nasr City,Green Tea,Tea,1,35,Guest,Cash
+11166,2025-01-25,Nasr City,Cappuccino ,Coffee,1,70,Member,Wallet
+11167,25/01/2025,Nasr City,Cappuccino,Coffee,2,70,Guest,Card
+11168,2025-01-25,Nasr City,Cheesecake,Pastry,2,95,Guest,Card
+11169,2025-01-25,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+11170,2025-01-25,Nasr City,Cheesecake,Pastry,3,95,Member,Card
+11171,2025-01-25,Nasr City,Latte,Coffee,1,75,Member,Cash
+11172,25/01/2025,  nasr city ,Mint Tea,Tea,1,30,Member,Card
+11173,2025-01-25,  nasr city ,Cappuccino,Coffee,1,70,Member,Card
+11174,2025-01-25,Heliopolis,Turkish Coffee,Coffee,4,40,Member,Cash
+11175,2025-01-25,Heliopolis,Cappuccino,Coffee,2,70,Guest,Wallet
+11176,2025-01-25,Heliopolis,Croissant,Pastry,1,50,Guest,Wallet
+11177,2025-01-25,Heliopolis,Cappuccino,Coffee,1,70,Guest,Wallet
+11178,2025-01-25,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Card
+11179,2025-01-25,Heliopolis,Spanish Latte,Coffee,1,85,Member,Card
+11180,2025-01-25,Heliopolis,Cheesecake,Pastry,3,95,Guest,Cash
+11181,2025-01-25,Heliopolis,Espresso,Coffee,1,45,Guest,Card
+11182,25/01/2025,Heliopolis,Mint Tea,Tea,1,30,Guest,Card
+11183,2025-01-26,Maadi,Mint Tea,Tea,4,30,Guest,Cash
+11184,2025-01-26,Maadi,Mint Tea,Tea,1,30,Guest,Cash
+11185,2025-01-26,Maadi,Green Tea,Tea,1,35,Guest,Wallet
+11186,2025-01-26,MAADI,Green Tea,Tea,2,35,Member,Card
+11187,2025-01-26,Maadi,Chocolate Muffin,Pastry,2,60,Guest,Card
+11188,2025-01-26,Maadi,Croissant,Pastry,1,50,Guest,Wallet
+11189,2025-01-26,  maadi ,Turkish Coffee,Coffee,1,40,Member,Cash
+11190,2025-01-26,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Card
+11191,2025-01-26,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+11192,2025-01-26,Zamalek,Cheesecake,Pastry,3,95,Guest,Wallet
+11193,2025-01-26,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11194,2025-01-26,Zamalek,Lemon Mint,Cold drinks,2,55,Member,Card
+11195,2025-01-26,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+11196,2025-01-26,Zamalek,Latte ,Coffee,1,75,Guest,Card
+11197,2025-01-26,Zamalek,Cheesecake,Pastry,1,95,Member,Cash
+11198,2025-01-26,Zamalek,Croissant,Pastry,1,50,Member,Wallet
+11199,26/01/2025,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11200,2025-01-26,Zamalek,Latte,Coffee,1,75,Guest,Wallet
+11201,2025-01-26,Zamalek,Espresso,Coffee,1,45,Guest,Cash
+11202,2025-01-26,Nasr City,Cappuccino,Coffee,2,70,Guest,Cash
+11203,2025-01-26,Nasr City,Cappuccino,Coffee,2,70,Guest,Card
+11204,2025-01-26,Nasr City,Green Tea,Tea,1,35,Guest,Card
+11205,2025-01-26,  nasr city ,Mint Tea,Tea,4,30,Guest,Card
+11206,2025-01-26,Nasr City,Cheesecake,Pastry,1,95,Member,Card
+11207,2025-01-26,Nasr City,Mint Tea,Tea,3,30,Guest,Cash
+11208,2025-01-26,Nasr City,Green Tea,Tea,1,35,Guest,Wallet
+11209,2025-01-26,Nasr City,Cheesecake,Pastry,1,95,Guest,Card
+11210,2025-01-26,Nasr City,Croissant,Pastry,2,50,Member,Card
+11211,2025-01-26,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+11212,2025-01-26,Nasr City,Mango Smoothie,Cold drinks,1,90,Guest,Card
+11213,2025-01-26,Nasr City,Cappuccino,Coffee,1,70,Guest,Wallet
+11214,2025-01-26,  nasr city ,Turkish Coffee,Coffee,1,40,Member,Cash
+11215,2025-01-26,Nasr City,Green Tea,Tea,3,35,Member,Wallet
+11216,2025-01-26,Heliopolis,Lemon Mint,Cold drinks,1,55,Member,Card
+11217,2025-01-26,Heliopolis,Cheesecake,Pastry,1,95,Guest,Cash
+11218,2025-01-26,Heliopolis,Croissant,Pastry,1,50,Member,Wallet
+11219,2025-01-26,Heliopolis,Spanish Latte,Coffee,1,85,Member,Card
+11220,2025-01-26,Heliopolis,Cappuccino,Coffee,1,70,Member,Cash
+11221,2025-01-27,Maadi,Lemon Mint,Cold drinks,1,55,Guest,Wallet
+11222,2025-01-27,Maadi,Latte,Coffee,1,75,Member,Cash
+11223,2025-01-27,Maadi,Spanish Latte,Coffee,1,85,Member,Card
+11224,2025-01-27,Maadi,Croissant,Pastry,1,50,Member,Cash
+11225,2025-01-27,Maadi,Turkish Coffee,Coffee,1,40,Guest,Wallet
+11226,2025-01-27,Maadi,Cappuccino,Coffee,3,70,Guest,Cash
+11227,2025-01-27,Maadi,Latte,Coffee,1,75,Guest,Wallet
+11228,2025-01-27,Maadi,Latte ,Coffee,1,75,Member,Cash
+11229,2025-01-27,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11230,2025-01-27,Zamalek,Green Tea,Tea,1,35,Guest,Card
+11231,2025-01-27,Zamalek,Spanish Latte,Coffee,1,85,Member,Cash
+11232,2025-01-27,Zamalek,Green Tea,Tea,3,35,Guest,Cash
+11233,2025-01-27,Zamalek,Latte,Coffee,1,75,Member,Card
+11234,2025-01-27,Zamalek,Lemon Mint,Cold drinks,2,55,Member,Wallet
+11235,2025-01-27,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Cash
+11236,2025-01-27,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11237,2025-01-27,Zamalek,Cappuccino,Coffee,2,70,Member,Card
+11238,2025-01-27,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+11239,2025-01-27,Zamalek,Spanish Latte,Coffee,1,85,Guest,Wallet
+11240,2025-01-27,Zamalek,Croissant,Pastry,1,50,Guest,Card
+11241,2025-01-27,ZAMALEK,Turkish Coffee,Coffee,3,40,Member,Cash
+11242,2025-01-27,Zamalek,Cappuccino,Coffee,2,70,Member,Cash
+11243,2025-01-27,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11244,2025-01-27,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+11245,2025-01-27,Zamalek,Espresso,Coffee,1,45,Guest,Card
+11246,2025-01-27,NASR CITY,Mint Tea,Tea,1,30,Member,Cash
+11247,2025-01-27,Nasr City,Spanish Latte,Coffee,1,85,Member,Card
+11248,2025-01-27,Nasr City,Mint Tea,Tea,2,30,Member,Wallet
+11249,2025-01-27,Nasr City,Cheesecake,Pastry,1,95,Member,Card
+11250,2025-01-27,Nasr City,Cappuccino,Coffee,2,70,Guest,Card
+11251,2025-01-27,Nasr City,Latte,Coffee,1,75,Member,Wallet
+11252,2025-01-27,Nasr City,Spanish Latte ,Coffee,1,85,Guest,Card
+11253,2025-01-27,Nasr City,Mint Tea,Tea,1,30,Member,Card
+11254,2025-01-27,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Cash
+11255,2025-01-27,Heliopolis,Lemon Mint,Cold drinks,3,55,Member,Cash
+11256,2025-01-27,Heliopolis,Cheesecake,Pastry,1,95,Guest,Cash
+11257,2025-01-27,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Card
+11258,2025-01-27,Heliopolis,Iced Latte,Cold drinks,1,80,Guest,Cash
+11259,2025-01-27,Heliopolis,Espresso,Coffee,1,45,Guest,Card
+11260,2025-01-28,Maadi,Mint Tea,Tea,1,30,Guest,Cash
+11261,2025-01-28,Maadi,Latte,Coffee,2,75,Guest,Card
+11262,2025-01-28,Maadi,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11263,2025-01-28,Maadi,Croissant,Pastry,1,50,Member,Card
+11264,2025-01-28,Maadi,Turkish Coffee,Coffee,1,40,Guest,
+11265,2025-01-28,Maadi,Spanish Latte,Coffee,3,85,Member,Cash
+11266,2025-01-28,Maadi,Latte,Coffee,1,75,Guest,Cash
+11267,2025-01-28,Maadi,Croissant,Pastry,2,50,Guest,Cash
+11268,2025-01-28,Maadi,Green Tea,Tea,1,35,Guest,Card
+11269,2025-01-28,Zamalek,Cappuccino,Coffee,1,70,Guest,Cash
+11270,2025-01-28,  zamalek ,Latte,Coffee,1,75,Guest,Cash
+11271,2025-01-28,Zamalek,Latte,Coffee,2,75,Guest,Card
+11272,2025-01-28,Zamalek,Spanish Latte,Coffee,2,85,Guest,Cash
+11273,2025-01-28,Zamalek,Cappuccino,Coffee,1,70,Member,Cash
+11274,2025-01-28,Zamalek,Cappuccino,Coffee,2,70,Member,Cash
+11275,2025-01-28,Zamalek,Cappuccino,Coffee,1,70,Member,Wallet
+11276,2025-01-28,Zamalek,Croissant,Pastry,3,50,Guest,Cash
+11277,2025-01-28,Zamalek,Mint Tea,Tea,1,30,Guest,Card
+11278,2025-01-28,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+11279,2025-01-28,Zamalek,Spanish Latte,Coffee,2,85,Guest,
+11280,2025-01-28,Zamalek,Espresso,Coffee,1,45,Guest,Wallet
+11281,2025-01-28,Zamalek,Espresso,Coffee,1,45,Guest,Wallet
+11282,2025-01-28,ZAMALEK,Cappuccino,Coffee,1,70,Guest,Card
+11283,2025-01-28,Nasr City,Spanish Latte,Coffee,1,85,Guest,Card
+11284,2025-01-28,Nasr City,Mint Tea,Tea,2,30,Member,Card
+11285,2025-01-28,Nasr City,Iced Latte,Cold drinks,1,80,Guest,Wallet
+11286,2025-01-28,Nasr City,Spanish Latte,Coffee,1,85,Guest,Card
+11287,2025-01-28,Nasr City,Spanish Latte,Coffee,3,85,Guest,Card
+11288,2025-01-28,Nasr City,Latte,Coffee,4,75,Member,Card
+11289,2025-01-28,Nasr City,Lemon Mint,Cold drinks,3,55,Guest,Wallet
+11290,2025-01-28,NASR CITY,Chocolate Muffin,Pastry,2,60,Guest,Card
+11291,2025-01-28,Nasr City,Mint Tea,Tea,1,30,Guest,Cash
+11292,2025-01-28,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Card
+11293,2025-01-28,Nasr City,Cappuccino,Coffee,1,70,Member,Cash
+11294,2025-01-28,Heliopolis,Latte,Coffee,1,75,Member,Card
+11295,2025-01-28,Heliopolis,Cappuccino,Coffee,1,70,Guest,
+11296,2025-01-28,Heliopolis,Cappuccino,Coffee,1,70,Member,Card
+11297,2025-01-28,Heliopolis,Croissant ,Pastry,1,50,Member,Card
+11298,2025-01-28,  heliopolis ,Cappuccino,Coffee,2,70,Member,Wallet
+11299,2025-01-28,Heliopolis,Green Tea,Tea,2,35,Guest,Card
+11300,2025-01-28,Heliopolis,Cappuccino,Coffee,4,70,Guest,
+11301,2025-01-28,Heliopolis,Green Tea,Tea,1,35,Guest,Wallet
+11302,2025-01-28,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+11303,2025-01-28,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+11304,2025-01-28,Heliopolis,Turkish Coffee,Coffee,1,40,Guest,Cash
+11305,2025-01-29,Maadi,Cappuccino,Coffee,1,70,Member,Cash
+11306,2025-01-29,Maadi,Cappuccino,Coffee,2,70,Member,Card
+11307,2025-01-29,Maadi,Spanish Latte,Coffee,1,85,Member,Card
+11308,2025-01-29,Maadi,Espresso,Coffee,1,45,Guest,Cash
+11309,2025-01-29,Maadi,Croissant,Pastry,2,50,Guest,Cash
+11310,2025-01-29,Maadi,Latte,Coffee,1,75,Member,Wallet
+11311,2025-01-29,Maadi,Spanish Latte ,Coffee,1,85,Guest,Card
+11311,2025-01-29,Maadi,Spanish Latte ,Coffee,1,85,Guest,Card
+11312,2025-01-29,Maadi,Latte,Coffee,2,75,Guest,Wallet
+11313,2025-01-29,Maadi,Espresso,Coffee,1,45,Guest,
+11314,2025-01-29,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+11315,2025-01-29,Maadi,Croissant,Pastry,2,50,Member,Card
+11316,2025-01-29,Maadi,Spanish Latte,Coffee,2,85,Guest,Wallet
+11317,2025-01-29,Maadi,Turkish Coffee,Coffee,3,40,Guest,Card
+11318,2025-01-29,Maadi,Mint Tea,Tea,1,30,Guest,Card
+11319,2025-01-29,Maadi,Turkish Coffee,Coffee,1,40,Member,Wallet
+11320,2025-01-29,MAADI,Iced Latte,Cold drinks,2,80,Guest,Card
+11321,2025-01-29,Zamalek,Turkish Coffee,Coffee,2,40,Member,Card
+11322,2025-01-29,ZAMALEK,Cappuccino,Coffee,1,70,Guest,Card
+11323,2025-01-29,Zamalek,Green Tea,Tea,1,35,Member,Cash
+11324,2025-01-29,Zamalek,Green Tea,Tea,1,35,Member,Wallet
+11325,2025-01-29,Zamalek,Spanish Latte,Coffee,2,85,Guest,Card
+11326,2025-01-29,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+11327,2025-01-29,Zamalek,Lemon Mint,Cold drinks,4,55,Guest,
+11328,2025-01-29,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Cash
+11329,2025-01-29,Zamalek,Cappuccino,Coffee,1,70,Member,Card
+11330,2025-01-29,Zamalek,Latte,Coffee,1,75,Guest,Card
+11331,2025-01-29,Zamalek,Croissant,Pastry,1,50,Member,Wallet
+11332,2025-01-29,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+11333,2025-01-29,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Cash
+11334,2025-01-29,ZAMALEK,Latte,Coffee,1,75,Guest,Cash
+11335,2025-01-29,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+11336,2025-01-29,Nasr City,Chocolate Muffin,Pastry,3,60,Guest,Cash
+11337,2025-01-29,Nasr City,Turkish Coffee,Coffee,1,40,Member,Card
+11338,2025-01-29,Nasr City,Turkish Coffee,Coffee,1,40,Guest,Card
+11339,29/01/2025,Nasr City,Croissant,Pastry,3,50,Guest,Card
+11340,2025-01-29,Nasr City,Spanish Latte,Coffee,1,85,Guest,Card
+11341,2025-01-29,Nasr City,Green Tea,Tea,4,35,Guest,Wallet
+11342,2025-01-29,Nasr City,Cappuccino,Coffee,1,70,Guest,Wallet
+11343,2025-01-29,Heliopolis,Latte,Coffee,1,75,Member,Card
+11344,2025-01-29,Heliopolis,Croissant,Pastry,4,50,Guest,Card
+11345,2025-01-29,Heliopolis,Cappuccino,Coffee,1,70,Member,Cash
+11346,2025-01-29,Heliopolis,Mint Tea,Tea,1,30,Guest,Card
+11347,2025-01-29,Heliopolis,Espresso,Coffee,1,45,Guest,Wallet
+11348,2025-01-29,Heliopolis,Spanish Latte,Coffee,1,85,Guest,Cash
+11349,2025-01-30,Maadi,Iced Latte,Cold drinks,1,80,Guest,Wallet
+11350,30/01/2025,Maadi,Turkish Coffee,Coffee,3,40,Member,Card
+11351,30/01/2025,Maadi,Mango Smoothie,Cold drinks,1,90,Guest,Wallet
+11352,2025-01-30,Maadi,Cappuccino,Coffee,2,70,Member,Wallet
+11353,2025-01-30,Maadi,Croissant ,Pastry,2,50,Guest,Cash
+11354,2025-01-30,Maadi,Latte,Coffee,1,75,Member,Card
+11355,2025-01-30,Maadi,Latte ,Coffee,1,75,Guest,Card
+11356,2025-01-30,  maadi ,Croissant,Pastry,1,50,Member,Card
+11357,2025-01-30,  maadi ,Green Tea,Tea,1,35,Member,Wallet
+11358,2025-01-30,Maadi,Croissant,Pastry,1,50,Guest,Card
+11359,2025-01-30,Maadi,Iced Latte,Cold drinks,2,80,Guest,Wallet
+11360,30/01/2025,Maadi,Cappuccino,Coffee,1,70,Guest,Wallet
+11361,2025-01-30,Maadi,Latte,Coffee,1,75,Guest,Wallet
+11362,2025-01-30,Zamalek,Mint Tea,Tea,1,30,Member,Wallet
+11363,2025-01-30,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+11364,2025-01-30,Zamalek,Latte,Coffee,2,75,Guest,Wallet
+11365,2025-01-30,Zamalek,Mango Smoothie,Cold drinks,3,90,Guest,Card
+11366,2025-01-30,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11367,2025-01-30,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11368,2025-01-30,Zamalek,Cheesecake,Pastry,1,95,Member,Card
+11369,2025-01-30,  zamalek ,Spanish Latte,Coffee,1,85,Guest,Cash
+11370,2025-01-30,Zamalek,Mint Tea,Tea,1,30,Guest,Wallet
+11371,2025-01-30,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+11372,2025-01-30,Zamalek,Chocolate Muffin,Pastry,1,60,Member,Cash
+11373,2025-01-30,Zamalek,Croissant,Pastry,2,50,Member,Cash
+11374,2025-01-30,Zamalek,Latte,Coffee,2,75,Guest,Card
+11375,2025-01-30,Zamalek,Cappuccino,Coffee,1,70,Guest,Card
+11376,2025-01-30,Zamalek,Cheesecake,Pastry,2,95,Guest,Cash
+11377,2025-01-30,  zamalek ,Iced Latte,Cold drinks,1,80,Guest,Cash
+11378,2025-01-30,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+11379,2025-01-30,Nasr City,Croissant,Pastry,2,50,Guest,Card
+11380,2025-01-30,  nasr city ,Chocolate Muffin,Pastry,1,60,Guest,Wallet
+11381,2025-01-30,Nasr City,Cappuccino,Coffee,1,70,Member,Card
+11382,2025-01-30,Nasr City,Mint Tea,Tea,2,30,Member,Wallet
+11383,2025-01-30,Nasr City,Espresso,Coffee,2,45,Guest,Cash
+11384,2025-01-30,Nasr City,Espresso,Coffee,3,45,Member,Wallet
+11384,2025-01-30,Nasr City,Espresso,Coffee,3,45,Member,Wallet
+11385,2025-01-30,Nasr City,Cappuccino,Coffee,1,70,Guest,Wallet
+11386,2025-01-30,Nasr City,Cappuccino,Coffee,1,70,Guest,Card
+11387,2025-01-30,Nasr City,Latte,Coffee,1,75,Guest,Cash
+11388,2025-01-30,Nasr City,Green Tea,Tea,2,35,Guest,Card
+11389,2025-01-30,Nasr City,Green Tea,Tea,2,35,Guest,Wallet
+11390,30/01/2025,Nasr City,Latte,Coffee,1,75,Member,Wallet
+11391,2025-01-30,Nasr City,Turkish Coffee,Coffee,1,40,Member,Card
+11392,2025-01-30,Nasr City,Spanish Latte,Coffee,1,85,Member,Card
+11393,2025-01-30,Nasr City,Iced Latte,Cold drinks,1,80,Member,Wallet
+11394,2025-01-30,Nasr City,Green Tea,Tea,1,35,Guest,Card
+11395,2025-01-30,Nasr City,Espresso,Coffee,1,45,Member,Cash
+11396,2025-01-30,Heliopolis,Cappuccino,Coffee,1,70,Member,Wallet
+11397,2025-01-30,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Wallet
+11398,2025-01-30,Heliopolis,Latte,Coffee,1,75,Guest,Wallet
+11399,2025-01-30,Heliopolis,Latte,Coffee,1,75,Guest,Card
+11400,2025-01-30,Heliopolis,Latte,Coffee,1,75,Guest,Cash
+11401,2025-01-30,Heliopolis,Cappuccino,Coffee,1,70,Guest,Card
+11402,2025-01-30,Heliopolis,Espresso,Coffee,1,45,Guest,Cash
+11403,2025-01-30,Heliopolis,Mint Tea,Tea,1,30,Guest,Card
+11404,2025-01-30,Heliopolis,Croissant,Pastry,1,50,Guest,Wallet
+11405,2025-01-30,Heliopolis,Croissant,Pastry,1,50,Member,Cash
+11406,2025-01-30,Heliopolis,Mint Tea,Tea,1,30,Member,Wallet
+11407,2025-01-31,Maadi,Chocolate Muffin,Pastry,1,60,Member,Cash
+11408,2025-01-31,MAADI,Espresso,Coffee,1,45,Guest,Card
+11409,2025-01-31,Maadi,Espresso,Coffee,2,45,Guest,Cash
+11410,2025-01-31,Maadi,Turkish Coffee,Coffee,1,40,Guest,Card
+11411,2025-01-31,Maadi,Turkish Coffee,Coffee,1,40,Guest,Wallet
+11412,2025-01-31,Maadi,Latte,Coffee,1,75,Guest,Wallet
+11413,2025-01-31,Maadi,Chocolate Muffin,Pastry,1,60,Member,Card
+11414,2025-01-31,Maadi,Latte,Coffee,1,75,Guest,Cash
+11415,2025-01-31,Maadi,Croissant,Pastry,1,50,Member,Wallet
+11416,2025-01-31,Maadi,Latte,Coffee,1,75,Guest,Card
+11417,2025-01-31,Maadi,Croissant,Pastry,2,50,Member,Cash
+11418,2025-01-31,Maadi,Turkish Coffee,Coffee,2,40,Guest,Wallet
+11419,31/01/2025,MAADI,Espresso,Coffee,1,45,Member,Card
+11420,2025-01-31,Maadi,Turkish Coffee ,Coffee,1,40,Guest,Cash
+11421,31/01/2025,Zamalek,Croissant,Pastry,1,50,Guest,Cash
+11422,2025-01-31,Zamalek,Spanish Latte,Coffee,3,85,Guest,Wallet
+11422,2025-01-31,Zamalek,Spanish Latte,Coffee,3,85,Guest,Wallet
+11423,2025-01-31,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+11424,2025-01-31,Zamalek,Latte,Coffee,1,75,Member,Cash
+11425,2025-01-31,Zamalek,Iced Latte,Cold drinks,1,80,Member,Card
+11426,2025-01-31,Zamalek,Cheesecake ,Pastry,1,95,Member,Cash
+11427,2025-01-31,Zamalek,Mint Tea,Tea,2,30,Guest,Card
+11428,2025-01-31,Zamalek,Latte,Coffee,1,75,Member,Wallet
+11429,2025-01-31,Zamalek,Turkish Coffee,Coffee,1,40,Member,Card
+11430,2025-01-31,Zamalek,Croissant,Pastry,1,50,Guest,Cash
+11431,2025-01-31,Zamalek,Lemon Mint,Cold drinks,1,55,Member,Card
+11432,2025-01-31,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Wallet
+11432,2025-01-31,Zamalek,Lemon Mint,Cold drinks,1,55,Guest,Wallet
+11433,2025-01-31,Zamalek,Latte,Coffee,3,75,Member,Card
+11434,2025-01-31,Zamalek,Espresso,Coffee,1,45,Member,Card
+11435,2025-01-31,Zamalek,Spanish Latte,Coffee,1,85,Guest,Cash
+11436,2025-01-31,Zamalek,Croissant,Pastry,2,50,Member,Cash
+11437,2025-01-31,Zamalek,Espresso,Coffee,2,45,Guest,Cash
+11438,2025-01-31,Zamalek,Latte,Coffee,1,75,Guest,Card
+11439,2025-01-31,Zamalek,Latte ,Coffee,1,75,Guest,Cash
+11440,2025-01-31,Zamalek,Latte,Coffee,2,75,Guest,Card
+11441,2025-01-31,Zamalek,Cappuccino,Coffee,1,70,Guest,Wallet
+11442,2025-01-31,NASR CITY,Espresso,Coffee,2,45,Member,Card
+11443,2025-01-31,Nasr City,Lemon Mint,Cold drinks,1,55,Member,Cash
+11444,2025-01-31,Nasr City,Turkish Coffee,Coffee,1,40,Member,Card
+11445,2025-01-31,Nasr City,Espresso,Coffee,1,45,Member,Card
+11446,2025-01-31,Nasr City,Latte,Coffee,1,75,Guest,Wallet
+11447,2025-01-31,Nasr City,Cappuccino,Coffee,3,70,Member,Cash
+11448,2025-01-31,Nasr City,Lemon Mint,Cold drinks,2,55,Member,Wallet
+11449,2025-01-31,Nasr City,Spanish Latte,Coffee,1,85,Guest,Card
+11450,2025-01-31,Nasr City,Turkish Coffee,Coffee,1,40,Member,Card
+11451,2025-01-31,Nasr City,Cheesecake,Pastry,1,95,Guest,
+11452,2025-01-31,Nasr City,Latte,Coffee,1,75,Member,Cash
+11453,2025-01-31,Nasr City,Espresso,Coffee,1,45,Guest,Cash
+11454,2025-01-31,Heliopolis,Turkish Coffee,Coffee,4,40,Guest,Card
+11455,2025-01-31,  heliopolis ,Green Tea,Tea,2,35,Guest,Card
+11456,2025-01-31,  heliopolis ,Cappuccino,Coffee,1,70,Guest,Card
+11457,2025-01-31,Heliopolis,Lemon Mint,Cold drinks,1,55,Member,Card
+11458,2025-01-31,Heliopolis,Cappuccino,Coffee,1,70,Member,Card
+11459,2025-01-31,Heliopolis,Cappuccino,Coffee,2,70,Guest,Cash
+11460,2025-01-31,Heliopolis,Espresso,Coffee,1,45,Guest,Cash
+11461,2025-01-31,Heliopolis,Spanish Latte ,Coffee,1,85,Guest,Cash
+11462,2025-01-31,Heliopolis,Turkish Coffee,Coffee,1,40,Member,Wallet
+11463,2025-02-01,Maadi,Espresso,Coffee,1,45,Member,Card
+11464,2025-02-01,Maadi,Green Tea,Tea,2,35,Guest,Cash
+11465,2025-02-01,Maadi,Cheesecake,Pastry,4,95,Guest,Card
+11466,2025-02-01,Maadi,Green Tea ,Tea,2,35,Member,Card
+11467,2025-02-01,Maadi,Iced Latte,Cold drinks,1,80,Guest,Cash
+11468,2025-02-01,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+11469,2025-02-01,Maadi,Cappuccino,Coffee,1,70,Guest,Card
+11470,2025-02-01,Zamalek,Cappuccino ,Coffee,1,70,Member,Card
+11471,2025-02-01,Zamalek,Espresso,Coffee,2,45,Guest,
+11472,2025-02-01,Zamalek,Croissant,Pastry,1,50,Guest,Cash
+11473,2025-02-01,Zamalek,Turkish Coffee,Coffee,1,40,Guest,Card
+11474,2025-02-01,Zamalek,Green Tea,Tea,1,35,Member,Wallet
+11475,2025-02-01,Zamalek,Croissant,Pastry,1,50,Guest,Cash
+11476,2025-02-01,Zamalek,Spanish Latte,Coffee,1,85,Guest,Wallet
+11477,01/02/2025,  zamalek ,Mango Smoothie,Cold drinks,1,90,Guest,Cash
+11478,2025-02-01,Zamalek,Chocolate Muffin,Pastry,1,60,Guest,Card
+11479,2025-02-01,ZAMALEK,Cappuccino ,Coffee,1,70,Member,Cash
+11480,2025-02-01,Zamalek,Cappuccino,Coffee,3,70,Guest,Cash
+11481,2025-02-01,Zamalek,Iced Latte,Cold drinks,2,80,Guest,Card
+11482,2025-02-01,Zamalek,Croissant,Pastry,1,50,Member,Wallet
+11483,2025-02-01,Zamalek,Iced Latte,Cold drinks,1,80,Guest,Card
+11484,2025-02-01,ZAMALEK,Chocolate Muffin,Pastry,3,60,Guest,Card
+11485,2025-02-01,Zamalek,Croissant,Pastry,2,50,Guest,Card
+11486,2025-02-01,Nasr City,Chocolate Muffin,Pastry,1,60,Guest,Cash
+11487,2025-02-01,Nasr City,Mint Tea,Tea,2,30,Guest,Card
+11488,2025-02-01,Nasr City,Latte,Coffee,2,75,Guest,Cash
+11489,2025-02-01,Nasr City,Espresso,Coffee,1,45,Member,Card
+11490,2025-02-01,Nasr City,Turkish Coffee,Coffee,4,40,Guest,Cash
+11491,2025-02-01,Nasr City,Espresso,Coffee,3,45,Guest,Wallet
+11492,2025-02-01,Nasr City,Croissant,Pastry,2,50,Member,Wallet
+11493,2025-02-01,Nasr City,Spanish Latte,Coffee,1,85,Guest,Cash
+11494,2025-02-01,Nasr City,Cheesecake ,Pastry,1,95,Member,Card
+11495,2025-02-01,Heliopolis,Latte,Coffee,1,75,Guest,Card
+11496,2025-02-01,Heliopolis,Cappuccino,Coffee,1,70,Guest,Cash
+11497,2025-02-01,Heliopolis,Lemon Mint,Cold drinks,1,55,Member,Card
+11498,2025-02-01,Heliopolis,Mango Smoothie,Cold drinks,2,90,Guest,Cash
+11498,2025-02-01,Heliopolis,Mango Smoothie,Cold drinks,2,90,Guest,Cash
+11499,2025-02-01,Heliopolis,Chocolate Muffin,Pastry,3,60,Guest,Cash
+11500,2025-02-01,Heliopolis,Mint Tea,Tea,3,30,Member,Card

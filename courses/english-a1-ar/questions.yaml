@@ -1,0 +1,320 @@
+q1:
+  text: أي جمل صحيحة لتقول عمرك؟
+  show: 4
+  options:
+    o0916f0: I'm 25 years old.
+    od01224: I am have 25.
+    o9dfbf3: I have 25 years.
+    ob494df: My age 25.
+    od613de: I 25 years.
+    o31a9e5: I'm 25.
+q2:
+  text: أي تحيات تناسب الساعة 9 صباحًا؟
+  show: 4
+  options:
+    o91412c: Goodbye!
+    oaef169: Good morning!
+    o43c835: Good afternoon!
+    o161313: Good night!
+    o367a0c: Good evening!
+    o97d507: Hello!
+q3:
+  text: أي أسئلة صحيحة؟
+  show: 4
+  options:
+    oabcbca: What your name?
+    ob546aa: How you are?
+    o5ebd16: From where you are?
+    oaf79d1: Where are you from?
+    o55eda3: Where you from?
+    obafbcf: What's your name?
+q4:
+  text: كيف تُكتب الأرقام 13 و 30؟
+  show: 4
+  options:
+    o03a874: thirty
+    ob9a8d3: thirdy
+    o6f9116: thirteen
+    o7cee86: threeteen
+    o3b89ca: therty
+    ofd54ff: treeten
+q5:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o15793d: She are tired.
+    o0a24b6: I am a student.
+    o878328: I is a student.
+    o978f0f: She is tired.
+    o1935ce: I student.
+    o39604f: She tired.
+q6:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o082ae5: He's an engineer.
+    o544045: It's an university.
+    o4b2eaf: He's a engineer.
+    o30ca71: It's a university.
+    o052f11: He's engineer.
+    o084e56: It's university.
+q7:
+  text: أي أسئلة صحيحة؟
+  show: 4
+  options:
+    oe1140e: She is your sister?
+    o8ba72d: Are they at home?
+    o3e440a: They are at home?
+    oec0855: Are they is at home?
+    o4209ed: Is she your sister?
+    o5a91ec: Is she are your sister?
+q8:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    ob839eb: These are my keys.
+    oc2b4a0: That is a big house.
+    of9af56: Those is my shoes.
+    o02556d: This are my keys.
+    oda7012: That is a house big.
+    o3e2b38: These is my key.
+q9:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o3fa049: She work in a bank.
+    o3741d8: She working in a bank.
+    o70557a: He watch TV.
+    o8db5c7: She works in a bank.
+    o69d8f5: He watchs TV every night.
+    o664313: He watches TV every night.
+q10:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o26d43c: Does she speak French?
+    ob15dad: Does she speaks French?
+    of119b1: He doesn't like coffee.
+    o30769c: He doesn't likes coffee.
+    ofaae26: Do she speak French?
+    o683e79: He don't like coffee.
+q11:
+  text: أين نضع never؟
+  show: 4
+  options:
+    od503bd: Never I eat meat.
+    o2996c3: She never is late.
+    oa88ca6: I never eat meat.
+    o5e42e4: I eat never meat.
+    oea3b58: I eat meat never.
+    o523a0e: She is never late.
+q12:
+  text: أي حروف جر صحيحة؟
+  show: 4
+  options:
+    o167f75: on Friday
+    o151a6b: in 7 o'clock
+    oe57d1a: on July
+    odc72a0: at the morning
+    o4434c6: in Friday
+    oc00e1c: in the morning
+q13:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o202ed0: She has two children.
+    of9644f: She haves two children.
+    o036c9e: Have you a car?
+    o72ee53: Do you have a car?
+    o6b19f9: She have two childs.
+    ob22387: Do you has a car?
+q14:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oc99303: There house is big.
+    ob5dcc3: This is my brother's room.
+    o0d659d: This is the room of my brother's.
+    o7d34f0: Their house is big.
+    o8d44b4: This is my brothers room's.
+    of80f34: They house is big.
+q15:
+  text: أي جموع صحيحة؟
+  show: 4
+  options:
+    o632c07: citys
+    ob5a76d: women
+    o232aad: mans
+    od7ea76: cities
+    o60a4c6: womans
+    o1d1e48: childs
+q16:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oc05165: Its a nice day.
+    o99b0fb: It's a nice day.
+    o8a06e0: The dog wants its food.
+    oc0af40: The dog wants it food.
+    ob3fed3: It a nice day.
+    o099670: The dog wants it's food.
+q17:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oea3760: Is a bank near my house.
+    of9b6b2: It has a bank near my house.
+    o1ceb52: There is two parks in my city.
+    o01a385: There are a bank.
+    of8264d: There are two parks in my city.
+    o58cb6b: There is a bank near my house.
+q18:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o1b1b63: She can to speak English.
+    o52d09c: She can speak English.
+    od27a25: She cans speak English.
+    oe5893e: Do you can help me?
+    o370d52: She can speaks English.
+    oaa90fc: Can you help me?
+q19:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oeab1a9: There isn't any chairs.
+    o93f774: Is there any shops here?
+    o04583c: Are there a shops here?
+    oa233e8: Are there any shops here?
+    o073a1a: There aren't some chairs.
+    o195539: There aren't any chairs.
+q20:
+  text: أي جمل صحيحة للاتجاهات؟
+  show: 4
+  options:
+    odaff9b: Go straight on.
+    o281450: Don't to turn right.
+    ob2d3e4: Turning left.
+    oc322ed: You turn to left at bank.
+    oe6a2f6: Turn left at the bank.
+    o7a2922: Go to straight.
+q21:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o1e0c9f: She cooking now.
+    od3271c: She is cook now.
+    o9c1b52: She's cooking now.
+    o0d2c54: What are you doing?
+    o26eaa0: What do you doing?
+    ob58d7b: What you are doing?
+q22:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oecf7c8: I'd like some water, please.
+    obe1fba: I'd like an water, please.
+    ob159ef: I'd like some waters.
+    oa9aa6d: I want waters.
+    o7837db: I'm wanting a coffee.
+    oe2f3e3: I want a coffee.
+q23:
+  text: أي أسئلة صحيحة؟
+  show: 4
+  options:
+    odd1480: How much egg?
+    o8d33cb: How many eggs do we need?
+    o9daf9c: How many rice do we need?
+    o129bd9: How much rice do we need?
+    o6f31eb: How much eggs do we need?
+    o7b849f: How many rices?
+q24:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o49c083: They're sittting.
+    o83f087: He's swiming.
+    od000d8: He's swimmming.
+    oc45757: They're sitting.
+    o4f1cbc: They're siting.
+    o587b04: He's swimming.
+q25:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oad3d27: We were at home yesterday.
+    o8a1c6f: I went to Cairo last week.
+    o3a0c41: We was at home yesterday.
+    o299762: I go to Cairo last week.
+    o96296a: I goed to Cairo.
+    oc93133: We were at home yesterday ago.
+q26:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oacfa5a: Did you ate breakfast?
+    of44764: She didn't see him.
+    o1137f6: She didn't saw him.
+    o5c0846: You did eat breakfast?
+    o37311e: She not saw him.
+    o036076: Did you eat breakfast?
+q27:
+  text: أي تعبيرات صحيحة للماضي؟
+  show: 4
+  options:
+    odeb8ef: in last year
+    ob1c03d: two years ago
+    o58c51e: last night
+    oec577b: before two years ago
+    o968c1f: the last night
+    o87acf9: ago two years
+q28:
+  text: أي أفعال ماضيها صحيح؟
+  show: 4
+  options:
+    of62c2e: see → seed
+    o4d8aea: take → taked
+    ob22182: buy → bought
+    o9e78ef: eat → eated
+    o2fafb2: eat → ate
+    ob55e52: buy → buyed
+q29:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    ob84de2: It has three rooms in my flat.
+    ob6a637: There are three rooms in my flat.
+    o38caee: There is three rooms in my flat.
+    oe00176: My sister works in a hospital.
+    of76f7f: My sister work in a hospital.
+    oc69ce6: My sister working in hospital.
+q30:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o4343d3: I not go out yesterday.
+    oeb79a5: Can you to speak slowly?
+    ob50e85: You can speak slowly please?
+    oadb3ee: Can you speak slowly, please?
+    oe24e0f: I didn't went out yesterday.
+    oa3c9e5: I didn't go out yesterday.
+q31:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o958540: I engineer.
+    occe1d5: She has 30 years.
+    oa4eb07: I'm engineer.
+    o99f53c: She's 30 years old.
+    o6e3eef: I'm an engineer.
+    o0993d4: She is 30 years.
+q32:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o43bbaf: He usually plays on Fridays.
+    o499fce: Look, they playing football!
+    odd5151: He plays usually on Fridays.
+    o067682: He usually is playing on Fridays.
+    oeec841: Look, they're playing football!
+    odd9397: Look, they play football now!

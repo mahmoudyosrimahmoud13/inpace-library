@@ -1,0 +1,263 @@
+id: english-a1-ar
+title: 'الإنجليزي من الصفر: مستوى A1'
+version: 1
+language: ar
+description: 'كورس إنجليزي للمبتدئين تمامًا من متحدثي العربية: الشرح بالعربي البسيط، والأمثلة والتمارين بالإنجليزي.
+  الحروف والتحية، to be، المضارع البسيط، have، there is، can، المضارع المستمر، والماضي البسيط، مع الأخطاء التي يقع
+  فيها العرب عادة، وتمارين بإجاباتها، واختبار في نهاية كل وحدة. الخطة: 4 أسابيع، 30 إلى 45 دقيقة يوميًا.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'الأيام 1-3: الحروف والتحية وتقديم نفسك'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: الحروف والأصوات
+    file: lessons/m1-l2.md
+    minutes: 30
+  - id: m1-l3
+    title: التحية وتقديم نفسك
+    file: lessons/m1-l3.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'سجّل رسالة صوتية (من زر التسجيل في المهمة) تقدم فيها نفسك بالإنجليزي: اسمك، من أين أنت، أين تعيش، عمرك،
+      عملك، وتهجئة اسمك. 30 ثانية تكفي.'
+  - id: m1-explain
+    type: explain
+    prompt: 'Write 5 sentences in English about yourself: your name, country, city, age and job.'
+    min_words: 20
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'الأيام 4-6: الفعل to be'
+  lessons:
+  - id: m2-l1
+    title: am, is, are
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: a / an، this / that، والصفات
+    file: lessons/m2-l2.md
+    minutes: 25
+  - id: m2-l3
+    title: أين؟ ومن؟ كلمات السؤال
+    file: lessons/m2-l3.md
+    minutes: 20
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'صوّر 5 أشياء حولك واكتب تحت كل صورة جملة: This is a... / That is an... مع صفة. مثال: This is a black
+      phone. ارفع الصور والجمل (أو سجّلها صوتيًا).'
+  - id: m2-explain
+    type: explain
+    prompt: 'Write 6 sentences about your family or friends with am, is, are, isn''t and aren''t. Example: My brother
+      is a student.'
+    min_words: 25
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'الأيام 7-9: المضارع البسيط وروتينك اليومي'
+  lessons:
+  - id: m3-l1
+    title: 'أفعل كل يوم: Present simple'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'النفي والسؤال: do و does'
+    file: lessons/m3-l2.md
+    minutes: 30
+  - id: m3-l3
+    title: الأيام والشهور والوقت
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اكتب روتينك اليومي في 8 جمل على الأقل بالمضارع البسيط مع ساعات، وسجّله صوتيًا وأنت تقرؤه. ارفع النص
+      والتسجيل.
+  - id: m3-explain
+    type: explain
+    prompt: Write about a friend's or family member's daily routine in 6 sentences. Use he or she and remember the
+      s.
+    min_words: 30
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'الأيام 10-12: have، الملكية، العائلة، والجمع'
+  lessons:
+  - id: m4-l1
+    title: have و has
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: my, your... و 's
+    file: lessons/m4-l2.md
+    minutes: 25
+  - id: m4-l3
+    title: جمع الأسماء
+    file: lessons/m4-l3.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: ارسم شجرة عائلتك (أو عائلة مشهورة) واكتب 8 جمل بالإنجليزي عنها باستخدام have/has و my/his/her و 's.
+      ارفع الصورة والجمل.
+  - id: m4-explain
+    type: explain
+    prompt: 'Describe your home in 6 sentences: how many rooms it has, what''s in your room, and whose things are
+      where.'
+    min_words: 30
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'الأيام 13-15: there is / there are، الأماكن، و can'
+  lessons:
+  - id: m5-l1
+    title: there is / there are
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: حروف الجر للمكان والاتجاهات
+    file: lessons/m5-l2.md
+    minutes: 25
+  - id: m5-l3
+    title: can و can't
+    file: lessons/m5-l3.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: ارسم خريطة بسيطة لشارعك أو حيك، واكتب 6 جمل بـ there is / there are وحروف الجر، ثم اكتب اتجاهات من بيتك
+      لمكان قريب. ارفع الرسم والنص.
+  - id: m5-explain
+    type: explain
+    prompt: 'Write 6 sentences about what you can and can''t do. Example: I can cook pasta, but I can''t swim.'
+    min_words: 25
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'الأيام 16-18: ما يحدث الآن، الأكل، والتسوق'
+  lessons:
+  - id: m6-l1
+    title: 'الآن: Present continuous'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'الأكل: معدود وغير معدود'
+    file: lessons/m6-l2.md
+    minutes: 30
+  - id: m6-l3
+    title: like + ing، وتمرين شامل
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'سجّل حوارًا قصيرًا (يمكن مع صديق أو وحدك بصوتين) في مقهى أو محل: تطلب، تسأل عن السعر، وتدفع. ارفع التسجيل
+      والنص مكتوبًا.'
+  - id: m6-explain
+    type: explain
+    prompt: Write about what people around you are doing right now (5 sentences) and what they usually do (3 sentences).
+    min_words: 30
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'الأيام 19-21: الماضي'
+  lessons:
+  - id: m7-l1
+    title: was و were
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'الماضي البسيط: الأفعال المنتظمة والشاذة'
+    file: lessons/m7-l2.md
+    minutes: 35
+  - id: m7-l3
+    title: تمرين على الماضي
+    file: lessons/m7-l3.md
+    minutes: 20
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: اكتب ما فعلته في آخر عطلة أسبوع في 8 جمل على الأقل بالماضي (مع أفعال شاذة)، وسجّله صوتيًا. ارفع النص
+      والتسجيل.
+  - id: m7-explain
+    type: explain
+    prompt: 'Write about a good day from your childhood: where you were, who was with you and what you did (6+ sentences).'
+    min_words: 35
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'الأيام 22-24: مراجعة واختبار A1'
+  lessons:
+  - id: m8-l1
+    title: مراجعة كل القواعد في صفحة
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: اختبار تجريبي A1
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'سجّل نفسك 1 إلى 2 دقيقة تتكلم بالإنجليزي عن: نفسك، عائلتك، روتينك، وما فعلته الأسبوع الماضي. ارفع التسجيل.'
+  - id: m8-explain
+    type: explain
+    prompt: 'Write about yourself in about 60 words: who you are, where you live, your routine and your last weekend.'
+    min_words: 50
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70

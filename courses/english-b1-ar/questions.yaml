@@ -1,0 +1,320 @@
+q1:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    of3d93d: I've been waiting for an hour.
+    of8f284: She works here since May.
+    od85fa4: I'm waiting for an hour.
+    odf9608: She's working here for May.
+    ode96f2: I've been waiting since an hour.
+    o7c3be9: She's been working here since May.
+q2:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oc1ba47: I was used to live in Alex.
+    o0beaf3: I use to live in Alex.
+    o7766b2: Did you used to play chess?
+    o918f0c: I used to live in Alex.
+    ob683e5: Did you use to play chess?
+    o25fcb9: I would live in Alex as a child.
+q3:
+  text: أي جمل تعني 'معتاد على'؟
+  show: 4
+  options:
+    of65683: I'm used to working at night.
+    oa456d1: I'm use to working at night.
+    odfa751: He's used to hear the noise.
+    oa2105f: I used to working at night.
+    o18159a: He's used to the noise.
+    o95f878: He used to the noise now.
+q4:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o25aeaa: I've drank three cups.
+    o24b082: I've drunk three cups of coffee today.
+    ob696d2: I've known her for ten years.
+    o7ebfc9: I know her for ten years.
+    o002b82: I've been drinking three cups of coffee today.
+    o990861: I've been knowing her for ten years.
+q5:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o1ffba4: When we got there, the shop had closed.
+    oabc9c3: I had never eaten sushi before that night.
+    o8b342c: When we got there, the shop had close.
+    ofe6743: When we got there, the shop has closed.
+    ofcb2b3: I had never ate sushi before.
+    o9a45f8: I have never eaten sushi before that night.
+q6:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oe0929f: Her eyes were red because she had cried for hours ago.
+    o37431c: Her eyes were red because she has been crying.
+    o424090: Her eyes were red because she had been crying.
+    o6f759a: He was out of breath because he had run since an hour.
+    o1d6759: He was out of breath because he had been running.
+    ofc0b36: He had been run.
+q7:
+  text: '''When I arrived, she had left'' تعني:'
+  show: 4
+  options:
+    o4f2ee8: She left before I arrived.
+    oa5249f: She left after I arrived.
+    oc59d4e: She will leave when I arrive.
+    o9d19e8: I didn't see her when I arrived.
+    o1e803b: We left together.
+    od8f9d6: She was leaving when I arrived.
+q8:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oe3c3b5: By the time I woke up, everyone had gone.
+    ob3aca2: It turned out that he has been lied.
+    oe5983d: By the time I woke up, everyone has gone.
+    of2ee6b: By the time I woke up, everyone went already before.
+    o3dfd81: It turned out that he had lied.
+    odf0f7b: It turned out that he had lie.
+q9:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    of38aca: If I had a car, I would drive to work.
+    o733add: If I were you, I apologise yesterday.
+    o86312c: If I would have a car, I would drive.
+    o526b9c: If I was you, I will apologise.
+    o006d3e: If I have a car, I would drive to work.
+    o069dd4: If I were you, I'd apologise.
+q10:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o54754c: If we left earlier, we wouldn't have missed the train.
+    o30fe7a: If we had left earlier, we wouldn't have missed the train.
+    ob71d11: She will have come if you invited her.
+    o3986da: She would have come if you had invited her.
+    o81440d: She would come if you had invited her yesterday.
+    ob422ce: If we would have left earlier, we didn't miss it.
+q11:
+  text: 'تندم أنك قلت شيئًا أمس:'
+  show: 4
+  options:
+    o8b2318: I wish I wouldn't said that.
+    o1636c1: I wish I didn't say that yesterday.
+    o2ec251: If only I haven't said that.
+    ofa2a3a: If only I hadn't said that.
+    o5c6989: I wish I hadn't said that.
+    oe62998: I wish I don't say that.
+q12:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o95de2e: I wish it will be the weekend.
+    obed60e: I wish I can swim.
+    o7e4368: I wish I could swim.
+    odd22d7: I wish I could swimming.
+    o7e94c3: I wish it were the weekend.
+    o753b4c: I wish it is the weekend.
+q13:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oe4671b: My phone stolen last night.
+    ofbebba: My phone was stole last night.
+    o835f44: English is spoken all over the world.
+    o53fc31: My phone was stolen last night.
+    of5aad4: English is speaking all over the world.
+    ob68e6e: English speaks all over the world.
+q14:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    ocec42d: The road is be repaired.
+    o232f8c: The road is repairing.
+    o750d00: The meeting has postponed by them.
+    o9a4c93: The meeting has been postpone.
+    o15f1da: The road is being repaired.
+    o50fd2e: The meeting has been postponed.
+q15:
+  text: الحلاق قص شعرك. أي جمل صحيحة؟
+  show: 4
+  options:
+    o7e5f05: I had cut my hair by the barber.
+    o7472e3: I was cut my hair.
+    ofbebbf: I had my hair cut.
+    of5e330: I got my hair cut.
+    o28e086: I had my hair cutting.
+    o5d89b0: I cut my hair at the barber's.
+q16:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    of5df3c: The results will announced on Monday.
+    o593686: The form must be signed.
+    o88aae2: The results will be announce.
+    o30cb6b: The results will be announced on Monday.
+    oa0a044: The form must signed.
+    ob3d3d6: The form must be sign.
+q17:
+  text: '"I''m busy," he said. أي نقل صحيح؟'
+  show: 4
+  options:
+    o98af7f: He told me he was busy.
+    o7aae66: He said he was busy.
+    ofcd5ba: He told that he is busy.
+    o7635a9: He told he was busy.
+    o9ab078: He said me he was busy.
+    of89888: He said he is busy yesterday.
+q18:
+  text: '"Where do you work?" she asked. أي نقل صحيح؟'
+  show: 4
+  options:
+    o46d991: She asked where I worked.
+    o62d8a1: She asked me where do I work.
+    oc50fba: She said me where I worked.
+    oeb02bc: She asked where I did work?
+    o1e0754: She asked where did I work.
+    od8bfa5: She asked me where I worked.
+q19:
+  text: '"Don''t be late," the manager said to us. أي نقل صحيح؟'
+  show: 4
+  options:
+    o804266: The manager told us don't be late.
+    o0510b7: The manager told us to not late.
+    o5ae7ae: The manager asked us not to be late.
+    o83fc91: The manager told not be late.
+    o2b245f: The manager told us not to be late.
+    oae3e7a: The manager said us not to be late.
+q20:
+  text: '"I''ll call you tomorrow," she said. أي نقل صحيح؟'
+  show: 4
+  options:
+    o5d260b: She said she would called me.
+    oc1172e: She told she would call me.
+    oba5138: She promised calling me.
+    oc47c30: She said she will call me tomorrow yesterday.
+    o4afcd4: She promised to call me the next day.
+    o05bf91: She said she would call me the next day.
+q21:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o819499: The woman who works here is my aunt.
+    o5463b7: The woman which works here is my aunt.
+    o3f5c42: This is the town where I grew up.
+    o3a6bce: This is the town where I grew up in it.
+    oe901b2: This is the town which I grew up.
+    oee5ed5: The woman works here is my aunt.
+q22:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o1dc5f0: The film we saw it was boring.
+    obb99e8: He's the man whose son won the prize.
+    o178957: The film we saw was boring.
+    oc18171: He's the man who's son won the prize.
+    o504e32: He's the man that his son won.
+    o923d8a: The film which we saw it was boring.
+q23:
+  text: 'أنت متأكد أن الكلام غير صحيح:'
+  show: 4
+  options:
+    o1cbc7c: That must not to be true.
+    o5e4738: That can't be right.
+    o515e08: That can't be true.
+    o1af091: That mustn't be true.
+    odbbc20: That can't to be true.
+    oa4e35f: That doesn't must be true.
+q24:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o45416e: They might have miss the train.
+    od937cf: They might missed the train.
+    o93d05d: She must has forgotten.
+    o0b6d01: They might have missed the train.
+    oe8af35: She must forgot.
+    o59e3f3: She must have forgotten.
+q25:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    obffe1c: We've run out of sugar.
+    odefc2d: She turned down the job offer.
+    o4e7922: We've run out sugar.
+    obe184c: We've run off sugar.
+    oec9592: She turned down it.
+    ob596ef: She turned off the job offer.
+q26:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o07bb0a: Could you pick me up at 7?
+    ob5ed5d: Could you pick up me at 7?
+    o5ecd18: I'll look after the kids.
+    o3ea719: I'll look after of the kids.
+    o96cead: I'll look for the kids while you're out.
+    o3e941a: Could you pick me at 7 up?
+q27:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    of65aa9: Despite the traffic, we arrived on time.
+    o52b626: Despite of the traffic, we arrived on time.
+    od7c51a: Although he was tired, he kept working.
+    o034376: Although of being tired, he kept working.
+    o69164f: Although tired he was, but he kept working.
+    o232aba: Despite there was traffic, we arrived.
+q28:
+  text: إيميل يبدأ 'Dear Sir or Madam'. أي ختام صحيح؟
+  show: 4
+  options:
+    ob52f06: Bye for now,
+    o214fc2: Yours friendly,
+    oc43aa9: Love, Mona
+    o34c3c4: See ya,
+    oab09ec: Yours faithfully, Mona Hassan
+    o802db3: Yours faithfully,
+q29:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    o04f4e0: If I knew, I would have told you yesterday.
+    offc181: I'm learning English since 2022.
+    o823377: If I would have known, I told you.
+    o03e551: If I had known, I would have told you.
+    o1c10f9: I've been learning English since 2022.
+    obf648d: I've been learning English for 2022.
+q30:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    of90775: He said me he was making a mistake.
+    of36b32: He told that he makes a mistake.
+    o2816fd: The bakery is run from their kitchen.
+    oec9869: The bakery is running from their kitchen by them.
+    oecb073: He told me he was making a mistake.
+    oceaf58: The bakery runs from their kitchen by them.
+q31:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    oaf649a: That must to be his brother.
+    oca12c8: She use to work in a bank.
+    o66a7ab: That must be his brother.
+    oee518c: She was used to work in a bank.
+    oe914a0: That mustn't be his brother, I'm sure he isn't.
+    o33b1d8: She used to work in a bank.
+q32:
+  text: أي جمل صحيحة؟
+  show: 4
+  options:
+    of73322: Despite it was expensive, we bought it.
+    o620264: I wish I had more free time.
+    oa2f0c6: I wish I have more free time.
+    o7515fb: I wish I will have more free time.
+    o6dcbe7: Although it was expensive, we bought it.
+    o5048b9: Although it was expensive, but we bought it.

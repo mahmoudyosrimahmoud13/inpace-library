@@ -1,0 +1,289 @@
+id: data-analytics-beginners
+title: 'Data analytics for beginners: Excel, Power BI and Python'
+version: 1
+language: en
+description: 'A four-week beginner course on one real-looking dataset (a year of coffee shop sales): thinking like
+  an analyst, spreadsheets (formulas, cleaning, pivot tables, charts), Power BI (Power Query, a data model, DAX
+  measures, a report) and Python with pandas, ending with a portfolio project and junior analyst interview questions.
+  Real screenshots from LibreOffice Calc and JupyterLab, and the data files to follow along. Plan: 4 weeks, about
+  1 to 1.5 hours a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Days 1-2: Thinking like an analyst'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: What a data analyst really does
+    file: lessons/m1-l2.md
+    minutes: 25
+  - id: m1-l3
+    title: Meet the dataset
+    file: lessons/m1-l3.md
+    minutes: 20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Download the files and open coffee_sales_2025.csv. Write 5 specific business questions this data can
+      answer (measure, dimension, time), and 1 question it can't answer and what data you'd need. Upload them.
+  - id: m1-explain
+    type: explain
+    prompt: What's the difference between a measure and a dimension? Give two of each from this dataset.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Days 3-4: Spreadsheet basics'
+  lessons:
+  - id: m2-l1
+    title: Open the data and look around
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: 'Make it a table: header, freeze, filter'
+    file: lessons/m2-l2.md
+    minutes: 25
+  - id: m2-l3
+    title: Sorting
+    file: lessons/m2-l3.md
+    minutes: 15
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Open the CSV, bold the header, freeze the top row, turn on filters and sort by sales. Then use filters
+      to answer: how many Pastry orders did Heliopolis have in total? Upload a screenshot with the answer visible.'
+  - id: m2-explain
+    type: explain
+    prompt: Why should you sort the whole table and never a single column? What goes wrong?
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Days 5-7: Formulas that answer questions'
+  lessons:
+  - id: m3-l1
+    title: Your first formulas, and a month column
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'Answering ''by branch'': SUMIFS and friends'
+    file: lessons/m3-l2.md
+    minutes: 30
+  - id: m3-l3
+    title: 'Looking things up: VLOOKUP and XLOOKUP'
+    file: lessons/m3-l3.md
+    minutes: 25
+  - id: m3-l4
+    title: Decisions with IF
+    file: lessons/m3-l4.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Build the Summary sheet yourself: totals (SUM, COUNT, AVERAGE, MAX), then sales, orders and average
+      order per branch with SUMIFS/COUNTIFS/AVERAGEIFS, the target with VLOOKUP or XLOOKUP, and the status with
+      IF. Compare with coffee_sales_workbook.xlsx and upload your file.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain absolute ($A$1) and relative (A1) references with an example from your Summary sheet. What breaks
+      if you forget the $?
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Days 8-9: Cleaning messy data'
+  lessons:
+  - id: m4-l1
+    title: Spot the mess
+    file: lessons/m4-l1.md
+    minutes: 20
+  - id: m4-l2
+    title: TRIM, PROPER and friends
+    file: lessons/m4-l2.md
+    minutes: 20
+  - id: m4-l3
+    title: Duplicates, blanks and dates
+    file: lessons/m4-l3.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Clean coffee_sales_messy.csv: fix branch names with TRIM and PROPER, fix the text dates, fill blank
+      payments with Unknown and remove duplicates. Write a short ''cleaning log'': each problem, how many rows,
+      and what you did. Upload the cleaned file and the log.'
+  - id: m4-explain
+    type: explain
+    prompt: Why should you mark duplicates before deleting them, and keep the original file? Give a real risk.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Days 10-12: Pivot tables, charts and highlighting'
+  lessons:
+  - id: m5-l1
+    title: 'Pivot tables: answers in seconds'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Charts that tell the truth
+    file: lessons/m5-l2.md
+    minutes: 30
+  - id: m5-l3
+    title: Highlighting with conditional formatting
+    file: lessons/m5-l3.md
+    minutes: 20
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build two pivot tables (sales by branch and category; sales by month) and two charts (a line by month,
+      a sorted bar by branch), add conditional formatting to the target status, and arrange them on one 'Dashboard'
+      sheet. Upload the file and a screenshot.
+  - id: m5-explain
+    type: explain
+    prompt: Look at your monthly chart. Write 3 sentences a manager could act on, including what part of July's
+      jump is the price rise and not more customers.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Days 13-16: Power BI, from data to a report'
+  lessons:
+  - id: m6-l1
+    title: Power BI in one picture, and getting the data in
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'The data model: a star'
+    file: lessons/m6-l2.md
+    minutes: 30
+  - id: m6-l3
+    title: DAX measures
+    file: lessons/m6-l3.md
+    minutes: 35
+  - id: m6-l4
+    title: Build the report
+    file: lessons/m6-l4.md
+    minutes: 35
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'In Power BI Desktop: load both CSVs through Power Query, build the Date table and the star model, write
+      at least 6 measures (including CALCULATE and DIVIDE), and build the one-page report with slicers. Upload the
+      .pbix file and a screenshot. (No Windows PC? Do the same model and measures in Excel''s Power Pivot, or write
+      the measures and a sketch of the report.)'
+  - id: m6-explain
+    type: explain
+    prompt: 'Explain filter context in DAX using your report: why does [Total Sales] give a different number in
+      each row of the branch table, and what does CALCULATE change?'
+    min_words: 70
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Days 17-20: Python and pandas'
+  lessons:
+  - id: m7-l1
+    title: Set up Jupyter and load the data
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: Inspect before you analyze
+    file: lessons/m7-l2.md
+    minutes: 25
+  - id: m7-l3
+    title: Cleaning with pandas
+    file: lessons/m7-l3.md
+    minutes: 30
+  - id: m7-l4
+    title: 'groupby: the pivot table of pandas'
+    file: lessons/m7-l4.md
+    minutes: 30
+  - id: m7-l5
+    title: Charts, joining tables and saving
+    file: lessons/m7-l5.md
+    minutes: 35
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'In Jupyter, redo the whole analysis: load, inspect, clean the messy file, groupby branch, the monthly
+      chart, the stacked bar, merge the targets and save branch_report.xlsx. Check your numbers match your spreadsheet.
+      Upload your notebook.'
+  - id: m7-explain
+    type: explain
+    prompt: You did the same analysis in a spreadsheet, Power BI and Python. When would you choose each? Give one
+      real situation for each tool.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Days 21-22: Portfolio project and interview prep'
+  lessons:
+  - id: m8-l1
+    title: Your portfolio project
+    file: lessons/m8-l1.md
+    minutes: 40
+  - id: m8-l2
+    title: Interview questions for junior data analysts
+    file: lessons/m8-l2.md
+    minutes: 35
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Finish the portfolio project: one question, the analysis, three findings with numbers and charts, a
+      recommendation with its risk, and a one-page summary. Upload the page and the files (or a GitHub link).'
+  - id: m8-explain
+    type: explain
+    prompt: 'Answer as if in an interview: ''Walk me through how you''d analyze a dataset you''ve never seen before.'''
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
