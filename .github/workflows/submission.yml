@@ -41,19 +41,31 @@ jobs:
         timeout-minutes: 4
         run: |
           RESULT_FILE=result.json timeout 200 python scripts/library_tools.py submit "$GITHUB_EVENT_PATH" || true
-          if [ ! -s result.json ]; then
-            echo '{"ok": false, "problems": ["The library bot hit an error while checking (see the Actions tab). A maintainer will look at it, and you don't need to do anything yet."]}' > result.json
-          fi
-          echo "ok=$(python -c "import json;print(str(json.load(open('result.json'))['ok']).lower())")" >> "$GITHUB_OUTPUT"
+          # Messages live in Python, not in shell quotes (an apostrophe like "don't" used to break this step).
+          python - <<'PY'
+          import json, os
+          try:
+              r = json.load(open("result.json", encoding="utf-8"))
+          except Exception:
+              r = {"ok": False, "problems": ["The library bot hit an error while checking (see the Actions tab). "
+                                             "A maintainer will look at it, and you don't need to do anything yet."]}
+              json.dump(r, open("result.json", "w", encoding="utf-8"))
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write("ok=" + ("true" if r.get("ok") else "false") + "\n")
+          PY
       - name: Tell the author what to fix
         if: always() && steps.check.outputs.ok != 'true'
         run: |
-          [ -s result.json ] || echo '{"ok": false, "problems": ["The library bot couldn'"'"'t start (see the Actions tab). A maintainer will look at it."]}' > result.json
           python - <<'PY' > comment.md
           import json
-          r = json.load(open("result.json"))
+          try:
+              r = json.load(open("result.json", encoding="utf-8"))
+          except Exception:
+              r = {}
+          problems = r.get("problems") or ["The library bot couldn't finish checking (see the Actions tab). "
+                                           "A maintainer will look at it, and you don't need to do anything yet."]
           print("🐢 Thanks for sharing! I found something to fix before this course can go in the library:\n")
-          for p in r["problems"]:
+          for p in problems:
               print("- " + p.replace("\n", "\n  "))
           print("\nEdit this issue when it's fixed (for example, attach a new course file), and I'll check again.")
           PY
