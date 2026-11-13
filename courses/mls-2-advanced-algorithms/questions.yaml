@@ -1,0 +1,400 @@
+q1:
+  text: What does one unit in a dense layer compute?
+  show: 4
+  options:
+    oc01db9: A random number
+    o884aed: A logistic-regression-like output from the previous layer
+    o75b2ef: g(w·a + b) for its own w and b
+    oc21518: The average of the inputs
+    o4cedc9: A decision tree split
+    oa9dafe: The cost function
+q2:
+  text: A layer has 25 units and reads 400 inputs. How many parameters?
+  show: 4
+  options:
+    ofe99d7: 400 × 25 weights plus 25 biases
+    o989ad2: 10,000
+    o3cbbeb: 10,025
+    oe6041b: '400'
+    oc9bd03: '425'
+    obbf260: '25'
+q3:
+  text: Why use several hidden layers instead of one huge one?
+  show: 4
+  options:
+    o87748e: Layers can build features from simpler features
+    ofcea85: Many functions are much cheaper to represent with depth
+    o050a9b: One layer can't learn anything
+    ofaf07e: To avoid activations
+    oc5ac96: Depth removes the need for data
+    o74caf2: It's required by TensorFlow
+q4:
+  text: What does a^[0] mean?
+  show: 4
+  options:
+    o427567: The bias
+    o7af5e4: The input layer's values
+    od4eae7: The first weight
+    of7bdd6: The output
+    o30d3e0: The input x
+    o48f580: The cost
+q5:
+  text: Which input shapes does Keras expect for one example with 2 features?
+  show: 4
+  options:
+    oc60c6a: A scalar
+    o7ada6c: (1, 2)
+    o3805f2: A Python list of strings
+    o8d2ea2: 'A 2-D array: one row, two columns'
+    ob76c63: (2,)
+    o57bf2b: (2, 1) always
+q6:
+  text: What does model.predict return for a sigmoid output?
+  show: 4
+  options:
+    oebe88d: The gradients
+    o41bacf: Values you threshold to get classes
+    o344f09: The weights
+    o7b3220: The loss
+    oc6a33e: Class labels directly
+    o8ba837: Probabilities
+q7:
+  text: In dense(a_in, W, b, g), what is W[:, j]?
+  show: 4
+  options:
+    ob9c475: The output of layer j
+    o0028ef: The bias of unit j
+    o395342: The activation function
+    o7d8af9: 'Column j: one weight per input for that unit'
+    oc6f994: The weights of unit j
+    oe93404: Example j
+q8:
+  text: Which describes forward propagation?
+  show: 4
+  options:
+    o7cbea5: Choosing the learning rate
+    o21d847: Computing activations layer by layer to get a prediction
+    o152d1a: Updating the weights
+    o5a262a: Splitting the data
+    o3aeb82: Computing gradients from the output back
+    odee9f1: Going from the input to the output
+q9:
+  text: A_in is (64, 100) and W is (100, 32). What is A_in @ W + b?
+  show: 4
+  options:
+    oeeb111: Shape (100, 32)
+    o5095e2: Shape (64, 32)
+    o791ab4: Shape (64, 100)
+    of3550b: Shape (32, 64)
+    o02c608: An error
+    o409664: One row of 32 activations per example, before g
+q10:
+  text: Which are true about backpropagation?
+  show: 4
+  options:
+    o6cad83: It only works for one layer
+    o2ad778: It replaces gradient descent
+    o79d3d6: It applies the chain rule backwards through the graph
+    oe3008d: It changes the network's architecture
+    oe35422: It costs about as much as one forward pass
+    o6bf781: It needs a separate forward pass per parameter
+q11:
+  text: What helps with vanishing gradients?
+  show: 4
+  options:
+    oa7532b: Smaller batches only
+    ofc2d4f: Residual connections and good initialization
+    o4a2857: ReLU activations
+    od61266: Removing biases
+    oea0989: A larger learning rate only
+    ofb79ed: More sigmoid layers
+q12:
+  text: In the example, why is ∂J/∂w = −4?
+  show: 4
+  options:
+    o898098: Because J = 2
+    o086430: ∂J/∂c is 2 and ∂c/∂w is x = −2
+    o7297f4: Because w = 2
+    o4ed832: The chain rule multiplies 2 by x
+    od4565c: Because b = 8
+    o149486: It's a guess
+q13:
+  text: Which output activation fits each target? Pick the right pairs.
+  show: 4
+  options:
+    o2943f6: Sigmoid for a stock price change
+    off8212: Linear for 10 classes
+    oda09c4: ReLU for a yes/no label
+    od0c808: Sigmoid for a yes/no label
+    o405396: Softmax for a house price
+    oc425ca: Linear for a temperature that can be negative
+q14:
+  text: Why is ReLU the default for hidden layers?
+  show: 4
+  options:
+    o7d1c42: It needs no weights
+    o44922d: It outputs probabilities
+    o13bca5: It's cheap to compute
+    o03b475: It prevents overfitting
+    o50ad57: Its gradient doesn't vanish for positive inputs
+    oe99fce: It's always better than everything
+q15:
+  text: A network uses linear activations everywhere. What is it equivalent to?
+  show: 4
+  options:
+    o1dff49: A deeper non-linear model
+    o9baadb: A decision tree
+    o48620e: A single linear model
+    o1afa84: Linear regression (or logistic with a sigmoid output)
+    o64cb3b: K-means
+    oba3265: Nothing, it can't train
+q16:
+  text: What is an epoch?
+  show: 4
+  options:
+    of2adad: One layer
+    o0b7a01: One hour of training
+    of71c50: One example
+    o639b69: One gradient step
+    o04e43a: Many mini-batch steps that together see every example once
+    o947b8e: One full pass over the training data
+q17:
+  text: Why use from_logits=True?
+  show: 4
+  options:
+    of497c0: It makes training slower but simpler
+    odc84ab: It turns off the output layer
+    o60aa25: It's only for regression
+    o04fe0e: It removes the need for a loss
+    ob1b008: It avoids rounding errors with very small probabilities
+    o4f3e9b: It computes softmax and the log together, more precisely
+q18:
+  text: How do you make softmax safe from overflow?
+  show: 4
+  options:
+    oc7f1bd: Divide z by 1000
+    o16a7c7: Skip the exponential
+    o29e34c: Subtract max(z) before exponentiating
+    o47e60c: Use the identity softmax(z) = softmax(z − c)
+    o3786d5: Use float16
+    o757ecd: Clip z to [0, 1]
+q19:
+  text: A photo can contain a car, a bus and a person at once. Which output?
+  show: 4
+  options:
+    o8dc8a7: ReLU outputs
+    of040cc: One linear output
+    od5e666: One sigmoid per label
+    o2782f2: Softmax over 3 classes
+    oa390fd: Binary cross-entropy on each output
+    o4f3af2: Sparse categorical cross-entropy
+q20:
+  text: Which are true about Adam?
+  show: 4
+  options:
+    o27da53: It removes overfitting
+    o12eca8: It's slower than plain GD in every case
+    of0532e: It combines momentum and RMSProp ideas
+    o27d37d: It only works for linear regression
+    o37b088: It needs no learning rate at all
+    o930901: It adapts the step size per parameter
+q21:
+  text: Why not choose λ by looking at the test error?
+  show: 4
+  options:
+    o81dc86: Test error can't go down
+    o031c6f: The test error would become optimistic
+    ob5fb37: It's slower
+    o8959a6: λ can't be tuned
+    oe4fe5b: The test set is too small to compute
+    ofab814: You'd be fitting a choice to the test set
+q22:
+  text: Training error 15%, CV error 16%, human level 1%. What helps?
+  show: 4
+  options:
+    oec3af7: More training data
+    ocd05c3: More features or a bigger model
+    o04c54b: Less regularization
+    o4b1a9f: Fewer features
+    od83b27: Larger λ
+    o68568b: Stopping training earlier
+q23:
+  text: 'Learning curves show a big gap that shrinks as m grows. This is:'
+  show: 4
+  options:
+    obd730e: A bug in the loss
+    ofc2978: Perfect
+    o6b28df: A case where more data helps
+    o68ec88: High variance
+    o1c2539: High bias
+    oc02f17: A learning-rate problem
+q24:
+  text: How should you split time-series data?
+  show: 4
+  options:
+    o0c5efd: Without shuffling the future into training
+    od143f7: Randomly
+    ofc1ba1: Alphabetically
+    o14bb22: 'By time: train on the past, validate on later data'
+    o85aa56: So test is the oldest data
+    o7ce872: By file size
+q25:
+  text: Which are good data augmentation choices for photos of handwritten letters?
+  show: 4
+  options:
+    o7878f1: Changing labels randomly
+    o25cba4: Deleting half the image
+    oc656da: Slight warping and scaling
+    oe52e26: Small rotations
+    oe89dce: Flipping letters so 'b' becomes 'd'
+    o75fb88: Random pixel noise that looks like nothing real
+q26:
+  text: When do you fine-tune all layers instead of only the output layer?
+  show: 4
+  options:
+    o60e66d: When the inputs are a different kind (audio into an image model)
+    oa852dd: When the model is small
+    o13a767: When you have more task data
+    obe04ef: When you have 50 examples
+    o16dcd0: When the new task differs more from the original
+    o760448: Never
+q27:
+  text: What is error analysis?
+  show: 4
+  options:
+    o7465b2: Testing on the training set
+    o869f29: Checking gradients
+    o297ceb: Computing the training error
+    oae3f16: Grouping misclassified examples by cause and counting
+    o5fce67: Choosing what to work on from the biggest categories
+    o5c37fc: Plotting the learning rate
+q28:
+  text: After deployment, what should you watch?
+  show: 4
+  options:
+    ofb79e2: Nothing, the model is done
+    o7744b6: Data drift
+    o6a38c4: The training loss
+    oa8b99b: Only CPU usage
+    ode64df: The number of layers
+    o8083b2: Performance across groups (fairness)
+q29:
+  text: A test flags 100 patients; 20 truly have the disease; there were 25 sick patients in total. Which are right?
+  show: 4
+  options:
+    o205782: Precision is 20%
+    o0782de: Recall is 80%
+    o1e0e01: Accuracy is 20%
+    o851a4a: Recall is 20%
+    of3b776: Precision is 80%
+    o37d777: F1 is 100%
+q30:
+  text: 'Raising the decision threshold from 0.5 to 0.9 usually:'
+  show: 4
+  options:
+    of0d31f: Lowers recall
+    oaba7e6: Changes nothing
+    ofc8f4c: Lowers precision
+    o2878f1: Retrains the model
+    o4a55f7: Raises recall
+    o34b515: Raises precision
+q31:
+  text: Why use F1 instead of the average of P and R?
+  show: 4
+  options:
+    o90bc77: The harmonic mean is low if either is low
+    o00c4f3: It's always higher
+    ode9761: It's easier to compute
+    oaf9b76: It ignores recall
+    oaae2f1: It doesn't reward a model with P = 1 and R = 0.01
+    o65ce89: It includes true negatives
+q32:
+  text: With heavy class imbalance, which are more informative?
+  show: 4
+  options:
+    o05a115: Precision and recall at a chosen threshold
+    o5f31c8: Mean squared error
+    o97a287: The precision-recall curve
+    ob8df25: The number of epochs
+    o4e4ad5: Training loss only
+    o795737: Plain accuracy
+q33:
+  text: A node has 4 positive and 4 negative examples. Which are true?
+  show: 4
+  options:
+    odfe796: Its entropy is 0.5
+    oac105f: Its entropy is 1
+    o0de493: Its entropy is 0
+    o4f5a4b: It's a pure leaf
+    o0cae10: It's as impure as possible
+    o3afcb2: It can't be split
+q34:
+  text: Which are true about random forests?
+  show: 4
+  options:
+    od0f827: They need feature scaling
+    o0f9a8e: They use one deep tree
+    o2bc1ac: Each split considers a random subset of features
+    o11a90a: Each tree is trained on a bootstrap sample
+    o2f7485: They can't do regression
+    ocff1fa: Trees are trained one after another on errors
+q35:
+  text: Which are true about boosting?
+  show: 4
+  options:
+    ofa01fe: Each tree focuses on what earlier trees got wrong
+    o2a9563: Trees are trained in sequence
+    o867937: Trees are independent
+    o8983c5: It averages bootstrap samples
+    od1735c: It doesn't need trees
+    occbdbf: It's the same as bagging
+q36:
+  text: 'For a customer spreadsheet with 50 columns, a good first model is:'
+  show: 4
+  options:
+    o8ec7c2: K-means
+    o8592cd: A single huge dense network without tuning
+    o6c82cf: Gradient-boosted trees like XGBoost
+    ob48a4a: A convolutional network
+    o08549d: A random forest as a baseline
+    obe216c: A transformer from scratch
+q37:
+  text: Your network's training loss doesn't go down at all. What do you check first?
+  show: 4
+  options:
+    o8bdf80: Increase regularization
+    oaf09fa: Add more test data
+    o673594: Deploy it
+    o566025: Collect a new dataset first
+    o41d3a2: The learning rate and the loss/output setup
+    o6c35c3: Whether it can overfit a tiny batch
+q38:
+  text: What does dropout do?
+  show: 4
+  options:
+    oe2d7a3: Speeds up inference
+    o831b9d: Acts as a regularizer
+    o5957f8: Removes layers permanently
+    o5a0329: Replaces the optimizer
+    o8d4f56: Randomly turns off units during training
+    odee071: Drops bad training examples
+q39:
+  text: Which are signs of data drift after deployment?
+  show: 4
+  options:
+    o0f8944: Training loss changes
+    o54f7fe: Accuracy on fresh labelled samples drops
+    ob1c54b: The code is refactored
+    o4af951: The server restarts
+    ob45ebf: The model file gets bigger
+    o90ecc4: Input feature distributions shift
+q40:
+  text: Accuracy is 95% and 5% of customers churn. What's the likely problem?
+  show: 4
+  options:
+    ob5e9d6: The model is perfect
+    o8e2b7c: The learning rate
+    o116dd9: The model may predict 'no churn' for everyone
+    o359041: The test set is too big
+    o97d1b5: Too many trees
+    o7a451e: Accuracy hides poor recall on churners

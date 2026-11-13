@@ -1,0 +1,100 @@
+q1:
+  right:
+  - o1714b9
+  - oaa4748
+  why: Repeating them leaves the same state (GET, HEAD, PUT, DELETE, OPTIONS).
+q2:
+  right:
+  - odf3480
+  - oed7ec7
+  why: Post/Redirect/Get avoids resending on refresh.
+q3:
+  right:
+  - o97c825
+  - ofa4e5f
+  why: Frameworks route; the server serves.
+q4:
+  right:
+  - obf7025
+  - o347f1b
+  why: Pure ASGI middleware works at the message level.
+q5:
+  right:
+  - oa639be
+  - o5ff39b
+  why: Blocking calls freeze the event loop.
+q6:
+  right:
+  - o290a52
+  - o5b1104
+  why: request.form() uses python-multipart.
+q7:
+  right:
+  - od560a6
+  - o686156
+  why: Factories make apps configurable and testable.
+q8:
+  right:
+  - o309072
+  - oa3ba80
+  why: Starlette runs background tasks after the response.
+q9:
+  right:
+  - oc54449
+  - o5ebd5b
+  why: Validation happens before the handler.
+q10:
+  right:
+  - ocad34f
+  - oeeb407
+  why: It shapes what leaves the API.
+q11:
+  right:
+  - o934a3f
+  - o9cfa80
+  why: Overrides are built in.
+q12:
+  right:
+  - o20553c
+  - o7062ed
+  why: Choose tools by the job.
+q13:
+  right:
+  - o06f78d
+  - o8d6c3f
+  why: Never build SQL from strings with user data.
+q14:
+  right:
+  - o120982
+  - oa5c296
+  why: Use a real queue or scheduler.
+q15:
+  right:
+  - oab5e16
+  - od4308a
+  why: No always-on process.
+q16:
+  right:
+  - of8667a
+  - o33ef95
+  why: Check the resolved path is inside the root.
+q17:
+  right:
+  - oc2d989
+  - obc5a58
+  why: FastAPI runs sync routes in a worker thread.
+q18:
+  right:
+  - o0d78ab
+  - o8673d5
+  why: It calls the app directly.
+q19:
+  right:
+  - ob9c042
+  - o52d429
+  why: The second request finds the first's result.
+q20:
+  right:
+  - o9a8ec5
+  - od2ebcb
+  why: Read-mostly data fits a CDN.

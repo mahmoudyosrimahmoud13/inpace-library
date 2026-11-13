@@ -1,0 +1,280 @@
+q1:
+  text: Why does inPace's server listen on 127.0.0.1 and not 0.0.0.0?
+  show: 4
+  options:
+    o79da0a: So only programs on the same device can reach it
+    o08ce03: Android doesn't allow other addresses
+    obc9258: Because SQLite only works on 127.0.0.1
+    o029c39: To keep other devices on the network from opening the app
+    o4004ca: To get a free HTTPS certificate
+    oabec69: 127.0.0.1 is faster than any other address
+q2:
+  text: What does NavMiddleware do when a request has the X-InPace-Nav header and the route answers with a redirect?
+  show: 4
+  options:
+    o16a6e0: It lets the page script decide how to navigate, so it can replace the page
+    of04257: It follows the redirect on the server
+    o0d65cf: It returns a 500 error
+    o3719a1: 'It turns the redirect into JSON {"go": url}'
+    od3262f: It caches the redirect for an hour
+    oed5824: It strips the header and does nothing
+q3:
+  text: Where does a lesson's 'done' state really live?
+  show: 4
+  options:
+    oee8d82: As a lesson_done event that progress is computed from
+    of3e419: In an append-only event in vault.db
+    o57c742: On a server in the cloud
+    o066d19: In the course.yaml file
+    of1b996: In a progress column that is updated
+    o31096f: In the browser's localStorage
+q4:
+  text: Which pair is the right match of tool and job in inPace?
+  show: 4
+  options:
+    off7169: 'Mermaid: building the APK'
+    o334f38: 'PyInstaller: one installable desktop file per system'
+    o592a73: 'SQLite: drawing the island'
+    of974a9: 'serious_python: running the Python app inside the Android app'
+    of0edd4: 'Jinja: signing milestones'
+    o532d29: 'pywebview: the database'
+q5:
+  text: What is a person's inPace id?
+  show: 4
+  options:
+    off715e: Their email address
+    o850796: A random number from a server
+    o2e667f: Their Ed25519 public key, written in hex
+    o0e69f4: Their phone number
+    o84aef2: The public half of the key pair made on their device
+    o828d6b: The SHA-256 of their name
+q6:
+  text: Why are keys sorted and spaces removed before signing?
+  show: 4
+  options:
+    oc65460: Because Ed25519 can't read spaces
+    o13ea35: So signatures made on one device verify on another
+    od36f1e: So every device turns the same data into exactly the same bytes
+    o3d1907: To hide the data
+    o120d98: To make the file smaller for WhatsApp
+    obc853a: Because SQLite requires it
+q7:
+  text: What stops a bug in the app from rewriting an old event?
+  show: 4
+  options:
+    o71762e: Python's type hints
+    o998b0e: Uvicorn blocks it
+    o87fef4: SQLite triggers that abort UPDATE and DELETE on events
+    o710a48: A comment in the code
+    o119c96: The database itself refuses changes to append-only tables
+    ob96e6c: The milestones are in a separate file
+q8:
+  text: 'You change the summary of milestone #2 in a file. What does check_chain find?'
+  show: 4
+  options:
+    ob1c798: 'The chain is reported broken at milestone #2'
+    o3235c4: Nothing, summaries aren't checked
+    o2cad0a: 'Only milestone #3 fails'
+    o8fd75a: 'Milestone #2''s hash no longer matches its body'
+    o35d649: The checker's key is rejected
+    o640a0c: The file opens normally
+q9:
+  text: How does inPace name quiz options when it converts an all-in-one course?
+  show: 4
+  options:
+    o355997: By numbering right answers 1 and wrong ones 0
+    o712904: a, b, c, d with the right answer first
+    oe13a33: With neutral ids from a SHA-256 of the question id and the option text
+    o9e6f09: With random ids that change every launch
+    o5c9cdd: With ids like o1a2b3 that don't reveal which is right
+    oc9217a: With the option text itself
+q10:
+  text: What does a lesson block marked mermaid become?
+  show: 4
+  options:
+    o896a83: Nothing, it's removed
+    oa2a4c3: A diagram, drawn offline, that you can zoom and open full screen
+    o96147f: A diagram drawn in the page by the bundled Mermaid library
+    o37c883: An image fetched from the internet
+    o44fcc0: A Python code block
+    o437c60: A link to mermaid.live
+q11:
+  text: How does the app make sure a library pack wasn't changed on the way?
+  show: 4
+  options:
+    oea5e52: It checks the pack's SHA-256 against library.json
+    o68de23: It doesn't check
+    of8ada1: It asks the author by email
+    oddcbfd: It checks the file name
+    o2c394d: It trusts GitHub
+    oc1ad3e: The download must match the checksum published with the list
+q12:
+  text: Why can a web page inside a lesson not read your inPace data?
+  show: 4
+  options:
+    oca3969: Because the server is on 127.0.0.1
+    o71e689: Because Jinja escapes it
+    o1bd892: Web pages can't run JavaScript at all
+    o4dfbbb: It's served with a sandbox Content-Security-Policy
+    o7aafc5: Because it's in a different folder
+    o93f01c: Its CSP blocks connections (connect-src 'none') and isolates it
+q13:
+  text: 'Why does every HTML page get Cache-Control: no-store?'
+  show: 4
+  options:
+    ofcd6bf: To stop search engines
+    oef0f08: To make pages load faster
+    o747151: So old colours, languages or answers never show from cache
+    oa415ba: So going Back loads the page again and shows the current state
+    o0d5c25: Because Starlette requires it
+    o6de2db: To save disk space
+q14:
+  text: A form posts and the server redirects to /island#shop while you're on /island. Without goFresh, what happens?
+  show: 4
+  options:
+    odc2699: The purchase is cancelled
+    ofe3308: The page isn't loaded again, so the purchase doesn't show
+    od7d723: The server crashes
+    odc77ae: 'The browser only scrolls to #shop'
+    of885bb: The browser shows a 404
+    o690907: The page reloads
+q15:
+  text: What is the key in ar.json?
+  show: 4
+  options:
+    od73ce0: A hash of the Arabic text
+    o948e02: The English sentence itself
+    o37afb5: A numeric id
+    o4a9121: The template file name
+    o18009c: The text as it appears in the English interface
+    o650349: The CSS class
+q16:
+  text: What does needs_setup do?
+  show: 4
+  options:
+    o0a8537: Installs Python packages
+    oaac8d3: Logs the user in with a password
+    o46d183: Sets up the database server
+    o5963f4: Sends you to /setup until your identity exists
+    o589088: Wraps a route so it only runs after first-run setup
+    o781e2f: Checks for updates
+q17:
+  text: How is a link's BODY made?
+  show: 4
+  options:
+    o33ef96: The file's JSON, zlib-compressed and base64url-encoded
+    o83c4cf: Encrypted with the checker's key
+    o53867d: Gzip plus hex
+    o479463: A short id looked up on a server
+    o1b90ec: Plain JSON in the query string
+    oce749e: Compact JSON, compressed with zlib, written in URL-safe base64 without padding
+q18:
+  text: 'Why is the part after # used for the link''s data?'
+  show: 4
+  options:
+    oa06889: GitHub Pages requires it
+    o745a7f: Servers can't read query strings
+    o13d794: The fragment is never sent to the website's server
+    oe85e16: It makes the link work offline
+    o70fe42: The website just passes it to the app, privately
+    oada74f: 'Because # is shorter'
+q19:
+  text: In the Leitner system inPace uses, how long until a box-3 card comes back?
+  show: 4
+  options:
+    o31a48b: 7 days
+    o93b6df: 14 days
+    of937f6: 1 day
+    o0d41dc: One week
+    oa49500: 3 days
+    o10e42f: 30 days
+q20:
+  text: What makes a verified exam reproducible on any device?
+  show: 4
+  options:
+    o978027: The same seed always rebuilds the same exam
+    o4419e9: The learner chooses the order
+    o572a40: Questions are always alphabetical
+    o7fc71b: Its order comes only from the seed, through SHA-256 ranks
+    o09d58e: The server stores it
+    o24a161: Python's random module with no seed
+q21:
+  text: Where is the trip's countdown drawn while inPace is closed on Android?
+  show: 4
+  options:
+    o9ed5a6: By a server push every second
+    o20ed65: By Android itself, as a chronometer in the notification
+    o05e9f2: It isn't shown
+    od87cad: By a Python thread
+    o0834a5: By the WebView in the background
+    o6cb69b: In the notification, with usesChronometer and chronometerCountDown
+q22:
+  text: Why does decay() look at the whole absence window from the last activity to now?
+  show: 4
+  options:
+    o2fec1d: To use less memory
+    o783f2e: Because it runs every second
+    oa5597e: So it gives the same result whenever it runs
+    ob267a2: To make plants die faster
+    o05f9bd: It can catch up after the app was closed for days
+    o894740: Because SQLite can't store dates
+q23:
+  text: How does a computer show a reminder while inPace is closed?
+  show: 4
+  options:
+    o11b6e5: inPace keeps running hidden forever
+    odc6af8: The browser does it
+    o5b45e4: A cloud server sends a push
+    o78664a: It can't
+    o139aa0: A scheduled task starts a small inPace job that shows it and exits
+    o1b1616: The OS scheduler runs inpace --remind or --check-reminders
+q24:
+  text: Why are the island and Tempo drawn as SVG strings in Python?
+  show: 4
+  options:
+    oc340c9: They can be recoloured and tested as text
+    o758307: To hide them from users
+    o61dc5c: SVG is the only format browsers support
+    oa64295: No image files, sharp at any size, and colours can be swapped
+    o582917: Because Jinja requires it
+    o185ae4: Python can't open PNG files
+q25:
+  text: What does the release workflow check besides building?
+  show: 4
+  options:
+    o61ed3e: That the app opens in its own window, not a browser tab
+    o49f53d: Nothing, it only builds
+    odd0c1f: That Python 2 still works
+    ob7045d: That each built app starts and serves its first page
+    obde405: That the code has no comments
+    oa6e87e: That GitHub stars went up
+q26:
+  text: Why does the updater download SHA256SUMS from the same release?
+  show: 4
+  options:
+    o523792: To compare the new build's hash before replacing anything
+    o0516e0: So a damaged or swapped download is never installed
+    o4b52c7: To count downloads
+    obb517a: To show release notes
+    oe99a0f: To make downloads faster
+    o30e60b: Because PyInstaller needs it
+q27:
+  text: What is the main trade-off of a WebView UI in the Android app?
+  show: 4
+  options:
+    oc708a6: Less native feel, in exchange for one codebase on every platform
+    oa4b021: It can't show notifications
+    o97a6e4: Features ship everywhere together, but it's not built from native widgets
+    o7293b1: It can't work offline
+    o7a4a87: It needs a server
+    oe1b14b: It's always slower than desktop
+q28:
+  text: 'A good way to answer ''how does it scale?'' for inPace:'
+  show: 4
+  options:
+    oc0b748: It runs on a large Kubernetes cluster
+    ob873c6: SQLite replicates automatically
+    o2fbdf2: Users share one database
+    o7a7ee7: Each device holds one person's data; the shared library is static files on GitHub Pages
+    oae08e4: It doesn't, that's a weakness
+    o47f01c: Per-user load is tiny, and the shared part is a CDN-served static site

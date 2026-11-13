@@ -1,0 +1,80 @@
+q1:
+  right:
+  - oacb5cf
+  - o1d21c0
+  why: Autoescaping turns markup characters into entities.
+q2:
+  right:
+  - o3b105b
+  - o92e372
+  why: tojson escapes characters that could close the script tag.
+q3:
+  right:
+  - o910883
+  - o97a29b
+  why: Unlike Python, Jinja's else is for empty loops.
+q4:
+  right:
+  - o738c4c
+  - ocf02c9
+  why: map(attribute=) pulls one field out of each item.
+q5:
+  right:
+  - oab637e
+  - o4c5a80
+  why: Jinja needs to know the parent before rendering blocks.
+q6:
+  right:
+  - o87d212
+  - o273018
+  why: Useful to extend, for example, extra head tags.
+q7:
+  right:
+  - o2e33aa
+  - oa49557
+  why: Scoped variables for a partial.
+q8:
+  right:
+  - o56329b
+  - ob043d0
+  why: Imports are cached and context-free by default.
+q9:
+  right:
+  - o7de74c
+  - o81ab50
+  why: Compilation is the slow part.
+q10:
+  right:
+  - o46b5be
+  - o39a3a7
+  why: Whitespace-normalised keys.
+q11:
+  right:
+  - o52abfb
+  - o341370
+  why: Globals should be stable helpers, not per-request state.
+q12:
+  right:
+  - o73b66a
+  - o25ffa0
+  why: Context variables are per task/request.
+q13:
+  right:
+  - oa62744
+  - o26bd7b
+  why: Default Undefined prints as an empty string.
+q14:
+  right:
+  - ob7746e
+  - of32cd6
+  why: Rendering untrusted templates normally is SSTI.
+q15:
+  right:
+  - od41878
+  - oc2a173
+  why: The server sends finished HTML.
+q16:
+  right:
+  - od17230
+  - o2104c8
+  why: Reuse compiled templates; don't check files each time.

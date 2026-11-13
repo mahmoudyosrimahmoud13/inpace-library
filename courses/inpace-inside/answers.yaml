@@ -1,0 +1,141 @@
+q1:
+  right:
+  - o79da0a
+  - o029c39
+  why: '127.0.0.1 is the loopback address: only the same machine can connect, which is what a private local app
+    needs.'
+q2:
+  right:
+  - o3719a1
+  - o16a6e0
+  why: The script then calls location.replace (or reloads), so sent forms don't pile up in history.
+q3:
+  right:
+  - of3e419
+  - oee8d82
+  why: Progress is derived from events, so it can always be recomputed and checked.
+q4:
+  right:
+  - o334f38
+  - of974a9
+  why: PyInstaller freezes the desktop app; serious_python embeds Python in the Flutter shell.
+q5:
+  right:
+  - o2e667f
+  - o84aef2
+  why: identity.id returns verify_key.encode().hex().
+q6:
+  right:
+  - od36f1e
+  - o13ea35
+  why: Signatures are over bytes; canonical JSON makes the bytes unique for the same meaning.
+q7:
+  right:
+  - o87fef4
+  - o119c96
+  why: events_no_update and events_no_delete raise an error inside SQLite.
+q8:
+  right:
+  - o8fd75a
+  - ob1c798
+  why: The hash is the fingerprint of the whole body, so any change shows up.
+q9:
+  right:
+  - oe13a33
+  - o5c9cdd
+  why: Neutral ids keep the right answer from being guessable from its id.
+q10:
+  right:
+  - o96147f
+  - oa2a4c3
+  why: _highlight returns <pre class="mermaid">; app.js loads static/mermaid only when needed.
+q11:
+  right:
+  - oea5e52
+  - oc1ad3e
+  why: library.download compares hashlib.sha256(data) with entry['sha256'].
+q12:
+  right:
+  - o4dfbbb
+  - o93f01c
+  why: media_file adds 'sandbox allow-scripts ...; connect-src none' for HTML and SVG files.
+q13:
+  right:
+  - oa415ba
+  - o747151
+  why: no-store means the browser must ask the server again.
+q14:
+  right:
+  - odc77ae
+  - ofe3308
+  why: A navigation that changes only the fragment is a same-document navigation.
+q15:
+  right:
+  - o948e02
+  - o18009c
+  why: English is the key, so missing Arabic falls back to English.
+q16:
+  right:
+  - o5963f4
+  - o589088
+  why: There are no accounts; setup makes the key and name.
+q17:
+  right:
+  - oce749e
+  - o33ef96
+  why: 'See SPEC.md: links are zlib + URL-safe base64, after the #.'
+q18:
+  right:
+  - o13d794
+  - o70fe42
+  why: Browsers don't send the fragment in HTTP requests.
+q19:
+  right:
+  - o31a48b
+  - o0d41dc
+  why: 'LEITNER_DAYS = {1: 1, 2: 3, 3: 7, 4: 14, 5: 30}.'
+q20:
+  right:
+  - o7fc71b
+  - o978027
+  why: exam._rank(seed, ...) sorts questions and options deterministically.
+q21:
+  right:
+  - o20ed65
+  - o6cb69b
+  why: The system UI counts down to 'when'; no app code needs to run.
+q22:
+  right:
+  - oa5597e
+  - o05f9bd
+  why: 'Idempotent catch-up logic: no matter when you open the app, the outcome is the same.'
+q23:
+  right:
+  - o1b1616
+  - o139aa0
+  why: notifier.py registers Task Scheduler, launchd, systemd or cron entries.
+q24:
+  right:
+  - oa64295
+  - oc340c9
+  why: String-built SVG is light, scalable and testable.
+q25:
+  right:
+  - ob7045d
+  - o61ed3e
+  why: release.yml starts the app, fetches /setup and checks the window type.
+q26:
+  right:
+  - o523792
+  - o0516e0
+  why: Nothing is swapped unless the SHA-256 matches.
+q27:
+  right:
+  - oc708a6
+  - o97a6e4
+  why: Flutter adds native pieces (notifications, files) through a bridge.
+q28:
+  right:
+  - o7a7ee7
+  - o47f01c
+  why: Local-first moves the scaling problem away from a central server.

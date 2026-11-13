@@ -1,0 +1,140 @@
+q1:
+  right:
+  - o9f5648
+  - oc3ed0a
+  why: transform and opacity can be handled by the compositor.
+q2:
+  right:
+  - o7c8d0d
+  - o5b3f32
+  why: defer keeps order and waits for the parser to finish.
+q3:
+  right:
+  - o658089
+  - o5f4ff9
+  why: Without it, mobile browsers use a wide virtual viewport.
+q4:
+  right:
+  - odd8746
+  - ob36837
+  why: display:none elements are left out.
+q5:
+  right:
+  - o170cda
+  - o1fe6c2
+  why: Native elements bring behaviour and accessibility.
+q6:
+  right:
+  - oa4dbb3
+  - oab508e
+  why: Only named, enabled fields are part of the form data.
+q7:
+  right:
+  - oac9d3e
+  - oc92017
+  why: urlencoded can't carry file contents.
+q8:
+  right:
+  - ob366f6
+  - o7916be
+  why: The browser can reserve the box at the right size.
+q9:
+  right:
+  - o281805
+  - o748792
+  why: 'One class plus one element: 0,1,1.'
+q10:
+  right:
+  - oc3e58d
+  - o4ce990
+  why: border-box includes padding and border in width.
+q11:
+  right:
+  - o7b5608
+  - o64ac2f
+  why: z-index competes only within the same stacking context.
+q12:
+  right:
+  - od21146
+  - o0824dd
+  why: Text-related properties inherit; box properties don't.
+q13:
+  right:
+  - o9491d4
+  - o2d38c9
+  why: Responsive columns without breakpoints.
+q14:
+  right:
+  - oa0dbac
+  - obd05b0
+  why: 'Flex items default to min-width: auto, which stops them shrinking below their content.'
+q15:
+  right:
+  - of5598b
+  - o1004f5
+  why: Cross-axis alignment uses align-*.
+q16:
+  right:
+  - oa337f7
+  - o79654b
+  why: row is a logical direction.
+q17:
+  right:
+  - o570973
+  - o115937
+  why: Logical properties follow the writing direction.
+q18:
+  right:
+  - o626180
+  - oa9c6d1
+  why: '@container lets components adapt to where they''re placed.'
+q19:
+  right:
+  - obfcc85
+  - o69d2dc
+  why: Mirror direction-of-travel icons only.
+q20:
+  right:
+  - od397c4
+  - of49a1e
+  why: Per-block direction keeps mixed lessons readable.
+q21:
+  right:
+  - o028159
+  - od6724a
+  why: Sass variables are compile-time only.
+q22:
+  right:
+  - oc7af32
+  - oe4f0da
+  why: 3:1 is for large text; 7:1 is AAA.
+q23:
+  right:
+  - o9e74a9
+  - o47ee59
+  why: Native elements and visible focus first.
+q24:
+  right:
+  - o56e4ca
+  - o1c9ee6
+  why: Live regions announce dynamic content.
+q25:
+  right:
+  - o80c38a
+  - o10899b
+  why: LCP, INP and CLS.
+q26:
+  right:
+  - o3171f7
+  - o07c287
+  why: 'visibility: hidden keeps the space.'
+q27:
+  right:
+  - o8d16b6
+  - o7af62b
+  why: Less to wait for before the first paint.
+q28:
+  right:
+  - o8aca73
+  - od44eab
+  why: Cache what doesn't change; always fetch what does.

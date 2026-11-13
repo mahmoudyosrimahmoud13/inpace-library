@@ -1,0 +1,280 @@
+q1:
+  text: Which changes can usually be animated without new layout?
+  show: 4
+  options:
+    ob19e23: margin-left
+    o9f5648: transform
+    oc3ed0a: opacity
+    o25eb89: width
+    o00fe62: font-size
+    o083c10: top
+q2:
+  text: What does <script defer> do?
+  show: 4
+  options:
+    oe9c8c0: Blocks the CSS from loading
+    oe56561: Never runs on phones
+    o5b3f32: Runs after parsing, in document order
+    o999191: Runs before the HTML is parsed
+    o7c8d0d: Downloads while the HTML is parsed
+    o2f9f6a: Runs in a random order
+q3:
+  text: Why include the viewport meta tag?
+  show: 4
+  options:
+    o174b28: To set the page language
+    oed52f6: To enable JavaScript
+    o90e224: To make the page load faster
+    o5f4ff9: So the page isn't shrunk as if it were a 980 px desktop page
+    o658089: So phones use the real device width
+    o8db571: For search engines only
+q4:
+  text: What is in the render tree?
+  show: 4
+  options:
+    o522f8d: Only the CSS rules
+    o4494a1: Only the <head>
+    odd8746: Visible elements with their computed styles
+    ob36837: Nodes from the DOM that will actually be drawn
+    o3f4be4: Every node including display:none
+    oa98476: The JavaScript call stack
+q5:
+  text: Which are good reasons to use <button> instead of a clickable <div>?
+  show: 4
+  options:
+    ob8c989: Divs can't have click events
+    o28344f: It can't be styled
+    o1fe6c2: Screen readers announce it as a button
+    o170cda: It gets keyboard focus and Enter/Space activation for free
+    oe978b2: It loads faster
+    o0ac306: It's always blue
+q6:
+  text: A form field has no name attribute. What happens when the form is sent?
+  show: 4
+  options:
+    ob2329e: It's sent as 'undefined'
+    ocf60bf: The browser makes up a name
+    oab508e: The server never receives that field
+    oa4dbb3: Its value isn't sent
+    o3e958a: The form refuses to send
+    o1d7935: It's sent under its id
+q7:
+  text: When do you need enctype="multipart/form-data"?
+  show: 4
+  options:
+    oc92017: For an <input type="file"> to send the file's bytes
+    o6cd066: For any POST form
+    o3f3a3a: For forms in Arabic
+    o94cdc0: For forms with radio buttons
+    oac9d3e: When the form uploads files
+    ob9ca1c: For GET forms
+q8:
+  text: What reduces layout shift from images?
+  show: 4
+  options:
+    ob366f6: Setting width and height (or aspect-ratio)
+    o3a26d0: Putting images in a <div>
+    o7c6259: Removing alt text
+    o7916be: Reserving the image's space before it loads
+    ofbb208: Loading images with JavaScript
+    o7afb0a: Using PNG instead of JPG
+q9:
+  text: Which selectors have the same specificity as .card p?
+  show: 4
+  options:
+    oee52bf: '#main p'
+    o281805: .nav a
+    o748792: div.title
+    oe1ee7f: '#a #b'
+    oa39581: a
+    o31d31b: p
+q10:
+  text: 'With box-sizing: border-box and width: 200px, padding: 20px, what is true?'
+  show: 4
+  options:
+    o4ce990: The content area is 160px wide
+    o7f432d: Margin is included in 200px
+    oc3e58d: The total visible width is 200px
+    o677638: The total width is 240px
+    o3ac22e: Padding is ignored
+    occd069: The content area is 200px
+q11:
+  text: 'When does z-index: 9999 fail to bring an element to the front?'
+  show: 4
+  options:
+    o7b5608: When it's inside a parent that forms a lower stacking context
+    o48b51b: When the page is in Arabic
+    o28ef02: When it uses rem units
+    of548fb: Never
+    o71060e: When the element is a <div>
+    o64ac2f: When an ancestor with transform or opacity created a new context
+q12:
+  text: Which properties are inherited by default?
+  show: 4
+  options:
+    od21146: color
+    o4c5ced: padding
+    o50e39a: margin
+    o5e69d3: width
+    o0824dd: font-family
+    o0a24d5: border
+q13:
+  text: What does repeat(auto-fill, minmax(16rem, 1fr)) do?
+  show: 4
+  options:
+    o98b39c: Sets row heights
+    o2d38c9: Lets columns stretch to share leftover space
+    oa81f8e: Only works with media queries
+    o13fa2e: Hides overflowing items
+    oe1f0ab: Always makes 16 columns
+    o9491d4: Makes as many columns as fit, each at least 16rem
+q14:
+  text: A long word overflows a flex item. Which fixes are right?
+  show: 4
+  options:
+    oc9b65f: 'display: inline'
+    o83a35a: 'flex-direction: column-reverse'
+    ofdef20: 'position: absolute'
+    obd05b0: 'overflow-wrap: anywhere on the text'
+    oa0dbac: 'min-width: 0 on the flex item'
+    o5df384: 'z-index: 10'
+q15:
+  text: In a row flex container, which property aligns items vertically?
+  show: 4
+  options:
+    od8be5f: text-align
+    of5598b: align-items
+    o39bb81: flex-wrap
+    o53f8d1: vertical-align
+    o1004f5: align-self (for one item)
+    o653b99: justify-content
+q16:
+  text: What happens to a flex row in a dir=rtl page?
+  show: 4
+  options:
+    o29ed0d: Flexbox stops working
+    o42985f: Nothing changes
+    o980fda: Only text flips, not the items
+    o79654b: The main axis follows the writing direction
+    oa337f7: Items start from the right
+    o4bf0c0: Items are reversed vertically
+q17:
+  text: Which are logical properties?
+  show: 4
+  options:
+    o01c435: margin-left
+    oce9a9d: padding-top-left
+    oaa138e: right
+    o115937: inset-inline-end
+    o1260aa: 'float: left'
+    o570973: margin-inline-start
+q18:
+  text: What do container queries respond to?
+  show: 4
+  options:
+    o0b93d4: The screen width only
+    oa9c6d1: A parent with container-type set
+    oc61455: The number of elements
+    of5ac64: The user's language
+    o26295f: The device's battery
+    o626180: The size of the component's container
+q19:
+  text: In an Arabic interface, which icons should be mirrored?
+  show: 4
+  options:
+    obfcc85: A back arrow
+    o684cf5: A play button
+    o10a1b7: A checkmark
+    o8d17cf: A search magnifier
+    oa35658: A clock
+    o69d2dc: A 'next' chevron
+q20:
+  text: Why does inPace give each lesson paragraph its own dir?
+  show: 4
+  options:
+    of49a1e: So each block reads in its own natural direction
+    ob23779: To hide code blocks
+    od397c4: Lessons can mix Arabic and English paragraphs
+    o16310f: For search engines
+    o35b369: To make text bigger
+    o9b4fe2: Because Markdown requires it
+q21:
+  text: How do CSS custom properties differ from Sass variables?
+  show: 4
+  options:
+    o6b46db: They only work in Chrome
+    o5df7cb: They're faster to type
+    od6724a: They inherit through the DOM
+    o24df6d: They can't hold colours
+    o659e26: They're removed when compiled
+    o028159: They exist at runtime and can change in the browser
+q22:
+  text: What's the minimum WCAG AA contrast for normal body text?
+  show: 4
+  options:
+    o0e1bdd: '2:1'
+    oc7af32: 4.5:1
+    oe4f0da: Four and a half to one
+    oe75346: '10:1'
+    o14c80a: '3:1'
+    oa67d09: '7:1'
+q23:
+  text: Which are good accessibility practices?
+  show: 4
+  options:
+    o9e74a9: Using :focus-visible for a clear focus ring
+    od86007: 'outline: none on every element'
+    o47ee59: Using a native <button> instead of role="button" on a div
+    o328a99: tabindex="5" to reorder the page
+    o14e4e3: Putting text in images
+    o990583: Using colour alone to show errors
+q24:
+  text: A message appears after an action without a page load. How do screen reader users hear it?
+  show: 4
+  options:
+    oab0bef: Make it red
+    o56e4ca: Put it in a region with aria-live="polite"
+    occf92e: They can't
+    o51536b: Put it in the <title>
+    o1c9ee6: Use a live region so changes are announced
+    od798a6: Use a tooltip
+q25:
+  text: Which are Core Web Vitals?
+  show: 4
+  options:
+    o38fa8a: DNS
+    oe49bf0: FPS
+    o10899b: CLS
+    o0c0ef4: TTL
+    o80c38a: LCP
+    o40539f: CSSOM
+q26:
+  text: 'What does display: none do that visibility: hidden doesn''t?'
+  show: 4
+  options:
+    o90f426: Keeps its space
+    o43766d: Makes it transparent but clickable
+    o32d3ce: Delays its loading
+    o902c53: Only hides its text
+    o07c287: Removes it from the accessibility tree
+    o3171f7: Removes the element from layout
+q27:
+  text: Which help a page's first paint?
+  show: 4
+  options:
+    od14216: Large uncompressed images
+    o9afccf: More DOM nodes
+    o2ca13d: Inline scripts in <head> without defer
+    o8d16b6: Fewer render-blocking CSS and JS files
+    o7af62b: Loading scripts with defer
+    o6254aa: Adding more web fonts
+q28:
+  text: 'Why does inPace send Cache-Control: no-store for pages but not for static files?'
+  show: 4
+  options:
+    ob59867: Static files are secret
+    oce4060: Browsers can't cache CSS
+    oec8d58: It's random
+    o01aeaa: Pages are too big to cache
+    o8aca73: Pages change with your data, so they must be fresh
+    od44eab: Static files rarely change and can be reused

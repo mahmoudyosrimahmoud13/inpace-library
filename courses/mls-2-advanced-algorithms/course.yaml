@@ -1,0 +1,312 @@
+id: mls-2-advanced-algorithms
+title: 'Machine Learning refresh 2: neural networks, ML practice and decision trees'
+version: 1
+language: en
+description: 'An advanced refresh of part 2 of Andrew Ng''s Machine Learning Specialization, with the original slides
+  inside each lesson: neural networks and forward propagation, TensorFlow, backprop, activations, softmax, Adam,
+  bias and variance, learning curves, error analysis, transfer learning, precision and recall, decision trees, random
+  forests and XGBoost, plus an interview drill. Plan: about 12 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI
+  (CC BY-SA 2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: Neurons and layers'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: From biology to layers
+    file: lessons/m1-l2.md
+    minutes: 35
+    media: C2_W1.pdf#pages=2-32
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Draw (on paper or as a Mermaid diagram) a network for a problem of your own, label every layer's shape,
+      and count its parameters. Upload it.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why a neural network is said to 'learn its own features', using the demand prediction or face
+      example.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Forward propagation and TensorFlow'
+  lessons:
+  - id: m2-l1
+    title: Forward propagation and inference in code
+    file: lessons/m2-l1.md
+    minutes: 35
+    media: C2_W1.pdf#pages=33-53
+  - id: m2-l2
+    title: Forward propagation from scratch, and AGI
+    file: lessons/m2-l2.md
+    minutes: 25
+    media: C2_W1.pdf#pages=54-64
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Build the same small network twice: once in Keras, once from scratch in NumPy with the weights copied
+      from Keras (model.get_weights()). Show the predictions match. Upload the notebook.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain forward propagation step by step for a 2-layer network, naming the shapes at each step.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Vectorization, and how backprop works'
+  lessons:
+  - id: m3-l1
+    title: Matrix multiplication for whole layers
+    file: lessons/m3-l1.md
+    minutes: 25
+    media: C2_W1.pdf#pages=65-78
+  - id: m3-l2
+    title: Backpropagation without fear
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Do the computation-graph example above by hand for different numbers, then check it with tf.GradientTape
+      or PyTorch autograd. Upload your working and the code.
+  - id: m3-explain
+    type: explain
+    prompt: Why is backpropagation efficient? Explain with the idea of reusing derivatives in a computation graph.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Training a network and choosing activations'
+  lessons:
+  - id: m4-l1
+    title: The three training steps
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: C2_W2.pdf#pages=2-9
+  - id: m4-l2
+    title: Activation functions
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: C2_W2.pdf#pages=10-20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Train the same network on a non-linear dataset (for example two moons) with (a) linear hidden activations
+      and (b) ReLU. Plot both decision boundaries. Upload the notebook and explain the difference.
+  - id: m4-explain
+    type: explain
+    prompt: Why does a neural network need non-linear activations? Show the algebra for two linear layers.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Multiclass, softmax, Adam and layer types'
+  lessons:
+  - id: m5-l1
+    title: Softmax and its stable implementation
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: C2_W2.pdf#pages=21-38
+  - id: m5-l2
+    title: Adam and other layer types
+    file: lessons/m5-l2.md
+    minutes: 25
+    media: C2_W2.pdf#pages=39-47
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Train a 10-class classifier on MNIST (or Fashion-MNIST) with from_logits=True and Adam. Report accuracy
+      and show 10 mistakes. Then write a numerically stable softmax in NumPy and test it on z = [1000, 1001, 1002].
+      Upload the notebook.
+  - id: m5-explain
+    type: explain
+    prompt: When do you use softmax and when several sigmoids? Give one example of each.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Days 6-7: Evaluating models: bias, variance and learning curves'
+  lessons:
+  - id: m6-l1
+    title: Train, cross-validation and test sets
+    file: lessons/m6-l1.md
+    minutes: 25
+    media: C2_W3.pdf#pages=2-18
+  - id: m6-l2
+    title: Diagnosing bias and variance
+    file: lessons/m6-l2.md
+    minutes: 30
+    media: C2_W3.pdf#pages=19-30
+  - id: m6-l3
+    title: Learning curves
+    file: lessons/m6-l3.md
+    minutes: 15
+    media: C2_W3.pdf#pages=31-41
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'On a dataset of your choice, plot (a) training and CV error against λ and (b) learning curves against
+      training set size. Write a short diagnosis: bias, variance or both, and what you''d do next. Upload the notebook.'
+  - id: m6-explain
+    type: explain
+    prompt: Your model has 2% training error and 12% CV error, and humans get 1%. Diagnose it and list what you'd
+      try, in order.
+    min_words: 70
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 8: The ML development loop'
+  lessons:
+  - id: m7-l1
+    title: Error analysis, more data, transfer learning
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: C2_W3.pdf#pages=42-66
+  - id: m7-l2
+    title: The full cycle, and ethics
+    file: lessons/m7-l2.md
+    minutes: 20
+    media: C2_W3.pdf#pages=67-73
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Fine-tune a small pre-trained image model (for example MobileNetV2 in Keras) on a small dataset of
+      your own choice: first training only the head, then fine-tuning. Do an error analysis on 50 mistakes. Upload
+      the notebook and your error table.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain transfer learning to a manager who asks why you don't train from scratch.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 9: Skewed datasets: precision and recall'
+  lessons:
+  - id: m8-l1
+    title: Precision, recall, F1 and thresholds
+    file: lessons/m8-l1.md
+    minutes: 30
+    media: C2_W3.pdf#pages=74-79
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Train a classifier on an imbalanced dataset (for example credit-card fraud). Report accuracy, precision,
+      recall, F1, ROC-AUC and PR-AUC, plot the precision-recall curve, and choose a threshold for a stated business
+      cost. Upload the notebook.
+  - id: m8-explain
+    type: explain
+    prompt: Explain to a doctor why 99% accuracy can be a bad model, and how you'd choose a threshold for a cancer
+      test.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Days 10-11: Decision trees and tree ensembles'
+  lessons:
+  - id: m9-l1
+    title: 'Decision trees: purity and information gain'
+    file: lessons/m9-l1.md
+    minutes: 35
+    media: C2_W4.pdf#pages=2-66
+  - id: m9-l2
+    title: Random forests and XGBoost
+    file: lessons/m9-l2.md
+    minutes: 30
+    media: C2_W4.pdf#pages=67-82
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: On one tabular dataset, compare a single decision tree, a random forest and XGBoost with cross-validation.
+      Report scores and training times, and compute one information gain by hand for the root split. Upload the
+      notebook.
+  - id: m9-explain
+    type: explain
+    prompt: Explain the difference between bagging (random forest) and boosting (XGBoost), and why both beat one
+      tree.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'Day 12: Interview drill'
+  lessons:
+  - id: m10-l1
+    title: 25 questions, short answers
+    file: lessons/m10-l1.md
+    minutes: 45
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: Record yourself (or write) answers to 10 of the 25 questions, each under one minute, plus the churn
+      case. Upload the recording or document.
+  - id: m10-explain
+    type: explain
+    prompt: 'An interviewer asks: ''Walk me through how you''d debug a neural network that isn''t learning.'' Answer
+      in order of what you''d check first.'
+    min_words: 100
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

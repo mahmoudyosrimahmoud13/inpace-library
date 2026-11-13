@@ -2,6 +2,7 @@ id: python-basics
 title: Python Basics
 version: 1
 language: en
+image: cover.jpg
 description: A short starter course. Learn what Python is, write your first lines, and use variables and lists.
 modules:
   - id: m1

@@ -1,0 +1,140 @@
+q1:
+  right:
+  - oa78c13
+  - oacd115
+  why: Empty arrays and objects are truthy.
+q2:
+  right:
+  - of867e9
+  - o7a6861
+  why: '|| would have given 10.'
+q3:
+  right:
+  - o8baeef
+  - o59a153
+  why: The temporal dead zone.
+q4:
+  right:
+  - offf912
+  - o39f0a2
+  why: typeof gives "object" for arrays.
+q5:
+  right:
+  - of3b57c
+  - of6a33e
+  why: Arrows don't have their own this.
+q6:
+  right:
+  - odd3da0
+  - of334f7
+  why: The inner function keeps the outer variables alive.
+q7:
+  right:
+  - o0a11f5
+  - o1eee22
+  why: this is set by the call site.
+q8:
+  right:
+  - o8c613e
+  - o728f94
+  why: class is syntax over prototypal inheritance.
+q9:
+  right:
+  - oa23d40
+  - oadbe72
+  why: Clicks bubble from the innermost element.
+q10:
+  right:
+  - odd2a8c
+  - oeab9e7
+  why: One listener near the root handles many children.
+q11:
+  right:
+  - o1b9c4e
+  - od09d6a
+  why: Parsing user input as HTML is the root of XSS.
+q12:
+  right:
+  - o00f71e
+  - o735bf4
+  why: Useful when a form has several submit buttons.
+q13:
+  right:
+  - oda2f96
+  - o1a0eef
+  why: fetch rejects only on network errors or abort.
+q14:
+  right:
+  - o917e30
+  - oaca7fc
+  why: All microtasks run before the next task.
+q15:
+  right:
+  - o5ac5ac
+  - o80d417
+  why: Client-side guard plus disabled buttons.
+q16:
+  right:
+  - o5d0d04
+  - o793f14
+  why: allSettled waits for all even with errors.
+q17:
+  right:
+  - o2fcf6a
+  - o0279f0
+  why: replace swaps the current entry.
+q18:
+  right:
+  - oa700c5
+  - o7d6f05
+  why: Fragment navigation is same-document.
+q19:
+  right:
+  - o239001
+  - oddeb49
+  why: Cookies are what the server sees.
+q20:
+  right:
+  - oad5796
+  - o1c4c99
+  why: The screen only displays; the server decides.
+q21:
+  right:
+  - o8cacb1
+  - o091b69
+  why: Pointer capture redirects pointer events to the element.
+q22:
+  right:
+  - o67fe87
+  - oc208bb
+  why: apply(pinch.z * gap() / pinch.d).
+q23:
+  right:
+  - o944786
+  - o459cd3
+  why: Don't steal standard gestures.
+q24:
+  right:
+  - oa12376
+  - ob03c34
+  why: Tainted canvases block reading pixels.
+q25:
+  right:
+  - oc96351
+  - o5ee9e7
+  why: Spread and assign are shallow.
+q26:
+  right:
+  - of7ffe3
+  - o3f65e8
+  why: Don't parse user data as HTML; restrict scripts.
+q27:
+  right:
+  - o9f017e
+  - o9b7c96
+  why: debounce waits for quiet; throttle spaces calls out.
+q28:
+  right:
+  - o2fdf91
+  - o356556
+  why: Arrival order differs from input order.

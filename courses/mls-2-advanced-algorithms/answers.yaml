@@ -1,0 +1,200 @@
+q1:
+  right:
+  - o75b2ef
+  - o884aed
+  why: Each unit is a tiny regression plus activation.
+q2:
+  right:
+  - o3cbbeb
+  - ofe99d7
+  why: W is 400 × 25, b has 25 values.
+q3:
+  right:
+  - ofcea85
+  - o87748e
+  why: Hierarchical features.
+q4:
+  right:
+  - o30d3e0
+  - o7af5e4
+  why: Layer 0 is the input.
+q5:
+  right:
+  - o7ada6c
+  - o8d2ea2
+  why: Rows are examples.
+q6:
+  right:
+  - o8ba837
+  - o41bacf
+  why: Apply a threshold yourself.
+q7:
+  right:
+  - oc6f994
+  - o7d8af9
+  why: W is (inputs, units).
+q8:
+  right:
+  - o21d847
+  - odee9f1
+  why: Backprop goes the other way.
+q9:
+  right:
+  - o5095e2
+  - o409664
+  why: (m, n) @ (n, k) → (m, k).
+q10:
+  right:
+  - o79d3d6
+  - oe35422
+  why: It computes gradients; an optimizer uses them.
+q11:
+  right:
+  - o4a2857
+  - ofc2d4f
+  why: Keep gradients from shrinking through depth.
+q12:
+  right:
+  - o086430
+  - o4ed832
+  why: ∂J/∂w = ∂J/∂c · x.
+q13:
+  right:
+  - od0c808
+  - oc425ca
+  why: Match the output range.
+q14:
+  right:
+  - o13bca5
+  - o50ad57
+  why: Fast and trains well.
+q15:
+  right:
+  - o48620e
+  - o1afa84
+  why: Compositions of linear functions are linear.
+q16:
+  right:
+  - o947b8e
+  - o04e43a
+  why: fit(epochs=...) counts passes.
+q17:
+  right:
+  - o4f3e9b
+  - ob1b008
+  why: Numerical stability.
+q18:
+  right:
+  - o29e34c
+  - o47e60c
+  why: Shifting doesn't change the result.
+q19:
+  right:
+  - od5e666
+  - oa390fd
+  why: Softmax forces exactly one class.
+q20:
+  right:
+  - o930901
+  - of0532e
+  why: A strong default optimizer.
+q21:
+  right:
+  - o031c6f
+  - ofab814
+  why: Choose on CV, report on test.
+q22:
+  right:
+  - ocd05c3
+  - o04c54b
+  why: 'High bias: the model can''t fit.'
+q23:
+  right:
+  - o68ec88
+  - o6b28df
+  why: The model is overfitting smaller sets.
+q24:
+  right:
+  - o14bb22
+  - o0c5efd
+  why: Avoid leaking the future.
+q25:
+  right:
+  - oe52e26
+  - oc656da
+  why: Augment with distortions you'll see in real data.
+q26:
+  right:
+  - o13a767
+  - o16dcd0
+  why: 'Little data: train the head only.'
+q27:
+  right:
+  - oae3f16
+  - o5fce67
+  why: Look at the mistakes.
+q28:
+  right:
+  - o7744b6
+  - o8083b2
+  why: Models degrade as the world changes.
+q29:
+  right:
+  - o205782
+  - o0782de
+  why: P = 20/100, R = 20/25.
+q30:
+  right:
+  - o34b515
+  - of0d31f
+  why: Fewer, more confident positives.
+q31:
+  right:
+  - o90bc77
+  - oaae2f1
+  why: Averages hide a terrible side.
+q32:
+  right:
+  - o97a287
+  - o05a115
+  why: Accuracy is dominated by the majority class.
+q33:
+  right:
+  - oac105f
+  - o0cae10
+  why: H(0.5) = 1.
+q34:
+  right:
+  - o11a90a
+  - o2bc1ac
+  why: Bagging plus feature randomness.
+q35:
+  right:
+  - o2a9563
+  - ofa01fe
+  why: Sequential error correction.
+q36:
+  right:
+  - o6c82cf
+  - o08549d
+  why: Trees shine on tabular data.
+q37:
+  right:
+  - o6c35c3
+  - o41d3a2
+  why: A model that can't overfit 10 examples has a bug.
+q38:
+  right:
+  - o8d4f56
+  - o831b9d
+  why: At test time all units are used.
+q39:
+  right:
+  - o90ecc4
+  - o54f7fe
+  why: The world changed, the model didn't.
+q40:
+  right:
+  - o116dd9
+  - o7a451e
+  why: Look at precision and recall.

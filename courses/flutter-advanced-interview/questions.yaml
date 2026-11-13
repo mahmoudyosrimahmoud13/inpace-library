@@ -1,0 +1,360 @@
+q1:
+  text: Which are true about const in Dart?
+  show: 4
+  options:
+    oe36ee0: Values are fixed at compile time
+    o4f96ff: It's the same as final
+    o6f7d4e: It can hold a value from an HTTP call
+    o2e37cd: It only works for numbers
+    of4ad8d: It makes a widget rebuild more
+    o7ac35e: Identical const objects are shared (canonicalized)
+q2:
+  text: Why use a sealed class for UI state?
+  show: 4
+  options:
+    o91edda: It replaces streams
+    ofd62bd: It makes objects mutable
+    o20a2b8: Adding a state forces you to handle it everywhere
+    oa46ce5: switch over it is checked to be exhaustive
+    o08a9e8: It hides the class from other files' imports
+    of1e545: It's faster at runtime
+q3:
+  text: What order prints? print('1'); Future(() => print('2')); scheduleMicrotask(() => print('3')); print('4');
+  show: 4
+  options:
+    o1ef88e: 1 4 3 2
+    oa0845d: 4 3 2 1
+    o99d574: Sync code, then microtasks, then events
+    ofa9241: 1 4 2 3
+    oed4d44: 1 3 2 4
+    of6bb59: 1 2 3 4
+q4:
+  text: Which are true about isolates?
+  show: 4
+  options:
+    obe0c69: They don't share memory
+    o897085: Each runs on the UI thread
+    o4a3d9c: They communicate by passing messages
+    oba24db: They share all objects like threads
+    oc08ddd: They can't run in Flutter
+    o9352c3: They're the same as futures
+q5:
+  text: What is a BuildContext?
+  show: 4
+  options:
+    oa82294: The widget itself
+    oc661fa: The app's theme
+    o713640: The element for that widget
+    oba0482: A global singleton
+    o2217e8: The render object
+    o586450: A handle to the widget's place in the element tree
+q6:
+  text: When does Flutter reuse an element during a rebuild?
+  show: 4
+  options:
+    oeb98fb: When the widget is const only
+    od0f009: Always
+    o2e0e4e: When Widget.canUpdate returns true
+    o43730f: When the widget has a GlobalKey only
+    o43fa89: Never
+    o693a28: When the new widget has the same runtimeType and key
+q7:
+  text: 'A ListView inside a Column throws an error. Fixes:'
+  show: 4
+  options:
+    o61c7b1: Add a GlobalKey
+    oc6fcd7: Make it const
+    o37aec5: Wrap it in a Row
+    o0583cf: Use setState
+    o785aae: Give it a bounded height
+    o642bd7: Wrap the ListView in Expanded
+q8:
+  text: Where should you cancel a StreamSubscription?
+  show: 4
+  options:
+    o4a1c16: Never, Dart cleans it up
+    ocaaf56: When the State is removed for good
+    o8e93af: In didUpdateWidget only
+    o86469f: In build()
+    o1a68b5: In initState()
+    o7efc1b: In dispose()
+q9:
+  text: What sits underneath Provider and many other solutions?
+  show: 4
+  options:
+    o2f1413: RenderObject
+    o6dc4c1: GlobalKey
+    o3c4020: Dependents that rebuild when it changes
+    o8152cf: Isolates
+    o7ddfe2: InheritedWidget
+    o55a542: MethodChannel
+q10:
+  text: Which are advantages of Riverpod?
+  show: 4
+  options:
+    ob8ab02: It forbids async code
+    oa885e3: Errors from missing providers are caught at compile time
+    o55bc43: It's built on Bloc
+    o948aaa: It removes the need for widgets
+    oc71905: It requires BuildContext everywhere
+    oc637ae: Providers can be overridden in tests
+q11:
+  text: Why implement == and hashCode on state classes?
+  show: 4
+  options:
+    o9b516a: So equal states don't trigger rebuilds
+    obac473: Because Dart requires it for every class
+    o5876be: Value equality lets the framework skip updates
+    o0cb48b: To make them mutable
+    of1e185: To make them faster to create
+    oace38d: To serialize them
+q12:
+  text: 'Bloc''s main strength is:'
+  show: 4
+  options:
+    oab0b47: It replaces navigation
+    oc177b2: Explicit, traceable event to state transitions
+    o1febba: Zero boilerplate
+    o99859e: No need for streams
+    o6f30bd: Easy testing of each transition
+    o5eeb8b: It runs logic on the raster thread
+q13:
+  text: Which follow the dependency rule?
+  show: 4
+  options:
+    oaeff98: Widgets are defined in the domain
+    oe302c9: Domain code doesn't import Flutter or HTTP packages
+    o1de40c: Repositories implement interfaces defined in the domain
+    o960fda: Use cases call Dio directly
+    o8fd03b: The data layer is imported by entities
+    o9e5069: Entities import widgets
+q14:
+  text: Why inject a clock instead of calling DateTime.now()?
+  show: 4
+  options:
+    o6b36d5: DateTime.now() is deprecated
+    ob15b46: Tests can control time
+    oa57aaa: It's faster
+    o9b452d: It saves memory
+    o89cf7d: Flutter requires it
+    o26f3bb: Logic becomes deterministic
+q15:
+  text: What does a golden test check?
+  show: 4
+  options:
+    o9d1f55: Database migrations
+    of27c29: Network responses
+    oc38196: Code formatting
+    o787082: That the app starts on a device
+    o9686ff: That a widget looks the same as before
+    o495d28: The rendered pixels match a saved image
+q16:
+  text: 'Good reasons to return a Result instead of throwing:'
+  show: 4
+  options:
+    o06bd9f: Callers are forced to handle failure
+    o9fcd80: It removes the need for tests
+    o0d8023: It's faster in every case
+    o75a567: Exceptions are forbidden in Dart
+    oc57cc3: Expected failures become part of the type
+    o7eeee5: It makes code shorter always
+q17:
+  text: Where should you measure performance?
+  show: 4
+  options:
+    obc4c30: In debug mode on an emulator
+    o94b0d8: Only in unit tests
+    o7a7a54: In the browser
+    o5153dd: Only on the newest iPhone
+    o942a56: On a real, preferably low-end, device
+    oe0f2a4: In profile mode
+q18:
+  text: Which reduce unnecessary rebuilds?
+  show: 4
+  options:
+    o41494b: Rebuilding on a timer
+    oc4e074: Putting everything in one build method
+    o0f671d: GlobalKeys everywhere
+    o6fcc89: Selecting only the part of state a widget needs
+    o5b4504: Calling setState at the root
+    o543465: const widgets
+q19:
+  text: What does RepaintBoundary do?
+  show: 4
+  options:
+    o32ffe6: Stops rebuilds
+    o9113d2: Moves work to an isolate
+    oadcac9: Stops frequent repaints spreading to the rest of the screen
+    odbbc22: Gives a subtree its own layer
+    of10685: Caches network calls
+    oac43e6: Prevents layout
+q20:
+  text: 'Decoding a 4000 px photo for a 100 px thumbnail is slow. Fix:'
+  show: 4
+  options:
+    of37d44: Decode at the size you show
+    o163ab9: Use a GlobalKey
+    o5231a3: Wrap it in Opacity
+    o1da8b3: Set cacheWidth or cacheHeight
+    o748133: Make it const
+    o3c8c5d: Call setState less
+q21:
+  text: Which are directional (RTL-aware) widgets or values?
+  show: 4
+  options:
+    o0ab797: Alignment.centerLeft
+    o703d29: TextAlign.left
+    o0a7c7e: AlignmentDirectional
+    o48ce3a: 'EdgeInsets.only(left: 8)'
+    o33f379: 'Positioned(left: 0)'
+    od4a14f: EdgeInsetsDirectional
+q22:
+  text: Why can't custom URL schemes be fully trusted?
+  show: 4
+  options:
+    o6998cb: They need a server
+    oc5a5ae: Any app can register the same scheme
+    oe4ebe5: They don't work on Android
+    of7b858: They can't carry data
+    o3aa083: They're slower
+    o51d1af: There's no domain verification
+q23:
+  text: What does StatefulShellRoute.indexedStack give you?
+  show: 4
+  options:
+    o1de901: Localization
+    o03cc3a: Persistent branches for bottom navigation
+    obcde92: Tabs that keep their own navigation state
+    o787936: A splash screen
+    obd7110: Faster images
+    o7da152: Deep link verification
+q24:
+  text: How do you add custom design tokens to a Flutter theme?
+  show: 4
+  options:
+    o0aca45: Global variables
+    oe632fe: Editing the Material library
+    od0a93b: Read it with Theme.of(context).extension<T>()
+    o6fe58c: A ThemeExtension
+    of2744d: MethodChannel
+    o516e15: A GlobalKey
+q25:
+  text: Which are true about MethodChannel calls?
+  show: 4
+  options:
+    o8ee5e8: They're synchronous
+    o86e9ba: They need no native code
+    odf8a5a: They share memory with native code
+    od64358: Arguments are serialized
+    oba859a: They're asynchronous
+    o29b1a9: They run on the raster thread
+q26:
+  text: Why use Pigeon?
+  show: 4
+  options:
+    o4e082d: No hand-written method names and casts
+    o9e21ad: It makes calls synchronous
+    od53913: It replaces FFI for C libraries
+    o86ef7c: It runs Python
+    o15d7ec: It removes the need for Kotlin or Swift
+    od26366: Type-safe generated code on both sides
+q27:
+  text: When is dart:ffi the best fit?
+  show: 4
+  options:
+    o4e2316: Push notifications
+    o533256: Calling a C, C++ or Rust library directly
+    oe68a6d: Calling a Kotlin API that needs an Activity
+    obc717f: When you need synchronous, low-overhead calls
+    o29f0a9: Deep links
+    odd09d9: Showing a native dialog
+q28:
+  text: How does inPace's trip countdown keep running when the app is closed?
+  show: 4
+  options:
+    o75d040: A Dart timer in an isolate
+    o85354a: usesChronometer with chronometerCountDown
+    o58517d: A foreground Python service
+    o81adeb: A notification chronometer drawn by Android
+    o8f2618: The WebView keeps running
+    oa14089: Push from a server
+q29:
+  text: Why keep the split-debug-info symbols?
+  show: 4
+  options:
+    ocd7af4: Google Play requires them inside the APK
+    o10a126: To de-obfuscate crash stack traces
+    o393b08: Obfuscated traces are unreadable without them
+    o75282a: They're needed for debug builds
+    o396353: They make the app smaller
+    o9f024c: They speed up start-up
+q30:
+  text: Which belong in CI secrets, not in git?
+  show: 4
+  options:
+    o58e0f6: The app icon
+    o32cc52: The README
+    o7ba58a: Unit tests
+    o4403a3: The Android upload keystore
+    o194876: Its passwords
+    o240431: pubspec.yaml
+q31:
+  text: What does 1.17.0+11700 mean in pubspec.yaml?
+  show: 4
+  options:
+    occbd5e: versionName 1.17.0
+    o570085: Build number of Flutter
+    o0dab71: Dart SDK constraint
+    oc1d8e0: versionCode 11700
+    o549bce: Flutter version 1.17
+    o0f816c: The minimum Android API
+q32:
+  text: 'Good practices for safer releases:'
+  show: 4
+  options:
+    o0d3146: Releasing to 100% at once always
+    o2b9196: Skipping tests on tags
+    ofc3be5: Staged rollouts
+    o726bfb: Disabling crash reporting
+    of2a172: Unpinned dependency versions
+    o00f3c1: Feature flags for risky features
+q33:
+  text: In an offline-first app, what is usually the source of truth for the UI?
+  show: 4
+  options:
+    o1ac8b0: SharedPreferences for everything
+    o26c46d: The local database
+    o18a564: Data on the device, synced in the background
+    oebd13e: Widget state
+    o3da9ca: The network cache only
+    o9cdeb9: The server response of the last request
+q34:
+  text: Where should an access token be stored on a phone?
+  show: 4
+  options:
+    o7bcced: SharedPreferences in plain text
+    o1bd929: Secure, OS-backed storage
+    o45d657: Keychain or Keystore (for example via flutter_secure_storage)
+    ob4a52b: A global variable only
+    o2f11ec: Hard-coded in the app
+    o78dd5b: A file in Downloads
+q35:
+  text: A countdown should stay correct after the app is backgrounded. How?
+  show: 4
+  options:
+    o51201b: Restart the timer on resume
+    o99e96c: Keep the app awake forever
+    obb6a35: Store the remaining seconds only
+    o6567ea: Store the end time and compute what's left
+    o3d388a: Don't count ticks, compare with the clock
+    o1aa50d: Use a Timer.periodic and trust it
+q36:
+  text: Which belong in a strong live-coding answer?
+  show: 4
+  options:
+    o84e8e5: Disposing controllers and timers
+    oae6e49: Putting all logic in build()
+    o156f1d: Ignoring tests
+    oea9554: Handling loading, empty and error states
+    oafa967: Skipping requirements questions
+    o0329c7: Hard-coding API keys

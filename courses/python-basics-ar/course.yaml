@@ -2,6 +2,7 @@ id: python-basics-ar
 title: أساسيات بايثون
 version: 1
 language: ar
+image: cover.jpg
 description: دورة قصيرة للبداية. تعرّف على بايثون، واكتب أول سطور برمجية، واستخدم المتغيرات والقوائم.
 modules:
   - id: m1

@@ -1,0 +1,247 @@
+id: mls-3-unsupervised-rl
+title: 'Machine Learning refresh 3: unsupervised learning, recommenders and reinforcement learning'
+version: 1
+language: en
+description: 'An advanced refresh of part 3 of Andrew Ng''s Machine Learning Specialization, with the original slides
+  inside each lesson: k-means, anomaly detection, collaborative and content-based recommenders, retrieval and ranking,
+  reinforcement learning, the Bellman equation and deep Q-learning, plus PCA and an interview drill. Plan: about
+  9 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: Clustering with k-means'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: The k-means algorithm and its objective
+    file: lessons/m1-l2.md
+    minutes: 35
+    media: C3_W1.pdf#pages=2-35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Implement k-means from scratch in NumPy (assign and move steps, many random starts, the cost J), use
+      it to compress an image to 16 colours, and compare with scikit-learn's KMeans. Upload the notebook and the
+      two images.
+  - id: m1-explain
+    type: explain
+    prompt: Why does the k-means cost never increase, and why can it still end in a poor result? How do you protect
+      against that?
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Anomaly detection'
+  lessons:
+  - id: m2-l1
+    title: Density estimation with Gaussians
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: C3_W1.pdf#pages=36-59
+  - id: m2-l2
+    title: 'Going further: modern options'
+    file: lessons/m2-l2.md
+    minutes: 15
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a Gaussian anomaly detector from scratch on a dataset with a few labelled anomalies, choose ε
+      by F1 on a CV set, and compare with scikit-learn's IsolationForest. Upload the notebook.
+  - id: m2-explain
+    type: explain
+    prompt: When would you use anomaly detection instead of a supervised classifier? Use fraud and spam as examples.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Days 3-4: Recommenders: collaborative filtering'
+  lessons:
+  - id: m3-l1
+    title: Learning user and item vectors together
+    file: lessons/m3-l1.md
+    minutes: 35
+    media: C3_W2.pdf#pages=2-19
+  - id: m3-l2
+    title: Mean normalization and TensorFlow
+    file: lessons/m3-l2.md
+    minutes: 25
+    media: C3_W2.pdf#pages=20-29
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Implement collaborative filtering with mean normalization in TensorFlow (GradientTape) on MovieLens
+      small. Add your own ratings for 10 movies and show your top 10 recommendations and the 5 movies most similar
+      to one you like. Upload the notebook.
+  - id: m3-explain
+    type: explain
+    prompt: Explain the cold-start problem and how mean normalization helps a new user. What does it NOT solve?
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 5: Content-based filtering at scale'
+  lessons:
+  - id: m4-l1
+    title: Two towers, retrieval and ranking
+    file: lessons/m4-l1.md
+    minutes: 35
+    media: C3_W2.pdf#pages=30-48
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Design (in writing, with a diagram) the recommender for inPace''s course library: what retrieval would
+      gather, what features each tower would use, what you''d optimize, and one ethical risk with a mitigation.
+      Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain retrieval and ranking, and why a large recommender needs both steps.
+    min_words: 70
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 6: Reinforcement learning: returns, policies and Q'
+  lessons:
+  - id: m5-l1
+    title: States, actions, rewards and returns
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: C3_W3.pdf#pages=2-18
+  - id: m5-l2
+    title: The state-action value function Q
+    file: lessons/m5-l2.md
+    minutes: 25
+    media: C3_W3.pdf#pages=19-23
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Code the Mars rover in Python: compute Q(s, a) for every state and action by brute force for γ = 0.5
+      and γ = 0.9, and show how the best policy changes. Upload the code and both tables.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain what the discount factor does, and how the rover's best policy changes when γ gets closer to
+      1.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 7: The Bellman equation and continuous states'
+  lessons:
+  - id: m6-l1
+    title: Bellman, and randomness
+    file: lessons/m6-l1.md
+    minutes: 30
+    media: C3_W3.pdf#pages=24-33
+  - id: m6-l2
+    title: Continuous states and learning Q with a network
+    file: lessons/m6-l2.md
+    minutes: 30
+    media: C3_W3.pdf#pages=34-48
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Solve the rover by value iteration (repeatedly applying the Bellman equation until Q stops changing),
+      with and without a 10% slip probability. Compare with your Day 6 brute force. Upload the code.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the Bellman equation in words and why it lets you create training targets for a network.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 8: Deep Q-learning in practice'
+  lessons:
+  - id: m7-l1
+    title: ε-greedy, mini-batches and soft updates
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: C3_W3.pdf#pages=49-62
+  - id: m7-l2
+    title: 'Going further: what interviewers may ask'
+    file: lessons/m7-l2.md
+    minutes: 15
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Train a DQN on Gymnasium's LunarLander-v3 (or CartPole-v1 if you're short on time) with a replay buffer,
+      ε-greedy and a soft-updated target network. Plot the average return over episodes. Upload the notebook and
+      a short video or GIF.
+  - id: m7-explain
+    type: explain
+    prompt: Why does DQN need a target network and a replay buffer? What goes wrong without each?
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 9: PCA, and the interview drill'
+  lessons:
+  - id: m8-l1
+    title: PCA in 15 minutes
+    file: lessons/m8-l1.md
+    minutes: 20
+  - id: m8-l2
+    title: 25 questions, short answers
+    file: lessons/m8-l2.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Write a one-page answer to the design question in the last lesson, with a diagram, and record yourself
+      answering 10 of the 25 questions. Upload both.
+  - id: m8-explain
+    type: explain
+    prompt: 'An interviewer asks: ''How would you evaluate a recommender system before and after launch?'' Answer
+      it.'
+    min_words: 90
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70

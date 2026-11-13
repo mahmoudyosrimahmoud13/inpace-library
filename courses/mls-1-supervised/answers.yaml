@@ -1,0 +1,160 @@
+q1:
+  right:
+  - ob872ae
+  - o258891
+  why: Regression predicts a number from a continuous range.
+q2:
+  right:
+  - o464039
+  - of885d9
+  why: No right answers are given.
+q3:
+  right:
+  - o62b566
+  - o29445d
+  why: Supervision means labels.
+q4:
+  right:
+  - o2af234
+  - o348880
+  why: Self-supervised learning creates its own labels.
+q5:
+  right:
+  - o99deab
+  - o9bcdcf
+  why: It's a mean, so it's comparable across dataset sizes.
+q6:
+  right:
+  - oc6de39
+  - o404992
+  why: A convex bowl.
+q7:
+  right:
+  - od7b5c9
+  - o5bd05a
+  why: They grow linearly, not quadratically, for big errors.
+q8:
+  right:
+  - oe07c3f
+  - o91423b
+  why: Exact, but expensive and fragile for many features.
+q9:
+  right:
+  - o868193
+  - o2048dc
+  why: Gradient descent with a small enough α never increases J.
+q10:
+  right:
+  - oeb9bd3
+  - o2c68af
+  why: Step = α × slope.
+q11:
+  right:
+  - o0e0504
+  - o847b0e
+  why: The workhorse of deep learning.
+q12:
+  right:
+  - o21fe50
+  - o24beb5
+  why: Otherwise the second update uses a mixed state.
+q13:
+  right:
+  - oe0b1aa
+  - o0dca1d
+  why: (m, n) @ (n,) → (m,).
+q14:
+  right:
+  - ob16998
+  - oec8c30
+  why: Same maths, much faster.
+q15:
+  right:
+  - o2f7809
+  - o50326a
+  why: Keep shapes consistent.
+q16:
+  right:
+  - o4c980c
+  - o1d6e20
+  why: Importance needs comparable scales and uncorrelated features.
+q17:
+  right:
+  - o7636f3
+  - o1928b2
+  why: Similar scales give a better-shaped cost surface.
+q18:
+  right:
+  - oa3017a
+  - oca2d75
+  why: Otherwise test information leaks into training.
+q19:
+  right:
+  - o0835db
+  - oc86025
+  why: Trees split on thresholds; scale doesn't matter.
+q20:
+  right:
+  - o768dbb
+  - o56a5a0
+  why: Powers have wildly different ranges.
+q21:
+  right:
+  - ofd67da
+  - odff04e
+  why: A probability between 0 and 1.
+q22:
+  right:
+  - oa4f7fb
+  - o732bfe
+  why: g(z) ≥ 0.5 exactly when z ≥ 0.
+q23:
+  right:
+  - o422fd8
+  - oc6714d
+  why: Convex cost, principled origin.
+q24:
+  right:
+  - o19c17f
+  - o6e1770
+  why: log(0) is −∞.
+q25:
+  right:
+  - oe0c7b4
+  - odaab28
+  why: It memorised the training set.
+q26:
+  right:
+  - oa76a5b
+  - o82eb85
+  why: The penalty dominates the fit.
+q27:
+  right:
+  - o06656c
+  - oc6b72d
+  why: The corner of the L1 ball sits on the axes.
+q28:
+  right:
+  - oe9dc77
+  - o4c197d
+  why: C is the inverse of the regularization strength.
+q29:
+  right:
+  - oc5cabc
+  - o290a69
+  why: Finite differences approximate the derivative.
+q30:
+  right:
+  - of3d16e
+  - obea1bb
+  why: The model sees information it won't have in real use.
+q31:
+  right:
+  - o1404cc
+  - o7d9f02
+  why: That's high variance.
+q32:
+  right:
+  - o0352ba
+  - oe199d8
+  why: Linear in the log-odds.

@@ -1,0 +1,160 @@
+q1:
+  text: With autoescape on, what does {{ name }} print when name is "<b>Hi</b>"?
+  show: 4
+  options:
+    o1d21c0: The text with < and > escaped, shown literally
+    o050417: Hi in bold
+    oacb5cf: '&lt;b&gt;Hi&lt;/b&gt;'
+    o9eaa7e: Nothing
+    od5c0dd: <b>Hi</b> as HTML
+    o861df4: An error
+q2:
+  text: Which are safe ways to put data into a <script> block?
+  show: 4
+  options:
+    oae54cc: Markup(user_input)
+    o92e372: json.dumps(...) with < replaced by \u003c
+    o2a1b26: '{{ data | e }} inside a JS string'
+    ob01685: '{{ data | safe }}'
+    o2e9d01: '{{ data }} inside quotes'
+    o3b105b: '{{ data | tojson }}'
+q3:
+  text: What does for ... else do in Jinja?
+  show: 4
+  options:
+    o25ff18: Runs on the last item
+    o97a29b: Shows a fallback for no items
+    o910883: Runs the else part when the list is empty
+    o574dbc: Runs after every item
+    o7cbb15: Is a syntax error
+    o18de0f: Runs when the loop breaks
+q4:
+  text: 'Which print ''Mona, Ali'' from people = [{name: ''Mona''}, {name: ''Ali''}]?'
+  show: 4
+  options:
+    o35145e: '{{ people.name }}'
+    ocf02c9: '{% for p in people %}{{ p.name }}{{ '', '' if not loop.last }}{% endfor %}'
+    oa650c1: '{{ people[name] }}'
+    oc7cc5e: '{{ names(people) }}'
+    o738c4c: '{{ people | map(attribute=''name'') | join('', '') }}'
+    oc002f8: '{{ people | join('', '') }}'
+q5:
+  text: Where must {% extends %} appear?
+  show: 4
+  options:
+    oc7afe8: Inside a macro
+    od55a0b: At the end
+    o4c5a80: Before any blocks or output
+    o257016: Anywhere in the file
+    oab637e: As the first tag of the template
+    of4d278: Inside a block
+q6:
+  text: What does {{ super() }} do inside a block?
+  show: 4
+  options:
+    o273018: Lets you add to the block instead of replacing it
+    oc4ba10: Escapes the block
+    oac31e4: Ends the block
+    o87d212: Prints the parent template's content for that block
+    o5abcd0: Includes base.html again
+    o902a3a: Calls a Python superclass
+q7:
+  text: What does {% with x=1 %}{% include 'p.html' %}{% endwith %} achieve?
+  show: 4
+  options:
+    od08d93: x becomes global for every page
+    o939d33: It's a syntax error
+    oce6962: p.html can't see the rest of the context
+    o2e33aa: p.html sees x=1 while it renders
+    oa49557: x is only set inside the with block
+    od5fbc1: It caches p.html
+q8:
+  text: Why might a macro not see a page variable?
+  show: 4
+  options:
+    o919822: Because of autoescaping
+    ob043d0: You need import ... with context
+    o640b41: Macros can't take arguments
+    o8b8688: Macros run before the page
+    o56329b: Imported macros don't get the page's context by default
+    ofab669: Variables are deleted after use
+q9:
+  text: Why create the Jinja Environment once, not per request?
+  show: 4
+  options:
+    o14941d: Jinja allows only one
+    o0555c3: Because of autoescaping
+    oe4a95f: To keep templates secret
+    o81ab50: Building it again throws the cache away and costs time
+    od3901b: Globals can't be set twice
+    o7de74c: It caches compiled templates
+q10:
+  text: What does 'trimmed' do in {% trans trimmed %}?
+  show: 4
+  options:
+    o39a3a7: Makes multi-line sentences match one translation key
+    o8578b4: Turns off escaping
+    oec63c0: Trims the Arabic text only
+    o4fd874: Removes HTML tags
+    o8b49e5: Shortens the translation
+    o46b5be: Collapses line breaks and extra spaces
+q11:
+  text: Which are good things to register as Environment globals?
+  show: 4
+  options:
+    o4a387c: The current user's password
+    o341370: A translation helper
+    oe4de13: The request body
+    o52abfb: A function that draws an icon as SVG
+    oa3337e: A per-request counter
+    oc139bf: A database transaction
+q12:
+  text: What's the safe fix for a module-level 'current language' in a multi-user server?
+  show: 4
+  options:
+    o5b3987: Making it a class attribute
+    o25ffa0: Passing the language into each render
+    o73b66a: A contextvars.ContextVar
+    o1776f2: A global lock around the whole app
+    o1d811b: Reading it from a file each time
+    ofdfe64: Using a cookie only in JS
+q13:
+  text: What does StrictUndefined change?
+  show: 4
+  options:
+    o26bd7b: Typos in templates fail loudly
+    oa62744: Using a missing variable raises an error
+    obe6ed8: Missing variables print as None
+    o460af2: It makes rendering faster
+    oab63f0: It turns off escaping
+    ob3cd86: It forbids filters
+q14:
+  text: A product lets users write their own email templates in Jinja. What do you use?
+  show: 4
+  options:
+    o181788: A bigger server
+    of32cd6: A sandbox that limits what templates can access
+    oa1e391: StrictUndefined
+    ob7746e: SandboxedEnvironment
+    o32c2dc: A normal Environment with autoescape
+    oe93d99: '|safe on everything'
+q15:
+  text: Which are true about server-side rendering?
+  show: 4
+  options:
+    o01a639: It can't be cached ever
+    oe0a86f: It runs in the browser
+    oc2a173: Pages work without JavaScript
+    o0685c1: It needs a JavaScript framework
+    od41878: The first paint can be fast
+    o6c5047: It can't use CSS
+q16:
+  text: Which help Jinja performance in production?
+  show: 4
+  options:
+    od17230: One shared Environment
+    o736e8e: Large loops in templates
+    o7b5fa3: Turning off autoescape
+    o7b1280: Rendering templates twice
+    o2104c8: auto_reload=False
+    od119bb: A new Environment per request

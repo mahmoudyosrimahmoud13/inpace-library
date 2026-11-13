@@ -1,0 +1,280 @@
+q1:
+  text: Which values are falsy?
+  show: 4
+  options:
+    o1406c9: '{}'
+    ocda0c6: '[]'
+    oadb2da: '"false"'
+    oacd115: '"" (empty string)'
+    o3eddd9: '"0"'
+    oa78c13: '0'
+q2:
+  text: What does count ?? 10 give when count is 0?
+  show: 4
+  options:
+    obddf14: An error
+    o7a6861: The value 0, because ?? only replaces null and undefined
+    ob1c1ea: NaN
+    of867e9: '0'
+    o2b2faf: undefined
+    o90173a: '10'
+q3:
+  text: Which are true about let?
+  show: 4
+  options:
+    o669f81: It's function-scoped like var
+    of9d6e7: It reads as undefined before its line
+    o59a153: Reading it before its line throws a ReferenceError
+    o379124: It can be redeclared in the same block
+    o8baeef: It's block-scoped
+    o144eab: It creates a global property
+q4:
+  text: Which checks are correct for 'is this an array'?
+  show: 4
+  options:
+    offf912: Array.isArray(x)
+    o39f0a2: x instanceof Array (in the same window)
+    o20e917: typeof x === "array"
+    o8e137f: typeof x === "object"
+    o37bf6c: x == []
+    oa5d3a2: x.length > 0
+q5:
+  text: Inside an arrow function used as a method callback, what is this?
+  show: 4
+  options:
+    o1049ba: The arrow function itself
+    o5283f0: Always the window
+    of3b57c: The this of the surrounding code
+    o21ea11: undefined always
+    o9d3338: The event target always
+    of6a33e: Whatever this was where the arrow was written
+q6:
+  text: Which use closures?
+  show: 4
+  options:
+    o77c81c: JSON.parse
+    of334f7: A counter factory returning () => ++n
+    o15bdf8: A for loop with var
+    o2afc06: A CSS custom property
+    oc4f69a: An HTML form
+    odd3da0: A debounce function keeping its timer id
+q7:
+  text: const f = obj.method; f(); in strict mode, what is this inside method?
+  show: 4
+  options:
+    o6099b9: null always in every mode
+    o1eee22: Not obj, because the call has no object before the dot
+    o830f89: window
+    ocdf362: obj
+    o0a11f5: undefined
+    oa9ab27: f
+q8:
+  text: What do classes in JavaScript use under the hood?
+  show: 4
+  options:
+    o728f94: Methods shared on Constructor.prototype
+    o695247: Global variables
+    o6004c3: Java-style vtables
+    o4886da: JSON
+    o8c613e: Prototypes
+    o583616: Copying every method into each object
+q9:
+  text: Why use e.target.closest("a") in a click handler?
+  show: 4
+  options:
+    oadbe72: It walks up from the clicked element to the matching ancestor
+    ofd77e1: To copy the link
+    o1374d7: To make the click faster
+    oa23d40: The click may land on an icon inside the link
+    o50dde5: Because target is always the document
+    oef497e: To find the closest link on the page by distance
+q10:
+  text: Which are benefits of event delegation?
+  show: 4
+  options:
+    oe448b2: It prevents all default actions
+    o4ee3a2: Events stop bubbling
+    o16c58e: It makes innerHTML safe
+    odd2a8c: Elements added later work without new listeners
+    o8049a7: It works without JavaScript
+    oeab9e7: Fewer listeners in memory
+q11:
+  text: Why prefer textContent over innerHTML for user text?
+  show: 4
+  options:
+    o1b9c4e: textContent never parses HTML, so it can't inject scripts
+    o3d2d60: It's the only one that works in Arabic
+    ob2c87a: innerHTML is slower to type
+    od09d6a: It avoids XSS
+    oe2a4df: textContent keeps formatting
+    o8b65c8: innerHTML is deprecated
+q12:
+  text: What does e.submitter give you in a submit handler?
+  show: 4
+  options:
+    oa934ef: The first input field
+    o00f71e: The button that sent the form
+    o60a162: The user's identity
+    odf0651: The form's action URL
+    o735bf4: Access to that button's name and value
+    od91f40: The server response
+q13:
+  text: fetch() returns a 500 response. What happens?
+  show: 4
+  options:
+    o1a0eef: r.ok is false, and you must check it
+    oda2f96: The promise resolves
+    oa3b224: An exception is thrown automatically
+    oafe6f5: The page reloads
+    oce8333: The promise rejects
+    o0623de: fetch retries 3 times
+q14:
+  text: Which run before a setTimeout(fn, 0) callback queued earlier in the same task?
+  show: 4
+  options:
+    ocd73e7: Another setTimeout
+    o3ce643: A network response handler
+    o819604: requestIdleCallback
+    o0671a7: A click event
+    oaca7fc: queueMicrotask callbacks
+    o917e30: Promise .then callbacks
+q15:
+  text: How does inPace's form sender prevent double submits?
+  show: 4
+  options:
+    o80d417: It disables the form's buttons
+    o9973db: It uses a cookie
+    o11c5dc: It asks the server to deduplicate
+    obb95f4: It reloads the page first
+    o5a125a: It doesn't
+    o5ac5ac: It sets data-sending on the form
+q16:
+  text: Which are right about Promise.all?
+  show: 4
+  options:
+    o8326b3: It runs them one after another
+    od728dc: It only works with fetch
+    o793f14: It rejects as soon as one rejects
+    ocd3ed1: It ignores errors
+    oc727e6: It returns the first to finish
+    o5d0d04: It runs promises at the same time and waits for all
+q17:
+  text: Which navigations do NOT add a history entry?
+  show: 4
+  options:
+    o0b283a: Clicking a normal link
+    ob7ff7d: history.pushState(...)
+    oaaa032: form.submit()
+    o0279f0: history.replaceState(...)
+    o2fcf6a: location.replace(url)
+    o1ab447: location.href = url
+q18:
+  text: Why does goFresh reload when only the hash differs?
+  show: 4
+  options:
+    ob14e98: Because fetch can't read hashes
+    o09fd10: To clear localStorage
+    oa99f1e: To log the user out
+    oa260e2: Hashes are forbidden
+    oa700c5: Changing only the fragment doesn't load the page
+    o7d6f05: The browser would just scroll and show old content
+q19:
+  text: Which are true about localStorage?
+  show: 4
+  options:
+    oe9cd01: It's encrypted by default
+    oddeb49: It can throw, so wrap it in try/catch
+    o4139b2: It's sent to the server with each request
+    o239001: It's synchronous and stores strings
+    oe18eb0: It holds gigabytes
+    oeb29c2: It's shared across all websites
+q20:
+  text: Why does the server own the focus trip's time?
+  show: 4
+  options:
+    o1c4c99: Client timers can be paused, killed or changed
+    ofaaaf5: To make the page faster
+    o395aa6: Browsers forbid timers
+    oad5796: Closing the page must not lose time
+    ob87fd7: SQLite needs it
+    o5759ef: JavaScript can't count seconds
+q21:
+  text: What does setPointerCapture do?
+  show: 4
+  options:
+    o8b7c0d: Locks the mouse cursor
+    o061f8a: Stops all other events on the page
+    o091b69: Keeps a drag going when the finger leaves the box
+    oef8a94: Takes a screenshot
+    oe11555: Captures keyboard input
+    o8cacb1: Sends that pointer's events to the element even outside it
+q22:
+  text: How is the pinch zoom level computed?
+  show: 4
+  options:
+    o426503: From the wheel's deltaY
+    o67fe87: Start zoom times current finger gap over starting gap
+    oc208bb: From the ratio of the distance between two pointers
+    ob141c5: From the screen size
+    o8bbd20: From the number of fingers
+    ofbfb73: From pointer pressure
+q23:
+  text: Why does the diagram's wheel handler ignore plain scrolling?
+  show: 4
+  options:
+    o944786: So the lesson still scrolls normally
+    o459cd3: Only Ctrl+wheel or full screen zooms
+    od5e619: Because passive must be true
+    o5ba24d: Wheel events can't be read
+    o316e00: It's a bug
+    od5ebc0: To save battery
+q24:
+  text: When can't you export a canvas with toDataURL?
+  show: 4
+  options:
+    ob03c34: When the canvas is tainted
+    o3af304: On Android
+    obfdc73: When using fillRect
+    od837ff: When the image is an SVG from the same page
+    oa12376: When a cross-origin image without CORS was drawn on it
+    o26b809: When it's larger than 100px
+q25:
+  text: Which make a deep copy of a plain data object?
+  show: 4
+  options:
+    oa6238b: const copy = obj
+    oc96351: structuredClone(obj)
+    o0d2166: obj.slice()
+    oc9512c: '{ ...obj }'
+    o5ee9e7: JSON.parse(JSON.stringify(obj)) for JSON-safe data
+    o1a2387: Object.assign({}, obj)
+q26:
+  text: Which help prevent XSS?
+  show: 4
+  options:
+    o3f65e8: A Content-Security-Policy
+    of7ffe3: Using textContent for user text
+    o24df8f: Using == instead of ===
+    od64313: Minifying the code
+    o18acbf: Storing data in localStorage
+    o94c641: Using var
+q27:
+  text: What does throttle do?
+  show: 4
+  options:
+    oa13060: Runs only after the events stop
+    o9b7c96: Limits how often a handler fires during a burst
+    o12b759: Cancels the function forever
+    o26a14b: Runs it in a worker
+    o9f017e: Runs the function at most once per interval
+    of13c6b: Runs it twice
+q28:
+  text: Your own Promise.all must keep results in input order. How?
+  show: 4
+  options:
+    of0ea6e: Await each in a loop and push
+    o40fe62: Sort results alphabetically
+    o5eba38: Push results as they arrive
+    o2fdf91: Store each result at its index
+    o356556: out[i] = value, and resolve when the counter hits zero
+    o4f2e47: Use setTimeout

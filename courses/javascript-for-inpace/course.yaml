@@ -1,0 +1,234 @@
+id: javascript-for-inpace
+title: 'JavaScript: the language and the browser, the inPace way'
+version: 1
+language: en
+description: 'A one-week JavaScript course built around inPace''s app.js: the language core, closures, the DOM and
+  event delegation, the event loop, fetch and FormData, history and navigation, storage, pointer events, canvas
+  and a full zoomable diagram component. Daily interview questions and a live-coding drill. Plan: 7 days, about
+  1.5 hours a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: The language core you can''t skip'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Values, types and equality
+    file: lessons/m1-l2.md
+    minutes: 25
+  - id: m1-l3
+    title: let, const, scope and hoisting
+    file: lessons/m1-l3.md
+    minutes: 20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write 10 console experiments about equality, falsy values, ?? vs || and var vs let in loops. For each,
+      write your prediction before running it. Upload the file with predictions and results.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why the var loop prints 3 3 3 and the let loop prints 0 1 2.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Functions, closures and this'
+  lessons:
+  - id: m2-l1
+    title: Closures
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: this, arrow functions and bind
+    file: lessons/m2-l2.md
+    minutes: 20
+  - id: m2-l3
+    title: Prototypes and classes
+    file: lessons/m2-l3.md
+    minutes: 20
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write debounce and throttle from memory, with a small page that shows how many times each one calls
+      its function while you type or scroll. Upload the page.
+  - id: m2-explain
+    type: explain
+    prompt: 'Explain closures using the diagram viewer: why don''t two diagrams on the same lesson share their zoom
+      level?'
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: The DOM and events'
+  lessons:
+  - id: m3-l1
+    title: Finding and changing elements
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: Events and delegation
+    file: lessons/m3-l2.md
+    minutes: 30
+  - id: m3-l3
+    title: Forms from JavaScript
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build a list where clicking any item's 'remove' button removes it, using ONE listener on the list (event
+      delegation). Add items dynamically and show they work too. Upload the page.
+  - id: m3-explain
+    type: explain
+    prompt: What is event delegation and why does inPace's app.js use document-level listeners for links and forms?
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Async: the event loop, promises and fetch'
+  lessons:
+  - id: m4-l1
+    title: The event loop
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: Promises and async/await
+    file: lessons/m4-l2.md
+    minutes: 25
+  - id: m4-l3
+    title: Reading inPace's background form sender
+    file: lessons/m4-l3.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write a page that fetches two JSON URLs in parallel with Promise.all, shows a loading state, cancels
+      after 3 seconds with AbortController, and shows a clear error for a 404. Upload the code.
+  - id: m4-explain
+    type: explain
+    prompt: Explain the output order of a snippet mixing console.log, setTimeout and Promise.then, using the words
+      task and microtask.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Navigation and the browser APIs inPace uses'
+  lessons:
+  - id: m5-l1
+    title: location and history
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: Storage, cookies, clipboard and share
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: Visibility, beacons and wake lock
+    file: lessons/m5-l3.md
+    minutes: 20
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build a tiny two-page site where a form posts, the 'server' (a JSON file or a mock) answers with a URL,
+      and you navigate with location.replace. Show in the history (long-press Back) that the form page isn't there.
+      Upload the code and a screenshot.
+  - id: m5-explain
+    type: explain
+    prompt: Why is visibilitychange plus sendBeacon better than the unload event for 'the user left the page'?
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Pointer events, canvas and a real component'
+  lessons:
+  - id: m6-l1
+    title: 'Pointer events: mouse, pen and touch together'
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: Canvas and images
+    file: lessons/m6-l2.md
+    minutes: 20
+  - id: m6-l3
+    title: Full screen, keyboard and focus
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Build a small image viewer component: drag to pan, Ctrl+wheel and pinch to zoom, + / - / 0 keys, and
+      a full screen button. Test it on a phone or with DevTools'' touch emulation. Upload the code.'
+  - id: m6-explain
+    type: explain
+    prompt: Describe how the pinch zoom works in the diagram viewer, step by step, from the first finger down.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Interview drill and live coding'
+  lessons:
+  - id: m7-l1
+    title: 20 questions, short answers
+    file: lessons/m7-l1.md
+    minutes: 35
+  - id: m7-l2
+    title: 'Live coding: five classic tasks'
+    file: lessons/m7-l2.md
+    minutes: 40
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Solve the five live-coding tasks yourself (don't copy), each with 3 tests (console.assert is fine).
+      Upload your file.
+  - id: m7-explain
+    type: explain
+    prompt: 'An interviewer asks: ''Walk me through how a form in inPace is sent without a full page load, and what
+      happens if JavaScript is off.'' Answer it.'
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70

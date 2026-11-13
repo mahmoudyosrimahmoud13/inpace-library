@@ -1,0 +1,160 @@
+q1:
+  right:
+  - oea898f
+  - o63c07b
+  why: Assign, then move.
+q2:
+  right:
+  - oba6bd8
+  - o0e4031
+  why: Keep the run with the lowest J.
+q3:
+  right:
+  - oa18145
+  - obbbae9
+  why: J always drops as K grows.
+q4:
+  right:
+  - o2e974c
+  - oa9cc8d
+  why: Try DBSCAN or a Gaussian mixture.
+q5:
+  right:
+  - ocb7956
+  - ofc3e7a
+  why: Skewed data needs P/R/F1.
+q6:
+  right:
+  - ob4556c
+  - oaf8a57
+  why: Learn normal; flag the rest.
+q7:
+  right:
+  - o37815b
+  - ob532ab
+  why: Transforms reduce skew.
+q8:
+  right:
+  - o0f70ed
+  - o80f167
+  why: Estimate the density of normal data.
+q9:
+  right:
+  - oafe277
+  - o5bc9c4
+  why: Both sides are learned together.
+q10:
+  right:
+  - ofc2dc9
+  - o85dd4e
+  why: Predictions add the item mean back.
+q11:
+  right:
+  - o5b86f9
+  - ob3eb92
+  why: Embeddings capture similarity.
+q12:
+  right:
+  - o8510f6
+  - ode2be9
+  why: Content-based methods help.
+q13:
+  right:
+  - oc343f8
+  - o54ca56
+  why: Precompute items; compute the user vector at request time.
+q14:
+  right:
+  - oe7ab1b
+  - obd614e
+  why: Fast and broad, then slow and precise.
+q15:
+  right:
+  - od3b3e8
+  - o33faf8
+  why: Features describe new items.
+q16:
+  right:
+  - oa19a8b
+  - o88478e
+  why: What you optimize shapes what people see.
+q17:
+  right:
+  - o655d4c
+  - o10aa68
+  why: Return = R₁ + γR₂ + γ²R₃...
+q18:
+  right:
+  - o97064c
+  - o07640d
+  why: Q gives the policy directly.
+q19:
+  right:
+  - o9bf976
+  - o63b079
+  why: The present state summarises the past.
+q20:
+  right:
+  - oc1d147
+  - oe1c544
+  why: Reward at state 2 is 0, then γ·100.
+q21:
+  right:
+  - od1bcc5
+  - oec2802
+  why: Recursive definition of value.
+q22:
+  right:
+  - o8803e6
+  - o76f237
+  why: Outcomes are random.
+q23:
+  right:
+  - odf596b
+  - ob30be7
+  why: Efficient action selection.
+q24:
+  right:
+  - o7211b9
+  - of13e3e
+  why: Bootstrapped targets.
+q25:
+  right:
+  - o9734fd
+  - o8f3c4a
+  why: Balance exploration and exploitation.
+q26:
+  right:
+  - ofb61fd
+  - oba7b0d
+  why: Consecutive steps are highly correlated.
+q27:
+  right:
+  - od10c07
+  - obb1200
+  why: Don't chase a moving target too quickly.
+q28:
+  right:
+  - o8e49d0
+  - oded274
+  why: Value-based vs policy-based.
+q29:
+  right:
+  - o50a252
+  - o4d85a7
+  why: Maximum-variance projection.
+q30:
+  right:
+  - o248c0c
+  - o384a3f
+  why: Ranking metrics on held-out interactions.
+q31:
+  right:
+  - occ9ab2
+  - obaf93b
+  why: Unsupervised vs supervised.
+q32:
+  right:
+  - oc88c0a
+  - o2b30d9
+  why: Content features bridge the gap.

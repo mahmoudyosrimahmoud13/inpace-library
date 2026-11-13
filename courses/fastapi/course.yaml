@@ -2,6 +2,7 @@ id: fastapi
 title: 'FastAPI: from first API to production'
 version: 1
 language: en
+image: cover.jpg
 description: 'Build real web APIs with FastAPI: validation, databases, logins, async, testing, WebSockets, Docker
   and monitoring. Ends with a portfolio project.'
 modules:

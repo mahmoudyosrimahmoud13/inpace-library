@@ -1,0 +1,172 @@
+id: fastapi-starlette-for-inpace
+title: 'FastAPI & Starlette: the server behind inPace'
+version: 1
+language: en
+description: 'A five-day course on Python web servers: HTTP, ASGI, Starlette as inPace uses it (routes, forms, uploads,
+  pure ASGI middleware, TestClient), then FastAPI (Pydantic validation, dependency injection, OpenAPI), async and
+  threads, background work, security, testing and deployment. Interview questions every day. Plan: 5 days, about
+  1.5 hours a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: HTTP and ASGI from the ground up'
+  lessons:
+  - id: m1-l1
+    title: Start here, and HTTP in 20 minutes
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: WSGI vs ASGI, and a server with no framework
+    file: lessons/m1-l2.md
+    minutes: 30
+  - id: m1-l3
+    title: 'Pure ASGI middleware: inPace''s NavMiddleware'
+    file: lessons/m1-l3.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write a raw ASGI app (no framework) with two paths and a 404, plus a pure ASGI middleware that adds
+      an X-Took-Ms header. Run it with Uvicorn and show the headers with curl -i. Upload the code and output.
+  - id: m1-explain
+    type: explain
+    prompt: Why should a server answer a form POST with 303 and not 200? Mention the Back button and refreshing.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Starlette the way inPace uses it'
+  lessons:
+  - id: m2-l1
+    title: Routes and the app factory
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: Forms, uploads and responses
+    file: lessons/m2-l2.md
+    minutes: 25
+  - id: m2-l3
+    title: Blocking work in an async app
+    file: lessons/m2-l3.md
+    minutes: 20
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Build a Starlette app with an app factory: a form page, a POST that validates a name and a file upload
+      (max 1 MB), answers with 303, and a page that lists uploads. Upload the code.'
+  - id: m2-explain
+    type: explain
+    prompt: Why does inPace build its app inside create_app(vault) instead of at module level? Connect it to testing.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: FastAPI: types, validation and dependencies'
+  lessons:
+  - id: m3-l1
+    title: Your first FastAPI app
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: Dependency injection
+    file: lessons/m3-l2.md
+    minutes: 25
+  - id: m3-l3
+    title: Starlette or FastAPI? A design answer
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build a FastAPI app for courses and lessons with Pydantic models, a 404, a dependency that checks an
+      API key header, and a yield dependency that opens and closes a SQLite connection. Upload the code and a screenshot
+      of /docs.
+  - id: m3-explain
+    type: explain
+    prompt: Explain dependency injection in FastAPI and show how inPace gets the same benefits without it.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Data, async, background work and security'
+  lessons:
+  - id: m4-l1
+    title: Databases from an async server
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: Background work and real-time
+    file: lessons/m4-l2.md
+    minutes: 20
+  - id: m4-l3
+    title: Security checklist for Python web apps
+    file: lessons/m4-l3.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Add to your FastAPI app: SQLite with parameters, a safe file-serving route that blocks ../ tricks (with
+      a test), a BackgroundTasks job, and a WebSocket echo. Upload the code.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain path traversal and how a safe join prevents it, with an example request that would be blocked.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Testing, deploying and the interview'
+  lessons:
+  - id: m5-l1
+    title: Testing the whole app
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: Deploying a Python web service
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: Interview drill
+    file: lessons/m5-l3.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Write 8 pytest tests for your FastAPI app (validation errors, 404, the API-key dependency with an override,
+      the safe file route, the WebSocket) and a Dockerfile. Upload the code and the passing test output.
+  - id: m5-explain
+    type: explain
+    prompt: 'An interviewer asks: ''Starlette or FastAPI for a new project, and why?'' Answer using inPace and one
+      other example.'
+    min_words: 80
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

@@ -5,6 +5,7 @@ description: An advanced hands-on course based on Reso Coder's Flutter TDD Clean
   You will build a Number Trivia application while learning test-driven development, layered architecture,
   repositories, data sources, BLoC, dependency injection, and maintainable Flutter UI design.
 language: en
+image: cover.jpg
 modules:
 - id: m1
   title: Clean Architecture and the Domain Layer

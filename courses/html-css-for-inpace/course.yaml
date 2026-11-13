@@ -1,0 +1,231 @@
+id: html-css-for-inpace
+title: 'HTML & CSS: enough to read and build inPace''s pages'
+version: 1
+language: en
+description: 'A one-week course on modern HTML and CSS, using inPace''s own pages as the example: semantic markup,
+  forms, the cascade, Flexbox and Grid, responsive and right-to-left layout, themes with custom properties, accessibility
+  and performance. Interview questions every day. Plan: 7 days, about 1.5 hours a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: How a page gets to the screen'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: From bytes to pixels
+    file: lessons/m1-l2.md
+    minutes: 25
+  - id: m1-l3
+    title: The skeleton of a document
+    file: lessons/m1-l3.md
+    minutes: 20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build a page with the skeleton above, one heading and one paragraph. In DevTools' Performance panel,
+      record a reload and screenshot the Layout and Paint steps. Upload the screenshot.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between defer and async on a script tag, and which one you'd use for a script
+      that needs the whole page to exist.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Semantic HTML and forms'
+  lessons:
+  - id: m2-l1
+    title: Meaningful elements
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: Forms that work without JavaScript
+    file: lessons/m2-l2.md
+    minutes: 30
+  - id: m2-l3
+    title: Images, media and icons
+    file: lessons/m2-l3.md
+    minutes: 15
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Rebuild inPace''s ''explain'' task form as a plain HTML page: a heading, a textarea with a minimum
+      length, a radio group in a fieldset, and a submit button. Check it with the keyboard only (Tab, Space, Enter).
+      Upload the HTML file.'
+  - id: m2-explain
+    type: explain
+    prompt: What is progressive enhancement? Describe how inPace's data-nav-form follows it.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: The cascade, specificity and the box model'
+  lessons:
+  - id: m3-l1
+    title: Which rule wins
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: The box model and units
+    file: lessons/m3-l2.md
+    minutes: 25
+  - id: m3-l3
+    title: Positioning and stacking
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Make a page with three nested boxes and a sticky header. Create one conflict between two rules and screenshot
+      DevTools' Computed panel showing which one won. Upload it.
+  - id: m3-explain
+    type: explain
+    prompt: 'Explain specificity using the share-icon bug: why did `.isle-scene svg` catch the icon, and why does
+      `.isle-scene > svg` fix it?'
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Flexbox and Grid'
+  lessons:
+  - id: m4-l1
+    title: 'Flexbox: one direction'
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: 'Grid: two directions'
+    file: lessons/m4-l2.md
+    minutes: 25
+  - id: m4-l3
+    title: Centering, finally
+    file: lessons/m4-l3.md
+    minutes: 10
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Rebuild inPace's home page card grid with CSS Grid (auto-fill and minmax), and a toolbar with Flexbox
+      where the title grows. Check it at 360 px and 1200 px wide. Upload two screenshots.
+  - id: m4-explain
+    type: explain
+    prompt: When would you choose Grid over Flexbox? Give one example of each from inPace's screens.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Responsive design, logical properties and RTL'
+  lessons:
+  - id: m5-l1
+    title: Mobile first
+    file: lessons/m5-l1.md
+    minutes: 20
+  - id: m5-l2
+    title: Logical properties
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: Right to left done properly
+    file: lessons/m5-l3.md
+    minutes: 20
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Take your Day 4 page, replace every left/right property with logical properties, add a language switch
+      that sets dir="rtl", and screenshot both directions. Upload them.
+  - id: m5-explain
+    type: explain
+    prompt: Why are logical properties better than overriding styles with [dir=rtl] selectors? Mention maintenance.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Themes with custom properties, and accessibility'
+  lessons:
+  - id: m6-l1
+    title: Custom properties and themes
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: Accessibility basics that interviewers ask about
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Add a light/dark theme to your page with custom properties and a data-theme attribute. Run Lighthouse's
+      accessibility check and fix everything it finds. Upload the before and after scores.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the first rule of ARIA with an example of doing it wrong and doing it right.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Performance and interview drill'
+  lessons:
+  - id: m7-l1
+    title: Fast pages
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'Interview drill: 15 questions'
+    file: lessons/m7-l2.md
+    minutes: 35
+  - id: m7-l3
+    title: A take-home task, the way companies set it
+    file: lessons/m7-l3.md
+    minutes: 20
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Do the take-home task from the last lesson in under 2 hours, including a README. Upload the zipped folder.
+  - id: m7-explain
+    type: explain
+    prompt: 'An interviewer asks: ''Our page feels slow on phones. Where would you start?'' Answer step by step.'
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70

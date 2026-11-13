@@ -1,0 +1,276 @@
+id: mls-1-supervised
+title: 'Machine Learning refresh 1: supervised learning (regression and classification)'
+version: 1
+language: en
+description: 'An advanced refresh of part 1 of Andrew Ng''s Machine Learning Specialization, with the original slides
+  inside each lesson: linear regression, cost functions, gradient descent, vectorization, feature scaling and engineering,
+  logistic regression, overfitting and regularization, then a from-scratch build and an interview drill. Plan: about
+  10 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: What machine learning is'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Supervised and unsupervised learning
+    file: lessons/m1-l2.md
+    minutes: 35
+    media: C1_W1.pdf#pages=2-28
+  - id: m1-l3
+    title: 'Practice: label the problem'
+    file: lessons/m1-l3.md
+    minutes: 15
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Write one page describing three ML problems from your own life or work: for each, the input x, the
+      output y (or the structure you''d look for), the kind of learning, and where the data would come from. Upload
+      it.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between supervised and unsupervised learning to a friend, with one example of
+      each that isn't in the slides.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Linear regression and the cost function'
+  lessons:
+  - id: m2-l1
+    title: The model
+    file: lessons/m2-l1.md
+    minutes: 25
+    media: C1_W1.pdf#pages=29-38
+  - id: m2-l2
+    title: The squared error cost
+    file: lessons/m2-l2.md
+    minutes: 35
+    media: C1_W1.pdf#pages=39-57
+  - id: m2-l3
+    title: 'Practice: compute a cost by hand'
+    file: lessons/m2-l3.md
+    minutes: 15
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: In a notebook, plot the cost J(w) for b = 0 over a range of w for a small dataset, and a contour plot
+      of J(w, b). Mark the minimum. Upload the notebook or the plots.
+  - id: m2-explain
+    type: explain
+    prompt: Why is squared error the usual cost for linear regression? Give the practical reason and the statistical
+      one (maximum likelihood).
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Gradient descent'
+  lessons:
+  - id: m3-l1
+    title: The algorithm
+    file: lessons/m3-l1.md
+    minutes: 30
+    media: C1_W1.pdf#pages=58-69
+  - id: m3-l2
+    title: Gradient descent for linear regression
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: C1_W1.pdf#pages=70-86
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Implement gradient descent for univariate linear regression in NumPy (no ML libraries). Run it with
+      three learning rates (one too small, one good, one that diverges) and plot the three cost curves. Upload the
+      notebook.
+  - id: m3-explain
+    type: explain
+    prompt: Derive the gradient of J with respect to w for linear regression, step by step, and explain why the
+      update must be simultaneous.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Many features and vectorization'
+  lessons:
+  - id: m4-l1
+    title: Multiple linear regression
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: C1_W2.pdf#pages=2-6
+  - id: m4-l2
+    title: Vectorization
+    file: lessons/m4-l2.md
+    minutes: 25
+    media: C1_W2.pdf#pages=7-15
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write fully vectorized multiple linear regression (predict, cost, gradients, training loop) for a dataset
+      with at least 4 features. Time it against a loop version with %timeit. Upload the notebook.
+  - id: m4-explain
+    type: explain
+    prompt: Why is vectorized code faster? Mention what NumPy does under the hood, and one bug broadcasting can
+      hide.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Making gradient descent work in practice'
+  lessons:
+  - id: m5-l1
+    title: Feature scaling
+    file: lessons/m5-l1.md
+    minutes: 25
+    media: C1_W2.pdf#pages=16-24
+  - id: m5-l2
+    title: Checking convergence and choosing α
+    file: lessons/m5-l2.md
+    minutes: 20
+    media: C1_W2.pdf#pages=25-30
+  - id: m5-l3
+    title: Feature engineering and polynomial regression
+    file: lessons/m5-l3.md
+    minutes: 25
+    media: C1_W2.pdf#pages=31-35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Take a real dataset (for example scikit-learn's California housing). Train with and without z-score
+      scaling and compare the cost curves; then add 2 engineered features and report the change in validation error.
+      Upload the notebook.
+  - id: m5-explain
+    type: explain
+    prompt: 'Explain data leakage in feature scaling: what goes wrong if you compute the mean and standard deviation
+      on all the data, and how to do it right.'
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Days 6-7: Logistic regression for classification'
+  lessons:
+  - id: m6-l1
+    title: The model and the decision boundary
+    file: lessons/m6-l1.md
+    minutes: 30
+    media: C1_W3.pdf#pages=2-14
+  - id: m6-l2
+    title: The logistic loss
+    file: lessons/m6-l2.md
+    minutes: 30
+    media: C1_W3.pdf#pages=15-24
+  - id: m6-l3
+    title: Gradient descent for logistic regression
+    file: lessons/m6-l3.md
+    minutes: 20
+    media: C1_W3.pdf#pages=25-28
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Implement logistic regression from scratch in NumPy on a 2-feature dataset, plot the data and the decision
+      boundary, then add squared features to fit a circular boundary. Compare your accuracy with scikit-learn's
+      LogisticRegression. Upload the notebook.
+  - id: m6-explain
+    type: explain
+    prompt: Why don't we use squared error for logistic regression? Explain convexity and maximum likelihood in
+      your own words.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 8: Overfitting and regularization'
+  lessons:
+  - id: m7-l1
+    title: Underfitting and overfitting
+    file: lessons/m7-l1.md
+    minutes: 25
+    media: C1_W3.pdf#pages=29-36
+  - id: m7-l2
+    title: Regularized cost and gradient descent
+    file: lessons/m7-l2.md
+    minutes: 30
+    media: C1_W3.pdf#pages=37-48
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Fit a degree-10 polynomial to 15 noisy points with several λ values (0, 0.01, 1, 100). Plot the curves
+      and the training and validation error against λ. Upload the notebook and say which λ you'd pick.
+  - id: m7-explain
+    type: explain
+    prompt: Explain the bias-variance trade-off with the polynomial example, and how λ moves a model along it.
+    min_words: 70
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Days 9-10: Build it from scratch, and interview drill'
+  lessons:
+  - id: m8-l1
+    title: 'Capstone: a tiny ML library'
+    file: lessons/m8-l1.md
+    minutes: 40
+  - id: m8-l2
+    title: 'Interview drill: 15 questions'
+    file: lessons/m8-l2.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Finish tinyml.py with tests and a README (learning curves, comparison with scikit-learn). Upload the
+      zip.
+  - id: m8-explain
+    type: explain
+    prompt: 'An interviewer says: ''Explain logistic regression to me from the model to the training loop.'' Write
+      your answer as you would say it, in under 250 words.'
+    min_words: 120
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70

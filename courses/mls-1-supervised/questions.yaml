@@ -1,0 +1,320 @@
+q1:
+  text: Which are regression problems?
+  show: 4
+  options:
+    o35cce0: Flagging unusual transactions
+    o258891: Predicting how many minutes a lesson will take
+    ob872ae: Predicting a house's price
+    o543f69: Grouping news stories
+    occ6194: Which digit is in an image
+    o7e2731: Spam or not spam
+q2:
+  text: Which are unsupervised?
+  show: 4
+  options:
+    o1ceb0d: Predicting a price from labelled sales
+    o3ac1f0: Spam filtering with labelled emails
+    oc34fd7: Classifying tumours using doctors' labels
+    of885d9: Finding unusual machine readings
+    o464039: Clustering customers with no labels
+    o13f96d: Predicting exam scores from past results
+q3:
+  text: What makes a problem 'supervised'?
+  show: 4
+  options:
+    o939cf6: It has more than 1,000 examples
+    ofde099: It uses a neural network
+    ofb1906: It runs on a GPU
+    o73d8bb: A human watches the training
+    o29445d: The model learns a mapping from x to labelled y
+    o62b566: The training data includes the right output y
+q4:
+  text: How are large language models mainly pre-trained?
+  show: 4
+  options:
+    of2b022: Reinforcement learning only, with no text
+    o11e76e: Hand-labelled sentiment only
+    o2af234: 'Self-supervised: predicting hidden or next words'
+    oe1fc50: Pure clustering
+    o141c96: Anomaly detection
+    o348880: Labels made from the text itself
+q5:
+  text: Why divide the squared errors by m in J?
+  show: 4
+  options:
+    o99deab: So the cost doesn't depend on the dataset size
+    o9bcdcf: To get an average error
+    o206b56: To make it negative
+    o6e2985: To remove outliers
+    o9f1f69: To make J convex
+    of2c3a2: Because gradient descent needs integers
+q6:
+  text: Which are true about J for linear regression with squared error?
+  show: 4
+  options:
+    o404992: It has one global minimum
+    o530936: It ignores large errors
+    o1a6e26: It can be negative
+    o8fc184: It has many local minima
+    oc6de39: It's convex
+    o2fdec8: It's maximized during training
+q7:
+  text: Your data has a few huge outliers. Which costs are more robust than MSE?
+  show: 4
+  options:
+    o5fb5a7: Cross-entropy for regression
+    oc9c8e7: Cubed error
+    od7b5c9: Mean absolute error
+    oc50978: Mean squared error times 2
+    o5bd05a: Huber loss
+    od27ccc: Squared error without dividing by m
+q8:
+  text: 'Downsides of the normal equation compared with gradient descent:'
+  show: 4
+  options:
+    o11ce49: It only works for classification
+    oe07c3f: It costs about O(n³) in the number of features
+    o3550a5: It's only approximate
+    o26dbcd: It needs a learning rate
+    o91423b: It needs XᵀX to be invertible
+    ob402dd: It can't fit a bias
+q9:
+  text: 'The cost increases every iteration. Likely causes:'
+  show: 4
+  options:
+    o170e17: Too many training examples
+    o016b4c: The bias starts at zero
+    o0e1d93: The data is normalized
+    o868193: The learning rate is too large
+    o2048dc: A bug, like a wrong sign in the update
+    o0d1072: The learning rate is too small
+q10:
+  text: Why do steps get smaller near the minimum even with a fixed α?
+  show: 4
+  options:
+    o2c68af: The slope approaches zero at the minimum
+    o3d067f: The cost becomes negative
+    o80500a: m gets smaller
+    oeb9bd3: The derivative gets smaller
+    of6b2da: The bias stops changing
+    o08696c: α shrinks automatically
+q11:
+  text: Which are true about mini-batch gradient descent?
+  show: 4
+  options:
+    o6ef555: It can't be used for neural networks
+    o0e0504: Each step uses a subset of examples
+    o10683a: It always uses one example
+    o7144c4: It gives exactly the same path as batch GD
+    o847b0e: It's faster per step than batch gradient descent on big data
+    o3fd3bd: It needs no learning rate
+q12:
+  text: What does 'simultaneous update' mean?
+  show: 4
+  options:
+    o63b9a2: Use two learning rates
+    o96758b: Update w and b on different iterations
+    o1bb794: Update b first, then w with the new b
+    o1f6166: Run on two CPUs
+    o24beb5: Assign w and b only after both steps are computed
+    o21fe50: Compute both new values from the old w and b
+q13:
+  text: X has shape (m, n) and w has shape (n,). What is X @ w?
+  show: 4
+  options:
+    o9eed39: A scalar
+    o0dca1d: One prediction (before adding b) per example
+    o87b3f7: Shape (n,)
+    o4128ed: Shape (n, m)
+    oe0b1aa: A vector of shape (m,)
+    o35f976: Shape (m, n)
+q14:
+  text: Which are true about vectorization?
+  show: 4
+  options:
+    of04e1a: It removes the need for a learning rate
+    oba0dbf: It's only for GPUs
+    oe643a7: It changes the maths
+    oec8c30: It makes code shorter and clearer
+    o02f969: It makes results less accurate
+    ob16998: It uses optimized, parallel low-level code
+q15:
+  text: err has shape (m,) and y2 has shape (m, 1). What does err - y2 give?
+  show: 4
+  options:
+    o4fad24: An error is raised
+    o2f7809: An (m, m) array by broadcasting
+    o50326a: A silent shape bug
+    o81ab66: Shape (m, 1)
+    o64c06f: Shape (m,)
+    oa570bd: A scalar
+q16:
+  text: What does w_j mean in multiple linear regression?
+  show: 4
+  options:
+    o490196: The number of examples
+    o3ed1d9: The mean of feature j
+    o1d6e20: Feature j's effect in this model
+    o4c980c: The change in prediction per unit of x_j, others held fixed
+    o6e6fea: The correlation of x_j with y
+    oe179c7: How important feature j is, always
+q17:
+  text: Why does feature scaling speed up gradient descent?
+  show: 4
+  options:
+    o94afbe: It makes J convex
+    oeebede: It reduces the number of examples
+    o7636f3: The cost contours become rounder
+    o1928b2: Steps stop zig-zagging across a narrow valley
+    o1eaee1: It changes the minimum's predictions
+    o6b9764: It removes outliers
+q18:
+  text: Where should μ and σ for z-score scaling come from?
+  show: 4
+  options:
+    o31f0ce: The whole dataset
+    o3f9f93: Each batch separately in production
+    o4b8c36: The test set
+    oa3017a: The training set only
+    o5fa2ba: A random sample of the test set
+    oca2d75: Saved and reused for validation, test and live data
+q19:
+  text: Which models need feature scaling the most?
+  show: 4
+  options:
+    o0e8225: Rule lists
+    o9c6a69: Random forests
+    o6a8597: Decision trees
+    oc86025: Distance-based methods like k-means
+    o0835db: Models trained by gradient descent
+    obb0945: XGBoost on raw features
+q20:
+  text: You add x, x² and x³ as features. What must you do?
+  show: 4
+  options:
+    o56a5a0: Watch for overfitting
+    o768dbb: Scale them, since x³ is much larger
+    o83c73c: Use a bigger learning rate
+    oebda52: Remove the bias
+    o07809b: Nothing
+    o35e5d6: Use classification
+q21:
+  text: What does f_w,b(x) mean in logistic regression?
+  show: 4
+  options:
+    ofd67da: The estimated probability that y = 1
+    oaa3617: The error
+    odff04e: P(y = 1 | x) given the parameters
+    ob7551d: The distance to the boundary in metres
+    o0f2bb6: The predicted class directly
+    o4affd0: The log of y
+q22:
+  text: When does logistic regression predict 1 with a 0.5 threshold?
+  show: 4
+  options:
+    odd1291: When x ≥ 0
+    o732bfe: When the sigmoid output is at least 0.5
+    o0e02f2: When the loss is small
+    ob0b8fe: When w·x + b ≥ 0.5
+    oa4f7fb: When w·x + b ≥ 0
+    o57af5c: When b > w
+q23:
+  text: Why use log loss instead of squared error with a sigmoid?
+  show: 4
+  options:
+    occ323a: Log loss is faster to type
+    oc6714d: Log loss is maximum likelihood for yes/no labels
+    o8fb721: Squared error can't be differentiated
+    oa2e2f1: Squared error is only for images
+    o7b735e: Log loss works without data
+    o422fd8: Squared error with a sigmoid makes J non-convex
+q24:
+  text: Which keep the log loss from returning infinity or NaN?
+  show: 4
+  options:
+    o8d20b5: Using a larger learning rate
+    o19c17f: Clipping predictions away from 0 and 1
+    o4d2dae: Removing the bias
+    o46c654: Rounding predictions to 0 or 1
+    o6e1770: Computing the loss from the logits z
+    o349a49: Squaring the loss
+q25:
+  text: 'A model has very low training error and high error on new data. This is:'
+  show: 4
+  options:
+    o7a133a: High bias
+    o0ef7a5: A learning-rate problem only
+    odaab28: High variance
+    ofe3f6d: Perfect generalization
+    o293d11: Underfitting
+    oe0c7b4: Overfitting
+q26:
+  text: What happens when λ is extremely large?
+  show: 4
+  options:
+    od98a8c: Training becomes exact
+    o41e606: b becomes zero
+    o93e30f: The model overfits more
+    oa76a5b: The weights go to about zero
+    o82eb85: The model underfits, close to a flat line at b
+    o2274ad: Nothing changes
+q27:
+  text: Which are true about L1 regularization?
+  show: 4
+  options:
+    odf78e1: It's the same as L2
+    oa3aeb8: It increases the number of features
+    o06656c: It can set weights exactly to zero
+    o226b0a: It only works for trees
+    oeb8ef1: It squares the weights
+    oc6b72d: It acts as feature selection
+q28:
+  text: In scikit-learn's LogisticRegression, what does a smaller C mean?
+  show: 4
+  options:
+    oe5bcbb: More iterations
+    o304787: Weaker regularization
+    o59c875: A smaller learning rate
+    o4c197d: C is like 1/λ
+    oe9dc77: Stronger regularization
+    o699208: Fewer classes
+q29:
+  text: How can you check that your gradient code is right?
+  show: 4
+  options:
+    o9959e2: Check that the cost is positive
+    o290a69: Gradient checking with (J(w+ε) − J(w−ε)) / 2ε
+    o219486: Print the weights
+    ob67f4f: Use a bigger learning rate
+    o8443af: Run more iterations
+    oc5cabc: Compare it with numerical gradients from small ε changes
+q30:
+  text: Which are examples of data leakage?
+  show: 4
+  options:
+    obc7dad: Using L2 regularization
+    obea1bb: Using a feature that's only known after the outcome
+    of3d16e: Scaling with statistics from the test set
+    oc002cd: Shuffling the training set
+    o9407fa: Using more training data
+    o2cc6b8: Plotting the learning curve
+q31:
+  text: 'Training error 2%, validation error 15%. Good next steps:'
+  show: 4
+  options:
+    oba79a8: Less data
+    o7d9f02: A simpler model or fewer features
+    o92c615: A more complex model
+    oa3c6b7: Lower λ
+    o1404cc: More data or more regularization
+    o2dea74: Train for many more iterations
+q32:
+  text: What is logistic regression really modelling?
+  show: 4
+  options:
+    oe199d8: P(y = 1 | x) through a sigmoid
+    o158189: A cluster label
+    oae5496: The derivative of y
+    of606c0: The value of y directly
+    o0352ba: The log-odds of y = 1 as a linear function of x
+    ofce5c8: The distance to the nearest point

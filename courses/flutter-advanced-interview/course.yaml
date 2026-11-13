@@ -1,0 +1,313 @@
+id: flutter-advanced-interview
+title: 'Advanced Flutter and interview revision: get hired'
+version: 1
+language: en
+description: 'A four-week course for Flutter developers going for mid or senior roles: Dart 3 (null safety, records,
+  patterns, sealed classes, async, isolates), the widget, element and render trees, constraints and keys, state
+  management compared, architecture and testing, performance, navigation and deep links, localization and RTL, platform
+  channels, Pigeon and FFI, release and CI, then a full interview revision with a question bank, live coding and
+  mobile system design. Plan: 4 weeks, about 1 to 1.5 hours a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Week 1, days 1-3: Dart 3 in depth'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Sound null safety, late and final
+    file: lessons/m1-l2.md
+    minutes: 30
+  - id: m1-l3
+    title: Records, patterns and sealed classes
+    file: lessons/m1-l3.md
+    minutes: 35
+  - id: m1-l4
+    title: 'Async: futures, streams, the event loop and isolates'
+    file: lessons/m1-l4.md
+    minutes: 35
+  - id: m1-l5
+    title: Generics, mixins and extensions
+    file: lessons/m1-l5.md
+    minutes: 20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write a small Dart command-line program that models a learning journey with a sealed class for its state,
+      uses records and switch expressions, parses a large JSON file in an isolate, and exposes a stream of progress
+      events. Include 6 unit tests. Upload the project.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the Dart event loop, microtasks vs events, and when you'd reach for an isolate. Use an example
+      from a real app.
+    min_words: 80
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Week 1, days 4-5: How Flutter really draws'
+  lessons:
+  - id: m2-l1
+    title: Widgets, elements and render objects
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Constraints go down, sizes go up
+    file: lessons/m2-l2.md
+    minutes: 30
+  - id: m2-l3
+    title: Keys, and when you need them
+    file: lessons/m2-l3.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a demo app with a reorderable list of stateful tiles (each with a checkbox state). Show the bug
+      without keys and the fix with ValueKey, and screenshot the Flutter Inspector showing one widget's constraints.
+      Upload the code and screenshots.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the three trees and what happens, step by step, when setState is called on a widget high in
+      the tree.
+    min_words: 80
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Week 2, days 6-8: State management, compared honestly'
+  lessons:
+  - id: m3-l1
+    title: Local state, InheritedWidget and listenables
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Provider, Riverpod and Bloc
+    file: lessons/m3-l2.md
+    minutes: 40
+  - id: m3-l3
+    title: Immutability and equality
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Build the same small feature (a focus timer with start, pause, finish and a history list) three times:
+      ValueNotifier, Riverpod and Bloc. Write a short comparison (lines of code, testability, how a new team member
+      would read it). Upload the project and the comparison.'
+  - id: m3-explain
+    type: explain
+    prompt: 'An interviewer asks: ''Which state management do you use and why?'' Give an answer that shows judgement,
+      not a favourite.'
+    min_words: 80
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Week 2, days 9-10: Architecture and testing'
+  lessons:
+  - id: m4-l1
+    title: Layers, dependency injection and errors
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Unit, widget, golden and integration tests
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Take your Week 2 timer feature, restructure it into data/domain/presentation with a Result type, and
+      write at least 5 unit tests, 3 widget tests and 1 golden test with a fake clock. Upload the project and the
+      test output.
+  - id: m4-explain
+    type: explain
+    prompt: When is a full clean architecture worth it, and when is it too much? Give an example of each.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Week 3, days 11-13: Performance'
+  lessons:
+  - id: m5-l1
+    title: Finding jank with DevTools
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Rendering tricks that matter
+    file: lessons/m5-l2.md
+    minutes: 25
+  - id: m5-l3
+    title: Memory and leaks
+    file: lessons/m5-l3.md
+    minutes: 15
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Take a list screen with 2,000 items and images that janks. Profile it in profile mode, fix it (builder,
+      const, cacheWidth, isolate parsing, RepaintBoundary), and show before and after frame charts. Upload the screenshots
+      and a short write-up.
+  - id: m5-explain
+    type: explain
+    prompt: Your app's scrolling stutters on low-end Android phones. Walk through how you'd find and fix the cause,
+      in order.
+    min_words: 80
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Week 3, days 14-15: Navigation, deep links, theming and RTL'
+  lessons:
+  - id: m6-l1
+    title: go_router and deep links
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Theming, localization and right-to-left
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build a 3-screen app with go_router (tabs that keep state, a detail page from a path parameter, a redirect
+      guard), light and dark themes with a ThemeExtension, and English and Arabic with correct RTL. Configure an
+      Android App Link. Upload the project and screenshots in both languages.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the difference between Navigator 1.0 and the declarative Router, and why deep links push teams
+      toward the declarative approach.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Week 3-4, days 16-18: Talking to the platform'
+  lessons:
+  - id: m7-l1
+    title: Method channels, Pigeon and FFI
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'A real hybrid: inPace''s Android shell'
+    file: lessons/m7-l2.md
+    minutes: 35
+  - id: m7-l3
+    title: Background work and notifications
+    file: lessons/m7-l3.md
+    minutes: 20
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Write a small plugin with Pigeon that returns the battery level and a stream of charging changes (Android
+      at least), plus a scheduled local notification that survives an app restart. Upload the code and a screen
+      recording.
+  - id: m7-explain
+    type: explain
+    prompt: 'Compare MethodChannel, Pigeon and FFI: when would you choose each? Use one real example per option.'
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Week 4, days 19-21: Release engineering and CI'
+  lessons:
+  - id: m8-l1
+    title: Flavors, signing and builds
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: CI/CD
+    file: lessons/m8-l2.md
+    minutes: 25
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Set up GitHub Actions for one of your apps: analyze, test and coverage on pull requests; a signed release
+      APK or app bundle on tags with secrets; obfuscation with saved symbols. Upload the workflow file and a link
+      or screenshot of a green run.'
+  - id: m8-explain
+    type: explain
+    prompt: Your release build crashes but debug doesn't. List the likely causes and how you'd investigate.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Week 4, days 22-28: Interview revision'
+  lessons:
+  - id: m9-l1
+    title: 'Question bank: 40 questions'
+    file: lessons/m9-l1.md
+    minutes: 50
+  - id: m9-l2
+    title: 'Live coding: four classic tasks'
+    file: lessons/m9-l2.md
+    minutes: 45
+  - id: m9-l3
+    title: Mobile system design
+    file: lessons/m9-l3.md
+    minutes: 45
+  - id: m9-l4
+    title: Behavioural rounds and the last week
+    file: lessons/m9-l4.md
+    minutes: 20
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Do all four live-coding tasks in one repository with tests, and write a one-page mobile system design
+      for an offline notes app with sync (with a diagram). Upload the repository zip and the design.
+  - id: m9-explain
+    type: explain
+    prompt: 'Answer this as you would in a senior interview: ''Design the mobile app for an offline-first notes
+      app that syncs across devices. What are the hardest parts?'''
+    min_words: 150
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

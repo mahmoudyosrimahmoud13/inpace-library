@@ -1,0 +1,200 @@
+q1:
+  text: Which methods are idempotent?
+  show: 4
+  options:
+    o1714b9: PUT
+    oaa4748: DELETE
+    o14fc95: None of them
+    oc1d19e: POST
+    o39d3f3: CONNECT
+    o78e982: PATCH (not guaranteed)
+q2:
+  text: What's the right status after a successful form POST that should show another page?
+  show: 4
+  options:
+    obb7331: 200 with the page
+    o0605e4: '404'
+    oed7ec7: A redirect that tells the browser to GET the new URL
+    ofd651e: '401'
+    o13eac2: '500'
+    odf3480: 303 See Other
+q3:
+  text: What is Uvicorn's job?
+  show: 4
+  options:
+    o97c825: 'The ASGI server: sockets and HTTP'
+    ofa4e5f: Running the event loop that calls the app
+    oaed1d6: Validating JSON bodies
+    o6357f5: Routing URLs to functions
+    o660580: Generating OpenAPI docs
+    o94cb65: Rendering templates
+q4:
+  text: How does NavMiddleware turn a redirect into JSON?
+  show: 4
+  options:
+    obf7025: It wraps send and replaces the response start and body
+    o4f39b1: It edits each route
+    o1ae8c8: It patches Starlette
+    o7d5be7: It follows the redirect on the server
+    o347f1b: 'It sees a 3xx with Location and sends {"go": url} instead'
+    oe8de58: It uses a template
+q5:
+  text: Which need run_in_threadpool (or a sync route) in an async server?
+  show: 4
+  options:
+    o5ff39b: A slow blocking library call
+    oc900ba: await httpx.AsyncClient().get(...)
+    o9711b2: await asyncio.sleep(1)
+    o86a2b0: Reading request.path_params
+    oa639be: A download with urllib
+    oe398a3: Returning a JSONResponse
+q6:
+  text: What does Starlette need to parse multipart file uploads?
+  show: 4
+  options:
+    o8981fe: SQLite
+    od6d929: Nothing extra ever
+    o290a52: The python-multipart package
+    o5b1104: A form with enctype multipart/form-data
+    o259216: Jinja2
+    obf834b: Pydantic
+q7:
+  text: 'Benefits of an app factory like create_app(vault):'
+  show: 4
+  options:
+    o631830: It encrypts the app
+    o0b3686: It removes the need for Uvicorn
+    o686156: Dependencies are passed in, not global
+    od560a6: Each test gets a fresh app with its own data
+    of3164e: It's required by ASGI
+    of29242: It makes routes faster
+q8:
+  text: How does inPace delete a temp export file after sending it?
+  show: 4
+  options:
+    o86db56: A database trigger
+    o7285f2: The browser deletes it
+    o30fe56: A cron job
+    o309072: A BackgroundTask on the FileResponse
+    o5bba04: It never deletes it
+    oa3ba80: A task that runs after the response is sent
+q9:
+  text: What happens when a request body fails Pydantic validation?
+  show: 4
+  options:
+    o7debda: It answers 200 with empty data
+    o988c8a: The server crashes
+    o2df5d9: It retries
+    o5ebd5b: Your function isn't called
+    oc54449: FastAPI answers 422 with field errors
+    o16be5c: Your function gets None
+q10:
+  text: What does response_model do?
+  show: 4
+  options:
+    od11901: Changes the URL
+    oeeb407: Keeps extra fields (like secrets) out of the response
+    o5ddd7f: Sets the status to 201
+    o9fa41e: Adds authentication
+    ocad34f: Validates and filters the output
+    oe494a2: Caches the response
+q11:
+  text: How do you swap a dependency in tests?
+  show: 4
+  options:
+    o665471: Edit the route
+    o934a3f: app.dependency_overrides[dep] = fake
+    o3a255c: Use a different port
+    oe78908: You can't
+    o6e0622: Monkeypatch Uvicorn
+    o9cfa80: Point the dependency at a test version
+q12:
+  text: 'Good reasons inPace uses Starlette and not FastAPI:'
+  show: 4
+  options:
+    o7062ed: A smaller frozen app and Android build
+    ob57732: FastAPI doesn't support Python 3.10
+    o94051d: Starlette is faster at JSON validation
+    o799aec: Starlette has OpenAPI docs
+    o20553c: It serves HTML forms to one local user, not a JSON API
+    oda5394: FastAPI can't serve HTML
+q13:
+  text: Which prevent SQL injection?
+  show: 4
+  options:
+    o295626: HTTPS
+    o8d6c3f: An ORM that builds queries for you
+    oce7cb5: Escaping quotes by hand
+    o48a193: f-strings
+    o06f78d: Query parameters (placeholders)
+    ocd5bc2: Using GET instead of POST
+q14:
+  text: When is FastAPI's BackgroundTasks NOT enough?
+  show: 4
+  options:
+    odd4e65: Sending one small email
+    o87c707: Any short follow-up work
+    oa5c296: For scheduled jobs at set times
+    o120982: When jobs must survive restarts or retry
+    ob92c94: Deleting a temp file
+    o46624b: Logging after a response
+q15:
+  text: How does inPace show reminders while it's closed?
+  show: 4
+  options:
+    o2d8959: A background thread runs forever
+    o25e542: Celery
+    od5b163: WebSockets
+    oab5e16: The OS scheduler runs inpace --remind
+    od4308a: Task Scheduler, launchd, systemd or cron start a short job
+    o92842e: A cloud push service
+q16:
+  text: A request asks for /media/course/../../vault.db. What should a safe join do?
+  show: 4
+  options:
+    o04a886: Strip dots and serve course/vault.db
+    ob56b34: Serve vault.db
+    of8667a: Resolve the path and refuse it, since it leaves the media folder
+    o5f60a0: Crash
+    ob1a580: Redirect to /
+    o33ef95: Return nothing (404)
+q17:
+  text: In FastAPI, where does a plain def route run?
+  show: 4
+  options:
+    o7a7a54: In the browser
+    oba2762: In a Celery worker
+    oc2d989: In a thread pool
+    o0c7a5b: On the event loop
+    o6ca7ac: In a separate process
+    obc5a58: Off the event loop, so blocking calls don't freeze it
+q18:
+  text: What does TestClient give you?
+  show: 4
+  options:
+    o8673d5: Fast, isolated tests in the same process
+    o76582d: Production logs
+    o0d78ab: Requests against the ASGI app without a running server
+    o55c415: A load test
+    o871532: A real browser
+    o04e4aa: A database
+q19:
+  text: Which are good ways to make a POST idempotent?
+  show: 4
+  options:
+    o09b2c2: Using GET instead
+    ob9c042: An idempotency key stored with the result
+    o52d429: A unique constraint on what the request creates
+    o4d519b: A bigger server
+    o37fdb1: Answering 500 on the second try
+    of0ffeb: Adding a sleep
+q20:
+  text: Why can inPace's library be static files?
+  show: 4
+  options:
+    o0601bd: Static files are encrypted
+    od2ebcb: Clients just need a list and downloads, checked by SHA-256
+    o9a8ec5: The catalogue changes only when a course is merged
+    oe4bb4b: GitHub Pages runs Python
+    o4f71b2: It has no courses
+    o00e456: Users can't download from servers

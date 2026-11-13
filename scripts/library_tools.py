@@ -213,12 +213,19 @@ def build(out: Path) -> None:
             "cover": cover, "pack": SITE + f"packs/{course.id}.zip",
             "sha256": hashlib.sha256(data).hexdigest(), "size": len(data), "updated": meta.get("updated"),
         }
+        entry["outline"] = outline(course)
+        entry["sample"] = sample(course)
+        if meta.get("credit"):
+            entry["credit"] = str(meta["credit"])
         entry["link"] = to_link(share_data(entry))
         entries.append(entry)
     index = {"inpace": "library", "v": 1, "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
              "courses": entries}
     (out / "library.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "index.html").write_text(page(entries), encoding="utf-8")
+    (out / "c").mkdir()
+    for entry in entries:
+        (out / "c" / f"{entry['id']}.html").write_text(course_page(entry), encoding="utf-8")
     (out / ".nojekyll").write_text("")
     print(f"Built {len(entries)} courses into {out}")
 
@@ -233,114 +240,329 @@ def t(en: str, ar: str) -> str:
     return f'<span class="en">{en}</span><span class="ar">{ar}</span>'
 
 
+def outline(course) -> list[dict]:
+    """Modules, lessons and tasks, so people can see what's inside before adding a course (no answers)."""
+    mods = []
+    for m in course.modules:
+        lessons = []
+        for les in m["lessons"]:
+            kind = ""
+            if les.get("media"):
+                ref = str(les["media"]).split("#")[0]
+                kind = media_kind(ref) or ("video" if "youtu" in ref else "")
+            lessons.append({"title": les["title"], "minutes": int(les.get("minutes") or 0), "media": kind})
+        tasks = []
+        for r in m["requires"]:
+            if r["type"] == "quiz":
+                tasks.append({"type": "quiz", "questions": len(r.get("questions") or [])})
+            else:
+                tasks.append({"type": r["type"], "prompt": str(r.get("prompt", ""))[:400]})
+        mods.append({"title": m["title"], "lessons": lessons, "tasks": tasks})
+    return mods
+
+
+def sample(course) -> dict | None:
+    """One lesson to read before adding: the longer of the first two lessons of the first module."""
+    if not course.modules or not course.modules[0]["lessons"]:
+        return None
+    first = [les for les in course.modules[0]["lessons"][:2] if (les.get("content") or "").strip()]
+    if not first:
+        return None
+    les = max(first, key=lambda x: len(x["content"]))
+    text = les["content"]
+    if len(text) > 9000:
+        text = text[:9000].rsplit("\n\n", 1)[0] + "\n\n…"
+    return {"title": les["title"], "text": text}
+
+
+ICONS = {
+    "clock": '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    "layers": '<path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/>',
+    "globe": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+    "doc": '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/>',
+    "video": '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/>',
+    "check": '<path d="m5 12 4 4 10-10"/>',
+    "search": '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+    "back": '<path d="M15 6l-6 6 6 6"/>',
+}
+
+
+def ic(name: str) -> str:
+    return (f'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+            f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
+
+
+def hours(minutes: int) -> str:
+    if not minutes:
+        return ""
+    if minutes < 90:
+        return t(f"{minutes} min of lessons", f"{minutes} دقيقة من الدروس")
+    h = round(minutes / 60)
+    return t(f"about {h} h of lessons", f"حوالي {h} ساعة من الدروس")
+
+
+def lang_name(code: str) -> str:
+    return t("Arabic", "العربية") if code == "ar" else t("English", "الإنجليزية")
+
+
+def cover_html(c: dict, root: str) -> str:
+    e = html.escape
+    if c.get("cover"):
+        return f'<img class="cover" src="{e(c["cover"])}" alt="" loading="lazy">'
+    hue = (len(c["id"]) * 47) % 360
+    return f'<span class="cover blank" style="--hue:{hue}" aria-hidden="true">{e(c["title"][:1].upper())}</span>'
+
+
+STYLE = """
+:root { --ink:#111; --paper:#F7F3EA; --cream:#F2EDE2; --surface:#fff; --sun:#FFD43B; --sky:#CDE8F2; --pink:#E6007E;
+  --muted:#4F4A40; --hair:#DDD5C4; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme=light]) { --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --sky:#2A3A40; --muted:#B5AD9C; --hair:#3A362D; color-scheme: dark; } }
+:root[data-theme=dark] { --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --sky:#2A3A40; --muted:#B5AD9C; --hair:#3A362D; color-scheme: dark; }
+* { box-sizing: border-box; }
+html[lang=ar] .en, html[lang=en] .ar { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 "Readex Pro", system-ui, "Segoe UI", Tahoma, sans-serif;
+  background-image: repeating-linear-gradient(60deg, rgba(127,127,127,.07) 0 1px, transparent 1px 24px), repeating-linear-gradient(-60deg, rgba(127,127,127,.07) 0 1px, transparent 1px 24px); }
+a { color: inherit; }
+.i { width: 1.05em; height: 1.05em; flex: none; vertical-align: -0.15em; }
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+.top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 1rem; padding: .7rem 16px; background: var(--cream); border-bottom: 3px solid var(--ink); }
+.brand { display: flex; align-items: center; gap: .5rem; text-decoration: none; font-size: 1.35rem; font-weight: 800; }
+.brand span { font-weight: 300; }
+.top nav { margin-inline-start: auto; display: flex; gap: 1rem; font-weight: 600; }
+.top nav a { text-decoration: none; } .top nav a:hover { text-decoration: underline; }
+.sq { display: inline-grid; place-items: center; min-width: 40px; height: 40px; padding: 0 .7rem; cursor: pointer; background: var(--surface); color: var(--ink);
+  border: 3px solid var(--ink); font: inherit; font-weight: 700; }
+.sq svg { width: 20px; height: 20px; } .theme .sun { display: none; }
+:root[data-theme=dark] .theme .sun { display: block; } :root[data-theme=dark] .theme .moon { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme=light]) .theme .sun { display: block; } :root:not([data-theme=light]) .theme .moon { display: none; } }
+@media (max-width: 720px) { .top nav { display: none; } .theme { margin-inline-start: auto; } }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: end; padding-block: 2.6rem 1.2rem; }
+h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); margin: 0 0 .6rem; line-height: 1.05; letter-spacing: -.02em; }
+.lead { color: var(--muted); max-width: 40em; margin: 0; font-size: 1.08rem; }
+.stats { display: flex; gap: .8rem; margin: 0; }
+.stats div { background: var(--sun); color: #111; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: .5rem .9rem; min-width: 96px; }
+[dir=rtl] .stats div { box-shadow: -5px 5px 0 var(--ink); }
+.stats b { display: block; font-size: 1.7rem; line-height: 1.1; }
+.stats span { font-size: .85rem; font-weight: 600; }
+.tools { display: flex; flex-wrap: wrap; gap: .8rem 1rem; align-items: center; padding-block: .6rem 1.4rem; }
+.find { display: flex; align-items: center; gap: .5rem; flex: 1 1 320px; max-width: 460px; border: 3px solid var(--ink); background: var(--surface); padding-inline: .8rem; }
+.find input { font: inherit; width: 100%; padding: .65rem 0; border: 0; background: transparent; color: var(--ink); outline: none; }
+.find:focus-within { outline: 3px solid var(--pink); outline-offset: 2px; }
+.topics { display: flex; flex-wrap: wrap; gap: .45rem; }
+.topic { font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; padding: .3rem .75rem; background: var(--surface); color: var(--ink); border: 2px solid var(--ink); }
+.topic[aria-pressed=true] { background: var(--ink); color: var(--paper); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 1.6rem; padding-block: .4rem 3rem; }
+.card { display: flex; flex-direction: column; background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); transition: transform .12s, box-shadow .12s; }
+[dir=rtl] .card { box-shadow: -6px 6px 0 var(--ink); }
+.card:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 var(--ink); }
+[dir=rtl] .card:hover { transform: translate(2px, -2px); box-shadow: -9px 9px 0 var(--ink); }
+.card:target { box-shadow: 8px 8px 0 var(--pink); }
+.card[hidden] { display: none; }
+.cover { display: block; width: 100%; aspect-ratio: 16/10; object-fit: cover; border-bottom: 3px solid var(--ink); background: var(--cream); }
+.blank { display: grid; place-items: center; font-size: 4rem; font-weight: 800; color: #111; background: hsl(var(--hue) 75% 75%); }
+.card .body { display: flex; flex-direction: column; gap: .55rem; padding: 1rem 1.1rem 1.2rem; flex: 1; }
+.card h2 { margin: 0; font-size: 1.2rem; line-height: 1.3; }
+.card h2 a { text-decoration: none; } .card h2 a:hover { text-decoration: underline; }
+.facts { display: flex; flex-wrap: wrap; gap: .35rem .9rem; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: .86rem; font-weight: 600; }
+.facts li { display: inline-flex; align-items: center; gap: .3rem; }
+.desc { margin: 0; color: var(--muted); font-size: .95rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.by { margin: 0; font-size: .86rem; color: var(--muted); }
+.by .ok { color: #136B45; font-weight: 700; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: auto; padding-top: .5rem; }
+.btn { display: inline-flex; align-items: center; gap: .4rem; padding: .5rem .95rem; border: 3px solid var(--ink); text-decoration: none; color: var(--ink);
+  font: inherit; font-weight: 700; font-size: .95rem; background: var(--surface); cursor: pointer; }
+.btn:hover { background: var(--sun); color: #111; }
+.btn.primary { background: var(--ink); color: var(--paper); }
+.btn.primary:hover { background: var(--pink); border-color: var(--pink); color: #fff; }
+.btn.quiet { border-color: transparent; background: transparent; text-decoration: underline; padding-inline: .3rem; }
+.cover-link { display: block; text-decoration: none; }
+.prose table + h2, .prose table + h3 { margin-top: 1.6rem; }
+.empty { color: var(--muted); }
+.share { padding-block: .5rem 4rem; }
+.share > div { background: var(--sun); color: #111; border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 1.5rem; }
+.share h2 { font-size: 1.6rem; margin: 0 0 .6rem; }
+.share ol { margin: .5rem 0 1rem; padding-inline-start: 1.3rem; } .share li { margin: .35rem 0; }
+.share .btn { background: #fff; color: #111; border-color: #111; }
+footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size: .92rem; }
+/* course page */
+.crumb { display: inline-flex; align-items: center; gap: .3rem; margin-top: 1.6rem; font-weight: 600; text-decoration: none; }
+.crumb:hover { text-decoration: underline; }
+[dir=rtl] .crumb .i { transform: scaleX(-1); }
+.course-head { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 2rem; align-items: start; padding-block: 1.2rem 2rem; }
+.course-head .cover { border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); }
+[dir=rtl] .course-head .cover { box-shadow: -8px 8px 0 var(--ink); }
+.course-head h1 { font-size: clamp(1.8rem, 4vw, 2.7rem); }
+.course-head .desc { -webkit-line-clamp: unset; font-size: 1.02rem; }
+.course-head .facts { font-size: .92rem; margin-block: .8rem; }
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .6rem 0; }
+.tag { font-size: .8rem; font-weight: 600; border: 2px solid var(--ink); padding: 0 .45rem; }
+.section-title { font-size: 1.6rem; margin: 2.2rem 0 1rem; }
+.modules { list-style: none; margin: 0; padding: 0; counter-reset: mod; display: grid; gap: 1rem; }
+.mod { background: var(--surface); border: 3px solid var(--ink); }
+.mod summary { display: flex; gap: 1rem; align-items: center; cursor: pointer; padding: .9rem 1.1rem; list-style: none; font-weight: 700; }
+.mod summary::-webkit-details-marker { display: none; }
+.mod summary::before { counter-increment: mod; content: counter(mod); display: grid; place-items: center; flex: none; width: 2.1rem; height: 2.1rem;
+  background: var(--sun); color: #111; border: 2px solid var(--ink); font-weight: 800; }
+.mod summary .sum { margin-inline-start: auto; color: var(--muted); font-size: .86rem; font-weight: 600; white-space: nowrap; }
+.mod[open] summary { border-bottom: 2px solid var(--hair); }
+.mod ul { list-style: none; margin: 0; padding: .4rem 1.1rem .6rem; }
+.mod li { display: flex; gap: .6rem; align-items: baseline; padding: .35rem 0; border-bottom: 1px dashed var(--hair); }
+.mod li:last-child { border-bottom: 0; }
+.mod li .mins { margin-inline-start: auto; color: var(--muted); font-size: .85rem; white-space: nowrap; }
+.mod li .kind { font-size: .75rem; font-weight: 700; border: 1.5px solid var(--ink); padding: 0 .35rem; }
+.mod .tasks { display: flex; flex-wrap: wrap; gap: .45rem; padding: .2rem 1.1rem 1rem; }
+.mod .task { display: inline-flex; gap: .35rem; align-items: center; font-size: .82rem; font-weight: 700; background: var(--sky); color: var(--ink); padding: .2rem .6rem; }
+.sample { background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 1.4rem clamp(1rem, 4vw, 2.6rem); }
+[dir=rtl] .sample { box-shadow: -6px 6px 0 var(--ink); }
+.sample h2 { font-size: 1.5rem; margin-top: 0; }
+.prose { line-height: 1.7; max-width: 46em; }
+.prose table { border-collapse: collapse; width: 100%; font-size: .93rem; display: block; overflow-x: auto; }
+.prose th, .prose td { border: 1.5px solid var(--hair); padding: .35rem .6rem; text-align: start; }
+.prose th { background: var(--cream); }
+.prose pre { background: #111; color: #F2EDE2; padding: .9rem 1rem; overflow-x: auto; font-size: .86rem; direction: ltr; }
+.prose code { font-family: ui-monospace, Consolas, monospace; font-size: .9em; }
+.prose :not(pre) > code { background: var(--cream); padding: .05rem .3rem; }
+.prose blockquote { margin: 1rem 0; padding: .4rem 1rem; border-inline-start: 4px solid var(--sun); background: var(--cream); }
+.fade { position: relative; max-height: 34rem; overflow: hidden; }
+.fade::after { content: ""; position: absolute; inset: auto 0 0 0; height: 7rem; background: linear-gradient(transparent, var(--surface)); }
+.fade.open { max-height: none; } .fade.open::after { display: none; }
+.credit { color: var(--muted); font-size: .88rem; border-top: 2px solid var(--hair); padding-top: .8rem; margin-top: 2rem; }
+.sticky-add { position: sticky; bottom: 0; display: none; }
+@media (max-width: 760px) {
+  .hero, .course-head { grid-template-columns: 1fr; }
+  .stats div { min-width: 0; flex: 1; }
+  .sticky-add { display: flex; gap: .6rem; padding: .7rem 16px; background: var(--cream); border-top: 3px solid var(--ink); }
+  .sticky-add .btn { flex: 1; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+"""
+
+HEAD_SCRIPT = """<script>
+  (function () {
+    var lang = null;
+    try { lang = localStorage.getItem("inpace-site-lang"); } catch (e) {}
+    if (!lang) lang = (navigator.language || "").toLowerCase().indexOf("ar") === 0 ? "ar" : "en";
+    document.documentElement.lang = lang; document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    var th = null; try { th = localStorage.getItem("inpace-site-theme"); } catch (e) {}
+    if (th === "light" || th === "dark") document.documentElement.setAttribute("data-theme", th);
+  })();
+</script>"""
+
+COMMON_SCRIPT = """<script>
+var html = document.documentElement;
+function labels() { var ar = html.lang === "ar";
+  [].forEach.call(document.querySelectorAll("[data-ph-en]"), function (el) { el.placeholder = ar ? el.dataset.phAr : el.dataset.phEn; el.setAttribute("aria-label", el.placeholder); }); }
+labels();
+document.getElementById("lang").addEventListener("click", function () {
+  var next = html.lang === "ar" ? "en" : "ar"; html.lang = next; html.dir = next === "ar" ? "rtl" : "ltr";
+  try { localStorage.setItem("inpace-site-lang", next); } catch (e) {}
+  labels();
+});
+document.getElementById("theme").addEventListener("click", function () {
+  var now = html.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  var next = now === "dark" ? "light" : "dark"; html.setAttribute("data-theme", next);
+  try { localStorage.setItem("inpace-site-theme", next); } catch (e) {}
+});
+[].forEach.call(document.querySelectorAll("[data-copy]"), function (b) {
+  b.addEventListener("click", function () {
+    var old = b.innerHTML;
+    navigator.clipboard.writeText(b.dataset.copy).then(function () {
+      b.textContent = html.lang === "ar" ? "تم النسخ!" : "Copied!"; setTimeout(function () { b.innerHTML = old; }, 1600); });
+  });
+});
+</script>"""
+
+
+def shell(title: str, description: str, body: str, root: str, script: str = "") -> str:
+    e = html.escape
+    return f"""<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(title)}</title>
+<meta name="description" content="{e(description)}">
+<link rel="icon" href="{SITE_MAIN}assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+{HEAD_SCRIPT}
+<style>{STYLE}</style></head><body>
+<div class="top">
+  <a class="brand" href="{SITE_MAIN}"><img src="{SITE_MAIN}assets/icon.svg" width="30" height="30" alt=""><b><span>in</span>Pace</b></a>
+  <nav><a href="{root}index.html">{t("Library", "المكتبة")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
+    <a href="{root}index.html#share">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
+  <button class="sq theme" type="button" id="theme" aria-label="Light or dark mode" title="Light or dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
+  <button class="sq" type="button" id="lang">{t("عربي", "English")}</button>
+</div>
+{body}
+<footer>{t("Something wrong with a course?", "مشكلة في دورة؟")} <a href="{REPORT}">{t("Report it", "أبلغ عنها")}</a> ·
+  <a href="https://github.com/mahmoudyosrimahmoud13/inpace-library">GitHub</a></footer>
+{COMMON_SCRIPT}{script}
+</body></html>
+"""
+
+
+def facts(c: dict) -> str:
+    items = []
+    if c.get("minutes"):
+        items.append(f'<li>{ic("clock")}{hours(c["minutes"])}</li>')
+    items.append(f'<li>{ic("layers")}{c["modules"]} {t("modules", "وحدات")} · {c["lessons"]} {t("lessons", "دروس")}</li>')
+    items.append(f'<li>{ic("globe")}{lang_name(c["language"])}</li>')
+    return '<ul class="facts">' + "".join(items) + "</ul>"
+
+
+def byline(c: dict) -> str:
+    e = html.escape
+    tick = f' <span class="ok">{ic("check")}{t("checked", "موثّق")}</span>' if c["author"]["verified"] else ""
+    return f'<p class="by">{t("by", "من إعداد")} <bdi>{e(c["author"]["name"])}</bdi>{tick}</p>'
+
+
 def page(entries: list[dict]) -> str:
     e = html.escape
+    counts: dict[str, int] = {}
+    for c in entries:
+        for tag in {str(x).lower() for x in c["tags"]}:
+            counts[tag] = counts.get(tag, 0) + 1
+    topics = [k for k, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])) if n > 1][:10]
     cards = []
     for c in entries:
-        cover = (f'<img src="{e(c["cover"])}" alt="" loading="lazy">' if c["cover"]
-                 else f'<span class="blank">{e(c["title"][:1].upper())}</span>')
-        tags = "".join(f"<span class=chip>{e(x)}</span>" for x in c["tags"][:5])
+        words = " ".join([c["id"], c["title"], c["description"], c["author"]["name"]] + c["tags"]).lower()
         dl = ""
         if c["downloads"]:
             d = c["downloads"][0]
             size = " · " + e(d["size"]) if d.get("size") else ""
-            dl = f'<p class="dl">🎬 {t("Videos download separately", "الفيديوهات تُحمّل منفصلة")}{size}</p>'
-        words = " ".join([c["id"], c["title"], c["description"], c["author"]["name"]] + c["tags"]).lower()
-        lang = t("Arabic", "العربية") if c["language"] == "ar" else t("English", "الإنجليزية")
-        tick = " ✓" if c["author"]["verified"] else ""
-        cards.append(f"""<article class="card" id="{e(c["id"])}" data-q="{e(words)}">
-  {cover}
+            dl = f'<p class="by">{ic("video")} {t("Videos download separately", "الفيديوهات تُحمّل منفصلة")}{size}</p>'
+        cards.append(f"""<article class="card" id="{e(c["id"])}" data-q="{e(words)}" data-tags="{e('|'.join(x.lower() for x in c['tags']))}">
+  <a class="cover-link" href="c/{e(c["id"])}.html" tabindex="-1" aria-hidden="true">{cover_html(c, "")}</a>
   <div class="body">
-    <h2 dir="auto">{e(c["title"])}</h2>
-    <p dir="auto">{e(c["description"])}</p>
-    <p class="meta">{c["modules"]} {t("modules", "وحدة")} · {c["lessons"]} {t("lessons", "درس")} · {lang}
-      · {t("by", "من إعداد")} <bdi>{e(c["author"]["name"])}</bdi>{tick} · <bdi>{e(c["license"] or "")}</bdi></p>
-    {dl}<p>{tags}</p>
-    <p class="actions"><a class="btn primary" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a>
-      <button class="btn" type="button" data-copy="{e(c["link"])}">{t("Copy link", "انسخ الرابط")}</button>
-      <a class="btn quiet" href="{e(c["pack"])}" download>{t("Download file", "حمّل الملف")}</a></p>
+    <h2 dir="auto"><a href="c/{e(c["id"])}.html">{e(c["title"])}</a></h2>
+    {facts(c)}
+    <p class="desc" dir="auto">{e(c["description"])}</p>
+    {byline(c)}{dl}
+    <div class="actions"><a class="btn primary" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a>
+      <a class="btn" href="c/{e(c["id"])}.html">{t("See what's inside", "شاهد المحتوى")}</a></div>
   </div>
 </article>""")
-    return f"""<!doctype html>
-<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>inPace course library</title>
-<meta name="description" content="Free courses made and shared by inPace learners. Add one to inPace with a click.">
-<link rel="icon" href="{SITE_MAIN}assets/icon.svg" type="image/svg+xml">
-<script>
-  (function () {{
-    var lang = null;
-    try {{ lang = localStorage.getItem("inpace-site-lang"); }} catch (e) {{}}
-    if (!lang) lang = (navigator.language || "").toLowerCase().indexOf("ar") === 0 ? "ar" : "en";
-    document.documentElement.lang = lang; document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-    var th = null; try {{ th = localStorage.getItem("inpace-site-theme"); }} catch (e) {{}}
-    if (th === "light" || th === "dark") document.documentElement.setAttribute("data-theme", th);
-  }})();
-</script>
-<style>
-:root {{ --ink:#111; --paper:#F7F3EA; --cream:#F2EDE2; --surface:#fff; --sun:#FFD43B; --muted:#4F4A40; color-scheme: light; }}
-@media (prefers-color-scheme: dark) {{ :root:not([data-theme=light]) {{ --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --muted:#B5AD9C; color-scheme: dark; }} }}
-:root[data-theme=dark] {{ --ink:#F2EDE2; --paper:#12110E; --cream:#1E1C17; --surface:#1C1A15; --sun:#E2BD4C; --muted:#B5AD9C; color-scheme: dark; }}
-:root[data-theme=light] {{ color-scheme: light; }}
-.theme {{ display: inline-grid; place-items: center; width: 40px; height: 40px; padding: 0; cursor: pointer; background: var(--surface); color: var(--ink); border: 3px solid var(--ink); }}
-.theme svg {{ width: 20px; height: 20px; }} .theme .sun {{ display: none; }}
-:root[data-theme=dark] .theme .sun {{ display: block; }} :root[data-theme=dark] .theme .moon {{ display: none; }}
-@media (prefers-color-scheme: dark) {{ :root:not([data-theme=light]) .theme .sun {{ display: block; }} :root:not([data-theme=light]) .theme .moon {{ display: none; }} }}
-* {{ box-sizing: border-box; }}
-html[lang=ar] .en, html[lang=en] .ar {{ display: none !important; }}
-body {{ margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 system-ui, "Segoe UI", Tahoma, sans-serif; }}
-a {{ color: inherit; }}
-.top {{ position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 1rem; padding: .7rem 16px; background: var(--cream); border-bottom: 3px solid var(--ink); }}
-.brand {{ display: flex; align-items: center; gap: .5rem; text-decoration: none; font-size: 1.35rem; font-weight: 800; }}
-.brand span {{ font-weight: 300; }}
-.top nav {{ margin-inline-start: auto; display: flex; gap: 1rem; font-weight: 600; }}
-.top nav a {{ text-decoration: none; }}
-.lang {{ font: inherit; font-weight: 700; cursor: pointer; background: var(--surface); color: var(--ink); border: 3px solid var(--ink); padding: .25rem .8rem; }}
-@media (max-width: 640px) {{ .top nav {{ display: none; }} .theme {{ margin-inline-start: auto; }} }}
-header, main, .share {{ max-width: 1000px; margin: 0 auto; padding-inline: 16px; }}
-header {{ padding-block: 2.5rem 1rem; }}
-h1 {{ font-size: clamp(2rem, 6vw, 3.2rem); margin: 0 0 .5rem; line-height: 1.15; }}
-header p {{ color: var(--muted); max-width: 42em; margin: 0 0 1.2rem; }}
-input {{ font: inherit; width: 100%; max-width: 480px; padding: .7rem .9rem; border: 3px solid var(--ink); background: var(--surface); color: var(--ink); }}
-main {{ padding-block: 1rem 3rem; display: grid; gap: 1.2rem; }}
-.card {{ display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 1.2rem; background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 1.2rem; }}
-[dir=rtl] .card {{ box-shadow: -6px 6px 0 var(--ink); }}
-.card:target {{ box-shadow: 6px 6px 0 var(--sun); }}
-.card img, .blank {{ width: 100%; aspect-ratio: 16/10; object-fit: cover; border: 2px solid var(--ink); }}
-.blank {{ display: grid; place-items: center; font-size: 3rem; font-weight: 800; background: var(--sun); color: #111; }}
-h2 {{ margin: 0 0 .3rem; font-size: 1.35rem; }} .card p {{ margin: .3rem 0; }}
-.meta {{ color: var(--muted); font-size: .92rem; }} .dl {{ font-size: .92rem; font-weight: 600; }}
-.chip {{ display: inline-block; border: 2px solid var(--ink); padding: 0 .45rem; margin: 0 0 .3rem .3rem; font-size: .82rem; }}
-.btn {{ display: inline-block; padding: .5rem .9rem; border: 3px solid var(--ink); text-decoration: none; color: var(--ink); font: inherit; font-weight: 700;
-  margin: .3rem 0 0 .4rem; background: var(--surface); cursor: pointer; }}
-.btn.primary {{ background: var(--ink); color: var(--paper); }}
-.btn.quiet {{ border-color: transparent; text-decoration: underline; }}
-.empty {{ color: var(--muted); }}
-.share {{ padding-block: 1rem 4rem; }}
-.share > div {{ background: var(--sun); color: #111; border: 3px solid var(--ink); padding: 1.5rem; }}
-.share h2 {{ font-size: 1.6rem; margin-bottom: .6rem; }}
-.share ol {{ margin: .5rem 0 1rem; padding-inline-start: 1.3rem; }} .share li {{ margin: .35rem 0; }}
-.share .btn {{ margin-inline: 0 .5rem; }}
-footer {{ text-align: center; padding: 2rem 16px; color: var(--muted); font-size: .92rem; }}
-@media (max-width: 640px) {{ .card {{ grid-template-columns: 1fr; }} }}
-</style></head><body>
-<div class="top">
-  <a class="brand" href="{SITE_MAIN}"><img src="{SITE_MAIN}assets/icon.svg" width="30" height="30" alt=""><b><span>in</span>Pace</b></a>
-  <nav><a href="{SITE_MAIN}">{t("Home", "الرئيسية")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
-    <a href="#share">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
-  <button class="theme" type="button" id="theme" aria-label="Light or dark mode" title="Light or dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
-  <button class="lang" type="button" id="lang">{t("عربي", "English")}</button>
-</div>
-<header>
-  <h1>{t("The inPace course library", "مكتبة دورات inPace")}</h1>
-  <p>{t("Free courses made and shared by people who learn with inPace. Press <b>Add to inPace</b>, and the course opens in the app, ready to start. Your progress stays on your computer.",
-        "دورات مجانية صنعها وشاركها متعلمون يستخدمون inPace. اضغط <b>أضف إلى inPace</b> فتفتح الدورة في التطبيق جاهزة للبدء. ويبقى تقدّمك على جهازك.")}</p>
-  <input type="search" id="q" placeholder="Search courses" aria-label="Search courses" dir="auto">
+    total_h = round(sum(c.get("minutes") or 0 for c in entries) / 60)
+    chips = (f'<button class="topic" type="button" data-topic="" aria-pressed="true">{t("All", "الكل")}</button>' +
+             "".join(f'<button class="topic" type="button" data-topic="{e(x)}" aria-pressed="false">{e(x)}</button>' for x in topics))
+    body = f"""<div class="wrap">
+<header class="hero">
+  <div>
+    <h1>{t("The inPace course library", "مكتبة دورات inPace")}</h1>
+    <p class="lead">{t("Free courses made and shared by people who learn with inPace. Look inside any course first, then press <b>Add to inPace</b> and it opens in the app, ready to start. Your progress stays on your device.",
+        "دورات مجانية صنعها وشاركها متعلمون يستخدمون inPace. اطّلع على محتوى أي دورة أولًا، ثم اضغط <b>أضف إلى inPace</b> فتفتح في التطبيق جاهزة للبدء. ويبقى تقدّمك على جهازك.")}</p>
+  </div>
+  <div class="stats"><div><b>{len(entries)}</b><span>{t("courses", "دورة")}</span></div><div><b>{total_h}</b><span>{t("hours of lessons", "ساعة دروس")}</span></div><div><b>0</b><span>{t("cost", "تكلفة")}</span></div></div>
 </header>
-<main id="list">
+<div class="tools">
+  <label class="find">{ic("search")}<input type="search" id="q" dir="auto" data-ph-en="Search courses" data-ph-ar="ابحث في الدورات"></label>
+  <div class="topics" role="group" aria-label="Topics">{chips}</div>
+</div>
+<main class="grid" id="list">
 {"".join(cards) or '<p class="empty">' + t("No courses yet.", "لا توجد دورات بعد.") + '</p>'}
-<p class="empty" id="none" hidden>{t("No course matches that.", "لا توجد دورة تطابق ذلك.")}</p>
 </main>
-<section class="share" id="share"><div>
+<p class="empty" id="none" hidden>{t("No course matches that. Try another word or topic.", "لا توجد دورة تطابق ذلك. جرّب كلمة أو موضوعًا آخر.")}</p>
+</div>
+<section class="share wrap" id="share"><div>
   <h2>{t("Share your own course", "شارك دورتك")}</h2>
   <ol>
     <li>{t("Make your course in inPace: by hand, with AI, or from a folder of videos.", "اصنع دورتك في inPace: بنفسك، أو بالذكاء الاصطناعي، أو من مجلد فيديوهات.")}</li>
@@ -351,39 +573,101 @@ footer {{ text-align: center; padding: 2rem 16px; color: var(--muted); font-size
         "فيديوهات كبيرة؟ ارفعها إلى Google Drive أو MEGA أو archive.org وأضف رابط التحميل في تفاصيل الدورة. شارك فقط ما صنعته بنفسك.")}</p>
   <p><a class="btn" href="{SITE_MAIN}#download">{t("Get inPace", "احصل على inPace")}</a>
      <a class="btn" href="{FORM}">{t("Open the submission form", "افتح نموذج الإرسال")}</a></p>
-</div></section>
-<footer>{t("Something wrong with a course?", "مشكلة في دورة؟")} <a href="{REPORT}">{t("Report it", "أبلغ عنها")}</a> ·
-  <a href="https://github.com/mahmoudyosrimahmoud13/inpace-library">GitHub</a></footer>
-<script>
-var html = document.documentElement, q = document.getElementById("q"), cards = [].slice.call(document.querySelectorAll(".card"));
-function labels() {{ var ar = html.lang === "ar"; q.placeholder = ar ? "ابحث في الدورات" : "Search courses"; q.setAttribute("aria-label", q.placeholder); }}
-labels();
-document.getElementById("lang").addEventListener("click", function () {{
-  var next = html.lang === "ar" ? "en" : "ar"; html.lang = next; html.dir = next === "ar" ? "rtl" : "ltr";
-  try {{ localStorage.setItem("inpace-site-lang", next); }} catch (e) {{}}
-  labels();
-}});
-document.getElementById("theme").addEventListener("click", function () {{
-  var now = html.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  var next = now === "dark" ? "light" : "dark"; html.setAttribute("data-theme", next);
-  try {{ localStorage.setItem("inpace-site-theme", next); }} catch (e) {{}}
-}});
-q.addEventListener("input", function () {{
+</div></section>"""
+    script = """<script>
+var q = document.getElementById("q"), cards = [].slice.call(document.querySelectorAll(".card")), topic = "";
+function run() {
   var w = q.value.toLowerCase().split(/\\s+/).filter(Boolean), shown = 0;
-  cards.forEach(function (c) {{ var ok = w.every(function (x) {{ return c.dataset.q.indexOf(x) >= 0; }}); c.hidden = !ok; shown += ok; }});
+  cards.forEach(function (c) {
+    var ok = w.every(function (x) { return c.dataset.q.indexOf(x) >= 0; }) && (!topic || c.dataset.tags.split("|").indexOf(topic) >= 0);
+    c.hidden = !ok; shown += ok; });
   document.getElementById("none").hidden = shown > 0;
-}});
-[].forEach.call(document.querySelectorAll("[data-copy]"), function (b) {{
-  b.addEventListener("click", function () {{
-    var old = b.innerHTML;
-    navigator.clipboard.writeText(b.dataset.copy).then(function () {{
-      b.textContent = html.lang === "ar" ? "تم النسخ!" : "Copied!"; setTimeout(function () {{ b.innerHTML = old; }}, 1600); }});
-  }});
-}});
-if (location.hash) {{ var el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }}
-</script>
-</body></html>
-"""
+}
+q.addEventListener("input", run);
+[].forEach.call(document.querySelectorAll(".topic"), function (b) {
+  b.addEventListener("click", function () {
+    topic = b.dataset.topic;
+    [].forEach.call(document.querySelectorAll(".topic"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    run();
+  });
+});
+if (location.hash) { var el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }
+</script>"""
+    return shell("inPace course library", "Free courses made and shared by inPace learners. Look inside, then add one to inPace with a click.",
+                 body, "", script)
+
+
+def outline_html(c: dict) -> str:
+    e = html.escape
+    names = {"practical": t("Practical task", "مهمة عملية"), "explain": t("Explain in your words", "اشرح بكلماتك")}
+    out = []
+    for i, m in enumerate(c.get("outline") or []):
+        mins = sum(les["minutes"] for les in m["lessons"])
+        rows = []
+        for les in m["lessons"]:
+            kind = {"pdf": t("slides", "شرائح"), "video": t("video", "فيديو"), "audio": t("audio", "صوت")}.get(les["media"], "")
+            rows.append(f'<li><span dir="auto">{e(les["title"])}</span>{f"<span class=kind>{kind}</span>" if kind else ""}'
+                        f'<span class="mins">{les["minutes"] or ""}{t(" min", " د") if les["minutes"] else ""}</span></li>')
+        tasks = []
+        for tk in m["tasks"]:
+            if tk["type"] == "quiz":
+                tasks.append(f'<span class="task">{ic("check")}{t("Quiz", "اختبار")} · {tk["questions"]} {t("questions", "أسئلة")}</span>')
+            else:
+                tasks.append(f'<span class="task" title="{e(tk.get("prompt", ""))}">{ic("doc")}{names.get(tk["type"], e(tk["type"]))}</span>')
+        out.append(f"""<li><details class="mod"{" open" if i == 0 else ""}><summary><span dir="auto">{e(m["title"])}</span>
+  <span class="sum">{len(m["lessons"])} {t("lessons", "دروس")}{f" · {mins}" + t(" min", " د") if mins else ""}</span></summary>
+  <ul>{"".join(rows)}</ul>{f'<div class="tasks">{"".join(tasks)}</div>' if tasks else ""}</details></li>""")
+    return '<ol class="modules">' + "".join(out) + "</ol>" if out else ""
+
+
+def course_page(c: dict) -> str:
+    e = html.escape
+    from markdown_it import MarkdownIt
+    md = MarkdownIt("commonmark", {"html": False}).enable("table")
+    tags = "".join(f'<span class="tag">{e(x)}</span>' for x in c["tags"][:8])
+    sample_html = ""
+    if c.get("sample"):
+        text = re.sub(r"^#\s+.*\n+", "", c["sample"]["text"])
+        sample_html = f"""<h2 class="section-title">{t("Read a lesson first", "اقرأ درسًا أولًا")}</h2>
+<article class="sample"><h2 dir="auto">{e(c["sample"]["title"])}</h2>
+  <div class="prose fade" id="sample" dir="{'rtl' if c['language'] == 'ar' else 'auto'}">{md.render(text)}</div>
+  <p><button class="btn" type="button" id="more">{t("Show the whole lesson", "اعرض الدرس كاملًا")}</button></p></article>"""
+    dl = ""
+    if c["downloads"]:
+        d = c["downloads"][0]
+        dl = f'<p class="by">{ic("video")} {t("Videos download separately", "الفيديوهات تُحمّل منفصلة")}{" · " + e(d["size"]) if d.get("size") else ""}</p>'
+    credit = f'<p>{e(c["credit"])}</p>' if c.get("credit") else ""
+    actions = f"""<a class="btn primary" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a>
+      <button class="btn" type="button" data-copy="{e(c["link"])}">{t("Copy link", "انسخ الرابط")}</button>
+      <a class="btn quiet" href="{e(c["pack"])}" download>{t("Download file", "حمّل الملف")}</a>"""
+    body = f"""<div class="wrap">
+<a class="crumb" href="../index.html#{e(c["id"])}">{ic("back")}{t("All courses", "كل الدورات")}</a>
+<header class="course-head">
+  {cover_html(c, "../")}
+  <div>
+    <h1 dir="auto">{e(c["title"])}</h1>
+    {facts(c)}
+    <p class="desc" dir="auto">{e(c["description"])}</p>
+    {byline(c)}{dl}
+    <div class="tags">{tags}</div>
+    <div class="actions">{actions}</div>
+  </div>
+</header>
+<h2 class="section-title">{t("What's inside", "محتوى الدورة")}</h2>
+<p class="by">{t("Each module ends with tasks. The next module opens when they're done.", "تنتهي كل وحدة بمهام، وتُفتح الوحدة التالية عند إنجازها.")}</p>
+{outline_html(c) or '<p class="empty">' + t("Add the course to see its lessons.", "أضف الدورة لترى دروسها.") + '</p>'}
+{sample_html}
+<div class="credit"><p>{t("License", "الرخصة")}: <bdi>{e(c.get("license") or "")}</bdi> · {t("Updated", "آخر تحديث")} <bdi>{e(str(c.get("updated") or ""))}</bdi></p>{credit}</div>
+</div>
+<div class="sticky-add"><a class="btn primary" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a></div>"""
+    script = """<script>
+var more = document.getElementById("more"), s = document.getElementById("sample");
+if (more && s) {
+  if (s.scrollHeight <= s.clientHeight + 10) { s.classList.add("open"); more.parentNode.hidden = true; }
+  more.addEventListener("click", function () { s.classList.add("open"); more.parentNode.hidden = true; });
+}
+</script>"""
+    return shell(f"{c['title']} · inPace course library", c["description"][:300], body, "../", script)
 
 
 if __name__ == "__main__":

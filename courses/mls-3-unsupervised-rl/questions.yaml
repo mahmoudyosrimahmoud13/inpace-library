@@ -1,0 +1,320 @@
+q1:
+  text: What are the two steps of each k-means iteration?
+  show: 4
+  options:
+    oa9fed8: Pick a new K
+    o3a8757: Compute gradients with backprop
+    o081446: Split the data into train and test
+    o8f4543: Normalize the labels
+    oea898f: Assign each point to its closest centroid
+    o63c07b: Move each centroid to the mean of its points
+q2:
+  text: Which are true about k-means?
+  show: 4
+  options:
+    o5249f2: Its cost can increase in a correct implementation
+    o31991a: It always finds the global minimum
+    o0e4031: Multiple random starts help
+    oba6bd8: It can end in a local minimum
+    o4465e7: It needs labels
+    o2bf608: It doesn't care about feature scale
+q3:
+  text: 'Good ways to choose K:'
+  show: 4
+  options:
+    o7ee246: Random
+    obbbae9: Silhouette scores when there's no downstream measure
+    o168549: The number of features
+    o7d7e6a: The K with the lowest J (always the largest K)
+    o6fb00b: Always K = 3
+    oa18145: By what the result is used for
+q4:
+  text: When is k-means a poor fit?
+  show: 4
+  options:
+    oa9cc8d: Clusters of very different sizes and densities
+    o81c99e: Scaled numeric features
+    o92dc3f: Round, similar-size clusters
+    o9396b8: Colour quantization
+    o53f4e1: Simple segmentation
+    o2e974c: Clusters with odd, non-round shapes
+q5:
+  text: How do you choose ε?
+  show: 4
+  options:
+    o4afc5d: By accuracy on the training set
+    o4ca328: Always 0.5
+    ofc3e7a: By trading precision and recall on CV
+    o4f3a12: By the training loss
+    ocb7956: By F1 on a cross-validation set with a few labelled anomalies
+    oc0b138: By the number of features
+q6:
+  text: Which point toward anomaly detection over supervised learning?
+  show: 4
+  options:
+    o8bacd1: Future positives look like past ones
+    oaf8a57: New kinds of anomalies keep appearing
+    obf2731: Balanced classes
+    ob4556c: Very few known positives
+    od540f8: Labels are cheap
+    oa7b8dc: Thousands of labelled positives
+q7:
+  text: A feature is heavily skewed. What helps a Gaussian model?
+  show: 4
+  options:
+    ob532ab: Making the feature look more Gaussian
+    o854e6f: Squaring it
+    oc4ff25: Removing the feature always
+    o37815b: A log or square-root transform
+    o3298a3: One-hot encoding it
+    o9258fa: Multiplying it by 1000
+q8:
+  text: What's the main training data for this anomaly detector?
+  show: 4
+  options:
+    o12f0e5: Only anomalies
+    o0f70ed: Normal examples
+    o80f167: Data that's mostly or all non-anomalous
+    oe5c1b6: An equal mix
+    o948037: The test set
+    o567fe3: Labels for every point
+q9:
+  text: In collaborative filtering, what is learned?
+  show: 4
+  options:
+    o34eb1b: Only the users' ages
+    oafe277: User parameters w and b
+    o6e7f2f: The ratings matrix itself
+    oaa64ac: The number of users
+    o5bc9c4: Item feature vectors x
+    o9b8803: Only the item features, given by hand
+q10:
+  text: Why use mean normalization?
+  show: 4
+  options:
+    o85dd4e: It gives a sensible starting point when there's no data
+    o2a8c21: It speeds up the GPU
+    o02159b: It turns ratings into binary labels
+    o27ee2a: It solves cold start for new items
+    ofc2dc9: New users get average predictions instead of zeros
+    o9fb32b: It removes the need for regularization
+q11:
+  text: How do you find items similar to item i?
+  show: 4
+  options:
+    o5b86f9: Items whose learned vectors are closest to x⁽ⁱ⁾
+    o817151: Items with the same title length
+    ob3eb92: Small distance between embeddings
+    o67ea1b: Items with the highest bias
+    o056efe: Random items
+    o34f3e4: Items rated by the fewest users
+q12:
+  text: What is a limitation of plain collaborative filtering?
+  show: 4
+  options:
+    o8510f6: Cold start for new items and users
+    ode2be9: It doesn't easily use side features like genre
+    occ7d8e: It only works for movies
+    oce0daf: It can't learn from ratings
+    o53e50e: It can't use gradient descent
+    oa86ae3: It needs labels for every pair
+q13:
+  text: Which are true about the two-tower model?
+  show: 4
+  options:
+    oc343f8: A user network and an item network produce vectors
+    o2ddabc: It needs one network per user
+    o54ca56: The prediction is their dot product
+    o6b685c: It only uses ratings, no features
+    o82104f: Item vectors can't be precomputed
+    o07009b: It's a decision tree
+q14:
+  text: Why split recommendation into retrieval and ranking?
+  show: 4
+  options:
+    ob5b661: Retrieval is more accurate than ranking
+    oedca5a: To use less data
+    oe7ab1b: Scoring millions of items with the full model is too slow
+    o649dba: Ranking is optional
+    obd614e: Retrieval narrows to a few hundred candidates fast
+    o2f5350: Because users want random items
+q15:
+  text: 'Content-based filtering helps with:'
+  show: 4
+  options:
+    o9078bc: Making every user see the same list
+    o33faf8: Using side information like genre and country
+    o6849cf: Needing no data at all
+    o746b01: Removing the need for embeddings
+    od3b3e8: New items that have features but no ratings
+    oc67d57: Training without a cost
+q16:
+  text: 'Ethical risks of recommenders include:'
+  show: 4
+  options:
+    o2e2e5b: Using a dot product
+    od6f577: Mean normalization
+    o332754: Using TensorFlow
+    o84ba5d: Precomputing item vectors
+    o88478e: Filter bubbles
+    oa19a8b: Amplifying harmful content to maximize engagement
+q17:
+  text: What does the discount factor γ < 1 do?
+  show: 4
+  options:
+    o54ef5a: Increases rewards over time
+    o10aa68: Makes the agent 'impatient'
+    o655d4c: Values rewards sooner more than later ones
+    o394185: Chooses actions randomly
+    o001396: Makes all rewards equal
+    o7e0835: Sets the learning rate
+q18:
+  text: If you know Q(s, a) for all s and a, how do you act?
+  show: 4
+  options:
+    oa4f5b0: Average all Q values
+    o07640d: Take the action with the highest Q in the current state
+    o97064c: Pick argmax over a of Q(s, a)
+    o17e21c: Pick the lowest Q
+    oec3aa6: Always go left
+    o0522f0: Pick at random
+q19:
+  text: What does the Markov property mean?
+  show: 4
+  options:
+    o63b079: History before the current state doesn't matter
+    o0f25b7: Rewards are always positive
+    o38b9fa: The agent knows the future
+    o675e57: States never repeat
+    o9bf976: The future depends only on the current state
+    oa7a8ea: There are only two actions
+q20:
+  text: 'Rover: γ = 0.5, from state 2 going left reaches state 1 (reward 100) next. Q(2, left) ='
+  show: 4
+  options:
+    oe1c544: 0 + 0.5 × 100
+    o4dde8d: '150'
+    o00a067: '25'
+    oe3ccb3: '100'
+    oc1d147: '50'
+    o7be2b7: '0'
+q21:
+  text: What does the Bellman equation say?
+  show: 4
+  options:
+    o89759b: Q is the average of all actions
+    o3b1586: Q is the learning rate
+    oec2802: Value is immediate reward plus discounted future value
+    o51e98e: Q equals the reward only
+    oddfeb4: Q is fixed by the designer
+    od1bcc5: Q(s, a) = reward now + γ × best Q of the next state
+q22:
+  text: 'In a stochastic environment, RL maximizes:'
+  show: 4
+  options:
+    o18e8ee: The number of steps
+    oa088e8: The first reward
+    o8c81a7: The worst-case reward only
+    o76f237: The average return over the randomness
+    o8803e6: The expected return
+    oe9a97c: The discount factor
+q23:
+  text: Why does a DQN output Q for all actions at once?
+  show: 4
+  options:
+    ob3b624: To avoid a replay buffer
+    o49fc75: Because states are discrete
+    odf596b: One forward pass gives every action's value
+    obf9f2d: It doesn't
+    od025d1: Because there's only one action
+    ob30be7: Choosing argmax is then cheap
+q24:
+  text: Where do DQN's training targets come from?
+  show: 4
+  options:
+    oaefd3b: Human-labelled actions
+    of13e3e: The Bellman equation on stored experiences
+    o7211b9: R(s) + γ max Q(s', a') using the network itself
+    o6b0776: Random numbers
+    oae40e3: The test set
+    o582c53: A separate supervised dataset
+q25:
+  text: What does ε-greedy do?
+  show: 4
+  options:
+    o9734fd: Sometimes takes random actions to explore
+    o8f3c4a: Otherwise takes the best known action
+    o5bce5c: Always picks random actions
+    oe72110: Sets γ
+    o9c2663: Never explores
+    o004f40: Picks the worst action on purpose always
+q26:
+  text: Why sample random mini-batches from a replay buffer?
+  show: 4
+  options:
+    o59ff47: To use only the newest step
+    o31de21: To lower γ
+    ocaae6d: Because the network can't train on one example
+    ofb61fd: To break correlation between consecutive experiences
+    oba7b0d: To reuse past experience efficiently
+    o15e801: To avoid computing targets
+q27:
+  text: What do soft updates of a target network achieve?
+  show: 4
+  options:
+    o8544b8: Fewer actions
+    obb1200: More stable training
+    o611e9b: Bigger rewards
+    o711b1d: No need for a loss
+    o5d99e1: Faster exploration
+    od10c07: Targets change slowly
+q28:
+  text: Which are true about policy-gradient methods like PPO?
+  show: 4
+  options:
+    o40915e: They can't use neural networks
+    oaeca23: They require labels
+    oc21769: They need a Q table
+    oe82a3b: They're the same as k-means
+    oded274: They handle continuous actions well
+    o8e49d0: They learn the policy directly
+q29:
+  text: What does PCA keep?
+  show: 4
+  options:
+    o9c42ed: The cluster assignments
+    o50a252: As much variance as possible
+    od5c022: The labels
+    o4d85a7: The directions where the data spreads most
+    o75e7e5: The outliers
+    oaa59ff: The largest feature only
+q30:
+  text: 'Offline metrics for a recommender:'
+  show: 4
+  options:
+    o8baa3f: Learning rate
+    o384a3f: NDCG
+    o96937e: Training loss only
+    o248c0c: Precision@k or recall@k
+    o7acce1: Mean squared error of the IDs
+    of7d422: Number of users
+q31:
+  text: 'PCA differs from linear regression because:'
+  show: 4
+  options:
+    o24a635: They're identical
+    oa5cfce: PCA needs labels
+    obaf93b: PCA projects perpendicularly onto axes
+    o6e4923: Regression has no parameters
+    o4478df: PCA predicts y
+    occ9ab2: PCA has no target y
+q32:
+  text: 'Ways to handle cold start for new courses:'
+  show: 4
+  options:
+    o479fbd: Never show new courses
+    o4c393d: Delete old courses
+    o4b859e: Use only collaborative filtering
+    o2b30d9: Show them to some users to gather signal
+    oc88c0a: Use content features like tags and text
+    o57b5c8: Wait for 1,000 ratings before indexing

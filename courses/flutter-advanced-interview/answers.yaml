@@ -1,0 +1,180 @@
+q1:
+  right:
+  - oe36ee0
+  - o7ac35e
+  why: const is deeper than final.
+q2:
+  right:
+  - oa46ce5
+  - o20a2b8
+  why: Compile-time completeness.
+q3:
+  right:
+  - o1ef88e
+  - o99d574
+  why: Microtasks run before the event queue.
+q4:
+  right:
+  - obe0c69
+  - o4a3d9c
+  why: No shared memory, no data races.
+q5:
+  right:
+  - o713640
+  - o586450
+  why: Element implements BuildContext.
+q6:
+  right:
+  - o693a28
+  - o2e0e4e
+  why: Otherwise the subtree is replaced.
+q7:
+  right:
+  - o642bd7
+  - o785aae
+  why: A Column gives unbounded height.
+q8:
+  right:
+  - o7efc1b
+  - ocaaf56
+  why: Otherwise it leaks and may call setState after dispose.
+q9:
+  right:
+  - o7ddfe2
+  - o3c4020
+  why: InheritedWidget propagates data down the tree.
+q10:
+  right:
+  - oc637ae
+  - oa885e3
+  why: Independent of the widget tree.
+q11:
+  right:
+  - o9b516a
+  - o5876be
+  why: Identity equality would rebuild on every new object.
+q12:
+  right:
+  - oc177b2
+  - o6f30bd
+  why: Auditable state changes.
+q13:
+  right:
+  - oe302c9
+  - o1de40c
+  why: Dependencies point inwards.
+q14:
+  right:
+  - ob15b46
+  - o26f3bb
+  why: Time is an input.
+q15:
+  right:
+  - o495d28
+  - o9686ff
+  why: Visual regression testing.
+q16:
+  right:
+  - o06bd9f
+  - oc57cc3
+  why: Make failure explicit.
+q17:
+  right:
+  - oe0f2a4
+  - o942a56
+  why: Debug mode is slow and unrepresentative.
+q18:
+  right:
+  - o543465
+  - o6fcc89
+  why: Rebuild as little as possible.
+q19:
+  right:
+  - odbbc22
+  - oadcac9
+  why: It isolates painting, not building.
+q20:
+  right:
+  - o1da8b3
+  - of37d44
+  why: Saves memory and decode time.
+q21:
+  right:
+  - od4a14f
+  - o0a7c7e
+  why: Use start/end, not left/right.
+q22:
+  right:
+  - oc5a5ae
+  - o51d1af
+  why: App Links and Universal Links verify ownership.
+q23:
+  right:
+  - obcde92
+  - o03cc3a
+  why: Each branch keeps its stack.
+q24:
+  right:
+  - o6fe58c
+  - od0a93b
+  why: Typed, theme-aware tokens.
+q25:
+  right:
+  - oba859a
+  - od64358
+  why: Messages cross a boundary.
+q26:
+  right:
+  - od26366
+  - o4e082d
+  why: Codegen for channels.
+q27:
+  right:
+  - o533256
+  - obc717f
+  why: FFI is for native libraries via C ABI.
+q28:
+  right:
+  - o81adeb
+  - o85354a
+  why: The OS renders the countdown.
+q29:
+  right:
+  - o10a126
+  - o393b08
+  why: Upload them to your crash reporter.
+q30:
+  right:
+  - o4403a3
+  - o194876
+  why: Never commit signing material.
+q31:
+  right:
+  - occbd5e
+  - oc1d8e0
+  why: name+code.
+q32:
+  right:
+  - ofc3be5
+  - o00f3c1
+  why: Limit the blast radius.
+q33:
+  right:
+  - o26c46d
+  - o18a564
+  why: Read locally; sync separately.
+q34:
+  right:
+  - o45d657
+  - o1bd929
+  why: Use the platform's secure storage.
+q35:
+  right:
+  - o6567ea
+  - o3d388a
+  why: Timers pause; clocks don't.
+q36:
+  right:
+  - oea9554
+  - o84e8e5
+  why: Completeness and hygiene are what's judged.

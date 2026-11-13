@@ -1,0 +1,239 @@
+id: inpace-inside
+title: 'inPace from the inside: how the app works'
+version: 1
+language: en
+description: 'A one-week tour of inPace''s code and system design: the local server, the data and its signatures,
+  courses, the web layer, the learner-checker trust model, Tempo''s island, notifications, builds and releases.
+  Ends with how to present it in a job interview. Plan: 7 days, about 1.5 hours a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: The big picture'
+  lessons:
+  - id: m1-l1
+    title: What inPace is, and the rules it's built on
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: The stack and the code map
+    file: lessons/m1-l2.md
+    minutes: 20
+  - id: m1-l3
+    title: One click, end to end
+    file: lessons/m1-l3.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Run inPace from source (`pip install -e .` then `python -m inpace --browser`). Open your browser's developer
+      tools, press Done on a lesson, and capture the network requests (the POST with X-InPace-Nav and its JSON answer,
+      then the GET). Upload a screenshot or the exported HAR file.
+  - id: m1-explain
+    type: explain
+    prompt: 'In your own words: why does inPace compute progress from events every time instead of storing a progress
+      number? Name one advantage and one cost.'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Data, keys and fingerprints'
+  lessons:
+  - id: m2-l1
+    title: 'vault.db: the tables and the append-only rule'
+    file: lessons/m2-l1.md
+    minutes: 20
+  - id: m2-l2
+    title: Keys, canonical JSON and fingerprints
+    file: lessons/m2-l2.md
+    minutes: 20
+  - id: m2-l3
+    title: Milestones as a hash chain, and encrypted backups
+    file: lessons/m2-l3.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a 20-line Python script (with PyNaCl) that makes a key, signs the canonical JSON of a small dict,
+      then changes one value and shows the signature no longer verifies. Upload the script and its output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain to a non-technical friend why a checker can trust a milestone file that arrived over WhatsApp,
+      and one thing the signature does NOT prove.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Courses and lessons'
+  lessons:
+  - id: m3-l1
+    title: The course format
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: How a lesson is drawn
+    file: lessons/m3-l2.md
+    minutes: 25
+  - id: m3-l3
+    title: Making and sharing courses
+    file: lessons/m3-l3.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write a tiny course by hand (one module, two lessons, a practical, an explain and a 3-question quiz
+      in the all-in-one format), add it to inPace, and finish module 1. Upload the course.yaml.
+  - id: m3-explain
+    type: explain
+    prompt: Why are answers left out of a course's fingerprint? Describe a situation where this matters for a checker.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: The web layer'
+  lessons:
+  - id: m4-l1
+    title: Starlette, routes and page()
+    file: lessons/m4-l1.md
+    minutes: 20
+  - id: m4-l2
+    title: Navigation done right
+    file: lessons/m4-l2.md
+    minutes: 25
+  - id: m4-l3
+    title: Two languages, and right to left
+    file: lessons/m4-l3.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Find the route that handles buying something in the island shop (`island_buy`). Draw a diagram (on
+      paper or Mermaid) of the full trip: the form, the fetch, the JSON go, goFresh, the reload. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain the Post/Redirect/Get pattern and the two extra tricks inPace adds on top of it. Why aren't
+      they needed in a classic multi-page site that always does full page loads?
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Trust between learner and checker'
+  lessons:
+  - id: m5-l1
+    title: Files and links
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: Verified exams
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: 'Pace: goals, pauses, review and races'
+    file: lessons/m5-l3.md
+    minutes: 20
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: With two data folders (`python -m inpace --home ./learner` and `--home ./checker --port 8800`), swap
+      contact cards, save a milestone as the learner, send the progress link to the checker, and approve it. Upload
+      screenshots of both sides.
+  - id: m5-explain
+    type: explain
+    prompt: Why does inPace send only the new milestones in a progress update, and why is it still safe?
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Tempo''s island and notifications'
+  lessons:
+  - id: m6-l1
+    title: The island's data and rules
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: Drawing in Python, and a sky that follows the clock
+    file: lessons/m6-l2.md
+    minutes: 15
+  - id: m6-l3
+    title: Reminders on every platform
+    file: lessons/m6-l3.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Start a 10-minute focus trip in 'Study anywhere' mode, close inPace, come back after the time is up,
+      and show that the plant joined the island. Then find in garden.py the exact lines that decided it.
+  - id: m6-explain
+    type: explain
+    prompt: Why does inPace compute shells instead of storing a balance? What could go wrong with a stored balance?
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Shipping, and explaining it in an interview'
+  lessons:
+  - id: m7-l1
+    title: One app, every platform
+    file: lessons/m7-l1.md
+    minutes: 20
+  - id: m7-l2
+    title: Tests, CI, releases and safe updates
+    file: lessons/m7-l2.md
+    minutes: 20
+  - id: m7-l3
+    title: Explaining inPace in an interview
+    file: lessons/m7-l3.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Record a 3-minute video or write a one-page answer: ''Walk me through the architecture of a project
+      you built.'' Use inPace, and include one diagram. Upload it.'
+  - id: m7-explain
+    type: explain
+    prompt: 'An interviewer asks: ''How would you add sync between devices without a server holding users'' data?''
+      Give your answer, including the trade-offs.'
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70

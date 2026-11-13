@@ -8,11 +8,31 @@
 
 ## Add a course to your inPace
 
-- **In the app:** open **Course library** in the sidebar and press **Add**.
-- **On the web:** open the [library page](https://mahmoudyosrimahmoud13.github.io/inpace-library/) and press **Add to inPace**.
+- **In the app:** open **Course library** in the sidebar. Press **See what's inside** to look at every module, lesson and task (and read one lesson), then press **Add**.
+- **On the web:** open the [library page](https://mahmoudyosrimahmoud13.github.io/inpace-library/), open a course to see what's inside, and press **Add to inPace**.
 - **From a friend:** tap the course link they sent you.
 
 The app checks every course against the library's list before adding it. Your progress stays on your computer.
+
+## Courses
+
+| | Course | Pace |
+|---|---|---|
+| <img src="courses/inpace-inside/files/cover.jpg" width="160" alt=""> | [inPace from the inside: how the app works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/inpace-inside.html) | 1 week |
+| <img src="courses/html-css-for-inpace/files/cover.jpg" width="160" alt=""> | [HTML & CSS for inPace's pages](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/html-css-for-inpace.html) | 1 week |
+| <img src="courses/javascript-for-inpace/files/cover.jpg" width="160" alt=""> | [JavaScript, the inPace way](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-for-inpace.html) | 1 week |
+| <img src="courses/jinja-for-inpace/files/cover.jpg" width="160" alt=""> | [Jinja templates](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/jinja-for-inpace.html) | 4 days |
+| <img src="courses/fastapi-starlette-for-inpace/files/cover.jpg" width="160" alt=""> | [FastAPI & Starlette: the server behind inPace](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fastapi-starlette-for-inpace.html) | 5 days |
+| <img src="courses/mls-1-supervised/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 1: supervised learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-1-supervised.html) | about 10 days |
+| <img src="courses/mls-2-advanced-algorithms/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 2: neural networks, ML practice, trees](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-2-advanced-algorithms.html) | about 12 days |
+| <img src="courses/mls-3-unsupervised-rl/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 3: unsupervised, recommenders, RL](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-3-unsupervised-rl.html) | about 9 days |
+| <img src="courses/flutter-advanced-interview/files/cover.jpg" width="160" alt=""> | [Advanced Flutter and interview revision](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-advanced-interview.html) | 4 weeks |
+| <img src="courses/fastapi/files/cover.jpg" width="160" alt=""> | [FastAPI: from first API to production](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fastapi.html) | about 12 hours |
+| <img src="courses/flutter-tdd-and-clean-architecture/files/cover.jpg" width="160" alt=""> | [Flutter TDD and Clean Architecture](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-tdd-and-clean-architecture.html) | about 8 hours |
+| <img src="courses/python-basics/files/cover.jpg" width="160" alt=""> | [Python Basics](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics.html) | 1 hour |
+| <img src="courses/python-basics-ar/files/cover.jpg" width="160" alt=""> | [أساسيات بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics-ar.html) | ساعة |
+
+The three Machine Learning refresh courses include the original slides of Andrew Ng's Machine Learning Specialization, by DeepLearning.AI and Stanford Online, shared under Creative Commons BY-SA 2.0 for non-commercial educational use.
 
 ## Share your own course
 

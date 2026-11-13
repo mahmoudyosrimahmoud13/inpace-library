@@ -1,0 +1,11 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- fastapi
+- starlette
+- python
+- backend
+- asgi
+- interview
+updated: '2026-11-13'
