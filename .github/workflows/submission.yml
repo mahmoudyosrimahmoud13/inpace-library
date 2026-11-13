@@ -19,6 +19,7 @@ jobs:
   check:
     if: contains(github.event.issue.labels.*.name, 'course-submission') && github.event.issue.state == 'open'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       GH_TOKEN: ${{ github.token }}
       ISSUE: ${{ github.event.issue.number }}
@@ -27,14 +28,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: .github/workflows/submission.yml
       - name: Say the check started
         run: gh issue comment "$ISSUE" --body "🐢 Got it! Checking your course now. I'll reply here in a minute or two."
       - name: Install inPace
-        run: pip install -q "git+https://github.com/mahmoudyosrimahmoud13/inpace.git" pyyaml
+        run: |
+          git clone -q --depth 1 https://github.com/mahmoudyosrimahmoud13/inpace.git /tmp/inpace
+          pip install -q --disable-pip-version-check /tmp/inpace pyyaml
       - name: Check the course
         id: check
+        timeout-minutes: 4
         run: |
-          RESULT_FILE=result.json python scripts/library_tools.py submit "$GITHUB_EVENT_PATH" || true
+          RESULT_FILE=result.json timeout 200 python scripts/library_tools.py submit "$GITHUB_EVENT_PATH" || true
           if [ ! -s result.json ]; then
             echo '{"ok": false, "problems": ["The library bot hit an error while checking (see the Actions tab). A maintainer will look at it, and you don't need to do anything yet."]}' > result.json
           fi
@@ -76,6 +82,18 @@ jobs:
           print(f"\nCloses #{os.environ['ISSUE']}")
           PY
           URL=$(gh pr list --head "$BRANCH" --json url --jq '.[0].url')
-          if [ -z "$URL" ]; then URL=$(gh pr create --head "$BRANCH" --title "Add course: $TITLE" --body-file pr.md); fi
+          if [ -z "$URL" ]; then URL=$(gh pr create --head "$BRANCH" --title "Add course: $TITLE" --body-file pr.md 2>pr-error.txt) || URL=""; fi
+          if [ -z "$URL" ]; then
+            # GitHub only lets the bot open pull requests when the repository allows it (Settings → Actions → General).
+            COMPARE="https://github.com/$GITHUB_REPOSITORY/compare/main...$BRANCH?expand=1"
+            gh issue comment "$ISSUE" --body "✅ The course looks good! A maintainer will add it soon. (Maintainer: I couldn't open the pull request myself, so [open it here]($COMPARE). To let me do it next time, turn on **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.)"
+            cat pr-error.txt
+            exit 0
+          fi
           gh issue comment "$ISSUE" --body "✅ The course looks good! I opened $URL. It goes live in the library when a maintainer merges it."
           gh issue edit "$ISSUE" --remove-label "needs-changes" || true
+      - name: Say something went wrong
+        # Any step failing, or the job running out of time, still gets a reply, so nobody waits for nothing.
+        if: failure()
+        run: |
+          gh issue comment "$ISSUE" --body "🐢 Sorry, the library bot ran into a problem while checking this course. A maintainer has been told and will look at it. You don't need to do anything. (Details: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)" || true
