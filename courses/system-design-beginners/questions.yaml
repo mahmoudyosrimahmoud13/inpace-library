@@ -1,0 +1,280 @@
+q1:
+  text: Which of these are non-functional requirements?
+  show: 4
+  options:
+    obf1ce7: Viewers can rewind 30 seconds.
+    o564b42: The service must survive the loss of one data centre.
+    o27d0b4: Users can log in with Google.
+    od17c53: The stream must start in under 3 seconds.
+    o34690a: Viewers can choose 480p or 1080p.
+    o4a5651: A broadcaster can start a stream.
+q2:
+  text: Which are good ways to make a system fault tolerant?
+  show: 4
+  options:
+    o4a16b7: Skip testing to ship faster.
+    of83d51: Run more than one copy of every important server.
+    o16ff2d: Keep copies of the data on several machines.
+    o53129d: Put every service in one process.
+    oea306c: Use one very powerful server for everything.
+    oa5ac50: Store all data on one disk.
+q3:
+  text: What does high-level design describe?
+  show: 4
+  options:
+    o80ad3c: Each line of the server code.
+    of23a32: The colours of the user interface.
+    oa6e153: The names of every class and method.
+    o47b41f: The big components and how they talk.
+    o8b0afc: The exact SQL of every query.
+    of9cd71: Where data lives and how requests flow.
+q4:
+  text: Which questions are good to ask at the start of a design interview?
+  show: 4
+  options:
+    ocabfcd: Can I start coding now?
+    o4aeb14: Which features are in scope?
+    o7d0ec9: Should I use tabs or spaces?
+    oc05951: What colour should the logo be?
+    oee6419: Which database brand do you like?
+    o65e43f: How many users do we expect?
+q5:
+  text: Why is a live streaming service called read-heavy?
+  show: 4
+  options:
+    of469d1: Because it uses a SQL database.
+    o87a85e: Few people send video, but many watch it.
+    o9762e2: Because it has no API.
+    ob64b00: Because writing to disk is slow.
+    o439c2f: Reads (viewing) far outnumber writes (broadcasting).
+    o9bfa04: Viewers upload more video than broadcasters.
+q6:
+  text: Which are good API design habits?
+  show: 4
+  options:
+    o944c69: Return the whole database in every response.
+    o9822f1: Put the verb in every URL, like /getStreamNow.
+    o1c9795: Use GET to delete things.
+    oaf7eb8: Use nouns for resources and HTTP methods as verbs.
+    oae241a: Change the API without telling clients.
+    o5496e1: Make retried actions safe (idempotent).
+q7:
+  text: Where should the video segments themselves be stored?
+  show: 4
+  options:
+    o9d7a42: In the web server's memory only.
+    o769d60: Inside the API response body as text.
+    oba5930: As files, with only their location kept in the database.
+    o96ed39: In the browser's local storage.
+    oa2a39d: In object storage, with copies on CDNs.
+    o1232aa: Inside a SQL table column.
+q8:
+  text: What belongs on the arrows of a design diagram?
+  show: 4
+  options:
+    o713045: The direction of the request or data flow.
+    o1fb2b2: Nothing, arrows are decoration.
+    o76094d: The programmer's name.
+    o6e6032: The server's price.
+    oebbbd9: The colour of the box.
+    o6c9dfd: What travels on them, like raw video or metadata.
+q9:
+  text: Where does UDP fit better than TCP?
+  show: 4
+  options:
+    o550df7: A bank transfer.
+    o679b5e: A fast multiplayer game.
+    o944e5c: A live video call.
+    oed22ab: Downloading a software installer.
+    o58f785: Uploading a contract PDF.
+    ocf498d: Loading a web page's HTML.
+q10:
+  text: Which pairs of need and datastore are sensible?
+  show: 4
+  options:
+    o55577a: 'Joins across records: object storage.'
+    ob88225: 'Text search: a plain CSV file.'
+    o9f31fd: 'Bank transactions: a cache with no disk.'
+    o9ad881: 'Video files: object storage.'
+    o52c6eb: 'Video files: a SQL text column.'
+    o493e68: 'Fast repeated reads of hot data: an in-memory cache.'
+q11:
+  text: Why upload raw video in small chunks?
+  show: 4
+  options:
+    o7f7605: It removes the need for servers.
+    oc18c55: Chunks can't be lost.
+    o619f37: A failed chunk can be re-sent alone.
+    o021d0c: Processing can start before the whole video arrives.
+    o162e45: It makes the file larger on purpose.
+    oa3a09d: Chunks make the video higher quality.
+q12:
+  text: What does TCP promise?
+  show: 4
+  options:
+    o4b56ba: It never needs a connection.
+    o6e8f45: Lost packets are re-sent.
+    oa6be36: It only works for video.
+    o841e66: Zero latency.
+    oa862eb: Bytes arrive in order.
+    o748252: Packets may silently disappear.
+q13:
+  text: Why use MapReduce for transcoding?
+  show: 4
+  options:
+    o8b7473: It stops chunks from being lost.
+    oad2b5a: It needs only one machine.
+    o37caa0: Adding machines makes it faster.
+    o762af7: It compresses video better than any codec.
+    oeab3cb: Chunks can be processed in parallel on many machines.
+    of6853d: It replaces the CDN.
+q14:
+  text: Which suit HLS or MPEG-DASH?
+  show: 4
+  options:
+    oef87cb: A walkie-talkie app.
+    oa0dfe0: A movie on a streaming service.
+    o68de32: A live auction where every second counts.
+    oee8b07: A football match to millions of viewers.
+    o8b30b7: A real-time multiplayer game.
+    o98114e: A two-person video call.
+q15:
+  text: What does a CDN give you?
+  show: 4
+  options:
+    od28dcf: Less load on your origin servers.
+    o22f3f4: A replacement for your database.
+    o6ac0db: Free transcoding of every video.
+    oec0cb3: Guaranteed zero delay.
+    o4264e9: Encryption of your source code.
+    o9674b3: Lower latency for users far from your servers.
+q16:
+  text: What is adaptive bitrate?
+  show: 4
+  options:
+    o9c06c7: The player switches quality as network speed changes.
+    odf13d5: The server picks one fixed quality for everyone.
+    ofc0c50: Video is sent as one big file.
+    oc7cd05: The CDN deletes low qualities.
+    od46e28: The broadcaster changes quality by hand.
+    o416d08: It reads a manifest listing each quality's segments.
+q17:
+  text: What does a sequence diagram show?
+  show: 4
+  options:
+    o8af1e1: Who calls whom, and what comes back.
+    o7bbb05: The server's monthly cost.
+    o025abb: The order of calls between parts for one action.
+    o2282d4: The colours of the user interface.
+    ob06bd5: Which actors exist only.
+    o1ca624: The database table sizes.
+q18:
+  text: Which are good low-level design principles?
+  show: 4
+  options:
+    oea7b34: Avoid interfaces to save time.
+    of79f99: Add behaviour by adding classes, not editing old ones.
+    o796407: Put all logic in one big class.
+    od99994: Each class does one job.
+    oda4679: Copy code instead of reusing it.
+    o17b1a3: Depend on concrete details everywhere.
+q19:
+  text: What does a use case diagram show?
+  show: 4
+  options:
+    o02e0f4: The SQL schema.
+    o271045: What is in scope for the system.
+    od42b98: Actors and what they can do.
+    o2482b1: Class fields and methods.
+    o601bca: The CPU usage over time.
+    o965dd3: The exact order of network calls.
+q20:
+  text: Which belong in a class diagram?
+  show: 4
+  options:
+    oce7383: Relationships like 'uses' or 'has'.
+    o2c9369: User interface mockups.
+    o0ee726: Server locations around the world.
+    o30ff38: Every line of code.
+    o541077: The timeline of one request.
+    of448a1: Classes with their main methods.
+q21:
+  text: Which are good habits when turning a design into code?
+  show: 4
+  options:
+    o3aa70e: Keep request handlers thin and put logic in service classes.
+    ob0169c: Use global variables for everything.
+    o33475c: Write all logic inside the route handler.
+    o65aaf5: Start with interfaces and data types.
+    o444e42: Ignore error cases until production.
+    ob38d3a: Skip the design and start typing.
+q22:
+  text: Why handle timeouts from the CDN or API in the player?
+  show: 4
+  options:
+    of42e76: Users prefer frozen screens.
+    o909cf1: Networks fail, and the player must recover.
+    o295470: The sequence diagram shows where calls can fail.
+    o64bba8: Timeouts never happen in production.
+    o87f93f: It makes the code longer on purpose.
+    o80ca1d: CDNs guarantee instant replies.
+q23:
+  text: Which are good ways to keep learning system design?
+  show: 4
+  options:
+    o97ce63: Memorise one answer and repeat it.
+    o955120: Learn only the tools' logos.
+    of9a388: Only read the titles of articles.
+    o878bc3: Redraw diagrams from engineering blogs.
+    of29856: Avoid drawing anything.
+    ob05422: Draw one design a week.
+q24:
+  text: What is a service class for?
+  show: 4
+  options:
+    oc770f2: Replacing the database.
+    oc0c560: Drawing UML diagrams.
+    o592b40: Storing CSS styles.
+    o521ca4: Serving video bytes from memory only.
+    o84bbb9: Being tested without the web framework.
+    o68e93b: Holding the real business logic.
+q25:
+  text: Which are true about horizontal scaling?
+  show: 4
+  options:
+    o440ff3: It usually needs a load balancer.
+    o176a5d: It has no limit and no cost.
+    ob938d8: It means buying one bigger machine.
+    o83181d: It removes the need for a database.
+    ode9975: It adds more machines.
+    o4bca21: It only works for static websites.
+q26:
+  text: Which are common cache problems or tools?
+  show: 4
+  options:
+    o76c9c6: Caches never need to be refreshed.
+    o38b2e7: Caches make writes impossible.
+    o94f675: Stale data after a write, handled with TTL or deletes.
+    oadcb7d: LRU deletes the most used items first.
+    o0bf161: A cache replaces the database permanently.
+    o1e4b2a: Evicting least recently used items when memory is full.
+q27:
+  text: What does sharding give you?
+  show: 4
+  options:
+    o825322: Perfect balance no matter the key.
+    o46c313: Automatic joins across all data for free.
+    of00b96: A single point of failure.
+    o310b6d: More total storage.
+    o605aa5: Zero replication lag.
+    o4804df: More write capacity by splitting data across machines.
+q28:
+  text: During a network partition, which are fair CAP choices?
+  show: 4
+  options:
+    o4d303f: A like counter answers with a slightly stale number to stay available.
+    ode5aaa: A system can always have perfect consistency and availability during a partition.
+    o972a14: Partitions never happen in the cloud.
+    of124cc: CAP is about CPU, Availability and Price.
+    o7bde1c: A bank refuses some requests to stay consistent.
+    of04501: Consistency means the server is fast.

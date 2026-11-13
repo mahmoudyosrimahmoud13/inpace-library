@@ -1,0 +1,140 @@
+q1:
+  right:
+  - od17c53
+  - o564b42
+  why: Non-functional = how well (speed, scale, reliability), not what.
+q2:
+  right:
+  - of83d51
+  - o16ff2d
+  why: Redundancy removes single points of failure.
+q3:
+  right:
+  - o47b41f
+  - of9cd71
+  why: HLD = boxes and arrows; LLD = classes and code.
+q4:
+  right:
+  - o65e43f
+  - o4aeb14
+  why: Scale and scope drive the design.
+q5:
+  right:
+  - o87a85e
+  - o439c2f
+  why: One write path, millions of reads.
+q6:
+  right:
+  - oaf7eb8
+  - o5496e1
+  why: Clear, predictable, safe to retry.
+q7:
+  right:
+  - oa2a39d
+  - oba5930
+  why: Big files go to object storage; the database keeps metadata.
+q8:
+  right:
+  - o6c9dfd
+  - o713045
+  why: Labelled arrows make the diagram readable.
+q9:
+  right:
+  - o944e5c
+  - o679b5e
+  why: When late data is useless, speed beats re-sending.
+q10:
+  right:
+  - o9ad881
+  - o493e68
+  why: Match the store to the data's shape and access.
+q11:
+  right:
+  - o619f37
+  - o021d0c
+  why: Chunking makes uploads resumable and pipelines faster.
+q12:
+  right:
+  - oa862eb
+  - o6e8f45
+  why: Reliable, ordered delivery.
+q13:
+  right:
+  - oeab3cb
+  - o37caa0
+  why: Independent pieces scale horizontally.
+q14:
+  right:
+  - oee8b07
+  - oa0dfe0
+  why: HTTP segments scale through CDNs; a few seconds of delay is fine.
+q15:
+  right:
+  - o9674b3
+  - od28dcf
+  why: Copies close to users.
+q16:
+  right:
+  - o9c06c7
+  - o416d08
+  why: The manifest lets the player choose segment by segment.
+q17:
+  right:
+  - o025abb
+  - o8af1e1
+  why: Time flows top to bottom.
+q18:
+  right:
+  - od99994
+  - of79f99
+  why: Single responsibility and open/closed.
+q19:
+  right:
+  - od42b98
+  - o271045
+  why: Who does what.
+q20:
+  right:
+  - of448a1
+  - oce7383
+  why: Structure, not time.
+q21:
+  right:
+  - o65aaf5
+  - o3aa70e
+  why: Clean boundaries make code testable.
+q22:
+  right:
+  - o909cf1
+  - o295470
+  why: Design for failure.
+q23:
+  right:
+  - ob05422
+  - o878bc3
+  why: Practice and real examples.
+q24:
+  right:
+  - o68e93b
+  - o84bbb9
+  why: Thin handlers, rich services.
+q25:
+  right:
+  - ode9975
+  - o440ff3
+  why: Scale out, then share the work.
+q26:
+  right:
+  - o94f675
+  - o1e4b2a
+  why: Invalidation and eviction.
+q27:
+  right:
+  - o4804df
+  - o310b6d
+  why: Split the data, but choose the key carefully.
+q28:
+  right:
+  - o7bde1c
+  - o4d303f
+  why: Consistency or availability, when the network breaks.

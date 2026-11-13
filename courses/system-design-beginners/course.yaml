@@ -1,0 +1,283 @@
+id: system-design-beginners
+title: 'System design for beginners: design a live streaming service'
+version: 1
+language: en
+description: 'A one-week course built on Gaurav Sen''s System Design for Beginners video (freeCodeCamp.org), cut
+  into short lessons that each play their own piece of the video and continue where you stopped. You design a live
+  streaming service from requirements to API, database, protocols, video processing and CDNs, then do the low-level
+  design with UML and code. A final module covers the building blocks every interview expects: load balancers, caching,
+  sharding, replication, queues and the CAP theorem. Every module has notes, a practical task, a written answer
+  and a quiz.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: What system design is, and the requirements'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: What system design is
+    file: lessons/m1-l2.md
+    minutes: 14
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=0&end=247
+  - id: m1-l3
+    title: Requirements for a live streaming service
+    file: lessons/m1-l3.md
+    minutes: 14
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=247&end=512
+  - id: m1-l4
+    title: Extensibility, testing, and the final list
+    file: lessons/m1-l4.md
+    minutes: 13
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=512&end=687
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Pick an app you use every day (WhatsApp, Uber, Instagram). Write its functional requirements (5), non-functional
+      requirements (4) and what you'd keep out of scope (3). Upload a photo or text of your list.
+  - id: m1-explain
+    type: explain
+    prompt: 'In your own words: why does a system design start with requirements and not with a diagram? Give one
+      example where a requirement changes the design.'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: The high-level design, API and database'
+  lessons:
+  - id: m2-l1
+    title: 'The core requirement: streaming video'
+    file: lessons/m2-l1.md
+    minutes: 13
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=687&end=892
+  - id: m2-l2
+    title: Diagramming the approaches
+    file: lessons/m2-l2.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=892&end=1032
+  - id: m2-l3
+    title: API design
+    file: lessons/m2-l3.md
+    minutes: 13
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=1032&end=1202
+  - id: m2-l4
+    title: Database design
+    file: lessons/m2-l4.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=1202&end=1352
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Draw the high-level design of the live streaming service on paper: broadcaster, ingest, processing,
+      storage, CDN, viewers, plus the metadata database. Label every arrow. Upload a photo.'
+  - id: m2-explain
+    type: explain
+    prompt: Design 4 API endpoints for a simple podcast app (upload an episode, list episodes, get one, delete one).
+      Explain each in one line.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Network protocols and choosing a datastore'
+  lessons:
+  - id: m3-l1
+    title: 'Network protocols: TCP, UDP and HTTP'
+    file: lessons/m3-l1.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=1352&end=1747
+  - id: m3-l2
+    title: Choosing a datastore
+    file: lessons/m3-l2.md
+    minutes: 14
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=1747&end=1977
+  - id: m3-l3
+    title: Uploading the raw footage
+    file: lessons/m3-l3.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=1977&end=2077
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'For each of these, pick TCP or UDP and say why in one line: a bank transfer, a Zoom call, an online
+      shooter game, downloading a PDF, a live football stream to millions. Then pick a datastore for: user profiles,
+      profile photos, a leaderboard updated every second. Upload your answers.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain the reliability vs latency trade-off between TCP and UDP to a friend who isn't a programmer.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Processing and delivering video'
+  lessons:
+  - id: m4-l1
+    title: MapReduce for video transformation
+    file: lessons/m4-l1.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=2077&end=2364
+  - id: m4-l2
+    title: WebRTC vs MPEG-DASH vs HLS
+    file: lessons/m4-l2.md
+    minutes: 13
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=2364&end=2515
+  - id: m4-l3
+    title: Content Delivery Networks
+    file: lessons/m4-l3.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=2515&end=2547
+  - id: m4-l4
+    title: High-level summary
+    file: lessons/m4-l4.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=2547&end=2688
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Open a YouTube video, right-click it and choose 'Stats for nerds'. Change the quality and watch the
+      numbers change. Then write 5 lines explaining what you saw using the words segment, bitrate and CDN. Upload
+      them.
+  - id: m4-explain
+    type: explain
+    prompt: Explain to a non-programmer why Netflix uses HLS/DASH and CDNs instead of WebRTC for movies.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Low-level design with UML'
+  lessons:
+  - id: m5-l1
+    title: Introduction to low-level design
+    file: lessons/m5-l1.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=2688&end=2820
+  - id: m5-l2
+    title: Designing the video player
+    file: lessons/m5-l2.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=2820&end=2957
+  - id: m5-l3
+    title: Engineering requirements
+    file: lessons/m5-l3.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=2957&end=3032
+  - id: m5-l4
+    title: Use case UML diagram
+    file: lessons/m5-l4.md
+    minutes: 22
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=3032&end=3752
+  - id: m5-l5
+    title: Class UML diagram
+    file: lessons/m5-l5.md
+    minutes: 14
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=3752&end=3987
+  - id: m5-l6
+    title: Sequence UML diagram
+    file: lessons/m5-l6.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=3987&end=4309
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Pick a small feature (a 'like' button, or a shopping cart). Draw a use case diagram, a class diagram
+      with 3 to 4 classes, and a sequence diagram for one action. Upload photos of all three.
+  - id: m5-explain
+    type: explain
+    prompt: Explain the difference between a use case, a class and a sequence diagram, and when you'd draw each.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Coding the server'
+  lessons:
+  - id: m6-l1
+    title: Coding the server
+    file: lessons/m6-l1.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=4309&end=5063
+  - id: m6-l2
+    title: Resources for system design
+    file: lessons/m6-l2.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=m8Icp_Cid5o&t=5063&end=5106
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Build a tiny version of the streaming metadata API in any language: POST /streams, GET /streams/{id},
+      POST /streams/{id}/end, with data in memory. Upload the code or a link to it.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Describe how your code maps to the design: which endpoint, which class, and one error case you handled.'
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: The building blocks every interview expects'
+  lessons:
+  - id: m7-l1
+    title: Scaling, load balancers and caching
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'Databases at scale: replication, sharding and CAP'
+    file: lessons/m7-l2.md
+    minutes: 35
+  - id: m7-l3
+    title: A 45-minute interview framework
+    file: lessons/m7-l3.md
+    minutes: 25
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Do a full mock interview alone with a 45-minute timer: design a URL shortener (like bit.ly). Follow
+      the framework, including an estimate, an API, a diagram and one deep dive. Upload a photo of your drawing
+      and notes.'
+  - id: m7-explain
+    type: explain
+    prompt: 'Explain replication vs sharding: what each one solves, and one cost of each.'
+    min_words: 70
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
