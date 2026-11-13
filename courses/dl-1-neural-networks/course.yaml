@@ -1,0 +1,294 @@
+id: dl-1-neural-networks
+title: 'Deep Learning 1: neural networks and deep learning, with PyTorch and Keras'
+version: 1
+language: en
+description: 'Part 1 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
+  lesson and everything updated for PyTorch 2.15, TensorFlow 2.21 and Keras 3.15: logistic regression as a neural
+  network, computation graphs and backprop, vectorization, shallow and deep networks, activations and initialization.
+  Comes with notebooks you can open in Google Colab, download, or read as PDFs, and new charts made from real runs.
+  Plan: 8 days. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: What a neural network is'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Neurons, layers and supervised learning
+    file: lessons/m1-l2.md
+    minutes: 30
+    media: C1_W1.pdf#pages=2-12
+  - id: m1-l3
+    title: Why deep learning took off (and what changed since)
+    file: lessons/m1-l3.md
+    minutes: 25
+    media: C1_W1.pdf#pages=13-18
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Pick three problems from your own work or life. For each: the input x, the output y, structured or
+      unstructured, and which kind of network from the table you''d start with. Upload your notes.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain to a friend why a neural network's hidden layer is said to 'learn its own features', using the
+      house-price example or one of your own.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Logistic regression as a tiny network'
+  lessons:
+  - id: m2-l1
+    title: Binary classification and notation
+    file: lessons/m2-l1.md
+    minutes: 25
+    media: C1_W2.pdf#pages=2-4
+  - id: m2-l2
+    title: The model and its loss
+    file: lessons/m2-l2.md
+    minutes: 35
+    media: C1_W2.pdf#pages=5-8
+  - id: m2-l3
+    title: Gradient descent
+    file: lessons/m2-l3.md
+    minutes: 25
+    media: C1_W2.pdf#pages=9-11
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: On paper, compute ŷ, the loss for y = 1, and the loss for y = 0 when w = [0.5, −1], x = [2, 1], b =
+      0.3. Then change b to 2 and redo it. Upload a photo of your working.
+  - id: m2-explain
+    type: explain
+    prompt: Why do libraries ask for logits (from_logits=True / BCEWithLogitsLoss) instead of probabilities? Explain
+      in your own words.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Derivatives, computation graphs and backprop'
+  lessons:
+  - id: m3-l1
+    title: Derivatives without fear
+    file: lessons/m3-l1.md
+    minutes: 20
+    media: C1_W2.pdf#pages=12-16
+  - id: m3-l2
+    title: The computation graph and the chain rule
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: C1_W2.pdf#pages=17-21
+  - id: m3-l3
+    title: Gradient descent for logistic regression, on m examples
+    file: lessons/m3-l3.md
+    minutes: 30
+    media: C1_W2.pdf#pages=22-27
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Draw the computation graph of J = 3(a + b·c) with a = 5, b = 3, c = 2. Compute J, then dJ/da, dJ/db
+      and dJ/dc by going backwards. Check one of them numerically by nudging the input by 0.001. Upload it.
+  - id: m3-explain
+    type: explain
+    prompt: Explain what loss.backward() does in PyTorch using the words computation graph and chain rule.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Vectorization and broadcasting'
+  lessons:
+  - id: m4-l1
+    title: Vectorization
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: C1_W2.pdf#pages=28-38
+  - id: m4-l2
+    title: Broadcasting, and the shape bugs it causes
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: C1_W2.pdf#pages=39-42
+  - id: m4-l3
+    title: Why the cost is what it is
+    file: lessons/m4-l3.md
+    minutes: 15
+    media: C1_W2.pdf#pages=43-46
+  - id: m4-l4
+    title: 'Notebook: logistic regression from scratch'
+    file: lessons/m4-l4.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'In the notebook (or any Python), time a loop vs np.dot for two vectors of 1,000,000 numbers. Then create
+      a (3, 4) matrix and add a (4,) vector, a (3, 1) vector and a (1, 4) vector to it: write which work and why.
+      Upload your code and timings.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain the rank-1 array trap and how you protect yourself from it.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: One hidden layer'
+  lessons:
+  - id: m5-l1
+    title: 'Representation: what each layer computes'
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: C1_W3.pdf#pages=2-10
+  - id: m5-l2
+    title: Vectorizing across examples
+    file: lessons/m5-l2.md
+    minutes: 25
+    media: C1_W3.pdf#pages=11-16
+  - id: m5-l3
+    title: 'Notebook: a hidden layer bends the boundary'
+    file: lessons/m5-l3.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Run section 3 with n_h = 1, 2, 4, 8 and 50. Write each dev accuracy and describe the boundary. Upload
+      a table and one screenshot.
+  - id: m5-explain
+    type: explain
+    prompt: Write out the shapes of W[1], b[1], Z[1], A[1], W[2] and A[2] for n_x = 2, n_h = 8, m = 800, and explain
+      how you know each.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Activations, backprop and initialization'
+  lessons:
+  - id: m6-l1
+    title: Activation functions
+    file: lessons/m6-l1.md
+    minutes: 30
+    media: C1_W3.pdf#pages=17-25
+  - id: m6-l2
+    title: Backpropagation for one hidden layer
+    file: lessons/m6-l2.md
+    minutes: 35
+    media: C1_W3.pdf#pages=26-33
+  - id: m6-l3
+    title: Random initialization
+    file: lessons/m6-l3.md
+    minutes: 20
+    media: C1_W3.pdf#pages=34-36
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'In the notebook, swap tanh for ReLU in section 3 (forward: np.maximum(0, Z1); backward slope: Z1 >
+      0). Run the gradient check and the training again. Then set W1 to zeros and report what happens. Upload your
+      results.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain why initializing all weights to zero fails, using the word symmetry.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Deep networks'
+  lessons:
+  - id: m7-l1
+    title: Deep L-layer networks and their dimensions
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: C1_W4.pdf#pages=2-9
+  - id: m7-l2
+    title: Why deep?
+    file: lessons/m7-l2.md
+    minutes: 25
+    media: C1_W4.pdf#pages=10-12
+  - id: m7-l3
+    title: Building blocks, parameters and hyperparameters
+    file: lessons/m7-l3.md
+    minutes: 25
+    media: C1_W4.pdf#pages=13-23
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Write the shapes of every W[l], b[l] and A[l] for a network with n_x = 64, layers of 128, 64 and 10
+      units, and m = 32 examples. Then build it in PyTorch and print its number of parameters to check your arithmetic.
+      Upload both.
+  - id: m7-explain
+    type: explain
+    prompt: Explain the difference between parameters and hyperparameters, with three examples of each.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: Build it in PyTorch and Keras, and interview drill'
+  lessons:
+  - id: m8-l1
+    title: The same network in PyTorch and in Keras
+    file: lessons/m8-l1.md
+    minutes: 40
+  - id: m8-l2
+    title: Interview drill
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Run both notebooks in Google Colab (Runtime → Run all) and upload screenshots of the PyTorch digits
+      result and the Keras GradientTape result. Then do one item from each notebook's Try this list and upload what
+      you found.
+  - id: m8-explain
+    type: explain
+    prompt: Pick three interview questions from the drill and answer them in your own words, as you would in an
+      interview.
+    min_words: 100
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70

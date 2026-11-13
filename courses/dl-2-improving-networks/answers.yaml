@@ -1,0 +1,160 @@
+q1:
+  right:
+  - of85054
+  - o447a78
+  why: Big gap between train and dev = variance.
+q2:
+  right:
+  - od26d98
+  - occ203d
+  why: Dev and test need to be big enough, not a fixed percentage.
+q3:
+  right:
+  - o975c91
+  - o48a8b2
+  why: That's high bias.
+q4:
+  right:
+  - o9a52a6
+  - o2b3f2e
+  why: Aim at the real target.
+q5:
+  right:
+  - o711ede
+  - o699190
+  why: Scale during training, nothing at test.
+q6:
+  right:
+  - o1d0fff
+  - o95a5ca
+  why: p is the drop probability.
+q7:
+  right:
+  - o67f958
+  - o0a0e1e
+  why: Small weights, simpler functions.
+q8:
+  right:
+  - of6d5f6
+  - oc455d2
+  why: Fitting and regularizing in one knob.
+q9:
+  right:
+  - o82d574
+  - o5986a7
+  why: Same transform everywhere.
+q10:
+  right:
+  - oeee7d5
+  - o01d449
+  why: Var = 2 / n.
+q11:
+  right:
+  - o51cfab
+  - o405b2b
+  why: Keep signals and gradients steady.
+q12:
+  right:
+  - o620c1f
+  - o7938ad
+  why: Slow and only for debugging.
+q13:
+  right:
+  - o9530a2
+  - o11eed5
+  why: 1 / (1 − β).
+q14:
+  right:
+  - o037013
+  - od9d006
+  why: It matters only at the start.
+q15:
+  right:
+  - o475992
+  - o9f5987
+  why: Noisy but fast progress.
+q16:
+  right:
+  - o01a007
+  - o9ef33a
+  why: Usually 32 to 512.
+q17:
+  right:
+  - o403c78
+  - oa18767
+  why: Tune the learning rate first.
+q18:
+  right:
+  - o971c5f
+  - oa6b658
+  why: Per-parameter step sizes.
+q19:
+  right:
+  - o9b1ce7
+  - o4f5059
+  why: Start gentle, then decay.
+q20:
+  right:
+  - ob1bacf
+  - ob171fd
+  why: Plateaus are the real problem.
+q21:
+  right:
+  - o06b8bc
+  - o67e50e
+  why: Spend samples where results change.
+q22:
+  right:
+  - o2a3bfd
+  - o4943b2
+  why: Tune it first.
+q23:
+  right:
+  - oef91bf
+  - of4919f
+  why: More coverage per trial.
+q24:
+  right:
+  - o69a994
+  - od74e59
+  why: Bookkeeping and smarter search.
+q25:
+  right:
+  - o071af2
+  - o84afb1
+  why: Learned scale and shift; running stats at test.
+q26:
+  right:
+  - oe29d70
+  - o484f75
+  why: Per example, over features.
+q27:
+  right:
+  - oc1972c
+  - o646a54
+  why: Softmax is inside.
+q28:
+  right:
+  - o8515c3
+  - ocdd926
+  why: A probability distribution.
+q29:
+  right:
+  - o0c9fe8
+  - oc66b47
+  why: Usually the steps are too big.
+q30:
+  right:
+  - o2f27a3
+  - o34f59d
+  why: Faster, less memory.
+q31:
+  right:
+  - o6ff7b1
+  - o52b199
+  why: Decoupled decay.
+q32:
+  right:
+  - obe5016
+  - ofd2b67
+  why: The classic variance picture.

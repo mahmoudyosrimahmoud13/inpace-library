@@ -1,0 +1,309 @@
+id: dl-4-cnns
+title: 'Deep Learning 4: convolutional networks and computer vision'
+version: 1
+language: en
+description: 'Part 4 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
+  lesson and everything updated for PyTorch 2.15, torchvision 0.29 and Keras 3.15: convolutions, padding and strides,
+  pooling, LeNet to ResNet, 1×1 convolutions, Inception, MobileNet and EfficientNet, transfer learning and augmentation,
+  YOLO, IoU, non-max suppression, anchor boxes, U-Net, face recognition with triplet loss, and neural style transfer,
+  plus what changed since (vision transformers, modern detectors). Notebooks for Colab, as files and PDFs, and new
+  charts. Plan: 9 days. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: Convolutions'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Computer vision and edge detection
+    file: lessons/m1-l2.md
+    minutes: 30
+    media: C4_W1.pdf#pages=2-12
+  - id: m1-l3
+    title: Padding, strides and output size
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: C4_W1.pdf#pages=13-19
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'By hand, compute the output size for: a 64×64 image with a 5×5 filter, p = 0, s = 1; the same with
+      p = 2; a 227×227 image with an 11×11 filter, s = 4, p = 0. Then check them with nn.Conv2d in Colab. Upload
+      both.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain why a CNN learns its filters instead of using hand-made edge detectors, and why that's better.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Convolution layers, pooling, and why convolutions'
+  lessons:
+  - id: m2-l1
+    title: Convolutions over volumes, and one layer
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: C4_W1.pdf#pages=20-27
+  - id: m2-l2
+    title: A simple CNN, and pooling
+    file: lessons/m2-l2.md
+    minutes: 30
+    media: C4_W1.pdf#pages=28-38
+  - id: m2-l3
+    title: Why convolutions work
+    file: lessons/m2-l3.md
+    minutes: 20
+    media: C4_W1.pdf#pages=39-42
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Compute the parameters and output shapes, layer by layer, for: input 32×32×3 → CONV 6 filters 5×5,
+      s=1, valid → MAXPOOL 2×2 → CONV 16 filters 5×5 → MAXPOOL 2×2 → FC 120 → FC 84 → softmax 10. Then build it
+      in PyTorch and print the shapes to check. Upload both.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain parameter sharing and sparse connections, and why they matter for images.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Classic networks, ResNets and Inception'
+  lessons:
+  - id: m3-l1
+    title: LeNet-5, AlexNet and VGG-16
+    file: lessons/m3-l1.md
+    minutes: 25
+    media: C4_W2.pdf#pages=2-7
+  - id: m3-l2
+    title: Residual networks
+    file: lessons/m3-l2.md
+    minutes: 35
+    media: C4_W2.pdf#pages=8-13
+  - id: m3-l3
+    title: 1×1 convolutions and Inception
+    file: lessons/m3-l3.md
+    minutes: 30
+    media: C4_W2.pdf#pages=14-24
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Run sections 5 and 6 of the PyTorch notebook. Then build a plain 20-layer CNN and a 20-layer one made
+      of residual blocks, train both for 5 epochs on digits, and compare. Upload your code and results.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why adding a residual block can't make a ResNet much worse, using the identity function.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: MobileNet, EfficientNet and practical advice'
+  lessons:
+  - id: m4-l1
+    title: 'MobileNet: depthwise separable convolutions'
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: C4_W2.pdf#pages=25-39
+  - id: m4-l2
+    title: EfficientNet, and what came after
+    file: lessons/m4-l2.md
+    minutes: 20
+    media: C4_W2.pdf#pages=40-41
+  - id: m4-l3
+    title: Transfer learning, augmentation and the state of vision
+    file: lessons/m4-l3.md
+    minutes: 30
+    media: C4_W2.pdf#pages=42-51
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: In Colab, fine-tune a pre-trained ResNet-18 (notebook section 9) on a small image folder of your own
+      (2 or 3 classes, about 30 images each, torchvision.datasets.ImageFolder). Upload your accuracy and three predictions.
+  - id: m4-explain
+    type: explain
+    prompt: Explain depthwise separable convolution in two steps, and why it's so much cheaper.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Object detection'
+  lessons:
+  - id: m5-l1
+    title: Localization and landmarks
+    file: lessons/m5-l1.md
+    minutes: 20
+    media: C4_W3.pdf#pages=2-7
+  - id: m5-l2
+    title: Sliding windows and YOLO
+    file: lessons/m5-l2.md
+    minutes: 30
+    media: C4_W3.pdf#pages=8-18
+  - id: m5-l3
+    title: IoU, non-max suppression and anchor boxes
+    file: lessons/m5-l3.md
+    minutes: 35
+    media: C4_W3.pdf#pages=19-33
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Run section 8 of the PyTorch notebook, then write IoU and NMS yourself without looking (any language)
+      and test them on the same five boxes. Change the NMS threshold to 0.3 and 0.7 and report which boxes survive.
+      Upload your code and results.
+  - id: m5-explain
+    type: explain
+    prompt: Explain non-max suppression step by step, as if to a new teammate.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Region proposals and segmentation'
+  lessons:
+  - id: m6-l1
+    title: Region proposals (R-CNN family)
+    file: lessons/m6-l1.md
+    minutes: 15
+    media: C4_W3.pdf#pages=34-36
+  - id: m6-l2
+    title: Semantic segmentation with U-Net
+    file: lessons/m6-l2.md
+    minutes: 35
+    media: C4_W3.pdf#pages=37-47
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Draw a small U-Net for 64×64 images (two levels down, two up) with the shape of every tensor and where
+      each skip connection goes. Then build it in PyTorch and check that a 1×3×64×64 input gives a 1×C×64×64 output.
+      Upload both.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why U-Net needs skip connections, in your own words.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Face recognition'
+  lessons:
+  - id: m7-l1
+    title: Verification, recognition and one-shot learning
+    file: lessons/m7-l1.md
+    minutes: 25
+    media: C4_W4.pdf#pages=2-7
+  - id: m7-l2
+    title: Siamese networks and triplet loss
+    file: lessons/m7-l2.md
+    minutes: 35
+    media: C4_W4.pdf#pages=8-18
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Run section 10 of the PyTorch notebook. Then compute the triplet loss by hand for 2-number embeddings:
+      f(A) = (1, 0), f(P) = (0.8, 0.2), f(N) = (0.6, 0.5), α = 0.2. Upload your working and the result.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain why face verification uses a similarity function instead of a normal classifier, using the new
+      employee example.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: Neural style transfer, and 1D and 3D convolutions'
+  lessons:
+  - id: m8-l1
+    title: What deep networks learn, and style transfer
+    file: lessons/m8-l1.md
+    minutes: 35
+    media: C4_W4.pdf#pages=19-39
+  - id: m8-l2
+    title: 1D and 3D convolutions
+    file: lessons/m8-l2.md
+    minutes: 15
+    media: C4_W4.pdf#pages=40-53
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Take any image of yours, run it through a pre-trained network in Colab (torchvision or keras.applications),
+      and plot 8 channels from an early layer and 8 from a deep layer. Upload the plot and describe the difference.
+  - id: m8-explain
+    type: explain
+    prompt: Explain what the Gram matrix measures and why it captures 'style' and not 'content'.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Day 9: Build it, and interview drill'
+  lessons:
+  - id: m9-l1
+    title: The notebooks
+    file: lessons/m9-l1.md
+    minutes: 40
+  - id: m9-l2
+    title: Interview drill
+    file: lessons/m9-l2.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Run both notebooks in Colab and complete two items from the PyTorch notebook's Try this list. Upload
+      your results.
+  - id: m9-explain
+    type: explain
+    prompt: Answer interview question 5 (500 labelled images) as a step-by-step plan.
+    min_words: 100
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

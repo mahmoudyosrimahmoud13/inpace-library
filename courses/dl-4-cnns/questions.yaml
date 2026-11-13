@@ -1,0 +1,360 @@
+q1:
+  text: n = 32, f = 3, p = 1, s = 1. Which are true?
+  show: 4
+  options:
+    oe6a3f0: The output is 32×32.
+    o9d09e0: This is a 'same' convolution.
+    of099bc: Padding makes it smaller.
+    o01210b: The filter must be even-sized.
+    o45aa64: The output is 16×16.
+    o8c469b: The output is 30×30.
+q2:
+  text: 'n = 32, f = 3, p = 1, s = 2. The output is:'
+  show: 4
+  options:
+    o5033ec: ⌊31/2⌋ + 1 on each side
+    o77670b: 32×32
+    o31a36e: 30×30
+    odc8027: 64×64
+    obc0fd0: 15×15
+    o4e2131: 16×16
+q3:
+  text: Why do CNNs use small filters instead of fully connected first layers on images?
+  show: 4
+  options:
+    of5d932: Far fewer parameters.
+    o3eca47: Filters need no training.
+    o3647b5: It makes images bigger.
+    o0c367e: Images can't be flattened.
+    of5a890: The same filter is useful everywhere in the image.
+    o2aad89: Fully connected layers can't learn.
+q4:
+  text: Which are true about CNN filters?
+  show: 4
+  options:
+    o849bdc: They can only detect vertical edges.
+    oe594d0: They must be set by hand.
+    o5e04ca: They're fixed after the first epoch.
+    o3cf43c: Deep learning's convolution doesn't flip the filter.
+    o3d53df: They're always 2×2.
+    o7cb29d: Their values are learned by backprop.
+q5:
+  text: 10 filters of 3×3×3 with biases have how many parameters?
+  show: 4
+  options:
+    od2c75c: '270'
+    oecc9bc: '90'
+    o7f9d3b: '280'
+    oda2607: 10·(27 + 1)
+    o554fc7: It depends on the image size.
+    oeaf32b: '30'
+q6:
+  text: Which are true about max pooling?
+  show: 4
+  options:
+    o834178: It has no parameters to learn.
+    o7ec0bb: It replaces the activation.
+    oe49549: It has a weight per window.
+    ob7fb6c: It always increases height and width.
+    o7a977e: It mixes channels.
+    o05502e: It works on each channel separately.
+q7:
+  text: 'A tensor of images in PyTorch has shape (batch, channels, height, width). In Keras it''s:'
+  show: 4
+  options:
+    of7f799: (channels, batch, height, width)
+    o1cf091: channels last
+    o1868b0: (batch, height, width, channels)
+    o63f46e: (width, height)
+    ob1afaa: (height, batch, width, channels)
+    oca0d47: the same as PyTorch
+q8:
+  text: 'As you go deeper in a typical CNN:'
+  show: 4
+  options:
+    o599742: The number of channels grows.
+    o63eff0: Pooling adds parameters.
+    o5eff3f: Height and width shrink.
+    o9598d7: Channels shrink to 1.
+    od509ae: Images get more pixels.
+    ocf3d7e: Height and width grow.
+q9:
+  text: Which are true about residual blocks?
+  show: 4
+  options:
+    o73b7b8: They double the parameters of the network.
+    od6592b: They can't be used with batch norm.
+    of5042a: They make very deep networks trainable.
+    o1a5ea4: They add the block's input to its output.
+    odb99ce: They remove all non-linearities.
+    o406022: They only work with sigmoid.
+q10:
+  text: What does a 1×1 convolution do?
+  show: 4
+  options:
+    o4d3eda: Changes the height and width.
+    o19c260: Acts like a fully connected layer at each pixel.
+    o146e83: Mixes and changes the number of channels.
+    oe27320: Does nothing.
+    o3a6647: Removes the bias.
+    o94fb47: Blurs the image.
+q11:
+  text: Why do Inception modules use 1×1 'bottleneck' layers?
+  show: 4
+  options:
+    o4e0a27: Because 3×3 filters can't be used otherwise.
+    ob0f2e4: To add more parameters.
+    o9502fb: To make images larger.
+    ocef2ec: To cut the cost of the bigger convolutions.
+    oc507ee: To shrink the number of channels first.
+    od7e849: To replace pooling.
+q12:
+  text: Which are roughly right?
+  show: 4
+  options:
+    o7eaef8: VGG-16 uses only 3×3 convolutions.
+    of2b44a: ResNets cannot go past 20 layers.
+    o2ef222: AlexNet had about 60 million parameters.
+    o2b4d44: VGG-16 has 16 parameters.
+    oeda89d: LeNet-5 had about 60 million parameters.
+    od8407f: AlexNet used sigmoid only.
+q13:
+  text: Which are the two steps of a depthwise separable convolution?
+  show: 4
+  options:
+    o224f89: An upsampling then a crop.
+    o6b2795: A fully connected layer then a softmax.
+    obab2b7: A pointwise 1×1 convolution.
+    oeb02af: Two 5×5 convolutions.
+    o432c2b: A max pooling then a dropout.
+    od141ea: A depthwise convolution, one filter per channel.
+q14:
+  text: Which are the modern torchvision ways to load a pre-trained ResNet?
+  show: 4
+  options:
+    o8a624f: Training it from scratch every time
+    oa24a7c: resnet18(pretrained=True, train_on_test=True)
+    o442927: Using weights.transforms() for preprocessing
+    o34377b: Downloading ImageNet first, always
+    o792fb4: resnet18(weights=ResNet18_Weights.DEFAULT)
+    o59027f: Copying only the architecture name
+q15:
+  text: You have only 200 labelled images. What's usually best?
+  show: 4
+  options:
+    ocaad26: Remove all augmentation.
+    of57e20: Start from a pre-trained network.
+    ob2d2a1: Freeze most layers and train the last ones.
+    o8fa490: Train a huge network from random weights.
+    od94c9e: Use no validation set.
+    o505dd7: Train only the first layer.
+q16:
+  text: What does EfficientNet scale together?
+  show: 4
+  options:
+    oc2a0f8: Only the learning rate.
+    o38692f: Number of classes.
+    o604061: Resolution, depth and width.
+    od658f1: Dropout and weight decay.
+    o38376f: Only the batch size.
+    oec2de8: All three with one compound coefficient.
+q17:
+  text: Box A and box B have IoU 0.7. Which are true?
+  show: 4
+  options:
+    odaa5fa: They overlap a lot.
+    of4f93a: They don't overlap.
+    o65f509: NMS with threshold 0.5 keeps only the higher-scoring one.
+    o8ddfba: IoU above 1 means perfect.
+    o6a7286: NMS keeps both at threshold 0.5.
+    o9f3841: IoU measures the class score.
+q18:
+  text: In YOLO, which cell is responsible for an object?
+  show: 4
+  options:
+    o731875: One cell per object (per anchor).
+    ofabdcd: A random cell.
+    ob95649: Every cell the object touches.
+    oa7cb3a: The cell with the most pixels.
+    o025de5: The cell that contains the object's centre.
+    oa15175: The top-left cell always.
+q19:
+  text: Why use anchor boxes?
+  show: 4
+  options:
+    o8ba94c: To classify without boxes.
+    oecbaec: To make images bigger.
+    o2203ad: To detect several objects in one cell.
+    o552556: To handle objects of different shapes.
+    o35e9d3: To remove the need for training.
+    o64ad82: To replace IoU.
+q20:
+  text: Which are true about modern detection?
+  show: 4
+  options:
+    o252c3a: IoU is no longer used.
+    oe5885b: DETR-style detectors can skip NMS.
+    o781a8a: Boxes are no longer used.
+    oe061ae: Detectors can't run in real time.
+    o147f6d: Sliding windows with a CNN per crop is the standard.
+    o75c5c4: Open-vocabulary detectors find objects named in text.
+q21:
+  text: Which are true about semantic segmentation?
+  show: 4
+  options:
+    o4fdf62: It can't use convolutions.
+    o81101a: Only one box per image is predicted.
+    o5ce620: The output has the same height and width as the input.
+    oec275c: It needs no labels.
+    off3dd6: It outputs one number per image.
+    o69c39e: Every pixel gets a class label.
+q22:
+  text: What does a transpose convolution do in U-Net?
+  show: 4
+  options:
+    o4a200c: Grows the height and width.
+    oaa94e1: Is learned, like a normal convolution.
+    oec9842: Does nothing at training time.
+    ob723e2: Removes channels only.
+    o7a470a: Shrinks the image.
+    o270330: Replaces the loss function.
+q23:
+  text: Why does U-Net copy features across with skip connections?
+  show: 4
+  options:
+    oe4f438: To reduce memory to zero.
+    o4b4b9d: To skip training.
+    o3c3810: Because the contracting path lost resolution.
+    o4f0d96: To change the class labels.
+    o951092: To keep fine spatial details.
+    o5caac6: Because pooling adds detail.
+q24:
+  text: Which use U-Net-like networks today?
+  show: 4
+  options:
+    o2acf68: Medical image segmentation.
+    o94d33c: Text tokenizers.
+    o44997e: Diffusion models that generate images.
+    o9ddb6c: Spreadsheet formulas.
+    o798959: Database indexes.
+    od56dea: Sorting algorithms.
+q25:
+  text: Which are true about one-shot learning for faces?
+  show: 4
+  options:
+    o5ecd1c: You need thousands of photos per person.
+    o8755f3: You learn a similarity function.
+    oa0c48a: You train a softmax with one class per person and retrain for every new person.
+    o80a576: New people can be added without retraining.
+    o09df27: It can't work with CNNs.
+    o3e5946: It needs no training data at all.
+q26:
+  text: Why does triplet loss have a margin α?
+  show: 4
+  options:
+    o9d8802: To make the loss negative.
+    o77c9da: To push negatives clearly further than positives.
+    o239204: To stop all embeddings collapsing to the same point.
+    o770128: To choose the batch size.
+    o67043a: To set the learning rate.
+    oa8d6be: To count the triplets.
+q27:
+  text: Why choose hard triplets?
+  show: 4
+  options:
+    occd625: Hard ones teach the fine differences.
+    obaee5b: They remove the need for a margin.
+    o48a0ea: They need no labels.
+    o81894d: Easy ones give zero loss, so nothing is learned.
+    o82c3c0: Easy ones make the loss explode.
+    o2c22d6: They're faster to compute.
+q28:
+  text: 'Verification vs recognition: which are true?'
+  show: 4
+  options:
+    o206d88: Recognition is 1:1.
+    od8107e: They're the same problem.
+    o20fdea: Verification needs K classifiers.
+    o73bd6d: Verification is 1:1.
+    of12ac1: Recognition among K people is harder.
+    o9b5158: Recognition can't use embeddings.
+q29:
+  text: In neural style transfer, what is optimized?
+  show: 4
+  options:
+    od498a6: The learning rate only.
+    o01ccac: The pixels of the generated image.
+    o4f620c: The network's weights.
+    oc80190: The content image.
+    oa53fd4: The style image.
+    o783870: A sum of content cost and style cost.
+q30:
+  text: Which are true about the Gram (style) matrix?
+  show: 4
+  options:
+    o15d4d3: It's the same as the content cost.
+    of0b3ec: It only uses the input pixels.
+    o689c5d: It ignores where in the image they fire.
+    o32144a: It needs labels.
+    o701d88: It keeps the exact position of every object.
+    o050b0a: It measures which channels fire together.
+q31:
+  text: Which data suits 1D convolutions?
+  show: 4
+  options:
+    o33719d: A spreadsheet of customer names.
+    o8edd84: A colour photo.
+    o8eb462: Audio over time.
+    of02c3a: An ECG signal.
+    o2b481d: A CT scan volume.
+    o00084a: A video clip with height, width and time.
+q32:
+  text: Which layers detect more complex patterns?
+  show: 4
+  options:
+    oe1c7b4: The input layer.
+    o70a05c: Pooling layers only.
+    o4507b6: 'None: all layers detect edges.'
+    o581d7a: Layers further from the input.
+    oe868fb: The first layer.
+    o8a52a6: Deeper layers.
+q33:
+  text: You have 500 labelled images. Which are good steps?
+  show: 4
+  options:
+    ob532e4: Train a ViT from random weights.
+    ocd08c8: Use data augmentation.
+    o3ab011: Use no augmentation to keep data clean.
+    oa127da: Train for one step only.
+    o7e3632: Start from a pre-trained backbone.
+    oab2360: Skip the validation set.
+q34:
+  text: Which are reasons ResNets train well when very deep?
+  show: 4
+  options:
+    o413700: They have fewer layers than VGG.
+    of07d20: They have no activations.
+    o0559be: Skip connections let gradients flow.
+    o09b346: They don't need data.
+    o268a63: They don't use convolutions.
+    o10e76a: Blocks can easily learn the identity.
+q35:
+  text: A 64×64×3 image, 16 filters 3×3, padding 1, stride 1. Which are true?
+  show: 4
+  options:
+    o52944a: The layer has 147,456 parameters.
+    od74b69: The layer has 16 parameters.
+    of6c46b: The output is 64×64×16.
+    o03e0c9: The output is 62×62×3.
+    o113e00: The layer has 448 parameters.
+    o5b0714: The output is 64×64×3.
+q36:
+  text: When might you prefer a CNN over a vision transformer?
+  show: 4
+  options:
+    o6da815: When you need no training.
+    o00d4b2: Little training data and no big pre-trained ViT.
+    odd1ff5: When images are text.
+    oa04629: When you have billions of images and huge compute, only.
+    o284be7: 'Never: ViTs are always better.'
+    oa58d80: A small device with tight compute limits.

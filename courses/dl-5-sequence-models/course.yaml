@@ -1,0 +1,310 @@
+id: dl-5-sequence-models
+title: 'Deep Learning 5: sequence models, attention and transformers'
+version: 1
+language: en
+description: 'Part 5 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
+  lesson and everything updated for PyTorch 2.15 and Keras 3.15: RNNs, language models and sampling, GRU and LSTM,
+  word embeddings (word2vec, negative sampling, GloVe), sentiment and debiasing, sequence-to-sequence models, beam
+  search, BLEU, attention, speech, and transformers, plus how they became today''s large language models. Notebooks
+  for Colab, as files and PDFs, and new charts from real runs. Plan: 9 days. Slides by DeepLearning.AI (CC BY-SA
+  2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: Recurrent neural networks'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Sequence data and notation
+    file: lessons/m1-l2.md
+    minutes: 20
+    media: C5_W1.pdf#pages=2-7
+  - id: m1-l3
+    title: The recurrent network
+    file: lessons/m1-l3.md
+    minutes: 35
+    media: C5_W1.pdf#pages=8-20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'For each task, write the RNN shape (many-to-one, etc.), T_x and T_y: spam detection, speech to text,
+      generating a melody from a genre, tagging people''s names in a sentence, translating Arabic to English. Upload
+      your table.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain why an RNN uses the same weights at every time step, and what that buys you.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Language models and sampling'
+  lessons:
+  - id: m2-l1
+    title: Language models
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: C5_W1.pdf#pages=21-24
+  - id: m2-l2
+    title: Sampling, and character-level models
+    file: lessons/m2-l2.md
+    minutes: 30
+    media: C5_W1.pdf#pages=25-28
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Run section 2 of the PyTorch notebook in Colab, then replace the training text with a paragraph of your
+      own (at least 300 characters, repeated) and sample at three temperatures. Upload the samples.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what temperature does when sampling from a language model, with a small example of probabilities.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Vanishing gradients, GRU and LSTM'
+  lessons:
+  - id: m3-l1
+    title: Vanishing gradients in RNNs
+    file: lessons/m3-l1.md
+    minutes: 20
+    media: C5_W1.pdf#pages=29-30
+  - id: m3-l2
+    title: GRU and LSTM
+    file: lessons/m3-l2.md
+    minutes: 35
+    media: C5_W1.pdf#pages=31-38
+  - id: m3-l3
+    title: Bidirectional and deep RNNs
+    file: lessons/m3-l3.md
+    minutes: 15
+    media: C5_W1.pdf#pages=39-43
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Run section 1 of the PyTorch notebook, then make the window 200 steps instead of 40. Report test MSE
+      for RNN, GRU and LSTM in both cases, and explain the difference. Upload your table.
+  - id: m3-explain
+    type: explain
+    prompt: Explain how the GRU's update gate lets information survive many time steps.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Word embeddings'
+  lessons:
+  - id: m4-l1
+    title: Word representations and using embeddings
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: C5_W2.pdf#pages=2-9
+  - id: m4-l2
+    title: Analogies, cosine similarity and the embedding matrix
+    file: lessons/m4-l2.md
+    minutes: 25
+    media: C5_W2.pdf#pages=10-15
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Run section 3 of the PyTorch notebook, then add 'prince' and 'princess' with your own 3-number vectors
+      and test two analogies. Upload your vectors and results.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why embeddings help a task with little labelled data, compared with one-hot vectors.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Learning embeddings, sentiment and bias'
+  lessons:
+  - id: m5-l1
+    title: Neural language models, word2vec and negative sampling
+    file: lessons/m5-l1.md
+    minutes: 35
+    media: C5_W2.pdf#pages=16-26
+  - id: m5-l2
+    title: GloVe
+    file: lessons/m5-l2.md
+    minutes: 15
+    media: C5_W2.pdf#pages=27-30
+  - id: m5-l3
+    title: Sentiment classification and debiasing
+    file: lessons/m5-l3.md
+    minutes: 25
+    media: C5_W2.pdf#pages=31-37
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Write five short reviews where averaging word vectors would get the sentiment wrong (like the 'good'
+      example) and explain for each why reading word order fixes it. Upload them.
+  - id: m5-explain
+    type: explain
+    prompt: 'Explain negative sampling in plain words: what question the model answers, and why it''s faster than
+      a full softmax.'
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Sequence to sequence, beam search and BLEU'
+  lessons:
+  - id: m6-l1
+    title: Sequence-to-sequence models
+    file: lessons/m6-l1.md
+    minutes: 25
+    media: C5_W3.pdf#pages=2-8
+  - id: m6-l2
+    title: Beam search, refinements and error analysis
+    file: lessons/m6-l2.md
+    minutes: 30
+    media: C5_W3.pdf#pages=9-19
+  - id: m6-l3
+    title: BLEU score
+    file: lessons/m6-l3.md
+    minutes: 20
+    media: C5_W3.pdf#pages=20-24
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Run sections 7 and 8 of the PyTorch notebook. Try beam widths 1, 2, 3 and 5, and compute BLEU for three
+      candidate translations of your own. Upload the results.
+  - id: m6-explain
+    type: explain
+    prompt: Explain how you decide whether a bad translation is beam search's fault or the model's fault.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Attention, and audio'
+  lessons:
+  - id: m7-l1
+    title: The attention model
+    file: lessons/m7-l1.md
+    minutes: 35
+    media: C5_W3.pdf#pages=25-31
+  - id: m7-l2
+    title: Speech recognition and trigger words
+    file: lessons/m7-l2.md
+    minutes: 20
+    media: C5_W3.pdf#pages=32-38
+  - id: m7-l3
+    title: Looking back on the specialization
+    file: lessons/m7-l3.md
+    minutes: 10
+    media: C5_W3.pdf#pages=39-42
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Describe a task from your life where attention would help (long documents, long audio...). Sketch what
+      the attention weights would look like for one example. Upload a photo or text.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why attention fixed the long-sentence problem of plain encoder-decoder models.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: Transformers'
+  lessons:
+  - id: m8-l1
+    title: Self-attention
+    file: lessons/m8-l1.md
+    minutes: 30
+    media: C5_W4.pdf#pages=2-7
+  - id: m8-l2
+    title: Multi-head attention and the transformer
+    file: lessons/m8-l2.md
+    minutes: 30
+    media: C5_W4.pdf#pages=8-11
+  - id: m8-l3
+    title: From the transformer to today's language models
+    file: lessons/m8-l3.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Run sections 4 and 5 of the PyTorch notebook. Then train the tiny transformer with 1 layer and 1 head,
+      and with 4 layers and 4 heads. Report the accuracy of each and what you conclude. Upload your results.
+  - id: m8-explain
+    type: explain
+    prompt: Explain self-attention with queries, keys and values, using a sentence of your own as the example.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Day 9: Build it, and interview drill'
+  lessons:
+  - id: m9-l1
+    title: The notebooks
+    file: lessons/m9-l1.md
+    minutes: 40
+  - id: m9-l2
+    title: Interview drill
+    file: lessons/m9-l2.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Run both notebooks in Colab, including section 9 (the Hugging Face model) of the PyTorch notebook. Try
+      the sentiment model on five sentences of your own, including two tricky ones. Upload the results.
+  - id: m9-explain
+    type: explain
+    prompt: Answer interview question 1 (why transformers replaced RNNs) as you would in an interview.
+    min_words: 100
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

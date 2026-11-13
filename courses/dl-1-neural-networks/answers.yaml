@@ -1,0 +1,160 @@
+q1:
+  right:
+  - oe55044
+  - o54def9
+  why: Pixels, sound and words have no column meaning.
+q2:
+  right:
+  - o35c802
+  - o937cb5
+  why: Data, computation and algorithms.
+q3:
+  right:
+  - o589dc1
+  - of55032
+  why: That's supervised learning with learned features.
+q4:
+  right:
+  - o3ca955
+  - of1219e
+  why: Sequences to sequences.
+q5:
+  right:
+  - o37916a
+  - o04ce6b
+  why: Columns are examples in the course's notation.
+q6:
+  right:
+  - od2224f
+  - o147f21
+  why: Confident mistakes cost the most.
+q7:
+  right:
+  - oee0f69
+  - o03ae24
+  why: Convex cost, one global minimum.
+q8:
+  right:
+  - o5d5c16
+  - o58b81e
+  why: Let the library combine sigmoid and log.
+q9:
+  right:
+  - oef615b
+  - o67f786
+  why: The famous clean result.
+q10:
+  right:
+  - o5b1879
+  - o152095
+  why: d(a²)/da = 2a.
+q11:
+  right:
+  - o4445d6
+  - o05940b
+  why: Reverse-mode automatic differentiation.
+q12:
+  right:
+  - of17482
+  - ob6b3de
+  why: J = (1/m)·ΣL.
+q13:
+  right:
+  - o242657
+  - odf2c3c
+  why: Size-1 dimensions stretch.
+q14:
+  right:
+  - odbcb3b
+  - oe77ff8
+  why: Matrix operations replace loops.
+q15:
+  right:
+  - o8f6fbb
+  - obab33d
+  why: Rank-1 arrays don't transpose.
+q16:
+  right:
+  - o5e152d
+  - o80e32f
+  why: That's where the cost comes from.
+q17:
+  right:
+  - o65a2aa
+  - oca7a24
+  why: W[l] is (n[l], n[l−1]).
+q18:
+  right:
+  - o7eb8e1
+  - o3cfa20
+  why: 'Rows: units; columns: examples.'
+q19:
+  right:
+  - o9e45df
+  - o870a19
+  why: PyTorch is rows-are-examples.
+q20:
+  right:
+  - o5331aa
+  - o623f04
+  why: Non-linearity bends the boundary.
+q21:
+  right:
+  - oa30584
+  - o210b4c
+  why: Flat tails slow learning.
+q22:
+  right:
+  - o1083db
+  - o95522f
+  why: Composition of linear maps is linear.
+q23:
+  right:
+  - o9bb30e
+  - o9ed4ed
+  why: Symmetry is never broken.
+q24:
+  right:
+  - of27389
+  - o7a8b5e
+  why: About 1e-7 is the target.
+q25:
+  right:
+  - o2a8ad4
+  - o26ffde
+  why: W is (out, in); columns are examples.
+q26:
+  right:
+  - o29b1bc
+  - oc4ba79
+  why: You choose them; training doesn't.
+q27:
+  right:
+  - odb2aa2
+  - ob56921
+  why: Composition and circuit theory.
+q28:
+  right:
+  - o9e692d
+  - oe31e4e
+  why: Don't forget the biases.
+q29:
+  right:
+  - o6cb83c
+  - oe5ce85
+  why: Multi-backend since Keras 3.
+q30:
+  right:
+  - oea20f6
+  - o3837a8
+  why: No log(0).
+q31:
+  right:
+  - oeae3d4
+  - oedeff1
+  why: Deep learning shines on unstructured data.
+q32:
+  right:
+  - o5a40d4
+  - obade7c
+  why: One framework per process.

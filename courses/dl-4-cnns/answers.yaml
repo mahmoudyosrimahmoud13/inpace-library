@@ -1,0 +1,180 @@
+q1:
+  right:
+  - oe6a3f0
+  - o9d09e0
+  why: (32 + 2 − 3)/1 + 1 = 32.
+q2:
+  right:
+  - o4e2131
+  - o5033ec
+  why: Stride 2 halves it.
+q3:
+  right:
+  - of5d932
+  - of5a890
+  why: Parameter sharing.
+q4:
+  right:
+  - o7cb29d
+  - o3cf43c
+  why: Learned, cross-correlation.
+q5:
+  right:
+  - o7f9d3b
+  - oda2607
+  why: One bias per filter.
+q6:
+  right:
+  - o834178
+  - o05502e
+  why: Just a max.
+q7:
+  right:
+  - o1868b0
+  - o1cf091
+  why: Watch this when you move code.
+q8:
+  right:
+  - o5eff3f
+  - o599742
+  why: Spatial down, features up.
+q9:
+  right:
+  - o1a5ea4
+  - of5042a
+  why: a[l+2] = g(z[l+2] + a[l]).
+q10:
+  right:
+  - o146e83
+  - o19c260
+  why: Channel mixing.
+q11:
+  right:
+  - ocef2ec
+  - oc507ee
+  why: About 10× fewer multiplications in the example.
+q12:
+  right:
+  - o2ef222
+  - o7eaef8
+  why: History worth knowing.
+q13:
+  right:
+  - od141ea
+  - obab2b7
+  why: Split spatial and channel mixing.
+q14:
+  right:
+  - o792fb4
+  - o442927
+  why: The weights enum API.
+q15:
+  right:
+  - of57e20
+  - ob2d2a1
+  why: Little data → transfer.
+q16:
+  right:
+  - o604061
+  - oec2de8
+  why: Compound scaling.
+q17:
+  right:
+  - odaa5fa
+  - o65f509
+  why: Overlap / union.
+q18:
+  right:
+  - o025de5
+  - o731875
+  why: Centre point assignment.
+q19:
+  right:
+  - o2203ad
+  - o552556
+  why: Tall and wide objects share a cell.
+q20:
+  right:
+  - oe5885b
+  - o75c5c4
+  why: The basics still apply.
+q21:
+  right:
+  - o69c39e
+  - o5ce620
+  why: Per-pixel classification.
+q22:
+  right:
+  - o4a200c
+  - oaa94e1
+  why: Learned upsampling.
+q23:
+  right:
+  - o951092
+  - o3c3810
+  why: Where and what together.
+q24:
+  right:
+  - o2acf68
+  - o44997e
+  why: Still everywhere.
+q25:
+  right:
+  - o8755f3
+  - o80a576
+  why: Compare embeddings.
+q26:
+  right:
+  - o239204
+  - o77c9da
+  why: No trivial solution.
+q27:
+  right:
+  - o81894d
+  - occd625
+  why: Learn from the confusing cases.
+q28:
+  right:
+  - o73bd6d
+  - of12ac1
+  why: Errors add up over K people.
+q29:
+  right:
+  - o01ccac
+  - o783870
+  why: The network stays fixed.
+q30:
+  right:
+  - o050b0a
+  - o689c5d
+  why: Correlations between channels.
+q31:
+  right:
+  - of02c3a
+  - o8eb462
+  why: Slide along one dimension.
+q32:
+  right:
+  - o8a52a6
+  - o581d7a
+  why: Edges → textures → parts → objects.
+q33:
+  right:
+  - o7e3632
+  - ocd08c8
+  why: Transfer plus augmentation.
+q34:
+  right:
+  - o0559be
+  - o10e76a
+  why: The identity shortcut.
+q35:
+  right:
+  - of6c46b
+  - o113e00
+  why: 16·(27 + 1) = 448.
+q36:
+  right:
+  - o00d4b2
+  - oa58d80
+  why: Fit the budget.

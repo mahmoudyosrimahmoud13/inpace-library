@@ -1,0 +1,360 @@
+q1:
+  text: Which are true about RNNs?
+  show: 4
+  options:
+    o69e8a8: They need fixed-length inputs.
+    oa895cf: Each time step has its own weights.
+    o202ab7: A hidden state carries information forward.
+    od77464: The same weights are used at every time step.
+    oa8a62d: They only work on images.
+    o0e5086: They can't be trained with backprop.
+q2:
+  text: 'Sentiment classification from a review is:'
+  show: 4
+  options:
+    oade7aa: One-to-many.
+    occd685: Many-to-one.
+    of9bbb5: One-to-one.
+    o9a6d00: Many-to-many with T_x = T_y.
+    o2aa0f5: A whole sequence in, one label out.
+    od93237: A detection problem.
+q3:
+  text: What is backpropagation through time?
+  show: 4
+  options:
+    o7259f2: A special optimizer.
+    o413fac: Running the network backwards at test time.
+    o6fac1b: Skipping the hidden state.
+    o286566: Backprop on the unrolled network.
+    o8c7adf: Summing gradients over all time steps.
+    oe9f271: Training on future data.
+q4:
+  text: Why do modern models use sub-word tokens instead of a fixed word list?
+  show: 4
+  options:
+    o493e38: They make sentences shorter than one token.
+    o71d61f: They only work for English.
+    o9e7f4e: No word is ever 'unknown'.
+    off459c: They remove the need for embeddings.
+    o13efcf: They are one-hot vectors of size 2.
+    o62855e: Any word, name or typo can be written as pieces.
+q5:
+  text: How is a language model trained?
+  show: 4
+  options:
+    o4b430f: Predict the next token at every position.
+    ob12e1c: Minimize cross-entropy over the sequence.
+    o5a0d5f: Predict the sentence's length only.
+    o23742a: Classify whole documents.
+    o3a0f3f: Maximize the number of tokens.
+    o750f1d: Sort the words alphabetically.
+q6:
+  text: 'Lower temperature when sampling makes text:'
+  show: 4
+  options:
+    o1a785e: Different in language.
+    obe3883: Longer, always.
+    od3a917: Grammatically perfect, always.
+    o711f4c: More predictable.
+    o016996: More repetitive.
+    o8a19a5: More random.
+q7:
+  text: Which are true about character-level models?
+  show: 4
+  options:
+    of075d8: They have a 10,000-word vocabulary.
+    o3f6298: They need longer sequences.
+    o457f62: They never meet unknown words.
+    of6e477: They can't generate text.
+    obe71a9: They need no training.
+    obd3bc5: They are always better than word models.
+q8:
+  text: What is teacher forcing?
+  show: 4
+  options:
+    o1d1440: Instead of the model's own prediction.
+    oec0e77: Feeding the true previous token during training.
+    o2b5135: Using a teacher network to label data.
+    oe093fc: Sampling at high temperature.
+    o87cc51: Training only on the test set.
+    obe06ab: Freezing the weights.
+q9:
+  text: Why do plain RNNs struggle with long-range dependencies?
+  show: 4
+  options:
+    oa63750: The same weights multiply the signal at every step.
+    o9192a4: They need labels at every step.
+    oaad4db: They have too many parameters.
+    od727e8: Gradients shrink exponentially over time steps.
+    o88b199: They can't use tanh.
+    o10d4e2: They read only one word.
+q10:
+  text: Which are LSTM gates?
+  show: 4
+  options:
+    oef811d: Forget gate.
+    o422a4f: Output gate.
+    ob461e5: Attention gate.
+    od10da6: Dropout gate.
+    o7da3a5: Pooling gate.
+    o25389e: Softmax gate.
+q11:
+  text: What's a good fix for exploding gradients?
+  show: 4
+  options:
+    of544bf: Removing the loss.
+    o754ff0: More layers.
+    o1076ad: A larger learning rate.
+    oaf31d5: torch.nn.utils.clip_grad_norm_
+    oc7a9fe: Gradient clipping.
+    o48c283: Using sigmoid everywhere.
+q12:
+  text: When is a bidirectional RNN a poor fit?
+  show: 4
+  options:
+    o885ec3: Sentiment of a full review.
+    o61b1fa: Any task needing output before the sequence ends.
+    o941fe2: Translating a complete paragraph.
+    o932ec6: Tagging names in a finished sentence.
+    of745ea: 'Never: it fits everything.'
+    ob01948: Live speech recognition that must answer as you talk.
+q13:
+  text: Which are true about one-hot vectors?
+  show: 4
+  options:
+    o2dfacf: They're learned by backprop.
+    o39f86f: They're as long as the vocabulary.
+    o27ddf2: They're dense, short vectors.
+    o4f0a0c: Similar words are close.
+    o0b37d7: They capture analogies.
+    o746b62: Every pair of different words is equally far apart.
+q14:
+  text: How do you compare two embeddings?
+  show: 4
+  options:
+    ob95dea: Cosine similarity.
+    oc29b06: Their index in the vocabulary.
+    oa1bf48: Alphabetical order.
+    of4e03f: The angle between them.
+    o01ac2b: Their first number only.
+    o99a83e: Their lengths only.
+q15:
+  text: 'nn.Embedding(10000, 300) applied to ids of shape (32, 20) gives:'
+  show: 4
+  options:
+    o424e21: A single number.
+    o6d412a: One 300-number vector per token.
+    o1ca92d: A tensor of shape (32, 300).
+    o790533: A one-hot tensor of size 10,000.
+    o45b808: A tensor of shape (32, 20, 300).
+    o240321: A tensor of shape (10000, 300).
+q16:
+  text: 'e_king − e_man + e_woman is closest to:'
+  show: 4
+  options:
+    off016e: e_apple
+    o1b5fca: e_queen
+    o49df53: e_king
+    oe7be09: zero
+    od58363: e_man
+    oc9319f: the vector for 'queen'
+q17:
+  text: Which are true about negative sampling?
+  show: 4
+  options:
+    o3f4176: Negatives are random words.
+    o9b3cf3: It samples only the most frequent word.
+    oa7d651: It removes the embeddings.
+    o1c463c: It replaces a big softmax with small yes/no problems.
+    o8dffee: It's slower than full softmax.
+    oef6e2c: It needs no positive pairs.
+q18:
+  text: Why can averaging word vectors fail at sentiment?
+  show: 4
+  options:
+    o4b03d0: Embeddings have no meaning.
+    o36d88f: Averages can't be computed.
+    ob5a71a: It needs an RNN to average.
+    o81ed2d: It ignores word order.
+    o826139: It uses too many parameters.
+    of6dd07: '''not good'' and ''good'' look alike.'
+q19:
+  text: Which are steps of the slides' debiasing method?
+  show: 4
+  options:
+    ofbcc52: Delete all gendered words.
+    of4235f: Double the bias direction.
+    oe7f62e: Neutralize words that should be neutral.
+    o0d2de3: Identify the bias direction.
+    oca6c10: Retrain without text.
+    o08137f: Shuffle the vocabulary.
+q20:
+  text: What does skip-gram predict?
+  show: 4
+  options:
+    oc94f19: The part of speech only.
+    o37fad3: Words within a small window.
+    oa14484: A target word near a context word.
+    o69a4b5: The document's topic.
+    o316f00: The word's length.
+    o55acfb: The next sentence.
+q21:
+  text: Which are true about beam search?
+  show: 4
+  options:
+    o579ebc: It needs no model.
+    o012336: It always finds the exact best sentence.
+    o9e1826: Larger B is always faster.
+    o7cf607: It keeps the B best partial sentences.
+    o527272: It keeps only one word in total.
+    o58242b: B = 1 is greedy search.
+q22:
+  text: P(y*) > P(ŷ) for most errors. What should you do?
+  show: 4
+  options:
+    oc21975: Increase the beam width.
+    ofd4ee8: Lower the beam width.
+    oab7f16: Remove length normalization.
+    oaa48ab: Collect more training data first.
+    o7b0a50: Make the model bigger first.
+    oe6c1f3: Blame the search, not the model.
+q23:
+  text: Why use length normalization?
+  show: 4
+  options:
+    o2d6062: To speed up training.
+    o806b02: To count words.
+    oaa6b22: To remove the softmax.
+    o9a7bed: Averaging the log-probability fixes that.
+    oedd644: To make outputs longer than the input, always.
+    of2952e: Multiplying probabilities favours short outputs.
+q24:
+  text: Which are true about BLEU?
+  show: 4
+  options:
+    o89c15d: It needs no reference translation.
+    o38ad29: Repeating a word scores well.
+    offf58a: It's only for images.
+    o929833: It measures meaning perfectly.
+    ob55049: It has a brevity penalty.
+    o2c1b22: It uses modified n-gram precision.
+q25:
+  text: Which are true about attention in seq2seq?
+  show: 4
+  options:
+    of7497e: The input is squeezed into one fixed vector, only.
+    o13e101: It only works for short sentences.
+    oa0050f: The decoder looks at all encoder states for each word.
+    o59b25f: The weights are set by hand.
+    oa77567: It removes the decoder.
+    o36cc40: The attention weights sum to 1.
+q26:
+  text: Why did plain encoder-decoders struggle with long sentences?
+  show: 4
+  options:
+    o380b30: Details from early words got lost.
+    o5ce246: The whole input had to fit in one vector.
+    o614912: They were too fast.
+    o0d7dba: They couldn't use softmax.
+    o82f828: They had too few words.
+    o6b15a2: Long sentences have no labels.
+q27:
+  text: Which are true about CTC?
+  show: 4
+  options:
+    oef09d7: It outputs a symbol or blank for each audio frame.
+    ob8f7c8: It removes the need for audio.
+    of38ae6: It needs aligned labels for each frame.
+    oa6b86d: It outputs one word per second, fixed.
+    o15041d: It only works for images.
+    oc917c5: Repeats not separated by a blank collapse.
+q28:
+  text: 'The attention weights for one output word:'
+  show: 4
+  options:
+    od7a3fb: Are always equal.
+    o561a2e: Are learned only at test time.
+    o9d991d: Must be 0 or 1.
+    o446582: Say how much each input position matters.
+    o523b1e: Are the input words themselves.
+    o4b79f3: Come from a softmax.
+q29:
+  text: Which are true about self-attention?
+  show: 4
+  options:
+    o1ab92c: Every position attends to every position.
+    oee5293: It needs no learned weights.
+    o18d2f4: It runs in parallel over the sequence.
+    od8e41a: It only works for images.
+    od951b3: It knows word order without positional information.
+    obb75f1: It reads one word at a time like an RNN.
+q30:
+  text: Why divide by √d_k?
+  show: 4
+  options:
+    o25c0e6: To stop the softmax from saturating.
+    o021bdc: To make the model smaller.
+    o75258b: Because keys are negative.
+    o9245f0: To keep dot products from growing with dimension.
+    oefafa2: To remove the values.
+    o8dea57: To count the words.
+q31:
+  text: What does a causal mask do?
+  show: 4
+  options:
+    o68b596: Hides the first word.
+    o018b24: Is used in GPT-style decoders.
+    o0da175: Removes padding only.
+    ofd6275: Doubles the sequence length.
+    od00197: Makes attention bidirectional.
+    oe9fd01: Stops a position from attending to later positions.
+q32:
+  text: Which are decoder-only models used for?
+  show: 4
+  options:
+    o6f7a12: Only sorting numbers.
+    o5419d2: 'Nothing: they can''t be trained.'
+    occ594b: Next-token prediction.
+    oed3993: Only image segmentation.
+    oc9df03: Generating text, like chat assistants.
+    ob77841: Only translating images to audio.
+q33:
+  text: Why did transformers replace RNNs for most tasks?
+  show: 4
+  options:
+    o5ad525: They process a sequence in parallel.
+    oa1be88: They can't overfit.
+    od8dc8a: They need no data.
+    oc3c3c3: Any two positions connect directly through attention.
+    oce8972: They read one token at a time.
+    of064ee: They have no parameters.
+q34:
+  text: 'Self-attention over n tokens costs roughly:'
+  show: 4
+  options:
+    o4af8b2: Nothing, at test time.
+    ofe44a5: n² attention scores per head.
+    o38d02e: n scores only.
+    o730791: log n scores.
+    oc7c807: The same for any length.
+    o73e8ab: More as contexts grow longer, quadratically.
+q35:
+  text: Which are reasonable ways to build a sentiment classifier in 2026?
+  show: 4
+  options:
+    oa63bab: Use BLEU as the metric.
+    o7ca367: Fine-tune a small pre-trained encoder.
+    ofacc30: Use a pre-trained model and check it on your own dev set.
+    o3204c3: Train a large transformer from random weights on 500 reviews.
+    o401576: Skip evaluation.
+    o691035: Count the word 'good' only.
+q36:
+  text: 'Top-p sampling:'
+  show: 4
+  options:
+    odf8ba8: Sorts tokens alphabetically.
+    oecb51c: Always picks the single best token.
+    o7c70db: Adds variety while avoiding very unlikely tokens.
+    o348e22: Samples only from the most likely tokens that cover probability p.
+    o13bf01: Is the same as beam search.
+    o5e21e1: Removes the softmax.

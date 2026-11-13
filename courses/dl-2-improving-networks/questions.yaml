@@ -1,0 +1,320 @@
+q1:
+  text: Train error 1%, dev error 12%, human error about 0%. Which are true?
+  show: 4
+  options:
+    of85054: The model has high variance.
+    o447a78: Regularization or more data should help.
+    od0d633: A bigger network is the first fix.
+    oecef80: The model has high bias.
+    ob40f3e: The dev set is too big.
+    o1fff9e: Nothing is wrong.
+q2:
+  text: You have 2,000,000 examples. Which splits are reasonable?
+  show: 4
+  options:
+    occ203d: About 20,000 examples each for dev and test
+    o8d5bb2: All data in train, none held out
+    od26d98: 98% / 1% / 1%
+    oe69388: 60% / 20% / 20% is required
+    o0820e0: 'No dev set: use test for tuning'
+    o9d8dcc: 1% / 49% / 50%
+q3:
+  text: Train error 15%, dev error 16%, human error 1%. What should you try first?
+  show: 4
+  options:
+    o18b57a: More dropout.
+    o48a8b2: Training longer or a better architecture.
+    o259300: More regularization.
+    ob30e08: A smaller network.
+    o25519b: Collecting more dev data.
+    o975c91: A bigger network.
+q4:
+  text: Which are true about dev and test sets?
+  show: 4
+  options:
+    ob80f3b: The test set is used to pick hyperparameters.
+    o9538be: They must come from the training distribution, always.
+    oa8e5ad: They must be 20% each.
+    o2b3f2e: They should look like the data you care about.
+    o28726e: They should be easier than training data.
+    o9a52a6: They should come from the same distribution.
+q5:
+  text: Which are true about inverted dropout?
+  show: 4
+  options:
+    o699190: No dropout is used at test time.
+    of662fe: Units are dropped at test time too.
+    od3b5f4: It increases the number of parameters.
+    o711ede: Kept activations are divided by keep_prob during training.
+    o561951: It always uses keep_prob = 0.
+    of98fbd: It is the same as early stopping.
+q6:
+  text: In PyTorch, which are true?
+  show: 4
+  options:
+    o95a5ca: model.eval() turns dropout off.
+    o657b5e: model.train() turns dropout off.
+    oa780d4: Dropout is always on.
+    oc89742: p is the keep probability.
+    o1e1bee: Dropout changes the weights directly.
+    o1d0fff: nn.Dropout(p=0.3) drops 30% of units in training.
+q7:
+  text: Why does L2 regularization reduce overfitting?
+  show: 4
+  options:
+    o74389a: It adds more data.
+    oa33020: It removes the bias terms.
+    o7fdc73: It increases the learning rate.
+    o67f958: It keeps weights small, so each layer is closer to linear.
+    o50ddc3: It makes the network deeper.
+    o0a0e1e: It penalizes fitting every noise wiggle.
+q8:
+  text: What does early stopping trade off?
+  show: 4
+  options:
+    o709d21: It adds more parameters.
+    o33f26e: It is the same as dropout.
+    odc77a3: It only works with SGD.
+    o92d901: It makes training slower.
+    oc455d2: It couples two goals that orthogonalization keeps apart.
+    of6d5f6: It stops optimizing the cost to prevent overfitting.
+q9:
+  text: Which are right about normalizing inputs?
+  show: 4
+  options:
+    oed5b09: Normalize the labels instead.
+    o66982b: Compute them separately on the test set.
+    o0fcb57: It only matters for images.
+    o5986a7: Apply the same mean and std to dev and test.
+    o82d574: Compute mean and std on the training set only.
+    oa9f969: It makes the network deeper.
+q10:
+  text: 'For a ReLU layer with n[l−1] = 512 inputs, He initialization uses a weight variance of:'
+  show: 4
+  options:
+    o36ebb1: '0'
+    of40f49: 1 / 2
+    o01d449: about 0.0039
+    o1db219: '1'
+    oeee7d5: 2 / 512
+    o9ab983: '512'
+q11:
+  text: Which help train very deep networks?
+  show: 4
+  options:
+    oaf592b: Removing activations.
+    o450fbf: A larger learning rate always.
+    o405b2b: Residual connections and normalization layers.
+    o02b831: Initializing every weight to 1.
+    o51cfab: Careful initialization (He or Xavier).
+    od03156: Using sigmoid in every layer.
+q12:
+  text: Which are good gradient-checking practices?
+  show: 4
+  options:
+    o6a2f16: Run it every step of training.
+    oaee9a1: Accept a relative difference of 0.1.
+    o620c1f: Use it to debug, not during training.
+    o1c21da: Use float16 for accuracy.
+    o9715a9: Ignore regularization terms.
+    o7938ad: Turn dropout off while checking.
+q13:
+  text: β = 0.9 averages over roughly how many past values?
+  show: 4
+  options:
+    o46c5f2: '1'
+    oa762c5: '0.9'
+    o9530a2: '10'
+    o11eed5: 1 / (1 − 0.9)
+    o11e4ca: '100'
+    offdd41: '90'
+q14:
+  text: Why is bias correction needed?
+  show: 4
+  options:
+    od9d006: Dividing by 1 − βᵗ fixes the first steps.
+    ob9dc81: It changes the final average a lot.
+    offf791: It removes noise forever.
+    o686c84: The data is biased.
+    o037013: v starts at 0, so early averages are too small.
+    o711406: It makes β larger.
+q15:
+  text: Which are true about mini-batches?
+  show: 4
+  options:
+    o475992: One epoch is one pass over all mini-batches.
+    o6edbde: Mini-batches must be the whole dataset.
+    ode8245: The cost must go down at every step.
+    ob5de1d: Shuffling is not allowed.
+    o9f5987: The cost decreases with noise rather than smoothly.
+    of8ffe0: Batch size 1 keeps full vectorization.
+q16:
+  text: Which are reasonable mini-batch sizes for a mid-size network on a GPU?
+  show: 4
+  options:
+    o01a007: '64'
+    o9ef33a: '256'
+    oe83470: The whole 10-million-example dataset
+    o54e82e: '0'
+    o0e6002: 1 always
+    o45dc19: A size that doesn't fit in GPU memory
+q17:
+  text: Which are Adam's usual defaults?
+  show: 4
+  options:
+    oc4c528: learning rate = 10
+    o403c78: β₁ = 0.9
+    o1b9f3d: β₁ = 0.999 and β₂ = 0.9
+    oe34c3a: β₁ = 0
+    oa18767: β₂ = 0.999
+    of36ebf: ε = 0.5
+q18:
+  text: What does RMSprop do?
+  show: 4
+  options:
+    o8e5de6: Adds a fixed number to every weight.
+    oa6b658: Takes smaller steps where gradients are large.
+    oe327de: Doubles the learning rate.
+    o07e06f: Removes the bias terms.
+    o971c5f: Divides each gradient by a running RMS of that gradient.
+    of3f6bc: Averages the weights over time.
+q19:
+  text: Why warm up the learning rate for transformers?
+  show: 4
+  options:
+    o609b32: It skips the first epoch.
+    o4f5059: It avoids big unstable early steps.
+    oc16149: It makes the model smaller.
+    o2b5865: Transformers can't use Adam.
+    o9b1ce7: Adam's running averages are empty at the start.
+    obb7adc: It removes the need for decay.
+q20:
+  text: 'In high dimensions, a point where the gradient is zero is most likely:'
+  show: 4
+  options:
+    o6351b9: A bad local minimum that traps you.
+    ob171fd: Not a bad local minimum.
+    o05109d: A bug in backprop.
+    o5765b0: The global minimum.
+    of6125c: Impossible to reach.
+    ob1bacf: A saddle point.
+q21:
+  text: Which are good ways to sample hyperparameters?
+  show: 4
+  options:
+    o06b8bc: The learning rate on a log scale.
+    o67e50e: β as 1 − 10^r.
+    odc8c77: A fine grid over every hyperparameter.
+    o6848e6: β uniformly between 0.9 and 0.999.
+    o83acc0: The learning rate uniformly between 0.0001 and 1.
+    o7d320c: Only the default values.
+q22:
+  text: Which hyperparameter usually matters most?
+  show: 4
+  options:
+    o2382c6: The name of the model.
+    o2a3bfd: The learning rate.
+    o4943b2: α
+    o12dd27: Adam's β₂.
+    ocaede5: The random seed.
+    o915efc: Adam's ε.
+q23:
+  text: Why random search instead of a grid?
+  show: 4
+  options:
+    odbdf72: Random search uses fewer models in total, always.
+    oef91bf: You try more distinct values of the important hyperparameters.
+    o9e2622: Grids always find the best value.
+    of4919f: You don't know in advance which ones matter.
+    o0fcfcc: Random search needs no dev set.
+    o1c128b: Grids are not allowed.
+q24:
+  text: Which are tools for hyperparameter search today?
+  show: 4
+  options:
+    o69a994: Optuna
+    o904bc7: pandas.read_csv
+    o66e36d: pip
+    odf55c4: matplotlib
+    od74e59: KerasTuner
+    ofeea54: git
+q25:
+  text: Which are true about batch norm?
+  show: 4
+  options:
+    o071af2: γ and β are learned.
+    o22275e: The bias b becomes essential.
+    od0f28c: It uses the test batch's own statistics at test time.
+    oe390a6: It must replace the activation function.
+    of31ebd: It removes the need for any training.
+    o84afb1: At test time it uses running averages of μ and σ².
+q26:
+  text: Which normalization is standard inside transformers?
+  show: 4
+  options:
+    o7ca755: Input normalization only
+    oe9dc53: No normalization at all
+    oed7995: BatchNorm with batch size 1
+    oe29d70: LayerNorm
+    o484f75: RMSNorm in many large language models
+    o1f0e93: Dropout
+q27:
+  text: Which are correct with PyTorch's cross_entropy?
+  show: 4
+  options:
+    of1778a: Apply softmax first, then pass probabilities.
+    o784111: Pass one-hot probabilities after a sigmoid.
+    o5e2b0a: Pass log-probabilities after softmax twice.
+    oc1972c: Pass raw logits.
+    o595330: Use it only for 2 classes.
+    o646a54: Pass class indices as labels.
+q28:
+  text: 'Softmax outputs for 4 classes always:'
+  show: 4
+  options:
+    o7b582a: Sum to 4.
+    o8515c3: Are between 0 and 1.
+    o7b5745: Can be negative.
+    o6ba55c: Are all equal.
+    oc35b96: Are integers.
+    ocdd926: Sum to 1.
+q29:
+  text: Your loss becomes NaN after a few hundred steps. Which are good first checks?
+  show: 4
+  options:
+    o68d77a: Switch the loss to accuracy.
+    oc66b47: Check for exploding gradients and clip them.
+    od5c897: Increase the batch size to the whole dataset.
+    o679158: Remove the validation set.
+    o0c9fe8: Lower the learning rate.
+    o572c85: Add more dropout.
+q30:
+  text: What is mixed precision?
+  show: 4
+  options:
+    o73bcdc: Mixing PyTorch and TensorFlow.
+    obda42c: Rounding the labels.
+    o8cac84: Training on half the data.
+    o34f59d: Keeping 32-bit master weights for accuracy.
+    od6c203: Using integers for weights.
+    o2f27a3: Computing mostly in 16-bit floats.
+q31:
+  text: Which are true about AdamW?
+  show: 4
+  options:
+    oa4d1fd: It removes the learning rate.
+    of75e5f: It can only be used with CNNs.
+    ofd98a2: It's Adam without momentum.
+    o52b199: It's a common default for modern networks.
+    o6ff7b1: It decouples weight decay from the gradient update.
+    oba12a5: It's the same as Adam plus L2 in the loss.
+q32:
+  text: Which tell you a model is overfitting?
+  show: 4
+  options:
+    o7e5b58: The model has few parameters.
+    obe5016: Training loss keeps falling while dev loss rises.
+    oe2cafe: The training loss doesn't move.
+    o9ce944: Dev accuracy is above train accuracy by a lot every time.
+    ofd2b67: A large gap between train and dev accuracy.
+    offcaff: Both losses are high and close.

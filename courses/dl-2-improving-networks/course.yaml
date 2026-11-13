@@ -1,0 +1,277 @@
+id: dl-2-improving-networks
+title: 'Deep Learning 2: improving deep networks (regularization, optimizers, tuning)'
+version: 1
+language: en
+description: 'Part 2 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
+  lesson and everything updated for PyTorch 2.15, TensorFlow 2.21 and Keras 3.15: train/dev/test splits, bias and
+  variance, L2 and weight decay, dropout, initialization, gradient checking, mini-batches, momentum, RMSprop, Adam
+  and AdamW, learning-rate schedules, hyperparameter search, batch norm and softmax. Real experiments in notebooks
+  you can open in Colab, download or read as PDFs, and new charts. Plan: 8 days. Slides by DeepLearning.AI (CC BY-SA
+  2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: Setting up: data splits, bias and variance'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Train, dev and test sets
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: C2_W1.pdf#pages=2-5
+  - id: m1-l3
+    title: Bias, variance, and the basic recipe
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: C2_W1.pdf#pages=6-11
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Find a model you trained before (any course or project), or train the notebook's digits model. Write
+      its train and dev errors, your diagnosis (bias, variance, both, fine) and the next two things you'd try. Upload
+      it.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why dev and test sets must come from the same distribution, with an example of what goes wrong
+      otherwise.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Regularization'
+  lessons:
+  - id: m2-l1
+    title: L2 regularization and weight decay
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: C2_W1.pdf#pages=12-17
+  - id: m2-l2
+    title: Dropout
+    file: lessons/m2-l2.md
+    minutes: 30
+    media: C2_W1.pdf#pages=18-23
+  - id: m2-l3
+    title: Other ways to regularize, and a real experiment
+    file: lessons/m2-l3.md
+    minutes: 25
+    media: C2_W1.pdf#pages=24-26
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Run section 2 of the PyTorch notebook with weight decay 0.01, 0.1, 1.0 and 3.0 and with dropout 0.2
+      and 0.5. Make a small table of train and dev accuracy. Upload it with one sentence on what you'd use.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why AdamW's weight decay is not the same as adding L2 to the loss when you use Adam.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Normalizing, initialization and checking gradients'
+  lessons:
+  - id: m3-l1
+    title: Normalizing inputs
+    file: lessons/m3-l1.md
+    minutes: 20
+    media: C2_W1.pdf#pages=27-29
+  - id: m3-l2
+    title: Vanishing and exploding gradients, and initialization
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: C2_W1.pdf#pages=30-32
+  - id: m3-l3
+    title: Gradient checking
+    file: lessons/m3-l3.md
+    minutes: 25
+    media: C2_W1.pdf#pages=33-40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Run section 1 of the PyTorch notebook and upload the chart. Then change the depth from 10 to 20 layers
+      and say which initializations still train.
+  - id: m3-explain
+    type: explain
+    prompt: Explain vanishing and exploding gradients to someone who knows what a derivative is but not deep learning.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Mini-batches and averages'
+  lessons:
+  - id: m4-l1
+    title: Mini-batch gradient descent
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: C2_W2.pdf#pages=2-11
+  - id: m4-l2
+    title: Exponentially weighted averages and bias correction
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: C2_W2.pdf#pages=12-17
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Compute by hand an exponentially weighted average with β = 0.5 for the values 10, 20, 30, 40, with and
+      without bias correction. Then check it in Python. Upload both.
+  - id: m4-explain
+    type: explain
+    prompt: Explain what an epoch is and why mini-batch gradient descent is faster than full-batch on a big dataset.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Momentum, RMSprop, Adam, AdamW and schedules'
+  lessons:
+  - id: m5-l1
+    title: Momentum, RMSprop and Adam
+    file: lessons/m5-l1.md
+    minutes: 35
+    media: C2_W2.pdf#pages=18-25
+  - id: m5-l2
+    title: Learning-rate decay and schedules
+    file: lessons/m5-l2.md
+    minutes: 25
+    media: C2_W2.pdf#pages=26-29
+  - id: m5-l3
+    title: Local optima and plateaus
+    file: lessons/m5-l3.md
+    minutes: 15
+    media: C2_W2.pdf#pages=30-32
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Run sections 3 and 4 of the PyTorch notebook. Then give plain SGD a learning rate 10 times bigger and
+      rerun. Upload the two charts and say which optimizer you'd choose and why.
+  - id: m5-explain
+    type: explain
+    prompt: Explain Adam in your own words as 'momentum plus RMSprop', including what each part fixes.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: Hyperparameter tuning'
+  lessons:
+  - id: m6-l1
+    title: What to tune, and how to search
+    file: lessons/m6-l1.md
+    minutes: 35
+    media: C2_W3.pdf#pages=2-9
+  - id: m6-l2
+    title: Pandas or caviar
+    file: lessons/m6-l2.md
+    minutes: 15
+    media: C2_W3.pdf#pages=10-12
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Do a small random search: 10 random learning rates on a log scale between 1e-4 and 1e-1 for the digits
+      network (notebook section 3, AdamW). Plot dev loss against learning rate (log x axis) and upload the chart
+      with the best value.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain why random search beats grid search, and why the learning rate is sampled on a log scale.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Day 7: Batch norm, softmax and frameworks'
+  lessons:
+  - id: m7-l1
+    title: Batch normalization
+    file: lessons/m7-l1.md
+    minutes: 35
+    media: C2_W3.pdf#pages=13-23
+  - id: m7-l2
+    title: Softmax for many classes
+    file: lessons/m7-l2.md
+    minutes: 20
+    media: C2_W3.pdf#pages=24-27
+  - id: m7-l3
+    title: Programming frameworks, then and now
+    file: lessons/m7-l3.md
+    minutes: 20
+    media: C2_W3.pdf#pages=28-32
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Run section 5 of the PyTorch notebook (batch norm on and off with a high learning rate) and section
+      3 of the Keras notebook. Upload both results and explain the difference batch norm made.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why batch norm uses running averages at test time, and what bug you get if you forget model.eval().
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: Experiments and interview drill'
+  lessons:
+  - id: m8-l1
+    title: Run the experiments
+    file: lessons/m8-l1.md
+    minutes: 40
+  - id: m8-l2
+    title: Interview drill
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Run both notebooks in Colab with a GPU (Runtime → Change runtime type) and compare the run time of the
+      PyTorch section 3 on CPU and GPU. Upload screenshots and the times.
+  - id: m8-explain
+    type: explain
+    prompt: Answer interview question 7 (a NaN loss) as a step-by-step debugging plan, in your own words.
+    min_words: 100
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70

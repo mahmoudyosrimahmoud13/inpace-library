@@ -1,0 +1,200 @@
+id: dl-3-ml-projects
+title: 'Deep Learning 3: structuring machine learning projects'
+version: 1
+language: en
+description: 'Part 3 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
+  lesson: orthogonalization, single-number and satisficing metrics, dev and test sets, human-level performance and
+  avoidable bias, error analysis, mismatched training data, transfer learning, multi-task and end-to-end learning,
+  updated for the era of pre-trained models. One real project in a notebook you can open in Colab, download or read
+  as a PDF. Plan: 6 days. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Day 1: Orthogonalization and your goal'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: Why strategy, and orthogonalization
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: C3_W1.pdf#pages=2-6
+  - id: m1-l3
+    title: One number to optimize, and satisficing metrics
+    file: lessons/m1-l3.md
+    minutes: 25
+    media: C3_W1.pdf#pages=7-11
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Pick a model or product you know. Write its single optimizing metric, two satisficing metrics with thresholds,
+      and one example of each orthogonal knob from the table. Upload it.
+  - id: m1-explain
+    type: explain
+    prompt: Explain orthogonalization with your own analogy (not a TV or a car).
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Day 2: Train, dev and test distributions'
+  lessons:
+  - id: m2-l1
+    title: Choosing dev and test sets
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: C3_W1.pdf#pages=12-19
+  - id: m2-l2
+    title: When to change the dev set or the metric
+    file: lessons/m2-l2.md
+    minutes: 25
+    media: C3_W1.pdf#pages=20-23
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Describe a case (real or invented) where a model scored well on the dev set but users were unhappy.
+      Write how you'd change the dev set or the metric, with a weighted error formula if it helps. Upload it.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why dev and test sets must come from the same distribution, using the loan story or your own
+      example.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Day 3: Comparing to human-level performance'
+  lessons:
+  - id: m3-l1
+    title: Human level, Bayes error and avoidable bias
+    file: lessons/m3-l1.md
+    minutes: 35
+    media: C3_W1.pdf#pages=24-34
+  - id: m3-l2
+    title: Surpassing human level, and improving your model
+    file: lessons/m3-l2.md
+    minutes: 25
+    media: C3_W1.pdf#pages=35-40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Make a table like Example A and B for a project of yours (or invent realistic numbers). Compute avoidable
+      bias and variance and list two fixes for the bigger one. Upload it.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why the same train and dev errors can lead to opposite advice depending on human-level error.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Day 4: Error analysis and mismatched data'
+  lessons:
+  - id: m4-l1
+    title: Carrying out error analysis
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: C3_W2.pdf#pages=2-10
+  - id: m4-l2
+    title: Training and testing on different distributions
+    file: lessons/m4-l2.md
+    minutes: 35
+    media: C3_W2.pdf#pages=11-21
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Do a mini error analysis: take 30 mistakes from any model you have (or the notebook''s digits model,
+      section 3) and fill a spreadsheet with at least 3 categories. Upload the sheet and the idea you''d work on
+      first.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain what a train-dev set is for, and how it separates variance from data mismatch.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Day 5: Transfer, multi-task and end-to-end learning'
+  lessons:
+  - id: m5-l1
+    title: Transfer learning
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: C3_W2.pdf#pages=22-24
+  - id: m5-l2
+    title: Multi-task learning
+    file: lessons/m5-l2.md
+    minutes: 20
+    media: C3_W2.pdf#pages=25-28
+  - id: m5-l3
+    title: End-to-end deep learning
+    file: lessons/m5-l3.md
+    minutes: 25
+    media: C3_W2.pdf#pages=29-35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Pick a product idea. Describe how you'd use transfer learning (which pre-trained model, which layers
+      to train, how much data you need) and whether you'd build it end-to-end or in steps. Upload a one-page plan.
+  - id: m5-explain
+    type: explain
+    prompt: Explain when transfer learning makes sense, using the three conditions from the slides.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Day 6: A real project, and interview drill'
+  lessons:
+  - id: m6-l1
+    title: The project, end to end
+    file: lessons/m6-l1.md
+    minutes: 40
+  - id: m6-l2
+    title: Interview drill
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Run the notebook in Colab, then do two items from its Try this list. Upload your four-error table after
+      each change, with one sentence on what moved.
+  - id: m6-explain
+    type: explain
+    prompt: Answer interview question 3 (offline metric up, A/B test down) as you would in an interview.
+    min_words: 100
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70

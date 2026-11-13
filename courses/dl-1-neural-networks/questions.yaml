@@ -1,0 +1,320 @@
+q1:
+  text: Which are unstructured data?
+  show: 4
+  options:
+    o58e487: Daily sales totals per shop.
+    o3de949: A spreadsheet of exam marks.
+    oe55044: Audio recordings of speech.
+    o764375: Ad click logs with user age and ad id.
+    oa2dfba: A table of house sizes and prices.
+    o54def9: Photos of products.
+q2:
+  text: Which drove deep learning's rise according to the slides?
+  show: 4
+  options:
+    o937cb5: Faster computation such as GPUs.
+    o7e0da5: Removing non-linear activations.
+    o95d618: Hand-crafting more features.
+    od36748: Using only sigmoid activations.
+    odeea60: Smaller networks.
+    o35c802: Much more labelled data.
+q3:
+  text: A network takes inputs and correct answers, and nothing else about the problem. What does it learn?
+  show: 4
+  options:
+    o589dc1: Useful intermediate features in its hidden layers.
+    o48199c: Only a straight line.
+    obaeaaa: The test set answers.
+    o767c3b: Nothing without hand-made features.
+    of55032: A mapping from x to y.
+    of1d383: The learning rate.
+q4:
+  text: Which network fits translation best today?
+  show: 4
+  options:
+    o3ca955: A transformer.
+    o1948a5: Logistic regression on word counts only.
+    o80a3a2: A decision stump.
+    of1219e: A sequence model (historically an RNN).
+    obdfc2b: A CNN with no sequence handling.
+    o7f6fca: A single neuron.
+q5:
+  text: 'X holds m = 500 images of 64×64×3 pixels, one example per column. Its shape is:'
+  show: 4
+  options:
+    o04ce6b: n_x by m, with n_x = 12288
+    ob0bf81: (500, 12288)
+    od3f1ad: (64, 64, 3)
+    of17c29: (12288, 1)
+    ob7915d: (500, 1)
+    o37916a: (12288, 500)
+q6:
+  text: y = 1 and the model says ŷ = 0.01. Which are true?
+  show: 4
+  options:
+    o147f21: The model is confident and wrong.
+    od9fe19: The loss is negative.
+    o7cdc69: This example doesn't affect the gradient.
+    od2224f: 'The loss is large: −log(0.01) ≈ 4.6.'
+    o6da0a7: The loss is 0.01.
+    o6c6f46: The loss is 0.99.
+q7:
+  text: Why use cross-entropy instead of squared error for logistic regression?
+  show: 4
+  options:
+    oee0f69: It makes the cost convex.
+    o5c45a6: It works without labels.
+    o03ae24: It punishes confident mistakes strongly.
+    oecd74c: It's faster to type.
+    oe39fb7: It forces ŷ to be exactly 0 or 1.
+    ob32438: It removes the need for a learning rate.
+q8:
+  text: Which are modern, numerically stable ways to compute this loss?
+  show: 4
+  options:
+    o37a49d: Squared error on rounded predictions
+    ob0bfb4: Accuracy as the loss
+    o3e364e: Taking np.log of a sigmoid output that may be exactly 0
+    o58b81e: keras.losses.BinaryCrossentropy(from_logits=True)
+    of1fabc: Mean of the labels
+    o5d5c16: torch.nn.BCEWithLogitsLoss on raw scores
+q9:
+  text: For logistic regression with cross-entropy, which are correct?
+  show: 4
+  options:
+    ob29092: dz = y − a²
+    oef615b: dz = a − y
+    o67f786: dw = x·dz for one example
+    o781e57: db = x
+    o8cffcf: dw = a·y
+    o66d54f: dz = σ(y)
+q10:
+  text: f(a) = a². What is the slope at a = 3?
+  show: 4
+  options:
+    o36ebb1: '0'
+    o152095: 2·3
+    oebb09d: '9'
+    o1db219: '1'
+    o5b1879: '6'
+    o98a44e: '3'
+q11:
+  text: What does PyTorch's autograd do?
+  show: 4
+  options:
+    o4445d6: Records the operations as the code runs.
+    o963115: Only works for one layer.
+    o05940b: Computes gradients by walking the graph backwards.
+    ob17de5: Writes the model for you.
+    o2e2e97: Picks the learning rate.
+    o656b86: Avoids the chain rule.
+q12:
+  text: Why average gradients over m examples before a step?
+  show: 4
+  options:
+    o19e92c: Because PyTorch can't sum.
+    o744cf2: To shuffle the data.
+    ob6b3de: One step then follows the whole training set.
+    of17482: The cost is the average loss, so its gradient is the average gradient.
+    o04035d: To skip the backward pass.
+    o233f92: To make the learning rate smaller.
+q13:
+  text: A is (3, 4). Which can be added to it by broadcasting?
+  show: 4
+  options:
+    odf2c3c: An array of shape (3, 1)
+    o399da5: An array of shape (4, 3)
+    o69ab55: An array of shape (5, 1)
+    o242657: An array of shape (1, 4)
+    o331a5a: An array of shape (3, 2)
+    o125c0b: An array of shape (2, 4)
+q14:
+  text: Which are vectorized forms of logistic regression?
+  show: 4
+  options:
+    oeffc63: dw = X / dZ
+    odbcb3b: Z = wᵀX + b for all examples at once
+    ob41244: Z = X + w
+    ob2c05d: A loop over i computing z(i) one by one
+    od266b5: A loop over every weight
+    oe77ff8: dw = X·dZᵀ / m
+q15:
+  text: a = np.random.randn(5). Which are true?
+  show: 4
+  options:
+    o2a74de: a.T makes it a row vector.
+    o8f6fbb: Its shape is (5,), a rank-1 array.
+    odb78d9: a @ a.T is a 5×5 matrix.
+    obab33d: 'Safer: np.random.randn(5, 1).'
+    o861c13: Its shape is (5, 1).
+    oef147d: It's a column vector.
+q16:
+  text: 'Minimizing cross-entropy is the same as:'
+  show: 4
+  options:
+    o5e152d: Maximizing the likelihood of the labels.
+    oc67d3e: Minimizing accuracy.
+    o989421: Maximizing the squared error.
+    o13c5ac: Making all predictions 0.5.
+    o0dd252: Ignoring the labels.
+    o80e32f: Maximizing the log-likelihood.
+q17:
+  text: n_x = 3, n_h = 4. Which shapes are right (course notation)?
+  show: 4
+  options:
+    of2521b: 'b[1]: (3, 1)'
+    o46b560: 'W[2]: (4, 1)'
+    o65a2aa: 'W[1]: (4, 3)'
+    o493b65: 'W[1]: (4, 4)'
+    o936412: 'W[1]: (3, 4)'
+    oca7a24: 'b[1]: (4, 1)'
+q18:
+  text: Z[1] has shape (n_h, m). Which are true?
+  show: 4
+  options:
+    o7eb8e1: Each row is one hidden unit.
+    o3cfa20: Each column is one example.
+    oec18eb: Columns are features.
+    o28023c: Each row is one example.
+    o2e0baa: It's always square.
+    o3eca48: It doesn't depend on m.
+q19:
+  text: 'In PyTorch, nn.Linear(2, 8) applied to X of shape (800, 2) gives:'
+  show: 4
+  options:
+    oe4830d: A tensor of shape (2, 8).
+    oebc1ae: A single number.
+    o9e45df: A tensor of shape (800, 8).
+    o29a176: An error, always.
+    ocad97e: A tensor of shape (8, 800).
+    o870a19: One row of 8 hidden values per example.
+q20:
+  text: Why did the hidden layer beat logistic regression on the moons?
+  show: 4
+  options:
+    o623f04: Its hidden units learn useful non-linear features.
+    oc0e52e: It used more data.
+    oc48ab0: Logistic regression can't be trained.
+    o6c488d: It has no activation function.
+    oa13a8f: It skipped training.
+    o5331aa: It can make a curved decision boundary.
+q21:
+  text: Which are good default choices today?
+  show: 4
+  options:
+    o935602: Step functions, for clean outputs.
+    oe7bd2b: No activation, to save time.
+    oa369ee: A linear activation in all layers.
+    o5a9045: Sigmoid in every hidden layer of a deep network.
+    oa30584: ReLU (or GELU) in hidden layers.
+    o210b4c: Sigmoid only at the output of a binary classifier.
+q22:
+  text: Why must hidden layers be non-linear?
+  show: 4
+  options:
+    oecd059: PyTorch requires it.
+    od8fb79: Linear layers can't be differentiated.
+    o95522f: Otherwise the network can only make linear boundaries.
+    oe9a302: Non-linear layers train without data.
+    o3d4ad4: It reduces memory.
+    o1083db: Otherwise stacked layers equal one linear layer.
+q23:
+  text: All weights start at 0 in a hidden layer. What happens?
+  show: 4
+  options:
+    o11d7bd: Each unit learns a different feature.
+    o9ed4ed: The layer acts like a single unit.
+    o8d3999: Nothing changes.
+    of55d0e: Training is faster.
+    o20012c: The cost becomes convex.
+    o9bb30e: All hidden units stay identical.
+q24:
+  text: A gradient check gives a relative difference of 2·10⁻³. What do you conclude?
+  show: 4
+  options:
+    o7a8b5e: Look for the parameter whose gradient differs most.
+    o6b6945: Everything is perfect.
+    o73cc64: Turn gradient checking on during training.
+    o649883: The learning rate is too small.
+    of27389: Probably a bug in backprop.
+    o5699a8: Use more data.
+q25:
+  text: n[l−1] = 128, n[l] = 64, m = 32. Which shapes are right?
+  show: 4
+  options:
+    ob0898c: 'A[l]: (128, 32)'
+    o2a8ad4: 'W[l]: (64, 128)'
+    occ90d5: 'W[l]: (128, 64)'
+    o28ccad: 'Z[l]: (32, 64) in course notation'
+    oe30888: 'b[l]: (128, 1)'
+    o26ffde: 'Z[l]: (64, 32)'
+q26:
+  text: Which are hyperparameters?
+  show: 4
+  options:
+    od98615: The biases b[2].
+    o8ff268: The activations A[1].
+    o5aafcb: The weights W[1].
+    o29b1bc: The learning rate.
+    oc4ba79: The number of hidden layers.
+    o64c27f: The gradients dW.
+q27:
+  text: Why can deeper networks beat shallow ones of similar size?
+  show: 4
+  options:
+    o646a8a: Deep networks need no training.
+    ob56921: Some functions need exponentially more units when shallow.
+    o3645b8: Shallow networks can't use ReLU.
+    ob8725b: Deep networks never overfit.
+    odb2aa2: Layers build complex features out of simpler ones.
+    ob88108: Depth removes the need for data.
+q28:
+  text: nn.Linear(64, 128) has how many parameters?
+  show: 4
+  options:
+    o924617: '64'
+    oe31e4e: 64·128 weights plus 128 biases
+    o2b909d: 16,384
+    o94e7cc: 8,192
+    o9e692d: 8,320
+    o3cde03: '192'
+q29:
+  text: Which are true about Keras 3?
+  show: 4
+  options:
+    oe5ce85: You choose the backend with KERAS_BACKEND.
+    o6cb83c: It can run on TensorFlow, JAX or PyTorch.
+    o43635f: It replaced Python.
+    of672e7: It only runs on TensorFlow 1.
+    of9b7fb: It can't train models.
+    ofe7ce1: It needs a GPU.
+q30:
+  text: Which are good reasons to pass logits to the loss?
+  show: 4
+  options:
+    o9c1c10: It changes the optimum.
+    oea20f6: Numerical stability.
+    o3d8465: It removes the need for labels.
+    o89fad7: It makes the model smaller.
+    o1531bb: Logits are probabilities.
+    o3837a8: The library fuses sigmoid/softmax with the log.
+q31:
+  text: When might a gradient-boosted tree beat a deep network?
+  show: 4
+  options:
+    oedeff1: When you have little data and clear features.
+    oa79a93: On machine translation.
+    o53a779: On millions of images.
+    oe39d67: On speech recognition.
+    o8f1c3a: On raw audio.
+    oeae3d4: On a small table of structured data.
+q32:
+  text: Why does each course notebook use only one framework?
+  show: 4
+  options:
+    o81b403: PyTorch is not installed in Colab.
+    oe4eec8: Keras can't run with NumPy.
+    o234b11: TensorFlow is deprecated and removed.
+    o5a40d4: PyTorch and TensorFlow can clash in one Python process.
+    obade7c: It keeps the runtime clean and predictable.
+    ob63a66: Colab allows only one import.

@@ -1,0 +1,240 @@
+q1:
+  text: Your model doesn't fit the training set well. Which are orthogonal fixes?
+  show: 4
+  options:
+    oa20f2b: A bigger network.
+    of877db: More regularization.
+    ofb5f83: A bigger test set.
+    o22f966: Changing the cost function to match users.
+    o755d5e: A bigger dev set.
+    o4f79ff: A better optimization algorithm.
+q2:
+  text: 'Classifier A: precision 95%, recall 90%. B: 98%, 85%. Which help you choose?'
+  show: 4
+  options:
+    o16f216: Pick the one with the longer name.
+    oc57404: Report both numbers and never decide.
+    o31327d: Agree on one optimizing metric first.
+    of4f082: Compute F1 for each.
+    oac563a: Use training accuracy only.
+    od00c95: Average precision of A with recall of B.
+q3:
+  text: '''Maximize accuracy, but run in under 100 ms.'' Which are true?'
+  show: 4
+  options:
+    ocb072c: Accuracy is the optimizing metric.
+    o6b75d5: Accuracy is satisficing.
+    o4659e9: Neither matters.
+    oe17638: Both are optimizing metrics.
+    o68966c: Running time is a satisficing metric.
+    o0bc4ed: Running time should be maximized.
+q4:
+  text: Why might some people avoid early stopping?
+  show: 4
+  options:
+    of7aaa8: It needs a test set.
+    o7ffa5d: It always gives worse results.
+    oe6180b: It affects fitting the training set and the dev set at once.
+    of054bc: It removes regularization.
+    o40abda: It's less orthogonal than separate knobs.
+    o430a52: It's not supported by PyTorch.
+q5:
+  text: Users upload blurry phone photos, but your dev set is crisp web images. Which are right?
+  show: 4
+  options:
+    o75e4ae: Only use more training data.
+    ofda54b: Keep the dev set; users will adapt.
+    o5555eb: Remove the dev set.
+    o84b769: Change the dev set to look like users' photos.
+    oa2af92: Keep dev and test from the same distribution.
+    obdba4c: Use crisp images for test and blurry for dev.
+q6:
+  text: Metric prefers A, users prefer B. What does that tell you?
+  show: 4
+  options:
+    off03bc: The metric or dev set doesn't capture what matters.
+    o815cee: Users are wrong.
+    o248772: You should change the metric.
+    odc69da: Train longer on A.
+    o5e6a3c: Remove the dev set.
+    oed02e1: Use a bigger test set.
+q7:
+  text: Which are reasonable sizes?
+  show: 4
+  options:
+    o02a594: The same examples in train and test.
+    off845c: No test set ever.
+    o8adf2b: A dev set of 10 examples for a large project.
+    ob7e1d6: A test set big enough for confidence in the final number.
+    of99425: A dev set big enough to detect the differences you care about.
+    o3a0600: Always exactly 30% for test.
+q8:
+  text: How can you make some errors count more?
+  show: 4
+  options:
+    o66a0d6: Delete those examples from the dev set.
+    o4949f1: Train with a higher learning rate.
+    o8dea77: Change the evaluation metric.
+    o13194d: Use more dropout.
+    o9d5be0: Give those examples a larger weight in the error.
+    oc11521: Ignore them.
+q9:
+  text: Human 1%, train 8%, dev 10%. Which are true?
+  show: 4
+  options:
+    o0789c2: The model is at human level.
+    o12285b: Focus on reducing bias.
+    o686703: Variance is the main problem.
+    o833a3f: Get more dev data first.
+    od1eb92: Variance is 7%.
+    o21a133: Avoidable bias is 7%.
+q10:
+  text: Human 7.5%, train 8%, dev 10%. Which are true?
+  show: 4
+  options:
+    of7f7cd: Regularization or more data should help.
+    o5fbb85: Train longer for bias.
+    o9d203f: The model can't improve.
+    o2c44dc: A bigger network is the first fix.
+    oa1a89f: Avoidable bias is 8%.
+    ob1d6a8: Variance (2%) is bigger than avoidable bias (0.5%).
+q11:
+  text: To estimate Bayes error for X-ray reading, which human level do you use?
+  show: 4
+  options:
+    o2516fc: 'The best: a team of experienced doctors.'
+    o8228e1: The worst radiologist.
+    o6f8079: The average of all people.
+    oa3e463: The lowest error humans can reach.
+    o7255d1: A typical person off the street.
+    o33282c: A single student.
+q12:
+  text: Why does progress slow after human-level performance?
+  show: 4
+  options:
+    o19d56c: Models can't exceed humans, ever.
+    oa9e10f: It's harder to tell bias from variance.
+    oc0365a: The learning rate becomes zero.
+    odc9262: Humans can no longer label or explain the errors well.
+    oe73987: Computers stop learning.
+    o39281b: Training data disappears.
+q13:
+  text: Dev error 10%. Only 5 of 100 mistakes are dogs. Which are true?
+  show: 4
+  options:
+    o9d0ebd: Other categories may deserve the time more.
+    o7d87ec: You should collect a million dog images first.
+    o96c5ee: Fixing dogs can bring dev error to 9.5% at best.
+    o08e04e: Dog errors are always most important.
+    o5f867c: Fixing dogs will halve the error.
+    oa37c80: Error analysis isn't needed.
+q14:
+  text: Train 1%, train-dev 1.5%, dev 10%, human ≈ 0%. Which problem?
+  show: 4
+  options:
+    o388374: Too large a learning rate.
+    o2f2678: Data mismatch.
+    oc43a5c: No problem.
+    oeda4a6: Avoidable bias.
+    o4dbcdc: The gap between train-dev and dev.
+    o1d20c9: Variance.
+q15:
+  text: 200,000 web images, 10,000 phone photos (the target). Which split is right?
+  show: 4
+  options:
+    o742e96: Put the web images and some phone photos in training.
+    o056995: Dev and test from phone photos only.
+    ofb1d13: Throw away the web images.
+    o28a0b9: Use web images for dev and test.
+    ob45662: Train only on 10,000 phone photos, always.
+    oa1d810: Shuffle all 210,000 and split randomly.
+q16:
+  text: Which are risks of synthesizing training data?
+  show: 4
+  options:
+    o222783: It removes the need for a dev set.
+    o28e370: It can't be used with deep learning.
+    o6b9ccf: It always makes things worse.
+    oc958dd: The model may overfit to a small synthetic sample.
+    o32ab84: It may look realistic to you but cover a tiny part of reality.
+    ob2f046: It's illegal.
+q17:
+  text: When does transfer from task A to task B make sense?
+  show: 4
+  options:
+    o89767a: Only when A is a test set.
+    oedd5a0: A and B have the same kind of input.
+    o2ec9db: B has much more data than A.
+    oe2d86b: A and B have nothing in common.
+    o762482: A has much more data than B.
+    o93d628: Only when both are tiny.
+q18:
+  text: 'A self-driving image can contain several objects. For multi-task outputs you use:'
+  show: 4
+  options:
+    oefb63e: A sigmoid per label.
+    ob6338f: A separate dataset per pixel.
+    of1336f: One label per image only.
+    o702d36: One softmax over all labels.
+    o59148e: No loss for any label.
+    oa5018a: A loss that skips missing labels.
+q19:
+  text: Which are true about end-to-end learning?
+  show: 4
+  options:
+    ofc3816: It can't be used for speech.
+    o0e9731: A two-step system can win when each step has more data.
+    o24053f: It needs a lot of data for the whole mapping.
+    ob772cd: It means training without labels.
+    o80382c: It always beats pipelines.
+    o1b1d67: It needs no data.
+q20:
+  text: Which are common forms of transfer learning today?
+  show: 4
+  options:
+    o4ddf2f: Fine-tuning a pre-trained model.
+    oc63638: Always training from random weights.
+    o33dcb4: Training only on the test set.
+    o2a4621: Training a small head on top of a frozen model.
+    of679d1: Deleting the pre-trained weights before training.
+    oc0509e: Copying hyperparameters but not weights, only.
+q21:
+  text: Human 0.2%, train 0.4%, train-dev 4.5%, dev 35%. Which are true?
+  show: 4
+  options:
+    o2e7a3a: The biggest problem is data mismatch.
+    obb3499: Making training data look like users' data should help most.
+    o100519: A bigger network is the first fix.
+    o2ddd02: Variance is 30%.
+    o5cf917: Avoidable bias is the main problem.
+    o023402: Nothing can be done.
+q22:
+  text: Which are good uses of the test set?
+  show: 4
+  options:
+    ofa4068: One final, unbiased estimate.
+    oa2208b: Error analysis during development.
+    o5ea5ee: Early stopping.
+    o9435c2: Looking at it once, at the end.
+    o628721: Training the model.
+    o44031a: Choosing hyperparameters every day.
+q23:
+  text: Why did synthetic phone-style images help in the project?
+  show: 4
+  options:
+    o792447: They made training data more like the dev data.
+    ob975a0: They removed the need for a dev set.
+    odfd7f1: They reduced the number of parameters.
+    o6a6c8a: They lowered the learning rate.
+    o40030e: They were added to the test set.
+    o82491c: They reduced data mismatch.
+q24:
+  text: Which are signs your metric needs changing?
+  show: 4
+  options:
+    o297669: You use F1.
+    o56d2fc: Some errors are much worse than others but count the same.
+    o52e3fa: Your dev set is large.
+    o08e83d: Your training loss is low.
+    o03027a: The metric is a single number.
+    ocd3c16: Users prefer the model the metric ranks lower.

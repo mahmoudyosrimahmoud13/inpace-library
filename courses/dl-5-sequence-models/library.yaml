@@ -1,0 +1,17 @@
+official: true
+author: inPace
+license: CC-BY-SA-4.0
+tags:
+- deep learning
+- nlp
+- rnn
+- lstm
+- transformers
+- attention
+- pytorch
+- keras
+- andrew ng
+- interview
+updated: '2026-11-13'
+credit: 'Slides: Deep Learning Specialization by DeepLearning.AI (Andrew Ng), shared by DeepLearning.AI under Creative
+  Commons BY-SA 2.0 for non-commercial educational use. Notes, notebooks, charts, tasks and questions: inPace.'

@@ -398,6 +398,10 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
 .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .6rem 0; }
 .tag { font-size: .8rem; font-weight: 600; border: 2px solid var(--ink); padding: 0 .45rem; }
 .section-title { font-size: 1.6rem; margin: 2.2rem 0 1rem; }
+.nbs { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; }
+.nbs .nb { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; justify-content: space-between;
+  border: 2px solid var(--hair); padding: .8rem 1rem; }
+.nbs .actions { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; }
 .modules { list-style: none; margin: 0; padding: 0; counter-reset: mod; display: grid; gap: 1rem; }
 .mod { background: var(--surface); border: 3px solid var(--ink); }
 .mod summary { display: flex; gap: 1rem; align-items: center; cursor: pointer; padding: .9rem 1.1rem; list-style: none; font-weight: 700; }
@@ -634,6 +638,36 @@ def outline_html(c: dict) -> str:
     return '<ol class="modules">' + "".join(out) + "</ol>" if out else ""
 
 
+REPO_BLOB = "https://github.com/mahmoudyosrimahmoud13/inpace-library/blob/main/courses"
+REPO_RAW = "https://raw.githubusercontent.com/mahmoudyosrimahmoud13/inpace-library/main/courses"
+
+
+def notebooks_html(c: dict) -> str:
+    """Notebooks that come with a course: open in Colab, download, or read the PDF version (if there is one)."""
+    folder = ROOT / "courses" / c["id"] / "files"
+    nbs = sorted(folder.glob("*.ipynb")) if folder.is_dir() else []
+    if not nbs:
+        return ""
+    e = html.escape
+    rows = []
+    for nb in nbs:
+        name = nb.stem
+        try:
+            first = json.loads(nb.read_text(encoding="utf-8"))["cells"][0]["source"]
+            title = "".join(first).splitlines()[0].lstrip("# ").strip() or name
+        except Exception:
+            title = name
+        colab = f"https://colab.research.google.com/github/mahmoudyosrimahmoud13/inpace-library/blob/main/courses/{c['id']}/files/{nb.name}"
+        links = [f'<a class="btn" href="{e(colab)}" target="_blank" rel="noopener">{t("Open in Colab", "افتح في Colab")}</a>',
+                 f'<a class="btn quiet" href="{e(REPO_RAW)}/{e(c["id"])}/files/{e(nb.name)}" download>{t("Download notebook", "حمّل الدفتر")}</a>']
+        if (folder / f"{name}.pdf").is_file():
+            links.append(f'<a class="btn quiet" href="{e(REPO_BLOB)}/{e(c["id"])}/files/{e(name)}.pdf" target="_blank" rel="noopener">{t("PDF version", "نسخة PDF")}</a>')
+        rows.append(f'<li class="nb"><span dir="auto"><b>{e(title)}</b><br><code>{e(nb.name)}</code></span><span class="actions">{"".join(links)}</span></li>')
+    return (f'<h2 class="section-title">{t("Notebooks and downloads", "الدفاتر والتنزيلات")}</h2>'
+            f'<p class="by">{t("They also come inside the course. Colab runs them free in your browser.", "وهي موجودة داخل الدورة أيضًا. يشغّلها Colab مجانًا في متصفحك.")}</p>'
+            f'<ul class="nbs">{"".join(rows)}</ul>')
+
+
 def course_page(c: dict) -> str:
     e = html.escape
     try:  # the app's own renderer: code colours, each paragraph's direction, and diagrams, like in inPace
@@ -673,6 +707,7 @@ def course_page(c: dict) -> str:
 <h2 class="section-title">{t("What's inside", "محتوى الدورة")}</h2>
 <p class="by">{t("Each module ends with tasks. The next module opens when they're done.", "تنتهي كل وحدة بمهام، وتُفتح الوحدة التالية عند إنجازها.")}</p>
 {outline_html(c) or '<p class="empty">' + t("Add the course to see its lessons.", "أضف الدورة لترى دروسها.") + '</p>'}
+{notebooks_html(c)}
 {sample_html}
 <div class="credit"><p>{t("License", "الرخصة")}: <bdi>{e(c.get("license") or "")}</bdi> · {t("Updated", "آخر تحديث")} <bdi>{e(str(c.get("updated") or ""))}</bdi></p>{credit}</div>
 </div>

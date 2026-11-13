@@ -1,0 +1,180 @@
+q1:
+  right:
+  - od77464
+  - o202ab7
+  why: Shared weights, carried state.
+q2:
+  right:
+  - occd685
+  - o2aa0f5
+  why: Read all, then decide.
+q3:
+  right:
+  - o286566
+  - o8c7adf
+  why: Unroll then backprop.
+q4:
+  right:
+  - o62855e
+  - o9e7f4e
+  why: Tokenizers split rare words.
+q5:
+  right:
+  - o4b430f
+  - ob12e1c
+  why: Next-token prediction.
+q6:
+  right:
+  - o711f4c
+  - o016996
+  why: softmax(z / T) sharpens.
+q7:
+  right:
+  - o457f62
+  - o3f6298
+  why: Trade-offs.
+q8:
+  right:
+  - oec0e77
+  - o1d1440
+  why: Faster, stable training.
+q9:
+  right:
+  - od727e8
+  - oa63750
+  why: Vanishing gradients.
+q10:
+  right:
+  - oef811d
+  - o422a4f
+  why: Forget, update (input), output.
+q11:
+  right:
+  - oc7a9fe
+  - oaf31d5
+  why: Cap the gradient norm.
+q12:
+  right:
+  - ob01948
+  - o61b1fa
+  why: It needs the whole sequence.
+q13:
+  right:
+  - o746b62
+  - o39f86f
+  why: No notion of similarity.
+q14:
+  right:
+  - ob95dea
+  - of4e03f
+  why: Direction matters.
+q15:
+  right:
+  - o45b808
+  - o6d412a
+  why: Lookup per token.
+q16:
+  right:
+  - o1b5fca
+  - oc9319f
+  why: Directions carry meaning.
+q17:
+  right:
+  - o1c463c
+  - o3f4176
+  why: Real pair or not?
+q18:
+  right:
+  - o81ed2d
+  - of6dd07
+  why: Order matters.
+q19:
+  right:
+  - o0d2de3
+  - oe7f62e
+  why: Then equalize pairs.
+q20:
+  right:
+  - oa14484
+  - o37fad3
+  why: word2vec.
+q21:
+  right:
+  - o7cf607
+  - o58242b
+  why: Approximate, tunable.
+q22:
+  right:
+  - oc21975
+  - oe6c1f3
+  why: The model preferred the right answer.
+q23:
+  right:
+  - of2952e
+  - o9a7bed
+  why: Fair comparison of lengths.
+q24:
+  right:
+  - o2c1b22
+  - ob55049
+  why: Overlap with references.
+q25:
+  right:
+  - oa0050f
+  - o36cc40
+  why: A learned weighted sum.
+q26:
+  right:
+  - o5ce246
+  - o380b30
+  why: The bottleneck.
+q27:
+  right:
+  - oef09d7
+  - oc917c5
+  why: Alignment-free training.
+q28:
+  right:
+  - o4b79f3
+  - o446582
+  why: A distribution over positions.
+q29:
+  right:
+  - o1ab92c
+  - o18d2f4
+  why: Parallel and global.
+q30:
+  right:
+  - o9245f0
+  - o25c0e6
+  why: Stable softmax.
+q31:
+  right:
+  - oe9fd01
+  - o018b24
+  why: Next-token prediction needs it.
+q32:
+  right:
+  - oc9df03
+  - occ594b
+  why: GPT-style.
+q33:
+  right:
+  - o5ad525
+  - oc3c3c3
+  why: Parallel and global.
+q34:
+  right:
+  - ofe44a5
+  - o73e8ab
+  why: Every pair of positions.
+q35:
+  right:
+  - o7ca367
+  - ofacc30
+  why: Start pre-trained, then evaluate.
+q36:
+  right:
+  - o348e22
+  - o7c70db
+  why: Nucleus sampling.

@@ -1,0 +1,120 @@
+q1:
+  right:
+  - oa20f2b
+  - o4f79ff
+  why: 'First knob: fit training.'
+q2:
+  right:
+  - of4f082
+  - o31327d
+  why: One number makes decisions fast.
+q3:
+  right:
+  - ocb072c
+  - o68966c
+  why: Optimize one, satisfy the rest.
+q4:
+  right:
+  - oe6180b
+  - o40abda
+  why: One knob, two jobs.
+q5:
+  right:
+  - o84b769
+  - oa2af92
+  why: Aim at the target you care about.
+q6:
+  right:
+  - off03bc
+  - o248772
+  why: Fix the target first.
+q7:
+  right:
+  - of99425
+  - ob7e1d6
+  why: Size by purpose.
+q8:
+  right:
+  - o9d5be0
+  - o8dea77
+  why: Weighted error.
+q9:
+  right:
+  - o21a133
+  - o12285b
+  why: 8 − 1 = 7, 10 − 8 = 2.
+q10:
+  right:
+  - ob1d6a8
+  - of7f7cd
+  why: Small avoidable bias here.
+q11:
+  right:
+  - o2516fc
+  - oa3e463
+  why: Bayes error is the best possible.
+q12:
+  right:
+  - odc9262
+  - oa9e10f
+  why: Fewer tools to diagnose.
+q13:
+  right:
+  - o96c5ee
+  - o9d0ebd
+  why: That's the ceiling.
+q14:
+  right:
+  - o2f2678
+  - o4dbcdc
+  why: Same distribution generalizes; the new one doesn't.
+q15:
+  right:
+  - o056995
+  - o742e96
+  why: Dev and test = target distribution.
+q16:
+  right:
+  - oc958dd
+  - o32ab84
+  why: The 20 synthetic cars problem.
+q17:
+  right:
+  - oedd5a0
+  - o762482
+  why: And A's features help B.
+q18:
+  right:
+  - oefb63e
+  - oa5018a
+  why: Several labels can be true at once.
+q19:
+  right:
+  - o24053f
+  - o0e9731
+  why: The key question is data.
+q20:
+  right:
+  - o4ddf2f
+  - o2a4621
+  why: Start from a foundation model.
+q21:
+  right:
+  - o2e7a3a
+  - obb3499
+  why: 35 − 4.5 = 30.5 points of mismatch.
+q22:
+  right:
+  - ofa4068
+  - o9435c2
+  why: Otherwise it stops being unbiased.
+q23:
+  right:
+  - o792447
+  - o82491c
+  why: Close the distribution gap.
+q24:
+  right:
+  - ocd3c16
+  - o56d2fc
+  why: Define the target, then hit it.
