@@ -47,11 +47,13 @@ modules:
       2. Write the empirical risk for a linear model with squared loss, with and without an L2 penalty.
       3. Describe how you would use 5-fold cross-validation to choose λ, step by step.
       4. Name one way you could accidentally "leak" test information into training.
+    optional: true
   - id: m1-explain
     type: explain
     prompt: Explain empirical risk minimization in your own words, and why minimizing training error alone is not
       the goal. What do regularization and cross-validation each add?
     min_words: 60
+    optional: true
   - id: m1-quiz
     type: quiz
     questions:
@@ -86,11 +88,13 @@ modules:
       1. Write the negative log-likelihood of μ and minimize it. (You should get the sample mean.)
       2. Now add a prior μ ~ N(0, τ²). Write the negative log-posterior and minimize it. What is μ_MAP?
       3. What happens to μ_MAP as N → ∞? As τ → ∞? As τ → 0? Explain each in one sentence.
+    optional: true
   - id: m2-explain
     type: explain
     prompt: Explain the difference between maximum likelihood, MAP and full Bayesian inference. Why does a Gaussian
       prior on the weights of linear regression lead to the same answer as ridge regression?
     min_words: 60
+    optional: true
   - id: m2-quiz
     type: quiz
     questions:
@@ -128,11 +132,13 @@ modules:
       Then answer, using d-separation:
       1. Are talent and difficulty independent if you know nothing else?
       2. Are they independent if you know the grade? Explain the "explaining away" effect in one or two sentences.
+    optional: true
   - id: m3-explain
     type: explain
     prompt: Explain how Bayesian model selection prefers simpler models without an explicit penalty (the Occam's
       razor effect of the evidence). Use a picture of how a simple and a complex model spread probability over datasets.
     min_words: 60
+    optional: true
   - id: m3-quiz
     type: quiz
     questions:
@@ -164,11 +170,13 @@ modules:
          `np.linalg.solve(Phi.T @ Phi, Phi.T @ y)`.
       3. Add ridge with λ = 1e-3 and 1e-1 for degree 12.
       4. Measure RMSE on 200 new points. Paste your table of results and say which model you'd pick.
+    optional: true
   - id: m4-explain
     type: explain
     prompt: Explain why linear regression can fit curves, what makes it "linear", and how the normal equations come
       out of maximum likelihood with Gaussian noise.
     min_words: 60
+    optional: true
   - id: m4-quiz
     type: quiz
     questions:
@@ -205,11 +213,13 @@ modules:
          data.
       3. Draw 5 parameter vectors from the posterior (`np.random.multivariate_normal`) and plot their functions.
       4. Where is the band widest, and why?
+    optional: true
   - id: m5-explain
     type: explain
     prompt: Explain the two sources of uncertainty in the Bayesian predictive distribution φ*ᵀS_Nφ* + σ², and why
       only one of them shrinks as you collect more data.
     min_words: 60
+    optional: true
   - id: m5-quiz
     type: quiz
     questions:
@@ -246,11 +256,13 @@ modules:
       3. What fraction of the variance does the first component keep?
       4. Project each point onto the first component (code zₙ and reconstruction x̃ₙ) and check that the average squared
          reconstruction error equals λ₂.
+    optional: true
   - id: m6-explain
     type: explain
     prompt: Explain why the direction of maximum variance is an eigenvector of the data covariance matrix. Use the
       Lagrangian of "maximize bᵀSb subject to bᵀb = 1".
     min_words: 60
+    optional: true
   - id: m6-quiz
     type: quiz
     questions:
@@ -288,11 +300,13 @@ modules:
       3. Plot the 2D codes coloured by digit. Which digits overlap?
       4. Plot the cumulative explained variance. How many components keep 90%? Rebuild one image with that many and show
          it next to the original.
+    optional: true
   - id: m7-explain
     type: explain
     prompt: Explain the practical steps of PCA from raw data to a reconstruction, and when you should standardize
       features first. Then say in one or two sentences what probabilistic PCA adds.
     min_words: 60
+    optional: true
   - id: m7-quiz
     type: quiz
     questions:
@@ -332,11 +346,13 @@ modules:
       2. M-step: update μ₁ and μ₂ (and the weights).
       3. Do one more round. Where are the means heading?
       4. Optional: check with `sklearn.mixture.GaussianMixture(2)` on the same data.
+    optional: true
   - id: m8-explain
     type: explain
     prompt: 'Explain the EM algorithm for Gaussian mixtures in your own words: what the E-step and M-step compute,
       why we can''t just solve for the parameters directly, and why the result can depend on the starting point.'
     min_words: 60
+    optional: true
   - id: m8-quiz
     type: quiz
     questions:
@@ -364,11 +380,13 @@ modules:
       3. Rescale (w, b) so the closest points have value exactly 1. What is the margin 1/‖w‖ then? Which points are the
          support vectors?
       4. Optional: fit `sklearn.svm.SVC(kernel="linear", C=1000)` and compare `coef_`, `intercept_` and `support_vectors_`.
+    optional: true
   - id: m9-explain
     type: explain
     prompt: Explain why maximizing the margin is the same as minimizing ‖w‖ (with the scaling convention), and what
       the soft-margin constant C trades off.
     min_words: 60
+    optional: true
   - id: m9-quiz
     type: quiz
     questions:
@@ -399,11 +417,13 @@ modules:
          eigenvalues ≥ 0?
       3. In scikit-learn, make `make_circles(noise=0.1, factor=0.4)` data. Fit an SVC with a linear kernel and with an RBF
          kernel. Report both accuracies and the number of support vectors, and explain the difference.
+    optional: true
   - id: m10-explain
     type: explain
     prompt: 'Explain the kernel trick in your own words: why the dual SVM only needs inner products, and how a kernel
       lets a linear method draw curved boundaries without computing high-dimensional features.'
     min_words: 60
+    optional: true
   - id: m10-quiz
     type: quiz
     questions:

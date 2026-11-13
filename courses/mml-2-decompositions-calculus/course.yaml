@@ -44,11 +44,13 @@ modules:
          elimination to triangular form. Do they agree?
       2. Without computing, what is det(2A) for this 3 × 3 matrix? And det(Aᵀ)?
       3. Check tr(AB) = tr(BA) for A = [[1, 2], [3, 4]], B = [[0, 1], [1, 0]], even though AB ≠ BA.
+    optional: true
   - id: m1-explain
     type: explain
     prompt: Explain what the determinant means geometrically, and use that meaning to say why det(A) = 0 exactly
       when A has no inverse.
     min_words: 60
+    optional: true
   - id: m1-quiz
     type: quiz
     questions:
@@ -80,11 +82,13 @@ modules:
       2. Check: their product is det A and their sum is tr A.
       3. Check that the two eigenvectors are orthogonal. Which theorem promised that?
       4. Use the explorer from day 1: enter this matrix (press "symmetric") and compare with your answer.
+    optional: true
   - id: m2-explain
     type: explain
     prompt: Explain what an eigenvector is to someone who has seen matrices but not this idea. Why is det(A − λI)
       = 0 the equation that finds eigenvalues?
     min_words: 60
+    optional: true
   - id: m2-quiz
     type: quiz
     questions:
@@ -114,11 +118,13 @@ modules:
       2. Diagonalize B = [[2, 1], [1, 2]] (you found its eigenvectors yesterday): write P (normalize the columns), D, and
          check B = PDPᵀ.
       3. Use it to compute B⁵ with almost no work.
+    optional: true
   - id: m3-explain
     type: explain
     prompt: Explain A = PDP⁻¹ as three steps of geometry (what each factor does to a vector), and why it makes computing
       A¹⁰⁰ easy.
     min_words: 60
+    optional: true
   - id: m3-quiz
     type: quiz
     questions:
@@ -149,11 +155,13 @@ modules:
       2. Find the unit eigenvectors v₁, v₂ of AᵀA.
       3. Compute u₁ = Av₁/σ₁ and u₂ = Av₂/σ₂, and check they are orthonormal.
       4. Check with NumPy: `np.linalg.svd(A)` (signs may differ: that's fine).
+    optional: true
   - id: m4-explain
     type: explain
     prompt: Explain the SVD as "rotate, stretch, rotate" in your own words. Why does every matrix (even a non-square
       or non-diagonalizable one) have an SVD, while not every matrix has an eigendecomposition?
     min_words: 60
+    optional: true
   - id: m4-quiz
     type: quiz
     questions:
@@ -189,11 +197,13 @@ modules:
       2. Rebuild it with k = 1, 5, 20, 50 singular values and plot them side by side.
       3. For each k, print the relative error ‖A − Â(k)‖_F / ‖A‖_F and the storage (k·(m + n + 1) numbers vs m·n).
       4. Which k would you choose, and why? Paste your numbers and your reasoning.
+    optional: true
   - id: m5-explain
     type: explain
     prompt: Explain why keeping the largest singular values gives a good approximation of a matrix. What does the
       Eckart-Young theorem promise, and how would you decide how many to keep?
     min_words: 60
+    optional: true
   - id: m5-quiz
     type: quiz
     questions:
@@ -240,11 +250,13 @@ modules:
       2. In which direction should you move from (1, 0) to increase f fastest? To decrease it fastest?
       3. Now let x = cos t and y = sin t. Use the multivariate chain rule to get df/dt at t = 0, and check by plugging x(t),
          y(t) into f and differentiating directly.
+    optional: true
   - id: m6-explain
     type: explain
     prompt: Explain why the gradient points in the direction of steepest increase, using the first-order Taylor
       approximation f(x + h) ≈ f(x) + ∇f(x)·h.
     min_words: 60
+    optional: true
   - id: m6-quiz
     type: quiz
     questions:
@@ -279,11 +291,13 @@ modules:
       2. In NumPy, check it at x = (1, −2) with finite differences: f(x + 1e-6·eᵢ) − f(x), divided by 1e-6, for i = 1, 2.
       3. Derive the gradient of L(θ) = ‖y − Φθ‖² + λ‖θ‖² and set it to 0. What formula for θ do you get?
       Paste your derivation and the numbers.
+    optional: true
   - id: m7-explain
     type: explain
     prompt: Explain what a Jacobian is, what its shape is and why, and how the chain rule for vector-valued functions
       becomes a product of Jacobians.
     min_words: 60
+    optional: true
   - id: m7-quiz
     type: quiz
     questions:
@@ -334,11 +348,13 @@ modules:
       2. With x = 2, w = 0.5, b = −1, y = 1: do the forward pass (write z, a, L).
       3. Do the backward pass by hand: ∂L/∂a, ∂a/∂z (use σ′ = σ(1 − σ)), ∂L/∂z, then ∂L/∂w and ∂L/∂b.
       4. Optional: check with PyTorch (`requires_grad=True`, `L.backward()`) or with finite differences.
+    optional: true
   - id: m8-explain
     type: explain
     prompt: 'Explain backpropagation in your own words: why going backwards from the loss is efficient, and what
       it has to do with the chain rule.'
     min_words: 60
+    optional: true
   - id: m8-quiz
     type: quiz
     questions:

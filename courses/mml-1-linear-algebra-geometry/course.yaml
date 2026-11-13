@@ -47,11 +47,13 @@ modules:
       3. Change one coefficient so that the system has exactly one solution for every c, and solve it for c = 6.
 
       Write your answers here (a phone photo of your sketch is welcome if you keep notes in a file).
+    optional: true
   - id: m1-explain
     type: explain
     prompt: 'In your own words: why can a system of linear equations never have exactly two solutions? Use the picture
       of lines or planes, or the idea that if x and y are solutions, so is every point between them.'
     min_words: 60
+    optional: true
   - id: m1-quiz
     type: quiz
     questions:
@@ -106,11 +108,13 @@ modules:
       2. Which variable is free? Write **all** solutions as x = x_p + λ·x_k.
       3. Check one solution with λ = 1 by putting it back into all three equations.
       (Optional: check with NumPy: `np.linalg.matrix_rank` and `np.linalg.lstsq`.)
+    optional: true
   - id: m2-explain
     type: explain
     prompt: Explain in your own words why the set of all solutions of Ax = b is "one particular solution plus the
       kernel". What would go wrong if you added two particular solutions instead?
     min_words: 60
+    optional: true
   - id: m2-quiz
     type: quiz
     questions:
@@ -153,11 +157,13 @@ modules:
       2. Which vectors are pivot columns? Write each non-pivot vector as a combination of the pivot ones.
       3. What is the dimension of their span? Is it a line, a plane or all of ℝ³?
       4. Using rank-nullity, what is the dimension of the kernel of this matrix?
+    optional: true
   - id: m3-explain
     type: explain
     prompt: Explain the difference between "these vectors span the space" and "these vectors are a basis". Give
       an example of a set that spans ℝ² but is not a basis, and say why every basis of ℝ² has exactly two vectors.
     min_words: 60
+    optional: true
   - id: m3-quiz
     type: quiz
     questions:
@@ -209,11 +215,13 @@ modules:
       2. Now use the basis b₁ = (1, 1), b₂ = (1, −1). Write S (its columns are b₁, b₂), compute S⁻¹ and Ã = S⁻¹AS.
       3. Check your Ã: apply it to the coordinates of b₁ in the new basis, (1, 0), and translate the result back with S.
          You should get the rotation of b₁, which is (−1, 1).
+    optional: true
   - id: m4-explain
     type: explain
     prompt: Explain change of basis to a friend who knows matrices but not this topic. Why does the same linear
       map have different matrices, and what stays the same about it (for example, its rank or its determinant)?
     min_words: 60
+    optional: true
   - id: m4-quiz
     type: quiz
     questions:
@@ -251,11 +259,13 @@ modules:
       3. Now use the inner product ⟨x, y⟩ = xᵀAy with A = [[2, 1], [1, 2]]. First check A is positive definite (hint:
          xᵀAx = 2x₁² + 2x₁x₂ + 2x₂², write it as a sum of squares). Then compute the new lengths and the new angle.
       4. Are x and y "more" or "less" orthogonal with the new inner product?
+    optional: true
   - id: m5-explain
     type: explain
     prompt: Why do we need the matrix in ⟨x, y⟩ = xᵀAy to be symmetric and positive definite? Say what would go
       wrong with lengths or angles if it weren't.
     min_words: 60
+    optional: true
   - id: m5-quiz
     type: quiz
     questions:
@@ -292,11 +302,13 @@ modules:
       2. Solve the normal equations for λ, then π(x) = Bλ.
       3. Check that x − π(x) is orthogonal to both b₁ and b₂.
       4. What is the distance from x to the plane?
+    optional: true
   - id: m6-explain
     type: explain
     prompt: 'Explain the "three steps" recipe for orthogonal projection in your own words, and why the condition
       "the error is orthogonal to the subspace" gives the closest point (hint: Pythagoras).'
     min_words: 60
+    optional: true
   - id: m6-quiz
     type: quiz
     questions:
@@ -330,11 +342,13 @@ modules:
       2. Check R(60°)ᵀR(60°) = I with numbers.
       3. In 3D, take the rotation by 90° about the x-axis and the rotation by 90° about the z-axis. Multiply them in both
          orders and show the results differ. Apply both to the vector (0, 1, 0) to see it.
+    optional: true
   - id: m7-explain
     type: explain
     prompt: What makes a matrix a rotation? Explain, in your own words, why an orthogonal matrix keeps lengths and
       angles (use ⟨Ax, Ay⟩ = xᵀAᵀAy), and how you can tell a rotation from a reflection.
     min_words: 60
+    optional: true
   - id: m7-quiz
     type: quiz
     questions:

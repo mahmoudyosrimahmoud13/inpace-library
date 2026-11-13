@@ -52,11 +52,13 @@ modules:
       2. Draw its cumulative distribution function F(x).
       3. Now let U be uniform on [0, 2]. What is its density? What is P(0.5 ≤ U ≤ 1.2)? Why is f(u) = 0.5, not 1, and why is
          P(U = 1) = 0?
+    optional: true
   - id: m1-explain
     type: explain
     prompt: Explain the difference between a probability mass function and a probability density function. Why can
       a density be bigger than 1, while a probability can't?
     min_words: 60
+    optional: true
   - id: m1-quiz
     type: quiz
     questions:
@@ -94,11 +96,13 @@ modules:
       3. Redo it with odds: prior odds 1 : 4, likelihood ratio 30 : 1. Do you get the same answer?
       4. If the filter also sees the word "meeting" (in 5% of spam and 20% of normal emails), and we assume the words are
          independent given the class, what is P(spam | "prize" and "meeting")?
+    optional: true
   - id: m2-explain
     type: explain
     prompt: Explain Bayes' theorem with the words prior, likelihood, posterior and evidence, using an example of
       your own. Why does a rare condition stay fairly unlikely even after a positive result from a good test?
     min_words: 60
+    optional: true
   - id: m2-quiz
     type: quiz
     questions:
@@ -131,11 +135,13 @@ modules:
       3. Let z = 2x − y. Use V[aX + bY] = a²V[X] + b²V[Y] + 2ab·Cov[X, Y] to get V[z], then check by computing z for each
          point directly.
       4. Give an example (your own) of two variables that are uncorrelated but not independent.
+    optional: true
   - id: m3-explain
     type: explain
     prompt: Explain why "uncorrelated" does not mean "independent". Use an example, and say what correlation actually
       measures.
     min_words: 60
+    optional: true
   - id: m3-quiz
     type: quiz
     questions:
@@ -185,11 +191,13 @@ modules:
       2. Find p(x₂ | x₁ = 3): its mean and variance, using the conditioning formula.
       3. Let y = x₁ + x₂. What is its distribution? (Use A = [1, 1].)
       4. Find the eigenvectors of Σ. Along which direction are the contour ellipses longest? Check in the explorer.
+    optional: true
   - id: m4-explain
     type: explain
     prompt: 'Explain in your own words what conditioning on x₁ does to a 2D Gaussian: why the mean of x₂ moves,
       why its variance shrinks, and why the amount of shrinking doesn''t depend on the observed value.'
     min_words: 60
+    optional: true
   - id: m4-quiz
     type: quiz
     questions:
@@ -219,11 +227,13 @@ modules:
       1. What is the posterior? Write its mean, its mode (MAP estimate) and the MLE. Which is closest to 0.5, and why?
       2. You flip 12 more times and get 5 heads. Update again. Is it the same as updating once with all 24 flips?
       3. Write the Bernoulli distribution in exponential-family form: what are φ(x) and θ (the natural parameter)?
+    optional: true
   - id: m5-explain
     type: explain
     prompt: What does it mean for a prior to be conjugate, and why is it convenient? Explain with the Beta–Bernoulli
       example, including what α and β "mean".
     min_words: 60
+    optional: true
   - id: m5-quiz
     type: quiz
     questions:
@@ -253,11 +263,13 @@ modules:
          samples and compare their mean with the theory.
       3. X ~ N(0, 1) and Y = 2X + 3. Use the change-of-variables formula to get the density of Y, and check it matches
          N(3, 4).
+    optional: true
   - id: m6-explain
     type: explain
     prompt: Explain why a density has to be multiplied by |det J| when you change variables, using the idea that
       probability mass must be conserved when space is stretched or squashed.
     min_words: 60
+    optional: true
   - id: m6-quiz
     type: quiz
     questions:
@@ -293,11 +305,13 @@ modules:
       2. For which γ does it converge? Which γ is best (makes the slowest coordinate shrink fastest)?
       3. Write 10 lines of Python to run 50 steps with γ = 0.1, 0.18 and 0.21, printing f each time. Describe what you see.
       4. Add momentum α = 0.7 with γ = 0.05 and compare.
+    optional: true
   - id: m7-explain
     type: explain
     prompt: Explain why gradient descent zig-zags in a long, narrow valley, and how momentum helps. Use the idea
       that the gradient is steep across the valley and gentle along it.
     min_words: 60
+    optional: true
   - id: m7-quiz
     type: quiz
     questions:
@@ -322,11 +336,13 @@ modules:
       2. Check your answer with course 1: it's the projection of the origin onto that line.
       3. Maximize the entropy H = −p₁ln p₁ − p₂ln p₂ − p₃ln p₃ subject to p₁ + p₂ + p₃ = 1. Which distribution do you get, and
          does it make sense?
+    optional: true
   - id: m8-explain
     type: explain
     prompt: Explain why, at the best point of f on a curve g(x) = 0, the gradients of f and g must be parallel.
       Use a picture of contour lines touching the curve.
     min_words: 60
+    optional: true
   - id: m8-quiz
     type: quiz
     questions:
@@ -360,11 +376,13 @@ modules:
       4. f(x) = ‖Ax − b‖² + λ‖x‖² on ℝⁿ (λ > 0)
 
       For the one that isn't convex, find two local minima.
+    optional: true
   - id: m9-explain
     type: explain
     prompt: Why is convexity so valuable in optimization? Explain what goes wrong with gradient descent on a non-convex
       function, and why deep learning still works in practice even though its loss isn't convex.
     min_words: 60
+    optional: true
   - id: m9-quiz
     type: quiz
     questions:
