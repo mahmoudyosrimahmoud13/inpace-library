@@ -1,0 +1,10 @@
+{
+ "kind": "library-course",
+ "course": "excel-tutorial-for-data-analysts",
+ "version": "1",
+ "hash": "d6c3403585055517d32077e4731c07e795da1f7051c31419dcee41baafff2f2d",
+ "author": "b51fd359f6b85e1f82681285b7811d67edce1df11e7ff58bcfca82af6cd54bb3",
+ "name": "Zee",
+ "at": "2026-11-13T18:06:49Z",
+ "sig": "d044e618a9d3782ba98157dc2f6010800e5dfdc93216bda7e17fc20a86866718b89271c96f09dff354ed2367927db0635447293e6aaed8d8e999b4f19b999904"
+}

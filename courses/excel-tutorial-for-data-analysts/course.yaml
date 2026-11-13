@@ -1,0 +1,56 @@
+id: excel-tutorial-for-data-analysts
+title: Excel tutorial for data analysts
+version: '1'
+description: ''
+language: en
+modules:
+- id: m1
+  title: 'Lesson 1: pivot tables in excel'
+  lessons:
+  - id: m1-l1
+    title: Pivot Tables in Excel | Excel Tutorials for Beginners
+    media: https://youtu.be/lH7HfwUFnYA?si=m-b1G-vdYx2kMa-Q
+  requires: []
+- id: m2
+  title: 'Lesson 2: formulas in excel'
+  lessons:
+  - id: m2-l1
+    title: Formulas in Excel | Excel Tutorials for Beginners
+    media: https://youtu.be/XRPyj7cKVsQ?si=J3oUUMwsti8ibwSt
+  requires: []
+- id: m3
+  title: 'Lesson 3: Xlookup in excel'
+  lessons:
+  - id: m3-l1
+    title: XLOOKUP in Excel | Excel Tutorials for Beginners
+    media: https://youtu.be/Z7hPEwCzk2s?si=TFJh8zChRB3BMRO_
+  requires: []
+- id: m4
+  title: 'Lesson 4: conditional formatting in excel'
+  lessons:
+  - id: m4-l1
+    title: Conditional Formatting in Excel | Excel Tutorials for Beginners
+    media: https://youtu.be/_eZRkmRfVTM?si=l_ipX4YCl9U3_3oW
+  requires: []
+- id: m5
+  title: 'Lesson 5: charts in excel'
+  lessons:
+  - id: m5-l1
+    title: Charts in Excel | Excel Tutorials for Beginners
+    media: https://youtu.be/gMAHXrty6wI?si=RhU07cmujrA-QoyH
+  requires: []
+- id: m6
+  title: 'Lesson6: cleaning data in excel'
+  lessons:
+  - id: m6-l1
+    title: Cleaning Data in Excel | Excel Tutorials for Beginners
+    media: https://youtu.be/_jmiEGZ6PIY?si=7MTypvt37MK9nyDZ
+  requires: []
+- id: m7
+  title: 'Lesson 7: full project in excel'
+  lessons:
+  - id: m7-l1
+    title: Full Project in Excel | Excel Tutorials for Beginners
+    media: https://youtu.be/opJgMj1IUrc?si=zMhgQcgvxVWwpkQW
+  requires: []
+image: cover.jpg
