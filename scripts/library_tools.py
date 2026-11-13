@@ -416,7 +416,20 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
 .sample { background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 1.4rem clamp(1rem, 4vw, 2.6rem); }
 [dir=rtl] .sample { box-shadow: -6px 6px 0 var(--ink); }
 .sample h2 { font-size: 1.5rem; margin-top: 0; }
-.prose { line-height: 1.7; max-width: 46em; }
+.prose { line-height: 1.7; max-width: 46em; margin-inline-end: auto; }
+.prose > * { max-width: 100%; }
+.prose [dir=rtl] { text-align: right; } .prose [dir=ltr] { text-align: left; }
+.prose pre.mermaid { background: var(--surface); color: var(--ink); text-align: center; white-space: pre-wrap; border: 2px solid var(--hair); }
+.prose pre.mermaid svg { max-width: 100%; height: auto; }
+.prose pre code { color: #E6EDF3; background: none; padding: 0; }
+.prose pre .k, .prose pre .kn, .prose pre .kd, .prose pre .kr, .prose pre .kc, .prose pre .ow, .prose pre .kt { color: #FF8FA3; }
+.prose pre .s, .prose pre .s1, .prose pre .s2, .prose pre .sa, .prose pre .sb, .prose pre .sd, .prose pre .sh, .prose pre .dl, .prose pre .sx { color: #A5E3B2; }
+.prose pre .si, .prose pre .se { color: #F2C97D; }
+.prose pre .c, .prose pre .c1, .prose pre .cm, .prose pre .ch, .prose pre .cs, .prose pre .cp { color: #7E8A9B; font-style: italic; }
+.prose pre .nf, .prose pre .fm, .prose pre .nc, .prose pre .nn { color: #8CC8FF; }
+.prose pre .nb, .prose pre .bp, .prose pre .nd, .prose pre .nt, .prose pre .na { color: #C7A6FF; }
+.prose pre .m, .prose pre .mi, .prose pre .mf, .prose pre .mh, .prose pre .il { color: #F7B57A; }
+.prose pre .o, .prose pre .p { color: #C9D4E1; }
 .prose table { border-collapse: collapse; width: 100%; font-size: .93rem; display: block; overflow-x: auto; }
 .prose th, .prose td { border: 1.5px solid var(--hair); padding: .35rem .6rem; text-align: start; }
 .prose th { background: var(--cream); }
@@ -605,7 +618,8 @@ def outline_html(c: dict) -> str:
         mins = sum(les["minutes"] for les in m["lessons"])
         rows = []
         for les in m["lessons"]:
-            kind = {"pdf": t("slides", "شرائح"), "video": t("video", "فيديو"), "audio": t("audio", "صوت")}.get(les["media"], "")
+            kind = {"pdf": t("slides", "شرائح"), "video": t("video", "فيديو"), "audio": t("audio", "صوت"),
+                    "youtube": t("YouTube", "يوتيوب"), "link": t("link", "رابط")}.get(les["media"], "")
             rows.append(f'<li><span dir="auto">{e(les["title"])}</span>{f"<span class=kind>{kind}</span>" if kind else ""}'
                         f'<span class="mins">{les["minutes"] or ""}{t(" min", " د") if les["minutes"] else ""}</span></li>')
         tasks = []
@@ -622,8 +636,11 @@ def outline_html(c: dict) -> str:
 
 def course_page(c: dict) -> str:
     e = html.escape
-    from markdown_it import MarkdownIt
-    md = MarkdownIt("commonmark", {"html": False}).enable("table")
+    try:  # the app's own renderer: code colours, each paragraph's direction, and diagrams, like in inPace
+        from inpace.app import md
+    except Exception:
+        from markdown_it import MarkdownIt
+        md = MarkdownIt("commonmark", {"html": False}).enable("table")
     tags = "".join(f'<span class="tag">{e(x)}</span>' for x in c["tags"][:8])
     sample_html = ""
     if c.get("sample"):
@@ -660,7 +677,18 @@ def course_page(c: dict) -> str:
 <div class="credit"><p>{t("License", "الرخصة")}: <bdi>{e(c.get("license") or "")}</bdi> · {t("Updated", "آخر تحديث")} <bdi>{e(str(c.get("updated") or ""))}</bdi></p>{credit}</div>
 </div>
 <div class="sticky-add"><a class="btn primary" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a></div>"""
-    script = """<script>
+    mermaid = ""
+    if 'class="mermaid"' in sample_html:
+        mermaid = """<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+(function () {
+  var html = document.documentElement;
+  var dark = html.getAttribute("data-theme") === "dark" || (!html.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+  if (window.mermaid) { mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: dark ? "dark" : "default" });
+    mermaid.run({ querySelector: "pre.mermaid" }).catch(function () {}); }
+})();
+</script>"""
+    script = mermaid + """<script>
 var more = document.getElementById("more"), s = document.getElementById("sample");
 if (more && s) {
   if (s.scrollHeight <= s.clientHeight + 10) { s.classList.add("open"); more.parentNode.hidden = true; }

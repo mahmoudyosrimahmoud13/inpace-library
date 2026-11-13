@@ -1,0 +1,180 @@
+q1:
+  right:
+  - o788e20
+  - o12129d
+  why: الحاويات عمليات معزولة تشترك في نواة المضيف.
+q2:
+  right:
+  - o533b76
+  - o805e14
+  why: الـ namespaces للعزل، والـ cgroups لتحديد الموارد.
+q3:
+  right:
+  - ob6368e
+  - o246e6c
+  why: الـ VM تحتاج إقلاع نظام ضيف كامل.
+q4:
+  right:
+  - o3a1279
+  - o7856ca
+  why: عمر الحاوية مرتبط بعمليتها الرئيسية.
+q5:
+  right:
+  - of7a979
+  - o843b2d
+  why: الـ image قالب، والحاوية تشغيل له.
+q6:
+  right:
+  - o20f0c5
+  - of026d3
+  why: الـ CLI يتكلم مع الـ daemon عبر API.
+q7:
+  right:
+  - o0dcc3c
+  - o36517f
+  why: معيار مفتوح للصيغة والتشغيل.
+q8:
+  right:
+  - oc5a40f
+  - o15178b
+  why: exit تنهي العملية الرئيسية فتتوقف الحاوية.
+q9:
+  right:
+  - odcf15f
+  - o63e772
+  why: runc ينشئ الحاوية ثم يخرج ويترك الـ shim.
+q10:
+  right:
+  - o53724b
+  - o21e548
+  why: يفصل عمر الحاوية عن عمر الـ daemon.
+q11:
+  right:
+  - o15de0c
+  - o1265fc
+  why: مشاركة وكاش.
+q12:
+  right:
+  - o09ea48
+  - of7ec55
+  why: الـ digest هو hash المحتوى.
+q13:
+  right:
+  - o184268
+  - o5ffbc7
+  why: منفذ المضيف:منفذ الحاوية.
+q14:
+  right:
+  - ofc9975
+  - o517114
+  why: الشبكات المعرّفة من المستخدم فيها DNS مدمج.
+q15:
+  right:
+  - oe4491d
+  - o0471bc
+  why: الطبقة القابلة للكتابة تحذف مع الحاوية.
+q16:
+  right:
+  - o1a0069
+  - oa3a72e
+  why: مثل always لكن تحترم إيقافك اليدوي.
+q17:
+  right:
+  - oa1d666
+  - o8fc46d
+  why: تغير طبقة يعيد بناء ما بعدها فقط.
+q18:
+  right:
+  - o1b65e8
+  - o79cd6a
+  why: تنسخ الناتج فقط للمرحلة الأخيرة.
+q19:
+  right:
+  - od7325b
+  - o93815b
+  why: النشر الفعلي يكون بـ -p.
+q20:
+  right:
+  - o14f59b
+  - o0a4a73
+  why: الطبقات تراكمية.
+q21:
+  right:
+  - o48d796
+  - of567a6
+  why: DNS على شبكة المشروع.
+q22:
+  right:
+  - od89b6e
+  - od83314
+  why: 'انتبه: -v تمسح البيانات.'
+q23:
+  right:
+  - o878e3e
+  - o033104
+  why: 'استخدم condition: service_healthy.'
+q24:
+  right:
+  - o71ea15
+  - o7e20b0
+  why: لا تكتبها في ملفات ترفعها.
+q25:
+  right:
+  - ofe7f4a
+  - o8d16e8
+  why: 3 managers تتحمل سقوط واحد، و5 تتحمل اثنين.
+q26:
+  right:
+  - o0bf306
+  - o8d8c0a
+  why: المنفذ المنشور متاح على كل الأجهزة.
+q27:
+  right:
+  - of5d592
+  - of14194
+  why: Stack للـ cluster ويحتاج images جاهزة.
+q28:
+  right:
+  - of18b68
+  - oc9375d
+  why: نسخة بعد نسخة.
+q29:
+  right:
+  - o269b23
+  - ofd3257
+  why: التخزين في etcd، والتشغيل على kubelet.
+q30:
+  right:
+  - oedbe00
+  - o15185b
+  why: الـ Service تختار الـ Pods بالـ labels.
+q31:
+  right:
+  - o04b736
+  - o31ee00
+  why: الحالة المطلوبة تُستعاد.
+q32:
+  right:
+  - o60614c
+  - oa7a411
+  why: تجاوز حد الذاكرة يقتل الحاوية (OOMKilled).
+q33:
+  right:
+  - o8de08f
+  - o8c7aca
+  why: واحدة للحياة، والثانية للاستعداد.
+q34:
+  right:
+  - o2ebf2c
+  - oebea49
+  why: السجلات والأحداث تقول لماذا تقع.
+q35:
+  right:
+  - o438f7b
+  - o855384
+  why: البيانات تحتاج تخزينًا يبقى.
+q36:
+  right:
+  - o84118d
+  - odb97c1
+  why: base64 ترميز وليس تشفيرًا.

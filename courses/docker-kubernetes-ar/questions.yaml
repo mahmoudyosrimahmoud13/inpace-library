@@ -1,0 +1,360 @@
+q1:
+  text: ما الذي تشترك فيه كل الحاويات على نفس الجهاز؟
+  show: 4
+  options:
+    o12129d: نواة النظام المضيف، وليس نظام تشغيل كاملًا لكل حاوية
+    ob54507: نفس قاعدة البيانات
+    oec971e: نفس عنوان الـ IP دائمًا
+    oea7f1d: نفس نظام الملفات
+    o5d9c57: نفس العمليات
+    o788e20: نواة نظام التشغيل (kernel)
+q2:
+  text: أي ميزتين في Linux تقوم عليهما الحاويات؟
+  show: 4
+  options:
+    oea13ca: Swap
+    o9a8a5e: BIOS
+    o7e3763: Cron
+    o533b76: Namespaces
+    oe28e7f: Hypervisor
+    o805e14: Control groups (cgroups)
+q3:
+  text: لماذا تقلع الحاوية أسرع من الآلة الافتراضية؟
+  show: 4
+  options:
+    ob6368e: لا تقلع نظام تشغيل كاملًا
+    o246e6c: هي عملية تبدأ على نواة موجودة بالفعل
+    o13cdad: لأنها تعمل على الإنترنت
+    o24728f: لأن حجمها دائمًا أقل من 1 ميجا
+    o277bcc: لأنها لا تستخدم الذاكرة
+    o73214b: لأنها تعمل بدون معالج
+q4:
+  text: متى تتوقف الحاوية؟
+  show: 4
+  options:
+    o3a1279: عندما تنتهي عمليتها الرئيسية
+    o35c693: عندما تمتلئ الشاشة
+    o4e2dc7: لا تتوقف أبدًا
+    o7856ca: عندما يتوقف الـ PID 1 داخلها
+    o3acb34: بعد ساعة دائمًا
+    o762842: عند إغلاق المتصفح
+q5:
+  text: ما العلاقة بين الـ image والحاوية؟
+  show: 4
+  options:
+    o937e21: الـ image تعمل فقط على Windows
+    o7297d0: الـ image نسخة تعمل من الحاوية
+    oa71cdf: هما نفس الشيء
+    of7a979: الحاوية نسخة تعمل من الـ image
+    o932473: الحاوية تُخزَّن في Docker Hub
+    o843b2d: من image واحدة يمكن تشغيل حاويات كثيرة
+q6:
+  text: ماذا يعني ظهور Client وServer في نتيجة docker version؟
+  show: 4
+  options:
+    o537fd3: لا يوجد إنترنت
+    ocbb9bc: يوجد خطأ في الصلاحيات دائمًا
+    o20f0c5: الأداة متصلة بمحرك Docker
+    o80045c: Docker غير مثبت
+    of026d3: المحرك (daemon) يعمل
+    odd667e: Kubernetes يعمل
+q7:
+  text: ما فائدة معيار OCI؟
+  show: 4
+  options:
+    ocaccc6: هو بديل للشبكة
+    o0dcc3c: الـ images والحاويات تعمل مع أدوات مختلفة
+    o36517f: لا تكون مقيدًا بشركة واحدة
+    o0dee37: يجعل الحاويات أسرع بالضرورة
+    o423ded: يمنع تشغيل Docker على Linux
+    o89979c: هو نظام تشغيل
+q8:
+  text: كيف تخرج من حاوية تفاعلية بدون إيقافها؟
+  show: 4
+  options:
+    oc5a40f: Ctrl+P ثم Ctrl+Q
+    oc00e44: Ctrl+C دائمًا
+    oc18a27: exit
+    oae4ca9: docker rm
+    o30f1a1: إغلاق الجهاز
+    o15178b: تفصل الطرفية وتترك الحاوية تعمل
+q9:
+  text: ما دور runc؟
+  show: 4
+  options:
+    o99c716: يخزن الـ images على الإنترنت
+    o8134f0: يدير الشبكة بين السيرفرات
+    o98802b: يكتب الـ Dockerfile
+    odcf15f: ينشئ الحاوية بالتعامل مع الـ kernel
+    o381e92: يرسم الواجهة
+    o63e772: أداة منخفضة المستوى تتبع معيار OCI
+q10:
+  text: لماذا يوجد الـ shim؟
+  show: 4
+  options:
+    oa99625: ليشفر الشبكة
+    oc1eb00: ليحذف الحاويات القديمة
+    ofb94dd: ليتصل بـ Docker Hub
+    o21e548: ليبقى مع الحاوية بعد خروج runc
+    o53724b: لتستمر الحاويات إذا أعيد تشغيل الـ daemon
+    o7427e3: ليضغط الـ images
+q11:
+  text: ما فائدة طبقات الـ image؟
+  show: 4
+  options:
+    of2cf80: تشفر البيانات
+    o6ac126: تحتاج إنترنت دائمًا
+    o5d40f4: تمنع تشغيل أكثر من حاوية
+    oa21ad0: تجعل الـ image قابلة للتعديل وهي تعمل
+    o1265fc: البناء يعيد استخدام الطبقات التي لم تتغير
+    o15de0c: الطبقات المشتركة لا تنزل ولا تخزن مرتين
+q12:
+  text: ما الفرق بين الـ tag والـ digest؟
+  show: 4
+  options:
+    o09ea48: الـ digest يثبت المحتوى بالضبط
+    ocfd865: الـ digest اسم مقروء
+    od29e0f: الـ tag أكثر أمانًا
+    o44e44b: الـ digest خاص بـ Windows فقط
+    o33ab60: لا فرق
+    of7ec55: الـ tag يمكن أن ينقل ليشير إلى image أخرى
+q13:
+  text: ماذا يفعل -p 8080:80؟
+  show: 4
+  options:
+    o56d752: يغير منفذ Docker نفسه
+    o184268: يوجه منفذ 8080 على الجهاز لمنفذ 80 في الحاوية
+    o3b3969: يفتح منفذ 80 على الجهاز
+    o5ffbc7: يجعل الخدمة متاحة من خارج الحاوية
+    o289be3: يحدد سرعة الشبكة
+    o8f18e6: يربط حاويتين ببعض
+q14:
+  text: متى تستطيع الحاويات التكلم بأسمائها؟
+  show: 4
+  options:
+    o16a1b0: على الـ bridge الافتراضية دائمًا
+    o55de38: على شبكة none
+    ofc9975: على شبكة bridge أنشأتها أنت
+    od273fb: فقط إذا كانت على أجهزة مختلفة
+    o2114c2: لا تستطيع أبدًا
+    o517114: على شبكة overlay في Swarm
+q15:
+  text: أين تحفظ بيانات قاعدة البيانات لتبقى بعد حذف الحاوية؟
+  show: 4
+  options:
+    oda40b8: في tmpfs
+    oe4491d: في volume
+    o3ce73d: في الـ image
+    o0471bc: في تخزين خارج طبقة الحاوية القابلة للكتابة
+    o38a751: في طبقة الحاوية
+    o6c18c7: في docker logs
+q16:
+  text: ما معنى سياسة unless-stopped؟
+  show: 4
+  options:
+    oa3a72e: إلا إذا أوقفتها أنت يدويًا
+    o6a5a14: لا تعود أبدًا
+    obd80dc: تحذف الحاوية بعد التوقف
+    oeda6b0: تعود فقط عند الخطأ
+    o1a0069: تعود الحاوية بعد أي توقف أو إعادة تشغيل
+    o62cb9b: تعمل مرة واحدة يوميًا
+q17:
+  text: لماذا ننسخ requirements.txt قبل باقي الكود؟
+  show: 4
+  options:
+    od2e166: لتصغير الـ image دائمًا
+    o5cf9f0: لتشغيل الحاوية كـ root
+    o8fc46d: ليسرع البناء
+    oa1d666: لتبقى طبقة تثبيت المكتبات في الكاش عند تغيير الكود فقط
+    ocb97b7: لأن Docker يرفض غير ذلك
+    oa4e244: لتشفير المكتبات
+q18:
+  text: ما فائدة الـ multi-stage build؟
+  show: 4
+  options:
+    o892ae7: بناء أبطأ دائمًا
+    o1b65e8: image نهائية أصغر بدون أدوات البناء
+    obac633: يضع الكود المصدري في الإنتاج
+    o79cd6a: سطح هجوم أقل
+    o2117be: يمنع استخدام الكاش
+    o5edba4: يحتاج Kubernetes
+q19:
+  text: ماذا تفعل EXPOSE؟
+  show: 4
+  options:
+    o93815b: لا تفتح المنفذ على الجهاز بنفسها
+    o487cea: تحدد عنوان IP
+    od7325b: توثق المنفذ الذي يستمع له التطبيق
+    oe0401d: تفتح المنفذ للإنترنت
+    o419e6d: تغلق كل المنافذ
+    o80fc85: تنشئ شبكة
+q20:
+  text: لماذا لا تضع كلمة سر في RUN ثم تحذفها في RUN بعدها؟
+  show: 4
+  options:
+    o5a47d1: لأن الطبقات تشفر تلقائيًا
+    o0a4a73: أي أحد معه الـ image يستطيع استخراجها
+    o5aad05: لأن Docker يرفض الحذف
+    o14f59b: تبقى محفوظة في طبقة سابقة
+    o1a736a: لأنها تبطئ التشغيل فقط
+    od52a74: لا مشكلة في ذلك
+q21:
+  text: كيف تصل خدمة web لخدمة db في نفس ملف Compose؟
+  show: 4
+  options:
+    o774a8b: بعنوان IP ثابت دائمًا
+    o48d796: باسم الخدمة db
+    ofe8f9d: عبر Docker Hub
+    o9eb1d7: لا تستطيع
+    of567a6: عبر الشبكة التي ينشئها Compose تلقائيًا
+    ocee6f7: عبر localhost دائمًا
+q22:
+  text: ماذا يفعل docker compose down -v؟
+  show: 4
+  options:
+    o3da463: يوقف الحاويات فقط
+    o06d1fc: يحذف الـ images من Docker Hub
+    o4e69c4: يحدث الخدمات
+    od83314: ويحذف الـ volumes أيضًا
+    oea4704: يعمل backup
+    od89b6e: يحذف الحاويات والشبكة
+q23:
+  text: ما الذي لا يضمنه depends_on وحده؟
+  show: 4
+  options:
+    o033104: انتظار healthcheck
+    o978105: ترتيب الإقلاع
+    o878e3e: أن الخدمة الأخرى جاهزة لاستقبال الاتصالات
+    o14eb99: الشبكة
+    oadf79d: وجود الخدمة
+    o26a9fd: اسم الخدمة
+q24:
+  text: أين تضع كلمات السر في مشروع Compose؟
+  show: 4
+  options:
+    of60c5d: داخل الـ Dockerfile
+    o7e20b0: في secrets
+    o71ea15: في ملف .env خارج git
+    oc0607d: في README
+    o903f31: في اسم الحاوية
+    of20f3a: في الـ image
+q25:
+  text: لماذا يفضل عدد فردي من الـ managers (3 أو 5)؟
+  show: 4
+  options:
+    o97711f: لتقليل استهلاك الشبكة دائمًا
+    o8d16e8: ليتحمل الـ cluster سقوط بعض الـ managers
+    ofe7f4a: لتحقيق الأغلبية في Raft
+    o1fb7e0: لزيادة سرعة الحاويات
+    o7c96df: لا سبب
+    o2db5aa: لأن Docker يرفض الأعداد الزوجية
+q26:
+  text: ماذا يفعل الـ routing mesh؟
+  show: 4
+  options:
+    oee0513: يمنع الوصول من الخارج
+    o2eb590: يشفر الـ volumes
+    o972247: يبني الـ images
+    o8d8c0a: توزيع الطلبات على النسخ
+    of0e04c: يحذف الخدمات القديمة
+    o0bf306: أي جهاز يستقبل الطلب ويوصله لنسخة تعمل
+q27:
+  text: ما الفرق بين docker compose up وdocker stack deploy؟
+  show: 4
+  options:
+    o5c42b6: stack لا يقبل ملفات Compose
+    of5d592: stack ينشر على Swarm بعدة أجهزة
+    o1e0619: لا فرق
+    o0107e1: compose يعمل فقط على Swarm
+    of14194: stack لا يبني images من build
+    o5456eb: stack يعمل بدون Docker
+q28:
+  text: ما فائدة rolling update؟
+  show: 4
+  options:
+    o7567a0: بناء الـ image
+    oa349dc: تغيير اسم الخدمة
+    of18b68: تحديث النسخ تدريجيًا بدون توقف الخدمة
+    oc9375d: إمكانية الرجوع (rollback) عند المشاكل
+    od87187: حذف كل النسخ ثم تشغيلها
+    o2cb324: تحديث الـ kernel
+q29:
+  text: ما دور الـ scheduler في Kubernetes؟
+  show: 4
+  options:
+    o269b23: يختار الجهاز الذي يعمل عليه كل Pod
+    oc7bfac: يحذف الـ namespaces
+    o87580a: يبني الـ images
+    o22e6bc: يخزن حالة الـ cluster
+    ofb2c6c: يوجه الطلبات من الإنترنت
+    ofd3257: يوزع الـ Pods حسب الموارد والقيود
+q30:
+  text: لماذا نحتاج Service أمام الـ Pods؟
+  show: 4
+  options:
+    od2eb1a: لتخزن البيانات
+    oedbe00: عناوين الـ Pods تتغير عند إعادة إنشائها
+    o96c772: لأن الـ Pod لا يملك شبكة
+    occ61f2: لتبني الـ images
+    o15185b: تعطي عنوانًا ثابتًا وتوزع الطلبات
+    oaef7c9: لتشفر الـ Pods
+q31:
+  text: ماذا يحدث إذا حذفت Pod تابعًا لـ Deployment؟
+  show: 4
+  options:
+    o78eed2: تحذف الـ Service
+    o45ba22: يعاد تشغيل الـ cluster
+    o31ee00: الـ ReplicaSet يعيد العدد المطلوب
+    o21cd31: يحذف الـ Deployment
+    ob9cdff: يتوقف التطبيق للأبد
+    o04b736: ينشأ Pod جديد تلقائيًا
+q32:
+  text: ما الفرق بين requests وlimits؟
+  show: 4
+  options:
+    o0352a8: requests تحدد عدد النسخ
+    o163ef0: limits للشبكة فقط
+    obeaec7: لا فرق
+    o60614c: requests ما تحجزه للجدولة
+    oa7a411: limits الحد الأقصى المسموح
+    o70a192: requests خاصة بـ Docker Compose
+q33:
+  text: ما الفرق بين liveness وreadiness probe؟
+  show: 4
+  options:
+    o8c7aca: 'readiness: هل ترسل لها الطلبات الآن؟'
+    off4f1e: كلاهما للشبكة فقط
+    o850710: readiness تعيد تشغيل الحاوية
+    o912915: liveness تحدد عدد النسخ
+    o3e0547: لا فرق
+    o8de08f: 'liveness: هل يجب إعادة تشغيل الحاوية؟'
+q34:
+  text: حاوية في CrashLoopBackOff. ماذا تفحص أولًا؟
+  show: 4
+  options:
+    ob50a82: تغير اسم الـ namespace
+    o2ebf2c: kubectl logs --previous
+    o1eb16d: تحذف الـ cluster
+    o5cf14b: تزيد النسخ إلى 100
+    ob92864: تعيد تثبيت Docker
+    oebea49: kubectl describe pod لرؤية الأحداث
+q35:
+  text: أين تضع قاعدة بيانات تحتاج بيانات دائمة على Kubernetes؟
+  show: 4
+  options:
+    o093da4: Deployment بدون volume
+    o18e39c: داخل الـ image
+    oeffdd9: في emptyDir
+    o855384: StatefulSet مع PersistentVolume
+    o438f7b: خدمة مُدارة خارج الـ cluster
+    o686147: في ConfigMap
+q36:
+  text: هل الـ Secret في Kubernetes مشفر افتراضيًا؟
+  show: 4
+  options:
+    o84118d: لا، مشفر بـ base64 فقط ما لم تفعّل التشفير
+    o1eabd9: نعم دائمًا بـ AES
+    odb97c1: يجب تفعيل encryption at rest أو استخدام مدير أسرار
+    od20733: يُخزن في الـ image
+    od01505: يُحذف بعد ساعة
+    o5b9fb8: لا يمكن قراءته أبدًا

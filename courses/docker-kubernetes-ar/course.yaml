@@ -1,0 +1,362 @@
+id: docker-kubernetes-ar
+title: 'دورة Docker و Kubernetes بالعربي: من الحاوية إلى الـ Cluster'
+version: 1
+language: ar
+description: 'كورس مبني على فيديو المهندس أحمد سامي (قناة Big Data بالعربي) عن Docker وKubernetes، مقسّم إلى دروس
+  قصيرة يشغّل كل منها جزءه من الفيديو ويكمل من حيث توقفت. معه ملاحظات بالأوامر المهمة، ومهام عملية، واختبار في نهاية
+  كل وحدة، ومراجعة لأسئلة المقابلات. الخطة: 3 أسابيع، حوالي ساعة إلى ساعة ونصف في اليوم.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'اليوم 1: الحاويات من الصفر'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: ما هي الحاويات؟
+    file: lessons/m1-l2.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=30&end=1189
+  - id: m1-l3
+    title: معمارية الحاويات (الجزء 1 من 2)
+    file: lessons/m1-l3.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=1189&end=2100
+  - id: m1-l4
+    title: معمارية الحاويات (الجزء 2 من 2)
+    file: lessons/m1-l4.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=2100&end=3014
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'ارسم (على ورقة أو بأي برنامج) مقارنة بين VM وحاوية: الطبقات من الجهاز حتى التطبيق، وارفع الصورة. أضف
+      تحت الرسم 3 أسطر: متى تختار VM ومتى تختار حاوية.'
+  - id: m1-explain
+    type: explain
+    prompt: 'اشرح بكلماتك لصديق لا يعرف البرمجة: ما هي الحاوية، ولماذا هي أخف من الآلة الافتراضية؟'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'اليوم 2: Docker، التثبيت، وأول تطبيق'
+  lessons:
+  - id: m2-l1
+    title: مقدمة عن Docker
+    file: lessons/m2-l1.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=3014&end=4058
+  - id: m2-l2
+    title: تثبيت Docker
+    file: lessons/m2-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=4058&end=5237
+  - id: m2-l3
+    title: الحاوية = تطبيق
+    file: lessons/m2-l3.md
+    minutes: 16
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=5237&end=6201
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: ثبّت Docker، ثم شغّل docker version وdocker run hello-world وحاوية ubuntu تفاعلية، ودخل عليها مرة ثانية
+      بـ docker exec. ارفع لقطة شاشة للأوامر ونتائجها.
+  - id: m2-explain
+    type: explain
+    prompt: ما الفرق بين image وcontainer وregistry؟ استخدم تشبيهًا من عندك غير تشبيه الكلاس والأوبجكت.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'اليومان 3-4: محرك Docker والـ Images بالتفصيل'
+  lessons:
+  - id: m3-l1
+    title: معمارية Docker Engine
+    file: lessons/m3-l1.md
+    minutes: 8
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=6201&end=6677
+  - id: m3-l2
+    title: الـ Images بالتفصيل (الجزء 1 من 2)
+    file: lessons/m3-l2.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=6677&end=8040
+  - id: m3-l3
+    title: الـ Images بالتفصيل (الجزء 2 من 2)
+    file: lessons/m3-l3.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=8040&end=9437
+  - id: m3-l4
+    title: Docker في VS Code
+    file: lessons/m3-l4.md
+    minutes: 11
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=9437&end=10108
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: نزّل nginx:alpine وnginx:latest، وقارن بينهما بـ docker image ls وdocker history، وحدد الطبقات المشتركة
+      إن وجدت. ارفع النتائج مع سطرين عن الفرق في الحجم وسببه.
+  - id: m3-explain
+    type: explain
+    prompt: لماذا الاعتماد على tag مثل latest في السيرفرات خطر، وما البديل الآمن؟
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'اليومان 5-6: الحاويات والشبكات والتخزين'
+  lessons:
+  - id: m4-l1
+    title: الحاويات بالتفصيل
+    file: lessons/m4-l1.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=10108&end=11020
+  - id: m4-l2
+    title: الشبكات (الجزء 1 من 2)
+    file: lessons/m4-l2.md
+    minutes: 22
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=11020&end=12330
+  - id: m4-l3
+    title: الشبكات (الجزء 2 من 2)
+    file: lessons/m4-l3.md
+    minutes: 22
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=12330&end=13651
+  - id: m4-l4
+    title: التخزين (الجزء 1 من 2)
+    file: lessons/m4-l4.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=13651&end=14700
+  - id: m4-l5
+    title: التخزين (الجزء 2 من 2)
+    file: lessons/m4-l5.md
+    minutes: 17
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=14700&end=15742
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: شغّل postgres مع volume، وأنشئ جدولًا وأضف صفًا، ثم احذف الحاوية وشغّل واحدة جديدة على نفس الـ volume
+      وأثبت أن الصف موجود. ثم شغّل حاوية ثانية على شبكة خاصة تصل لقاعدة البيانات بالاسم. ارفع الأوامر والنتائج.
+  - id: m4-explain
+    type: explain
+    prompt: لماذا تضيع بيانات الحاوية عند حذفها، وما الفرق بين volume وbind mount؟ متى تستخدم كلًا منهما؟
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'الأيام 7-9: بناء الـ Images'
+  lessons:
+  - id: m5-l1
+    title: تحويل تطبيق إلى حاوية
+    file: lessons/m5-l1.md
+    minutes: 33
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=15742&end=17723
+  - id: m5-l2
+    title: Dockerfile بالتفصيل (الجزء 1 من 3)
+    file: lessons/m5-l2.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=17723&end=19140
+  - id: m5-l3
+    title: Dockerfile بالتفصيل (الجزء 2 من 3)
+    file: lessons/m5-l3.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=19140&end=20520
+  - id: m5-l4
+    title: Dockerfile بالتفصيل (الجزء 3 من 3)
+    file: lessons/m5-l4.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=20520&end=21938
+  - id: m5-l5
+    title: مخازن الـ Images (Registries)
+    file: lessons/m5-l5.md
+    minutes: 11
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=21938&end=22570
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'اكتب Dockerfile لتطبيق صغير (Python أو Node) مرتين: مرة بسيطة ومرة multi-stage مع .dockerignore وUSER
+      غير root. قارن الحجمين بـ docker image ls وارفع الـ image لـ Docker Hub أو ghcr.io. ارفع الملفين والنتائج.'
+  - id: m5-explain
+    type: explain
+    prompt: اشرح كاش البناء في Docker، ولماذا ترتيب تعليمات الـ Dockerfile يؤثر على السرعة.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'اليوم 10: Docker Compose'
+  lessons:
+  - id: m6-l1
+    title: Docker Compose (الجزء 1 من 2)
+    file: lessons/m6-l1.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=22570&end=24030
+  - id: m6-l2
+    title: Docker Compose (الجزء 2 من 2)
+    file: lessons/m6-l2.md
+    minutes: 24
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=24030&end=25492
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: اكتب compose.yaml لتطبيق من خدمتين على الأقل (تطبيق + قاعدة بيانات أو Redis) مع volume وhealthcheck.
+      شغله بـ docker compose up وارفع الملف ولقطة لـ docker compose ps.
+  - id: m6-explain
+    type: explain
+    prompt: لماذا لا يكفي depends_on لضمان أن قاعدة البيانات جاهزة، وما الحل؟
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'اليومان 11-12: Docker Swarm وStack وPortainer'
+  lessons:
+  - id: m7-l1
+    title: Docker Swarm (الجزء 1 من 2)
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=25492&end=27270
+  - id: m7-l2
+    title: Docker Swarm (الجزء 2 من 2)
+    file: lessons/m7-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=27270&end=29057
+  - id: m7-l3
+    title: Docker Stack
+    file: lessons/m7-l3.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=29057&end=30435
+  - id: m7-l4
+    title: Portainer
+    file: lessons/m7-l4.md
+    minutes: 9
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=30435&end=30997
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: أنشئ Swarm بجهاز واحد (docker swarm init)، وانشر خدمة بثلاث نسخ، ثم حدّثها rolling update ثم rollback،
+      ثم انشر stack من ملف Compose. ارفع الأوامر والنتائج.
+  - id: m7-explain
+    type: explain
+    prompt: ما معنى 'الحالة المطلوبة' (desired state) في Swarm؟ وماذا يحدث إذا توقف جهاز عليه نسخة من خدمتك؟
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'اليومان 13-14: Kubernetes'
+  lessons:
+  - id: m8-l1
+    title: مقدمة ومعمارية Kubernetes
+    file: lessons/m8-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=30997&end=32170
+  - id: m8-l2
+    title: تثبيت Minikube
+    file: lessons/m8-l2.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=32170&end=32876
+  - id: m8-l3
+    title: 'المعمارية المنطقية: Pods وDeployments وServices'
+    file: lessons/m8-l3.md
+    minutes: 16
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=32876&end=33806
+  - id: m8-l4
+    title: نشر تطبيق على Kubernetes (الجزء 1 من 2)
+    file: lessons/m8-l4.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=33806&end=34940
+  - id: m8-l5
+    title: نشر تطبيق على Kubernetes (الجزء 2 من 2)
+    file: lessons/m8-l5.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=34940&end=36081
+  - id: m8-l6
+    title: Kubernetes في VS Code
+    file: lessons/m8-l6.md
+    minutes: 5
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=36081&end=36352
+  - id: m8-l7
+    title: Jupyter داخل حاوية
+    file: lessons/m8-l7.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=PrusdhS2lmo&t=36352
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'على Minikube: انشر Deployment بثلاث نسخ وService من نوع NodePort، وافتح التطبيق، ثم احذف Pod وراقبه
+      يعود، ثم حدّث الـ image وارجع عن التحديث. ارفع ملفات YAML ولقطات للأوامر.'
+  - id: m8-explain
+    type: explain
+    prompt: اشرح الفرق بين Pod وDeployment وService لشخص يعرف Docker فقط، باستخدام أمثلة من Docker.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'اليوم 15: مراجعة وأسئلة المقابلات'
+  lessons:
+  - id: m9-l1
+    title: 20 سؤالًا تتكرر في المقابلات
+    file: lessons/m9-l1.md
+    minutes: 45
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: سجّل نفسك (أو اكتب) وأنت تجيب عن 10 من الأسئلة العشرين، كل واحد في أقل من دقيقة، ثم جاوب سؤال التصميم
+      برسم. ارفع التسجيل أو الملف.
+  - id: m9-explain
+    type: explain
+    prompt: 'مقابلة: ''تطبيقك على Kubernetes في حالة CrashLoopBackOff. ماذا تفعل خطوة بخطوة؟'''
+    min_words: 80
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- docker
+- kubernetes
+- devops
+- containers
+- arabic
+- interview
+updated: '2026-11-13'
+credit: 'Video: Docker and Kubernetes by Ahmed Sami (Big Data بالعربي on YouTube), embedded from YouTube. Companion
+  files: github.com/ahmedsami76/AraBigData. Notes, tasks and questions: inPace.'
