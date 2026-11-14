@@ -1,0 +1,320 @@
+id: ai-engineer-hired-3-ar
+title: 'التوظيف مهندس ذكاء اصطناعي 3: مقابلات الذكاء الاصطناعي وتصميم الأنظمة ومشروع إنتاجي'
+version: 1
+language: ar
+description: 'استعد للجولات الخاصة بوظائف الذكاء الاصطناعي: كيف تعمل النماذج اللغوية بعمق المقابلة، والأوامر والأدوات،
+  وRAG وأنماط فشله، والوكلاء، والتقييم، والتكلفة والزمن والأمان (قائمة OWASP لمخاطر النماذج اللغوية)، وتصميم أنظمة
+  الذكاء الاصطناعي بأمثلة محلولة وتقديرات. وابنِ TriageBot خطوة بخطوة، وكيلًا لتذاكر الدعم بأدوات وضوابط وتتبع وتقييمات
+  وموافقة بشرية، ثم أنجز مهمة منزلية بمؤقت، وجولة الدفاع عنها، وجولة مقابلات تجريبية كاملة.'
+image: cover.jpg
+modules:
+- id: m1
+  title: ماذا تختبر مقابلات الذكاء الاصطناعي
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: 'الصورة الكبيرة: كيف يُصنع نموذج لغوي مساعد'
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=zjkBMFhNj_g
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'اكتب ملخصًا من صفحة بكلماتك مع مخطط: كيف يُصنع نموذج لغوي مساعد (التدريب المسبق، والضبط الدقيق، وملاحظات
+      البشر)، والمخاطر الأمنية الثلاثة من درس الصورة الكبيرة. ارفعه.'
+  - id: m1-explain
+    type: explain
+    prompt: 'سؤال مقابلة: «كيف تعمل النماذج اللغوية الكبيرة؟» أجب في نحو 200 كلمة لمهندس غير متخصص في تعلّم الآلة،
+      مستخدمًا الخطوات الأربع.'
+    min_words: 150
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: كيف تعمل النماذج اللغوية، بعمق المقابلة
+  lessons:
+  - id: m2-l1
+    title: من الرموز إلى النص
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=eMlx5fFNoYc
+  - id: m2-l2
+    title: 'الاستدلال: الاختيار والسياق والسرعة'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'أجرِ تجربة صغيرة بأي نموذج متاح لك (واجهة برمجية أو Ollama): الأوامر الخمسة نفسها بدرجة حرارة 0 و0.7
+      و1.2، ثلاث مرات لكل منها، وعُدّ رموز فقرة بالإنجليزية وترجمتها العربية. ارفع تقريرًا قصيرًا بجدولك واستنتاجاتك.'
+  - id: m2-explain
+    type: explain
+    prompt: 'سؤال مقابلة: «اشرح ذاكرة KV المؤقتة، ولماذا تكون السياقات الطويلة مكلفة». ثم: «يشتكي مستخدموك من بطء
+      الروبوت. أي الأرقام تنظر إليها أولًا؟»'
+    min_words: 150
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: الأوامر والأدوات ومتى تضبط النموذج
+  lessons:
+  - id: m3-l1
+    title: المخرجات المنظمة واستدعاء الأدوات
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: الأوامر أم RAG أم الضبط الدقيق؟
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'أضف مخرجات منظمة إلى DocAnswer: أرجع `{"answer": ..., "citations": [...], "confidence": "high|medium|low"}`،
+      وتحقق منها بـ Pydantic، وأعد المحاولة مرة عند الفشل، وسجّل كم مرة تفشل المحاولة الأولى على مجموعتك الذهبية.
+      ارفع الـ commit والأرقام.'
+  - id: m3-explain
+    type: explain
+    prompt: 'يقول مدير منتج: «لنضبط نموذجًا على مقالات الدعم الخمسة آلاف لدينا كي يعرف منتجنا». أجب بصفتك مهندس
+      الذكاء الاصطناعي: ماذا ستفعل بدلًا من ذلك أو أولًا، ولماذا.'
+    min_words: 120
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: RAG بعمق المقابلة
+  lessons:
+  - id: m4-l1
+    title: أسئلة RAG التي ستُسأل عنها
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: تصحيح RAG واثق وهو مخطئ
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'أجرِ تحليل أخطاء حقيقيًا على DocAnswer: اجمع 30 إجابة خاطئة أو ضعيفة، وصنّف كلًا منها (قراءة، أو بحث،
+      أو توليد)، وأصلح أكبر فئة، وأعد تشغيل تقييماتك. ارفع جدول التصنيف والأرقام قبل وبعد.'
+  - id: m4-explain
+    type: explain
+    prompt: 'مقابلة: «روبوت RAG لدينا يعطي إجابات واثقة لكنها خاطئة. لديك أسبوع. ماذا تفعل؟» أجب خطوة خطوة، مع ما
+      ستقيسه كل يوم.'
+    min_words: 150
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: الوكلاء، وخطوة TriageBot الأولى
+  lessons:
+  - id: m5-l1
+    title: 'الوكلاء: الأنماط، ومتى لا تستخدمهم'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: 'TriageBot، الخطوة 1: التصميم والأدوات'
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'أنشئ مستودع TriageBot: التصميم (الأدوات والحدود والسياسات والبيانات) في README مع المخطط، و`tools.py`،
+      وسكربت تعبئة SQLite بـ 20 عميلًا، وأكثر من 20 مقالة لمركز المساعدة مقروءة بكود DocAnswer. ارفع رابط المستودع.'
+  - id: m5-explain
+    type: explain
+    prompt: 'مقابلة: «متى يكون الوكيل هو الحل الخاطئ؟» أجب بمثالين، واشرح كيف يُبقي TriageBot حرية الوكيل صغيرة.'
+    min_words: 120
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: التقييمات، وخطوة TriageBot الثانية
+  lessons:
+  - id: m6-l1
+    title: 'التقييمات: المهارة التي تميّزك'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'TriageBot، الخطوة 2: مجموعة التقييم أولًا'
+    file: lessons/m6-l2.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: اكتب مجموعة التقييم من 50 تذكرة (منها 10 تذاكر حقن)، ومشغّل التقييم، وخط أساس دون أدوات. ارفع الملفات
+      ونتائج خط الأساس.
+  - id: m6-explain
+    type: explain
+    prompt: 'مقابلة: «كيف تقيّم وكيلًا؟» أجب بمقاييسك، ولماذا يهم كل منها للعمل، وكيف ستُبقي النموذج الحَكَم صادقًا.'
+    min_words: 120
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'الإنتاج: التكلفة والزمن والأمان، وخطوة TriageBot الثالثة'
+  lessons:
+  - id: m7-l1
+    title: التكلفة والزمن والموثوقية
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'الأمان: حقن الأوامر والبيانات الشخصية والأدوات'
+    file: lessons/m7-l2.md
+    minutes: 30
+  - id: m7-l3
+    title: 'TriageBot، الخطوة 3: الحلقة والضوابط والتتبع'
+    file: lessons/m7-l3.md
+    minutes: 50
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'ابنِ حلقة الوكيل مع الضوابط والتتبع، وشغّل تقييماتك، ونفّذ جولتي تحسين على الأقل. ارفع: رابط الـ commit،
+      وجدول التغييرات، وتتبّعًا واحدًا لتذكرة حقن صُعّدت بشكل صحيح.'
+  - id: m7-explain
+    type: explain
+    prompt: 'مقابلة: «يتلقى تطبيقك مليون طلب يوميًا. كيف تخفض التكلفة إلى النصف دون الإضرار بالجودة؟» أجب بالروافع،
+      وكيف ستقيس الجودة أثناء تغييرها، والترتيب الذي ستجربها به.'
+    min_words: 150
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: تصميم أنظمة الذكاء الاصطناعي
+  lessons:
+  - id: m8-l1
+    title: الإطار ومعايير التقييم
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: 'مثال محلول: أسئلة وأجوبة على مستندات شركة كاملة'
+    file: lessons/m8-l2.md
+    minutes: 40
+  - id: m8-l3
+    title: حسابات تقريبية سريعة
+    file: lessons/m8-l3.md
+    minutes: 20
+  - id: m8-l4
+    title: أسئلة للتدريب
+    file: lessons/m8-l4.md
+    minutes: 15
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'أنجز سؤالين للتدريب بمؤقت على الورق أو السبورة: تصميم RAG وتصميم وكيل. ارفع صور مخططاتك وملاحظاتك لكل
+      خطوة من الخطوات الخمس، ومنها تقدير واحد للتكلفة.'
+  - id: m8-explain
+    type: explain
+    prompt: اكتب إجابتك عن «صمّم ميزة الذاكرة عبر المحادثات في ChatGPT» باتباع الخطوات الخمس، مع ثلاث موازنات ونمطَي
+      فشل على الأقل.
+    min_words: 250
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: انشر TriageBot، والمهمة المنزلية
+  lessons:
+  - id: m9-l1
+    title: 'TriageBot، الخطوة 4: انشره وضعه في سيرتك'
+    file: lessons/m9-l1.md
+    minutes: 40
+  - id: m9-l2
+    title: محاكاة مهمة منزلية في 4 ساعات
+    file: lessons/m9-l2.md
+    minutes: 30
+  - id: m9-l3
+    title: التعمق في المشروع وجولة الدفاع
+    file: lessons/m9-l3.md
+    minutes: 20
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: انشر TriageBot (رابط حي وREADME وفيديو عرض)، وأنجز محاكاة مهمة منزلية واحدة في 4 ساعات من القائمة. ارفع
+      الرابطين وملف README للمحاكاة مع الوقت الذي استغرقته فعلًا.
+  - id: m9-explain
+    type: explain
+    prompt: 'سجّل أو اكتب دفاعك عن المهمة المنزلية: الأسئلة الثمانية أعلاه، بإجابات عن تسليمك. ارفع الإجابات هنا.'
+    min_words: 250
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: المرحلة الأخيرة
+  lessons:
+  - id: m10-l1
+    title: جولة مقابلات تجريبية كاملة
+    file: lessons/m10-l1.md
+    minutes: 20
+  - id: m10-l2
+    title: 'سيرتك الذاتية: النسخة النهائية'
+    file: lessons/m10-l2.md
+    minutes: 20
+  - id: m10-l3
+    title: 'للتوسع: مصادر تستحق وقتك'
+    file: lessons/m10-l3.md
+    minutes: 15
+    optional: true
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: أجرِ جولة مقابلات تجريبية كاملة (الجولات الخمس) وارفع نماذج الملاحظات الخمسة وسيرتك الذاتية النهائية.
+  - id: m10-explain
+    type: explain
+    prompt: 'بالنظر إلى الأجزاء الثلاثة: ما أقوى إشارتين لديك في المقابلات الآن، وأضعف إشارة، وخطتك للأيام الثلاثين
+      القادمة؟'
+    min_words: 120
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

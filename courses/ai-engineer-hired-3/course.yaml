@@ -1,0 +1,326 @@
+id: ai-engineer-hired-3
+title: 'Get hired as an AI engineer 3: AI interviews, system design and a production project'
+version: 1
+language: en
+description: 'Prepare the rounds specific to AI roles: how LLMs work at interview depth, prompting and tools, RAG
+  and its failure modes, agents, evaluation, cost, latency and safety (OWASP''s LLM Top 10), and AI system design
+  with worked examples and estimates. Build TriageBot step by step, a support-ticket agent with tools, guardrails,
+  tracing, evals and human approval, then do a timed take-home, its defence round and a full mock loop.'
+image: cover.jpg
+modules:
+- id: m1
+  title: What AI interviews test
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: 'The big picture: how an assistant LLM is made'
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=zjkBMFhNj_g
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Write a one-page summary in your own words with a diagram: how an assistant LLM is made (pretraining,
+      fine-tuning, human feedback) and the 3 security risks from the big-picture lesson. Upload it.'
+  - id: m1-explain
+    type: explain
+    prompt: 'Interview question: "How do LLMs work?" Answer in about 200 words for an engineer who isn''t an ML
+      specialist, using the four beats.'
+    min_words: 150
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: How LLMs work, at interview depth
+  lessons:
+  - id: m2-l1
+    title: From tokens to text
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=eMlx5fFNoYc
+  - id: m2-l2
+    title: 'Inference: sampling, context and speed'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Run a small experiment with any model you can reach (an API or Ollama): the same 5 prompts at temperature
+      0, 0.7 and 1.2, three runs each, and count the tokens of one paragraph in English and its Arabic translation.
+      Upload a short report with your table and conclusions.'
+  - id: m2-explain
+    type: explain
+    prompt: 'Interview question: "Explain the KV cache, and why long contexts are expensive." Then: "Your users
+      complain the bot is slow. Which numbers do you look at first?"'
+    min_words: 150
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: Prompting, tools, and when to fine-tune
+  lessons:
+  - id: m3-l1
+    title: Structured output and tool calling
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: Prompting, RAG or fine-tuning?
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Add structured output to DocAnswer: return `{"answer": ..., "citations": [...], "confidence": "high|medium|low"}`,
+      validate it with Pydantic, retry once on failure, and log how often the first try fails over your golden set.
+      Upload the commit and the numbers.'
+  - id: m3-explain
+    type: explain
+    prompt: 'A product manager says: "Let''s fine-tune a model on our 5,000 support articles so it knows our product."
+      Answer as the AI engineer: what you''d do instead or first, and why.'
+    min_words: 120
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: RAG at interview depth
+  lessons:
+  - id: m4-l1
+    title: RAG questions you'll be asked
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Debugging a RAG that's confidently wrong
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Do a real error analysis on DocAnswer: collect 30 wrong or weak answers, classify each (ingestion,
+      search, generation), fix the biggest category, and re-run your evals. Upload the classification table and
+      the before/after numbers.'
+  - id: m4-explain
+    type: explain
+    prompt: 'Interview: "Our RAG chatbot gives confident but wrong answers. You have one week. What do you do?"
+      Answer step by step, with what you''d measure each day.'
+    min_words: 150
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: Agents, and TriageBot step 1
+  lessons:
+  - id: m5-l1
+    title: 'Agents: patterns, and when not to use them'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: 'TriageBot, step 1: design and tools'
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Create the TriageBot repository: the design (tools, limits, policies, data) in the README with the
+      diagram, `tools.py`, the SQLite seed script with 20 customers, and 20+ help-center articles ingested with
+      your DocAnswer code. Upload the repository link.'
+  - id: m5-explain
+    type: explain
+    prompt: 'Interview: "When is an agent the wrong solution?" Answer with two examples, and explain how TriageBot
+      keeps the agent''s freedom small.'
+    min_words: 120
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: Evals, and TriageBot step 2
+  lessons:
+  - id: m6-l1
+    title: 'Evals: the skill that sets you apart'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'TriageBot, step 2: the eval set first'
+    file: lessons/m6-l2.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Write the 50-ticket eval set (with 10 injection tickets), the eval runner, and a no-tools baseline.
+      Upload the files and the baseline's scores.
+  - id: m6-explain
+    type: explain
+    prompt: 'Interview: "How do you evaluate an agent?" Answer with your metrics, why each matters to the business,
+      and how you''d keep the LLM judge honest.'
+    min_words: 120
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Production: cost, latency, safety, and TriageBot step 3'
+  lessons:
+  - id: m7-l1
+    title: Cost, latency and reliability
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'Safety: prompt injection, PII and tools'
+    file: lessons/m7-l2.md
+    minutes: 30
+  - id: m7-l3
+    title: 'TriageBot, step 3: the loop, guardrails and tracing'
+    file: lessons/m7-l3.md
+    minutes: 50
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Build the agent loop with guardrails and tracing, run your evals, and do at least two improvement rounds.
+      Upload: the commit link, the changelog table, and one trace of an injection ticket that was correctly escalated.'
+  - id: m7-explain
+    type: explain
+    prompt: 'Interview: "Your app gets 1M queries a day. How do you cut cost by half without hurting quality?" Answer
+      with levers, how you''d measure quality while changing them, and the order you''d try them.'
+    min_words: 150
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: AI system design
+  lessons:
+  - id: m8-l1
+    title: The framework and the rubric
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: 'Worked example: document Q&A for a whole company'
+    file: lessons/m8-l2.md
+    minutes: 40
+  - id: m8-l3
+    title: Back-of-the-envelope numbers
+    file: lessons/m8-l3.md
+    minutes: 20
+  - id: m8-l4
+    title: Practice prompts
+    file: lessons/m8-l4.md
+    minutes: 15
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Do two practice prompts, timed, on paper or a whiteboard: one RAG design and one agent design. Upload
+      photos of your diagrams and your notes for each of the five steps, including one cost estimate.'
+  - id: m8-explain
+    type: explain
+    prompt: Write your answer to "Design ChatGPT's cross-conversation memory feature" following the five steps,
+      with at least three trade-offs and two failure modes.
+    min_words: 250
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: Ship TriageBot, and the take-home
+  lessons:
+  - id: m9-l1
+    title: 'TriageBot, step 4: ship it and put it in your CV'
+    file: lessons/m9-l1.md
+    minutes: 40
+  - id: m9-l2
+    title: A 4-hour take-home simulation
+    file: lessons/m9-l2.md
+    minutes: 30
+  - id: m9-l3
+    title: The project deep dive and the defence round
+    file: lessons/m9-l3.md
+    minutes: 20
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Ship TriageBot (live link, README, demo video) and do one 4-hour take-home simulation from the list.
+      Upload both links and your simulation's README, with the time you actually spent.
+  - id: m9-explain
+    type: explain
+    prompt: 'Record or write your defence of the take-home: the 8 questions above, answered for your submission.
+      Upload the answers here.'
+    min_words: 250
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: The final stretch
+  lessons:
+  - id: m10-l1
+    title: A full mock loop
+    file: lessons/m10-l1.md
+    minutes: 20
+  - id: m10-l2
+    title: Your CV, final version
+    file: lessons/m10-l2.md
+    minutes: 20
+  - id: m10-l3
+    title: 'Going further: resources worth your time'
+    file: lessons/m10-l3.md
+    minutes: 15
+    optional: true
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: Run a full mock loop (all five rounds) and upload the five feedback forms, plus your final CV.
+  - id: m10-explain
+    type: explain
+    prompt: 'Looking back over the three parts: what are your two strongest interview signals now, your weakest
+      one, and your plan for the next 30 days?'
+    min_words: 120
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

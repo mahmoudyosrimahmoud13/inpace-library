@@ -1,0 +1,440 @@
+q1:
+  text: 'What does `int(input("x: ")) + 1` give if the user types 4?'
+  show: 4
+  options:
+    a: '5'
+    b: The number five
+    c: '"41"'
+    d: '4'
+    e: An error
+    f: '"5"'
+q2:
+  text: What does `7 // 2` give?
+  show: 4
+  options:
+    a: '3'
+    b: 'Three: the division without the fraction'
+    c: '3.5'
+    d: '1'
+    e: '4'
+    f: '14'
+q3:
+  text: Which line shows `Hi Mona` when `name` is `"  mona "`?
+  show: 4
+  options:
+    a: print(f"Hi {name.strip().title()}")
+    b: print("Hi", name.strip().capitalize())
+    c: print("Hi name")
+    d: print(f"Hi {name}")
+    e: print("Hi" + name.title())
+    f: print("Hi", name.upper())
+q4:
+  text: Why do functions use `return` instead of only `print`?
+  show: 4
+  options:
+    a: So the calling code can use the value again
+    b: So the result can be stored, compared or tested
+    c: return is faster at showing text
+    d: print doesn't work inside functions
+    e: return saves the value to a file
+    f: Python requires every function to return
+q5:
+  text: What's the difference between `=` and `==`?
+  show: 4
+  options:
+    a: = stores a value, == compares two values
+    b: x = 5 puts 5 in x; x == 5 asks if x is 5
+    c: They mean the same thing
+    d: == stores a value, = compares
+    e: == is only for text
+    f: = is only for numbers
+q6:
+  text: 'With `score = 95`, what does this chain print: `if score >= 80: A` / `elif score >= 90: B`?'
+  show: 4
+  options:
+    a: A
+    b: Only A, because the first true condition wins
+    c: B
+    d: A B
+    e: Nothing
+    f: An error
+q7:
+  text: Which line checks that `n` is even?
+  show: 4
+  options:
+    a: n % 2 == 0
+    b: not n % 2
+    c: n / 2 == 0
+    d: n // 2 == 1
+    e: n % 2 == 1
+    f: n == 2
+q8:
+  text: When is `match` a good fit?
+  show: 4
+  options:
+    a: Comparing one value against many fixed values
+    b: Replacing a long elif chain on the same variable
+    c: Repeating code many times
+    d: Reading a file
+    e: Catching errors
+    f: Defining a function
+q9:
+  text: What numbers does `range(1, 4)` give?
+  show: 4
+  options:
+    a: 1, 2, 3
+    b: Three numbers, starting at 1
+    c: 1, 2, 3, 4
+    d: 0, 1, 2, 3
+    e: 1, 4
+    f: '4'
+q10:
+  text: What does `break` do inside a loop?
+  show: 4
+  options:
+    a: Leaves the loop right away
+    b: Ends the loop, even a while True loop
+    c: Skips to the next round
+    d: Pauses the program
+    e: Restarts the loop
+    f: Stops the whole computer
+q11:
+  text: '`cities = {"Omar": "Alexandria"}`. How do you get Omar''s city?'
+  show: 4
+  options:
+    a: cities["Omar"]
+    b: cities.get("Omar")
+    c: cities[0]
+    d: cities.Omar
+    e: cities("Omar")
+    f: cities["Alexandria"]
+q12:
+  text: 'What''s printed by `for i, x in enumerate(["a", "b"]): print(i, x)`?'
+  show: 4
+  options:
+    a: 0 a / 1 b
+    b: Each index with its item, starting at 0
+    c: 1 a / 2 b
+    d: a b
+    e: 0 / 1
+    f: a 0 / b 1
+q13:
+  text: What error does `int("cat")` raise?
+  show: 4
+  options:
+    a: ValueError
+    b: 'A ValueError: the text isn''t a number'
+    c: TypeError
+    d: SyntaxError
+    e: NameError
+    f: KeyError
+q14:
+  text: When does the `else` block after `try` run?
+  show: 4
+  options:
+    a: When the try block raised no error
+    b: Only if no exception was caught
+    c: Always
+    d: Only after an error
+    e: 'Never: else is only for if'
+    f: Before the try block
+q15:
+  text: What does `raise ValueError("too big")` do?
+  show: 4
+  options:
+    a: Stops the function with an error the caller can catch
+    b: Signals bad input with a message
+    c: Prints too big and continues
+    d: Fixes the value
+    e: Closes Python
+    f: Makes the number bigger
+q16:
+  text: Which of these is a `SyntaxError`, not an exception at run time?
+  show: 4
+  options:
+    a: print("hello)
+    b: if x > 3 print(x)
+    c: int("cat")
+    d: '[1, 2][5]'
+    e: 10 / 0
+    f: '{"a": 1}["b"]'
+q17:
+  text: You run `python greet.py Mona`. What is `sys.argv[1]`?
+  show: 4
+  options:
+    a: '"Mona"'
+    b: The first word after the program's name
+    c: '"greet.py"'
+    d: '"python"'
+    e: '1'
+    f: '["Mona"]'
+q18:
+  text: What does `random.randint(1, 6)` give?
+  show: 4
+  options:
+    a: A whole number from 1 to 6, both included
+    b: Like rolling one die
+    c: A number from 1 to 5
+    d: A decimal between 1 and 6
+    e: Always 1
+    f: A list of 6 numbers
+q19:
+  text: 'Why write `if __name__ == "__main__": main()`?'
+  show: 4
+  options:
+    a: So importing the file doesn't run its program
+    b: So the file works as a program and as a module
+    c: It makes the program faster
+    d: Python requires it in every file
+    e: It installs the packages
+    f: It hides the code from others
+q20:
+  text: What is `requirements.txt` for?
+  show: 4
+  options:
+    a: Listing the packages a project needs
+    b: Letting others install them with pip install -r
+    c: Storing your passwords
+    d: Writing the program's tests
+    e: Running the program
+    f: Listing Python's built-in functions
+q21:
+  text: Which functions does pytest run?
+  show: 4
+  options:
+    a: Functions whose names start with test_
+    b: test_zero(), but not check_zero()
+    c: Every function in every file
+    d: Only main()
+    e: Functions that print
+    f: Functions with assert in their name
+q22:
+  text: What does `assert square(2) == 4` do when `square(2)` returns 5?
+  show: 4
+  options:
+    a: Raises an AssertionError
+    b: Fails the test
+    c: Prints 5
+    d: Changes the result to 4
+    e: Nothing happens
+    f: Fixes square()
+q23:
+  text: How do you test that `grade(101)` raises a ValueError?
+  show: 4
+  options:
+    a: 'with pytest.raises(ValueError): grade(101)'
+    b: Use pytest.raises around the call
+    c: assert grade(101) == ValueError
+    d: assert ValueError
+    e: print(grade(101))
+    f: grade(101) == False
+q24:
+  text: Which inputs are edge cases for a function that takes a score from 0 to 100?
+  show: 4
+  options:
+    a: '0'
+    b: '100'
+    c: '55'
+    d: '42'
+    e: '73'
+    f: '88'
+q25:
+  text: What does opening a file with `"w"` do to what's already in it?
+  show: 4
+  options:
+    a: Deletes it and starts empty
+    b: Writes over it
+    c: Adds to the end
+    d: Only reads it
+    e: Makes a backup first
+    f: Refuses to open it
+q26:
+  text: Why call `.rstrip()` on lines read from a file?
+  show: 4
+  options:
+    a: To remove the \n at the end of each line
+    b: So print doesn't add an extra blank line
+    c: To sort the lines
+    d: To close the file
+    e: To make the text uppercase
+    f: To count the lines
+q27:
+  text: A CSV value is `"Cairo, Egypt"`. What's the safe way to read it?
+  show: 4
+  options:
+    a: csv.reader
+    b: csv.DictReader
+    c: line.split(",")
+    d: line.strip()
+    e: line.split(" ")
+    f: json.loads(line)
+q28:
+  text: What does `with` do when the block ends?
+  show: 4
+  options:
+    a: Closes the file automatically
+    b: Closes it even if an error happened
+    c: Deletes the file
+    d: Saves a copy as JSON
+    e: Opens it again
+    f: Nothing
+q29:
+  text: What does `\d+` match?
+  show: 4
+  options:
+    a: One or more digits
+    b: The 2026 in "year 2026"
+    c: Exactly one letter
+    d: Zero or more spaces
+    e: A plus sign
+    f: Any word
+q30:
+  text: Why write regex patterns as `r"..."`?
+  show: 4
+  options:
+    a: So backslashes reach re unchanged
+    b: So \d isn't treated as a Python escape
+    c: It makes the search faster
+    d: It means read the pattern from a file
+    e: It ignores capital letters
+    f: Python requires it for all text
+q31:
+  text: Which pattern matches the whole text `cat` and nothing longer?
+  show: 4
+  options:
+    a: ^cat$
+    b: re.fullmatch(r"cat", text)
+    c: cat
+    d: cat+
+    e: ^cat
+    f: c.t*
+q32:
+  text: What does `re.sub(r"\s+", " ", text)` do?
+  show: 4
+  options:
+    a: Turns every run of spaces into one space
+    b: Cleans up extra whitespace
+    c: Deletes all spaces
+    d: Finds the first space
+    e: Splits the text into words
+    f: Counts the spaces
+q33:
+  text: When does `__init__` run?
+  show: 4
+  options:
+    a: When a new object is created
+    b: At Course("Python", 40)
+    c: When the object is printed
+    d: When the program ends
+    e: Only when you call obj.__init__()
+    f: When the class is imported
+q34:
+  text: What is `self` in a method?
+  show: 4
+  options:
+    a: The object the method was called on
+    b: course itself, in course.start()
+    c: The class's name
+    d: A Python keyword you can't rename
+    e: The parent class
+    f: The program's main function
+q35:
+  text: Why use `@property` for `level`?
+  show: 4
+  options:
+    a: To check every new value before it's stored
+    b: So course.level = "x" can raise an error
+    c: To make the attribute faster
+    d: To hide it from print
+    e: To make it a class variable
+    f: To save it to a file
+q36:
+  text: '`class Learner(Person)` means:'
+  show: 4
+  options:
+    a: Learner inherits from Person
+    b: Learner gets Person's methods
+    c: Person inherits from Learner
+    d: Learner creates a Person
+    e: Learner is a function
+    f: The two classes can't be used together
+q37:
+  text: What does `set([1, 2, 2, 3])` contain?
+  show: 4
+  options:
+    a: '{1, 2, 3}'
+    b: Each value once
+    c: '[1, 2, 2, 3]'
+    d: '{1, 2, 2, 3}'
+    e: '4'
+    f: '{2}'
+q38:
+  text: What does `[n * 2 for n in range(3)]` give?
+  show: 4
+  options:
+    a: '[0, 2, 4]'
+    b: Each number from 0 to 2, doubled
+    c: '[2, 4, 6]'
+    d: '[0, 1, 2]'
+    e: '6'
+    f: '[0, 2, 4, 6]'
+q39:
+  text: Do type hints stop a wrong type when the program runs?
+  show: 4
+  options:
+    a: No, Python ignores them when running
+    b: No, but tools like mypy check them
+    c: Yes, always
+    d: Yes, they raise TypeError
+    e: Only in classes
+    f: Only for strings
+q40:
+  text: Why use a generator with `yield` for a million items?
+  show: 4
+  options:
+    a: It makes one value at a time, saving memory
+    b: It doesn't build the whole list first
+    c: It sorts the items
+    d: It runs the items in parallel
+    e: It saves them to disk
+    f: It makes the list shorter
+q41:
+  text: Which file should list the packages your project installs?
+  show: 4
+  options:
+    a: requirements.txt
+    b: The file pip install -r reads
+    c: README.md
+    d: test_project.py
+    e: project.py
+    f: settings.json
+q42:
+  text: What's the best way to build a bigger program?
+  show: 4
+  options:
+    a: Get a small version working, then add one feature at a time
+    b: Test each piece as soon as it works
+    c: Write everything, then run it once at the end
+    d: Put all the code in main()
+    e: Avoid functions to keep it short
+    f: Skip tests until it's finished
+q43:
+  text: Which error do you catch when converting user text to a number?
+  show: 4
+  options:
+    a: ValueError
+    b: 'except ValueError:'
+    c: KeyError
+    d: IndexError
+    e: 'except:'
+    f: SyntaxError
+q44:
+  text: Which line reads a CSV file into a list of dicts?
+  show: 4
+  options:
+    a: rows = list(csv.DictReader(file))
+    b: rows = [row for row in csv.DictReader(file)]
+    c: rows = file.split(",")
+    d: rows = json.load(file)
+    e: rows = csv.writer(file)
+    f: rows = open(file)

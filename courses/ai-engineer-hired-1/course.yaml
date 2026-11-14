@@ -1,0 +1,293 @@
+id: ai-engineer-hired-1
+title: 'Get hired as an AI engineer 1: the market, your first project and your CV'
+version: 1
+language: en
+description: 'Start your AI engineer job search from real data: what 895 job posts ask for, how the interview loop
+  works and how AI changed it. Then build DocAnswer step by step, a deployed RAG assistant with citations, retrieval
+  metrics and an LLM-judge evaluation in CI, and turn it into a one-page CV, a LinkedIn and GitHub that work, a
+  job search pipeline with outreach templates, behavioral stories and a negotiation plan.'
+image: cover.jpg
+modules:
+- id: m1
+  title: The job and the market
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how this series gets you hired'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: What AI engineers do, and what employers ask for
+    file: lessons/m1-l2.md
+    minutes: 25
+  - id: m1-l3
+    title: Your skills gap and your plan
+    file: lessons/m1-l3.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Do your own market research: collect **20 real AI engineer postings** you''d apply to (your city, your
+      region, or remote). In a spreadsheet, tick for each post the skills from this module''s table, the years of
+      experience asked, and the interview steps if listed. Add your 0 to 3 self-scores and your weekly plan on a
+      second sheet. Upload the file.'
+  - id: m1-explain
+    type: explain
+    prompt: 'From your 20 posts: what are the top 5 skills, how does your market differ from the 895-post study,
+      which kind of company will you target and why, and what are your 3 biggest gaps?'
+    min_words: 120
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: How hiring works
+  lessons:
+  - id: m2-l1
+    title: The interview loop, stage by stage
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: How AI changed interviews
+    file: lessons/m2-l2.md
+    minutes: 15
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Pick 3 companies from your research list. For each, find how they interview (their careers page, Glassdoor,
+      the field guide's company data, candidates' blog posts) and write the expected stages in a table with what
+      you'll prepare for each. Upload the table.
+  - id: m2-explain
+    type: explain
+    prompt: 'A friend says: "I''ll just grind LeetCode for 3 months, then apply." Using this module, explain what
+      they''d miss and what a better plan looks like.'
+    min_words: 80
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Project DocAnswer, step 1: plan and set up'
+  lessons:
+  - id: m3-l1
+    title: Choose a project hiring managers care about
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: Set up the repository like a professional
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Create the DocAnswer repository on GitHub with the structure above, your documents (or a download script),
+      `.env.example`, `.gitignore`, and a README draft with: the problem, the users, the documents and their licence.
+      Upload the repository link and a screenshot.'
+  - id: m3-explain
+    type: explain
+    prompt: Describe your 3 users and 10 real questions they'd ask. Which of those questions do you expect to be
+      hard for search, and why?
+    min_words: 80
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'DocAnswer, step 2: ingest, search, measure'
+  lessons:
+  - id: m4-l1
+    title: Ingest and chunk the documents
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Search: keywords, vectors and hybrid'
+    file: lessons/m4-l2.md
+    minutes: 35
+  - id: m4-l3
+    title: Measure retrieval before you generate
+    file: lessons/m4-l3.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Ingest your documents, build the hybrid searcher and a 60-question retrieval golden set. Upload: your
+      commit link, and a results table with hit rate@5 and MRR for keyword only, vector only and hybrid (and two
+      chunk sizes if you can).'
+  - id: m4-explain
+    type: explain
+    prompt: 'Interview question: "Your RAG system gives wrong answers. How do you find out whether retrieval or
+      generation is the problem?" Answer it using your own numbers and one real miss you investigated.'
+    min_words: 120
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'DocAnswer, step 3: answers you can trust'
+  lessons:
+  - id: m5-l1
+    title: Answer with citations, or say you don't know
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Evaluate the answers
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Add answering and the answer evals. Run at least two improvement rounds. Upload: the commit link, the
+      changelog table (change, hit rate, correct, faithful, tokens per question), and your judge agreement rate
+      on 30 hand-graded answers.'
+  - id: m5-explain
+    type: explain
+    prompt: 'Interview question: "How do you know your chatbot isn''t hallucinating?" Answer with your setup: the
+      prompt, the refusal, the faithfulness metric, the judge check, and one failure you fixed.'
+    min_words: 120
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'DocAnswer, step 4: ship it'
+  lessons:
+  - id: m6-l1
+    title: API, tests, Docker and CI
+    file: lessons/m6-l1.md
+    minutes: 40
+  - id: m6-l2
+    title: Deploy, write the README, record a demo
+    file: lessons/m6-l2.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Ship DocAnswer: API, tests and CI passing, Docker image, a live deployment, the README with all 7 parts,
+      and a 2-minute demo video. Upload the repository link, the live link and the video.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Interview: "Walk me through DocAnswer in 3 minutes." Write the answer you''d give: problem, architecture,
+      your best decision, your numbers, what you''d do next.'
+    min_words: 150
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: Your CV, LinkedIn and GitHub
+  lessons:
+  - id: m7-l1
+    title: A CV that gets read
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: Write your projects into your CV
+    file: lessons/m7-l2.md
+    minutes: 25
+  - id: m7-l3
+    title: LinkedIn and GitHub that work for you
+    file: lessons/m7-l3.md
+    minutes: 20
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Upload your one-page CV (PDF) with DocAnswer as the first project and at least 3 measured bullets, the
+      plain-text paste test result, and screenshots of your LinkedIn headline/About and GitHub profile.
+  - id: m7-explain
+    type: explain
+    prompt: 'Pick your strongest CV bullet. Write how you''d answer an interviewer who asks: "How exactly did you
+      measure that, and what would you do differently?"'
+    min_words: 100
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: Finding the job
+  lessons:
+  - id: m8-l1
+    title: Where AI jobs are
+    file: lessons/m8-l1.md
+    minutes: 20
+  - id: m8-l2
+    title: Referrals and outreach that get answers
+    file: lessons/m8-l2.md
+    minutes: 25
+  - id: m8-l3
+    title: Run your search like a pipeline
+    file: lessons/m8-l3.md
+    minutes: 20
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Start your search: set up the tracking sheet, 5 job alerts, and send your first 10 tailored applications
+      and 5 outreach messages this week. Upload the sheet (hide personal contact details).'
+  - id: m8-explain
+    type: explain
+    prompt: 'After 4 weeks, read your numbers: where does your pipeline leak, what''s the most likely cause, and
+      what will you change? (If you''re not at 4 weeks yet, write your plan for reading them.)'
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: Behavioral interviews, references and offers
+  lessons:
+  - id: m9-l1
+    title: Your story bank
+    file: lessons/m9-l1.md
+    minutes: 30
+  - id: m9-l2
+    title: References, offers and negotiation
+    file: lessons/m9-l2.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Write your 8 STAR stories (notes, not scripts) and your 90-second "tell me about yourself". Record yourself
+      answering 3 behavioral questions picked at random. Upload the stories file and the recording.
+  - id: m9-explain
+    type: explain
+    prompt: 'Answer in STAR: "Tell me about a time you were wrong about something technical." Then note what in
+      your answer shows ownership and learning.'
+    min_words: 120
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

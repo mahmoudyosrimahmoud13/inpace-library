@@ -1,0 +1,400 @@
+q1:
+  text: What does pretraining teach an LLM?
+  show: 4
+  options:
+    a: To predict the next token on huge amounts of text
+    b: General knowledge and language patterns
+    c: To follow instructions politely
+    d: To call tools
+    e: To search the web
+    f: Your company's documents
+q2:
+  text: The best structure for a theory answer?
+  show: 4
+  options:
+    a: What, how, trade-offs, your experience
+    b: Mechanism plus where it fails
+    c: A memorised definition
+    d: A list of frameworks
+    e: As long as possible
+    f: Just yes or no
+q3:
+  text: Prompt injection is...
+  show: 4
+  options:
+    a: Untrusted text that tries to act as instructions
+    b: OWASP's number one LLM risk
+    c: A way to speed up inference
+    d: A fine-tuning method
+    e: A database attack only
+    f: Harmless
+q4:
+  text: How long is the AI/ML deep-dive round, typically?
+  show: 4
+  options:
+    a: 45 to 90 minutes
+    b: About an hour or more
+    c: 5 minutes
+    d: A full day
+    e: It doesn't exist
+    f: 10 minutes
+q5:
+  text: What does temperature 0 do?
+  show: 4
+  options:
+    a: Always picks the most likely token (greedy)
+    b: Makes outputs (nearly) repeatable
+    c: Makes the model creative
+    d: Turns the model off
+    e: Shortens the context
+    f: Removes hallucinations
+q6:
+  text: Which architecture fits embeddings and rerankers?
+  show: 4
+  options:
+    a: Encoder-only
+    b: Bidirectional (BERT-style)
+    c: Decoder-only
+    d: A CNN
+    e: A decision tree
+    f: RNN only
+q7:
+  text: What does the KV cache save?
+  show: 4
+  options:
+    a: Recomputing keys and values of earlier tokens
+    b: Work per new token during generation
+    c: Training time
+    d: Disk space
+    e: Tokenizer vocabulary
+    f: The prompt text
+q8:
+  text: How does DPO differ from RLHF with PPO?
+  show: 4
+  options:
+    a: No separate reward model
+    b: Learns directly from preferred/rejected pairs
+    c: It needs more human labels
+    d: It's pretraining
+    e: It's a tokenizer
+    f: It only works for images
+q9:
+  text: Your bot must know this week's prices. Best approach?
+  show: 4
+  options:
+    a: RAG or a tool that fetches the prices
+    b: Retrieve fresh data at request time
+    c: Fine-tune every week
+    d: Raise the temperature
+    e: A longer system prompt with old prices
+    f: Pretrain a new model
+q10:
+  text: In tool calling, who runs the tool?
+  show: 4
+  options:
+    a: Your code
+    b: The application, after validating the arguments
+    c: The model, inside the API
+    d: The user
+    e: The tokenizer
+    f: 'Nobody: it''s simulated'
+q11:
+  text: What does LoRA train?
+  show: 4
+  options:
+    a: Small low-rank matrices added to the model
+    b: A few parameters, not all weights
+    c: Every weight from scratch
+    d: Only the tokenizer
+    e: The vector database
+    f: The prompt
+q12:
+  text: The model returns invalid JSON 5% of the time. Best fix?
+  show: 4
+  options:
+    a: Validate in code and retry with the error
+    b: Use the API's schema enforcement if it has one
+    c: Hope it improves
+    d: Parse it with string slicing
+    e: Raise the temperature
+    f: Ignore those requests
+q13:
+  text: The right chunk is retrieved but the answer is wrong. The problem is in...
+  show: 4
+  options:
+    a: Generation (prompt, model, context use)
+    b: The step after retrieval
+    c: Ingestion
+    d: The vector index
+    e: Chunking only
+    f: The user
+q14:
+  text: Where should document permissions be enforced?
+  show: 4
+  options:
+    a: At retrieval time, as a filter
+    b: Before any text reaches the model
+    c: 'In the prompt: "don''t reveal secret docs"'
+    d: After generation
+    e: Nowhere
+    f: In the UI only
+q15:
+  text: When is semantic caching risky?
+  show: 4
+  options:
+    a: When answers depend on the user or the time
+    b: For personal or fast-changing data
+    c: Never
+    d: For FAQs
+    e: When the cache is empty
+    f: Only with BM25
+q16:
+  text: First step when debugging bad RAG answers?
+  show: 4
+  options:
+    a: Collect and read real failures
+    b: Error analysis before changing anything
+    c: Switch to the newest model
+    d: Add an agent
+    e: Fine-tune
+    f: Increase k to 50
+q17:
+  text: The steps of a task are known and fixed. Best design?
+  show: 4
+  options:
+    a: A workflow (prompt chaining) in code
+    b: Not an autonomous agent
+    c: A multi-agent swarm
+    d: An agent with every tool
+    e: Fine-tuning
+    f: Higher temperature
+q18:
+  text: Where should "refunds over 100 USD go to a person" live?
+  show: 4
+  options:
+    a: In code, checked after the model decides
+    b: As a deterministic policy check
+    c: Only in the system prompt
+    d: In the ticket text
+    e: 'Nowhere: trust the model'
+    f: In the help center
+q19:
+  text: Why return tool errors to the model instead of raising?
+  show: 4
+  options:
+    a: The model can retry or choose another path
+    b: One bad call shouldn't crash the loop
+    c: To hide bugs
+    d: Models can't read errors
+    e: It's faster
+    f: APIs require it
+q20:
+  text: What makes a tool idempotent?
+  show: 4
+  options:
+    a: Running it twice has the same effect as once
+    b: Retries can't double a payment
+    c: It's fast
+    d: It has no arguments
+    e: It's written in Python
+    f: It always fails
+q21:
+  text: Which eval layer should run on every commit?
+  show: 4
+  options:
+    a: Code checks
+    b: Cheap labelled tests and assertions
+    c: Weekly human review
+    d: Online A/B tests
+    e: None
+    f: Only manual chatting
+q22:
+  text: Why include attack tickets in the eval set?
+  show: 4
+  options:
+    a: To measure resistance to prompt injection
+    b: So safety regressions are caught
+    c: To make scores look worse
+    d: Interviewers require 10
+    e: To train the model
+    f: They're rare, so pointless
+q23:
+  text: Why compare the agent with a no-tools baseline?
+  show: 4
+  options:
+    a: To prove the extra cost buys real quality
+    b: Agents must earn their complexity
+    c: Baselines are always better
+    d: To slow down CI
+    e: It's required by OpenAI
+    f: No reason
+q24:
+  text: Escalation recall measures...
+  show: 4
+  options:
+    a: How many must-escalate tickets were escalated
+    b: Missed escalations, the risky errors
+    c: How fast replies are
+    d: Token cost
+    e: Reply tone
+    f: Customer age
+q25:
+  text: Which is usually more expensive per token?
+  show: 4
+  options:
+    a: Output tokens
+    b: What the model generates
+    c: Input tokens
+    d: They always cost the same
+    e: Embeddings
+    f: Cached tokens
+q26:
+  text: Which OWASP risk is an agent with a "send_refund" tool and no approval?
+  show: 4
+  options:
+    a: LLM06 Excessive Agency
+    b: Too much power for the model
+    c: LLM08 Vector and Embedding Weaknesses
+    d: LLM03 Supply Chain
+    e: LLM09 Misinformation
+    f: LLM07 System Prompt Leakage
+q27:
+  text: Best first fix for slow perceived responses?
+  show: 4
+  options:
+    a: Stream tokens to cut time to first token
+    b: Measure p95 per step, fix the biggest
+    c: A bigger model
+    d: More retrieved chunks
+    e: Higher temperature
+    f: Remove timeouts
+q28:
+  text: Can a strong system prompt fully prevent prompt injection?
+  show: 4
+  options:
+    a: 'No: limit what an injection can do'
+    b: No, so layer defences in code
+    c: Yes, with capital letters
+    d: Yes, with temperature 0
+    e: Yes, if the model is large
+    f: Injection isn't real
+q29:
+  text: What should the first 5 to 10 minutes of AI system design cover?
+  show: 4
+  options:
+    a: Requirements, scale, budgets and how quality is measured
+    b: Framing the problem
+    c: Picking a framework
+    d: Writing the prompt
+    e: Drawing the database schema
+    f: Choosing a GPU
+q30:
+  text: 10M docs × 5 chunks × 1,024 dims × 4 bytes is about...
+  show: 4
+  options:
+    a: 205 GB
+    b: About 200 gigabytes
+    c: 2 GB
+    d: 20 TB
+    e: 205 MB
+    f: 2 PB
+q31:
+  text: Where do access controls go in enterprise RAG?
+  show: 4
+  options:
+    a: As metadata filters inside retrieval
+    b: Before any chunk reaches the model
+    c: In the system prompt
+    d: After the answer is generated
+    e: In the UI only
+    f: Not needed internally
+q32:
+  text: Which is a weak signal in an AI design interview?
+  show: 4
+  options:
+    a: '"I''d use LangChain" with no reason'
+    b: Only the happy path
+    c: Estimating cost out loud
+    d: Asking about scale
+    e: Planning evaluation
+    f: Naming failure modes
+q33:
+  text: A take-home's first hour should go to...
+  show: 4
+  options:
+    a: Assumptions and an eval harness
+    b: Clarifying scope and success criteria
+    c: A fancy UI
+    d: Trying five frameworks
+    e: Fine-tuning a model
+    f: Writing the video script
+q34:
+  text: Why does TriageBot need an approval queue?
+  show: 4
+  options:
+    a: No customer gets an unchecked AI reply
+    b: Human in the loop for irreversible actions
+    c: It speeds up replies
+    d: APIs require queues
+    e: To store embeddings
+    f: To train the model
+q35:
+  text: In the defence round, "How would you halve the cost?" Best answer starts with...
+  show: 4
+  options:
+    a: Where the tokens go now, measured
+    b: The current cost breakdown per step
+    c: '"Use a cheaper model" with no data'
+    d: '"Cost doesn''t matter"'
+    e: '"Remove the evals"'
+    f: '"Ask finance"'
+q36:
+  text: Which CV bullet is strongest?
+  show: 4
+  options:
+    a: Escalation recall 100% on 50 labelled tickets incl. 10 attacks
+    b: Cut tokens per ticket 61% with no accuracy drop
+    c: Built an AI agent with LangGraph
+    d: Passionate about agents
+    e: Used GPT for tickets
+    f: Agentic AI expert
+q37:
+  text: After a mock loop, what do you fix first?
+  show: 4
+  options:
+    a: The weakest round
+    b: The round with "no hire"
+    c: The strongest round, to perfect it
+    d: 'Nothing: start applying'
+    e: Your LinkedIn photo
+    f: All at once
+q38:
+  text: With no AI job experience, what leads your CV?
+  show: 4
+  options:
+    a: Two measured, deployed projects
+    b: Projects with evals and links
+    c: A list of 30 tools
+    d: Course certificates only
+    e: Hobbies
+    f: A photo
+q39:
+  text: The single most repeated advice across this series?
+  show: 4
+  options:
+    a: 'Measure: evals, numbers, trade-offs'
+    b: Show evidence, not adjectives
+    c: Use the newest framework
+    d: Memorise answers
+    e: Apply everywhere with one CV
+    f: Avoid projects
+q40:
+  text: A resources lesson marked "optional" in inPace means...
+  show: 4
+  options:
+    a: The module can finish without it
+    b: Read it if it helps you
+    c: It's not part of the course
+    d: It will be removed
+    e: It's a quiz
+    f: It's locked

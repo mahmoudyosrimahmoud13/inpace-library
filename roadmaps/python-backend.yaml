@@ -4,11 +4,14 @@ description: Write Python, build APIs with FastAPI, ship them in containers, and
 language: en
 author: inPace
 official: true
-order: 4
+order: 6
 tags: [python, backend, web, devops, career]
 steps:
   - course: python-basics
-    note: The language first.
+    note: A short first taste, if you've never programmed. Skip it if you'd rather start the full course straight away.
+    optional: true
+  - course: python-full
+    note: "The whole language first: functions, errors, tests, files, classes and the tools a backend developer uses every day."
   - course: fastapi
     note: Your first API, all the way to production.
   - course: docker-kubernetes-en

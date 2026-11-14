@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- python
+- programming
+- beginner
+- harvard
+- arabic
+updated: '2026-11-14'
+credit: 'المحاضرات: CS50P (مقدمة CS50 للبرمجة ببايثون) لديفيد مالان، جامعة هارفارد، مضمّنة من YouTube بترخيص CC
+  BY-NC-SA 4.0 (cs50.harvard.edu/python). الدروس المكتوبة والمهام والأسئلة: inPace، على منهج CS50P، مع مراجع من
+  موسوعة حسوب.'

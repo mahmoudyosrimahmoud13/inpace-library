@@ -1,0 +1,16 @@
+id: dotnet-developer-ar
+title: مطوّر .NET
+description: تعلّم C# و.NET من الصفر حتى أول واجهة ويب لك، ثم شغّلها في حاوية وتعلّم تصميم الخدمات كاملة.
+language: ar
+author: inPace
+official: true
+order: 14
+tags: [c#, .net, backend, web, arabic]
+steps:
+  - course: csharp-dotnet-beginners-ar
+    note: اللغة والأدوات والاختبارات وأول واجهة ويب بسيطة.
+  - course: docker-kubernetes-ar
+    note: ضع واجهتك في حاوية وشغّلها على Cluster. الأوامر نفسها مع .NET.
+  - course: system-design-beginners
+    note: بالإنجليزية. صمّم خدمة كاملة، وهي أسئلة المقابلات المعتادة.
+    optional: true

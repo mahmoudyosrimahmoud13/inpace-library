@@ -1,0 +1,260 @@
+q1:
+  right:
+  - a
+  - b
+  why: Rubrics score communication and testing separately from correctness.
+q2:
+  right:
+  - a
+  - b
+  why: 10¹⁰ steps for O(n²) is far too slow; n log n or n fits.
+q3:
+  right:
+  - a
+  - b
+  why: Lists scan or shift elements; sets, dicts and deques don't.
+q4:
+  right:
+  - a
+  - b
+  why: Most failed rounds start with coding the wrong thing.
+q5:
+  right:
+  - a
+  - b
+  why: The inner search becomes a hash lookup.
+q6:
+  right:
+  - a
+  - b
+  why: The answer must not contain the same triple twice.
+q7:
+  right:
+  - a
+  - b
+  why: Moving the taller side can never increase the area.
+q8:
+  right:
+  - a
+  - b
+  why: Anagrams share the same signature, so it's a natural key.
+q9:
+  right:
+  - a
+  - b
+  why: Windows fit contiguous ranges with a rule you can update incrementally.
+q10:
+  right:
+  - a
+  - b
+  why: Count total pointer moves, not loop nesting.
+q11:
+  right:
+  - a
+  - b
+  why: It keeps unanswered items until a value beats them.
+q12:
+  right:
+  - a
+  - b
+  why: The check last[ch] >= start stops start from moving backwards on the last a.
+q13:
+  right:
+  - a
+  - b
+  why: Monotonic yes/no questions are sorted answers in disguise.
+q14:
+  right:
+  - a
+  - b
+  why: If hi = lo + 1, mid = lo and lo = mid changes nothing.
+q15:
+  right:
+  - a
+  - b
+  why: Fast covers twice the distance of slow.
+q16:
+  right:
+  - a
+  - b
+  why: It removes the empty-result edge case.
+q17:
+  right:
+  - a
+  - b
+  why: In a BST, everything left is smaller and everything right is bigger.
+q18:
+  right:
+  - a
+  - b
+  why: Every node must lie within (lo, hi) set by its whole path.
+q19:
+  right:
+  - a
+  - b
+  why: First in, first out keeps the levels in order.
+q20:
+  right:
+  - a
+  - b
+  why: Each step follows one letter, so cost depends on word length.
+q21:
+  right:
+  - a
+  - b
+  why: 'O(n log k): the top of the min-heap is the smallest of the k kept.'
+q22:
+  right:
+  - a
+  - b
+  why: heapq only provides a min-heap.
+q23:
+  right:
+  - a
+  - b
+  why: Sorted order lets one sweep decide overlaps.
+q24:
+  right:
+  - a
+  - b
+  why: The subarray must be non-empty, so all-negative input returns the largest element.
+q25:
+  right:
+  - a
+  - b
+  why: Each item is either in or out.
+q26:
+  right:
+  - a
+  - b
+  why: Lists are references; path is popped back to empty.
+q27:
+  right:
+  - a
+  - b
+  why: With i + 1 each number could be used once only.
+q28:
+  right:
+  - a
+  - b
+  why: Small n plus "all" answers means exponential search is expected.
+q29:
+  right:
+  - a
+  - b
+  why: BFS reaches nodes in order of distance when every edge costs 1.
+q30:
+  right:
+  - a
+  - b
+  why: Nodes on a cycle never reach in-degree 0.
+q31:
+  right:
+  - a
+  - b
+  why: Use Bellman-Ford when weights can be negative.
+q32:
+  right:
+  - a
+  - b
+  why: Marking on pop lets the same cell enter the queue many times.
+q33:
+  right:
+  - a
+  - b
+  why: Memory turns exponential recursion into polynomial time.
+q34:
+  right:
+  - a
+  - b
+  why: Each of the amount states loops over all coins.
+q35:
+  right:
+  - a
+  - b
+  why: 2 + 9 + 1 = 12 beats 7 + 3 = 10.
+q36:
+  right:
+  - a
+  - b
+  why: '(-2) × (-5) = 10: yesterday''s minimum is today''s maximum.'
+q37:
+  right:
+  - a
+  - b
+  why: Subtracting 1 flips the lowest 1 and the zeros after it.
+q38:
+  right:
+  - a
+  - b
+  why: a, c and e appear in order in both.
+q39:
+  right:
+  - a
+  - b
+  why: Downwards reads values from before this item was considered.
+q40:
+  right:
+  - a
+  - b
+  why: a ^ a = 0, so only the unpaired number remains.
+q41:
+  right:
+  - a
+  - b
+  why: softmax(z) = softmax(z - c) for any constant c.
+q42:
+  right:
+  - a
+  - b
+  why: Scores are (4, 6); multiplying by V (6, 16) gives (4, 16).
+q43:
+  right:
+  - a
+  - b
+  why: Partition only guarantees the split; sort the k afterwards.
+q44:
+  right:
+  - a
+  - b
+  why: They judge how you direct and verify the tool.
+q45:
+  right:
+  - a
+  - b
+  why: They test how your code and you adapt to change.
+q46:
+  right:
+  - a
+  - b
+  why: Dependency injection makes time-based logic deterministic.
+q47:
+  right:
+  - a
+  - b
+  why: Real stores mix lazy checks with periodic cleanup.
+q48:
+  right:
+  - a
+  - b
+  why: Only a fresh instance reading the file proves what was written.
+q49:
+  right:
+  - a
+  - b
+  why: Performing under observation is a separate skill that needs reps.
+q50:
+  right:
+  - a
+  - b
+  why: Fluency on known patterns beats breadth at the end.
+q51:
+  right:
+  - a
+  - b
+  why: Concrete examples restart reasoning and show your process.
+q52:
+  right:
+  - a
+  - b
+  why: Watching others makes your own gaps obvious.

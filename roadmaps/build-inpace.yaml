@@ -4,9 +4,12 @@ description: Learn the whole stack behind this app, one layer at a time, then re
 language: en
 author: inPace
 official: true
-order: 8
+order: 10
 tags: [web, python, frontend, backend, open source]
 steps:
+  - course: python-full
+    note: inPace's server is Python. Take this first if Python is new to you; skip it if it isn't.
+    optional: true
   - course: html-css-for-inpace
     note: What every page is made of.
   - course: javascript-for-inpace

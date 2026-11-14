@@ -1,0 +1,417 @@
+id: ai-engineer-hired-2
+title: 'Get hired as an AI engineer 2: the coding interview intensive'
+version: 1
+language: en
+description: 'Twelve weeks of deliberate practice for the coding rounds AI engineers face: the method interviewers
+  score, Big-O and Python tools, every major LeetCode pattern with templates and about 130 graded problems, ML coding
+  from scratch in NumPy, AI-assisted rounds, implementation rounds built in layers (project TinyKV), and mock interviews.
+  Built on the Tech Interview Handbook, NeetCode and the AI Engineering Field Guide.'
+image: cover.jpg
+modules:
+- id: m1
+  title: How coding interviews work
+  lessons:
+  - id: m1-l1
+    title: 'Start here: the intensive'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: How you're scored
+    file: lessons/m1-l2.md
+    minutes: 15
+  - id: m1-l3
+    title: 'The method: six steps, out loud'
+    file: lessons/m1-l3.md
+    minutes: 20
+  - id: m1-l4
+    title: Python toolkit and Big-O
+    file: lessons/m1-l4.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Set up your tracker spreadsheet with the columns from "Start here", then do 3 Easy problems with the
+      six steps, out loud, recording your voice or screen (Two Sum, Valid Anagram, Contains Duplicate). Upload the
+      tracker and one recording.
+  - id: m1-explain
+    type: explain
+    prompt: Listen to your recording. Using the four rubric areas, grade yourself honestly and write what you'll
+      do differently in the next problem.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: Arrays, hashing and two pointers
+  lessons:
+  - id: m2-l1
+    title: The patterns
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'Problem set: arrays, hashing, two pointers'
+    file: lessons/m2-l2.md
+    minutes: 150
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Solve at least 8 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m2-explain
+    type: explain
+    prompt: 'Interview answer, in writing: how would you solve *Longest Consecutive Sequence* in O(n)? Give the
+      brute force first, then explain why your optimal solution is O(n) even though it has a loop inside a loop.'
+    min_words: 80
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: Sliding window and stack
+  lessons:
+  - id: m3-l1
+    title: The patterns
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'Problem set: sliding window and stack'
+    file: lessons/m3-l2.md
+    minutes: 150
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Solve at least 7 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Explain *Minimum Window Substring* as you would in an interview: the brute force, why a sliding window
+      works, when you grow and when you shrink, and the final complexity.'
+    min_words: 80
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: Binary search and linked lists
+  lessons:
+  - id: m4-l1
+    title: The patterns
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Problem set: binary search and linked lists'
+    file: lessons/m4-l2.md
+    minutes: 150
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Solve at least 9 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m4-explain
+    type: explain
+    prompt: 'Implement LRU Cache without OrderedDict, then explain your design: which structures, why each operation
+      is O(1), and what happens on get, on put of a new key, and on put when full.'
+    min_words: 80
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: Trees and tries
+  lessons:
+  - id: m5-l1
+    title: The patterns
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: 'Problem set: trees and tries'
+    file: lessons/m5-l2.md
+    minutes: 150
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Solve at least 10 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m5-explain
+    type: explain
+    prompt: 'Explain *Binary Tree Maximum Path Sum*: what your recursive function returns, what it updates outside,
+      why negative branches are dropped, and the complexity.'
+    min_words: 80
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: Heaps, intervals and greedy
+  lessons:
+  - id: m6-l1
+    title: The patterns
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'Problem set: heaps, intervals, greedy'
+    file: lessons/m6-l2.md
+    minutes: 150
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Solve at least 9 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m6-explain
+    type: explain
+    prompt: For *Non-overlapping Intervals*, explain why keeping the interval that ends first is always safe (the
+      exchange argument), and why sorting by start alone would need extra care.
+    min_words: 80
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: Backtracking
+  lessons:
+  - id: m7-l1
+    title: The pattern
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'Problem set: backtracking'
+    file: lessons/m7-l2.md
+    minutes: 150
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Solve at least 6 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m7-explain
+    type: explain
+    prompt: Draw (or describe) the decision tree for `subsets([1, 2, 3])`. Then explain why the result has 2ⁿ items
+      and why `res.append(path[:])` needs the copy.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: Graphs
+  lessons:
+  - id: m8-l1
+    title: The patterns
+    file: lessons/m8-l1.md
+    minutes: 40
+  - id: m8-l2
+    title: 'Problem set: graphs'
+    file: lessons/m8-l2.md
+    minutes: 150
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Solve at least 9 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m8-explain
+    type: explain
+    prompt: For *Course Schedule*, explain two solutions (DFS with three colours, and Kahn's algorithm), how each
+      detects a cycle, and their complexity.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: Dynamic programming, part 1
+  lessons:
+  - id: m9-l1
+    title: From recursion to a table
+    file: lessons/m9-l1.md
+    minutes: 35
+  - id: m9-l2
+    title: 'Problem set: 1-D dynamic programming'
+    file: lessons/m9-l2.md
+    minutes: 150
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'Solve at least 9 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m9-explain
+    type: explain
+    prompt: Solve *Word Break* top-down and bottom-up. Write the state in one sentence, the transition, the base
+      case, and the complexity of each version.
+    min_words: 80
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: Dynamic programming, part 2, bits and math
+  lessons:
+  - id: m10-l1
+    title: 2-D states, bits and math tricks
+    file: lessons/m10-l1.md
+    minutes: 35
+  - id: m10-l2
+    title: 'Problem set: 2-D DP, bits and math'
+    file: lessons/m10-l2.md
+    minutes: 150
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'Solve at least 10 problems from this module''s set, including at least one Medium you solved without
+      help. Upload screenshots of the accepted submissions and your notes file: for each problem, the pattern, the
+      key idea in one line, and the time and space complexity.'
+  - id: m10-explain
+    type: explain
+    prompt: 'Explain *Edit Distance*: the state, the three choices, the base cases, and fill the table by hand for
+      `horse` → `ros`.'
+    min_words: 80
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m11
+  title: ML coding from scratch
+  lessons:
+  - id: m11-l1
+    title: NumPy you must be fluent in
+    file: lessons/m11-l1.md
+    minutes: 25
+  - id: m11-l2
+    title: Five implementations to know cold
+    file: lessons/m11-l2.md
+    minutes: 45
+  - id: m11-l3
+    title: AI-assisted coding rounds
+    file: lessons/m11-l3.md
+    minutes: 15
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: 'In one notebook or `.py` file, implement all five from memory (no notes, no AI), with a test for each:
+      compare softmax and cross-entropy to a slow loop version, cosine top-k to a sorted brute force, logistic regression
+      accuracy on a toy dataset (`sklearn.datasets.make_classification` is fine), k-means on 3 obvious blobs, and
+      causal attention''s first row equal to V[0]. Upload it with the time each one took you.'
+  - id: m11-explain
+    type: explain
+    prompt: 'Explain scaled dot-product attention to an interviewer: the shapes of Q, K and V, what each step computes,
+      why the √d scaling, and what the causal mask does.'
+    min_words: 100
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    pass: 70
+- id: m12
+  title: 'Implementation rounds: build in layers'
+  lessons:
+  - id: m12-l1
+    title: What implementation rounds test
+    file: lessons/m12-l1.md
+    minutes: 15
+  - id: m12-l2
+    title: Project TinyKV, step by step
+    file: lessons/m12-l2.md
+    minutes: 60
+  - id: m12-l3
+    title: More layered builds to practice
+    file: lessons/m12-l3.md
+    minutes: 20
+    optional: true
+  requires:
+  - id: m12-practical
+    type: practical
+    prompt: Upload your TinyKV repository (a link or a zip) with all four levels passing the tests, a README that
+      answers the three design questions, and a screenshot of `pytest`. Note how long each level took you.
+  - id: m12-explain
+    type: explain
+    prompt: 'Your interviewer says: "Now make TinyKV safe to use from many threads." What would you change, what
+      are the trade-offs of one big lock against finer locks, and how would you test it?'
+    min_words: 80
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - q45
+    - q46
+    - q47
+    - q48
+    pass: 70
+- id: m13
+  title: Mock interviews and the final stretch
+  lessons:
+  - id: m13-l1
+    title: Mock interviews that actually help
+    file: lessons/m13-l1.md
+    minutes: 20
+  - id: m13-l2
+    title: The last two weeks and interview day
+    file: lessons/m13-l2.md
+    minutes: 20
+  requires:
+  - id: m13-practical
+    type: practical
+    prompt: 'Do 3 mock interviews: 2 as the candidate and 1 as the interviewer, each with a filled rubric form (communication,
+      problem solving, technical competency, testing; one thing to keep, one to change). Upload the three forms
+      and one recording.'
+  - id: m13-explain
+    type: explain
+    prompt: Compare your first recording (module 1) with your latest mock. What changed in each rubric area, and
+      what is your plan for the weakest one?
+    min_words: 100
+  - id: m13-quiz
+    type: quiz
+    questions:
+    - q49
+    - q50
+    - q51
+    - q52
+    pass: 70

@@ -1,0 +1,440 @@
+q1:
+  text: 'ما ناتج `int(input("x: ")) + 1` إذا كتب المستخدم 4؟'
+  show: 4
+  options:
+    a: '5'
+    b: العدد خمسة
+    c: '"41"'
+    d: '4'
+    e: خطأ
+    f: '"5"'
+q2:
+  text: ما ناتج `7 // 2`؟
+  show: 4
+  options:
+    a: '3'
+    b: 'ثلاثة: القسمة دون الكسر'
+    c: '3.5'
+    d: '1'
+    e: '4'
+    f: '14'
+q3:
+  text: أي سطر يعرض `Hi Mona` إذا كان `name` يساوي `"  mona "`؟
+  show: 4
+  options:
+    a: print(f"Hi {name.strip().title()}")
+    b: print("Hi", name.strip().capitalize())
+    c: print("Hi name")
+    d: print(f"Hi {name}")
+    e: print("Hi" + name.title())
+    f: print("Hi", name.upper())
+q4:
+  text: لماذا تستخدم الدوال `return` بدل `print` فقط؟
+  show: 4
+  options:
+    a: ليستعمل الكود المستدعي القيمة مرة أخرى
+    b: لتُخزَّن النتيجة أو تُقارن أو تُختبر
+    c: return أسرع في عرض النص
+    d: print لا تعمل داخل الدوال
+    e: return تحفظ القيمة في ملف
+    f: بايثون تشترط أن تُرجع كل دالة قيمة
+q5:
+  text: ما الفرق بين `=` و`==`؟
+  show: 4
+  options:
+    a: علامة = تخزّن قيمة، و== تقارن قيمتين
+    b: x = 5 تضع 5 في x، وx == 5 تسأل هل x تساوي 5
+    c: لهما المعنى نفسه
+    d: == تخزّن قيمة و= تقارن
+    e: == للنصوص فقط
+    f: = للأرقام فقط
+q6:
+  text: 'إذا كانت `score = 95`، ماذا تطبع هذه السلسلة: `if score >= 80: A` ثم `elif score >= 90: B`؟'
+  show: 4
+  options:
+    a: A
+    b: A فقط، لأن أول شرط صحيح يفوز
+    c: B
+    d: A B
+    e: لا شيء
+    f: خطأ
+q7:
+  text: أي سطر يتحقق من أن `n` عدد زوجي؟
+  show: 4
+  options:
+    a: n % 2 == 0
+    b: not n % 2
+    c: n / 2 == 0
+    d: n // 2 == 1
+    e: n % 2 == 1
+    f: n == 2
+q8:
+  text: متى تكون `match` مناسبة؟
+  show: 4
+  options:
+    a: عند مقارنة قيمة واحدة بقيم ثابتة كثيرة
+    b: بدلًا من سلسلة elif طويلة على المتغير نفسه
+    c: لتكرار الكود مرات كثيرة
+    d: لقراءة ملف
+    e: لالتقاط الأخطاء
+    f: لتعريف دالة
+q9:
+  text: ما الأعداد التي تعطيها `range(1, 4)`؟
+  show: 4
+  options:
+    a: 1, 2, 3
+    b: ثلاثة أعداد تبدأ من 1
+    c: 1, 2, 3, 4
+    d: 0, 1, 2, 3
+    e: 1, 4
+    f: '4'
+q10:
+  text: ماذا تفعل `break` داخل الحلقة؟
+  show: 4
+  options:
+    a: تخرج من الحلقة فورًا
+    b: تنهي الحلقة، حتى حلقة while True
+    c: تقفز إلى الدورة التالية
+    d: توقف البرنامج مؤقتًا
+    e: تعيد الحلقة من البداية
+    f: توقف الجهاز كله
+q11:
+  text: '`cities = {"Omar": "Alexandria"}`. كيف تحصل على مدينة Omar؟'
+  show: 4
+  options:
+    a: cities["Omar"]
+    b: cities.get("Omar")
+    c: cities[0]
+    d: cities.Omar
+    e: cities("Omar")
+    f: cities["Alexandria"]
+q12:
+  text: 'ماذا تطبع `for i, x in enumerate(["a", "b"]): print(i, x)`؟'
+  show: 4
+  options:
+    a: 0 a / 1 b
+    b: كل رقم مع عنصره، بدءًا من 0
+    c: 1 a / 2 b
+    d: a b
+    e: 0 / 1
+    f: a 0 / b 1
+q13:
+  text: ما الخطأ الذي يطلقه `int("cat")`؟
+  show: 4
+  options:
+    a: ValueError
+    b: 'ValueError: النص ليس رقمًا'
+    c: TypeError
+    d: SyntaxError
+    e: NameError
+    f: KeyError
+q14:
+  text: متى تُنفَّذ كتلة `else` بعد `try`؟
+  show: 4
+  options:
+    a: حين لا يحدث خطأ في كتلة try
+    b: فقط إن لم يُلتقط أي استثناء
+    c: دائمًا
+    d: بعد الخطأ فقط
+    e: 'أبدًا: else خاصة بـ if'
+    f: قبل كتلة try
+q15:
+  text: ماذا تفعل `raise ValueError("too big")`؟
+  show: 4
+  options:
+    a: توقف الدالة بخطأ يستطيع المستدعي التقاطه
+    b: تعلن أن المدخلات سيئة مع رسالة
+    c: تطبع too big وتكمل
+    d: تصلح القيمة
+    e: تغلق بايثون
+    f: تكبّر الرقم
+q16:
+  text: أي هذه `SyntaxError` وليس استثناءً أثناء التشغيل؟
+  show: 4
+  options:
+    a: print("hello)
+    b: if x > 3 print(x)
+    c: int("cat")
+    d: '[1, 2][5]'
+    e: 10 / 0
+    f: '{"a": 1}["b"]'
+q17:
+  text: شغّلت `python greet.py Mona`. ما قيمة `sys.argv[1]`؟
+  show: 4
+  options:
+    a: '"Mona"'
+    b: أول كلمة بعد اسم البرنامج
+    c: '"greet.py"'
+    d: '"python"'
+    e: '1'
+    f: '["Mona"]'
+q18:
+  text: ماذا تعطي `random.randint(1, 6)`؟
+  show: 4
+  options:
+    a: عددًا صحيحًا من 1 إلى 6، والطرفان داخلان
+    b: مثل رمي حجر نرد واحد
+    c: عددًا من 1 إلى 5
+    d: عددًا عشريًا بين 1 و6
+    e: 1 دائمًا
+    f: قائمة من 6 أعداد
+q19:
+  text: 'لماذا نكتب `if __name__ == "__main__": main()`؟'
+  show: 4
+  options:
+    a: كي لا يشغّل استيراد الملف برنامجه
+    b: كي يعمل الملف برنامجًا ووحدةً معًا
+    c: تجعل البرنامج أسرع
+    d: تشترطها بايثون في كل ملف
+    e: تثبّت الحزم
+    f: تخفي الكود عن الآخرين
+q20:
+  text: ما فائدة `requirements.txt`؟
+  show: 4
+  options:
+    a: سرد الحزم التي يحتاجها المشروع
+    b: ليثبتها الآخرون بـ pip install -r
+    c: حفظ كلمات المرور
+    d: كتابة اختبارات البرنامج
+    e: تشغيل البرنامج
+    f: سرد دوال بايثون المدمجة
+q21:
+  text: أي الدوال يشغّلها pytest؟
+  show: 4
+  options:
+    a: الدوال التي تبدأ أسماؤها بـ test_
+    b: test_zero() وليس check_zero()
+    c: كل دالة في كل ملف
+    d: main() فقط
+    e: الدوال التي تطبع
+    f: الدوال التي في اسمها assert
+q22:
+  text: ماذا تفعل `assert square(2) == 4` إذا أرجعت `square(2)` القيمة 5؟
+  show: 4
+  options:
+    a: تطلق AssertionError
+    b: يفشل الاختبار
+    c: تطبع 5
+    d: تغيّر النتيجة إلى 4
+    e: لا يحدث شيء
+    f: تصلح square()
+q23:
+  text: كيف تختبر أن `grade(101)` تطلق ValueError؟
+  show: 4
+  options:
+    a: 'with pytest.raises(ValueError): grade(101)'
+    b: باستخدام pytest.raises حول الاستدعاء
+    c: assert grade(101) == ValueError
+    d: assert ValueError
+    e: print(grade(101))
+    f: grade(101) == False
+q24:
+  text: أي المدخلات أطراف لدالة تأخذ درجة من 0 إلى 100؟
+  show: 4
+  options:
+    a: '0'
+    b: '100'
+    c: '55'
+    d: '42'
+    e: '73'
+    f: '88'
+q25:
+  text: ماذا يفعل فتح ملف بالوضع `"w"` بمحتواه الموجود؟
+  show: 4
+  options:
+    a: يحذفه ويبدأ فارغًا
+    b: يكتب فوقه
+    c: يضيف في النهاية
+    d: يقرؤه فقط
+    e: يأخذ نسخة احتياطية أولًا
+    f: يرفض فتحه
+q26:
+  text: لماذا نستدعي `.rstrip()` على الأسطر المقروءة من ملف؟
+  show: 4
+  options:
+    a: لحذف \n في نهاية كل سطر
+    b: كي لا تضيف print سطرًا فارغًا زائدًا
+    c: لترتيب الأسطر
+    d: لإغلاق الملف
+    e: لجعل الحروف كبيرة
+    f: لعدّ الأسطر
+q27:
+  text: في CSV قيمة هي `"Cairo, Egypt"`. ما الطريقة الآمنة لقراءتها؟
+  show: 4
+  options:
+    a: csv.reader
+    b: csv.DictReader
+    c: line.split(",")
+    d: line.strip()
+    e: line.split(" ")
+    f: json.loads(line)
+q28:
+  text: ماذا تفعل `with` عند انتهاء الكتلة؟
+  show: 4
+  options:
+    a: تغلق الملف تلقائيًا
+    b: تغلقه حتى لو وقع خطأ
+    c: تحذف الملف
+    d: تحفظ نسخة بصيغة JSON
+    e: تفتحه مرة أخرى
+    f: لا شيء
+q29:
+  text: ماذا يطابق `\d+`؟
+  show: 4
+  options:
+    a: رقمًا واحدًا أو أكثر
+    b: الـ 2026 في "year 2026"
+    c: حرفًا واحدًا بالضبط
+    d: صفرًا أو أكثر من المسافات
+    e: علامة زائد
+    f: أي كلمة
+q30:
+  text: لماذا نكتب الأنماط بالشكل `r"..."`؟
+  show: 4
+  options:
+    a: لتصل الشرطات المائلة العكسية إلى re كما هي
+    b: كي لا تعامل بايثون \d معاملة الهروب
+    c: تجعل البحث أسرع
+    d: تعني قراءة النمط من ملف
+    e: تتجاهل الحروف الكبيرة
+    f: تشترطها بايثون لكل نص
+q31:
+  text: أي نمط يطابق النص `cat` كله ولا شيء أطول منه؟
+  show: 4
+  options:
+    a: ^cat$
+    b: re.fullmatch(r"cat", text)
+    c: cat
+    d: cat+
+    e: ^cat
+    f: c.t*
+q32:
+  text: ماذا تفعل `re.sub(r"\s+", " ", text)`؟
+  show: 4
+  options:
+    a: تحوّل كل مجموعة مسافات إلى مسافة واحدة
+    b: تنظّف المسافات الزائدة
+    c: تحذف كل المسافات
+    d: تجد أول مسافة
+    e: تقسم النص إلى كلمات
+    f: تعدّ المسافات
+q33:
+  text: متى يُنفَّذ `__init__`؟
+  show: 4
+  options:
+    a: حين يُنشأ كائن جديد
+    b: عند Course("Python", 40)
+    c: حين يُطبع الكائن
+    d: حين ينتهي البرنامج
+    e: فقط حين تستدعي obj.__init__()
+    f: حين يُستورد الصنف
+q34:
+  text: ما هو `self` في التابع؟
+  show: 4
+  options:
+    a: الكائن الذي استُدعي عليه التابع
+    b: course نفسه في course.start()
+    c: اسم الصنف
+    d: كلمة محجوزة لا يمكن تغيير اسمها
+    e: الصنف الأب
+    f: الدالة الرئيسية للبرنامج
+q35:
+  text: لماذا نستخدم `@property` للخاصية `level`؟
+  show: 4
+  options:
+    a: لفحص كل قيمة جديدة قبل تخزينها
+    b: كي يطلق course.level = "x" خطأً
+    c: لتسريع الخاصية
+    d: لإخفائها عن print
+    e: لجعلها متغير صنف
+    f: لحفظها في ملف
+q36:
+  text: 'تعني `class Learner(Person)`:'
+  show: 4
+  options:
+    a: أن Learner يرث من Person
+    b: أن Learner يأخذ توابع Person
+    c: أن Person يرث من Learner
+    d: أن Learner ينشئ Person
+    e: أن Learner دالة
+    f: أن الصنفين لا يُستخدمان معًا
+q37:
+  text: ماذا تحتوي `set([1, 2, 2, 3])`؟
+  show: 4
+  options:
+    a: '{1, 2, 3}'
+    b: كل قيمة مرة واحدة
+    c: '[1, 2, 2, 3]'
+    d: '{1, 2, 2, 3}'
+    e: '4'
+    f: '{2}'
+q38:
+  text: ماذا يعطي `[n * 2 for n in range(3)]`؟
+  show: 4
+  options:
+    a: '[0, 2, 4]'
+    b: كل عدد من 0 إلى 2 مضروبًا في 2
+    c: '[2, 4, 6]'
+    d: '[0, 1, 2]'
+    e: '6'
+    f: '[0, 2, 4, 6]'
+q39:
+  text: هل توقف تلميحات الأنواع النوع الخاطئ أثناء التشغيل؟
+  show: 4
+  options:
+    a: لا، تتجاهلها بايثون أثناء التشغيل
+    b: لا، لكن أدوات مثل mypy تفحصها
+    c: نعم، دائمًا
+    d: نعم، تطلق TypeError
+    e: في الأصناف فقط
+    f: للنصوص فقط
+q40:
+  text: لماذا نستخدم مولّدًا بـ `yield` لمليون عنصر؟
+  show: 4
+  options:
+    a: يصنع قيمة واحدة كل مرة، فيوفر الذاكرة
+    b: لا يبني القائمة كلها أولًا
+    c: يرتّب العناصر
+    d: يشغّل العناصر بالتوازي
+    e: يحفظها على القرص
+    f: يقصّر القائمة
+q41:
+  text: أي ملف يجب أن يسرد الحزم التي يثبّتها مشروعك؟
+  show: 4
+  options:
+    a: requirements.txt
+    b: الملف الذي يقرؤه pip install -r
+    c: README.md
+    d: test_project.py
+    e: project.py
+    f: settings.json
+q42:
+  text: ما أفضل طريقة لبناء برنامج أكبر؟
+  show: 4
+  options:
+    a: تشغيل نسخة صغيرة ثم إضافة ميزة واحدة كل مرة
+    b: اختبار كل جزء بمجرد أن يعمل
+    c: كتابة كل شيء ثم تشغيله مرة في النهاية
+    d: وضع كل الكود في main()
+    e: تجنب الدوال لتقصيره
+    f: تأجيل الاختبارات حتى ينتهي
+q43:
+  text: أي خطأ تلتقطه عند تحويل نص المستخدم إلى رقم؟
+  show: 4
+  options:
+    a: ValueError
+    b: 'except ValueError:'
+    c: KeyError
+    d: IndexError
+    e: 'except:'
+    f: SyntaxError
+q44:
+  text: أي سطر يقرأ ملف CSV إلى قائمة من القواميس؟
+  show: 4
+  options:
+    a: rows = list(csv.DictReader(file))
+    b: rows = [row for row in csv.DictReader(file)]
+    c: rows = file.split(",")
+    d: rows = json.load(file)
+    e: rows = csv.writer(file)
+    f: rows = open(file)

@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- python
+- programming
+- beginner
+- harvard
+- cs50
+updated: '2026-11-14'
+credit: 'Lectures: CS50''s Introduction to Programming with Python (CS50P) by David J. Malan, Harvard University,
+  embedded from YouTube, licensed CC BY-NC-SA 4.0 (cs50.harvard.edu/python). Written lessons, tasks and questions:
+  inPace, following the CS50P syllabus and the official Python tutorial.'

@@ -1,0 +1,30 @@
+id: ai-engineer-ar
+title: التوظيف مهندس ذكاء اصطناعي
+description: الطريق إلى وظيفة مهندس ذكاء اصطناعي، مبني على إعلانات وظائف حقيقية وروايات مقابلات، بايثون ومشروعان منشوران (مساعد RAG ووكيل) ومقابلات البرمجة ومقابلات الذكاء الاصطناعي وتصميم الأنظمة وسيرتك الذاتية والبحث عن الوظيفة.
+language: ar
+author: inPace
+official: true
+order: 2
+tags: [ai engineer, career, interview, python, arabic]
+steps:
+  - course: python-full-ar
+    note: بايثون مطلوبة في نحو 8 من كل 10 إعلانات لوظيفة مهندس ذكاء اصطناعي. تخطَّها إن كنت تكتب بايثون براحة، الدوال والاختبارات والأصناف والملفات.
+    optional: true
+  - course: ai-engineer-hired-1-ar
+    note: ابدأ من هنا، السوق وكيف يسير التوظيف ومشروعك الأول (DocAnswer) وسيرتك الذاتية والبحث عن الوظيفة.
+  - course: ai-engineer-hired-2-ar
+    note: ادرسها مع الجزء الأول. اثنا عشر أسبوعًا من التدريب على مقابلات البرمجة، من الأنماط إلى المقابلات التجريبية.
+  - course: fastapi
+    note: بالإنجليزية. إن كان بناء واجهة DocAnswer جديدًا عليك، فهذه الدورة تتعمق في الواجهات البرمجية.
+    optional: true
+  - course: docker-kubernetes-ar
+    note: الحاويات والنشر، وهي مطلوبة في كثير من إعلانات هذه الوظيفة.
+    optional: true
+  - course: mls-1-supervised
+    note: بالإنجليزية. نحو ثلثي الإعلانات تطلب أيضًا شيئًا من تعلّم الآلة التقليدي، وهذه الدورة تسد هذه الفجوة.
+    optional: true
+  - course: ai-engineer-hired-3-ar
+    note: جولات الذكاء الاصطناعي، وتصميم أنظمته، ومشروعك الثاني TriageBot.
+  - course: system-design-beginners
+    note: بالإنجليزية. تصميم الأنظمة العام، لجولات المقابلات التي فيها جولة تصميم تقليدية أيضًا.
+    optional: true

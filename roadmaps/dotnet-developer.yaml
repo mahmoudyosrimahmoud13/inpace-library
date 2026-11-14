@@ -1,0 +1,16 @@
+id: dotnet-developer
+title: .NET developer
+description: Learn C# and .NET from zero to your first web API, then ship it in a container and learn to design whole services.
+language: en
+author: inPace
+official: true
+order: 13
+tags: [c#, .net, backend, web, career]
+steps:
+  - course: csharp-dotnet-beginners
+    note: The language, the tools, testing and a first minimal API.
+  - course: docker-kubernetes-en
+    note: Pack your API in a container and run it on a cluster. The commands are the same for .NET.
+  - course: system-design-beginners
+    note: "Step back and design a whole service: the questions interviewers ask."
+    optional: true

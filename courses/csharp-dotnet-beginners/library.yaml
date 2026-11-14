@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- csharp
+- dotnet
+- programming
+- beginner
+- backend
+updated: '2026-11-14'
+credit: 'Video: Learn C#: Full Course with Mini-Projects by CoffeeNCode, on the freeCodeCamp.org YouTube channel,
+  embedded from YouTube. Written lessons, tasks and questions: inPace, based on Microsoft''s C# and .NET documentation
+  (learn.microsoft.com, CC BY 4.0).'

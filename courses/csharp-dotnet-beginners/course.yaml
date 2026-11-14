@@ -1,0 +1,320 @@
+id: csharp-dotnet-beginners
+title: C# and .NET for beginners
+version: 1
+language: en
+description: 'Learn C# from zero and build real .NET projects: types, decisions and loops, strings, collections
+  and LINQ, methods, errors and debugging, classes and records, then projects, NuGet packages, unit tests with xUnit,
+  async, and your first web API with ASP.NET Core. Written lessons follow Microsoft''s official docs; video lessons
+  play pieces of freeCodeCamp''s full C# course. Plan: 10 weeks, about an hour a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: Getting started
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: How a C# program is built
+    file: lessons/m1-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=0&end=656
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Create a console project called `AboutMe`. Print 3 lines: your name, what you want to build with C#,
+      and today''s date using `DateTime.Now.ToShortDateString()`. Upload a screenshot of `dotnet run` showing it.'
+  - id: m1-explain
+    type: explain
+    prompt: 'In your own words: what is the difference between C# and .NET? And what does `dotnet run` do before
+      your program starts?'
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: Types, variables and operators
+  lessons:
+  - id: m2-l1
+    title: Types, variables and conversions
+    file: lessons/m2-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=656&end=1536
+  - id: m2-l2
+    title: Operators and math
+    file: lessons/m2-l2.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=1536&end=2819
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a program that stores a product's price (a `decimal`), a quantity (an `int`) and a tax rate (a
+      `const`), then prints the subtotal, the tax and the total, each with 2 decimals. Use `%` to print whether
+      the quantity is odd or even. Upload a screenshot or the `Program.cs`.
+  - id: m2-explain
+    type: explain
+    prompt: Why should money use `decimal` and not `double`? And why does `7 / 2` give 3 in C#?
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: Input, decisions and loops
+  lessons:
+  - id: m3-l1
+    title: Reading input safely
+    file: lessons/m3-l1.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=5776&end=7704
+  - id: m3-l2
+    title: if, switch and loops
+    file: lessons/m3-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=2819&end=5776
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Write a number-guessing game: pick a secret number with `Random.Shared.Next(1, 101)`, ask for guesses
+      with `TryParse` (ignore bad input), say "higher" or "lower", and when they win print how many tries it took.
+      Upload the `Program.cs` or a screenshot.'
+  - id: m3-explain
+    type: explain
+    prompt: Why is `int.TryParse` better than `int.Parse` for reading what a user types? When would `do...while`
+      be a better fit than `while`?
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: Strings
+  lessons:
+  - id: m4-l1
+    title: Working with strings
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=7704&end=11462
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Write a password checker. Ask for a password and print every rule it breaks: at least 8 characters,
+      at least one digit, one capital letter and one symbol (use `char.IsDigit`, `char.IsUpper`, `char.IsLetterOrDigit`
+      in a `foreach`). Print "Strong password" if it breaks none. Upload a screenshot.'
+  - id: m4-explain
+    type: explain
+    prompt: What does it mean that strings are immutable in C#? Show with an example why `name.ToUpper();` alone
+      doesn't change `name`.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: Arrays, lists and dictionaries
+  lessons:
+  - id: m5-l1
+    title: Arrays and List<T>
+    file: lessons/m5-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=11462&end=14100
+  - id: m5-l2
+    title: Dictionaries and LINQ
+    file: lessons/m5-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=14100&end=16200
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Write a grade book: keep a `Dictionary<string, List<int>>` of students and their scores (add at least
+      3 students with 3 scores each), then use LINQ to print each student''s average and the name of the top student.
+      Upload a screenshot or the `Program.cs`.'
+  - id: m5-explain
+    type: explain
+    prompt: When would you choose an array, a `List<T>`, or a `Dictionary<TKey, TValue>`? Give a real example for
+      each.
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: Methods
+  lessons:
+  - id: m6-l1
+    title: Methods and parameters
+    file: lessons/m6-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=16200&end=21669
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Write a small unit converter with one method per conversion (for example `CelsiusToFahrenheit`, `KmToMiles`),
+      a method with an optional `decimals` parameter for rounding, and one method that returns a tuple (like the
+      min and max of an array). Call each from your program. Upload the code or a screenshot.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the difference between `out` and `ref`, and why `int.TryParse` uses `out`.
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: Errors and debugging
+  lessons:
+  - id: m7-l1
+    title: Exceptions
+    file: lessons/m7-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=21669&end=23160
+  - id: m7-l2
+    title: Debugging in VS Code and Visual Studio
+    file: lessons/m7-l2.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=23160&end=24614
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Write a small calculator that reads two numbers and an operator (+ - * /) and prints the result. Handle
+      bad numbers with `TryParse`, an unknown operator with a message, and division by zero by throwing and catching
+      an exception. Then put a breakpoint in it and upload a screenshot of the debugger paused, showing your variables.
+  - id: m7-explain
+    type: explain
+    prompt: When should you use `TryParse` and when `try/catch`? And what's a logic error, and how would you find
+      one with the debugger?
+    min_words: 40
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: Classes and structs
+  lessons:
+  - id: m8-l1
+    title: Classes, properties and constructors
+    file: lessons/m8-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=26156&end=29831
+  - id: m8-l2
+    title: Structs, records, interfaces and inheritance
+    file: lessons/m8-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=24614&end=26156
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Model a small library: a `record Book(string Title, string Author)`, a `class Member` with a name and
+      a list of borrowed books (max 3, throw if more), and a `class Library` with methods to add books, lend and
+      return them. Override `ToString` where it helps. Upload your code or a screenshot.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain the difference between a value type and a reference type, with an example of a bug that happens
+      when you forget it.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: .NET projects, packages and tests
+  lessons:
+  - id: m9-l1
+    title: The .NET CLI, projects and solutions
+    file: lessons/m9-l1.md
+    minutes: 20
+  - id: m9-l2
+    title: NuGet packages
+    file: lessons/m9-l2.md
+    minutes: 15
+  - id: m9-l3
+    title: Unit tests with xUnit
+    file: lessons/m9-l3.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'Make a solution with three projects: a class library with at least two classes from your earlier work
+      (for example the grade book or the bank account), a console app that uses it, and an xUnit project with at
+      least 6 tests (use `[Theory]` once and `Assert.Throws` once). Upload a screenshot of `dotnet test` passing.'
+  - id: m9-explain
+    type: explain
+    prompt: Why split an app into a class library, an app project and a test project? What would be harder if everything
+      were in one `Program.cs`?
+    min_words: 40
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: Your first web API
+  lessons:
+  - id: m10-l1
+    title: async and await
+    file: lessons/m10-l1.md
+    minutes: 20
+  - id: m10-l2
+    title: A minimal API with ASP.NET Core
+    file: lessons/m10-l2.md
+    minutes: 30
+  - id: m10-l3
+    title: Final project and where to go next
+    file: lessons/m10-l3.md
+    minutes: 15
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'Final project: build a minimal API with at least GET (all and by id), POST and DELETE routes, input
+      checks that return `400`, and the logic in a class library with xUnit tests. Upload a zip of the solution
+      (or a GitHub link) and a screenshot of a POST and a GET working.'
+  - id: m10-explain
+    type: explain
+    prompt: 'Describe your API: each route, what it returns and which status codes, and one design decision you''d
+      explain to a teammate.'
+    min_words: 80
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

@@ -1,0 +1,400 @@
+q1:
+  text: Which command creates a new console app?
+  show: 4
+  options:
+    a: dotnet new console -o Hello
+    b: dotnet new console
+    c: dotnet run console
+    d: dotnet create app
+    e: csharp new Hello
+    f: dotnet build console
+q2:
+  text: What ends a statement in C#?
+  show: 4
+  options:
+    a: A semicolon ;
+    b: ;, as in Console.WriteLine("Hi");
+    c: A new line
+    d: 'A colon :'
+    e: Indentation
+    f: A full stop .
+q3:
+  text: '`console.WriteLine("Hi");` doesn''t compile. Why?'
+  show: 4
+  options:
+    a: 'C# is case-sensitive: it must be Console'
+    b: console with a small c doesn't exist
+    c: WriteLine needs two arguments
+    d: Strings need single quotes
+    e: The semicolon is wrong
+    f: It needs a using line for Hi
+q4:
+  text: What is the `.csproj` file?
+  show: 4
+  options:
+    a: 'The project file: target framework and packages'
+    b: The file dotnet build reads to build your project
+    c: Your compiled program
+    d: A list of your variables
+    e: The build output folder
+    f: A C# code file
+q5:
+  text: What does `7 / 2` print in C#?
+  show: 4
+  options:
+    a: '3'
+    b: Three, because both sides are int
+    c: '3.5'
+    d: '4'
+    e: '1'
+    f: '3.0'
+q6:
+  text: Which type is best for prices?
+  show: 4
+  options:
+    a: decimal
+    b: decimal, written like 199.99m
+    c: double
+    d: float
+    e: int
+    f: string
+q7:
+  text: What does `var x = 10;` make?
+  show: 4
+  options:
+    a: 'An int: the compiler works out the type'
+    b: A variable whose type is fixed as int
+    c: A variable that can hold any type later
+    d: A constant
+    e: A string
+    f: A variable with no type
+q8:
+  text: What is `(int)3.99`?
+  show: 4
+  options:
+    a: '3'
+    b: 'Three: a cast drops the fraction'
+    c: '4'
+    d: '3.99'
+    e: '0'
+    f: An error
+q9:
+  text: What does `int.TryParse("abc", out int n)` return?
+  show: 4
+  options:
+    a: 'false'
+    b: false, and n is 0
+    c: 'true'
+    d: It throws an exception
+    e: '"abc"'
+    f: 'null'
+q10:
+  text: How many times does `for (int i = 0; i < 3; i++)` loop?
+  show: 4
+  options:
+    a: '3'
+    b: 'Three times: i is 0, 1 and 2'
+    c: '2'
+    d: '4'
+    e: Forever
+    f: '0'
+q11:
+  text: What's special about `do...while`?
+  show: 4
+  options:
+    a: The body runs at least once
+    b: The condition is checked after each round
+    c: It never stops
+    d: It can't use break
+    e: It only loops over arrays
+    f: It runs in parallel
+q12:
+  text: What does `{1234.5:N2}` show?
+  show: 4
+  options:
+    a: 1,234.50
+    b: The number with separators and 2 decimals
+    c: '1234.5'
+    d: 1,234.5
+    e: '1234.50'
+    f: $1,234.50
+q13:
+  text: What does `$"{2 + 3} items"` give?
+  show: 4
+  options:
+    a: '"5 items"'
+    b: The text 5 items
+    c: '"2 + 3 items"'
+    d: '"{2 + 3} items"'
+    e: '"23 items"'
+    f: An error
+q14:
+  text: After `string s = "hi"; s.ToUpper();` what is `s`?
+  show: 4
+  options:
+    a: '"hi"'
+    b: 'Still hi: strings are immutable'
+    c: '"HI"'
+    d: '"Hi"'
+    e: 'null'
+    f: '""'
+q15:
+  text: Which check is true for null, empty and spaces-only text?
+  show: 4
+  options:
+    a: string.IsNullOrWhiteSpace(s)
+    b: IsNullOrWhiteSpace
+    c: s == ""
+    d: s.Length == 0
+    e: string.IsNullOrEmpty(s)
+    f: s == null
+q16:
+  text: What is `@"C:\temp"`?
+  show: 4
+  options:
+    a: 'A verbatim string: the backslash stays'
+    b: The path C:\temp, as written
+    c: 'A tab character after C:'
+    d: An interpolated string
+    e: A char
+    f: An error
+q17:
+  text: How do you get the number of items in a `List<T>`?
+  show: 4
+  options:
+    a: list.Count
+    b: The Count property
+    c: list.Length
+    d: list.Size()
+    e: list.Count()
+    f: len(list)
+q18:
+  text: What does `stock.TryGetValue("tea", out int n)` do if "tea" isn't there?
+  show: 4
+  options:
+    a: Returns false, with no exception
+    b: Returns false and n is 0
+    c: Throws KeyNotFoundException
+    d: Adds tea with 0
+    e: Returns null
+    f: Stops the program
+q19:
+  text: What does `scores.Where(s => s >= 60)` give?
+  show: 4
+  options:
+    a: Only the scores of 60 or more
+    b: A filtered sequence
+    c: The number of scores of 60 or more
+    d: true or false
+    e: The scores sorted
+    f: The first score of 60
+q20:
+  text: What happens when you read `arr[3]` from a 3-item array?
+  show: 4
+  options:
+    a: IndexOutOfRangeException
+    b: 'An exception: the last index is 2'
+    c: It returns 0
+    d: It returns null
+    e: It adds a new item
+    f: It returns the last item
+q21:
+  text: What does `void` mean in `void Greet(string name)`?
+  show: 4
+  options:
+    a: The method returns nothing
+    b: It does a job but gives no value back
+    c: It takes no parameters
+    d: It's empty
+    e: It can't be called
+    f: It returns null
+q22:
+  text: With `void Greet(string name, string greeting = "Hello")`, which call works?
+  show: 4
+  options:
+    a: Greet("Mona")
+    b: 'Greet("Mona", greeting: "Hi")'
+    c: Greet()
+    d: 'Greet(greeting: "Hi")'
+    e: Greet(1, 2)
+    f: Greet("Mona", "Hi", "x")
+q23:
+  text: What must a method do with an `out` parameter?
+  show: 4
+  options:
+    a: Give it a value before returning
+    b: Set it, so the caller receives it
+    c: Only read it
+    d: Print it
+    e: Return it with return
+    f: Nothing
+q24:
+  text: What is overloading?
+  show: 4
+  options:
+    a: Methods with the same name but different parameters
+    b: Print(int) and Print(string) side by side
+    c: A method that's too long
+    d: Calling a method too many times
+    e: A method with no return
+    f: Passing too many arguments
+q25:
+  text: When does a `finally` block run?
+  show: 4
+  options:
+    a: Always, error or not
+    b: After try and any catch
+    c: Only when there's an error
+    d: Only when there's no error
+    e: Before try
+    f: Never
+q26:
+  text: What does `int.Parse("12a")` throw?
+  show: 4
+  options:
+    a: FormatException
+    b: A FormatException
+    c: NullReferenceException
+    d: DivideByZeroException
+    e: IndexOutOfRangeException
+    f: Nothing, it returns 12
+q27:
+  text: What does F10 do in the debugger?
+  show: 4
+  options:
+    a: Runs the current line and stops at the next
+    b: Step over
+    c: Stops debugging
+    d: Puts a breakpoint
+    e: Goes inside the method
+    f: Restarts the program
+q28:
+  text: Why is `catch { }` with nothing inside a bad idea?
+  show: 4
+  options:
+    a: It hides errors you need to know about
+    b: Bugs fail silently
+    c: It makes the code slower to type
+    d: C# doesn't allow it
+    e: It catches nothing
+    f: It crashes the program
+q29:
+  text: '`var b = a;` where `a` is a class object. Then `b.Deposit(100)`. What happens to `a`?'
+  show: 4
+  options:
+    a: 'Its balance goes up too: same object'
+    b: a and b point to one object
+    c: 'Nothing: b is a copy'
+    d: a is deleted
+    e: An error
+    f: a becomes null
+q30:
+  text: What does `public decimal Balance { get; private set; }` allow?
+  show: 4
+  options:
+    a: Anyone can read it; only the class can change it
+    b: Outside code can't write account.Balance = 5
+    c: Nobody can read it
+    d: Anyone can change it
+    e: It can only be set once
+    f: It's a method
+q31:
+  text: Why use a `record` for `Product(string Name, decimal Price)`?
+  show: 4
+  options:
+    a: You get properties, ToString and value equality in one line
+    b: Two products with the same data are equal
+    c: Records are faster than all classes
+    d: Records can't have properties
+    e: Records are saved to a database automatically
+    f: Records can only hold numbers
+q32:
+  text: What is an interface?
+  show: 4
+  options:
+    a: A promise of members a class must have
+    b: Like IShape requiring Area()
+    c: A screen of the app
+    d: A kind of loop
+    e: A class you create with new
+    f: A list of variables
+q33:
+  text: Which command runs a project's tests?
+  show: 4
+  options:
+    a: dotnet test
+    b: dotnet test, from the solution folder
+    c: dotnet run --tests
+    d: dotnet build test
+    e: xunit run
+    f: dotnet check
+q34:
+  text: What does `dotnet add package Humanizer` change?
+  show: 4
+  options:
+    a: It adds a PackageReference to the .csproj
+    b: The project now depends on Humanizer
+    c: It copies the package into Program.cs
+    d: It installs it for every project on the computer
+    e: It updates .NET
+    f: Nothing until you restart
+q35:
+  text: What's the difference between `[Fact]` and `[Theory]`?
+  show: 4
+  options:
+    a: Theory runs one test with many InlineData inputs
+    b: Fact has no parameters; Theory has parameters
+    c: Theory tests are optional
+    d: Fact is faster
+    e: Theory never fails
+    f: They're the same
+q36:
+  text: What's a class library (`classlib`)?
+  show: 4
+  options:
+    a: A project of reusable code with no Main
+    b: Code that apps and tests can both reference
+    c: A list of books
+    d: A NuGet website
+    e: The .NET runtime
+    f: A folder of tests
+q37:
+  text: What should a method that awaits something return?
+  show: 4
+  options:
+    a: Task
+    b: Task<T>
+    c: void (always)
+    d: Thread
+    e: object
+    f: string
+q38:
+  text: Which status code means a new item was created?
+  show: 4
+  options:
+    a: '201'
+    b: 201 Created
+    c: '200'
+    d: '204'
+    e: '400'
+    f: '404'
+q39:
+  text: What does `app.MapGet("/todos", () => todos);` do?
+  show: 4
+  options:
+    a: Answers GET /todos with the list as JSON
+    b: Maps a URL to a function
+    c: Deletes the todos
+    d: Saves the list to a database
+    e: Creates a new todo
+    f: Starts the server
+q40:
+  text: Why avoid `.Result` on a Task?
+  show: 4
+  options:
+    a: It blocks the thread and can freeze the app
+    b: Use await instead
+    c: It returns the wrong value
+    d: It doesn't compile
+    e: It runs the task twice
+    f: It deletes the task

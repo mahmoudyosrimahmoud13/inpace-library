@@ -1,0 +1,286 @@
+id: ai-engineer-hired-1-ar
+title: 'التوظيف مهندس ذكاء اصطناعي 1: السوق ومشروعك الأول وسيرتك الذاتية'
+version: 1
+language: ar
+description: 'ابدأ بحثك عن وظيفة مهندس ذكاء اصطناعي من بيانات حقيقية: ما تطلبه 895 وظيفة، وكيف تسير المقابلات، وكيف
+  غيّرها الذكاء الاصطناعي. ثم ابنِ DocAnswer خطوة بخطوة، مساعد RAG منشور يذكر المصادر، مع مقاييس الاسترجاع وتقييم
+  بنموذج حَكَم في CI، وحوّله إلى سيرة ذاتية من صفحة، وصفحتي LinkedIn وGitHub فعّالتين، وخط بحث عن وظيفة مع قوالب
+  تواصل، وقصص سلوكية، وخطة تفاوض.'
+image: cover.jpg
+modules:
+- id: m1
+  title: الوظيفة والسوق
+  lessons:
+  - id: m1-l1
+    title: 'ابدأ من هنا: كيف توصلك هذه السلسلة إلى الوظيفة'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: ماذا يفعل مهندسو الذكاء الاصطناعي، وماذا يطلب أصحاب العمل
+    file: lessons/m1-l2.md
+    minutes: 25
+  - id: m1-l3
+    title: فجوة مهاراتك وخطتك
+    file: lessons/m1-l3.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'اجمع بيانات سوقك بنفسك: اجمع **20 إعلانًا حقيقيًا لوظيفة مهندس ذكاء اصطناعي** ستتقدم إليها (مدينتك،
+      أو منطقتك، أو عن بعد). وفي جدول، علّم لكل إعلان المهارات الواردة في جدول هذه الوحدة، وسنوات الخبرة المطلوبة،
+      وخطوات المقابلة إن ذُكرت. وأضف تقييمك الذاتي من 0 إلى 3 وخطتك الأسبوعية في ورقة ثانية. ارفع الملف.'
+  - id: m1-explain
+    type: explain
+    prompt: 'من إعلاناتك العشرين: ما أهم 5 مهارات، وكيف يختلف سوقك عن دراسة الإعلانات الـ 895، وأي نوع من الشركات
+      ستستهدف ولماذا، وما أكبر 3 فجوات لديك؟'
+    min_words: 120
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: كيف يسير التوظيف
+  lessons:
+  - id: m2-l1
+    title: جولات المقابلات مرحلةً مرحلة
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: كيف غيّر الذكاء الاصطناعي المقابلات
+    file: lessons/m2-l2.md
+    minutes: 15
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: اختر 3 شركات من قائمة بحثك. ولكل منها اعرف كيف تجري مقابلاتها (صفحة الوظائف لديها، وGlassdoor، وبيانات
+      الشركات في الدليل، ومدونات المتقدمين)، واكتب المراحل المتوقعة في جدول مع ما ستستعد به لكل منها. ارفع الجدول.
+  - id: m2-explain
+    type: explain
+    prompt: 'يقول صديق: «سأحل LeetCode 3 أشهر ثم أتقدم». اشرح له، مستعينًا بهذه الوحدة، ما الذي سيفوته وكيف تبدو
+      خطة أفضل.'
+    min_words: 80
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'مشروع DocAnswer، الخطوة 1: التخطيط والتجهيز'
+  lessons:
+  - id: m3-l1
+    title: اختر مشروعًا يهتم به مديرو التوظيف
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: جهّز المستودع باحتراف
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'أنشئ مستودع DocAnswer على GitHub بالبنية أعلاه، ومستنداتك (أو سكربت تنزيلها)، و`.env.example`، و`.gitignore`،
+      ومسودة README فيها: المشكلة، والمستخدمون، والمستندات وترخيصها. ارفع رابط المستودع وصورة له.'
+  - id: m3-explain
+    type: explain
+    prompt: صف مستخدميك الثلاثة و10 أسئلة حقيقية سيطرحونها. أي هذه الأسئلة تتوقع أن يكون صعبًا على البحث، ولماذا؟
+    min_words: 80
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'DocAnswer، الخطوة 2: القراءة والبحث والقياس'
+  lessons:
+  - id: m4-l1
+    title: قراءة المستندات وتقطيعها
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'البحث: الكلمات والمتجهات والهجين'
+    file: lessons/m4-l2.md
+    minutes: 35
+  - id: m4-l3
+    title: قِس الاسترجاع قبل التوليد
+    file: lessons/m4-l3.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'اقرأ مستنداتك وقطّعها، وابنِ الباحث الهجين ومجموعة ذهبية للاسترجاع من 60 سؤالًا. ارفع: رابط الـ commit،
+      وجدول نتائج فيه معدل الإصابة@5 وMRR للكلمات وحدها والمتجهات وحدها والهجين (وحجمين للقطع إن استطعت).'
+  - id: m4-explain
+    type: explain
+    prompt: 'سؤال مقابلة: «نظام RAG لديك يعطي إجابات خاطئة. كيف تعرف هل المشكلة في الاسترجاع أم في التوليد؟» أجب
+      مستعينًا بأرقامك وإخفاق حقيقي تحققت منه.'
+    min_words: 120
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'DocAnswer، الخطوة 3: إجابات يمكن الوثوق بها'
+  lessons:
+  - id: m5-l1
+    title: أجب بالمصادر، أو قل إنك لا تعرف
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: قيّم الإجابات
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'أضف الإجابة وتقييمات الإجابات. ونفّذ جولتي تحسين على الأقل. ارفع: رابط الـ commit، وجدول التغييرات
+      (التغيير، ومعدل الإصابة، والصحة، والأمانة، والرموز لكل سؤال)، ونسبة اتفاق الحَكَم على 30 إجابة قيّمتها بيدك.'
+  - id: m5-explain
+    type: explain
+    prompt: 'سؤال مقابلة: «كيف تعرف أن روبوت المحادثة لديك لا يهلوس؟» أجب بإعدادك: الأمر، والرفض، ومقياس الأمانة،
+      والتحقق من الحَكَم، وإخفاقًا واحدًا أصلحته.'
+    min_words: 120
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'DocAnswer، الخطوة 4: انشره'
+  lessons:
+  - id: m6-l1
+    title: الواجهة البرمجية والاختبارات وDocker وCI
+    file: lessons/m6-l1.md
+    minutes: 40
+  - id: m6-l2
+    title: انشر واكتب README وسجّل عرضًا
+    file: lessons/m6-l2.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'انشر DocAnswer: الواجهة البرمجية والاختبارات وCI تنجح، وصورة Docker، ونشر حي، وREADME بأجزائه السبعة،
+      وفيديو عرض مدته دقيقتان. ارفع رابط المستودع والرابط الحي والفيديو.'
+  - id: m6-explain
+    type: explain
+    prompt: 'مقابلة: «حدّثني عن DocAnswer في 3 دقائق». اكتب الإجابة التي ستقولها: المشكلة، والمعمارية، وأفضل قرار
+      اتخذته، وأرقامك، وما ستفعله بعد ذلك.'
+    min_words: 150
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: سيرتك الذاتية وLinkedIn وGitHub
+  lessons:
+  - id: m7-l1
+    title: سيرة ذاتية تُقرأ
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: اكتب مشاريعك في سيرتك الذاتية
+    file: lessons/m7-l2.md
+    minutes: 25
+  - id: m7-l3
+    title: LinkedIn وGitHub يعملان لصالحك
+    file: lessons/m7-l3.md
+    minutes: 20
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: ارفع سيرتك الذاتية من صفحة واحدة (PDF) وفيها DocAnswer أول مشروع مع 3 أسطر مقيسة على الأقل، ونتيجة اختبار
+      اللصق في ملف نصي، وصورًا لعنوان LinkedIn ونبذتك وحساب GitHub.
+  - id: m7-explain
+    type: explain
+    prompt: 'اختر أقوى سطر في سيرتك. واكتب كيف ستجيب مقابِلًا يسأل: «كيف قست ذلك بالضبط، وماذا كنت ستفعل بشكل مختلف؟»'
+    min_words: 100
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: إيجاد الوظيفة
+  lessons:
+  - id: m8-l1
+    title: أين وظائف الذكاء الاصطناعي
+    file: lessons/m8-l1.md
+    minutes: 20
+  - id: m8-l2
+    title: ترشيحات ورسائل تحصل على ردود
+    file: lessons/m8-l2.md
+    minutes: 25
+  - id: m8-l3
+    title: أدر بحثك كخط إنتاج
+    file: lessons/m8-l3.md
+    minutes: 20
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'ابدأ بحثك: جهّز جدول التتبع و5 تنبيهات وظائف، وأرسل هذا الأسبوع أول 10 طلبات مخصّصة و5 رسائل تواصل.
+      ارفع الجدول (أخفِ بيانات التواصل الشخصية).'
+  - id: m8-explain
+    type: explain
+    prompt: 'بعد 4 أسابيع اقرأ أرقامك: أين يتسرب خط إنتاجك، وما السبب الأرجح، وماذا ستغيّر؟ (وإن لم تصل إلى 4 أسابيع
+      بعد، فاكتب خطتك لقراءتها.)'
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: الأسئلة السلوكية والمزكّون والعروض
+  lessons:
+  - id: m9-l1
+    title: بنك قصصك
+    file: lessons/m9-l1.md
+    minutes: 30
+  - id: m9-l2
+    title: المزكّون والعروض والتفاوض
+    file: lessons/m9-l2.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: اكتب قصصك الثماني بصيغة STAR (نقاطًا لا نصوصًا محفوظة) وإجابتك عن «حدّثني عن نفسك» في 90 ثانية. وسجّل
+      نفسك وأنت تجيب عن 3 أسئلة سلوكية مختارة عشوائيًا. ارفع ملف القصص والتسجيل.
+  - id: m9-explain
+    type: explain
+    prompt: 'أجب بصيغة STAR: «حدّثني عن مرة كنت فيها مخطئًا في أمر تقني». ثم اذكر ما الذي في إجابتك يُظهر تحمّل
+      المسؤولية والتعلّم.'
+    min_words: 120
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70

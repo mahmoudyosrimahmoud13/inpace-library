@@ -1,0 +1,200 @@
+q1:
+  right:
+  - a
+  - b
+  why: dotnet new creates a project from a template; console is the template name.
+q2:
+  right:
+  - a
+  - b
+  why: C# doesn't use line breaks to end statements; ; does.
+q3:
+  right:
+  - a
+  - b
+  why: Console and console are different names in C#.
+q4:
+  right:
+  - a
+  - b
+  why: The .csproj describes the project; bin/ and obj/ hold the output.
+q5:
+  right:
+  - a
+  - b
+  why: int divided by int is an int; the fraction is dropped.
+q6:
+  right:
+  - a
+  - b
+  why: decimal is exact for base-10 amounts like money.
+q7:
+  right:
+  - a
+  - b
+  why: var still has one fixed type; you just don't write it.
+q8:
+  right:
+  - a
+  - b
+  why: Casting a double to int cuts off the fraction; it doesn't round.
+q9:
+  right:
+  - a
+  - b
+  why: TryParse never throws for bad text; it returns false.
+q10:
+  right:
+  - a
+  - b
+  why: It starts at 0 and stops when i reaches 3.
+q11:
+  right:
+  - a
+  - b
+  why: The check comes at the end, so the first round always happens.
+q12:
+  right:
+  - a
+  - b
+  why: N means number format with group separators; 2 is the decimals.
+q13:
+  right:
+  - a
+  - b
+  why: Interpolation evaluates the expression inside the braces.
+q14:
+  right:
+  - a
+  - b
+  why: ToUpper returns a new string; you must assign it.
+q15:
+  right:
+  - a
+  - b
+  why: IsNullOrEmpty misses "   "; IsNullOrWhiteSpace catches all three.
+q16:
+  right:
+  - a
+  - b
+  why: '@ turns off escape sequences like \t.'
+q17:
+  right:
+  - a
+  - b
+  why: Lists use Count; arrays use Length.
+q18:
+  right:
+  - a
+  - b
+  why: stock["tea"] would throw; TryGetValue checks safely.
+q19:
+  right:
+  - a
+  - b
+  why: Where filters; Count would count and OrderBy would sort.
+q20:
+  right:
+  - a
+  - b
+  why: Indexes go from 0 to Length - 1.
+q21:
+  right:
+  - a
+  - b
+  why: void is the return type meaning no value.
+q22:
+  right:
+  - a
+  - b
+  why: name is required; greeting is optional and can be passed by name.
+q23:
+  right:
+  - a
+  - b
+  why: The compiler requires every out parameter to be assigned.
+q24:
+  right:
+  - a
+  - b
+  why: C# chooses the version that matches the arguments.
+q25:
+  right:
+  - a
+  - b
+  why: finally is for cleanup that must always happen.
+q26:
+  right:
+  - a
+  - b
+  why: The text isn't in a number format.
+q27:
+  right:
+  - a
+  - b
+  why: F10 steps over; F11 steps into.
+q28:
+  right:
+  - a
+  - b
+  why: Swallowing every exception turns crashes into wrong results.
+q29:
+  right:
+  - a
+  - b
+  why: Classes are reference types; assignment copies the reference.
+q30:
+  right:
+  - a
+  - b
+  why: The getter is public, the setter private.
+q31:
+  right:
+  - a
+  - b
+  why: Records are built for data and compare by value.
+q32:
+  right:
+  - a
+  - b
+  why: Different classes can implement one interface and be used the same way.
+q33:
+  right:
+  - a
+  - b
+  why: dotnet test builds and runs every test project.
+q34:
+  right:
+  - a
+  - b
+  why: Packages are listed in the project file and restored on build.
+q35:
+  right:
+  - a
+  - b
+  why: Theories are data-driven tests.
+q36:
+  right:
+  - a
+  - b
+  why: Libraries hold the logic; apps and tests reference them.
+q37:
+  right:
+  - a
+  - b
+  why: Async methods return Task or Task<T> (void only for event handlers).
+q38:
+  right:
+  - a
+  - b
+  why: 201 Created, usually with the new item's address.
+q39:
+  right:
+  - a
+  - b
+  why: MapGet registers a route; app.Run() starts the server.
+q40:
+  right:
+  - a
+  - b
+  why: Blocking on async code wastes threads and can deadlock.

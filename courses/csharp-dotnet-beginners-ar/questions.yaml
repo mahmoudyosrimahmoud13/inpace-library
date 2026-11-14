@@ -1,0 +1,400 @@
+q1:
+  text: أي أمر ينشئ تطبيق console جديدًا؟
+  show: 4
+  options:
+    a: dotnet new console -o Hello
+    b: dotnet new console
+    c: dotnet run console
+    d: dotnet create app
+    e: csharp new Hello
+    f: dotnet build console
+q2:
+  text: ما الذي ينهي الجملة في C#؟
+  show: 4
+  options:
+    a: الفاصلة المنقوطة ;
+    b: الرمز ; كما في Console.WriteLine("Hi");
+    c: سطر جديد
+    d: 'النقطتان :'
+    e: الإزاحة
+    f: النقطة .
+q3:
+  text: لا يُترجَم `console.WriteLine("Hi");`. لماذا؟
+  show: 4
+  options:
+    a: 'C# حساسة لحالة الأحرف: يجب أن تكون Console'
+    b: console بحرف c صغير غير موجودة
+    c: WriteLine تحتاج مُدخلين
+    d: النصوص تحتاج علامات اقتباس مفردة
+    e: الفاصلة المنقوطة خطأ
+    f: يحتاج سطر using لكلمة Hi
+q4:
+  text: ما ملف `.csproj`؟
+  show: 4
+  options:
+    a: 'ملف المشروع: إطار العمل المستهدف والحزم'
+    b: الملف الذي يقرؤه dotnet build لبناء مشروعك
+    c: برنامجك المُترجَم
+    d: قائمة بمتغيراتك
+    e: مجلد ناتج البناء
+    f: ملف كود C#
+q5:
+  text: ماذا تطبع `7 / 2` في C#؟
+  show: 4
+  options:
+    a: '3'
+    b: ثلاثة، لأن الطرفين int
+    c: '3.5'
+    d: '4'
+    e: '1'
+    f: '3.0'
+q6:
+  text: أي نوع هو الأنسب للأسعار؟
+  show: 4
+  options:
+    a: decimal
+    b: decimal، ويُكتب مثل 199.99m
+    c: double
+    d: float
+    e: int
+    f: string
+q7:
+  text: ماذا ينشئ `var x = 10;`؟
+  show: 4
+  options:
+    a: 'متغيرًا int: المترجم يستنتج النوع'
+    b: متغيرًا نوعه ثابت int
+    c: متغيرًا يقبل أي نوع لاحقًا
+    d: ثابتًا
+    e: نصًا
+    f: متغيرًا بلا نوع
+q8:
+  text: ما قيمة `(int)3.99`؟
+  show: 4
+  options:
+    a: '3'
+    b: 'ثلاثة: التحويل الصريح يحذف الكسر'
+    c: '4'
+    d: '3.99'
+    e: '0'
+    f: خطأ
+q9:
+  text: ماذا تُرجع `int.TryParse("abc", out int n)`؟
+  show: 4
+  options:
+    a: 'false'
+    b: false، وقيمة n هي 0
+    c: 'true'
+    d: تطلق استثناءً
+    e: '"abc"'
+    f: 'null'
+q10:
+  text: كم مرة تدور `for (int i = 0; i < 3; i++)`؟
+  show: 4
+  options:
+    a: '3'
+    b: 'ثلاث مرات: i تساوي 0 و1 و2'
+    c: '2'
+    d: '4'
+    e: إلى الأبد
+    f: '0'
+q11:
+  text: ما الذي يميز `do...while`؟
+  show: 4
+  options:
+    a: الجسم يُنفَّذ مرة واحدة على الأقل
+    b: يُفحص الشرط بعد كل دورة
+    c: لا تتوقف أبدًا
+    d: لا يمكن استخدام break فيها
+    e: تمر على المصفوفات فقط
+    f: تعمل بالتوازي
+q12:
+  text: ماذا يعرض `{1234.5:N2}`؟
+  show: 4
+  options:
+    a: 1,234.50
+    b: الرقم بفواصل الآلاف ومنزلتين عشريتين
+    c: '1234.5'
+    d: 1,234.5
+    e: '1234.50'
+    f: $1,234.50
+q13:
+  text: ماذا يعطي `$"{2 + 3} items"`؟
+  show: 4
+  options:
+    a: '"5 items"'
+    b: النص 5 items
+    c: '"2 + 3 items"'
+    d: '"{2 + 3} items"'
+    e: '"23 items"'
+    f: خطأ
+q14:
+  text: بعد `string s = "hi"; s.ToUpper();` ما قيمة `s`؟
+  show: 4
+  options:
+    a: '"hi"'
+    b: 'ما زالت hi: النصوص لا تتغير'
+    c: '"HI"'
+    d: '"Hi"'
+    e: 'null'
+    f: '""'
+q15:
+  text: أي فحص يكون true للنص null والفارغ والمكوّن من مسافات فقط؟
+  show: 4
+  options:
+    a: string.IsNullOrWhiteSpace(s)
+    b: IsNullOrWhiteSpace
+    c: s == ""
+    d: s.Length == 0
+    e: string.IsNullOrEmpty(s)
+    f: s == null
+q16:
+  text: ما هو `@"C:\temp"`؟
+  show: 4
+  options:
+    a: 'نص حرفي: تبقى الشرطة المائلة العكسية'
+    b: المسار C:\temp كما كُتب
+    c: 'حرف tab بعد C:'
+    d: نص مُدرَج
+    e: حرف char
+    f: خطأ
+q17:
+  text: كيف تحصل على عدد العناصر في `List<T>`؟
+  show: 4
+  options:
+    a: list.Count
+    b: الخاصية Count
+    c: list.Length
+    d: list.Size()
+    e: list.Count()
+    f: len(list)
+q18:
+  text: ماذا تفعل `stock.TryGetValue("tea", out int n)` إذا لم يكن "tea" موجودًا؟
+  show: 4
+  options:
+    a: تُرجع false دون استثناء
+    b: تُرجع false وتكون n صفرًا
+    c: تطلق KeyNotFoundException
+    d: تضيف tea بقيمة 0
+    e: تُرجع null
+    f: توقف البرنامج
+q19:
+  text: ماذا تعطي `scores.Where(s => s >= 60)`؟
+  show: 4
+  options:
+    a: الدرجات من 60 فأكثر فقط
+    b: سلسلة مُصفّاة
+    c: عدد الدرجات من 60 فأكثر
+    d: true أو false
+    e: الدرجات مرتبة
+    f: أول درجة تساوي 60
+q20:
+  text: ماذا يحدث عند قراءة `arr[3]` من مصفوفة فيها 3 عناصر؟
+  show: 4
+  options:
+    a: IndexOutOfRangeException
+    b: 'استثناء: آخر موضع هو 2'
+    c: تُرجع 0
+    d: تُرجع null
+    e: تضيف عنصرًا جديدًا
+    f: تُرجع آخر عنصر
+q21:
+  text: ماذا تعني `void` في `void Greet(string name)`؟
+  show: 4
+  options:
+    a: أن الدالة لا تُرجع شيئًا
+    b: أنها تؤدي عملًا دون إرجاع قيمة
+    c: أنها لا تأخذ معاملات
+    d: أنها فارغة
+    e: أنها لا تُستدعى
+    f: أنها تُرجع null
+q22:
+  text: مع `void Greet(string name, string greeting = "Hello")`، أي استدعاء يعمل؟
+  show: 4
+  options:
+    a: Greet("Mona")
+    b: 'Greet("Mona", greeting: "Hi")'
+    c: Greet()
+    d: 'Greet(greeting: "Hi")'
+    e: Greet(1, 2)
+    f: Greet("Mona", "Hi", "x")
+q23:
+  text: ماذا يجب أن تفعل الدالة بمعامل `out`؟
+  show: 4
+  options:
+    a: أن تعطيه قيمة قبل أن تنتهي
+    b: أن تضبطه ليستلمه المستدعي
+    c: أن تقرأه فقط
+    d: أن تطبعه
+    e: أن تُرجعه بـ return
+    f: لا شيء
+q24:
+  text: ما التحميل الزائد (overloading)؟
+  show: 4
+  options:
+    a: دوال لها الاسم نفسه ومعاملات مختلفة
+    b: وجود Print(int) وPrint(string) معًا
+    c: دالة طويلة جدًا
+    d: استدعاء دالة مرات كثيرة
+    e: دالة لا تُرجع شيئًا
+    f: تمرير مُدخلات كثيرة
+q25:
+  text: متى تُنفَّذ كتلة `finally`؟
+  show: 4
+  options:
+    a: دائمًا، مع الخطأ أو دونه
+    b: بعد try وأي catch
+    c: فقط عند الخطأ
+    d: فقط عند عدم الخطأ
+    e: قبل try
+    f: أبدًا
+q26:
+  text: ماذا تطلق `int.Parse("12a")`؟
+  show: 4
+  options:
+    a: FormatException
+    b: استثناء FormatException
+    c: NullReferenceException
+    d: DivideByZeroException
+    e: IndexOutOfRangeException
+    f: لا شيء، تُرجع 12
+q27:
+  text: ماذا يفعل F10 في المصحّح؟
+  show: 4
+  options:
+    a: ينفّذ السطر الحالي ويتوقف عند التالي
+    b: التخطي (Step over)
+    c: يوقف التصحيح
+    d: يضع نقطة توقف
+    e: يدخل في الدالة
+    f: يعيد تشغيل البرنامج
+q28:
+  text: لماذا تُعد `catch { }` الفارغة فكرة سيئة؟
+  show: 4
+  options:
+    a: تخفي أخطاء تحتاج إلى معرفتها
+    b: تفشل الأخطاء بصمت
+    c: تجعل كتابة الكود أبطأ
+    d: لا تسمح بها C#
+    e: لا تلتقط شيئًا
+    f: تعطّل البرنامج
+q29:
+  text: '`var b = a;` و`a` كائن من صنف، ثم `b.Deposit(100)`. ماذا يحدث لـ `a`؟'
+  show: 4
+  options:
+    a: 'يزيد رصيده أيضًا: الكائن نفسه'
+    b: a وb يشيران إلى كائن واحد
+    c: 'لا شيء: b نسخة'
+    d: يُحذف a
+    e: خطأ
+    f: يصبح a قيمة null
+q30:
+  text: ماذا تتيح `public decimal Balance { get; private set; }`؟
+  show: 4
+  options:
+    a: يقرؤها أي أحد، ولا يغيّرها إلا الصنف
+    b: لا يستطيع الكود الخارجي كتابة account.Balance = 5
+    c: لا يقرؤها أحد
+    d: يغيّرها أي أحد
+    e: تُضبط مرة واحدة فقط
+    f: أنها دالة
+q31:
+  text: لماذا نستخدم `record` لـ `Product(string Name, decimal Price)`؟
+  show: 4
+  options:
+    a: تحصل على الخصائص وToString والمقارنة بالقيمة في سطر
+    b: منتجان بالبيانات نفسها متساويان
+    c: السجلات أسرع من كل الأصناف
+    d: السجلات لا تملك خصائص
+    e: تُحفظ السجلات في قاعدة بيانات تلقائيًا
+    f: السجلات تحفظ أرقامًا فقط
+q32:
+  text: ما الواجهة (interface)؟
+  show: 4
+  options:
+    a: وعد بأعضاء يجب أن يملكها الصنف
+    b: مثل IShape التي تشترط Area()
+    c: شاشة في التطبيق
+    d: نوع من الحلقات
+    e: صنف تنشئه بـ new
+    f: قائمة متغيرات
+q33:
+  text: أي أمر يشغّل اختبارات المشروع؟
+  show: 4
+  options:
+    a: dotnet test
+    b: dotnet test من مجلد الحل
+    c: dotnet run --tests
+    d: dotnet build test
+    e: xunit run
+    f: dotnet check
+q34:
+  text: ماذا يغيّر `dotnet add package Humanizer`؟
+  show: 4
+  options:
+    a: يضيف PackageReference إلى .csproj
+    b: صار المشروع يعتمد على Humanizer
+    c: ينسخ الحزمة إلى Program.cs
+    d: يثبتها لكل مشاريع الجهاز
+    e: يحدّث .NET
+    f: لا شيء حتى تعيد التشغيل
+q35:
+  text: ما الفرق بين `[Fact]` و`[Theory]`؟
+  show: 4
+  options:
+    a: Theory تشغّل اختبارًا واحدًا بمدخلات InlineData كثيرة
+    b: Fact بلا معاملات، وTheory لها معاملات
+    c: اختبارات Theory اختيارية
+    d: Fact أسرع
+    e: Theory لا تفشل أبدًا
+    f: هما الشيء نفسه
+q36:
+  text: ما مكتبة الأصناف (`classlib`)؟
+  show: 4
+  options:
+    a: مشروع كود قابل لإعادة الاستخدام دون Main
+    b: كود يمكن أن يشير إليه التطبيق والاختبارات معًا
+    c: قائمة كتب
+    d: موقع NuGet
+    e: بيئة تشغيل .NET
+    f: مجلد اختبارات
+q37:
+  text: ماذا يجب أن تُرجع الدالة التي تستخدم await؟
+  show: 4
+  options:
+    a: Task
+    b: Task<T>
+    c: void (always)
+    d: Thread
+    e: object
+    f: string
+q38:
+  text: أي كود حالة يعني إنشاء عنصر جديد؟
+  show: 4
+  options:
+    a: '201'
+    b: 201 Created
+    c: '200'
+    d: '204'
+    e: '400'
+    f: '404'
+q39:
+  text: ماذا يفعل `app.MapGet("/todos", () => todos);`؟
+  show: 4
+  options:
+    a: يجيب GET /todos بالقائمة بصيغة JSON
+    b: يربط عنوانًا بدالة
+    c: يحذف المهام
+    d: يحفظ القائمة في قاعدة بيانات
+    e: ينشئ مهمة جديدة
+    f: يشغّل الخادم
+q40:
+  text: لماذا نتجنب `.Result` مع Task؟
+  show: 4
+  options:
+    a: توقف الخيط وقد تجمّد التطبيق
+    b: استخدم await بدلًا منها
+    c: تُرجع قيمة خاطئة
+    d: لا تُترجَم
+    e: تشغّل المهمة مرتين
+    f: تحذف المهمة

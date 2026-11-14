@@ -1,0 +1,520 @@
+q1:
+  text: You found the optimal solution but coded in silence and didn't test. What's the likely outcome?
+  show: 4
+  options:
+    a: Weak marks on communication and testing, and possibly no hire
+    b: A risk of failing despite correct code
+    c: A guaranteed strong hire
+    d: Only speed matters
+    e: Testing is never scored
+    f: Silence shows confidence
+q2:
+  text: n can be 10⁵. Which complexity should you aim for?
+  show: 4
+  options:
+    a: O(n log n)
+    b: O(n)
+    c: O(n²)
+    d: O(2ⁿ)
+    e: O(n³)
+    f: O(n!)
+q3:
+  text: Which of these is O(n) in Python?
+  show: 4
+  options:
+    a: x in my_list
+    b: my_list.pop(0)
+    c: x in my_set
+    d: my_dict[key]
+    e: my_list.append(x)
+    f: my_deque.popleft()
+q4:
+  text: What should you do before writing any code?
+  show: 4
+  options:
+    a: Clarify, write examples and agree on an approach
+    b: State a brute force and its complexity
+    c: Start typing to save time
+    d: Ask for the solution
+    e: Memorize the problem number
+    f: Optimize the variable names
+q5:
+  text: Why does `two_sum` with a dict run in O(n)?
+  show: 4
+  options:
+    a: Each number is checked against the dict in O(1)
+    b: One pass, with a constant-time lookup per item
+    c: Because it sorts first
+    d: Because dicts are sorted
+    e: Because it uses recursion
+    f: It's actually O(n²)
+q6:
+  text: In 3Sum, why skip `nums[i] == nums[i - 1]`?
+  show: 4
+  options:
+    a: To avoid duplicate triples
+    b: The same first number gives the same answers
+    c: To make it faster than O(n)
+    d: Because duplicates can't sum to 0
+    e: To keep the array sorted
+    f: It's a bug
+q7:
+  text: 'Container With Most Water: which pointer moves?'
+  show: 4
+  options:
+    a: The one at the shorter line
+    b: The side that limits the height
+    c: Always the left
+    d: The taller one
+    e: Both every time
+    f: A random one
+q8:
+  text: Best structure to group words that are anagrams?
+  show: 4
+  options:
+    a: defaultdict(list) keyed by sorted word
+    b: A dict from a letter signature to a list
+    c: A sorted list of all words
+    d: A stack
+    e: A heap
+    f: Two pointers
+q9:
+  text: Which question hints at a sliding window?
+  show: 4
+  options:
+    a: Longest contiguous substring with at most k distinct letters
+    b: Shortest subarray with sum at least S (positive numbers)
+    c: All subsets of a set
+    d: Shortest path in a graph
+    e: Kth largest element
+    f: Validate a binary search tree
+q10:
+  text: Why is the sliding window O(n) even with a while loop inside the for loop?
+  show: 4
+  options:
+    a: Each index enters and leaves the window at most once
+    b: start only moves forward, at most n times in total
+    c: Because Python loops are fast
+    d: Because the string is sorted
+    e: It's O(n²)
+    f: Because of the dict
+q11:
+  text: A monotonic stack is the natural tool for...
+  show: 4
+  options:
+    a: Next greater element
+    b: Days until a warmer temperature
+    c: Sorting a list
+    d: Finding duplicates
+    e: Shortest path
+    f: Counting letters
+q12:
+  text: '`longest_unique("abba")` returns?'
+  show: 4
+  options:
+    a: '2'
+    b: 'Two: "ab" or "ba"'
+    c: '4'
+    d: '3'
+    e: '1'
+    f: '0'
+q13:
+  text: When can you binary search on the answer?
+  show: 4
+  options:
+    a: When "does k work?" flips from no to yes only once
+    b: When feasibility is monotonic in k
+    c: Only on sorted arrays
+    d: When the input is small
+    e: When there's a cycle
+    f: Never
+q14:
+  text: With `while lo < hi`, which update can loop forever?
+  show: 4
+  options:
+    a: lo = mid (with mid rounding down)
+    b: Setting lo to mid
+    c: hi = mid
+    d: lo = mid + 1
+    e: hi = mid - 1 with lo <= hi
+    f: mid = (lo + hi) // 2
+q15:
+  text: How do you find the middle of a linked list in one pass?
+  show: 4
+  options:
+    a: Slow moves 1, fast moves 2; when fast ends, slow is in the middle
+    b: Fast and slow pointers
+    c: Sort it first
+    d: Binary search
+    e: A heap
+    f: Reverse it twice
+q16:
+  text: Why use a dummy head when merging lists?
+  show: 4
+  options:
+    a: No special case for the first node
+    b: Return dummy.next at the end
+    c: It makes the merge O(1)
+    d: It sorts the lists
+    e: It detects cycles
+    f: Python requires it
+q17:
+  text: Which traversal of a BST gives the values in sorted order?
+  show: 4
+  options:
+    a: In-order
+    b: Left, node, right
+    c: Pre-order
+    d: Post-order
+    e: Level order
+    f: Right, node, left
+q18:
+  text: Why isn't checking `node.left.val < node.val < node.right.val` enough to validate a BST?
+  show: 4
+  options:
+    a: A deeper node can break the rule of an ancestor
+    b: You need bounds passed from all ancestors
+    c: It is enough
+    d: Because of duplicates only
+    e: Because trees can't be checked recursively
+    f: Because values are strings
+q19:
+  text: BFS level order uses which structure?
+  show: 4
+  options:
+    a: deque
+    b: A queue
+    c: A stack
+    d: A heap
+    e: A trie
+    f: A sorted list
+q20:
+  text: What does a trie make fast?
+  show: 4
+  options:
+    a: Prefix lookups
+    b: Checking many words against one grid
+    c: Sorting numbers
+    d: Shortest paths
+    e: Finding the median
+    f: Matrix multiplication
+q21:
+  text: To find the k largest of n numbers efficiently, you keep...
+  show: 4
+  options:
+    a: A min-heap of size k
+    b: heapq.nlargest(k, nums)
+    c: A max-heap of all n, popped n times
+    d: A sorted dict
+    e: A stack of size k
+    f: Two pointers
+q22:
+  text: How does Python get a max-heap?
+  show: 4
+  options:
+    a: Push negated values into heapq
+    b: Store -x, read -heap[0]
+    c: heapq.maxheap()
+    d: Sort descending each time
+    e: Use a set
+    f: It can't
+q23:
+  text: First step in most interval problems?
+  show: 4
+  options:
+    a: Sort the intervals
+    b: Sort by start (or by end)
+    c: Build a trie
+    d: Binary search each interval
+    e: Recursion on each pair
+    f: Hash every point
+q24:
+  text: '`max_subarray([-3, -1, -2])` returns?'
+  show: 4
+  options:
+    a: '-1'
+    b: 'Minus one: the best single element'
+    c: '0'
+    d: '-6'
+    e: '-3'
+    f: None
+q25:
+  text: How many subsets does a set of n distinct items have?
+  show: 4
+  options:
+    a: 2ⁿ
+    b: Two to the power n
+    c: n²
+    d: n!
+    e: 2n
+    f: n
+q26:
+  text: What happens if you write `res.append(path)` without copying?
+  show: 4
+  options:
+    a: Every saved answer ends up as the same (empty) list
+    b: All entries point to one list that keeps changing
+    c: Nothing, it works
+    d: A SyntaxError
+    e: It's faster and correct
+    f: Python copies it automatically
+q27:
+  text: In Combination Sum, why recurse with `i` and not `i + 1`?
+  show: 4
+  options:
+    a: The same number may be used again
+    b: Reuse is allowed
+    c: To avoid an infinite loop
+    d: To sort the result
+    e: Because i + 1 is out of range
+    f: To skip duplicates
+q28:
+  text: A problem with n = 15 asking for every valid arrangement suggests...
+  show: 4
+  options:
+    a: Backtracking
+    b: Exploring a tree of choices with pruning
+    c: Binary search
+    d: A sliding window
+    e: A heap
+    f: Union-find
+q29:
+  text: 'Fewest moves on an unweighted grid: which algorithm?'
+  show: 4
+  options:
+    a: BFS
+    b: Breadth-first search
+    c: DFS
+    d: Dijkstra with negative weights
+    e: Backtracking
+    f: Binary search
+q30:
+  text: Kahn's algorithm processed fewer nodes than n. That means...
+  show: 4
+  options:
+    a: The graph has a cycle
+    b: Not all courses can be finished
+    c: The graph is a tree
+    d: There's a bug in the queue
+    e: All nodes are connected
+    f: n was wrong
+q31:
+  text: Why can't Dijkstra handle negative edge weights?
+  show: 4
+  options:
+    a: A settled node could later get a shorter path
+    b: Its greedy "closest first" step assumes paths only get longer
+    c: Heaps can't store negatives
+    d: It's too slow
+    e: It only works on trees
+    f: It can
+q32:
+  text: In grid BFS, when should you mark a cell visited?
+  show: 4
+  options:
+    a: When you add it to the queue
+    b: Before enqueuing, so it's never added twice
+    c: When you pop it, always
+    d: Never
+    e: At the end
+    f: Only for the start cell
+q33:
+  text: What signals that DP fits a problem?
+  show: 4
+  options:
+    a: Overlapping subproblems with an optimal or counting question
+    b: A recursion that recomputes the same calls
+    c: The input is sorted
+    d: You need all permutations
+    e: The graph has cycles
+    f: Strings are involved
+q34:
+  text: Time complexity of the bottom-up `coin_change`?
+  show: 4
+  options:
+    a: O(amount × len(coins))
+    b: States × coins tried per state
+    c: O(amount)
+    d: O(2^amount)
+    e: O(len(coins))
+    f: O(amount²)
+q35:
+  text: '`rob([2, 7, 9, 3, 1])` returns?'
+  show: 4
+  options:
+    a: '12'
+    b: 'Twelve: 2 + 9 + 1'
+    c: '10'
+    d: '11'
+    e: '22'
+    f: '16'
+q36:
+  text: Why does Maximum Product Subarray track the minimum too?
+  show: 4
+  options:
+    a: A negative times the smallest can become the largest
+    b: Signs flip with negatives
+    c: To handle zeros only
+    d: To sort the array
+    e: It doesn't need to
+    f: For memory
+q37:
+  text: What does `x & (x - 1)` do?
+  show: 4
+  options:
+    a: Clears the lowest set bit
+    b: 12 (1100) becomes 8 (1000)
+    c: Doubles x
+    d: Returns x - 1
+    e: Checks if x is odd
+    f: Reverses the bits
+q38:
+  text: '`lcs("abcde", "ace")` returns?'
+  show: 4
+  options:
+    a: '3'
+    b: 'Three: "ace"'
+    c: '2'
+    d: '5'
+    e: '1'
+    f: '0'
+q39:
+  text: In 0/1 knapsack with a 1-D array, why loop capacity downwards?
+  show: 4
+  options:
+    a: So each item is used at most once
+    b: Upwards would reuse the item just added
+    c: It's faster
+    d: Python requires it
+    e: To sort the items
+    f: No reason
+q40:
+  text: XOR of [4, 1, 2, 1, 2] is?
+  show: 4
+  options:
+    a: '4'
+    b: 'Four: pairs cancel out'
+    c: '0'
+    d: '10'
+    e: '1'
+    f: '2'
+q41:
+  text: Why subtract `z.max()` inside softmax?
+  show: 4
+  options:
+    a: To avoid overflow in exp, with the same result
+    b: Numerical stability
+    c: To make outputs sum to 1
+    d: To normalize the inputs to [0, 1]
+    e: It changes which class wins
+    f: To speed it up
+q42:
+  text: Q is (4, 8), K is (6, 8), V is (6, 16). Shape of attention(Q, K, V)?
+  show: 4
+  options:
+    a: (4, 16)
+    b: One 16-dim output per query
+    c: (4, 6)
+    d: (6, 16)
+    e: (4, 8)
+    f: (6, 8)
+q43:
+  text: What does `np.argpartition(-s, k - 1)[:k]` give?
+  show: 4
+  options:
+    a: The indexes of the k largest scores, unsorted
+    b: Top k in O(n)
+    c: The k largest, sorted
+    d: The k smallest
+    e: A sorted copy
+    f: The first k items
+q44:
+  text: In an AI-allowed round, what fails candidates most?
+  show: 4
+  options:
+    a: Pasting code they can't explain
+    b: Not testing what the AI wrote
+    c: Asking the AI for help at all
+    d: Typing too slowly
+    e: Using Python
+    f: Talking out loud
+q45:
+  text: A new requirement arrives in an implementation round. What's the best first move?
+  show: 4
+  options:
+    a: Clarify it, then refactor if the design fights you
+    b: Check the interface change before coding
+    c: Start over from scratch
+    d: Add a special case wherever it breaks
+    e: Ignore it until the end
+    f: Delete the tests
+q46:
+  text: Why inject `clock` into TinyKV instead of calling `time.time()` directly?
+  show: 4
+  options:
+    a: Tests can control time without sleeping
+    b: Expiry becomes testable
+    c: time.time() is slow
+    d: Python requires it
+    e: To store dates as text
+    f: It's more secure
+q47:
+  text: Lazy expiry (checking on read) costs...
+  show: 4
+  options:
+    a: Memory for expired keys nobody reads
+    b: Nothing on writes, a check on each read
+    c: A background thread
+    d: Wrong answers
+    e: O(n) per read
+    f: Nothing at all
+q48:
+  text: Which test proves rollback doesn't reach the disk?
+  show: 4
+  options:
+    a: Reopen from the log and check the rolled-back key is missing
+    b: test_level4_persistence's check on "c"
+    c: Checking get right after rollback
+    d: Counting lines of code
+    e: Timing the commit
+    f: Printing the dict
+q49:
+  text: When should mock interviews start?
+  show: 4
+  options:
+    a: About 60% of the way through your preparation
+    b: Well before the real interviews
+    c: Only after solving 500 problems
+    d: The night before
+    e: 'Never: they waste time'
+    f: Only if you failed once
+q50:
+  text: Best use of the final two weeks?
+  show: 4
+  options:
+    a: Redo the problems you needed help with
+    b: Mocks and company-specific practice
+    c: Learn a new language
+    d: Only read solutions
+    e: Start a big new project
+    f: Stop practising
+q51:
+  text: You blank in the interview. What helps most?
+  show: 4
+  options:
+    a: Say so, then solve a tiny example by hand
+    b: Go back to examples and brute force
+    c: Stay silent until it comes
+    d: Guess a pattern and code fast
+    e: Ask to end the interview
+    f: Pretend you're nearly done
+q52:
+  text: Why be the interviewer in some mocks?
+  show: 4
+  options:
+    a: You learn what strong answers look like
+    b: You see the rubric from the other side
+    c: It's required by Pramp only
+    d: To avoid practising
+    e: Interviewers get paid
+    f: No benefit

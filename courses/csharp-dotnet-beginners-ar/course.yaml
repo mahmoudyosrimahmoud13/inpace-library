@@ -1,0 +1,312 @@
+id: csharp-dotnet-beginners-ar
+title: C# و.NET للمبتدئين
+version: 1
+language: ar
+description: 'تعلّم C# من الصفر وابنِ مشاريع .NET حقيقية: الأنواع، والقرارات والحلقات، والنصوص، والمجموعات وLINQ،
+  والدوال، والأخطاء وتصحيحها، والأصناف والسجلات، ثم المشاريع وحزم NuGet واختبارات xUnit وasync وأول واجهة ويب لك
+  بـ ASP.NET Core. الدروس المكتوبة بالعربية وتتبع توثيق مايكروسوفت الرسمي، ودروس الفيديو أجزاء من دورة C# الكاملة
+  على freeCodeCamp (بالإنجليزية مع ترجمة تلقائية). الخطة: 10 أسابيع، نحو ساعة في اليوم.'
+image: cover.jpg
+modules:
+- id: m1
+  title: البداية
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: كيف يُبنى برنامج C#
+    file: lessons/m1-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=0&end=656
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'أنشئ مشروع console اسمه `AboutMe`. اطبع 3 أسطر: اسمك، وما تريد بناءه بـ C#، وتاريخ اليوم باستخدام `DateTime.Now.ToShortDateString()`.
+      ارفع صورة لـ `dotnet run` وهو يعرضها.'
+  - id: m1-explain
+    type: explain
+    prompt: 'بكلماتك: ما الفرق بين C# و.NET؟ وماذا يفعل `dotnet run` قبل أن يبدأ برنامجك؟'
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: الأنواع والمتغيرات والعمليات
+  lessons:
+  - id: m2-l1
+    title: الأنواع والمتغيرات والتحويل
+    file: lessons/m2-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=656&end=1536
+  - id: m2-l2
+    title: العمليات والرياضيات
+    file: lessons/m2-l2.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=1536&end=2819
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: اكتب برنامجًا يحفظ سعر منتج (`decimal`) والكمية (`int`) ونسبة الضريبة (`const`)، ثم يطبع المجموع الفرعي
+      والضريبة والإجمالي، كلًا بمنزلتين عشريتين. واستخدم `%` لتطبع هل الكمية زوجية أم فردية. ارفع صورة أو ملف `Program.cs`.
+  - id: m2-explain
+    type: explain
+    prompt: لماذا تُستخدم `decimal` للأموال لا `double`؟ ولماذا تعطي `7 / 2` الناتج 3 في C#؟
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: المدخلات والقرارات والحلقات
+  lessons:
+  - id: m3-l1
+    title: قراءة المدخلات بأمان
+    file: lessons/m3-l1.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=5776&end=7704
+  - id: m3-l2
+    title: if وswitch والحلقات
+    file: lessons/m3-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=2819&end=5776
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'اكتب لعبة تخمين: اختر رقمًا سريًا بـ `Random.Shared.Next(1, 101)`، واطلب التخمينات بـ `TryParse` (وتجاهل
+      المدخلات غير الصالحة)، وقل «أعلى» أو «أقل»، وعند الفوز اطبع عدد المحاولات. ارفع `Program.cs` أو صورة.'
+  - id: m3-explain
+    type: explain
+    prompt: لماذا تكون `int.TryParse` أفضل من `int.Parse` لقراءة ما يكتبه المستخدم؟ ومتى تكون `do...while` أنسب
+      من `while`؟
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: النصوص
+  lessons:
+  - id: m4-l1
+    title: العمل مع النصوص
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=7704&end=11462
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'اكتب فاحصًا لكلمات المرور. اطلب كلمة مرور واطبع كل قاعدة تخالفها: 8 أحرف على الأقل، ورقم واحد على الأقل،
+      وحرف كبير، ورمز (استخدم `char.IsDigit` و`char.IsUpper` و`char.IsLetterOrDigit` داخل `foreach`). واطبع "Strong
+      password" إن لم تخالف شيئًا. ارفع صورة.'
+  - id: m4-explain
+    type: explain
+    prompt: ماذا يعني أن النصوص غير قابلة للتغيير في C#؟ بيّن بمثال لماذا لا تغيّر `name.ToUpper();` وحدها قيمة
+      `name`.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: المصفوفات والقوائم والقواميس
+  lessons:
+  - id: m5-l1
+    title: المصفوفات وList<T>
+    file: lessons/m5-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=11462&end=14100
+  - id: m5-l2
+    title: القواميس وLINQ
+    file: lessons/m5-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=14100&end=16200
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'اكتب دفتر درجات: احفظ `Dictionary<string, List<int>>` للطلاب ودرجاتهم (أضف 3 طلاب على الأقل لكل منهم
+      3 درجات)، ثم استخدم LINQ لتطبع متوسط كل طالب واسم الطالب الأول. ارفع صورة أو ملف `Program.cs`.'
+  - id: m5-explain
+    type: explain
+    prompt: متى تختار مصفوفة، ومتى `List<T>`، ومتى `Dictionary<TKey, TValue>`؟ أعطِ مثالًا حقيقيًا لكل منها.
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: الدوال
+  lessons:
+  - id: m6-l1
+    title: الدوال والمعاملات
+    file: lessons/m6-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=16200&end=21669
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: اكتب محوّل وحدات صغيرًا بدالة لكل تحويل (مثل `CelsiusToFahrenheit` و`KmToMiles`)، ودالة لها معامل اختياري
+      `decimals` للتقريب، ودالة تُرجع tuple (مثل أصغر قيمة وأكبرها في مصفوفة). واستدعِ كلًا منها. ارفع الكود أو
+      صورة.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح الفرق بين `out` و`ref`، ولماذا تستخدم `int.TryParse` الكلمة `out`.
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: الأخطاء وتصحيحها
+  lessons:
+  - id: m7-l1
+    title: الاستثناءات
+    file: lessons/m7-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=21669&end=23160
+  - id: m7-l2
+    title: تصحيح الأخطاء في VS Code وVisual Studio
+    file: lessons/m7-l2.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=23160&end=24614
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: اكتب آلة حاسبة صغيرة تقرأ رقمين وعملية (+ - * /) وتطبع الناتج. عالج الأرقام غير الصالحة بـ `TryParse`،
+      والعملية غير المعروفة برسالة، والقسمة على صفر بإطلاق استثناء والتقاطه. ثم ضع فيها نقطة توقف، وارفع صورة للمصحّح
+      وهو متوقف ويعرض متغيراتك.
+  - id: m7-explain
+    type: explain
+    prompt: متى تستخدم `TryParse` ومتى `try/catch`؟ وما الخطأ المنطقي، وكيف تجده بالمصحّح؟
+    min_words: 40
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: الأصناف والهياكل
+  lessons:
+  - id: m8-l1
+    title: الأصناف والخصائص والمُنشئات
+    file: lessons/m8-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=26156&end=29831
+  - id: m8-l2
+    title: الهياكل والسجلات والواجهات والوراثة
+    file: lessons/m8-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=YrtFtdTTfv0&t=24614&end=26156
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'صمّم مكتبة صغيرة: `record Book(string Title, string Author)`، و`class Member` له اسم وقائمة كتب مستعارة
+      (3 كحد أقصى، وأطلق استثناءً إن زادت)، و`class Library` بتوابع لإضافة الكتب وإعارتها واستردادها. وأعد تعريف
+      `ToString` حيث يفيد. ارفع كودك أو صورة.'
+  - id: m8-explain
+    type: explain
+    prompt: اشرح الفرق بين نوع القيمة والنوع المرجعي، مع مثال لخطأ يحدث حين تنساه.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: مشاريع .NET والحزم والاختبارات
+  lessons:
+  - id: m9-l1
+    title: أدوات .NET والمشاريع والحلول
+    file: lessons/m9-l1.md
+    minutes: 20
+  - id: m9-l2
+    title: حزم NuGet
+    file: lessons/m9-l2.md
+    minutes: 15
+  - id: m9-l3
+    title: اختبارات الوحدة بـ xUnit
+    file: lessons/m9-l3.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'أنشئ حلًا (solution) فيه ثلاثة مشاريع: مكتبة أصناف فيها صنفان على الأقل من أعمالك السابقة (مثل دفتر
+      الدرجات أو الحساب البنكي)، وتطبيق console يستخدمها، ومشروع xUnit فيه 6 اختبارات على الأقل (استخدم `[Theory]`
+      مرة و`Assert.Throws` مرة). ارفع صورة لنجاح `dotnet test`.'
+  - id: m9-explain
+    type: explain
+    prompt: لماذا نقسم التطبيق إلى مكتبة أصناف ومشروع تطبيق ومشروع اختبارات؟ وما الذي سيصعب لو كان كل شيء في `Program.cs`
+      واحد؟
+    min_words: 40
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: أول واجهة ويب لك
+  lessons:
+  - id: m10-l1
+    title: async وawait
+    file: lessons/m10-l1.md
+    minutes: 20
+  - id: m10-l2
+    title: واجهة Minimal API مع ASP.NET Core
+    file: lessons/m10-l2.md
+    minutes: 30
+  - id: m10-l3
+    title: المشروع الختامي وإلى أين بعد ذلك
+    file: lessons/m10-l3.md
+    minutes: 15
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'المشروع الختامي: ابنِ Minimal API فيها على الأقل مسارات GET (للكل وبالمعرّف) وPOST وDELETE، وفحوص للمدخلات
+      تُرجع `400`، والمنطق في مكتبة أصناف مع اختبارات xUnit. ارفع ملفًا مضغوطًا للحل (أو رابط GitHub) وصورة لطلبي
+      POST وGET يعملان.'
+  - id: m10-explain
+    type: explain
+    prompt: 'صف واجهتك البرمجية: كل مسار، وماذا يُرجع، وأكواد الحالة، وقرارًا تصميميًا واحدًا كنت ستشرحه لزميل.'
+    min_words: 80
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

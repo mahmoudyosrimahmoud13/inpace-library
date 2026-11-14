@@ -4,10 +4,10 @@ description: The long road, taken in the right order. Python, the maths, classic
 language: en
 author: inPace
 official: true
-order: 2
+order: 4
 tags: [machine learning, deep learning, math, python, career]
 steps:
-  - course: python-basics
+  - course: python-full
     note: Every course after this one uses Python. Skip it if you already write Python comfortably.
     optional: true
   - course: mml-1-linear-algebra-geometry

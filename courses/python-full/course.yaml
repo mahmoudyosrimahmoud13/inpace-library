@@ -1,0 +1,378 @@
+id: python-full
+title: 'Python: the full course'
+version: 1
+language: en
+description: 'A complete Python course for beginners, on the syllabus of Harvard''s CS50P: functions, conditionals,
+  loops, exceptions, libraries, unit tests, files, regular expressions, classes and the rest of the language. Every
+  week has Harvard''s lecture, short written lessons with the code that matters, a program to write, a question
+  to answer and a quiz, and it ends with your own project. Plan: 11 weeks, about an hour a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: Functions and variables
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: 'Text: print, input and strings'
+    file: lessons/m1-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=JP7ITIXGpHk
+  - id: m1-l3
+    title: 'Numbers: int, float and rounding'
+    file: lessons/m1-l3.md
+    minutes: 20
+  - id: m1-l4
+    title: Your own functions
+    file: lessons/m1-l4.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Write `split.py`. Ask for the total bill and how many friends are paying, then print what each person
+      pays with 2 decimals (for example `Each pays: 87.50`). Put the calculation in your own function, `share(total,
+      people)`, that **returns** the amount, and call it from `main()`. Upload the file or a screenshot of it running.'
+  - id: m1-explain
+    type: explain
+    prompt: 'In your own words: what''s the difference between `print` and `return`? Give a small example where
+      only `return` would work.'
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: Conditionals
+  lessons:
+  - id: m2-l1
+    title: if, elif and else
+    file: lessons/m2-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=_b6NgY_pMdw
+  - id: m2-l2
+    title: Writing conditions well
+    file: lessons/m2-l2.md
+    minutes: 20
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Write `grade.py`. Ask for a score from 0 to 100 and print a letter: A (90+), B (80+), C (70+), D (60+)
+      or F. Print `Invalid score` for anything outside 0 to 100. Put the logic in a function `grade(score)` that
+      returns the letter. Upload the file or a screenshot with three different scores.'
+  - id: m2-explain
+    type: explain
+    prompt: Why is one `if` with `elif`s better than several separate `if` statements in your grade program? What
+      would go wrong with separate `if`s?
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: Loops
+  lessons:
+  - id: m3-l1
+    title: while and for
+    file: lessons/m3-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=-7xg8pGcP6w
+  - id: m3-l2
+    title: Lists and dictionaries
+    file: lessons/m3-l2.md
+    minutes: 25
+  - id: m3-l3
+    title: Nested loops and small functions
+    file: lessons/m3-l3.md
+    minutes: 15
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write `words.py`. Ask for a paragraph of text, count how many times each word appears with a dictionary
+      (ignore capitals and the punctuation `.,!?`), then print the 3 most common words with their counts. Use at
+      least two functions. Upload the file or a screenshot.
+  - id: m3-explain
+    type: explain
+    prompt: When would you use a `while` loop and when a `for` loop? Give one real example of each from your own
+      life.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: Exceptions
+  lessons:
+  - id: m4-l1
+    title: Errors and try/except
+    file: lessons/m4-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=LW7g1169v7w
+  - id: m4-l2
+    title: Asking until the input is right
+    file: lessons/m4-l2.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write `age.py`. Ask for a birth year and print the age this year. Keep asking if the answer isn't a
+      whole number, or if it's in the future, or before 1900, each with a clear message. Use `try`/`except` and
+      a function that returns only a valid year. Upload the file or a screenshot with a wrong answer and then a
+      right one.
+  - id: m4-explain
+    type: explain
+    prompt: Explain to a friend what an exception is, and why catching `ValueError` is better than catching every
+      error with a bare `except:`.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: Libraries
+  lessons:
+  - id: m5-l1
+    title: Modules and the standard library
+    file: lessons/m5-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=MztLZWibctI
+  - id: m5-l2
+    title: Packages, pip and virtual environments
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: Your own modules
+    file: lessons/m5-l3.md
+    minutes: 15
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Write `dice.py`. It takes the number of dice from the terminal (`python dice.py 3`), rolls them with
+      `random`, and prints each roll and the total. If the number is missing, isn't a whole number, or is less than
+      1, exit with a clear message using `sys.exit`. Upload the file or a screenshot.
+  - id: m5-explain
+    type: explain
+    prompt: What problem does a virtual environment solve? Describe what could go wrong on your computer without
+      one.
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: Unit tests
+  lessons:
+  - id: m6-l1
+    title: assert and pytest
+    file: lessons/m6-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=tIrcxwLqzjQ
+  - id: m6-l2
+    title: What to test
+    file: lessons/m6-l2.md
+    minutes: 15
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Write `test_grade.py` for your `grade(score)` function from module 2 (change it to `raise ValueError`
+      for scores outside 0 to 100). Test normal scores, every edge (0, 59, 60, 89, 90, 100) and invalid ones with
+      `pytest.raises`. Upload a screenshot of `pytest` passing.
+  - id: m6-explain
+    type: explain
+    prompt: Why is a function that returns a value easier to test than one that prints? How did that change the
+      way you'd write your programs?
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: File I/O
+  lessons:
+  - id: m7-l1
+    title: Reading and writing files
+    file: lessons/m7-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=KD-Yoel6EVQ
+  - id: m7-l2
+    title: CSV files
+    file: lessons/m7-l2.md
+    minutes: 20
+  - id: m7-l3
+    title: JSON and paths
+    file: lessons/m7-l3.md
+    minutes: 15
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Make a study log. `log.py` asks for a topic and minutes and adds a row (date, topic, minutes) to `log.csv`
+      with `csv.DictWriter`. `report.py` reads the file with `csv.DictReader` and prints the total minutes per topic,
+      biggest first. Upload both files or a screenshot.
+  - id: m7-explain
+    type: explain
+    prompt: Why is `with open(...)` better than `open()` and `close()`? And why use the `csv` module instead of
+      `line.split(",")`?
+    min_words: 40
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: Regular expressions
+  lessons:
+  - id: m8-l1
+    title: Patterns with re.search
+    file: lessons/m8-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=hy3sd9MOAcc
+  - id: m8-l2
+    title: Groups, re.sub and cleaning data
+    file: lessons/m8-l2.md
+    minutes: 20
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Write `extract.py`. Read a text file and print every date written like `2026-11-14` and every mobile
+      number that's 11 digits starting with `01`, using `re.findall`. Add tests for your patterns with good and
+      bad examples. Upload your files or a screenshot.
+  - id: m8-explain
+    type: explain
+    prompt: Explain, piece by piece, what the pattern `^\d{3}-\d{4}$` matches, and give one text that matches and
+      one that doesn't.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: Object-oriented programming
+  lessons:
+  - id: m9-l1
+    title: Classes and objects
+    file: lessons/m9-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=e4fwY9ZsxPw
+  - id: m9-l2
+    title: Properties and class methods
+    file: lessons/m9-l2.md
+    minutes: 20
+  - id: m9-l3
+    title: Inheritance and special methods
+    file: lessons/m9-l3.md
+    minutes: 20
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'Write `bank.py` with a class `Account`: an owner, a balance that can never go below 0 (use a property),
+      `deposit(amount)` and `withdraw(amount)` that raise `ValueError` for bad amounts, and `__str__`. Add a `SavingsAccount`
+      that inherits from it and has `add_interest(percent)`. Add tests with pytest. Upload your files or a screenshot.'
+  - id: m9-explain
+    type: explain
+    prompt: Explain the difference between a class and an object using something from real life. Then say what `self`
+      is.
+    min_words: 40
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'Et cetera: the rest of the language'
+  lessons:
+  - id: m10-l1
+    title: Sets, type hints and docstrings
+    file: lessons/m10-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=6pgodt1mezg
+  - id: m10-l2
+    title: Comprehensions, lambda and generators
+    file: lessons/m10-l2.md
+    minutes: 25
+  - id: m10-l3
+    title: '*args, **kwargs and argparse'
+    file: lessons/m10-l3.md
+    minutes: 15
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'Go back to one of your earlier programs (word counter, study log or bank) and improve it with what
+      you learned here: type hints and docstrings on every function, at least one comprehension, and `argparse`
+      if it takes options. Run `mypy` on it. Upload the before and after, or a screenshot of both.'
+  - id: m10-explain
+    type: explain
+    prompt: When is a list comprehension clearer than a loop, and when is a normal loop better? Use an example.
+    min_words: 40
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m11
+  title: Final project
+  lessons:
+  - id: m11-l1
+    title: Plan and build your project
+    file: lessons/m11-l1.md
+    minutes: 30
+  - id: m11-l2
+    title: Where to go next
+    file: lessons/m11-l2.md
+    minutes: 10
+    optional: true
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: 'Upload your final project: a zip of the folder (or a link to its GitHub repository) with `project.py`,
+      `test_project.py`, `requirements.txt` and `README.md`.'
+  - id: m11-explain
+    type: explain
+    prompt: 'Write your project''s story: what problem it solves, the hardest part to build and how you solved it,
+      and what you''d add next.'
+    min_words: 80
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    pass: 70

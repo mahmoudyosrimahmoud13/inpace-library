@@ -1,0 +1,405 @@
+id: ai-engineer-hired-2-ar
+title: 'التوظيف مهندس ذكاء اصطناعي 2: برنامج مقابلات البرمجة المكثف'
+version: 1
+language: ar
+description: 'اثنا عشر أسبوعًا من التدريب المتعمد على جولات البرمجة التي يواجهها مهندسو الذكاء الاصطناعي: الطريقة
+  التي يقيّمها المقابِلون، وتعقيد Big-O وأدوات بايثون، وكل أنماط LeetCode الكبرى مع القوالب ونحو 130 مسألة متدرجة،
+  وبرمجة تعلّم الآلة من الصفر بـ NumPy، والجولات بمساعدة الذكاء الاصطناعي، وجولات التنفيذ على طبقات (مشروع TinyKV)،
+  والمقابلات التجريبية. مبنية على Tech Interview Handbook وNeetCode ودليل هندسة الذكاء الاصطناعي.'
+image: cover.jpg
+modules:
+- id: m1
+  title: كيف تسير مقابلات البرمجة
+  lessons:
+  - id: m1-l1
+    title: 'ابدأ من هنا: البرنامج المكثف'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: كيف تُقيَّم
+    file: lessons/m1-l2.md
+    minutes: 15
+  - id: m1-l3
+    title: 'الطريقة: ست خطوات بصوت عالٍ'
+    file: lessons/m1-l3.md
+    minutes: 20
+  - id: m1-l4
+    title: أدوات بايثون وتعقيد Big-O
+    file: lessons/m1-l4.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: جهّز جدول متتبعك بالأعمدة المذكورة في «ابدأ من هنا»، ثم حلّ 3 مسائل سهلة بالخطوات الست وبصوت عالٍ، مع
+      تسجيل صوتك أو شاشتك (Two Sum وValid Anagram وContains Duplicate). ارفع المتتبع وتسجيلًا واحدًا.
+  - id: m1-explain
+    type: explain
+    prompt: استمع إلى تسجيلك. وقيّم نفسك بصدق بالمجالات الأربعة لمعايير التقييم، واكتب ما ستفعله بشكل مختلف في المسألة
+      التالية.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: المصفوفات والتجزئة والمؤشران
+  lessons:
+  - id: m2-l1
+    title: الأنماط
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'مسائل: المصفوفات والتجزئة والمؤشران'
+    file: lessons/m2-l2.md
+    minutes: 150
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'حلّ 8 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m2-explain
+    type: explain
+    prompt: 'إجابة مقابلة مكتوبة: كيف تحل *Longest Consecutive Sequence* في O(n)؟ اذكر الحل البدائي أولًا، ثم اشرح
+      لماذا يكون حلك الأمثل O(n) رغم وجود حلقة داخل حلقة.'
+    min_words: 80
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: النافذة المنزلقة والمكدّس
+  lessons:
+  - id: m3-l1
+    title: الأنماط
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'مسائل: النافذة المنزلقة والمكدّس'
+    file: lessons/m3-l2.md
+    minutes: 150
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'حلّ 7 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m3-explain
+    type: explain
+    prompt: 'اشرح *Minimum Window Substring* كما في مقابلة: الحل البدائي، ولماذا تنفع النافذة المنزلقة، ومتى توسّع
+      ومتى تصغّر، والتعقيد النهائي.'
+    min_words: 80
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: البحث الثنائي والقوائم المترابطة
+  lessons:
+  - id: m4-l1
+    title: الأنماط
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'مسائل: البحث الثنائي والقوائم المترابطة'
+    file: lessons/m4-l2.md
+    minutes: 150
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'حلّ 9 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m4-explain
+    type: explain
+    prompt: 'نفّذ LRU Cache دون OrderedDict، ثم اشرح تصميمك: أي البنى استخدمت، ولماذا كل عملية O(1)، وماذا يحدث
+      عند get، وعند put لمفتاح جديد، وعند put والذاكرة ممتلئة.'
+    min_words: 80
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: الأشجار وأشجار البادئات
+  lessons:
+  - id: m5-l1
+    title: الأنماط
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: 'مسائل: الأشجار وأشجار البادئات'
+    file: lessons/m5-l2.md
+    minutes: 150
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'حلّ 10 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m5-explain
+    type: explain
+    prompt: 'اشرح *Binary Tree Maximum Path Sum*: ماذا تُرجع دالتك العودية، وماذا تحدّث خارجها، ولماذا تُسقط الفروع
+      السالبة، والتعقيد.'
+    min_words: 80
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: الأكوام والفترات والخوارزميات الجشعة
+  lessons:
+  - id: m6-l1
+    title: الأنماط
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'مسائل: الأكوام والفترات والجشع'
+    file: lessons/m6-l2.md
+    minutes: 150
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'حلّ 9 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m6-explain
+    type: explain
+    prompt: في *Non-overlapping Intervals*، اشرح لماذا يكون الإبقاء على الفترة التي تنتهي أولًا آمنًا دائمًا (حجة
+      التبديل)، ولماذا يحتاج الترتيب بالبداية وحده إلى عناية إضافية.
+    min_words: 80
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: التراجع (Backtracking)
+  lessons:
+  - id: m7-l1
+    title: النمط
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'مسائل: التراجع'
+    file: lessons/m7-l2.md
+    minutes: 150
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'حلّ 6 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m7-explain
+    type: explain
+    prompt: ارسم (أو صف) شجرة القرارات لـ `subsets([1, 2, 3])`. ثم اشرح لماذا يحتوي الناتج 2ⁿ عنصرًا، ولماذا يحتاج
+      `res.append(path[:])` إلى النسخ.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: المخططات (Graphs)
+  lessons:
+  - id: m8-l1
+    title: الأنماط
+    file: lessons/m8-l1.md
+    minutes: 40
+  - id: m8-l2
+    title: 'مسائل: المخططات'
+    file: lessons/m8-l2.md
+    minutes: 150
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'حلّ 9 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m8-explain
+    type: explain
+    prompt: في *Course Schedule*، اشرح حلين (DFS بثلاثة ألوان، وخوارزمية Kahn)، وكيف يكتشف كل منهما الدورة، وتعقيدهما.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: البرمجة الديناميكية، الجزء 1
+  lessons:
+  - id: m9-l1
+    title: من العودية إلى الجدول
+    file: lessons/m9-l1.md
+    minutes: 35
+  - id: m9-l2
+    title: 'مسائل: البرمجة الديناميكية أحادية البعد'
+    file: lessons/m9-l2.md
+    minutes: 150
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'حلّ 9 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m9-explain
+    type: explain
+    prompt: حلّ *Word Break* من الأعلى إلى الأسفل ومن الأسفل إلى الأعلى. واكتب الحالة في جملة، والانتقال، والحالة
+      الأساسية، وتعقيد كل نسخة.
+    min_words: 80
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: البرمجة الديناميكية 2 والبتات والرياضيات
+  lessons:
+  - id: m10-l1
+    title: الحالات الثنائية البعد والبتات وحيل الرياضيات
+    file: lessons/m10-l1.md
+    minutes: 35
+  - id: m10-l2
+    title: 'مسائل: DP ثنائية البعد والبتات والرياضيات'
+    file: lessons/m10-l2.md
+    minutes: 150
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'حلّ 10 من مسائل هذه الوحدة على الأقل، منها مسألة متوسطة واحدة على الأقل حللتها دون مساعدة. ارفع صور
+      الحلول المقبولة وملف ملاحظاتك: لكل مسألة النمط، والفكرة الأساسية في سطر، وتعقيد الوقت والذاكرة.'
+  - id: m10-explain
+    type: explain
+    prompt: 'اشرح *Edit Distance*: الحالة، والخيارات الثلاثة، والحالات الأساسية، واملأ الجدول بيدك لتحويل `horse`
+      إلى `ros`.'
+    min_words: 80
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m11
+  title: برمجة تعلّم الآلة من الصفر
+  lessons:
+  - id: m11-l1
+    title: NumPy التي يجب أن تتقنها
+    file: lessons/m11-l1.md
+    minutes: 25
+  - id: m11-l2
+    title: خمسة تنفيذات يجب أن تعرفها جيدًا
+    file: lessons/m11-l2.md
+    minutes: 45
+  - id: m11-l3
+    title: جولات البرمجة بمساعدة الذكاء الاصطناعي
+    file: lessons/m11-l3.md
+    minutes: 15
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: 'في دفتر واحد أو ملف `.py`، نفّذ الخمسة من الذاكرة (دون ملاحظات ودون ذكاء اصطناعي) مع اختبار لكل منها:
+      قارن softmax وcross-entropy بنسخة بطيئة بالحلقات، وأكبر k بتشابه جيب التمام بحل بدائي مرتب، ودقة الانحدار
+      اللوجستي على بيانات تجريبية (`sklearn.datasets.make_classification` مناسبة)، وk-means على 3 تجمعات واضحة،
+      وأن الصف الأول من الانتباه السببي يساوي V[0]. ارفعه مع الوقت الذي استغرقه كل تنفيذ.'
+  - id: m11-explain
+    type: explain
+    prompt: 'اشرح الانتباه بالضرب النقطي المُقيَّس لمقابِل: أبعاد Q وK وV، وماذا تحسب كل خطوة، ولماذا التقسيم على
+      √d، وماذا يفعل القناع السببي.'
+    min_words: 100
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    pass: 70
+- id: m12
+  title: 'جولات التنفيذ: البناء على طبقات'
+  lessons:
+  - id: m12-l1
+    title: ماذا تختبر جولات التنفيذ
+    file: lessons/m12-l1.md
+    minutes: 15
+  - id: m12-l2
+    title: مشروع TinyKV خطوة بخطوة
+    file: lessons/m12-l2.md
+    minutes: 60
+  - id: m12-l3
+    title: تمارين بناء أخرى على طبقات
+    file: lessons/m12-l3.md
+    minutes: 20
+    optional: true
+  requires:
+  - id: m12-practical
+    type: practical
+    prompt: ارفع مستودع TinyKV (رابطًا أو ملفًا مضغوطًا) والمستويات الأربعة تنجح في الاختبارات، مع README يجيب عن
+      أسئلة التصميم الثلاثة، وصورة لـ `pytest`. واذكر كم استغرق كل مستوى.
+  - id: m12-explain
+    type: explain
+    prompt: 'يقول المقابِل: «اجعل TinyKV آمنًا للاستخدام من خيوط كثيرة». ماذا ستغيّر، وما موازنات قفل واحد كبير
+      مقابل أقفال أدق، وكيف ستختبره؟'
+    min_words: 80
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - q45
+    - q46
+    - q47
+    - q48
+    pass: 70
+- id: m13
+  title: المقابلات التجريبية والمرحلة الأخيرة
+  lessons:
+  - id: m13-l1
+    title: مقابلات تجريبية تفيد فعلًا
+    file: lessons/m13-l1.md
+    minutes: 20
+  - id: m13-l2
+    title: آخر أسبوعين ويوم المقابلة
+    file: lessons/m13-l2.md
+    minutes: 20
+  requires:
+  - id: m13-practical
+    type: practical
+    prompt: 'أجرِ 3 مقابلات تجريبية: اثنتين بصفتك المتقدم وواحدة بصفتك المقابِل، مع نموذج تقييم مملوء لكل منها (التواصل،
+      وحل المشكلات، والكفاءة التقنية، والاختبار، وشيء تحافظ عليه وشيء تغيّره). ارفع النماذج الثلاثة وتسجيلًا واحدًا.'
+  - id: m13-explain
+    type: explain
+    prompt: قارن تسجيلك الأول (الوحدة 1) بآخر مقابلة تجريبية. ماذا تغيّر في كل مجال من معايير التقييم، وما خطتك
+      لأضعفها؟
+    min_words: 100
+  - id: m13-quiz
+    type: quiz
+    questions:
+    - q49
+    - q50
+    - q51
+    - q52
+    pass: 70

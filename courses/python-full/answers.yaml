@@ -1,0 +1,220 @@
+q1:
+  right:
+  - a
+  - b
+  why: int() turns the text "4" into the number 4, and 4 + 1 is 5.
+q2:
+  right:
+  - a
+  - b
+  why: // divides and drops the fraction. 7 % 2 would give the remainder, 1.
+q3:
+  right:
+  - a
+  - b
+  why: strip() removes the spaces and title() or capitalize() makes the first letter capital.
+q4:
+  right:
+  - a
+  - b
+  why: return hands the value back to the code that called the function; print only shows it to a person.
+q5:
+  right:
+  - a
+  - b
+  why: One = is assignment, two are a comparison that gives True or False.
+q6:
+  right:
+  - a
+  - b
+  why: Python stops at the first true condition, so the order of the checks matters.
+q7:
+  right:
+  - a
+  - b
+  why: An even number leaves no remainder when divided by 2; not 0 is True.
+q8:
+  right:
+  - a
+  - b
+  why: match compares one value against cases, with _ for everything else.
+q9:
+  right:
+  - a
+  - b
+  why: range starts at the first number and stops before the second.
+q10:
+  right:
+  - a
+  - b
+  why: break exits the loop; continue is the one that skips to the next round.
+q11:
+  right:
+  - a
+  - b
+  why: A dict is read by its key, with brackets or .get().
+q12:
+  right:
+  - a
+  - b
+  why: enumerate gives the position and the item, and starts at 0 unless you pass a start.
+q13:
+  right:
+  - a
+  - b
+  why: 'int() accepts text, but this text isn''t a valid number: a bad value.'
+q14:
+  right:
+  - a
+  - b
+  why: else runs when try succeeded, which keeps the try block to the one risky line.
+q15:
+  right:
+  - a
+  - b
+  why: raise creates an exception; with try/except around the call, the caller handles it.
+q16:
+  right:
+  - a
+  - b
+  why: A missing quote or colon means Python can't read the code at all.
+q17:
+  right:
+  - a
+  - b
+  why: argv[0] is the program's name; argv[1] is the first argument.
+q18:
+  right:
+  - a
+  - b
+  why: Unlike range, randint includes both ends.
+q19:
+  right:
+  - a
+  - b
+  why: __name__ is "__main__" only when you run that file directly.
+q20:
+  right:
+  - a
+  - b
+  why: pip freeze writes it, and pip install -r reads it.
+q21:
+  right:
+  - a
+  - b
+  why: pytest looks for test_ files and test_ functions.
+q22:
+  right:
+  - a
+  - b
+  why: assert is silent when true and raises an error when false.
+q23:
+  right:
+  - a
+  - b
+  why: pytest.raises passes only if the code inside raises that error.
+q24:
+  right:
+  - a
+  - b
+  why: Edges are the limits, where bugs like < instead of <= show up.
+q25:
+  right:
+  - a
+  - b
+  why: '"w" empties the file; "a" is the mode that appends.'
+q26:
+  right:
+  - a
+  - b
+  why: Each line keeps its newline character; rstrip() removes it.
+q27:
+  right:
+  - a
+  - b
+  why: The csv module understands quotes, so the comma inside stays part of the value.
+q28:
+  right:
+  - a
+  - b
+  why: 'with is a context manager: it cleans up when the block finishes.'
+q29:
+  right:
+  - a
+  - b
+  why: \d is a digit and + means one or more of it.
+q30:
+  right:
+  - a
+  - b
+  why: A raw string keeps every backslash as is.
+q31:
+  right:
+  - a
+  - b
+  why: ^ and $ anchor the start and end; fullmatch does the same.
+q32:
+  right:
+  - a
+  - b
+  why: re.sub replaces each match of the pattern with the replacement.
+q33:
+  right:
+  - a
+  - b
+  why: Creating an object calls __init__ to set its attributes.
+q34:
+  right:
+  - a
+  - b
+  why: Python passes the object as the first argument, named self by convention.
+q35:
+  right:
+  - a
+  - b
+  why: The setter runs on every assignment, so invalid values are refused.
+q36:
+  right:
+  - a
+  - b
+  why: The class in brackets is the parent.
+q37:
+  right:
+  - a
+  - b
+  why: A set keeps unique values only.
+q38:
+  right:
+  - a
+  - b
+  why: range(3) is 0, 1, 2, and each is multiplied by 2.
+q39:
+  right:
+  - a
+  - b
+  why: Hints are for people and tools; Python itself doesn't enforce them.
+q40:
+  right:
+  - a
+  - b
+  why: yield pauses the function and hands out one value at a time.
+q41:
+  right:
+  - a
+  - b
+  why: requirements.txt lets anyone install the same packages.
+q42:
+  right:
+  - a
+  - b
+  why: Small steps mean you always know which change broke something.
+q43:
+  right:
+  - a
+  - b
+  why: int() raises ValueError for text that isn't a number.
+q44:
+  right:
+  - a
+  - b
+  why: DictReader turns each row into a dict keyed by the header.

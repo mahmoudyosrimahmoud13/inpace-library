@@ -4,7 +4,7 @@ description: The four parts of the free book Mathematics for Machine Learning, w
 language: en
 author: inPace
 official: true
-order: 3
+order: 5
 tags: [math, machine learning, linear algebra, probability]
 steps:
   - course: mml-1-linear-algebra-geometry

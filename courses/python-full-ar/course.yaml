@@ -1,0 +1,366 @@
+id: python-full-ar
+title: 'بايثون: الدورة الكاملة'
+version: 1
+language: ar
+description: 'دورة بايثون كاملة للمبتدئين على منهج CS50P من جامعة هارفارد: الدوال، والشروط، والحلقات، والاستثناءات،
+  والمكتبات، واختبارات الوحدة، والملفات، والتعابير النمطية، والأصناف، وبقية اللغة. في كل أسبوع محاضرة هارفارد (بالإنجليزية
+  مع ترجمة تلقائية)، ودروس مكتوبة بالعربية فيها الكود المهم، وبرنامج تكتبه، وسؤال تجيب عنه، واختبار، وتنتهي بمشروعك
+  الخاص. الخطة: 11 أسبوعًا، نحو ساعة في اليوم.'
+image: cover.jpg
+modules:
+- id: m1
+  title: الدوال والمتغيرات
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: 'النصوص: print وinput والسلاسل النصية'
+    file: lessons/m1-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=JP7ITIXGpHk
+  - id: m1-l3
+    title: 'الأرقام: int وfloat والتقريب'
+    file: lessons/m1-l3.md
+    minutes: 20
+  - id: m1-l4
+    title: دوالك الخاصة
+    file: lessons/m1-l4.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'اكتب `split.py`. اسأل عن إجمالي الفاتورة وعدد الأصدقاء الذين سيدفعون، ثم اطبع نصيب كل شخص بمنزلتين
+      عشريتين (مثل `Each pays: 87.50`). ضع الحساب في دالتك الخاصة `share(total, people)` التي **تُرجع** النصيب،
+      واستدعها من `main()`. ارفع الملف أو صورة له وهو يعمل.'
+  - id: m1-explain
+    type: explain
+    prompt: 'بكلماتك: ما الفرق بين `print` و`return`؟ أعطِ مثالًا صغيرًا لا ينفع فيه إلا `return`.'
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: الشروط
+  lessons:
+  - id: m2-l1
+    title: if وelif وelse
+    file: lessons/m2-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=_b6NgY_pMdw
+  - id: m2-l2
+    title: كتابة الشروط بإتقان
+    file: lessons/m2-l2.md
+    minutes: 20
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'اكتب `grade.py`. اسأل عن درجة من 0 إلى 100 واطبع حرفًا: A (من 90)، وB (من 80)، وC (من 70)، وD (من 60)،
+      أو F. واطبع `Invalid score` لأي رقم خارج 0 إلى 100. ضع المنطق في دالة `grade(score)` تُرجع الحرف. ارفع الملف
+      أو صورة بثلاث درجات مختلفة.'
+  - id: m2-explain
+    type: explain
+    prompt: لماذا تكون جملة `if` واحدة مع `elif` أفضل من عدة جمل `if` منفصلة في برنامج الدرجات؟ وماذا سيحدث خطأً
+      مع جمل `if` المنفصلة؟
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: الحلقات
+  lessons:
+  - id: m3-l1
+    title: while وfor
+    file: lessons/m3-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=-7xg8pGcP6w
+  - id: m3-l2
+    title: القوائم والقواميس
+    file: lessons/m3-l2.md
+    minutes: 25
+  - id: m3-l3
+    title: الحلقات المتداخلة والدوال الصغيرة
+    file: lessons/m3-l3.md
+    minutes: 15
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اكتب `words.py`. اطلب فقرة من النص، وعُدّ مرات ظهور كل كلمة بقاموس (تجاهل الحروف الكبيرة وعلامات الترقيم
+      `.,!?`)، ثم اطبع أكثر 3 كلمات تكرارًا مع عددها. استخدم دالتين على الأقل. ارفع الملف أو صورة له.
+  - id: m3-explain
+    type: explain
+    prompt: متى تستخدم حلقة `while` ومتى تستخدم حلقة `for`؟ أعطِ مثالًا حقيقيًا لكل منهما من حياتك.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: الاستثناءات
+  lessons:
+  - id: m4-l1
+    title: الأخطاء وtry/except
+    file: lessons/m4-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=LW7g1169v7w
+  - id: m4-l2
+    title: السؤال حتى تصح المدخلات
+    file: lessons/m4-l2.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اكتب `age.py`. اسأل عن سنة الميلاد واطبع العمر هذا العام. وكرر السؤال إذا لم تكن الإجابة عددًا صحيحًا،
+      أو كانت في المستقبل، أو قبل 1900، مع رسالة واضحة لكل حالة. استخدم `try`/`except` ودالة لا تُرجع إلا سنة صالحة.
+      ارفع الملف أو صورة بإجابة خطأ ثم إجابة صحيحة.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح لصديق ما الاستثناء، ولماذا يكون التقاط `ValueError` أفضل من التقاط كل الأخطاء بـ `except:` المجردة.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: المكتبات
+  lessons:
+  - id: m5-l1
+    title: الوحدات والمكتبة القياسية
+    file: lessons/m5-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=MztLZWibctI
+  - id: m5-l2
+    title: الحزم وpip والبيئات الافتراضية
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: وحداتك الخاصة
+    file: lessons/m5-l3.md
+    minutes: 15
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: اكتب `dice.py`. يأخذ عدد أحجار النرد من الطرفية (`python dice.py 3`)، ويرميها بـ `random`، ويطبع كل
+      رمية والمجموع. وإن كان العدد ناقصًا، أو ليس عددًا صحيحًا، أو أقل من 1، فاخرج برسالة واضحة باستخدام `sys.exit`.
+      ارفع الملف أو صورة له.
+  - id: m5-explain
+    type: explain
+    prompt: ما المشكلة التي تحلها البيئة الافتراضية؟ صف ما قد يحدث على جهازك من دونها.
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: اختبارات الوحدة
+  lessons:
+  - id: m6-l1
+    title: assert وpytest
+    file: lessons/m6-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=tIrcxwLqzjQ
+  - id: m6-l2
+    title: ماذا تختبر
+    file: lessons/m6-l2.md
+    minutes: 15
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: اكتب `test_grade.py` لدالتك `grade(score)` من الوحدة 2 (عدّلها لتطلق `ValueError` للدرجات خارج 0 إلى
+      100). اختبر الدرجات العادية، وكل طرف (0 و59 و60 و89 و90 و100)، والدرجات غير الصالحة بـ `pytest.raises`. ارفع
+      صورة لنجاح `pytest`.
+  - id: m6-explain
+    type: explain
+    prompt: لماذا يسهل اختبار دالة تُرجع قيمة أكثر من دالة تطبع؟ وكيف يغيّر ذلك طريقة كتابتك لبرامجك؟
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: قراءة الملفات وكتابتها
+  lessons:
+  - id: m7-l1
+    title: قراءة الملفات وكتابتها
+    file: lessons/m7-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=KD-Yoel6EVQ
+  - id: m7-l2
+    title: ملفات CSV
+    file: lessons/m7-l2.md
+    minutes: 20
+  - id: m7-l3
+    title: JSON والمسارات
+    file: lessons/m7-l3.md
+    minutes: 15
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: اصنع سجلًا لمذاكرتك. يسأل `log.py` عن الموضوع والدقائق ويضيف صفًا (التاريخ، الموضوع، الدقائق) إلى `log.csv`
+      باستخدام `csv.DictWriter`. ويقرأ `report.py` الملف بـ `csv.DictReader` ويطبع مجموع الدقائق لكل موضوع، الأكبر
+      أولًا. ارفع الملفين أو صورة.
+  - id: m7-explain
+    type: explain
+    prompt: لماذا تكون `with open(...)` أفضل من `open()` و`close()`؟ ولماذا نستخدم وحدة `csv` بدل `line.split(",")`؟
+    min_words: 40
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: التعابير النمطية
+  lessons:
+  - id: m8-l1
+    title: الأنماط مع re.search
+    file: lessons/m8-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=hy3sd9MOAcc
+  - id: m8-l2
+    title: المجموعات وre.sub وتنظيف البيانات
+    file: lessons/m8-l2.md
+    minutes: 20
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: اكتب `extract.py`. اقرأ ملفًا نصيًا واطبع كل تاريخ مكتوب مثل `2026-11-14` وكل رقم محمول من 11 رقمًا
+      يبدأ بـ `01`، باستخدام `re.findall`. وأضف اختبارات لأنماطك بأمثلة صالحة وخاطئة. ارفع ملفاتك أو صورة.
+  - id: m8-explain
+    type: explain
+    prompt: اشرح، قطعة قطعة، ما الذي يطابقه النمط `^\d{3}-\d{4}$`، وأعطِ نصًا يطابقه ونصًا لا يطابقه.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: البرمجة كائنية التوجه
+  lessons:
+  - id: m9-l1
+    title: الأصناف والكائنات
+    file: lessons/m9-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=e4fwY9ZsxPw
+  - id: m9-l2
+    title: الخصائص المحمية وتوابع الصنف
+    file: lessons/m9-l2.md
+    minutes: 20
+  - id: m9-l3
+    title: الوراثة والتوابع الخاصة
+    file: lessons/m9-l3.md
+    minutes: 20
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'اكتب `bank.py` فيه صنف `Account`: مالك، ورصيد لا يقل أبدًا عن 0 (استخدم property)، و`deposit(amount)`
+      و`withdraw(amount)` تطلقان `ValueError` للمبالغ غير الصالحة، و`__str__`. وأضف `SavingsAccount` يرث منه وفيه
+      `add_interest(percent)`. وأضف اختبارات بـ pytest. ارفع ملفاتك أو صورة.'
+  - id: m9-explain
+    type: explain
+    prompt: اشرح الفرق بين الصنف والكائن بمثال من الحياة الواقعية، ثم قل ما هو `self`.
+    min_words: 40
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'موضوعات متفرقة: بقية اللغة'
+  lessons:
+  - id: m10-l1
+    title: المجموعات وتلميحات الأنواع والتوثيق
+    file: lessons/m10-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=6pgodt1mezg
+  - id: m10-l2
+    title: التعابير المختصرة وlambda والمولّدات
+    file: lessons/m10-l2.md
+    minutes: 25
+  - id: m10-l3
+    title: '*args و**kwargs وargparse'
+    file: lessons/m10-l3.md
+    minutes: 15
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'عُد إلى أحد برامجك السابقة (عدّاد الكلمات أو سجل المذاكرة أو البنك) وحسّنه بما تعلمته هنا: تلميحات
+      الأنواع والتوثيق في كل دالة، وتعبير مختصر واحد على الأقل، و`argparse` إن كان يأخذ خيارات. شغّل `mypy` عليه.
+      ارفع النسختين قبل وبعد، أو صورة لهما.'
+  - id: m10-explain
+    type: explain
+    prompt: متى يكون التعبير المختصر أوضح من الحلقة، ومتى تكون الحلقة العادية أفضل؟ استخدم مثالًا.
+    min_words: 40
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m11
+  title: المشروع الختامي
+  lessons:
+  - id: m11-l1
+    title: خطّط لمشروعك وابنه
+    file: lessons/m11-l1.md
+    minutes: 30
+  - id: m11-l2
+    title: إلى أين بعد ذلك
+    file: lessons/m11-l2.md
+    minutes: 10
+    optional: true
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: 'ارفع مشروعك الختامي: ملفًا مضغوطًا للمجلد (أو رابط مستودعه على GitHub) فيه `project.py` و`test_project.py`
+      و`requirements.txt` و`README.md`.'
+  - id: m11-explain
+    type: explain
+    prompt: 'اكتب قصة مشروعك: ما المشكلة التي يحلها، وأصعب جزء في بنائه وكيف حللته، وماذا ستضيف بعد ذلك.'
+    min_words: 80
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    pass: 70

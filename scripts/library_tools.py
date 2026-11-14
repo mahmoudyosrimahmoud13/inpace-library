@@ -398,7 +398,10 @@ def outline(course) -> list[dict]:
             if les.get("media"):
                 ref = str(les["media"]).split("#")[0]
                 kind = media_kind(ref) or ("video" if "youtu" in ref else "")
-            lessons.append({"title": les["title"], "minutes": int(les.get("minutes") or 0), "media": kind})
+            entry = {"title": les["title"], "minutes": int(les.get("minutes") or 0), "media": kind}
+            if les.get("optional"):
+                entry["optional"] = True  # inPace 1.25+: the module can finish without it
+            lessons.append(entry)
         tasks = []
         for r in m["requires"]:
             if r["type"] == "quiz":
@@ -432,6 +435,7 @@ ICONS = {
     "check": '<path d="m5 12 4 4 10-10"/>',
     "search": '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
     "back": '<path d="M15 6l-6 6 6 6"/>',
+    "book": '<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/>',
     "route": '<circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="5" r="2.2"/><path d="M8.2 19H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h6.8"/>',
 }
 
@@ -564,6 +568,7 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
 .mod li:last-child { border-bottom: 0; }
 .mod li .mins { margin-inline-start: auto; color: var(--muted); font-size: .85rem; white-space: nowrap; }
 .mod li .kind { font-size: .75rem; font-weight: 700; border: 1.5px solid var(--ink); padding: 0 .35rem; }
+.mod li .kind.opt { border-style: dashed; font-weight: 600; }
 .mod .tasks { display: flex; flex-wrap: wrap; gap: .45rem; padding: .2rem 1.1rem 1rem; }
 .mod .task { display: inline-flex; gap: .35rem; align-items: center; font-size: .82rem; font-weight: 700; background: var(--sky); color: var(--ink); padding: .2rem .6rem; }
 .sample { background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 1.4rem clamp(1rem, 4vw, 2.6rem); }
@@ -597,7 +602,8 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
 .sticky-add { position: sticky; bottom: 0; display: none; }
 @media (max-width: 760px) {
   .hero, .course-head { grid-template-columns: 1fr; }
-  .stats div { min-width: 0; flex: 1; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+  .stats div { min-width: 0; }
   .sticky-add { display: flex; gap: .6rem; padding: .7rem 16px; background: var(--cream); border-top: 3px solid var(--ink); }
   .sticky-add .btn { flex: 1; justify-content: center; }
 }
@@ -605,6 +611,16 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
 /* Roadmaps (inPace 1.24) */
 .new { display: inline-flex; align-items: center; gap: .3rem; font-size: .78rem; font-weight: 800; background: var(--pink); color: #fff;
   border: 2px solid var(--ink); padding: .05rem .5rem; vertical-align: middle; }
+.tabs { display: flex; flex-wrap: wrap; gap: .8rem; margin: .4rem 0 .6rem; }
+.tab { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: 1.05rem; padding: .55rem 1rem;
+  background: var(--surface); color: var(--ink); border: 3px solid var(--ink); text-decoration: none; }
+.tab:hover { background: var(--cream); }
+.tab[aria-selected=true] { background: var(--sun); color: #111; box-shadow: 4px 4px 0 var(--ink); }
+[dir=rtl] .tab[aria-selected=true] { box-shadow: -4px 4px 0 var(--ink); }
+.tab .n { border: 2px solid currentColor; padding: 0 .4rem; font-size: .85rem; line-height: 1.4; }
+.tab .i { width: 20px; height: 20px; }
+.panel[hidden] { display: none; }
+.tabs, .card { scroll-margin-top: 84px; }
 .roadmaps { padding-block: .6rem 1rem; }
 .roadmaps-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem 1rem; }
 .roadmaps-head h2 { font-size: 1.8rem; margin: 0; }
@@ -787,13 +803,20 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
     total_h = round(sum(c.get("minutes") or 0 for c in entries) / 60)
     roadmaps_section = ""
     if road:
-        roadmaps_section = f"""<section class="roadmaps" id="roadmaps">
+        roadmaps_section = f"""<section class="roadmaps panel" id="roadmaps" data-panel="roadmaps" role="tabpanel" aria-labelledby="tab-roadmaps">
   <div class="roadmaps-head"><h2>{t("Roadmaps", "مسارات التعلّم")}</h2>{new_badge()}</div>
     <p class="roadmaps-lead">{t("A roadmap is a path through several courses of the library, in the order that makes sense, toward one goal. Follow one in inPace: it keeps your place, shows the next course, and Tempo sails it with you on his island.", "مسار التعلّم طريق يمرّ بعدة دورات من المكتبة بالترتيب المناسب نحو هدف واحد. تابِعه في inPace: يحفظ مكانك، ويريك الدورة التالية، ويُبحر به تمبو معك على جزيرته.")}</p>
   <div class="rgrid">{"".join(roadmap_card(r, by_id) for r in road)}</div>
   {needs_note()}
-</section>
-<h2 class="section-title" id="courses">{t("Courses", "الدورات")}</h2>"""
+</section>"""
+    # Courses first, roadmaps on their own tab, so the courses are never pushed down the page. Without JavaScript
+    # both show, one after the other.
+    tabs = ""
+    if road:
+        tabs = (f'<nav class="tabs" role="tablist" aria-label="Courses and roadmaps">'
+                f'<a class="tab" id="tab-courses" role="tab" href="#courses" data-tab="courses" aria-selected="true">{ic("book")}{t("Courses", "الدورات")} <span class="n">{len(entries)}</span></a>'
+                f'<a class="tab" id="tab-roadmaps" role="tab" href="#roadmaps" data-tab="roadmaps" aria-selected="false">{ic("route")}{t("Roadmaps", "مسارات التعلّم")} <span class="n">{len(road)}</span>'
+                f' <span class="new">{t("New", "جديد")}</span></a></nav>')
     chips = (f'<button class="topic" type="button" data-topic="" aria-pressed="true">{t("All", "الكل")}</button>' +
              "".join(f'<button class="topic" type="button" data-topic="{e(x)}" aria-pressed="false">{e(x)}</button>' for x in topics))
     body = f"""<div class="wrap">
@@ -805,7 +828,8 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
   </div>
   <div class="stats"><div><b>{len(entries)}</b><span>{t("courses", "دورة")}</span></div>{f'<div><b>{len(road)}</b><span>{t("roadmaps", "مسار")}</span></div>' if road else ''}<div><b>{total_h}</b><span>{t("hours of lessons", "ساعة دروس")}</span></div><div><b>0</b><span>{t("cost", "تكلفة")}</span></div></div>
 </header>
-{roadmaps_section}
+{tabs}
+<section class="panel" id="courses" data-panel="courses" role="tabpanel" aria-labelledby="tab-courses">
 <div class="tools">
   <label class="find">{ic("search")}<input type="search" id="q" dir="auto" data-ph-en="Search courses" data-ph-ar="ابحث في الدورات"></label>
   <div class="topics" role="group" aria-label="Topics">{chips}</div>
@@ -814,6 +838,8 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
 {"".join(cards) or '<p class="empty">' + t("No courses yet.", "لا توجد دورات بعد.") + '</p>'}
 </main>
 <p class="empty" id="none" hidden>{t("No course matches that. Try another word or topic.", "لا توجد دورة تطابق ذلك. جرّب كلمة أو موضوعًا آخر.")}</p>
+</section>
+{roadmaps_section}
 </div>
 <section class="share wrap" id="share"><div>
   <h2>{t("Share your own course", "شارك دورتك")}</h2>
@@ -847,7 +873,27 @@ q.addEventListener("input", run);
     run();
   });
 });
-if (location.hash) { var el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }
+var panels = [].slice.call(document.querySelectorAll("[data-panel]")), tabs = [].slice.call(document.querySelectorAll("[data-tab]"));
+function showTab(name) {
+  if (!tabs.length) return;
+  panels.forEach(function (p) { p.hidden = p.dataset.panel !== name; });
+  tabs.forEach(function (x) { x.setAttribute("aria-selected", x.dataset.tab === name ? "true" : "false"); });
+}
+function fromHash(jump) {
+  var id = decodeURIComponent(location.hash.slice(1)), el = id && document.getElementById(id);
+  var panel = el && (el.dataset.panel ? el : el.closest("[data-panel]"));
+  showTab(panel ? panel.dataset.panel : "courses");
+  if (!el) return;
+  if (el.dataset.panel) { if (jump) document.querySelector(".tabs").scrollIntoView(); } else el.scrollIntoView();
+}
+tabs.forEach(function (x) {
+  x.addEventListener("click", function (ev) {
+    ev.preventDefault(); showTab(x.dataset.tab);
+    history.replaceState(null, "", x.dataset.tab === "courses" ? location.pathname + location.search : "#" + x.dataset.tab);
+  });
+});
+window.addEventListener("hashchange", function () { fromHash(true); });
+fromHash(false);
 </script>"""
     return shell("inPace course library", "Free courses made and shared by inPace learners. Look inside, then add one to inPace with a click.",
                  body, "", script)
@@ -863,7 +909,8 @@ def outline_html(c: dict) -> str:
         for les in m["lessons"]:
             kind = {"pdf": t("slides", "شرائح"), "video": t("video", "فيديو"), "audio": t("audio", "صوت"),
                     "youtube": t("YouTube", "يوتيوب"), "link": t("link", "رابط")}.get(les["media"], "")
-            rows.append(f'<li><span dir="auto">{e(les["title"])}</span>{f"<span class=kind>{kind}</span>" if kind else ""}'
+            opt = f'<span class="kind opt">{t("optional", "اختياري")}</span>' if les.get("optional") else ""
+            rows.append(f'<li><span dir="auto">{e(les["title"])}</span>{opt}{f"<span class=kind>{kind}</span>" if kind else ""}'
                         f'<span class="mins">{les["minutes"] or ""}{t(" min", " د") if les["minutes"] else ""}</span></li>')
         tasks = []
         for tk in m["tasks"]:

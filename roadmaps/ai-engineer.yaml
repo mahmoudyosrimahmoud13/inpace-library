@@ -1,0 +1,30 @@
+id: ai-engineer
+title: Get hired as an AI engineer
+description: "The road to an AI engineer job, built on real job posts and interview reports: Python, two deployed projects (a RAG assistant and an agent), the coding interview, AI interviews and system design, your CV and the job search."
+language: en
+author: inPace
+official: true
+order: 1
+tags: [ai engineer, career, interview, python, llm]
+steps:
+  - course: python-full
+    note: "Python is in about 8 of every 10 AI engineer job posts. Skip this if you already write Python comfortably: functions, tests, classes, files."
+    optional: true
+  - course: ai-engineer-hired-1
+    note: "Start here: the market, how hiring works, your first project (DocAnswer), your CV and the job search."
+  - course: ai-engineer-hired-2
+    note: Take it alongside part 1. Twelve weeks of coding interview practice, from patterns to mock interviews.
+  - course: fastapi
+    note: If building DocAnswer's API felt new, this goes deeper into APIs.
+    optional: true
+  - course: docker-kubernetes-en
+    note: Containers and deployment, asked for in many AI engineer posts.
+    optional: true
+  - course: mls-1-supervised
+    note: About two in three AI engineer posts also want some classic machine learning. This fills that gap.
+    optional: true
+  - course: ai-engineer-hired-3
+    note: The AI-specific rounds, AI system design, and your second project, TriageBot.
+  - course: system-design-beginners
+    note: General system design, for interview loops that also have a classic design round.
+    optional: true

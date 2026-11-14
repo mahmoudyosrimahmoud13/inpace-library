@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- career
+- ai engineer
+- agents
+- system design
+- interview
+updated: '2026-11-14'
+credit: 'Written by inPace. Interview questions and data: Alexey Grigorev''s AI Engineering Field Guide. Agent patterns:
+  Anthropic''s Building effective agents. Security: OWASP Top 10 for LLM Applications 2025. Optional videos: Andrej
+  Karpathy and 3Blue1Brown on YouTube. Other sources are linked in the lessons.'

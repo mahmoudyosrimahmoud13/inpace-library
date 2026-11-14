@@ -20,6 +20,16 @@ The app checks every course against the library's list before adding it. Your pr
 
 | | Course | Pace |
 |---|---|---|
+| <img src="courses/ai-engineer-hired-1/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 1: the market, your first project and your CV](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-1.html) | about 12 weeks, with part 2 |
+| <img src="courses/ai-engineer-hired-2/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 2: the coding interview intensive](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-2.html) | 12 weeks |
+| <img src="courses/ai-engineer-hired-3/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 3: AI interviews, system design and a production project](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-3.html) | 10 weeks |
+| <img src="courses/ai-engineer-hired-1-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 1: السوق ومشروعك الأول وسيرتك الذاتية](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-1-ar.html) | نحو 12 أسبوعًا مع الجزء 2 |
+| <img src="courses/ai-engineer-hired-2-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 2: البرنامج المكثف لمقابلات البرمجة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-2-ar.html) | 12 أسبوعًا |
+| <img src="courses/ai-engineer-hired-3-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 3: مقابلات الذكاء الاصطناعي وتصميم الأنظمة ومشروع إنتاجي](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-3-ar.html) | 10 أسابيع |
+| <img src="courses/python-full/files/cover.jpg" width="160" alt=""> | [Python: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full.html) (on Harvard's CS50P syllabus) | 11 weeks |
+| <img src="courses/python-full-ar/files/cover.jpg" width="160" alt=""> | [بايثون: الدورة الكاملة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full-ar.html) (على منهج CS50P من هارفارد) | 11 أسبوعًا |
+| <img src="courses/csharp-dotnet-beginners/files/cover.jpg" width="160" alt=""> | [C# and .NET for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners.html) (on Microsoft Learn's docs) | 10 weeks |
+| <img src="courses/csharp-dotnet-beginners-ar/files/cover.jpg" width="160" alt=""> | [C# و.NET للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners-ar.html) (على توثيق Microsoft Learn) | 10 أسابيع |
 | <img src="courses/inpace-inside/files/cover.jpg" width="160" alt=""> | [inPace from the inside: how the app works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/inpace-inside.html) | 1 week |
 | <img src="courses/html-css-for-inpace/files/cover.jpg" width="160" alt=""> | [HTML & CSS for inPace's pages](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/html-css-for-inpace.html) | 1 week |
 | <img src="courses/javascript-for-inpace/files/cover.jpg" width="160" alt=""> | [JavaScript, the inPace way](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-for-inpace.html) | 1 week |
@@ -50,6 +60,12 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/python-basics/files/cover.jpg" width="160" alt=""> | [Python Basics](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics.html) | 1 hour |
 | <img src="courses/python-basics-ar/files/cover.jpg" width="160" alt=""> | [أساسيات بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics-ar.html) | ساعة |
 
+The *Get hired as an AI engineer* series is built on real data: 895 AI engineer job posts and the interview reports
+collected in Alexey Grigorev's [AI Engineering Field Guide](https://github.com/alexeygrigorev/ai-engineering-field-guide),
+plus the Tech Interview Handbook, NeetCode's problem lists and the OWASP Top 10 for LLM Applications. It builds two
+projects step by step (DocAnswer, a RAG assistant, and TriageBot, an agent with human approval) and turns them into
+your CV. Videos in the new courses are optional: every lesson's text covers what the video does.
+
 The four Maths for ML courses follow the free book *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong). The book is **not** included: its licence allows personal use only. Each learner downloads it from [mml-book.com](https://mml-book.com), and inPace 1.20 or newer finds it on their computer or phone. The courses add notes, 3Blue1Brown videos, interactive explorers and exercises.
 
 The three Machine Learning refresh courses include the original slides of Andrew Ng's Machine Learning Specialization, by DeepLearning.AI and Stanford Online, shared under Creative Commons BY-SA 2.0 for non-commercial educational use.
@@ -63,16 +79,20 @@ roadmap needs inPace 1.24 or newer; older versions can still add each course on 
 
 | Roadmap | Courses | Language |
 |---|---|---|
-| [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 4 | English |
+| [Get hired as an AI engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer.html) | 8 | English |
+| [التوظيف مهندس ذكاء اصطناعي](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer-ar.html) | 8 | Arabic |
+| [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 5 | English |
 | [Machine learning, from the maths up](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/machine-learning-engineer.html) | 13 | English |
 | [Maths for machine learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/maths-for-machine-learning.html) | 4 | English |
-| [Python backend developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend.html) | 4 | English |
+| [Python backend developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend.html) | 5 | English |
 | [الإنجليزي من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/english-a1-to-b1.html) | 3 | Arabic |
-| [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 8 | English |
-| [مطوّر باك إند بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend-ar.html) | 4 | Arabic |
-| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 5 | English |
+| [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 9 | English |
+| [مطوّر باك إند بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend-ar.html) | 5 | Arabic |
+| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 6 | English |
 | [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 2 | English |
 | [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
+| [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
+| [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
 
 Roadmaps live in [`roadmaps/`](roadmaps), one small YAML file each:
 
@@ -120,6 +140,18 @@ The library keeps each course under 20 MB, so big videos don't live here. Instea
 
 Learners see a **Get this course's videos** button, download the files, and choose the folder in inPace. The course
 then finds every video by itself.
+
+## Writing a good course
+
+- **Text first, videos optional.** Write each lesson so its text teaches everything, and put a video on top of the
+  lesson (`media:` in the course file) as an extra for people who like watching. The library's own courses work this way.
+- **Optional lessons** (inPace 1.25+): mark extras such as further reading, a long video or a bonus exercise with
+  `optional: true`, or the **Optional lesson** tick box in inPace. The module finishes without them. Older versions of
+  inPace treat them as normal lessons, so nothing breaks.
+- **Pictures and diagrams help.** Add charts and pictures to the course's `files/` folder and show them with
+  `![what it shows](chart.png)`; learners can open them big and zoom. Draw flows and steps as a `mermaid` code block.
+- **End every module with tasks** that show real understanding: something to make, an idea to explain in your own
+  words, and a quiz with several right answers per question.
 
 ## Rules
 

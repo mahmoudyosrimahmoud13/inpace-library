@@ -4,11 +4,14 @@ description: تعلّم بايثون، ثم ابنِ واجهات برمجية �
 language: ar
 author: inPace
 official: true
-order: 7
+order: 9
 tags: [python, backend, web, devops, arabic]
 steps:
   - course: python-basics-ar
-    note: ابدأ باللغة نفسها.
+    note: بداية قصيرة إن لم تبرمج من قبل. وتخطَّها إن أردت أن تبدأ الدورة الكاملة مباشرة.
+    optional: true
+  - course: python-full-ar
+    note: اللغة كاملة أولًا، الدوال والأخطاء والاختبارات والملفات والأصناف، والأدوات التي يستخدمها مطوّر الباك إند كل يوم.
   - course: fastapi
     note: هذه الدورة بالإنجليزية، لكن الكود هو نفسه بأي لغة.
   - course: docker-kubernetes-ar

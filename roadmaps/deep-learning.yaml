@@ -4,9 +4,12 @@ description: Refresh classic machine learning, then go through all of deep learn
 language: en
 author: inPace
 official: true
-order: 6
+order: 8
 tags: [deep learning, machine learning, interview]
 steps:
+  - course: python-full
+    note: Every course here uses Python. Skip it if you already write Python comfortably.
+    optional: true
   - course: mls-1-supervised
     note: A quick refresh of regression and classification. The words and ideas come back later.
   - course: mls-2-advanced-algorithms

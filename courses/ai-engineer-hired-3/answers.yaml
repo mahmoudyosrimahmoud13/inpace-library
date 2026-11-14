@@ -1,0 +1,200 @@
+q1:
+  right:
+  - a
+  - b
+  why: Assistant behaviour comes later, from fine-tuning and feedback.
+q2:
+  right:
+  - a
+  - b
+  why: Trade-offs and experience show understanding.
+q3:
+  right:
+  - a
+  - b
+  why: It's LLM01 in the OWASP Top 10 for LLM Applications 2025.
+q4:
+  right:
+  - a
+  - b
+  why: Per candidate reports collected in the field guide.
+q5:
+  right:
+  - a
+  - b
+  why: Low temperature sharpens the distribution; it doesn't make answers true.
+q6:
+  right:
+  - a
+  - b
+  why: They need to read the whole input at once.
+q7:
+  right:
+  - a
+  - b
+  why: It trades GPU memory for speed.
+q8:
+  right:
+  - a
+  - b
+  why: DPO turns preference learning into a simple classification-style loss.
+q9:
+  right:
+  - a
+  - b
+  why: Changing facts belong in retrieval, not weights.
+q10:
+  right:
+  - a
+  - b
+  why: That's where you enforce permissions and checks.
+q11:
+  right:
+  - a
+  - b
+  why: Parameter-efficient fine-tuning cuts memory and cost.
+q12:
+  right:
+  - a
+  - b
+  why: Never trust model output without validation.
+q13:
+  right:
+  - a
+  - b
+  why: Retrieval did its job; check how the model used the context.
+q14:
+  right:
+  - a
+  - b
+  why: Anything in the context can leak; prompts aren't access control.
+q15:
+  right:
+  - a
+  - b
+  why: Two similar questions can need different answers.
+q16:
+  right:
+  - a
+  - b
+  why: Fix the biggest measured cause, not a guess.
+q17:
+  right:
+  - a
+  - b
+  why: Agents fit open-ended tasks; fixed steps are cheaper and more predictable as a workflow.
+q18:
+  right:
+  - a
+  - b
+  why: Prompts can be talked around; code can't.
+q19:
+  right:
+  - a
+  - b
+  why: Errors are feedback; your step limit still caps retries.
+q20:
+  right:
+  - a
+  - b
+  why: Agents retry; tools must survive it.
+q21:
+  right:
+  - a
+  - b
+  why: Fast, free checks catch regressions early.
+q22:
+  right:
+  - a
+  - b
+  why: You can't improve what you don't measure.
+q23:
+  right:
+  - a
+  - b
+  why: Simplest-solution-first, measured.
+q24:
+  right:
+  - a
+  - b
+  why: A missed escalation can mean an unsafe auto-reply.
+q25:
+  right:
+  - a
+  - b
+  why: Providers price generation higher than reading.
+q26:
+  right:
+  - a
+  - b
+  why: Irreversible actions need least privilege and a human.
+q27:
+  right:
+  - a
+  - b
+  why: Users feel TTFT; measurement shows where time goes.
+q28:
+  right:
+  - a
+  - b
+  why: Assume it will sometimes succeed and contain the damage.
+q29:
+  right:
+  - a
+  - b
+  why: Without success criteria, no design can be judged.
+q30:
+  right:
+  - a
+  - b
+  why: 5×10⁷ vectors × 4,096 bytes ≈ 2.05 × 10¹¹ bytes.
+q31:
+  right:
+  - a
+  - b
+  why: Anything in the context can appear in the answer.
+q32:
+  right:
+  - a
+  - b
+  why: Interviewers score reasoning and trade-offs, not tool names.
+q33:
+  right:
+  - a
+  - b
+  why: Evals first is the top signal reviewers look for.
+q34:
+  right:
+  - a
+  - b
+  why: It limits the damage of any model mistake or injection.
+q35:
+  right:
+  - a
+  - b
+  why: Measure first, then pick levers and protect quality with evals.
+q36:
+  right:
+  - a
+  - b
+  why: Measured outcomes beat tool names and adjectives.
+q37:
+  right:
+  - a
+  - b
+  why: Loops are often decided by the weakest signal.
+q38:
+  right:
+  - a
+  - b
+  why: Proof of building and measuring beats claims.
+q39:
+  right:
+  - a
+  - b
+  why: Evaluation and evidence are what hiring managers look for.
+q40:
+  right:
+  - a
+  - b
+  why: Optional lessons are extras; the required ones complete the module.
