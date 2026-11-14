@@ -1,0 +1,246 @@
+q1:
+  right:
+  - o1af503
+  - o680415
+  why: The accounting equation rearranged is equity = assets - liabilities.
+q2:
+  right:
+  - o571177
+  - o83ba04
+  why: Buying on credit increases an asset (debit) and a liability (credit) by the same amount.
+q3:
+  right:
+  - o3bba1a
+  - o10375f
+  why: Accrual accounting records revenue when it is earned, not when cash is received.
+q4:
+  right:
+  - o9a3fa1
+  - o6ffb59
+  why: Two standard setters, two frameworks, and sometimes two different measurements of the same event.
+q5:
+  right:
+  - o40b931
+  - ocded85
+  why: General purpose statements serve outside capital providers who rely on published information.
+q6:
+  right:
+  - of39198
+  - oe9f238
+  why: Anything due within a year of the reporting date is current, whatever its original term.
+q7:
+  right:
+  - o89cb02
+  - o0dbcaf
+  why: OCI collects unrealised and translation items that bypass profit and loss.
+q8:
+  right:
+  - oc7d2f7
+  - o66f7be
+  why: Goodwill is consideration plus NCI minus the fair value of identifiable net assets.
+q9:
+  right:
+  - od1c8ea
+  - oa46521
+  why: A write-off only reclassifies within receivables, so neither NRV nor profit moves.
+q10:
+  right:
+  - o7eb98d
+  - oc3a9fb
+  why: LIFO charges the newest, most expensive costs to COGS, so profit and inventory are lower.
+q11:
+  right:
+  - ocd45ef
+  - oe2389d
+  why: Double declining applies twice the straight-line rate to the opening book value and ignores residual
+    value in the calculation.
+q12:
+  right:
+  - of5e254
+  - oe512fa
+  why: IFRS capitalises development costs that meet the six criteria, while research costs stay expensed.
+q13:
+  right:
+  - oa8c663
+  - oede842
+  why: IFRS sets the probable threshold at more likely than not, while US GAAP applies a stricter likelihood
+    test.
+q14:
+  right:
+  - oe945ca
+  - odc5cf2
+  why: Issuing below face creates a discount that is amortised into interest expense.
+q15:
+  right:
+  - o926cf9
+  - o2a10b8
+  why: Temporary differences that postpone tax create deferred tax liabilities; permanent differences
+    create none.
+q16:
+  right:
+  - o8f6cda
+  - ob2112e
+  why: Both converged standards use the same five-step model.
+q17:
+  right:
+  - oef3ae4
+  - o2e2173
+  why: Opportunities and threats are external; strengths and weaknesses are internal.
+q18:
+  right:
+  - o765f7b
+  - o57f27f
+  why: Budgetary slack is the deliberate building of easy targets into one's own budget.
+q19:
+  right:
+  - o2872e2
+  - o838f61
+  why: Practical standards include normal inefficiency, which makes them fair and useful for variance
+    analysis.
+q20:
+  right:
+  - o9c1a97
+  - o66a9c7
+  why: Strategy sets direction and the budget expresses that direction in numbers.
+q21:
+  right:
+  - ode2003
+  - o696c12
+  why: High-low divides the change in cost by the change in activity.
+q22:
+  right:
+  - o0312ca
+  - oe21b3c
+  why: At four units cumulative output has doubled twice, so the average is 80% of 80 hours.
+q23:
+  right:
+  - ofa10da
+  - o5dbb84
+  why: Expected value weights each outcome by its probability and adds the results.
+q24:
+  right:
+  - o08bb8e
+  - o66765d
+  why: Production equals sales plus the required ending stock minus the stock already there.
+q25:
+  right:
+  - od80934
+  - o01b872
+  why: Price variance uses the price difference on actual quantity; usage variance values the excess quantity
+    at standard price.
+q26:
+  right:
+  - o9545b0
+  - oceefcf
+  why: The budget variance is the controllable gap; the volume variance comes from capacity utilisation.
+q27:
+  right:
+  - of3e4d1
+  - od5244c
+  why: The volume variance values the unit shortfall at the standard contribution margin.
+q28:
+  right:
+  - o96147f
+  - o68ce55
+  why: Investigation effort should follow size, repetition and controllability.
+q29:
+  right:
+  - o538b82
+  - oe7bec3
+  why: Only traceable costs disappear when a segment closes; common costs remain with the other segments.
+q30:
+  right:
+  - o8d615b
+  - o811007
+  why: With spare capacity the opportunity cost is zero, so variable cost is the floor.
+q31:
+  right:
+  - oc0580b
+  - o014b7a
+  why: ROI-based rewards discourage projects below the current ROI, which residual income fixes.
+q32:
+  right:
+  - o0a8fc7
+  - o604380
+  why: Learning and growth covers employee capability and information systems, the leading drivers.
+q33:
+  right:
+  - oa0e3a2
+  - o220809
+  why: Rising inventory pushes fixed overhead into the balance sheet under absorption costing.
+q34:
+  right:
+  - o423973
+  - od8a717
+  why: The joint cost is sunk, so only incremental revenue and cost matter.
+q35:
+  right:
+  - ob3ba30
+  - o10e2ec
+  why: Weighted average adds completed units to ending work in process multiplied by its completion percentage.
+q36:
+  right:
+  - oc72d8a
+  - oa1e204
+  why: Target costing subtracts the required profit from the market price to set the allowed cost.
+q37:
+  right:
+  - o978339
+  - o3a9540
+  why: The rate is $12 per hour, so applied overhead falls $5,000 short of actual.
+q38:
+  right:
+  - o4c5938
+  - o7a4f28
+  why: The dual rate separates the cost of capacity from the cost of usage, revealing the price of reserving
+    it.
+q39:
+  right:
+  - oef92b8
+  - o371886
+  why: JIT trades inventory buffer for dependency on supplier reliability.
+q40:
+  right:
+  - oec4700
+  - o28f00e
+  why: External failures carry warranty, legal and reputational damage.
+q41:
+  right:
+  - o3c2559
+  - o569396
+  why: Authorisation is one of the classic control activities.
+q42:
+  right:
+  - obfe1a3
+  - o13e7ce
+  why: Section 404 centres on management's internal-control report and the auditor's attestation.
+q43:
+  right:
+  - oa2bbfe
+  - o881792
+  why: Inherent risk is before controls; residual risk is what remains afterwards.
+q44:
+  right:
+  - o23dee6
+  - o1b6ca8
+  why: Limit checks are input controls inside a specific application.
+q45:
+  right:
+  - o6f387e
+  - o25629d
+  why: Warehouses and marts serve structured reporting; lakes hold raw data and still need governance.
+q46:
+  right:
+  - o0e3986
+  - ofb3f46
+  why: Parallel conversion is the safest and most expensive approach.
+q47:
+  right:
+  - oa7a899
+  - o83c5cd
+  why: Predictive analytics estimates future outcomes; descriptive explains the past.
+q48:
+  right:
+  - od1019e
+  - od13b4e
+  why: Both capital-charge measures deduct a required return, and both ROI forms give the same answer.

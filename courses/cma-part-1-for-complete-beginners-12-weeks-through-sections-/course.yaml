@@ -1,0 +1,476 @@
+id: cma-part-1-for-complete-beginners-12-weeks-through-sections-
+title: 'CMA Part 1 for Complete Beginners: 12 Weeks Through Sections A–F'
+version: '1'
+description: A gentle, twelve-week self-study course built on your 171-page 'CMA Part 1' study guide (2026
+  edition). It starts with the accounting basics a total beginner needs, then walks through every unit
+  of Sections A to F in the book's own order, with simple explanations, worked examples, tables and a
+  short exam-style quiz after every module.
+language: en
+modules:
+- id: m1
+  title: 'Module 1 — Foundations: accounting basics, the 2026 exam and your study plan'
+  lessons:
+  - id: m1-l1
+    title: 'Lesson 1.1: Accounting basics part 1 — the equation, accounts, debits and credits'
+    file: lessons/m1-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=2-5
+    minutes: 80
+  - id: m1-l2
+    title: 'Lesson 1.2: Accounting basics part 2 — the cycle, accrual accounting and the vocabulary of
+      CMA'
+    file: lessons/m1-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=6-7
+    minutes: 80
+  - id: m1-l3
+    title: 'Lesson 1.3: How the 2026 exam works and how to build your 12-week plan'
+    file: lessons/m1-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=8-9
+    minutes: 80
+  requires:
+  - id: m1-r1
+    type: practical
+    prompt: Write a one-page 'accounting basics cheat sheet' (photo, PDF or document) with the accounting
+      equation, the debit/credit rules for the five account types, the eight steps of the accounting cycle
+      and three transactions of your own with their journal entries. Keep it — you will reuse it all course.
+  - id: m1-r2
+    type: explain
+    prompt: In your own words and in five sentences or fewer, explain the difference between cash accounting
+      and accrual accounting, using a small example of a sale where the customer pays later.
+    min_words: 40
+  - id: m1-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Module 2 — Section A, Unit 01: Financial statements (pages 11-20)'
+  lessons:
+  - id: m2-l1
+    title: 'Lesson 2.1: Users, the balance sheet and the income statement'
+    file: lessons/m2-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=11-13
+    minutes: 80
+  - id: m2-l2
+    title: 'Lesson 2.2: Comprehensive income, the cash flow statement and how the statements link'
+    file: lessons/m2-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=14-16
+    minutes: 80
+  - id: m2-l3
+    title: 'Lesson 2.3: Consolidation and integrated reporting'
+    file: lessons/m2-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=17-20
+    minutes: 80
+  requires:
+  - id: m2-r1
+    type: practical
+    prompt: Draw a one-page 'statements map' file (photo or PDF) showing the four statements as boxes
+      with arrows for net income, OCI, dividends and closing cash. Add your own numbers for a made-up
+      company and mark where consolidation and goodwill appear.
+  - id: m2-r2
+    type: explain
+    prompt: Explain in your own words why a profitable company can still run out of cash. Use at least
+      two balance-sheet items and one cash-flow category in your answer.
+    min_words: 40
+  - id: m2-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'Module 3 — Section A, Unit 02: Recognising and measuring assets (pages 21-30)'
+  lessons:
+  - id: m3-l1
+    title: 'Lesson 3.1: Accounts receivable and inventory'
+    file: lessons/m3-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=21-24
+    minutes: 80
+  - id: m3-l2
+    title: 'Lesson 3.2: Investments, property, plant and equipment'
+    file: lessons/m3-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=25-27
+    minutes: 80
+  - id: m3-l3
+    title: 'Lesson 3.3: Impairment and intangible assets'
+    file: lessons/m3-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=28-30
+    minutes: 80
+  requires:
+  - id: m3-r1
+    type: practical
+    prompt: Make a one-page 'asset measurement' sheet showing the same fictional company with FIFO versus
+      LIFO and straight-line versus double-declining depreciation, with the effect on year-1 profit and
+      total assets. Add two lines on what an impairment test would do if cash flows fell short.
+  - id: m3-r2
+    type: explain
+    prompt: Explain in your own words why writing off a customer's account changes neither net receivables
+      nor profit in the year of the write-off.
+    min_words: 40
+  - id: m3-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'Module 4 — Section A, Unit 03: Liabilities, equity, revenue and IFRS differences (pages 31-39)'
+  lessons:
+  - id: m4-l1
+    title: 'Lesson 4.1: Current liabilities, contingencies, bonds and leases'
+    file: lessons/m4-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=31-33
+    minutes: 80
+  - id: m4-l2
+    title: 'Lesson 4.2: Income taxes, equity transactions and revenue recognition'
+    file: lessons/m4-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=34-35
+    minutes: 80
+  - id: m4-l3
+    title: 'Lesson 4.3: The big US GAAP versus IFRS table and a Section A review'
+    file: lessons/m4-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=36-39
+    minutes: 80
+  requires:
+  - id: m4-r1
+    type: practical
+    prompt: Create a one-page 'US GAAP vs IFRS' cheat sheet with at least eight rows, plus one worked
+      example of a single transaction accounted differently under each framework, showing the profit and
+      balance-sheet impact.
+  - id: m4-r2
+    type: explain
+    prompt: Explain in your own words why issuing bonds at a discount produces interest expense that is
+      higher than the cash interest actually paid.
+    min_words: 40
+  - id: m4-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Module 5 — Section B, Units 04-05: Strategy and budgeting concepts (pages 41-52)'
+  lessons:
+  - id: m5-l1
+    title: 'Lesson 5.1: Strategic planning, environment analysis and competitive strategy'
+    file: lessons/m5-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=41-46
+    minutes: 120
+  - id: m5-l2
+    title: 'Lesson 5.2: Budgeting concepts, behaviour and standard costs'
+    file: lessons/m5-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=47-52
+    minutes: 120
+  requires:
+  - id: m5-r1
+    type: practical
+    prompt: 'Make a one-page strategy-to-budget file for a fictional business: mission, vision, one objective,
+      one PESTEL factor per letter, a five-forces score with reasons, a SWOT box, the chosen generic strategy,
+      and two critical success factors with their KPIs and the budget line each drives.'
+  - id: m5-r2
+    type: explain
+    prompt: Explain in your own words what budgetary slack is, why a manager creates it and two things
+      a company can do about it.
+    min_words: 40
+  - id: m5-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Module 6 — Section B, Units 06-08: Forecasting, budget methodologies and the master budget (pages
+    53-74)'
+  lessons:
+  - id: m6-l1
+    title: 'Lesson 6.1: Cost behaviour, the high-low method and regression'
+    file: lessons/m6-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=53-55
+    minutes: 60
+  - id: m6-l2
+    title: 'Lesson 6.2: Learning curves, expected value and time series forecasts'
+    file: lessons/m6-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=56-60
+    minutes: 60
+  - id: m6-l3
+    title: 'Lesson 6.3: Budget methodologies and the flexible budget'
+    file: lessons/m6-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=61-66
+    minutes: 60
+  - id: m6-l4
+    title: 'Lesson 6.4: The annual profit plan and the master budget'
+    file: lessons/m6-l4.md
+    media: CMA_Part1_Study_Material.pdf#pages=67-74
+    minutes: 60
+  requires:
+  - id: m6-r1
+    type: practical
+    prompt: 'Build a master budget for a fictional company in a spreadsheet or document: sales, production,
+      materials purchases, labour and overhead, and a cash budget with a minimum balance and borrowing.
+      Add a short note on which quarter needs financing and why.'
+  - id: m6-r2
+    type: explain
+    prompt: Explain in your own words why a flexible budget gives a fairer comparison than a static budget,
+      and what the volume effect means.
+    min_words: 40
+  - id: m6-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Module 7 — Section C, Unit 09: Cost and variance measures (pages 76-84)'
+  lessons:
+  - id: m7-l1
+    title: 'Lesson 7.1: The variance framework, materials and labour'
+    file: lessons/m7-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=76-78
+    minutes: 80
+  - id: m7-l2
+    title: 'Lesson 7.2: Overhead, mix and yield, and sales variances'
+    file: lessons/m7-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=79-81
+    minutes: 80
+  - id: m7-l3
+    title: 'Lesson 7.3: Variances in services and a variance review'
+    file: lessons/m7-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=82-84
+    minutes: 80
+  requires:
+  - id: m7-r1
+    type: practical
+    prompt: Create a one-page variance report for a fictional product with a standard cost card and one
+      period of actual results. Show price, usage, rate, efficiency, spending, budget and volume variances,
+      each with its formula, amount and U or F label, and finish with three bullets on what to investigate
+      first.
+  - id: m7-r2
+    type: explain
+    prompt: Explain in your own words why an unfavourable material price variance and a favourable usage
+      variance often appear together, and which one a purchasing manager actually controls.
+    min_words: 40
+  - id: m7-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'Module 8 — Section C, Units 10-11: Responsibility centres, transfer pricing and performance
+    measures (pages 85-99)'
+  lessons:
+  - id: m8-l1
+    title: 'Lesson 8.1: Responsibility centres, segments and common costs'
+    file: lessons/m8-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=85-87
+    minutes: 80
+  - id: m8-l2
+    title: 'Lesson 8.2: Transfer pricing and reportable segments'
+    file: lessons/m8-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=88-91
+    minutes: 80
+  - id: m8-l3
+    title: 'Lesson 8.3: ROI, residual income, EVA and the balanced scorecard'
+    file: lessons/m8-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=92-99
+    minutes: 80
+  requires:
+  - id: m8-r1
+    type: practical
+    prompt: 'Build a one-page segment and performance report: contribution-format segment profit for two
+      segments with common costs allocated, then margin, turnover, ROI, residual income and EVA for one
+      division with your own numbers, and a four-row balanced scorecard with two measures per perspective.'
+  - id: m8-r2
+    type: explain
+    prompt: Explain in your own words why a manager measured on ROI may reject a project that would benefit
+      the whole company, and how residual income changes that decision.
+    min_words: 40
+  - id: m8-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Module 9 — Section D, Units 12-13: Cost concepts and costing systems (pages 101-115)'
+  lessons:
+  - id: m9-l1
+    title: 'Lesson 9.1: Cost concepts, absorption versus variable costing and joint products'
+    file: lessons/m9-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=101-108
+    minutes: 120
+  - id: m9-l2
+    title: 'Lesson 9.2: Costing systems — job order, process costing and ABC'
+    file: lessons/m9-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=109-115
+    minutes: 120
+  requires:
+  - id: m9-r1
+    type: practical
+    prompt: 'Create a costing workbook or one-page file with: a variable-versus-absorption profit reconciliation
+      proving the difference equals inventory change × fixed overhead per unit; a joint cost split two
+      ways plus one sell-or-process-further decision; and equivalent units under weighted average and
+      FIFO with cost per equivalent unit.'
+  - id: m9-r2
+    type: explain
+    prompt: Explain in your own words why absorption costing can make profit rise when the factory simply
+      produces more than it sells, and why external reporting still requires it.
+    min_words: 40
+  - id: m9-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'Module 10 — Section D, Units 14-15: Overhead costs and process improvement (pages 116-129)'
+  lessons:
+  - id: m10-l1
+    title: 'Lesson 10.1: Overhead rates, department rates and support cost allocation'
+    file: lessons/m10-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=116-118
+    minutes: 80
+  - id: m10-l2
+    title: 'Lesson 10.2: Under- and over-applied overhead'
+    file: lessons/m10-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=119-121
+    minutes: 80
+  - id: m10-l3
+    title: 'Lesson 10.3: Supply chain, lean, constraints, quality and efficient accounting'
+    file: lessons/m10-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=122-129
+    minutes: 80
+  requires:
+  - id: m10-r1
+    type: practical
+    prompt: 'Create an overhead and improvement file: compute a predetermined rate and label over- or
+      under-applied overhead with the amount and the COGS effect; allocate two support departments to
+      two operating departments by the direct method; price one internal service under a single rate and
+      a dual rate; then list the four cost-of-quality categories with three examples and amounts each
+      and one action to shift spending toward prevention.'
+  - id: m10-r2
+    type: explain
+    prompt: Explain in your own words why just-in-time reduces cost but increases risk, and name two things
+      a company must have in place before adopting it.
+    min_words: 40
+  - id: m10-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m11
+  title: 'Module 11 — Section E, Units 16-17: Internal controls and systems security (pages 131-145)'
+  lessons:
+  - id: m11-l1
+    title: 'Lesson 11.1: Corporate governance, COSO and control activities'
+    file: lessons/m11-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=131-133
+    minutes: 80
+  - id: m11-l2
+    title: 'Lesson 11.2: Risk management, SOX, the FCPA and internal audit'
+    file: lessons/m11-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=134-138
+    minutes: 80
+  - id: m11-l3
+    title: 'Lesson 11.3: Systems controls, continuity and documentation'
+    file: lessons/m11-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=139-145
+    minutes: 80
+  requires:
+  - id: m11-r1
+    type: practical
+    prompt: 'Create a one-page controls pack for a small business you invent: eight risks each mapped
+      to a COSO component with the control you would add and whether it is preventive, detective or corrective;
+      a segregation-of-duties table; and a continuity page giving your RTO, RPO, backup frequency and
+      preferred recovery site with reasons.'
+  - id: m11-r2
+    type: explain
+    prompt: Explain in your own words why segregation of duties is such a powerful control, with one concrete
+      example of a fraud that becomes possible when duties are combined.
+    min_words: 40
+  - id: m11-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    pass: 70
+- id: m12
+  title: Module 12 — Section F, Units 18-20 and final revision (pages 147-171)
+  lessons:
+  - id: m12-l1
+    title: 'Lesson 12.1: Information systems, databases and ERP'
+    file: lessons/m12-l1.md
+    media: CMA_Part1_Study_Material.pdf#pages=147-151
+    minutes: 60
+  - id: m12-l2
+    title: 'Lesson 12.2: Data governance, cybersecurity, the SDLC and finance transformation'
+    file: lessons/m12-l2.md
+    media: CMA_Part1_Study_Material.pdf#pages=152-158
+    minutes: 60
+  - id: m12-l3
+    title: 'Lesson 12.3: Data analytics for finance'
+    file: lessons/m12-l3.md
+    media: CMA_Part1_Study_Material.pdf#pages=159-165
+    minutes: 60
+  - id: m12-l4
+    title: 'Lesson 12.4: Formula sheet, last-week checklist and exam-day strategy'
+    file: lessons/m12-l4.md
+    media: CMA_Part1_Study_Material.pdf#pages=166-171
+    minutes: 60
+  requires:
+  - id: m12-r1
+    type: practical
+    prompt: Write your own one-page formula sheet from memory, grouped by section A to F, with at least
+      25 formulas, plus a last-week plan with one focus per day and a checklist of 12 'I can...' statements
+      marked confident, shaky or not yet.
+  - id: m12-r2
+    type: explain
+    prompt: 'Explain in your own words how Sections A to F fit together: which gives the vocabulary, which
+      builds the numbers, which judges performance, which explains cost, which protects the business and
+      which modernises it.'
+    min_words: 40
+  - id: m12-r3
+    type: quiz
+    prompt: 'Quiz: 4 questions, 70% to pass.'
+    questions:
+    - q45
+    - q46
+    - q47
+    - q48
+    pass: 70
+image: cover.webp
+book: CMA_Part1_Study_Material.pdf

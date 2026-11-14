@@ -1,0 +1,512 @@
+q1:
+  text: A business has total assets of $90,000 and total liabilities of $40,000. What is its equity?
+  options:
+    o1af503: $50,000
+    o66e99a: $90,000
+    o680415: 'Assets minus liabilities: 90,000 - 40,000 = 50,000'
+    obde04c: $40,000
+    oc52bb8: It cannot be calculated from these figures
+    occd5b5: $130,000
+  show: 4
+q2:
+  text: A company buys inventory for $10,000 on credit. Which journal entry is correct?
+  options:
+    o571177: Debit inventory $10,000 and credit accounts payable $10,000
+    o594727: Debit accounts payable and credit inventory
+    o6ae7e8: Debit purchases and credit capital
+    o83ba04: Increase the asset inventory on the debit side and increase the liability on the credit side
+    ob951b6: Debit cash and credit inventory
+    od02057: Debit inventory and credit sales
+  show: 4
+q3:
+  text: A sale is made in December but the customer pays in February. Under accrual accounting, when is
+    the revenue recognised?
+  options:
+    o10375f: When the goods were delivered and earned, regardless of the cash date
+    o3bba1a: In December, when the sale happened
+    o68ff08: In the year the customer places the next order
+    o6ce6cb: In February, when the cash arrives
+    o95f77b: Half in December and half in February
+    obc78f0: When the invoice is paid in full
+  show: 4
+q4:
+  text: Which statement about US GAAP and IFRS is correct?
+  options:
+    o450daf: IFRS is issued by the FASB
+    o6ffb59: Both are accounting frameworks, but one is more rules-based and the other more principles-based
+    o8f50df: US GAAP is used by most countries outside the United States
+    o9820d8: IFRS applies only to not-for-profit organisations
+    o9a3fa1: US GAAP is issued by the FASB and IFRS by the IASB, and they sometimes treat the same transaction
+      differently
+    ofd22fa: Both frameworks always produce identical profit figures
+  show: 4
+q5:
+  text: According to the objective of general purpose financial reporting, who is the primary audience?
+  options:
+    o40b931: Present and potential investors, lenders and other creditors
+    o5299a4: Competitors and journalists
+    oc740fb: The national tax authority
+    ocb9429: Employees' trade unions
+    ocded85: Providers of capital who cannot demand reports tailored to their own needs
+    ocfe309: The company's own management team
+  show: 4
+q6:
+  text: At 31 December 2026, which item is reported as a current liability?
+  options:
+    o3853b2: A pension obligation spread over 20 years
+    o40e5dd: A deferred tax liability reversing in 2032
+    o41de35: A note payable maturing in 2031
+    o79db2a: Bonds payable maturing in 2035
+    oe9f238: The current portion of long-term debt, because it is payable within 12 months
+    of39198: A 10-year bond of which $200,000 falls due in March 2027
+  show: 4
+q7:
+  text: Which item is reported in other comprehensive income rather than in net income?
+  options:
+    o0dbcaf: A foreign currency translation adjustment on an overseas subsidiary
+    o5f4e3f: Interest expense on bonds
+    o89cb02: An unrealised gain on available-for-sale debt securities
+    oa0a95b: A loss from discontinued operations
+    ocb18b0: A gain on selling factory equipment
+    ofbe746: Cost of goods sold
+  show: 4
+q8:
+  text: Parent pays $800,000 for 80% of Sub, whose identifiable net assets have a fair value of $900,000.
+    What goodwill arises?
+  options:
+    o16c781: $100,000
+    o3afc44: Nil, because the price was below net asset value
+    o66f7be: 800,000 plus the 180,000 non-controlling interest, less 900,000 of net assets
+    oc7d2f7: $80,000
+    oca819e: A $100,000 gain in profit
+    ofd6289: $180,000
+  show: 4
+q9:
+  text: A company writes off a specific customer balance against the allowance for credit losses. What
+    is the effect?
+  options:
+    o48c358: Net realisable value rises because the allowance is smaller
+    o7b8ff6: Cash falls by the amount written off
+    o7e7e64: Profit falls but net realisable value is unchanged
+    o8e381e: Net realisable value falls and profit falls
+    oa46521: Gross receivables and the allowance both fall by the same amount
+    od1c8ea: Net realisable value of receivables is unchanged and profit is unchanged
+  show: 4
+q10:
+  text: Prices are rising. Compared with FIFO, what does LIFO report?
+  options:
+    o16cae4: Higher inventory and lower cost of goods sold
+    o7eb98d: Higher cost of goods sold and lower profit
+    o8e2fcf: Higher profit and higher inventory
+    oc07ab1: The same profit, because only the order of items changes
+    oc3a9fb: Lower ending inventory and lower taxable income
+    of902da: Lower cost of goods sold and higher profit
+  show: 4
+q11:
+  text: A machine costs $50,000, has a $5,000 residual value and a five-year life. What is the first-year
+    depreciation under the double-declining balance method?
+  options:
+    o07fa77: $10,000
+    o1ba7ae: $18,000
+    o7a61d7: $9,000
+    obd2763: $22,500
+    ocd45ef: $20,000
+    oe2389d: 2 x (1/5) x 50,000 = 20,000
+  show: 4
+q12:
+  text: Under IFRS, how are development costs treated when all the capitalisation criteria are met?
+  options:
+    o161e9a: They are never amortised under any circumstances
+    o51867a: They are treated as goodwill
+    oa7ad2a: They are charged directly to equity
+    ob64cdd: They are always expensed as incurred
+    oe512fa: They are recognised as an asset rather than expensed immediately
+    of5e254: They are capitalised as an intangible asset and amortised
+  show: 4
+q13:
+  text: A lawsuit loss is 60% likely and the amount can be estimated. How is it treated under IFRS and
+    US GAAP?
+  options:
+    o3fe2c9: Both frameworks disclose only
+    o741728: Neither framework allows it to be recognised or disclosed
+    o8b0def: US GAAP records it and IFRS ignores it
+    oa8c663: IFRS records the liability, while US GAAP discloses it only
+    oc440ae: Both frameworks record the liability
+    oede842: IFRS treats it as probable (more likely than not) and accrues; US GAAP requires a higher
+      threshold, so disclosure is enough
+  show: 4
+q14:
+  text: Bonds with an 8% coupon are issued when the market rate is 10%. What is the effect on interest
+    expense compared with the cash coupon paid?
+  options:
+    o0cec82: Interest expense is lower than the cash coupon
+    o2c0dca: Interest expense equals the cash coupon in every period
+    o4dd6a1: The premium is amortised, increasing expense
+    odb5b3e: There is no interest expense until maturity
+    odc5cf2: The discount adds to interest expense each period
+    oe945ca: Interest expense is higher than the cash coupon because the discount is amortised
+  show: 4
+q15:
+  text: Which situation creates a deferred tax liability?
+  options:
+    o1fc335: A fine that is never tax deductible
+    o2a10b8: A temporary difference that will reverse in later periods with tax payable then
+    o926cf9: Tax depreciation is faster than book depreciation, so tax is postponed
+    obdccbb: A permanent difference between accounting and taxable profit
+    oced532: Tax-exempt interest income
+    of5506f: Paying tax in the same period the expense is recorded
+  show: 4
+q16:
+  text: How many steps are there in the revenue recognition model of ASC 606 and IFRS 15?
+  options:
+    o1fd0f6: Seven steps
+    o8f6cda: Five steps
+    oac8ad1: Two steps
+    ob1d81a: Three steps
+    ob2112e: 'Five: contract, performance obligations, transaction price, allocation and recognition'
+    od1a8cd: Four steps
+  show: 4
+q17:
+  text: Which two items belong to the opportunities and threats half of a SWOT analysis?
+  options:
+    o104731: An ageing factory with rising maintenance costs
+    o2e2173: A strong foreign competitor entering the main market
+    o623602: A highly skilled engineering team
+    o91b6ed: Strong brand recognition
+    ob0d6bf: Low staff turnover compared with rivals
+    oef3ae4: A new government subsidy, which is outside the company's control
+  show: 4
+q18:
+  text: 'A manager deliberately submits an easy sales target. This is best described as:'
+  options:
+    o2b21bf: Zero-based budgeting
+    o391202: Goal congruence
+    o55c3b7: A flexible budget
+    o57f27f: Understating achievable performance so the target is comfortable
+    o765f7b: Budgetary slack, also called padding
+    od11733: Kaizen budgeting
+  show: 4
+q19:
+  text: Which statement describes a currently attainable (practical) standard?
+  options:
+    o2872e2: It allows normal spoilage and downtime, so it is achievable with reasonable effort
+    o3bbb83: It is set without input from the people doing the work
+    o5b0916: It assumes no waste of any kind
+    o7e3589: It can only be used by service firms
+    o7fe2fb: It is last year's actual cost carried forward
+    o838f61: It reflects efficient operations under normal conditions and still motivates staff
+  show: 4
+q20:
+  text: Which sequence correctly links strategy to the annual budget?
+  options:
+    o347a4a: Objectives, then budget, then mission
+    o66a9c7: Critical success factors lead to KPIs, which lead to budget targets
+    o805946: Budget first, then strategy, then mission
+    o9c1a97: Mission, then vision, then strategy, then objectives, then the budget
+    oa7ef58: Vision, then budget, then mission, then strategy
+    odd048a: KPIs come before any strategic analysis
+  show: 4
+q21:
+  text: At 1,800 units total cost is $17,600; at 800 units it is $10,600. Using the high-low method, what
+    is the variable cost per unit?
+  options:
+    o58813b: $9.78 per unit
+    o696c12: (17,600 - 10,600) divided by (1,800 - 800)
+    o712b89: $5.00 per unit
+    odcf9ac: $12.00 per unit
+    ode2003: $7 per unit
+    oeb4062: $8.75 per unit
+  show: 4
+q22:
+  text: The first unit takes 100 hours and an 80% learning curve applies. What is the cumulative average
+    time per unit for the first four units?
+  options:
+    o0312ca: 64 hours
+    o0836fb: 32 hours
+    o45f300: 40 hours
+    oa79ee5: 80 hours
+    odd8877: 51.2 hours
+    oe21b3c: 100 x 0.8 x 0.8, because the average falls with each doubling
+  show: 4
+q23:
+  text: Outcomes are a 30% chance of $200,000 profit, a 50% chance of $80,000 and a 20% chance of a $40,000
+    loss. What is the expected value?
+  options:
+    o4754e4: $68,000
+    o5dbb84: 0.3 x 200,000 plus 0.5 x 80,000 minus 0.2 x 40,000
+    o7c080d: $100,000
+    oc1a8d9: $80,000
+    oe8e883: $120,000
+    ofa10da: $92,000
+  show: 4
+q24:
+  text: Budgeted sales are 5,000 units, ending finished goods must equal 600 units and opening finished
+    goods are 500 units. How many units must be produced?
+  options:
+    o08bb8e: 5,100 units
+    o1d9b80: 6,100 units
+    o66765d: Sales plus desired ending inventory minus beginning inventory
+    oa70365: 5,000 units
+    oad849e: 5,600 units
+    oe65a6e: 4,900 units
+  show: 4
+q25:
+  text: Standard is 2 kg at $5 per kg and 1,000 units were produced using 2,100 kg at $5.20. What are
+    the material variances?
+  options:
+    o01b872: 2,100 x 0.20 = 420 U for price, and 5 x 100 kg = 500 U for usage
+    o2215ae: Price $100 U and usage $920 U
+    o500d84: Price $500 U and usage $420 U
+    obb0aec: No usage variance arises because all material was used
+    od80934: Price variance $420 unfavourable and usage variance $500 unfavourable
+    oe19efa: Price $420 F and usage $500 F
+  show: 4
+q26:
+  text: Which statement about fixed overhead variances is correct?
+  options:
+    o094bfe: The volume variance equals actual minus budgeted fixed overhead
+    o4458cd: Fixed overhead has price and efficiency variances like variable overhead
+    o913ab0: Both variances are controlled by daily spending decisions
+    o9545b0: Only the budget variance is normally controllable by the manager
+    oc28e35: The volume variance measures overspending
+    oceefcf: The volume variance reflects producing at a level different from capacity
+  show: 4
+q27:
+  text: Budget was 10,000 units and actual sales were 9,500 units at a standard contribution margin of
+    $8. What is the sales volume variance?
+  options:
+    o253d1b: $500 unfavourable
+    o9cd700: $9,500 favourable
+    od5244c: 500 units short multiplied by $8 of standard contribution
+    ode51d2: $4,000 favourable
+    of3e4d1: $4,000 unfavourable
+    of734ef: $8,000 unfavourable
+  show: 4
+q28:
+  text: Which variance should a manager investigate first?
+  options:
+    o2f6256: The variance that is easiest to calculate
+    o44265e: A small one-off variance caused by a price rise
+    o62e765: The smallest variance in the report
+    o68ce55: A material variance showing the same adverse pattern for three periods
+    o96147f: A large, repeated variance that the manager can control
+    obbbf0d: Any favourable variance, because favourable is suspicious
+  show: 4
+q29:
+  text: A segment has a segment margin of $80,000 but shows a $30,000 loss after common costs are allocated.
+    What should the company do?
+  options:
+    o538b82: Keep it, because it contributes $80,000 toward common costs
+    o55a719: Increase the allocation until the segment breaks even
+    o9f28df: Close it because common costs will disappear
+    oe7bec3: Closing it would not remove the common costs, so profit would fall
+    oee04df: Keep it only if common costs are reallocated to customers
+    of56038: Close it immediately because it shows a loss
+  show: 4
+q30:
+  text: A selling division has spare capacity, a variable cost of $30 and a market price of $50. What
+    is the minimum transfer price that benefits the group?
+  options:
+    o811007: Variable cost, since any higher price only shifts profit between divisions
+    o8d615b: $30, because no external contribution is sacrificed
+    o97f4b8: Full cost plus 20% regardless of capacity
+    o9fe98a: $50 in every situation
+    oc5a312: $20 to encourage internal trade
+    oc9d191: $80 to give the seller a mark-up
+  show: 4
+q31:
+  text: A division earns 20% ROI while the company requires 12%. A new project would earn 15%. What is
+    the likely outcome if the manager is judged on ROI?
+  options:
+    o014b7a: Residual income would rise, showing the project benefits the company
+    o0db20e: Residual income falls, so rejection is correct
+    o8371d8: The project is accepted because 15% exceeds 12%
+    o981c6a: Divisional ROI rises to 20.5%
+    oc0580b: The project is rejected because divisional ROI falls, although the company gains
+    oc7ac2e: The decision does not affect either measure
+  show: 4
+q32:
+  text: Which measure belongs to the learning and growth perspective of the balanced scorecard?
+  options:
+    o0a8fc7: Training hours per employee
+    o0b3fbc: Order cycle time
+    o1bc13d: Customer retention rate
+    o604380: Percentage of staff with the certification their role requires
+    o796f86: Operating margin
+    ofcf4e6: On-time delivery percentage
+  show: 4
+q33:
+  text: A factory produced 10,000 units, sold 8,000 and incurred $90,000 of fixed manufacturing overhead.
+    How do the two costing methods compare?
+  options:
+    o220809: The gap is 2,000 units of inventory multiplied by $9 fixed overhead per unit
+    o7a03f6: Variable profit is $18,000 higher
+    o89084e: Profits are equal because sales are the same
+    o9c19bb: Absorption profit is $9,000 higher
+    oa0e3a2: Absorption profit is $18,000 higher than variable profit
+    of63a14: Absorption profit is $90,000 higher
+  show: 4
+q34:
+  text: A joint cost is already spent. Product A sells for $8 now, or for $12 after extra processing costing
+    $2.50. What should the company do?
+  options:
+    o0ccede: Process further only if the joint cost is allocated to A
+    o188001: Sell now because incremental costs always exceed incremental revenue
+    o423973: Process further for a gain of $1.50 per unit
+    o9e2d71: It makes no difference because the joint cost is unchanged
+    oa5b18e: Sell now to recover the joint cost first
+    od8a717: Process further because extra revenue of $4 exceeds extra cost of $2.50
+  show: 4
+q35:
+  text: Beginning work in process is 200 units (40% complete), 1,000 units were started, 1,100 completed
+    and ending work in process is 100 units (60% complete). What are the weighted-average equivalent units?
+  options:
+    o10e2ec: 1,100 completed plus 60 equivalent units in ending work in process
+    o3fe82a: 1,100
+    o9774df: 1,200
+    ob3ba30: 1,160
+    occ5e0d: 1,260
+    ocd1eea: 1,080
+  show: 4
+q36:
+  text: A product must sell for $300 and the company requires a 20% margin. Current design cost is $265.
+    What is the target cost and the gap?
+  options:
+    o195da3: Target cost $250, so the gap is $15
+    o26c216: Target cost $265, so the gap is zero
+    o725793: Target cost $180, so the gap is $85
+    o815b7e: Target cost $300, so there is no gap
+    oa1e204: Price minus required profit equals the allowed cost of $240
+    oc72d8a: Target cost $240, so the team must remove $25 through design
+  show: 4
+q37:
+  text: Budgeted overhead is $240,000 on 20,000 direct labour hours. Actual overhead is $251,000 and actual
+    hours are 20,500. What is the overhead position?
+  options:
+    o14e168: Under-applied by $6,000
+    o3a9540: Applied overhead of 20,500 x $12 = $246,000 is below actual
+    o523098: Exactly applied
+    o978339: Under-applied by $5,000
+    od40651: Over-applied by $11,000
+    oe1e740: Over-applied by $5,000
+  show: 4
+q38:
+  text: Why does a dual-rate allocation charge more than a single rate to a department that reserves capacity
+    but uses little of it?
+  options:
+    o4c5938: Because a fixed capacity charge is based on the capacity reserved, plus a variable charge
+      on actual usage
+    o6b1f5c: Because the variable rate is doubled for light users
+    o7a4f28: The reserved capacity is paid for, so light users face the cost of holding it
+    o93d13f: Because dual rate ignores actual usage entirely
+    oc55a7c: Because the fixed charge is allocated by number of employees
+    ocf0fad: Because the reciprocal method is applied first
+  show: 4
+q39:
+  text: Which statement about just-in-time inventory is correct?
+  options:
+    o0e7b97: It removes all risk from the supply chain
+    o371886: It requires reliable suppliers and reasonably accurate forecasts
+    o7b9250: It works best with many unreliable suppliers
+    oa991f9: It increases inventory to protect production
+    oef92b8: It reduces inventory holding cost but increases vulnerability to supplier failure
+    of833ae: It removes the need for quality control
+  show: 4
+q40:
+  text: Which cost of quality category is usually the most expensive and most damaging when it occurs?
+  options:
+    o28f00e: Defects found by customers, such as warranty, returns and lost goodwill
+    o604948: Appraisal costs
+    oc4b355: Design costs
+    od16dfc: Internal failure costs
+    oec4700: External failure costs
+    of3c2af: Prevention costs
+  show: 4
+q41:
+  text: Management requires a supervisor's approval for payments above $5,000. Which COSO component does
+    this belong to?
+  options:
+    o3c2559: Control activities
+    o569396: It is a specific control procedure inside the control activities component
+    o5d35f5: Monitoring activities
+    o79b038: Risk assessment
+    oe4369a: Control environment
+    ofaafb1: Information and communication
+  show: 4
+q42:
+  text: Which requirement comes from Section 404 of the Sarbanes-Oxley Act?
+  options:
+    o13e7ce: Management states its responsibility for maintaining adequate internal control over financial
+      reporting
+    o3153d5: The company must change auditors every five years
+    o3c72eb: The audit partner must rotate annually
+    o58294f: Every employee must hold an accounting licence
+    obfe1a3: Management assesses and reports on internal control over financial reporting, with auditor
+      attestation
+    od3e1ed: The external auditor prepares the financial statements
+  show: 4
+q43:
+  text: 'A company insures a warehouse after assessing the fire risk. The risk remaining after this response
+    is called:'
+  options:
+    o0048bd: Systematic risk
+    o123943: Inherent risk
+    o136210: Risk appetite
+    o881792: The exposure left once a risk response has been applied
+    oa2bbfe: Residual risk
+    ob786aa: Detection risk
+  show: 4
+q44:
+  text: 'A payroll system rejects any entry above 12 hours worked a day. This is best described as:'
+  options:
+    o1b6ca8: A programmed edit check inside the payroll application
+    o23dee6: An application control, specifically an input limit check
+    o4a6027: A segregation of duties
+    o88900a: A corrective control
+    o9e7ef6: A physical control
+    ocf4114: A general IT control
+  show: 4
+q45:
+  text: Which statement about data storage is correct?
+  options:
+    o25629d: A data mart is a focused subset of a data warehouse built for one department
+    o266237: A data warehouse is designed for raw unstructured data
+    o5b68af: A data mart is always larger than the warehouse
+    o6360fe: A data lake holds only accounting data
+    o6f387e: A data warehouse holds cleaned, structured data for reporting, while a data lake holds raw
+      data of many types
+    o82d84f: Data lakes need no governance because the data is raw
+  show: 4
+q46:
+  text: Which system implementation approach runs the old and new systems in parallel until the new one
+    is proven?
+  options:
+    o0e3986: Parallel conversion
+    o1bb77b: Phased conversion
+    o68566c: Cold site conversion
+    o823098: Direct (big bang) conversion
+    of644b9: Pilot conversion
+    ofb3f46: Both systems run together and outputs are compared before cut-over
+  show: 4
+q47:
+  text: 'A model estimating which customers will stop buying next quarter is an example of:'
+  options:
+    o83c5cd: Analytics that forecast a future outcome from historical patterns
+    o88cb58: Data governance
+    o96bd72: Descriptive analytics
+    oa7a899: Predictive analytics
+    oc323c5: Prescriptive analytics
+    od35c0a: Diagnostic analytics
+  show: 4
+q48:
+  text: Which pair of formulas is correct?
+  options:
+    o4754f7: The absorption-variable gap equals change in inventory x variable cost per unit
+    o63c43a: EVA = operating profit plus the capital charge
+    o744e64: Residual income = operating income divided by invested capital
+    ob69b10: ROI = invested capital divided by operating income
+    od1019e: Residual income = operating income - (required rate x invested capital); EVA = NOPAT - (WACC
+      x invested capital)
+    od13b4e: ROI = margin x turnover, and the profit gap between absorption and variable costing = change
+      in inventory x fixed overhead per unit
+  show: 4
