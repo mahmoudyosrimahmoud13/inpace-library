@@ -4,7 +4,7 @@ description: تعلّم C# و.NET من الصفر حتى أول واجهة وي�
 language: ar
 author: inPace
 official: true
-order: 14
+order: 6
 tags: [c#, .net, backend, web, arabic]
 steps:
   - course: csharp-dotnet-beginners-ar

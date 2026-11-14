@@ -4,7 +4,7 @@ description: "The road to an AI engineer job, built on real job posts and interv
 language: en
 author: inPace
 official: true
-order: 1
+order: 11
 tags: [ai engineer, career, interview, python, llm]
 steps:
   - course: python-full
@@ -18,7 +18,7 @@ steps:
     note: If building DocAnswer's API felt new, this goes deeper into APIs.
     optional: true
   - course: docker-kubernetes-en
-    note: Containers and deployment, asked for in many AI engineer posts.
+    note: Containers and deployment, asked for in many AI engineer posts. The video is in Egyptian Arabic; the English notes cover everything.
     optional: true
   - course: mls-1-supervised
     note: About two in three AI engineer posts also want some classic machine learning. This fills that gap.

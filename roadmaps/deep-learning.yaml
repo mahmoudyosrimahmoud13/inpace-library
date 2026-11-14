@@ -1,10 +1,10 @@
 id: deep-learning
 title: Deep learning, with a machine learning refresh
-description: Refresh classic machine learning, then go through all of deep learning, from one neuron to transformers. Good before interviews.
+description: Refresh classic machine learning, then go through all of deep learning, from one neuron to transformers. No heavy maths needed. Good before interviews.
 language: en
 author: inPace
 official: true
-order: 8
+order: 14
 tags: [deep learning, machine learning, interview]
 steps:
   - course: python-full
@@ -13,10 +13,17 @@ steps:
   - course: mls-1-supervised
     note: A quick refresh of regression and classification. The words and ideas come back later.
   - course: mls-2-advanced-algorithms
+    note: Your first neural networks, how to judge a model, and decision trees.
   - course: mls-3-unsupervised-rl
+    note: Clustering, recommenders and reinforcement learning. Nice to know, not needed for what follows.
     optional: true
   - course: dl-1-neural-networks
+    note: Deep learning starts here. You build a network by hand, then with PyTorch and Keras.
   - course: dl-2-improving-networks
+    note: Make networks train well. Regularization, optimizers and tuning.
   - course: dl-3-ml-projects
+    note: Short and practical. How to run a real machine learning project.
   - course: dl-4-cnns
+    note: Networks that see. Convolutions and computer vision.
   - course: dl-5-sequence-models
+    note: Attention and transformers, the ideas behind today's language models.

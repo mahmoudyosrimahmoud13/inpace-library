@@ -1,10 +1,10 @@
 id: english-a1-to-b1
 title: الإنجليزي من الصفر إلى B1
-description: ثلاث دورات بالترتيب، من أول كلمة إلى الكلام اليومي بثقة. كل مستوى يبني على اللي قبله.
+description: ثلاث دورات بالترتيب، من أول كلمة إلى الكلام اليومي بثقة. كل مستوى يبني على الذي قبله.
 language: ar
 author: inPace
 official: true
-order: 7
+order: 16
 tags: [english, arabic, grammar]
 steps:
   - course: english-a1-ar

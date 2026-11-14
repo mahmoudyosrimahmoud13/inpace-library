@@ -4,7 +4,7 @@ description: من أول صفحة ويب إلى تطبيق JavaScript تنشره
 language: ar
 author: inPace
 official: true
-order: 18
+order: 4
 tags: [web, javascript, frontend, arabic]
 steps:
   - course: javascript-full-ar

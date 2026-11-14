@@ -4,7 +4,7 @@ description: Write Python, build APIs with FastAPI, ship them in containers, and
 language: en
 author: inPace
 official: true
-order: 6
+order: 1
 tags: [python, backend, web, devops, career]
 steps:
   - course: python-basics
@@ -15,6 +15,6 @@ steps:
   - course: fastapi
     note: Your first API, all the way to production.
   - course: docker-kubernetes-en
-    note: Pack the API in a container and run it on a cluster.
+    note: Pack the API in a container and run it on a cluster. The video is in Egyptian Arabic; the English notes cover everything.
   - course: system-design-beginners
     note: "Step back and design a whole service: the questions interviewers ask."

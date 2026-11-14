@@ -85,26 +85,29 @@ A roadmap is a path through several courses of the library, in order, toward one
 course when you get to it, and Tempo sails it with you on his island (**Tempo's island → Voyages**). Following a
 roadmap needs inPace 1.24 or newer; older versions can still add each course on its own.
 
+They come in three groups: building software, then data and AI, then languages. Inside each group, a path that
+leads into another comes before it, and the English and Arabic versions sit side by side.
+
 | Roadmap | Courses | Language |
 |---|---|---|
-| [Get hired as an AI engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer.html) | 8 | English |
-| [التوظيف مهندس ذكاء اصطناعي](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer-ar.html) | 8 | Arabic |
-| [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 5 | English |
-| [Machine learning, from the maths up](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/machine-learning-engineer.html) | 13 | English |
-| [Maths for machine learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/maths-for-machine-learning.html) | 4 | English |
 | [Python backend developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend.html) | 5 | English |
-| [الإنجليزي من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/english-a1-to-b1.html) | 3 | Arabic |
-| [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 9 | English |
 | [مطوّر باك إند بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend-ar.html) | 5 | Arabic |
-| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 7 | English |
-| [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 2 | English |
-| [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
-| [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
-| [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
-| [الإسباني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/spanish-a1-to-b1.html) | 3 | Arabic |
-| [الألماني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/german-a1-to-b1.html) | 3 | Arabic |
 | [Front-end web developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer.html) | 4 | English |
 | [مطوّر واجهات ويب](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer-ar.html) | 4 | Arabic |
+| [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
+| [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
+| [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
+| [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 2 | English |
+| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 7 | English |
+| [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 5 | English |
+| [Get hired as an AI engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer.html) | 8 | English |
+| [التوظيف مهندس ذكاء اصطناعي](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer-ar.html) | 8 | Arabic |
+| [Maths for machine learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/maths-for-machine-learning.html) | 4 | English |
+| [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 9 | English |
+| [Machine learning, from the maths up](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/machine-learning-engineer.html) | 13 | English |
+| [الإنجليزي من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/english-a1-to-b1.html) | 3 | Arabic |
+| [الإسباني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/spanish-a1-to-b1.html) | 3 | Arabic |
+| [الألماني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/german-a1-to-b1.html) | 3 | Arabic |
 
 Roadmaps live in [`roadmaps/`](roadmaps), one small YAML file each:
 

@@ -1,10 +1,10 @@
 id: machine-learning-engineer
 title: Machine learning, from the maths up
-description: The long road, taken in the right order. Python, the maths, classic machine learning, then deep learning up to transformers.
+description: The longest path in the library, taken in the right order. Python, the maths, classic machine learning, then deep learning up to transformers. It holds the maths and deep learning paths inside it.
 language: en
 author: inPace
 official: true
-order: 4
+order: 15
 tags: [machine learning, deep learning, math, python, career]
 steps:
   - course: python-full
@@ -13,17 +13,24 @@ steps:
   - course: mml-1-linear-algebra-geometry
     note: The maths starts here. Take your time with it, it pays off for the rest of the road.
   - course: mml-2-decompositions-calculus
+    note: Eigenvalues, the SVD and gradients. This is where backpropagation comes from.
   - course: mml-3-probability-optimization
+    note: "Uncertainty and how models learn: probability, Bayes and gradient descent."
   - course: mml-4-machine-learning-problems
+    note: The maths put to work. Regression, PCA, mixtures and SVMs.
   - course: mls-1-supervised
     note: Now the classic algorithms, with the maths already in your pocket.
   - course: mls-2-advanced-algorithms
+    note: Your first neural networks, how to judge a model, and decision trees.
   - course: mls-3-unsupervised-rl
+    note: Clustering, recommenders and reinforcement learning.
   - course: dl-1-neural-networks
     note: Deep learning, in five parts. The first one builds a network by hand.
   - course: dl-2-improving-networks
+    note: Make networks train well. Regularization, optimizers and tuning.
   - course: dl-3-ml-projects
     note: Short and practical. How to run a real machine learning project.
   - course: dl-4-cnns
+    note: Networks that see. Convolutions and computer vision.
   - course: dl-5-sequence-models
     note: Attention and transformers, the ideas behind today's language models.

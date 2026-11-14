@@ -4,7 +4,7 @@ description: From your first web page to a JavaScript app you publish online, wi
 language: en
 author: inPace
 official: true
-order: 17
+order: 3
 tags: [web, javascript, frontend, career]
 steps:
   - course: html-css-for-inpace
@@ -12,7 +12,7 @@ steps:
   - course: javascript-full
     note: The heart of the path. You build Study Tasks and publish it on GitHub Pages.
   - course: docker-kubernetes-en
-    note: Ship your work in a container. Useful when you move to full-stack.
+    note: Ship your work in a container, useful when you move to full-stack. The video is in Egyptian Arabic; the English notes cover everything.
     optional: true
   - course: system-design-beginners
     note: How big web services are designed. A common interview topic.

@@ -1,10 +1,10 @@
 id: build-inpace
 title: Build inPace yourself
-description: Learn the whole stack behind this app, one layer at a time, then read how it all fits together. A good way to start contributing.
+description: Learn the whole stack behind this app, one layer at a time (Python, pages, JavaScript, templates, the server), then read how it all fits together. A good way to start contributing.
 language: en
 author: inPace
 official: true
-order: 10
+order: 9
 tags: [web, python, frontend, backend, open source]
 steps:
   - course: python-full
