@@ -4,7 +4,7 @@ description: Learn the whole stack behind this app, one layer at a time (Python,
 language: en
 author: inPace
 official: true
-order: 9
+order: 11
 tags: [web, python, frontend, backend, open source]
 steps:
   - course: python-full
@@ -21,5 +21,8 @@ steps:
     note: How Python fills the pages with your courses.
   - course: fastapi-starlette-for-inpace
     note: The server that answers every click.
+  - course: github-actions-cli
+    note: inPace's tests, website and releases run on GitHub Actions, and contributions come as pull requests.
+    optional: true
   - course: inpace-inside
     note: Now the whole app, from the vault to the island.

@@ -1,0 +1,377 @@
+q1:
+  text: أين يحفظ Git تاريخ المشروع؟
+  show: 4
+  options:
+    a: في مجلد .git المخفي
+    b: .git داخل مجلد المشروع
+    c: على GitHub فقط
+    d: في README.md
+    e: في حساب سحابي
+    f: في مجلد تثبيت Git
+q2:
+  text: أي أمر يضع تغييرًا في منطقة التجهيز؟
+  show: 4
+  options:
+    a: git add
+    b: git add <file>
+    c: git commit
+    d: git init
+    e: git stage-all
+    f: git push
+q3:
+  text: يظهر git status عبارة "Untracked files". ماذا تعني؟
+  show: 4
+  options:
+    a: ملفات جديدة لا يتتبعها Git بعد
+    b: ملفات لم تُضف أبدًا
+    c: ملفات محذوفة
+    d: ملفات حُفظت بالفعل
+    e: ملفات فيها تعارض
+    f: ملفات على GitHub
+q4:
+  text: لماذا تضبط user.email على بريد GitHub؟
+  show: 4
+  options:
+    a: كي يربط GitHub الـ commits بحسابك
+    b: تظهر الـ commits باسمك على GitHub
+    c: لا يستطيع Git الحفظ دون إنترنت
+    d: لأنه كلمة مرورك
+    e: لتصلك رسالة مع كل commit
+    f: يجعل push أسرع
+q5:
+  text: 'اعرض ما سيحفظه الـ commit القادم:'
+  show: 4
+  options:
+    a: git diff --staged
+    b: git diff --cached
+    c: git diff
+    d: git log -p
+    e: git status --all
+    f: git show HEAD
+q6:
+  text: حفظت .env وفيه كلمة مرور. ماذا يجب أن تفعل؟
+  show: 4
+  options:
+    a: غيّر كلمة المرور، ثم أوقف تتبع الملف وتجاهله
+    b: أضفه إلى .gitignore فقط
+    c: احذف الملف واحفظ
+    d: لا شيء، فهو خاص
+    e: غيّر اسم الملف
+q7:
+  text: أي عنوان commit جيد؟
+  show: 4
+  options:
+    a: Fix total when the list is empty
+    b: Add login form
+    c: changes
+    d: fixed stuff and also renamed files and updated readme
+    e: WIP
+    f: asdf
+q8:
+  text: HEAD~2 تعني...
+  show: 4
+  options:
+    a: قبل الـ commit الحالي بـ commit-ين
+    b: الفرع الثاني
+    c: بعد commit-ين
+    d: الملف الثاني
+    e: الـ commit الذي رقمه 2
+q9:
+  text: 'تراجَع بأمان عن commit موجود على GitHub:'
+  show: 4
+  options:
+    a: git revert <hash>
+    b: استخدم revert
+    c: git reset --hard HEAD~1 then force push
+    d: git commit --amend
+    e: git restore .
+    f: git clean -fd
+q10:
+  text: بعد git reset --soft HEAD~1 تكون تغييرات آخر commit...
+  show: 4
+  options:
+    a: مجهَّزة
+    b: في منطقة التجهيز
+    c: محذوفة
+    d: في ملفاتك فقط وغير مجهَّزة
+    e: مرفوعة
+    f: في الـ stash
+q11:
+  text: أضعت commits بـ reset --hard. أين تجدها؟
+  show: 4
+  options:
+    a: git reflog
+    b: في الـ reflog
+    c: git log
+    d: git status
+    e: git stash list
+    f: .gitignore
+q12:
+  text: أيها يضيّع العمل دون أي طريقة لاستعادته؟
+  show: 4
+  options:
+    a: git restore على تعديلات لم تُحفظ أبدًا
+    b: git clean -f على ملفات غير متتبَّعة
+    c: git revert
+    d: git reset --soft
+    e: git commit --amend
+    f: git branch rescue
+q13:
+  text: 'أنشئ فرعًا اسمه fix وانتقل إليه:'
+  show: 4
+  options:
+    a: git switch -c fix
+    b: git checkout -b fix
+    c: git branch fix --go
+    d: git switch fix (when it doesn't exist)
+    e: git merge fix
+    f: git new fix
+q14:
+  text: الفرع هو...
+  show: 4
+  options:
+    a: مؤشر متحرك إلى commit
+    b: نسخة من كل الملفات
+    c: مجلد منفصل
+    d: ميزة في GitHub فقط
+    e: ملف مضغوط للمشروع
+q15:
+  text: 'أوقف دمجًا ساء وارجع:'
+  show: 4
+  options:
+    a: git merge --abort
+    b: merge --abort
+    c: git merge --stop
+    d: git reset --soft
+    e: git commit --amend
+    f: git branch -D main
+q16:
+  text: بعد أن تعدّل ملفًا فيه تعارض...
+  show: 4
+  options:
+    a: تجهّزه بـ git add ثم git commit
+    b: ترفعه بـ git push مباشرة
+    c: تدمج مرة أخرى
+    d: تستعيده بـ git restore
+    e: تحذف الفرع أولًا
+q17:
+  text: رُفض الـ push برسالة "fetch first". ماذا تفعل؟
+  show: 4
+  options:
+    a: git pull --rebase, then git push
+    b: احصل على commits الآخرين أولًا ثم ارفع
+    c: git push --force
+    d: Delete the GitHub repo
+    e: git reset --hard HEAD~1
+    f: git clone again and copy files
+q18:
+  text: أي ملف لا يجب أن تشاركه أبدًا؟
+  show: 4
+  options:
+    a: ~/.ssh/id_ed25519
+    b: المفتاح الخاص
+    c: ~/.ssh/id_ed25519.pub
+    d: README.md
+    e: .gitignore
+    f: ~/.gitconfig
+q19:
+  text: git fetch...
+  show: 4
+  options:
+    a: ينزّل commits الجديدة دون تغيير ملفاتك
+    b: يرفع commits الخاصة بك
+    c: يدمج في فرعك
+    d: يحذف الفروع المحلية
+    e: يعيد ضبط main
+q20:
+  text: 'الطريقة الآمنة للكتابة فوق فرعك المرفوع بعد rebase:'
+  show: 4
+  options:
+    a: git push --force-with-lease
+    b: git push --force
+    c: git push -u
+    d: git push --all
+    e: git push --tags
+q21:
+  text: 'في git rebase -i ادمج commit في الذي فوقه واحتفظ برسالة الذي فوقه:'
+  show: 4
+  options:
+    a: fixup
+    b: squash
+    c: pick
+    d: reword
+    e: drop
+q22:
+  text: 'بعد حل تعارض أثناء rebase:'
+  show: 4
+  options:
+    a: git add, then git rebase --continue
+    b: git commit -m "fix"
+    c: git merge --continue
+    d: git push
+    e: git rebase --start
+q23:
+  text: أيها آمن لعمل rebase له؟
+  show: 4
+  options:
+    a: فرع ميزتك الذي لا يملكه غيرك
+    b: main في مستودع مشترك
+    c: فرع زميل مرفوع
+    d: وسم إصدار
+    e: origin/main
+q24:
+  text: لماذا تأخذ الـ commits بعد rebase أرقام hash جديدة؟
+  show: 4
+  options:
+    a: لها أب جديد، فهي commits جديدة
+    b: يضيف Git التاريخ إلى كل hash يوميًا
+    c: GitHub يعيد تسميتها
+    d: الـ hashes عشوائية
+    e: الـ rebase يضغطها
+q25:
+  text: 'تريد المساهمة في مشروع لا تستطيع الرفع إليه. أولًا:'
+  show: 4
+  options:
+    a: اعمل له fork
+    b: اصنع نسختك على GitHub (fork)
+    c: اطلب كلمة مرورهم
+    d: git push --force
+    e: أرسل لهم ملفًا مضغوطًا بالبريد
+    f: انسخه وارفع إلى main
+q26:
+  text: إصدار لإصلاح خطأ بعد 2.3.1 هو...
+  show: 4
+  options:
+    a: 2.3.2
+    b: 2.4.0
+    c: 3.0.0
+    d: 2.3.1.1
+    e: '2.31'
+q27:
+  text: هل يرسل git push الوسوم؟
+  show: 4
+  options:
+    a: لا، ارفعها باسمها أو بـ --follow-tags
+    b: نعم، دائمًا
+    c: الخفيفة فقط
+    d: على main فقط
+    e: فقط إن كانت موقَّعة
+q28:
+  text: في إعداد الـ fork تعني "upstream" عادة...
+  show: 4
+  options:
+    a: المشروع الأصلي
+    b: الـ fork الخاص بك
+    c: جهازك
+    d: أحدث وسم
+    e: GitHub Actions
+q29:
+  text: 'انسخ commit واحدًا من فرع آخر إلى فرعك:'
+  show: 4
+  options:
+    a: git cherry-pick <hash>
+    b: git merge <hash> --one
+    c: git stash <hash>
+    d: git rebase -i <hash>
+    e: git pull <hash>
+q30:
+  text: 'اعثر على الـ commits التي أضافت أو حذفت النص "apiKey":'
+  show: 4
+  options:
+    a: git log -S "apiKey"
+    b: git grep "apiKey"
+    c: git blame "apiKey"
+    d: git status "apiKey"
+    e: git log --author "apiKey"
+q31:
+  text: 'ضع في الـ stash ملفاتك الجديدة غير المتتبَّعة أيضًا:'
+  show: 4
+  options:
+    a: git stash push -u
+    b: git stash -u
+    c: git stash
+    d: git stash pop -u
+    e: git stash list -u
+    f: git stash --new
+q32:
+  text: 'اعمل على main في مجلد ثانٍ دون أن تترك فرعك:'
+  show: 4
+  options:
+    a: git worktree add ../other main
+    b: git clone . ../other --same
+    c: git submodule add main
+    d: git switch -c main
+    e: git branch ../other
+q33:
+  text: أي كائن يحمل محتوى الملف؟
+  show: 4
+  options:
+    a: blob
+    b: tree
+    c: commit
+    d: ref
+    e: index
+q34:
+  text: يُحفظ الفرع كـ...
+  show: 4
+  options:
+    a: ملف صغير فيه hash لـ commit
+    b: نسخة من المشروع
+    c: ملف مضغوط في .git
+    d: جدول قاعدة بيانات على GitHub
+    e: قائمة من الفروق
+q35:
+  text: 'في detached HEAD عملت commits. احتفظ بها:'
+  show: 4
+  options:
+    a: git switch -c <new-branch>
+    b: git switch main
+    c: git stash pop
+    d: git reset --hard
+    e: git fetch
+q36:
+  text: الـ merge commit له...
+  show: 4
+  options:
+    a: أبَوان
+    b: لا أب
+    c: أب واحد
+    d: لا شجرة
+    e: شجرتان
+q37:
+  text: 'دمج مرفوع أدخل خطأ. تراجع عنه بأمان:'
+  show: 4
+  options:
+    a: git revert -m 1 <merge-hash>
+    b: git reset --hard HEAD~1 and force push main
+    c: git merge --abort
+    d: git revert <merge-hash> (with no -m)
+    e: git rebase --skip
+q38:
+  text: 'رُفع سرّ. أول شيء تفعله:'
+  show: 4
+  options:
+    a: ألغِ السر أو غيّره
+    b: احذف الـ commit وارفع بالقوة
+    c: اجعل المستودع خاصًا
+    d: أضفه إلى .gitignore
+    e: غيّر اسم الملف
+q39:
+  text: 'شارك الـ hooks مع الفريق كله:'
+  show: 4
+  options:
+    a: git config core.hooksPath .githooks (with the folder committed)
+    b: استخدم أداة مثل pre-commit أو Husky
+    c: Commit the .git/hooks folder
+    d: Email the scripts
+    e: git push --hooks
+    f: Put them in .gitignore
+q40:
+  text: ماذا يثبت الـ commit الموقَّع؟
+  show: 4
+  options:
+    a: أن صاحب المفتاح هو من عمله
+    b: أن الكود بلا أخطاء
+    c: أن الاختبارات نجحت
+    d: أنه رُوجع
+    e: أنه مشفَّر

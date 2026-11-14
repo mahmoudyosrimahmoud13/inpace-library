@@ -4,7 +4,7 @@ description: From your first spreadsheet to dashboards and Python, in the order 
 language: en
 author: inPace
 official: true
-order: 10
+order: 12
 tags: [data analysis, excel, power bi, python, career]
 steps:
   - course: excel-tutorial-for-data-analysts

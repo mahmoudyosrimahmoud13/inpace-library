@@ -1,0 +1,373 @@
+id: git-zero-to-master
+title: Git from zero to master
+version: 1
+language: en
+description: Everything about Git, from your first commit to the level of a senior developer. Staging and good commits,
+  undoing anything (restore, reset, revert, reflog), branches and conflicts, GitHub with SSH, rebase and interactive
+  rebase, team workflows, forks and tags, stash, cherry-pick, bisect, worktrees, how Git works inside, a rescue
+  kit, hooks and signed commits. Every lesson is hands-on, and parts of freeCodeCamp's Git videos are optional extras
+  on top.
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Start: what Git is, and your first repository'
+  lessons:
+  - id: m1-l1
+    title: What Git is, and why everyone uses it
+    file: lessons/m1-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=70&end=320
+  - id: m1-l2
+    title: Install and set up Git
+    file: lessons/m1-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=692&end=810
+  - id: m1-l3
+    title: Your first repository
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=1050&end=1220
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Make a folder `git-practice`, run `git init`, and make 3 commits: a README, a second file, then a change
+      to the README. Upload a screenshot of `git log --oneline` and of `git config --global --list`.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain the working folder, the staging area and the repository, using something from real life (like
+      packing a box before you post it).
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'Commits: staging, diff, history and good habits'
+  lessons:
+  - id: m2-l1
+    title: Staging and seeing changes
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Reading history
+    file: lessons/m2-l2.md
+    minutes: 25
+  - id: m2-l3
+    title: .gitignore and the perfect commit
+    file: lessons/m2-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=87&end=487
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'In git-practice: add a `.gitignore` that ignores `.env` and `*.log`, make both files and show git status
+      ignores them. Then change two unrelated lines in one file and use `git add -p` to make two separate commits.
+      Upload a screenshot of `git lg` (the alias) and of `git show` for one of them.'
+  - id: m2-explain
+    type: explain
+    prompt: Why are small commits that each do one thing better than one big commit at the end of the day? Give
+      two reasons.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: Undo anything
+  lessons:
+  - id: m3-l1
+    title: Undo before you commit
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: 'Undo commits: amend, revert and reset'
+    file: lessons/m3-l2.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=3390&end=3710
+  - id: m3-l3
+    title: 'The reflog: Git''s safety net'
+    file: lessons/m3-l3.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'In git-practice, make 3 commits, then: amend the last one, revert one, use reset --soft to squash two
+      into one, and finally reset --hard HEAD~2 and bring the commits back with the reflog. Upload the `git reflog`
+      output and a screenshot of `git lg` at the end.'
+  - id: m3-explain
+    type: explain
+    prompt: When do you use revert and when reset? Explain with the rule about pushed commits.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: Branches, merging and conflicts
+  lessons:
+  - id: m4-l1
+    title: Branches are just pointers
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=1962&end=3390
+  - id: m4-l2
+    title: Merging
+    file: lessons/m4-l2.md
+    minutes: 30
+  - id: m4-l3
+    title: Merge conflicts
+    file: lessons/m4-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=1447&end=2028
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'In git-practice: make a branch `title`, change the first line of README.md there and commit. On main,
+      change the same line differently and commit. Merge `title` into main, resolve the conflict, and finish the
+      merge. Upload the file with the conflict markers (before you fixed it) and a screenshot of `git lg` after.'
+  - id: m4-explain
+    type: explain
+    prompt: What's the difference between a fast-forward and a three-way merge? When does each happen?
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'GitHub and remotes: push, pull, fetch'
+  lessons:
+  - id: m5-l1
+    title: Connect to GitHub with an SSH key
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=1230&end=1821
+  - id: m5-l2
+    title: clone, push, fetch and pull
+    file: lessons/m5-l2.md
+    minutes: 35
+  - id: m5-l3
+    title: When push is refused
+    file: lessons/m5-l3.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Set up an SSH key and push git-practice to a new GitHub repository (with git@ address). Then edit README.md
+      on the GitHub website and commit there, make a different commit on your computer, try to push (it's refused),
+      and fix it with `git pull --rebase`. Upload screenshots of `ssh -T git@github.com`, the refused push and `git
+      lg` at the end, and the repository link.
+  - id: m5-explain
+    type: explain
+    prompt: What's the difference between git fetch and git pull? Why is fetch never dangerous?
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'Rebase: clean history'
+  lessons:
+  - id: m6-l1
+    title: Merge or rebase?
+    file: lessons/m6-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=2028&end=2405
+  - id: m6-l2
+    title: 'Interactive rebase: edit your history'
+    file: lessons/m6-l2.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=83&end=534
+  - id: m6-l3
+    title: Conflicts during a rebase
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: In git-practice, on a new branch, make 5 commits including a typo fix and a "wip". Use `git rebase -i`
+      to reorder one, fixup the typo fix, reword one message and drop the wip. Then rebase the branch on main. Upload
+      `git lg` before and after.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the golden rule of rebasing. What exactly goes wrong if you rebase a branch other people already
+      pulled?
+    min_words: 50
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Teamwork: workflows, forks and tags'
+  lessons:
+  - id: m7-l1
+    title: Branching strategies
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=487&end=1036
+  - id: m7-l2
+    title: Forks and contributing to other projects
+    file: lessons/m7-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=3710&end=4075
+  - id: m7-l3
+    title: Tags and versions
+    file: lessons/m7-l3.md
+    minutes: 25
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Fork a public practice repository (for example [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)),
+      follow its steps: branch, commit, push to your fork, open a pull request. Also add an annotated tag v0.1.0
+      to git-practice and push it. Upload the pull request link and the tag''s link.'
+  - id: m7-explain
+    type: explain
+    prompt: Compare GitHub flow and Git flow. Which would you pick for a website team, and which for a mobile app
+      with releases every two months? Why?
+    min_words: 50
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: Power tools
+  lessons:
+  - id: m8-l1
+    title: 'stash: put work aside'
+    file: lessons/m8-l1.md
+    minutes: 20
+  - id: m8-l2
+    title: 'cherry-pick: copy one commit'
+    file: lessons/m8-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=534&end=730
+  - id: m8-l3
+    title: 'Find things: log -S, blame and bisect'
+    file: lessons/m8-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=1770&end=2006
+  - id: m8-l4
+    title: Worktrees, submodules and big files
+    file: lessons/m8-l4.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=1122&end=1770
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'In git-practice: (1) start a change, stash it, make a fix on another branch, come back and pop. (2)
+      Cherry-pick a commit from one branch to another. (3) Make 10 commits where one breaks a small test script
+      (`test.sh` that exits 1), then find it with `git bisect run ./test.sh`. Upload the bisect output and `git
+      stash list` at the moment you stashed.'
+  - id: m8-explain
+    type: explain
+    prompt: How does git bisect find the bad commit among 1000 commits in about 10 steps? Explain the idea.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: Inside Git
+  lessons:
+  - id: m9-l1
+    title: 'Objects: blobs, trees and commits'
+    file: lessons/m9-l1.md
+    minutes: 35
+  - id: m9-l2
+    title: Refs, HEAD and detached HEAD
+    file: lessons/m9-l2.md
+    minutes: 30
+  - id: m9-l3
+    title: What merge and rebase really do
+    file: lessons/m9-l3.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'In a new tiny repository with 2 commits, explore with `git cat-file`: print the commit, its tree, a
+      blob, and the parent. Then make a commit in detached HEAD, switch away, and save it with a branch from the
+      reflog. Upload the outputs with one line of your own explanation for each.'
+  - id: m9-explain
+    type: explain
+    prompt: Why does changing one old commit change the hash of every commit after it? Use the words blob, tree
+      and parent.
+    min_words: 50
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'Master level: rescue, setup, hooks and signing'
+  lessons:
+  - id: m10-l1
+    title: The rescue kit
+    file: lessons/m10-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=730&end=1122
+  - id: m10-l2
+    title: Set Git up like a pro
+    file: lessons/m10-l2.md
+    minutes: 30
+  - id: m10-l3
+    title: Signed commits
+    file: lessons/m10-l3.md
+    minutes: 20
+  - id: m10-l4
+    title: Where to go next
+    file: lessons/m10-l4.md
+    minutes: 10
+    optional: true
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: Set up your global config with the aliases and settings from the lesson, add a pre-commit hook that
+      runs a test, and sign your commits with your SSH key. Push a signed commit to GitHub. Upload `git config --global
+      --list`, the hook blocking a commit, and a screenshot of the Verified badge on GitHub.
+  - id: m10-explain
+    type: explain
+    prompt: A teammate pushed an API key by mistake. Write the exact steps you'd tell them, in order, and why the
+      order matters.
+    min_words: 50
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

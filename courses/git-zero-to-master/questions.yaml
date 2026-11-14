@@ -1,0 +1,377 @@
+q1:
+  text: Where does Git keep a project's history?
+  show: 4
+  options:
+    a: In the hidden .git folder
+    b: .git, inside the project folder
+    c: On GitHub only
+    d: In README.md
+    e: In a cloud account
+    f: In Git's install folder
+q2:
+  text: Which command puts a change in the staging area?
+  show: 4
+  options:
+    a: git add
+    b: git add <file>
+    c: git commit
+    d: git init
+    e: git stage-all
+    f: git push
+q3:
+  text: git status shows "Untracked files". What does it mean?
+  show: 4
+  options:
+    a: New files Git doesn't track yet
+    b: Files never added
+    c: Deleted files
+    d: Files already committed
+    e: Files with conflicts
+    f: Files on GitHub
+q4:
+  text: Why set user.email to your GitHub email?
+  show: 4
+  options:
+    a: So GitHub links your commits to your account
+    b: Commits show as yours on GitHub
+    c: Git can't commit without internet
+    d: It's your password
+    e: To get emails for each commit
+    f: It makes push faster
+q5:
+  text: 'See what the next commit will save:'
+  show: 4
+  options:
+    a: git diff --staged
+    b: git diff --cached
+    c: git diff
+    d: git log -p
+    e: git status --all
+    f: git show HEAD
+q6:
+  text: You committed .env with a password. What must you do?
+  show: 4
+  options:
+    a: Change the password, then untrack the file and ignore it
+    b: Only add it to .gitignore
+    c: Delete the file and commit
+    d: Nothing, it's private
+    e: Rename the file
+q7:
+  text: Which is a good commit subject?
+  show: 4
+  options:
+    a: Fix total when the list is empty
+    b: Add login form
+    c: changes
+    d: fixed stuff and also renamed files and updated readme
+    e: WIP
+    f: asdf
+q8:
+  text: HEAD~2 means...
+  show: 4
+  options:
+    a: Two commits before the current one
+    b: The second branch
+    c: Two commits ahead
+    d: The second file
+    e: The commit with hash 2
+q9:
+  text: 'Undo a commit that''s already on GitHub, safely:'
+  show: 4
+  options:
+    a: git revert <hash>
+    b: revert it
+    c: git reset --hard HEAD~1 then force push
+    d: git commit --amend
+    e: git restore .
+    f: git clean -fd
+q10:
+  text: After git reset --soft HEAD~1, the last commit's changes are...
+  show: 4
+  options:
+    a: Staged
+    b: In the staging area
+    c: Deleted
+    d: Only in your files, unstaged
+    e: Pushed
+    f: In the stash
+q11:
+  text: You lost commits with reset --hard. Where do you find them?
+  show: 4
+  options:
+    a: git reflog
+    b: In the reflog
+    c: git log
+    d: git status
+    e: git stash list
+    f: .gitignore
+q12:
+  text: Which loses work with no way to get it back?
+  show: 4
+  options:
+    a: git restore on edits never committed
+    b: git clean -f on untracked files
+    c: git revert
+    d: git reset --soft
+    e: git commit --amend
+    f: git branch rescue
+q13:
+  text: 'Make a branch called fix and move to it:'
+  show: 4
+  options:
+    a: git switch -c fix
+    b: git checkout -b fix
+    c: git branch fix --go
+    d: git switch fix (when it doesn't exist)
+    e: git merge fix
+    f: git new fix
+q14:
+  text: A branch is...
+  show: 4
+  options:
+    a: A movable pointer to a commit
+    b: A copy of all the files
+    c: A separate folder
+    d: A GitHub feature only
+    e: A zip of the project
+q15:
+  text: 'Stop a merge that went wrong and go back:'
+  show: 4
+  options:
+    a: git merge --abort
+    b: merge --abort
+    c: git merge --stop
+    d: git reset --soft
+    e: git commit --amend
+    f: git branch -D main
+q16:
+  text: After you edit a conflicted file, you...
+  show: 4
+  options:
+    a: git add it, then git commit
+    b: git push right away
+    c: git merge again
+    d: git restore it
+    e: Delete the branch first
+q17:
+  text: 'Your push is rejected: "fetch first". What do you do?'
+  show: 4
+  options:
+    a: git pull --rebase, then git push
+    b: Get their commits first, then push
+    c: git push --force
+    d: Delete the GitHub repo
+    e: git reset --hard HEAD~1
+    f: git clone again and copy files
+q18:
+  text: Which file must you NEVER share?
+  show: 4
+  options:
+    a: ~/.ssh/id_ed25519
+    b: The private key
+    c: ~/.ssh/id_ed25519.pub
+    d: README.md
+    e: .gitignore
+    f: ~/.gitconfig
+q19:
+  text: git fetch...
+  show: 4
+  options:
+    a: Downloads new commits without changing your files
+    b: Uploads your commits
+    c: Merges into your branch
+    d: Deletes local branches
+    e: Resets main
+q20:
+  text: 'The safe way to overwrite your own pushed branch after a rebase:'
+  show: 4
+  options:
+    a: git push --force-with-lease
+    b: git push --force
+    c: git push -u
+    d: git push --all
+    e: git push --tags
+q21:
+  text: 'In git rebase -i, join a commit into the one above and keep the above message:'
+  show: 4
+  options:
+    a: fixup
+    b: squash
+    c: pick
+    d: reword
+    e: drop
+q22:
+  text: 'After fixing a conflict during a rebase:'
+  show: 4
+  options:
+    a: git add, then git rebase --continue
+    b: git commit -m "fix"
+    c: git merge --continue
+    d: git push
+    e: git rebase --start
+q23:
+  text: Which is safe to rebase?
+  show: 4
+  options:
+    a: Your feature branch nobody else has
+    b: main on a shared repo
+    c: A teammate's pushed branch
+    d: A release tag
+    e: origin/main
+q24:
+  text: Why do rebased commits get new hashes?
+  show: 4
+  options:
+    a: They have a new parent, so they're new commits
+    b: Git adds the date to every hash daily
+    c: GitHub renames them
+    d: Hashes are random
+    e: Rebase compresses them
+q25:
+  text: 'You want to contribute to a project you can''t push to. First:'
+  show: 4
+  options:
+    a: Fork it
+    b: Make your own copy on GitHub (fork)
+    c: Ask for their password
+    d: git push --force
+    e: Email them a zip
+    f: Clone and push to main
+q26:
+  text: A bug fix release after 2.3.1 is...
+  show: 4
+  options:
+    a: 2.3.2
+    b: 2.4.0
+    c: 3.0.0
+    d: 2.3.1.1
+    e: '2.31'
+q27:
+  text: Does git push send your tags?
+  show: 4
+  options:
+    a: No, push them by name or with --follow-tags
+    b: Yes, always
+    c: Only lightweight tags
+    d: Only on main
+    e: Only if signed
+q28:
+  text: In a fork setup, "upstream" usually means...
+  show: 4
+  options:
+    a: The original project
+    b: Your fork
+    c: Your computer
+    d: The newest tag
+    e: GitHub Actions
+q29:
+  text: 'Copy one commit from another branch onto yours:'
+  show: 4
+  options:
+    a: git cherry-pick <hash>
+    b: git merge <hash> --one
+    c: git stash <hash>
+    d: git rebase -i <hash>
+    e: git pull <hash>
+q30:
+  text: 'Find the commits that added or removed the text "apiKey":'
+  show: 4
+  options:
+    a: git log -S "apiKey"
+    b: git grep "apiKey"
+    c: git blame "apiKey"
+    d: git status "apiKey"
+    e: git log --author "apiKey"
+q31:
+  text: 'Stash also your new, untracked files:'
+  show: 4
+  options:
+    a: git stash push -u
+    b: git stash -u
+    c: git stash
+    d: git stash pop -u
+    e: git stash list -u
+    f: git stash --new
+q32:
+  text: 'Work on main in a second folder without leaving your branch:'
+  show: 4
+  options:
+    a: git worktree add ../other main
+    b: git clone . ../other --same
+    c: git submodule add main
+    d: git switch -c main
+    e: git branch ../other
+q33:
+  text: Which object holds a file's content?
+  show: 4
+  options:
+    a: blob
+    b: tree
+    c: commit
+    d: ref
+    e: index
+q34:
+  text: A branch is stored as...
+  show: 4
+  options:
+    a: A small file with a commit hash
+    b: A copy of the project
+    c: A zip in .git
+    d: A database table on GitHub
+    e: A list of diffs
+q35:
+  text: 'In detached HEAD you made commits. Keep them:'
+  show: 4
+  options:
+    a: git switch -c <new-branch>
+    b: git switch main
+    c: git stash pop
+    d: git reset --hard
+    e: git fetch
+q36:
+  text: A merge commit has...
+  show: 4
+  options:
+    a: Two parents
+    b: No parent
+    c: One parent
+    d: No tree
+    e: Two trees
+q37:
+  text: 'A pushed merge brought a bug. Undo it safely:'
+  show: 4
+  options:
+    a: git revert -m 1 <merge-hash>
+    b: git reset --hard HEAD~1 and force push main
+    c: git merge --abort
+    d: git revert <merge-hash> (with no -m)
+    e: git rebase --skip
+q38:
+  text: 'A secret was pushed. The FIRST thing to do:'
+  show: 4
+  options:
+    a: Revoke or change the secret
+    b: Delete the commit and force push
+    c: Make the repo private
+    d: Add it to .gitignore
+    e: Rename the file
+q39:
+  text: 'Share Git hooks with the whole team:'
+  show: 4
+  options:
+    a: git config core.hooksPath .githooks (with the folder committed)
+    b: Use a tool like pre-commit or Husky
+    c: Commit the .git/hooks folder
+    d: Email the scripts
+    e: git push --hooks
+    f: Put them in .gitignore
+q40:
+  text: What does a signed commit prove?
+  show: 4
+  options:
+    a: That it was made by the key's owner
+    b: That the code has no bugs
+    c: That tests passed
+    d: That it was reviewed
+    e: That it's encrypted

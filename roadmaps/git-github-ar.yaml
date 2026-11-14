@@ -1,0 +1,16 @@
+id: git-github-ar
+title: احترف Git و GitHub
+description: كل وظيفة برمجة تطلب Git. تعلّمه إلى مستوى الخبراء، ثم اعمل على GitHub كفريق محترف، بالمراجعات وأداة gh والاختبارات والإصدارات التلقائية.
+language: ar
+author: inPace
+official: true
+order: 2
+tags: [git, github, devops, arabic]
+steps:
+  - course: git-zero-to-master-ar
+    note: الـ commits والتراجع والفروع و rebase والعمل مع فريق وكيف يعمل Git من الداخل. كل ما بعده يعتمد عليه.
+  - course: github-actions-cli-ar
+    note: طلبات الدمج والمراجعات، وأداة gh، و GitHub Actions لاختبار عملك ونشره.
+  - course: docker-kubernetes-ar
+    note: ابنِ الحاويات وانشرها، وهي الخطوة التالية بعد خط CI.
+    optional: true

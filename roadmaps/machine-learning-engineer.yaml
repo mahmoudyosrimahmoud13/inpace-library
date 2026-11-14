@@ -4,7 +4,7 @@ description: The longest path in the library, taken in the right order. Python, 
 language: en
 author: inPace
 official: true
-order: 15
+order: 17
 tags: [machine learning, deep learning, math, python, career]
 steps:
   - course: python-full

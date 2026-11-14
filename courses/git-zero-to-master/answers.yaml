@@ -1,0 +1,177 @@
+q1:
+  right:
+  - a
+  - b
+  why: 'Git works offline: the history is in .git. GitHub is only an online copy.'
+q2:
+  right:
+  - a
+  - b
+  why: add stages; commit saves what's staged.
+q3:
+  right:
+  - a
+  - b
+  why: Untracked means Git sees the file but has never saved it.
+q4:
+  right:
+  - a
+  - b
+  why: Each commit records the email; GitHub matches it to accounts.
+q5:
+  right:
+  - a
+  - b
+  why: Plain git diff shows unstaged changes.
+q6:
+  right:
+  - a
+  why: The password stays in the history, so it must be treated as leaked.
+q7:
+  right:
+  - a
+  - b
+  why: Short, imperative, about one change.
+q8:
+  right:
+  - a
+  why: ~ walks back through parents.
+q9:
+  right:
+  - a
+  - b
+  why: revert adds a new commit, nobody's history breaks.
+q10:
+  right:
+  - a
+  - b
+  why: --soft keeps them staged, --mixed in your files, --hard deletes them.
+q11:
+  right:
+  - a
+  - b
+  why: The reflog lists every place HEAD has been.
+q12:
+  right:
+  - a
+  - b
+  why: Work that was never committed isn't in the reflog.
+q13:
+  right:
+  - a
+  - b
+  why: -c creates; plain switch needs an existing branch.
+q14:
+  right:
+  - a
+  why: That's why branches are cheap.
+q15:
+  right:
+  - a
+  - b
+  why: --abort restores the state before the merge.
+q16:
+  right:
+  - a
+  why: add marks it resolved; commit finishes the merge.
+q17:
+  right:
+  - a
+  - b
+  why: Pulling brings in their work so nothing is lost.
+q18:
+  right:
+  - a
+  - b
+  why: .pub is public; the file without .pub is private.
+q19:
+  right:
+  - a
+  why: pull = fetch + merge or rebase.
+q20:
+  right:
+  - a
+  why: It refuses if someone else pushed in between.
+q21:
+  right:
+  - a
+  why: squash asks you to edit the joined message.
+q22:
+  right:
+  - a
+  why: The rebase makes the commit itself.
+q23:
+  right:
+  - a
+  why: Rebasing makes new commits; only do it to commits only you have.
+q24:
+  right:
+  - a
+  why: A commit's hash covers its parent too (module 9).
+q25:
+  right:
+  - a
+  - b
+  why: You push to your fork, then open a pull request.
+q26:
+  right:
+  - a
+  why: Bug fixes bump PATCH.
+q27:
+  right:
+  - a
+  why: Tags need git push origin <tag> or --follow-tags.
+q28:
+  right:
+  - a
+  why: origin is your fork; upstream is where it came from.
+q29:
+  right:
+  - a
+  why: cherry-pick copies it as a new commit.
+q30:
+  right:
+  - a
+  why: grep searches the files now; log -S searches the history.
+q31:
+  right:
+  - a
+  - b
+  why: Without -u, untracked files stay behind.
+q32:
+  right:
+  - a
+  why: A worktree shares the repository.
+q33:
+  right:
+  - a
+  why: A tree holds names; a blob holds bytes.
+q34:
+  right:
+  - a
+  why: refs/heads/<name> holds the hash.
+q35:
+  right:
+  - a
+  why: A branch gives them a name so they aren't lost.
+q36:
+  right:
+  - a
+  why: One parent from each side.
+q37:
+  right:
+  - a
+  why: -m 1 says which parent's side to keep.
+q38:
+  right:
+  - a
+  why: Copies already exist; only revoking makes it useless.
+q39:
+  right:
+  - a
+  - b
+  why: .git/ is never committed.
+q40:
+  right:
+  - a
+  why: user.name can be faked; a signature can't.

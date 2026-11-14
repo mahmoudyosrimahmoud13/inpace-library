@@ -1,0 +1,365 @@
+id: git-zero-to-master-ar
+title: احترف Git من الصفر
+version: 1
+language: ar
+description: كل شيء عن Git، من أول commit إلى مستوى المطوّر الخبير. التجهيز والـ commits الجيدة، والتراجع عن أي
+  شيء (restore و reset و revert و reflog)، والفروع والتعارضات، و GitHub مع SSH، و rebase و rebase التفاعلي، وطرق
+  عمل الفرق، و forks والوسوم، و stash و cherry-pick و bisect و worktrees، وكيف يعمل Git من الداخل، وعُدّة إنقاذ،
+  و hooks، والـ commits الموقَّعة. كل درس عملي، وأجزاء من فيديوهات Git على freeCodeCamp إضافات اختيارية فوقها.
+image: cover.jpg
+modules:
+- id: m1
+  title: 'البداية: ما هو Git، وأول مستودع لك'
+  lessons:
+  - id: m1-l1
+    title: ما هو Git، ولماذا يستخدمه الجميع
+    file: lessons/m1-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=70&end=320
+  - id: m1-l2
+    title: ثبّت Git وجهّزه
+    file: lessons/m1-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=692&end=810
+  - id: m1-l3
+    title: أول مستودع لك
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=1050&end=1220
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'أنشئ مجلدًا `git-practice`، وشغّل `git init`، واعمل 3 commits: ملف README، ثم ملفًا ثانيًا، ثم تعديلًا
+      على README. ارفع صورة لنتيجة `git log --oneline` ولنتيجة `git config --global --list`.'
+  - id: m1-explain
+    type: explain
+    prompt: اشرح مجلد العمل ومنطقة التجهيز والمستودع بمثال من الحياة (مثل تجهيز صندوق قبل إرساله بالبريد).
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'الـ commits: التجهيز و diff والتاريخ والعادات الجيدة'
+  lessons:
+  - id: m2-l1
+    title: التجهيز ورؤية التغييرات
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: قراءة التاريخ
+    file: lessons/m2-l2.md
+    minutes: 25
+  - id: m2-l3
+    title: .gitignore والـ commit المثالي
+    file: lessons/m2-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=87&end=487
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'في git-practice: أضف `.gitignore` يتجاهل `.env` و `*.log`، وأنشئ الملفين وأثبت أن git status يتجاهلهما.
+      ثم غيّر سطرين لا علاقة بينهما في ملف واحد، واستخدم `git add -p` لتعمل commit-ين منفصلين. ارفع صورة لـ `git
+      lg` ولـ `git show` لأحدهما.'
+  - id: m2-explain
+    type: explain
+    prompt: لماذا الـ commits الصغيرة التي يفعل كل منها شيئًا واحدًا أفضل من commit كبير في آخر اليوم؟ اذكر سببين.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: تراجَع عن أي شيء
+  lessons:
+  - id: m3-l1
+    title: تراجَع قبل الحفظ
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: 'تراجَع عن الـ commits: amend و revert و reset'
+    file: lessons/m3-l2.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=3390&end=3710
+  - id: m3-l3
+    title: 'الـ reflog: شبكة الأمان في Git'
+    file: lessons/m3-l3.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'في git-practice اعمل 3 commits، ثم: عدّل الأخير بـ amend، وتراجع عن واحد بـ revert، واستخدم reset --soft
+      لدمج اثنين في واحد، وأخيرًا شغّل reset --hard HEAD~2 وأعد الـ commits بالـ reflog. ارفع نتيجة `git reflog`
+      وصورة لـ `git lg` في النهاية.'
+  - id: m3-explain
+    type: explain
+    prompt: متى تستخدم revert ومتى reset؟ اشرح بقاعدة الـ commits المرفوعة.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: الفروع والدمج والتعارضات
+  lessons:
+  - id: m4-l1
+    title: الفروع مجرد مؤشرات
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=1962&end=3390
+  - id: m4-l2
+    title: الدمج
+    file: lessons/m4-l2.md
+    minutes: 30
+  - id: m4-l3
+    title: تعارضات الدمج
+    file: lessons/m4-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=1447&end=2028
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'في git-practice: أنشئ فرعًا اسمه `title`، وغيّر أول سطر في README.md فيه واحفظ. وعلى main غيّر نفس
+      السطر بشكل مختلف واحفظ. ادمج `title` في main، وحلّ التعارض، وأكمل الدمج. ارفع الملف بعلامات التعارض (قبل الإصلاح)
+      وصورة لـ `git lg` بعده.'
+  - id: m4-explain
+    type: explain
+    prompt: ما الفرق بين fast-forward والدمج الثلاثي؟ ومتى يحدث كل منهما؟
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'GitHub والمستودعات البعيدة: push و pull و fetch'
+  lessons:
+  - id: m5-l1
+    title: اتصل بـ GitHub بمفتاح SSH
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=1230&end=1821
+  - id: m5-l2
+    title: clone و push و fetch و pull
+    file: lessons/m5-l2.md
+    minutes: 35
+  - id: m5-l3
+    title: عندما يُرفض الـ push
+    file: lessons/m5-l3.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: جهّز مفتاح SSH وارفع git-practice إلى مستودع جديد على GitHub (بعنوان git@). ثم عدّل README.md على موقع
+      GitHub واحفظ هناك، واعمل commit مختلفًا على جهازك، وجرّب الرفع (سيُرفض)، وأصلح الأمر بـ `git pull --rebase`.
+      ارفع صورًا لـ `ssh -T git@github.com` وللرفع المرفوض ولـ `git lg` في النهاية، ورابط المستودع.
+  - id: m5-explain
+    type: explain
+    prompt: ما الفرق بين git fetch و git pull؟ ولماذا لا يكون fetch خطرًا أبدًا؟
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'rebase: تاريخ نظيف'
+  lessons:
+  - id: m6-l1
+    title: merge أم rebase؟
+    file: lessons/m6-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=2028&end=2405
+  - id: m6-l2
+    title: 'rebase التفاعلي: عدّل تاريخك'
+    file: lessons/m6-l2.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=83&end=534
+  - id: m6-l3
+    title: التعارضات أثناء rebase
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: في git-practice، على فرع جديد، اعمل 5 commits منها إصلاح خطأ إملائي و "wip". استخدم `git rebase -i`
+      لتغيير ترتيب واحد، ودمج إصلاح الخطأ بـ fixup، وتعديل رسالة بـ reword، وحذف الـ wip. ثم اعمل rebase للفرع على
+      main. ارفع `git lg` قبل وبعد.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح القاعدة الذهبية للـ rebase. ما الذي يسوء بالضبط إن عملت rebase لفرع سحبه آخرون؟
+    min_words: 50
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'العمل مع فريق: طرق العمل و forks والوسوم'
+  lessons:
+  - id: m7-l1
+    title: استراتيجيات الفروع
+    file: lessons/m7-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=487&end=1036
+  - id: m7-l2
+    title: الـ forks والمساهمة في مشاريع غيرك
+    file: lessons/m7-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=RGOj5yH7evk&t=3710&end=4075
+  - id: m7-l3
+    title: الوسوم والإصدارات
+    file: lessons/m7-l3.md
+    minutes: 25
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'اعمل fork لمستودع تدريب عام (مثل [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions))،
+      واتبع خطواته: فرع، ثم commit، ثم push إلى الـ fork، ثم افتح طلب دمج. وأضف أيضًا وسمًا annotated باسم v0.1.0
+      إلى git-practice وارفعه. ارفع رابط طلب الدمج ورابط الوسم.'
+  - id: m7-explain
+    type: explain
+    prompt: قارن GitHub flow و Git flow. أيهما تختار لفريق موقع ويب، وأيهما لتطبيق هاتف بإصدار كل شهرين؟ ولماذا؟
+    min_words: 50
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: أدوات قوية
+  lessons:
+  - id: m8-l1
+    title: 'stash: ضع العمل جانبًا'
+    file: lessons/m8-l1.md
+    minutes: 20
+  - id: m8-l2
+    title: 'cherry-pick: انسخ commit واحدًا'
+    file: lessons/m8-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=534&end=730
+  - id: m8-l3
+    title: 'ابحث: log -S و blame و bisect'
+    file: lessons/m8-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=1770&end=2006
+  - id: m8-l4
+    title: worktrees و submodules والملفات الكبيرة
+    file: lessons/m8-l4.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=1122&end=1770
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'في git-practice: (1) ابدأ تغييرًا وضعه في الـ stash، واعمل إصلاحًا على فرع آخر، ثم ارجع واستعده بـ
+      pop. (2) انسخ commit من فرع إلى آخر بـ cherry-pick. (3) اعمل 10 commits يكسر أحدها سكربت اختبار صغيرًا (`test.sh`
+      ينتهي بالرقم 1)، ثم اعثر عليه بـ `git bisect run ./test.sh`. ارفع نتيجة bisect ونتيجة `git stash list` لحظة
+      الـ stash.'
+  - id: m8-explain
+    type: explain
+    prompt: كيف يجد git bisect الـ commit السيئ بين 1000 commit في نحو 10 خطوات؟ اشرح الفكرة.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: داخل Git
+  lessons:
+  - id: m9-l1
+    title: 'الكائنات: blobs و trees و commits'
+    file: lessons/m9-l1.md
+    minutes: 35
+  - id: m9-l2
+    title: المراجع و HEAD و detached HEAD
+    file: lessons/m9-l2.md
+    minutes: 30
+  - id: m9-l3
+    title: ما الذي يفعله merge و rebase حقًا
+    file: lessons/m9-l3.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'في مستودع صغير جديد فيه commit-ان، استكشف بـ `git cat-file`: اطبع الـ commit وشجرته و blob والأب. ثم
+      اعمل commit وأنت في detached HEAD، وانتقل بعيدًا، وأنقذه بفرع من الـ reflog. ارفع النتائج مع سطر شرح من عندك
+      لكل منها.'
+  - id: m9-explain
+    type: explain
+    prompt: لماذا يغيّر تعديلُ commit قديم واحد الـ hash لكل commit بعده؟ استخدم الكلمات blob و tree و parent.
+    min_words: 50
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'مستوى الاحتراف: الإنقاذ والإعداد و hooks والتوقيع'
+  lessons:
+  - id: m10-l1
+    title: عُدّة الإنقاذ
+    file: lessons/m10-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=qsTthZi23VE&t=730&end=1122
+  - id: m10-l2
+    title: جهّز Git كالمحترفين
+    file: lessons/m10-l2.md
+    minutes: 30
+  - id: m10-l3
+    title: الـ commits الموقَّعة
+    file: lessons/m10-l3.md
+    minutes: 20
+  - id: m10-l4
+    title: إلى أين بعد ذلك
+    file: lessons/m10-l4.md
+    minutes: 10
+    optional: true
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: اضبط إعداداتك العامة بالاختصارات والإعدادات من الدرس، وأضف hook من نوع pre-commit يشغّل اختبارًا، ووقّع
+      commits بمفتاح SSH. ارفع commit موقَّعًا إلى GitHub. ارفع نتيجة `git config --global --list`، والـ hook وهو
+      يمنع commit، وصورة لعلامة Verified على GitHub.
+  - id: m10-explain
+    type: explain
+    prompt: رفع زميلك مفتاح API بالخطأ. اكتب الخطوات التي ستقولها له بالترتيب، ولماذا يهم الترتيب.
+    min_words: 50
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

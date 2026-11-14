@@ -1,0 +1,117 @@
+q1:
+  right:
+  - a
+  - b
+  why: Closes و Fixes و Resolves هي الكلمات المفتاحية.
+q2:
+  right:
+  - a
+  why: مجلد .github يحمل ملفات إعدادات GitHub.
+q3:
+  right:
+  - a
+  - b
+  why: النقطة تفتح github.dev.
+q4:
+  right:
+  - a
+  why: يقرر الزائر في ثوانٍ إن كان المشروع يناسبه.
+q5:
+  right:
+  - a
+  why: الـ squash يجمع كل commits الفرع في واحد.
+q6:
+  right:
+  - a
+  why: Request changes يمنع الدمج حتى الإصلاح.
+q7:
+  right:
+  - a
+  - b
+  why: القواعد يفرضها GitHub، والملاحظات لا.
+q8:
+  right:
+  - a
+  why: المراجعون يمرّون على الفروق الكبيرة سريعًا.
+q9:
+  right:
+  - a
+  why: checkout يجلب فرعه وينتقل إليه.
+q10:
+  right:
+  - a
+  why: ‏--fill يستخدم معلومات الـ commits.
+q11:
+  right:
+  - a
+  why: ‏--log-failed يتخطى الخطوات الناجحة.
+q12:
+  right:
+  - a
+  why: ‏--generate-notes يطلب من GitHub كتابتها.
+q13:
+  right:
+  - a
+  why: ‏GitHub يبحث هناك فقط.
+q14:
+  right:
+  - a
+  why: ‏workflow_dispatch هو الحدث اليدوي.
+q15:
+  right:
+  - a
+  why: 'استخدم needs: ليجعل أحدهما ينتظر الآخر.'
+q16:
+  right:
+  - a
+  why: '‏run: لأوامر الطرفية.'
+q17:
+  right:
+  - a
+  why: 2 × 3 = 6.
+q18:
+  right:
+  - a
+  - b
+  why: الـ runners تُحذف، والـ artifacts تبقى مع التشغيل.
+q19:
+  right:
+  - a
+  why: التشغيلات في نفس مجموعة concurrency تحل محل بعضها.
+q20:
+  right:
+  - a
+  why: ‏hash ملف القفل هو مفتاح الـ cache.
+q21:
+  right:
+  - a
+  - b
+  why: الأسرار مشفَّرة ومخفية في السجلات.
+q22:
+  right:
+  - a
+  why: ‏needs يحدد الترتيب بين الـ jobs.
+q23:
+  right:
+  - a
+  why: الـ hash لا يمكن نقله، والوسوم والفروع يمكن.
+q24:
+  right:
+  - a
+  why: هذا يحميك من طلبات الدمج الخبيثة.
+q25:
+  right:
+  - a
+  why: ‏workflow_dispatch هو الزر اليدوي.
+q26:
+  right:
+  - a
+  why: خطوات run في الـ composite يجب أن تحدد الـ shell.
+q27:
+  right:
+  - a
+  why: '‏release.yml يعمل مع push: tags: v*.'
+q28:
+  right:
+  - a
+  why: النشر يعمل فقط إن نجحت الاختبارات.

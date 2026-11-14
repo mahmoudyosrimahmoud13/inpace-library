@@ -4,7 +4,7 @@ description: For people who already know some Flutter. Build apps the clean, tes
 language: en
 author: inPace
 official: true
-order: 7
+order: 9
 tags: [flutter, dart, mobile, interview]
 steps:
   - course: flutter-tdd-and-clean-architecture

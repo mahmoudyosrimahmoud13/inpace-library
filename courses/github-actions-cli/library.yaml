@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- github
+- git
+- github actions
+- ci/cd
+- devops
+- cli
+updated: '2026-11-14'
+credit: 'Written by inPace. Optional videos: freeCodeCamp.org (Git for Professionals, made with Tower) and TechWorld
+  with Nana (GitHub Actions Tutorial), on YouTube.'

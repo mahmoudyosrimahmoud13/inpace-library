@@ -1,0 +1,257 @@
+q1:
+  text: 'أغلق الـ issue رقم 12 تلقائيًا عندما يُدمج طلبك:'
+  show: 4
+  options:
+    a: 'Write "Closes #12" in the pull request'
+    b: 'Write "Fixes #12" in the pull request'
+    c: Write "#12 done" in a comment
+    d: Name the branch 12
+    e: Tag the commit 12
+    f: Add the label closed
+q2:
+  text: أين توجد نماذج الـ issues؟
+  show: 4
+  options:
+    a: .github/ISSUE_TEMPLATE/
+    b: .git/ISSUE_TEMPLATE/
+    c: docs/issues/
+    d: .github/workflows/
+    e: issues.yml at the top
+q3:
+  text: 'افتح مستودعًا في VS Code داخل المتصفح:'
+  show: 4
+  options:
+    a: اضغط مفتاح النقطة
+    b: اذهب إلى github.dev/<owner>/<repo>
+    c: اضغط F5
+    d: Settings ثم Editor
+    e: زر الفأرة الأيمن ثم Inspect
+    f: اضغط Ctrl+S
+q4:
+  text: يجب أن يبدأ README بـ...
+  show: 4
+  options:
+    a: ما هو المشروع، في جملة
+    b: نص الرخصة
+    c: سجل التغييرات
+    d: قائمة المساهمين
+    e: هيكل المجلدات
+q5:
+  text: أي طريقة دمج تضع commit واحدًا على main لطلب الدمج كله؟
+  show: 4
+  options:
+    a: Squash and merge
+    b: Create a merge commit
+    c: Rebase and merge
+    d: Fast-forward only
+    e: Cherry-pick merge
+q6:
+  text: 'وجد المراجع خطأ يجب إصلاحه. يختار:'
+  show: 4
+  options:
+    a: Request changes
+    b: Approve
+    c: Comment
+    d: Close the pull request
+    e: Merge and fix later
+q7:
+  text: 'تأكد أن أحدًا لا يدمج في main والاختبارات فاشلة:'
+  show: 4
+  options:
+    a: ruleset يشترط نجاح الفحوص
+    b: 'حماية الفرع: اشتراط الفحوص'
+    c: ملاحظة في README
+    d: CODEOWNERS وحده
+    e: وسم
+    f: جعل المستودع خاصًا
+q8:
+  text: لماذا تبقي طلبات الدمج صغيرة؟
+  show: 4
+  options:
+    a: الصغيرة تنال مراجعة حقيقية وتمر أخطاء أقل
+    b: يحدد GitHub طلب الدمج بـ 100 سطر
+    c: الكبيرة لا يمكن دمجها
+    d: Actions تختبر الصغيرة فقط
+    e: أسرع في الرفع
+q9:
+  text: 'احصل على طلب الدمج رقم 34 لزميلك على جهازك لتجربه:'
+  show: 4
+  options:
+    a: gh pr checkout 34
+    b: gh pr view 34
+    c: git pull 34
+    d: gh repo clone 34
+    e: gh pr merge 34
+q10:
+  text: 'افتح طلب دمج يأخذ العنوان والوصف من رسائل الـ commits:'
+  show: 4
+  options:
+    a: gh pr create --fill
+    b: gh pr create --auto
+    c: gh pr new --commits
+    d: git push --pr
+    e: gh pr open
+q11:
+  text: 'اعرض سجلات الخطوات الفاشلة فقط:'
+  show: 4
+  options:
+    a: gh run view --log-failed
+    b: gh run list --failed
+    c: gh logs --errors
+    d: gh run watch --fail
+    e: gh workflow logs
+q12:
+  text: 'إصدار بملاحظات مكتوبة من طلبات الدمج المدموجة:'
+  show: 4
+  options:
+    a: gh release create v1.0.0 --generate-notes
+    b: git tag v1.0.0 --notes
+    c: gh release create v1.0.0 --auto
+    d: gh tag push v1.0.0
+    e: git push --release
+q13:
+  text: أين يجب أن تكون ملفات الـ workflow؟
+  show: 4
+  options:
+    a: .github/workflows/
+    b: .github/actions/
+    c: workflows/
+    d: .git/workflows/
+    e: .actions/
+q14:
+  text: 'أضف زر Run workflow لتشغيله يدويًا:'
+  show: 4
+  options:
+    a: workflow_dispatch
+    b: 'manual: true'
+    c: 'on: button'
+    d: schedule
+    e: 'repository_dispatch: ui'
+q15:
+  text: ‏job-ان في workflow واحد، افتراضيًا، يعملان...
+  show: 4
+  options:
+    a: في الوقت نفسه، على جهازين منفصلين
+    b: واحدًا بعد الآخر على جهاز واحد
+    c: الأول فقط
+    d: بالترتيب الأبجدي
+    e: على جهازك
+q16:
+  text: الخطوة التي تستخدم action جاهزة تستخدم المفتاح...
+  show: 4
+  options:
+    a: 'uses:'
+    b: 'run:'
+    c: 'action:'
+    d: 'with: only'
+    e: 'needs:'
+q17:
+  text: 'matrix فيها os: [ubuntu-latest, windows-latest] و node: [20, 22, 24] تصنع كم job؟'
+  show: 4
+  options:
+    a: '6'
+    b: '5'
+    c: '2'
+    d: '3'
+    e: '1'
+q18:
+  text: 'احتفظ بتقرير الاختبارات بعد انتهاء التشغيل:'
+  show: 4
+  options:
+    a: ارفعه كـ artifact
+    b: actions/upload-artifact
+    c: احفظه في مجلد المستخدم على الـ runner
+    d: استخدم الـ cache
+    e: اطبعه بـ echo فقط
+    f: احفظه بـ commit من الـ runner
+q19:
+  text: 'أوقف تشغيلًا قديمًا عندما ترفع مرة أخرى إلى نفس الفرع:'
+  show: 4
+  options:
+    a: 'concurrency with cancel-in-progress: true'
+    b: 'timeout-minutes: 1'
+    c: 'fail-fast: true'
+    d: 'if: cancelled()'
+    e: 'needs: previous'
+q20:
+  text: '‏cache: npm في setup-node يحتاج...'
+  show: 4
+  options:
+    a: ملف قفل مثل package-lock.json
+    b: خطة مدفوعة
+    c: runner خاصًا
+    d: Docker
+    e: artifact
+q21:
+  text: أين يوضع مفتاح API للـ workflow؟
+  show: 4
+  options:
+    a: في أسرار Actions للمستودع
+    b: gh secret set NAME
+    c: في ملف YAML
+    d: في README
+    e: في متغير (vars)
+    f: في رسالة commit
+q22:
+  text: 'اجعل الـ deploy ينتظر job الاختبارات:'
+  show: 4
+  options:
+    a: 'needs: test'
+    b: 'after: test'
+    c: 'wait: test'
+    d: 'depends: test'
+    e: 'if: test'
+q23:
+  text: 'أكثر طريقة أمانًا لاستخدام action من طرف ثالث:'
+  show: 4
+  options:
+    a: ثبّتها على hash كامل لـ commit
+    b: استخدم @main
+    c: استخدم @latest
+    d: انسخ اسمها من مدونة
+    e: 'أعطها permissions: write-all'
+q24:
+  text: طلبات الدمج القادمة من forks...
+  show: 4
+  options:
+    a: لا تحصل على أسرار مستودعك
+    b: تحصل على كل الأسرار
+    c: لا تشغّل أي workflow
+    d: تُدمج تلقائيًا
+    e: تحصل على رمز كتابة في pull_request
+q25:
+  text: أي حدث يسمح لـ workflows أخرى باستدعاء هذا الـ workflow؟
+  show: 4
+  options:
+    a: workflow_call
+    b: workflow_dispatch
+    c: repository_dispatch
+    d: push
+    e: schedule
+q26:
+  text: 'في الـ composite action، كل خطوة run: تحتاج أيضًا...'
+  show: 4
+  options:
+    a: 'shell:'
+    b: 'runs-on:'
+    c: 'permissions:'
+    d: 'needs:'
+    e: 'env: only'
+q27:
+  text: في المشروع، ما الذي يجعل الإصدار يظهر؟
+  show: 4
+  options:
+    a: رفع وسم مثل v1.1.0
+    b: دمج أي طلب دمج
+    c: فتح issue
+    d: تشغيل npm test محليًا
+    e: تعديل README
+q28:
+  text: 'لماذا في pages.yml يوجد needs: test؟'
+  show: 4
+  options:
+    a: كي لا تُنشر نسخة مكسورة أبدًا
+    b: لأن Pages تشترطه
+    c: ليعمل أسرع
+    d: لحفظ الـ artifacts
+    e: للحصول على الرمز

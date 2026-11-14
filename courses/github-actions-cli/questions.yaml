@@ -1,0 +1,257 @@
+q1:
+  text: 'Close issue 12 automatically when your pull request is merged:'
+  show: 4
+  options:
+    a: 'Write "Closes #12" in the pull request'
+    b: 'Write "Fixes #12" in the pull request'
+    c: Write "#12 done" in a comment
+    d: Name the branch 12
+    e: Tag the commit 12
+    f: Add the label closed
+q2:
+  text: Where do issue forms live?
+  show: 4
+  options:
+    a: .github/ISSUE_TEMPLATE/
+    b: .git/ISSUE_TEMPLATE/
+    c: docs/issues/
+    d: .github/workflows/
+    e: issues.yml at the top
+q3:
+  text: 'Open a repository in a VS Code in the browser:'
+  show: 4
+  options:
+    a: Press the . key
+    b: Go to github.dev/<owner>/<repo>
+    c: Press F5
+    d: Settings -> Editor
+    e: Right click -> Inspect
+    f: Press Ctrl+S
+q4:
+  text: The README should start with...
+  show: 4
+  options:
+    a: What the project is, in a sentence
+    b: The license text
+    c: The changelog
+    d: A list of contributors
+    e: The folder structure
+q5:
+  text: Which merge method puts one commit on main for the whole pull request?
+  show: 4
+  options:
+    a: Squash and merge
+    b: Create a merge commit
+    c: Rebase and merge
+    d: Fast-forward only
+    e: Cherry-pick merge
+q6:
+  text: 'A reviewer finds a must-fix bug. They choose:'
+  show: 4
+  options:
+    a: Request changes
+    b: Approve
+    c: Comment
+    d: Close the pull request
+    e: Merge and fix later
+q7:
+  text: 'Make sure nobody merges into main with failing tests:'
+  show: 4
+  options:
+    a: A ruleset requiring status checks
+    b: 'Branch protection: require status checks'
+    c: A note in the README
+    d: CODEOWNERS only
+    e: A label
+    f: Making the repo private
+q8:
+  text: Why keep pull requests small?
+  show: 4
+  options:
+    a: Small ones get real reviews and fewer bugs slip in
+    b: GitHub limits PRs to 100 lines
+    c: Big ones can't be merged
+    d: Actions only test small PRs
+    e: It's faster to upload
+q9:
+  text: 'Get a teammate''s pull request 34 on your computer to try it:'
+  show: 4
+  options:
+    a: gh pr checkout 34
+    b: gh pr view 34
+    c: git pull 34
+    d: gh repo clone 34
+    e: gh pr merge 34
+q10:
+  text: 'Open a pull request using your commit messages as title and body:'
+  show: 4
+  options:
+    a: gh pr create --fill
+    b: gh pr create --auto
+    c: gh pr new --commits
+    d: git push --pr
+    e: gh pr open
+q11:
+  text: 'See only the logs of the steps that failed:'
+  show: 4
+  options:
+    a: gh run view --log-failed
+    b: gh run list --failed
+    c: gh logs --errors
+    d: gh run watch --fail
+    e: gh workflow logs
+q12:
+  text: 'A release with notes written from the merged pull requests:'
+  show: 4
+  options:
+    a: gh release create v1.0.0 --generate-notes
+    b: git tag v1.0.0 --notes
+    c: gh release create v1.0.0 --auto
+    d: gh tag push v1.0.0
+    e: git push --release
+q13:
+  text: Where must workflow files be?
+  show: 4
+  options:
+    a: .github/workflows/
+    b: .github/actions/
+    c: workflows/
+    d: .git/workflows/
+    e: .actions/
+q14:
+  text: 'Add a Run workflow button to start it by hand:'
+  show: 4
+  options:
+    a: workflow_dispatch
+    b: 'manual: true'
+    c: 'on: button'
+    d: schedule
+    e: 'repository_dispatch: ui'
+q15:
+  text: Two jobs in one workflow, by default, run...
+  show: 4
+  options:
+    a: At the same time, on separate machines
+    b: One after the other on one machine
+    c: Only the first one
+    d: In alphabetical order
+    e: On your computer
+q16:
+  text: A step that uses a ready-made action uses the key...
+  show: 4
+  options:
+    a: 'uses:'
+    b: 'run:'
+    c: 'action:'
+    d: 'with: only'
+    e: 'needs:'
+q17:
+  text: 'A matrix with os: [ubuntu-latest, windows-latest] and node: [20, 22, 24] makes how many jobs?'
+  show: 4
+  options:
+    a: '6'
+    b: '5'
+    c: '2'
+    d: '3'
+    e: '1'
+q18:
+  text: 'Keep a test report after the run ends:'
+  show: 4
+  options:
+    a: Upload it as an artifact
+    b: actions/upload-artifact
+    c: Save it in the runner's home folder
+    d: Use the cache
+    e: Print it with echo only
+    f: Commit it from the runner
+q19:
+  text: 'Stop an old run when you push again to the same branch:'
+  show: 4
+  options:
+    a: 'concurrency with cancel-in-progress: true'
+    b: 'timeout-minutes: 1'
+    c: 'fail-fast: true'
+    d: 'if: cancelled()'
+    e: 'needs: previous'
+q20:
+  text: 'cache: npm in setup-node needs...'
+  show: 4
+  options:
+    a: A lock file such as package-lock.json
+    b: A paid plan
+    c: A self-hosted runner
+    d: Docker
+    e: An artifact
+q21:
+  text: Where does an API key for a workflow go?
+  show: 4
+  options:
+    a: In the repository's Actions secrets
+    b: gh secret set NAME
+    c: In the YAML file
+    d: In the README
+    e: In a variable (vars)
+    f: In a commit message
+q22:
+  text: 'Make deploy wait for the test job:'
+  show: 4
+  options:
+    a: 'needs: test'
+    b: 'after: test'
+    c: 'wait: test'
+    d: 'depends: test'
+    e: 'if: test'
+q23:
+  text: 'The safest way to use a third-party action:'
+  show: 4
+  options:
+    a: Pin it to a full commit hash
+    b: Use @main
+    c: Use @latest
+    d: Copy its name from a blog
+    e: 'Give it permissions: write-all'
+q24:
+  text: Pull requests from forks...
+  show: 4
+  options:
+    a: Don't get your repository's secrets
+    b: Get all secrets
+    c: Can't run any workflow
+    d: Are merged automatically
+    e: Get a write token in pull_request
+q25:
+  text: Which event lets other workflows call this one?
+  show: 4
+  options:
+    a: workflow_call
+    b: workflow_dispatch
+    c: repository_dispatch
+    d: push
+    e: schedule
+q26:
+  text: 'In a composite action, every run: step also needs...'
+  show: 4
+  options:
+    a: 'shell:'
+    b: 'runs-on:'
+    c: 'permissions:'
+    d: 'needs:'
+    e: 'env: only'
+q27:
+  text: In the project, what makes the release appear?
+  show: 4
+  options:
+    a: Pushing a tag like v1.1.0
+    b: Merging any pull request
+    c: Opening an issue
+    d: Running npm test locally
+    e: Editing the README
+q28:
+  text: 'Why does pages.yml have needs: test?'
+  show: 4
+  options:
+    a: So a broken version is never published
+    b: Pages requires it
+    c: To run faster
+    d: To save artifacts
+    e: To get the token

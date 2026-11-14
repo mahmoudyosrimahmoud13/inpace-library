@@ -1,0 +1,177 @@
+q1:
+  right:
+  - a
+  - b
+  why: 'يعمل Git دون إنترنت: التاريخ في .git، و GitHub مجرد نسخة على الإنترنت.'
+q2:
+  right:
+  - a
+  - b
+  why: add يجهّز، و commit يحفظ المجهَّز.
+q3:
+  right:
+  - a
+  - b
+  why: Untracked تعني أن Git يرى الملف لكنه لم يحفظه أبدًا.
+q4:
+  right:
+  - a
+  - b
+  why: كل commit يسجّل البريد، و GitHub يطابقه مع الحسابات.
+q5:
+  right:
+  - a
+  - b
+  why: git diff وحده يعرض التغييرات غير المجهَّزة.
+q6:
+  right:
+  - a
+  why: كلمة المرور تبقى في التاريخ، فاعتبرها مسرَّبة.
+q7:
+  right:
+  - a
+  - b
+  why: قصير، بصيغة الأمر، عن تغيير واحد.
+q8:
+  right:
+  - a
+  why: الـ ~ يرجع خطوة إلى الآباء.
+q9:
+  right:
+  - a
+  - b
+  why: revert يضيف commit جديدًا، فلا ينكسر تاريخ أحد.
+q10:
+  right:
+  - a
+  - b
+  why: ‏--soft يتركها مجهَّزة، و --mixed في ملفاتك، و --hard يحذفها.
+q11:
+  right:
+  - a
+  - b
+  why: الـ reflog يسرد كل مكان كان فيه HEAD.
+q12:
+  right:
+  - a
+  - b
+  why: العمل الذي لم يُحفظ أبدًا ليس في الـ reflog.
+q13:
+  right:
+  - a
+  - b
+  why: ‏-c ينشئ، و switch وحده يحتاج فرعًا موجودًا.
+q14:
+  right:
+  - a
+  why: ولهذا الفروع رخيصة.
+q15:
+  right:
+  - a
+  - b
+  why: ‏--abort يعيد الحالة قبل الدمج.
+q16:
+  right:
+  - a
+  why: add يعلّمه محلولًا، و commit ينهي الدمج.
+q17:
+  right:
+  - a
+  - b
+  why: السحب يجلب عملهم فلا يضيع شيء.
+q18:
+  right:
+  - a
+  - b
+  why: ملف .pub عام، والملف بدون .pub خاص.
+q19:
+  right:
+  - a
+  why: pull = fetch + merge أو rebase.
+q20:
+  right:
+  - a
+  why: يرفض إن رفع أحد آخر شيئًا في الأثناء.
+q21:
+  right:
+  - a
+  why: squash يطلب منك تعديل الرسالة المدموجة.
+q22:
+  right:
+  - a
+  why: الـ rebase يصنع الـ commit بنفسه.
+q23:
+  right:
+  - a
+  why: الـ rebase يصنع commits جديدة، فلا تفعله إلا لما لا يملكه غيرك.
+q24:
+  right:
+  - a
+  why: الـ hash يشمل الأب أيضًا (الوحدة 9).
+q25:
+  right:
+  - a
+  - b
+  why: ترفع إلى الـ fork ثم تفتح طلب دمج.
+q26:
+  right:
+  - a
+  why: إصلاح الأخطاء يزيد PATCH.
+q27:
+  right:
+  - a
+  why: الوسوم تحتاج git push origin <tag> أو --follow-tags.
+q28:
+  right:
+  - a
+  why: origin هو الـ fork، و upstream هو الأصل.
+q29:
+  right:
+  - a
+  why: cherry-pick ينسخه كـ commit جديد.
+q30:
+  right:
+  - a
+  why: grep يبحث في الملفات الحالية، و log -S في التاريخ.
+q31:
+  right:
+  - a
+  - b
+  why: بدون -u تبقى الملفات غير المتتبَّعة.
+q32:
+  right:
+  - a
+  why: الـ worktree يشارك نفس المستودع.
+q33:
+  right:
+  - a
+  why: الـ tree يحمل الأسماء، والـ blob يحمل البايتات.
+q34:
+  right:
+  - a
+  why: ‏refs/heads/<name> يحمل الـ hash.
+q35:
+  right:
+  - a
+  why: الفرع يعطيها اسمًا فلا تضيع.
+q36:
+  right:
+  - a
+  why: أب من كل طرف.
+q37:
+  right:
+  - a
+  why: ‏-m 1 يحدد أي جانب أب تحتفظ به.
+q38:
+  right:
+  - a
+  why: النسخ موجودة بالفعل، والإلغاء وحده يجعله بلا فائدة.
+q39:
+  right:
+  - a
+  - b
+  why: مجلد .git لا يُحفظ في الـ commits أبدًا.
+q40:
+  right:
+  - a
+  why: ‏user.name يمكن تزويره، أما التوقيع فلا.

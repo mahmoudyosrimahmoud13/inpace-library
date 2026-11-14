@@ -1,0 +1,243 @@
+id: github-actions-cli
+title: 'GitHub: pull requests, the CLI and Actions'
+version: 1
+language: en
+description: 'Work on GitHub like a professional team. Issues and projects, pull requests and code review, merge
+  methods and protected branches, the GitHub CLI (gh) for everything from the terminal, and GitHub Actions: tests
+  on every push, caching, artifacts, secrets, safe permissions, publishing a site with Pages and releases from tags,
+  Dependabot, your own actions and reusable workflows. You finish with a full pipeline on a real project. Every
+  workflow in the course is checked with actionlint.'
+image: cover.jpg
+modules:
+- id: m1
+  title: GitHub beyond the code
+  lessons:
+  - id: m1-l1
+    title: 'Start here: a tour of a repository'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Issues, labels and projects
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Create a public repository `study-tasks` (you can use the project from the JavaScript course, or any
+      small project). Write a README with a screenshot, add the bug issue form from the lesson, open 3 issues with
+      labels, and make a project board with them. Upload the repository link and a screenshot of the board.
+  - id: m1-explain
+    type: explain
+    prompt: What makes a good bug report? Write the parts it should have and why each one helps the person fixing
+      it.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: Pull requests and reviews
+  lessons:
+  - id: m2-l1
+    title: The pull request
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=1036&end=1447
+  - id: m2-l2
+    title: Reviewing code
+    file: lessons/m2-l2.md
+    minutes: 30
+  - id: m2-l3
+    title: Merging, and protecting main
+    file: lessons/m2-l3.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'In your study-tasks repository: protect main with a ruleset (pull request required, no force push).
+      Make a branch, change something, open a pull request with the template, review your own diff and leave a suggestion
+      (or ask a friend to review), then squash and merge. Upload the pull request link and a screenshot of the ruleset.'
+  - id: m2-explain
+    type: explain
+    prompt: 'Your team argues: squash and merge, or create a merge commit? Give one strong reason for each, and
+      say which you''d choose.'
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: The GitHub CLI
+  lessons:
+  - id: m3-l1
+    title: Install gh and sign in
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: Repositories, issues and pull requests from the terminal
+    file: lessons/m3-l2.md
+    minutes: 40
+  - id: m3-l3
+    title: Releases, the API and aliases
+    file: lessons/m3-l3.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Using only the terminal: create an issue, make a branch for it with `gh issue develop`, commit a fix,
+      open a pull request with `gh pr create --fill`, watch its checks, merge it with `--squash --delete-branch`,
+      then publish a release with `--generate-notes`. Upload a screenshot of your terminal and the release link.'
+  - id: m3-explain
+    type: explain
+    prompt: What does gh do that git can't, and why do you still need git? Give examples.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'GitHub Actions: your first workflow'
+  lessons:
+  - id: m4-l1
+    title: What Actions are
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=R8_veQiYBjI&t=63&end=590
+  - id: m4-l2
+    title: Write, run and read a workflow
+    file: lessons/m4-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=R8_veQiYBjI&t=590&end=1240
+  - id: m4-l3
+    title: Events, runners and the schedule
+    file: lessons/m4-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=R8_veQiYBjI&t=1240&end=1475
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Add hello.yml to your repository, push, and look at the run. Then break it on purpose (a command that
+      doesn't exist), read the error, fix it, and run it again with the Run workflow button. Upload screenshots
+      of the red run, the green run, and the log of your echo step.
+  - id: m4-explain
+    type: explain
+    prompt: Explain workflow, event, job, step and runner with one example of your own (not tests).
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'Continuous integration: tests on every push'
+  lessons:
+  - id: m5-l1
+    title: A test workflow
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: 'Faster and smarter runs: cache, artifacts, filters'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Add ci.yml to your repository (adapt the run step to your project's tests). Make the ruleset require
+      the test checks. Open a pull request that breaks a test and show it can't be merged, then fix it. Add the
+      badge to the README. Upload the pull request link and a screenshot of the blocked merge button.
+  - id: m5-explain
+    type: explain
+    prompt: Why is a test workflow useless if the ruleset doesn't require it? Describe what could still happen.
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: Publishing and security
+  lessons:
+  - id: m6-l1
+    title: Secrets, variables and the token
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Publish a site and a release
+    file: lessons/m6-l2.md
+    minutes: 35
+  - id: m6-l3
+    title: Keep your workflows safe
+    file: lessons/m6-l3.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Add pages.yml and publish your site with GitHub Actions (Source: GitHub Actions). Add release.yml and
+      push a tag v1.0.0 to get a release with a zip. Add dependabot.yml and set permissions in every workflow. Upload
+      the site link, the release link, and a screenshot of the Actions tab.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Explain the danger in `run: echo "${{ github.event.issue.title }}"` and how the env: version fixes
+      it.'
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'Project: a full pipeline'
+  lessons:
+  - id: m7-l1
+    title: 'Project: Study Tasks, from push to production'
+    file: lessons/m7-l1.md
+    minutes: 50
+  - id: m7-l2
+    title: Your own action, and reusing workflows
+    file: lessons/m7-l2.md
+    minutes: 30
+  - id: m7-l3
+    title: Where to go next
+    file: lessons/m7-l3.md
+    minutes: 10
+    optional: true
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Finish the checklist on your repository and do the full loop with gh, ending with a tagged release.
+      Upload the repository link, the live site link, the release link, and a screenshot of your terminal during
+      the loop.
+  - id: m7-explain
+    type: explain
+    prompt: Walk through what happens, step by step, from the moment you push a tag v1.2.0 to the moment people
+      can download the release. Name each file and job involved.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70

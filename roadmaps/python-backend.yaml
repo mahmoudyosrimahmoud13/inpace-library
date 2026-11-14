@@ -4,7 +4,7 @@ description: Write Python, build APIs with FastAPI, ship them in containers, and
 language: en
 author: inPace
 official: true
-order: 1
+order: 3
 tags: [python, backend, web, devops, career]
 steps:
   - course: python-basics

@@ -4,13 +4,19 @@ description: من أول صفحة ويب إلى تطبيق JavaScript تنشره
 language: ar
 author: inPace
 official: true
-order: 4
+order: 6
 tags: [web, javascript, frontend, arabic]
 steps:
   - course: javascript-full-ar
     note: قلب المسار. تبني تطبيق Study Tasks وتنشره على GitHub Pages.
   - course: html-css-for-inpace
     note: بالإنجليزية. بداية قصيرة عن مكونات كل صفحة، بأمثلة من صفحات inPace نفسها.
+    optional: true
+  - course: git-zero-to-master-ar
+    note: إدارة الإصدارات، مطلوبة في كل وظيفة مطوّر. تخطَّها إن كنت تستخدم الفروع و rebase وطلبات الدمج.
+    optional: true
+  - course: github-actions-cli-ar
+    note: المراجعات وأداة gh و Actions التي تختبر تطبيقك وتنشره وحدها.
     optional: true
   - course: docker-kubernetes-ar
     note: ضع عملك في حاوية. مفيد عندما تنتقل إلى full-stack.

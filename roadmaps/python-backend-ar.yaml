@@ -4,7 +4,7 @@ description: تعلّم بايثون، ثم ابنِ واجهات برمجية �
 language: ar
 author: inPace
 official: true
-order: 2
+order: 4
 tags: [python, backend, web, devops, arabic]
 steps:
   - course: python-basics-ar

@@ -4,7 +4,7 @@ description: Learn containers and clusters, then see where they fit in the desig
 language: en
 author: inPace
 official: true
-order: 8
+order: 10
 tags: [docker, kubernetes, devops]
 steps:
   - course: docker-kubernetes-en

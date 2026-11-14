@@ -30,6 +30,10 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/python-full-ar/files/cover.jpg" width="160" alt=""> | [بايثون: الدورة الكاملة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full-ar.html) (على منهج CS50P من هارفارد) | 11 أسبوعًا |
 | <img src="courses/csharp-dotnet-beginners/files/cover.jpg" width="160" alt=""> | [C# and .NET for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners.html) (on Microsoft Learn's docs) | 10 weeks |
 | <img src="courses/csharp-dotnet-beginners-ar/files/cover.jpg" width="160" alt=""> | [C# و.NET للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners-ar.html) (على توثيق Microsoft Learn) | 10 أسابيع |
+| <img src="courses/git-zero-to-master/files/cover.jpg" width="160" alt=""> | [Git from zero to master](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-zero-to-master.html) (optional videos from freeCodeCamp) | 6 weeks |
+| <img src="courses/git-zero-to-master-ar/files/cover.jpg" width="160" alt=""> | [احترف Git من الصفر](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-zero-to-master-ar.html) (فيديوهات اختيارية من freeCodeCamp) | 6 أسابيع |
+| <img src="courses/github-actions-cli/files/cover.jpg" width="160" alt=""> | [GitHub: pull requests, the CLI and Actions](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/github-actions-cli.html) | 4 weeks |
+| <img src="courses/github-actions-cli-ar/files/cover.jpg" width="160" alt=""> | [دورة GitHub: طلبات الدمج وسطر الأوامر و Actions](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/github-actions-cli-ar.html) | 4 أسابيع |
 | <img src="courses/javascript-full/files/cover.jpg" width="160" alt=""> | [JavaScript: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full.html) (optional videos from freeCodeCamp) | 10 weeks |
 | <img src="courses/javascript-full-ar/files/cover.jpg" width="160" alt=""> | [الدورة الكاملة في JavaScript](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full-ar.html) (فيديوهات اختيارية من freeCodeCamp) | 10 أسابيع |
 | <img src="courses/inpace-inside/files/cover.jpg" width="160" alt=""> | [inPace from the inside: how the app works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/inpace-inside.html) | 1 week |
@@ -85,20 +89,22 @@ A roadmap is a path through several courses of the library, in order, toward one
 course when you get to it, and Tempo sails it with you on his island (**Tempo's island → Voyages**). Following a
 roadmap needs inPace 1.24 or newer; older versions can still add each course on its own.
 
-They come in three groups: building software, then data and AI, then languages. Inside each group, a path that
+They come in three groups: building software (Git first, since every path uses it), then data and AI, then languages. Inside each group, a path that
 leads into another comes before it, and the English and Arabic versions sit side by side.
 
 | Roadmap | Courses | Language |
 |---|---|---|
+| [Git and GitHub, from zero to pro](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/git-github.html) | 3 | English |
+| [احترف Git و GitHub](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/git-github-ar.html) | 3 | Arabic |
 | [Python backend developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend.html) | 5 | English |
 | [مطوّر باك إند بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend-ar.html) | 5 | Arabic |
-| [Front-end web developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer.html) | 4 | English |
-| [مطوّر واجهات ويب](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer-ar.html) | 4 | Arabic |
+| [Front-end web developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer.html) | 6 | English |
+| [مطوّر واجهات ويب](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer-ar.html) | 6 | Arabic |
 | [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
 | [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
 | [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
 | [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 2 | English |
-| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 7 | English |
+| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 8 | English |
 | [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 5 | English |
 | [Get hired as an AI engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer.html) | 8 | English |
 | [التوظيف مهندس ذكاء اصطناعي](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer-ar.html) | 8 | Arabic |

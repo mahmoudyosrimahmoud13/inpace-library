@@ -4,13 +4,19 @@ description: From your first web page to a JavaScript app you publish online, wi
 language: en
 author: inPace
 official: true
-order: 3
+order: 5
 tags: [web, javascript, frontend, career]
 steps:
   - course: html-css-for-inpace
     note: A short start on what every page is made of. The examples come from inPace's own pages.
   - course: javascript-full
     note: The heart of the path. You build Study Tasks and publish it on GitHub Pages.
+  - course: git-zero-to-master
+    note: Version control, asked for in every developer job. Skip it if you already use branches, rebase and pull requests.
+    optional: true
+  - course: github-actions-cli
+    note: Reviews, the gh command, and Actions that test your app and publish it by themselves.
+    optional: true
   - course: docker-kubernetes-en
     note: Ship your work in a container, useful when you move to full-stack. The video is in Egyptian Arabic; the English notes cover everything.
     optional: true

@@ -1,0 +1,16 @@
+id: git-github
+title: Git and GitHub, from zero to pro
+description: Every developer job asks for Git. Learn it to an expert level, then work on GitHub like a professional team, with reviews, the gh command and automatic tests and releases.
+language: en
+author: inPace
+official: true
+order: 1
+tags: [git, github, devops, career]
+steps:
+  - course: git-zero-to-master
+    note: Commits, undo, branches, rebase, teamwork and how Git works inside. Everything after this uses it.
+  - course: github-actions-cli
+    note: Pull requests and reviews, the gh command, and GitHub Actions to test and publish your work.
+  - course: docker-kubernetes-en
+    note: Build and ship containers, the next step after a CI pipeline. The video is in Egyptian Arabic; the English notes cover everything.
+    optional: true

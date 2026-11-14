@@ -1,0 +1,117 @@
+q1:
+  right:
+  - a
+  - b
+  why: Closes, Fixes and Resolves are the keywords.
+q2:
+  right:
+  - a
+  why: The .github folder holds GitHub's settings files.
+q3:
+  right:
+  - a
+  - b
+  why: The dot opens github.dev.
+q4:
+  right:
+  - a
+  why: Visitors decide in seconds whether it's for them.
+q5:
+  right:
+  - a
+  why: Squash joins all the branch's commits into one.
+q6:
+  right:
+  - a
+  why: Request changes blocks merging until fixed.
+q7:
+  right:
+  - a
+  - b
+  why: Rules are enforced by GitHub; notes aren't.
+q8:
+  right:
+  - a
+  why: Reviewers skim big diffs.
+q9:
+  right:
+  - a
+  why: checkout fetches its branch and switches to it.
+q10:
+  right:
+  - a
+  why: --fill uses the commit info.
+q11:
+  right:
+  - a
+  why: --log-failed skips the steps that passed.
+q12:
+  right:
+  - a
+  why: --generate-notes asks GitHub to write them.
+q13:
+  right:
+  - a
+  why: GitHub only looks there.
+q14:
+  right:
+  - a
+  why: workflow_dispatch is the manual event.
+q15:
+  right:
+  - a
+  why: 'Use needs: to make one wait for another.'
+q16:
+  right:
+  - a
+  why: 'run: is for shell commands.'
+q17:
+  right:
+  - a
+  why: 2 × 3 = 6.
+q18:
+  right:
+  - a
+  - b
+  why: Runners are deleted; artifacts stay with the run.
+q19:
+  right:
+  - a
+  why: Runs in the same concurrency group replace each other.
+q20:
+  right:
+  - a
+  why: The lock file's hash is the cache key.
+q21:
+  right:
+  - a
+  - b
+  why: Secrets are encrypted and hidden in logs.
+q22:
+  right:
+  - a
+  why: needs sets the order between jobs.
+q23:
+  right:
+  - a
+  why: A hash can't be moved; tags and branches can.
+q24:
+  right:
+  - a
+  why: That protects you from malicious pull requests.
+q25:
+  right:
+  - a
+  why: workflow_dispatch is the manual button.
+q26:
+  right:
+  - a
+  why: Composite run steps must say which shell.
+q27:
+  right:
+  - a
+  why: 'release.yml runs on push: tags: v*.'
+q28:
+  right:
+  - a
+  why: Deploy only runs if the tests passed.

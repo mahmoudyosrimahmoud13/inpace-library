@@ -1,0 +1,238 @@
+id: github-actions-cli-ar
+title: 'دورة GitHub: طلبات الدمج وسطر الأوامر و Actions'
+version: 1
+language: ar
+description: 'اعمل على GitHub كفريق محترف. الـ issues والمشاريع، وطلبات الدمج ومراجعة الكود، وطرق الدمج والفروع
+  المحمية، وأداة GitHub لسطر الأوامر (gh) لكل شيء من الطرفية، و GitHub Actions: اختبارات مع كل push، والـ cache،
+  والـ artifacts، والأسرار، والصلاحيات الآمنة، ونشر موقع بـ Pages وإصدارات من الوسوم، و Dependabot، و actions خاصة
+  بك و workflows قابلة لإعادة الاستخدام. وتنتهي بخط إنتاج كامل لمشروع حقيقي. وكل workflow في الدورة مفحوص بأداة
+  actionlint.'
+image: cover.jpg
+modules:
+- id: m1
+  title: GitHub أبعد من الكود
+  lessons:
+  - id: m1-l1
+    title: 'ابدأ من هنا: جولة في مستودع'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: الـ issues والوسوم والمشاريع
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: أنشئ مستودعًا عامًا `study-tasks` (يمكنك استخدام مشروع دورة JavaScript، أو أي مشروع صغير). اكتب README
+      فيه صورة، وأضف نموذج الـ bug من الدرس، وافتح 3 issues بوسوم، واصنع لوحة project بها. ارفع رابط المستودع وصورة
+      للوحة.
+  - id: m1-explain
+    type: explain
+    prompt: ما الذي يجعل بلاغ الخطأ جيدًا؟ اكتب أجزاءه ولماذا يساعد كل جزء من سيصلحه.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: طلبات الدمج والمراجعات
+  lessons:
+  - id: m2-l1
+    title: طلب الدمج
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Uszj_k0DGsg&t=1036&end=1447
+  - id: m2-l2
+    title: مراجعة الكود
+    file: lessons/m2-l2.md
+    minutes: 30
+  - id: m2-l3
+    title: الدمج، وحماية main
+    file: lessons/m2-l3.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'في مستودع study-tasks: احمِ main بـ ruleset (طلب دمج إلزامي، ومنع الرفع بالقوة). أنشئ فرعًا، وغيّر
+      شيئًا، وافتح طلب دمج بالقالب، وراجع الـ diff بنفسك واترك اقتراحًا (أو اطلب من صديق المراجعة)، ثم اعمل squash
+      and merge. ارفع رابط طلب الدمج وصورة للـ ruleset.'
+  - id: m2-explain
+    type: explain
+    prompt: 'فريقك مختلف: squash and merge أم create a merge commit؟ اذكر سببًا قويًا لكل منهما، وقل أيهما تختار.'
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: أداة GitHub لسطر الأوامر
+  lessons:
+  - id: m3-l1
+    title: ثبّت gh وسجّل الدخول
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: المستودعات والـ issues وطلبات الدمج من الطرفية
+    file: lessons/m3-l2.md
+    minutes: 40
+  - id: m3-l3
+    title: الإصدارات و API والاختصارات
+    file: lessons/m3-l3.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'باستخدام الطرفية فقط: أنشئ issue، واصنع لها فرعًا بـ `gh issue develop`، واحفظ إصلاحًا، وافتح طلب دمج
+      بـ `gh pr create --fill`، وراقب فحوصه، وادمجه بـ `--squash --delete-branch`، ثم انشر إصدارًا بـ `--generate-notes`.
+      ارفع صورة للطرفية ورابط الإصدار.'
+  - id: m3-explain
+    type: explain
+    prompt: ما الذي يفعله gh ولا يستطيعه git، ولماذا ما زلت تحتاج git؟ أعطِ أمثلة.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'GitHub Actions: أول workflow لك'
+  lessons:
+  - id: m4-l1
+    title: ما هي Actions
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=R8_veQiYBjI&t=63&end=590
+  - id: m4-l2
+    title: اكتب workflow وشغّله واقرأه
+    file: lessons/m4-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=R8_veQiYBjI&t=590&end=1240
+  - id: m4-l3
+    title: الأحداث والـ runners والجدولة
+    file: lessons/m4-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=R8_veQiYBjI&t=1240&end=1475
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: أضف hello.yml إلى مستودعك، وارفع، وانظر إلى التشغيل. ثم اكسره عمدًا (أمر غير موجود)، واقرأ الخطأ، وأصلحه،
+      وشغّله مرة أخرى بزر Run workflow. ارفع صورًا للتشغيل الأحمر، والأخضر، وسجل خطوة echo.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح workflow و event و job و step و runner بمثال من عندك (غير الاختبارات).
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'التكامل المستمر: اختبارات مع كل push'
+  lessons:
+  - id: m5-l1
+    title: workflow للاختبارات
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: 'تشغيل أسرع وأذكى: cache و artifacts والفلاتر'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: أضف ci.yml إلى مستودعك (عدّل خطوة التشغيل لتناسب اختبارات مشروعك). واجعل الـ ruleset يشترط فحوص الاختبارات.
+      افتح طلب دمج يكسر اختبارًا وأثبت أنه لا يمكن دمجه، ثم أصلحه. وأضف الشارة إلى README. ارفع رابط طلب الدمج وصورة
+      لزر الدمج الممنوع.
+  - id: m5-explain
+    type: explain
+    prompt: لماذا يكون workflow الاختبارات بلا فائدة إن لم يشترطه الـ ruleset؟ صِف ما قد يحدث مع ذلك.
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: النشر والأمان
+  lessons:
+  - id: m6-l1
+    title: الأسرار والمتغيرات والرمز
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: انشر موقعًا وإصدارًا
+    file: lessons/m6-l2.md
+    minutes: 35
+  - id: m6-l3
+    title: حافظ على أمان الـ workflows
+    file: lessons/m6-l3.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'أضف pages.yml وانشر موقعك بـ GitHub Actions (Source: GitHub Actions). وأضف release.yml وارفع وسمًا
+      v1.0.0 لتحصل على إصدار فيه ملف مضغوط. وأضف dependabot.yml واضبط permissions في كل workflow. ارفع رابط الموقع،
+      ورابط الإصدار، وصورة لتبويب Actions.'
+  - id: m6-explain
+    type: explain
+    prompt: 'اشرح الخطر في `run: echo "${{ github.event.issue.title }}"` وكيف تصلحه نسخة env:.'
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: 'مشروع: خط إنتاج كامل'
+  lessons:
+  - id: m7-l1
+    title: 'المشروع: Study Tasks، من push إلى الإنتاج'
+    file: lessons/m7-l1.md
+    minutes: 50
+  - id: m7-l2
+    title: action خاصة بك، وإعادة استخدام الـ workflows
+    file: lessons/m7-l2.md
+    minutes: 30
+  - id: m7-l3
+    title: إلى أين بعد ذلك
+    file: lessons/m7-l3.md
+    minutes: 10
+    optional: true
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: أكمل قائمة التحقق على مستودعك ونفّذ الدورة الكاملة بـ gh، منتهيًا بإصدار موسوم. ارفع رابط المستودع،
+      ورابط الموقع الحي، ورابط الإصدار، وصورة للطرفية أثناء الدورة.
+  - id: m7-explain
+    type: explain
+    prompt: اشرح ما يحدث خطوة بخطوة، من لحظة رفع وسم v1.2.0 إلى لحظة استطاعة الناس تنزيل الإصدار. سمِّ كل ملف و
+      job مشارك.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
