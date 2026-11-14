@@ -1,0 +1,223 @@
+id: german-a1-ar
+title: 'الألماني من الصفر: مستوى A1'
+version: 1
+language: ar
+description: 'كورس ألماني للمبتدئين تمامًا من متحدثي العربية: الشرح بالعربي البسيط، والأمثلة والتمارين بالألماني.
+  تبدأ بالكلام من اليوم الأول، ثم sein و haben و der / die / das، والفعل في المكان الثاني، والنفي، والساعة والروتين،
+  و können و müssen، والعائلة والتسوق، و Akkusativ و Dativ، وأول خطوة في الماضي. فوق أغلب الدروس جزء اختياري من
+  فيلم «Nicos Weg» من Deutsche Welle، أو حلقة من Easy German. الخطة: 4 أسابيع، 30 إلى 45 دقيقة يوميًا.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'الأيام 1-4: ابدأ بالكلام: التحية وتقديم نفسك'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'تكلّم من أول يوم: Hallo, ich heiße...'
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=r94aqLUO0wo
+  - id: m1-l3
+    title: 'النطق: ä ö ü ß ch'
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&end=1050
+  - id: m1-l4
+    title: الأرقام والعمر ورقم الهاتف
+    file: lessons/m1-l4.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&end=1050
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'تسجيل صوتي (30 ثانية): حيِّ المستمع، وقدّم نفسك بالألماني (اسمك، بلدك، سكنك، عملك، عمرك).'
+  - id: m1-explain
+    type: explain
+    prompt: 'Schreib 5 Sätze über dich: Name, Land, Wohnort, Beruf und Alter.'
+    min_words: 25
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الأيام 5-8: sein و haben، و der / die / das'
+  lessons:
+  - id: m2-l1
+    title: sein و haben
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=1050&end=2100
+  - id: m2-l2
+    title: der, die, das، والجمع
+    file: lessons/m2-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=1050&end=2100
+  - id: m2-l3
+    title: 'الأسئلة: W-Fragen ونعم / لا'
+    file: lessons/m2-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=1050&end=2100
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'تسجيل صوتي: صِف نفسك وعائلتك في 6 جمل باستخدام sein و haben، واسأل 3 أسئلة لشخص جديد.'
+  - id: m2-explain
+    type: explain
+    prompt: Schreib 6 Fragen an einen neuen Kollegen (mit wer, wo, woher, was, wie und warum).
+    min_words: 30
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    pass: 70
+- id: m3
+  title: 'الأيام 9-12: المضارع وترتيب الجملة والنفي'
+  lessons:
+  - id: m3-l1
+    title: 'المضارع: النهايات'
+    file: lessons/m3-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=2100&end=3120
+  - id: m3-l2
+    title: الفعل في المكان الثاني
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=2100&end=3120
+  - id: m3-l3
+    title: 'النفي: nicht أم kein؟'
+    file: lessons/m3-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=2100&end=3120
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'تسجيل صوتي: صِف أسبوعك في 6 جمل، وابدأ 3 منها بكلمة وقت (Am Montag..., Heute..., Abends...). ثم قل
+      3 أشياء ليست عندك أو لا تفعلها.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Schreib über deine Woche: 6 Sätze, drei davon mit Zeit am Anfang, und zwei Sätze mit nicht oder kein.'
+    min_words: 30
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q10
+    - q11
+    - q12
+    - q13
+    pass: 70
+- id: m4
+  title: 'الأيام 13-16: الوقت والروتين، و können و müssen'
+  lessons:
+  - id: m4-l1
+    title: الساعة والأيام
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=3120&end=4140
+  - id: m4-l2
+    title: 'روتينك: الأفعال المنفصلة'
+    file: lessons/m4-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=3120&end=4140
+  - id: m4-l3
+    title: können، müssen، wollen، möchten
+    file: lessons/m4-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=3120&end=4140
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'تسجيل صوتي (45 ثانية): احكِ يومك من الاستيقاظ إلى النوم بالساعات، ثم قل 3 أشياء تستطيعها وشيئين يجب
+      أن تفعلهما هذا الأسبوع.'
+  - id: m4-explain
+    type: explain
+    prompt: Schreib deinen Tagesablauf (8 Sätze) mit zuerst, dann, danach und mindestens drei trennbaren Verben.
+    min_words: 30
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q14
+    - q15
+    - q16
+    - q17
+    pass: 70
+- id: m5
+  title: 'الأيام 17-20: العائلة، والأكل والتسوق، و Akkusativ'
+  lessons:
+  - id: m5-l1
+    title: العائلة و mein / dein
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=4140&end=5160
+  - id: m5-l2
+    title: 'Akkusativ: ich habe einen...'
+    file: lessons/m5-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=4140&end=5160
+  - id: m5-l3
+    title: في المخبز والسوبرماركت
+    file: lessons/m5-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=1bFgK6wtuNY
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'تسجيل صوتي: قدّم عائلتك (4 جمل)، ثم مثّل الطلب في مخبز (3 أشياء والسعر والدفع).'
+  - id: m5-explain
+    type: explain
+    prompt: 'Schreib eine Einkaufsliste für ein Familienessen und 5 Sätze: Was brauchst du? Was hast du schon? Was
+      gibt es nicht?'
+    min_words: 30
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q18
+    - q19
+    - q20
+    - q21
+    pass: 70
+- id: m6
+  title: 'الأيام 21-24: المدينة والاتجاهات، و Dativ، وأول خطوة في الماضي'
+  lessons:
+  - id: m6-l1
+    title: 'في المدينة: الاتجاهات و Dativ'
+    file: lessons/m6-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=5160
+  - id: m6-l2
+    title: 'أول خطوة في الماضي: war, hatte, habe gemacht'
+    file: lessons/m6-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=4-eDoThe6qo&t=5160
+  - id: m6-l3
+    title: مراجعة A1، وماذا بعد
+    file: lessons/m6-l3.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): احكِ ما فعلته نهاية الأسبوع الماضي (Perfekt)، ثم صِف الطريق من بيتك إلى أقرب
+      سوبرماركت.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Schreib eine kurze E-Mail an einen deutschen Freund: Stell dich vor, beschreib deine Stadt und erzähl
+      von deinem letzten Wochenende (8–10 Sätze).'
+    min_words: 30
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

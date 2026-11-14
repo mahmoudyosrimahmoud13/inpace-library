@@ -1,0 +1,240 @@
+q1:
+  text: '«أنا مسؤول عن التسويق»:'
+  show: 4
+  options:
+    a: Ich bin für das Marketing zuständig.
+    b: Ich bin für das Marketing verantwortlich.
+    c: Ich bin zuständig von dem Marketing.
+    d: Ich bin zum Marketing zuständig.
+    e: Ich habe zuständig für Marketing.
+    f: Ich bin für den Marketing zuständig.
+q2:
+  text: 'اعتراض مهذب:'
+  show: 4
+  options:
+    a: Das sehe ich nicht so.
+    b: Da bin ich anderer Meinung.
+    c: Du hast völlig recht.
+    d: Da stimme ich dir zu.
+    e: Genau!
+    f: Das finde ich auch.
+q3:
+  text: '«يعتمد على ما إذا كان عندي وقت»:'
+  show: 4
+  options:
+    a: Es kommt darauf an, ob ich Zeit habe.
+    b: Das hängt davon ab, ob ich Zeit habe.
+    c: Es kommt darauf an, ob ich habe Zeit.
+    d: Es kommt an darauf, wenn ich Zeit habe.
+    e: Es kommt darauf, dass ich Zeit habe an.
+    f: Es kommt darauf an ich Zeit habe.
+q4:
+  text: '«عندي خبرة في البرمجة»:'
+  show: 4
+  options:
+    a: Ich habe Erfahrung im Programmieren.
+    b: Ich habe Erfahrung mit Programmierung.
+    c: Ich habe Erfahrung für Programmieren.
+    d: Ich bin Erfahrung im Programmieren.
+    e: Ich habe Erfahrungen zu programmieren in.
+    f: Ich habe Erfahrung an Programmieren.
+q5:
+  text: 'Präteritum من gehen مع er:'
+  show: 4
+  options:
+    a: ging
+    b: er ging
+    c: gehte
+    d: gang
+    e: gegangen
+    f: gehen
+q6:
+  text: '«عندما وصلت كان القطار قد غادر»:'
+  show: 4
+  options:
+    a: Als ich ankam, war der Zug schon abgefahren.
+    b: Der Zug war schon abgefahren, als ich ankam.
+    c: Als ich ankam, hatte der Zug schon abgefahren.
+    d: Wenn ich ankam, war der Zug schon abgefahren.
+    e: Als ich kam an, war der Zug schon abgefahren.
+    f: Als ich ankam, der Zug war schon abgefahren.
+q7:
+  text: 'أكمل: Nachdem ich gegessen ___, ging ich spazieren.'
+  show: 4
+  options:
+    a: hatte
+    b: hatte (Plusquamperfekt)
+    c: habe
+    d: hätte
+    e: war
+    f: bin
+q8:
+  text: 'Präteritum من schreiben مع sie (هي):'
+  show: 4
+  options:
+    a: schrieb
+    b: sie schrieb
+    c: schreibte
+    d: schrieben
+    e: geschrieben
+    f: schreibt
+q9:
+  text: '«الرجل الذي قابلته أمس»:'
+  show: 4
+  options:
+    a: der Mann, den ich gestern getroffen habe
+    b: der Mann, den ich gestern traf
+    c: der Mann, der ich gestern getroffen habe
+    d: der Mann, dem ich gestern getroffen habe
+    e: der Mann, den ich habe gestern getroffen
+    f: der Mann, was ich gestern getroffen habe
+q10:
+  text: '«الزميلة التي أعمل معها»:'
+  show: 4
+  options:
+    a: die Kollegin, mit der ich arbeite
+    b: die Kollegin, mit der ich zusammenarbeite
+    c: die Kollegin, mit die ich arbeite
+    d: die Kollegin, die ich mit arbeite
+    e: die Kollegin, mit dem ich arbeite
+    f: die Kollegin, mit der arbeite ich
+q11:
+  text: '«هذا كل ما أعرفه»:'
+  show: 4
+  options:
+    a: Das ist alles, was ich weiß.
+    b: Mehr weiß ich nicht.
+    c: Das ist alles, das ich weiß.
+    d: Das ist alles, was weiß ich.
+    e: Das ist alles, wo ich weiß.
+    f: Das ist alles, den ich weiß.
+q12:
+  text: «عن ماذا تتكلمون؟»
+  show: 4
+  options:
+    a: Worüber sprecht ihr?
+    b: Worüber redet ihr?
+    c: Über was sprecht ihr nicht?
+    d: Was über sprecht ihr?
+    e: Wovon sprecht ihr über?
+    f: Worauf sprecht ihr?
+q13:
+  text: '«لو كنت أعرف لأتيت مبكرًا»:'
+  show: 4
+  options:
+    a: Wenn ich das gewusst hätte, wäre ich früher gekommen.
+    b: Hätte ich das gewusst, wäre ich früher gekommen.
+    c: Wenn ich das gewusst hätte, hätte ich früher gekommen.
+    d: Wenn ich das wusste, wäre ich früher gekommen.
+    e: Wenn ich das gewusst wäre, wäre ich früher gekommen.
+    f: Wenn ich hätte das gewusst, wäre ich früher gekommen.
+q14:
+  text: '«كان يجب أن تتصل بي»:'
+  show: 4
+  options:
+    a: Du hättest mich anrufen sollen.
+    b: Du hättest mich anrufen müssen.
+    c: Du solltest mich angerufen haben hätte.
+    d: Du hättest mich angerufen sollen.
+    e: Du wärst mich anrufen sollen.
+    f: Du hast mich anrufen sollten.
+q15:
+  text: '«يتصرف كأنه لا يعرف شيئًا»:'
+  show: 4
+  options:
+    a: Er tut so, als ob er nichts wüsste.
+    b: Er tut so, als wüsste er nichts.
+    c: Er tut so, als ob er wüsste nichts.
+    d: Er tut so, wie ob er nichts weiß.
+    e: Er tut so, als ob er nichts wisst.
+    f: Er tut so, ob als er nichts wüsste.
+q16:
+  text: 'في رسالة رسمية: «سأكون ممتنًا لو أرسلت لي...»'
+  show: 4
+  options:
+    a: Ich wäre Ihnen dankbar, wenn Sie mir ... schicken könnten.
+    b: Könnten Sie mir bitte ... schicken?
+    c: Ich bin dankbar, schicken Sie mir...
+    d: Ich wäre Sie dankbar, wenn Sie mir schicken.
+    e: Ich hätte Ihnen dankbar, wenn...
+    f: Schick mir das mal, danke.
+q17:
+  text: '«بُني البيت عام 1900»:'
+  show: 4
+  options:
+    a: Das Haus wurde 1900 gebaut.
+    b: Das Haus ist 1900 gebaut worden.
+    c: Das Haus wird 1900 gebaut.
+    d: Das Haus wurde 1900 gebauen.
+    e: Das Haus hat 1900 gebaut worden.
+    f: Das Haus ist 1900 gebaut geworden.
+q18:
+  text: '«يجب ملء النموذج»:'
+  show: 4
+  options:
+    a: Das Formular muss ausgefüllt werden.
+    b: Man muss das Formular ausfüllen.
+    c: Das Formular muss ausgefüllt worden.
+    d: Das Formular wird ausgefüllt müssen.
+    e: Das Formular muss ausfüllen werden.
+    f: Das Formular muss werden ausgefüllt.
+q19:
+  text: 'بداية رسالة رسمية لشخص لا تعرف اسمه:'
+  show: 4
+  options:
+    a: Sehr geehrte Damen und Herren,
+    b: Sehr geehrte Damen und Herren, (ثم حرف صغير)
+    c: Hallo Leute,
+    d: Liebe Firma,
+    e: Hi zusammen!
+    f: Sehr geehrter Damen und Herren.
+q20:
+  text: '«المرفق تجد سيرتي الذاتية»:'
+  show: 4
+  options:
+    a: Im Anhang finden Sie meinen Lebenslauf.
+    b: Anbei sende ich Ihnen meinen Lebenslauf.
+    c: Im Anhang finden Sie mein Lebenslauf.
+    d: In Anhang finden Sie meinen Lebenslauf.
+    e: Im Anhang Sie finden meinen Lebenslauf.
+    f: Am Anhang findest du mein Lebenslauf.
+q21:
+  text: '«رغم أنها تمطر أذهب للتمشية»:'
+  show: 4
+  options:
+    a: Obwohl es regnet, gehe ich spazieren.
+    b: Es regnet, trotzdem gehe ich spazieren.
+    c: Obwohl es regnet, ich gehe spazieren.
+    d: Trotzdem es regnet, gehe ich spazieren.
+    e: Obwohl regnet es, gehe ich spazieren.
+    f: Es regnet, obwohl gehe ich spazieren.
+q22:
+  text: '«أشرح لكي تفهم»:'
+  show: 4
+  options:
+    a: Ich erkläre es, damit du es verstehst.
+    b: Ich erkläre es dir, damit du es verstehst.
+    c: Ich erkläre es, um du es verstehst.
+    d: Ich erkläre es, damit du verstehst es.
+    e: Ich erkläre es, um es zu verstehen du.
+    f: Ich erkläre es, deshalb du es verstehst.
+q23:
+  text: '«كلما تمرنت أكثر تكلمت أفضل»:'
+  show: 4
+  options:
+    a: Je mehr ich übe, desto besser spreche ich.
+    b: Je mehr ich übe, umso besser spreche ich.
+    c: Je mehr ich übe, desto besser ich spreche.
+    d: Mehr ich übe, besser ich spreche.
+    e: Je mehr übe ich, desto besser spreche ich.
+    f: Je ich mehr übe, desto spreche ich besser.
+q24:
+  text: '«بسبب الطقس»:'
+  show: 4
+  options:
+    a: wegen des Wetters
+    b: wegen dem Wetter (في الكلام)
+    c: wegen der Wetter
+    d: wegen das Wetter
+    e: trotz des Wetters
+    f: wegen den Wettern

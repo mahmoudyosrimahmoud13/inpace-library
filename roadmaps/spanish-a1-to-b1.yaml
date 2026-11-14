@@ -1,0 +1,15 @@
+id: spanish-a1-to-b1
+title: الإسباني من الصفر إلى B1
+description: ثلاث دورات بالترتيب، والشرح بالعربي، من أول «Hola» إلى الكلام بطلاقة والدفاع عن رأيك. كل مستوى يبدأ بالكلام.
+language: ar
+author: inPace
+official: true
+order: 15
+tags: [spanish, arabic, grammar, speaking]
+steps:
+  - course: spanish-a1-ar
+    note: "من الصفر: تكلّم من اليوم الأول، ثم ser و estar والمضارع والروتين والتسوق."
+  - course: spanish-a2-ar
+    note: احكِ عن الماضي وخططك، وتدبّر أمورك في السفر وعند الطبيب.
+  - course: spanish-b1-ar
+    note: الطلاقة، والـ subjuntivo، والدفاع عن رأيك.

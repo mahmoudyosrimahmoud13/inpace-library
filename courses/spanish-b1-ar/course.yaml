@@ -1,0 +1,204 @@
+id: spanish-b1-ar
+title: الإسباني مستوى B1
+version: 1
+language: ar
+description: 'المستوى الثالث بعد الإسباني A2، والشرح بالعربي. تكلّم بطلاقة ودافع عن رأيك: الـ subjuntivo مع الرأي
+  والرغبة والمشاعر والمستقبل، والحكاية الكاملة في الماضي، و si tuviera...، ونقل الكلام، وجمل الوصل، والكتابة المنظمة.
+  كل أسبوع يبدأ بالكلام، مع فيديو اختياري لمتحدثين أصليين. الخطة: 6 أسابيع، 40 دقيقة يوميًا.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'الأسبوع 1: ابدأ بالكلام: الرأي والنقاش'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'محادثة: ما يعجبك وما لا يعجبك في مدينة'
+    file: lessons/m1-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=CoIL9IsJXiA
+  - id: m1-l3
+    title: No creo que + subjuntivo
+    file: lessons/m1-l3.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): هل الأفضل أن تعيش في مدينة كبيرة أم صغيرة؟ قل رأيك بثلاثة أسباب، واستخدم creo
+      que و no creo que.'
+  - id: m1-explain
+    type: explain
+    prompt: 'Escribe un texto de opinión de 120 palabras: «¿Las redes sociales nos acercan o nos alejan?».'
+    min_words: 120
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'الأسبوع 2: subjuntivo: الرغبة والمشاعر والنصيحة'
+  lessons:
+  - id: m2-l1
+    title: 'أريد أن تفعل: querer que'
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: المشاعر والنصيحة
+    file: lessons/m2-l2.md
+    minutes: 35
+  - id: m2-l3
+    title: cuando + subjuntivo للمستقبل
+    file: lessons/m2-l3.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): ماذا تتمنى لنفسك ولعائلتك هذا العام؟ وماذا ستفعل عندما تنهي دراستك أو مشروعك؟
+      (quiero que، ojalá، cuando + subjuntivo)'
+  - id: m2-explain
+    type: explain
+    prompt: 'Escribe un correo a un amigo que tiene un problema (120 palabras): muestra tus sentimientos y dale
+      consejos.'
+    min_words: 120
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'الأسبوع 3: حكاية كاملة في الماضي'
+  lessons:
+  - id: m3-l1
+    title: 'كان قد حدث: pluscuamperfecto'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: الأزمنة الأربعة في حكاية واحدة
+    file: lessons/m3-l2.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=76jg_xxMBSY
+  - id: m3-l3
+    title: 'العادات القديمة: soler و acostumbrar'
+    file: lessons/m3-l3.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'تسجيل صوتي (2 دقيقة): احكِ قصة لا تنساها من حياتك (سفر، أول يوم عمل، موقف مضحك) بالأزمنة الأربعة.'
+  - id: m3-explain
+    type: explain
+    prompt: Escribe la historia de cómo conociste a tu mejor amigo o amiga (150 palabras).
+    min_words: 150
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'الأسبوع 4: الفرضيات: لو كان...'
+  lessons:
+  - id: m4-l1
+    title: 'subjuntivo الماضي: si tuviera'
+    file: lessons/m4-l1.md
+    minutes: 40
+  - id: m4-l2
+    title: ojalá، و como si، و الطلب المهذب
+    file: lessons/m4-l2.md
+    minutes: 30
+  - id: m4-l3
+    title: 'نقاش: ماذا كنت ستفعل؟'
+    file: lessons/m4-l3.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'تسجيل صوتي (2 دقيقة): ماذا كنت ستفعل لو عشت سنة في بلد يتكلم الإسبانية؟ أين، ولماذا، وماذا ستتعلم؟'
+  - id: m4-explain
+    type: explain
+    prompt: 'Escribe 150 palabras: «Si pudiera cambiar algo del mundo, cambiaría...».'
+    min_words: 150
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'الأسبوع 5: نقل الكلام والضمائر'
+  lessons:
+  - id: m5-l1
+    title: 'قال إن...: el estilo indirecto'
+    file: lessons/m5-l1.md
+    minutes: 40
+  - id: m5-l2
+    title: 'ضمائر مع الأفعال: se lo, dármelo'
+    file: lessons/m5-l2.md
+    minutes: 30
+  - id: m5-l3
+    title: 'رسائل ورسائل صوتية: نقل خبر'
+    file: lessons/m5-l3.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): احكِ محادثة مهمة دارت بينك وبين شخص (ماذا قال، ماذا طلب، ماذا وعد) بالكلام المنقول.'
+  - id: m5-explain
+    type: explain
+    prompt: Escribe un resumen (120 palabras) de una entrevista o un vídeo en español que hayas visto, en estilo
+      indirecto.
+    min_words: 120
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'الأسبوع 6: جمل الوصل، والكتابة، ومراجعة B1'
+  lessons:
+  - id: m6-l1
+    title: que, quien, donde, lo que
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: 'اكتب بشكل منظم: الروابط'
+    file: lessons/m6-l2.md
+    minutes: 30
+  - id: m6-l3
+    title: مراجعة B1، وماذا بعد
+    file: lessons/m6-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=jmDQ9AC7UzY
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (2 دقيقة): قدّم نفسك كما في مقابلة عمل بالإسباني: من أنت، ماذا درست وعملت، ماذا تبحث عنه،
+      ولماذا تتعلم الإسبانية.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Escribe un texto de opinión de 150 palabras con introducción, dos argumentos, un contraargumento y
+      conclusión: «¿Debería ser obligatorio aprender dos idiomas en el colegio?».'
+    min_words: 150
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70

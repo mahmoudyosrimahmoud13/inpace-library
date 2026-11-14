@@ -1,0 +1,250 @@
+q1:
+  text: '«أنا من مصر»:'
+  show: 4
+  options:
+    a: Ich komme aus Ägypten.
+    b: Ich bin aus Ägypten.
+    c: Ich komme von Ägypten.
+    d: Ich heiße Ägypten.
+    e: Ich wohne aus Ägypten.
+    f: Ich bin in Ägypten komme.
+q2:
+  text: 'مع مديرك الجديد تقول:'
+  show: 4
+  options:
+    a: Wie geht es Ihnen?
+    b: Guten Tag, Herr Müller!
+    c: Wie geht's dir, Alter?
+    d: Hallo du!
+    e: Tschüss, Chef!
+    f: Und dir?
+q3:
+  text: كيف يُنطق الحرف w في Wasser؟
+  show: 4
+  options:
+    a: مثل v (ڤ)
+    b: «ڤاسر»
+    c: مثل الواو
+    d: مثل الإنجليزية water
+    e: صامت
+    f: مثل الفاء
+q4:
+  text: ماذا تقول قبل النوم؟
+  show: 4
+  options:
+    a: Gute Nacht!
+    b: Gute Nacht, schlaf gut!
+    c: Guten Abend!
+    d: Guten Morgen!
+    e: Guten Tag!
+    f: Auf Wiedersehen, Nacht!
+q5:
+  text: كيف تقول 45؟
+  show: 4
+  options:
+    a: fünfundvierzig
+    b: fünfundvierzig (الآحاد أولًا)
+    c: vierzigfünf
+    d: vierundfünfzig
+    e: fünfvierzig
+    f: vierzig und fünf
+q6:
+  text: 'أكمل: Wir ___ zwei Kinder.'
+  show: 4
+  options:
+    a: haben
+    b: haben (wir)
+    c: hat
+    d: habt
+    e: sind
+    f: hast
+q7:
+  text: أي كلمة مع das؟
+  show: 4
+  options:
+    a: Mädchen
+    b: Buch
+    c: Zeitung
+    d: Lehrer
+    e: Lampe
+    f: Montag
+q8:
+  text: «أين تسكن؟»
+  show: 4
+  options:
+    a: Wo wohnst du?
+    b: Wo wohnen Sie?
+    c: Wo du wohnst?
+    d: Wohin wohnst du?
+    e: Woher wohnst du?
+    f: Du wohnst wo bist?
+q9:
+  text: '«هي طبيبة»:'
+  show: 4
+  options:
+    a: Sie ist Ärztin.
+    b: Sie ist eine Ärztin. (مقبولة، والأشيع بدون أداة)
+    c: Sie hat Ärztin.
+    d: Sie ist Arzt in.
+    e: Sie bist Ärztin.
+    f: Ist sie Ärztin ist.
+q10:
+  text: '«اليوم أذهب إلى السينما»:'
+  show: 4
+  options:
+    a: Heute gehe ich ins Kino.
+    b: Ich gehe heute ins Kino.
+    c: Heute ich gehe ins Kino.
+    d: Heute gehe ins Kino ich.
+    e: Ich heute gehe ins Kino.
+    f: Heute ich ins Kino gehe.
+q11:
+  text: 'er + fahren:'
+  show: 4
+  options:
+    a: fährt
+    b: er fährt
+    c: fahrt
+    d: fahrst
+    e: fähren
+    f: fahren
+q12:
+  text: '«ليس عندي وقت»:'
+  show: 4
+  options:
+    a: Ich habe keine Zeit.
+    b: Ich habe leider keine Zeit.
+    c: Ich habe nicht Zeit.
+    d: Ich nicht habe Zeit.
+    e: Ich habe Zeit nicht kein.
+    f: Ich habe kein Zeiten.
+q13:
+  text: '«Kommst du nicht?»، تريد أن تقول: بلى، سآتي:'
+  show: 4
+  options:
+    a: Doch!
+    b: Doch, ich komme.
+    c: Ja, nicht.
+    d: Nein!
+    e: Nicht doch nein.
+    f: Kein!
+q14:
+  text: ماذا يعني «halb neun»؟
+  show: 4
+  options:
+    a: '8:30'
+    b: الثامنة والنصف
+    c: '9:30'
+    d: '9:00'
+    e: '8:15'
+    f: التاسعة والنصف
+q15:
+  text: '«أستيقظ في السابعة»:'
+  show: 4
+  options:
+    a: Ich stehe um 7 Uhr auf.
+    b: Um 7 Uhr stehe ich auf.
+    c: Ich aufstehe um 7 Uhr.
+    d: Ich stehe auf um 7 Uhr auf.
+    e: Um 7 Uhr ich stehe auf.
+    f: Ich stehe um 7 Uhr.
+q16:
+  text: '«أستطيع الطبخ جيدًا»:'
+  show: 4
+  options:
+    a: Ich kann gut kochen.
+    b: Ich kann sehr gut kochen.
+    c: Ich kann gut koche.
+    d: Ich kann kochen gut.
+    e: Ich kanne gut kochen.
+    f: Ich können gut kochen.
+q17:
+  text: 'طلب لطيف في المقهى:'
+  show: 4
+  options:
+    a: Ich möchte einen Kaffee, bitte.
+    b: Einen Kaffee, bitte.
+    c: Ich will Kaffee jetzt.
+    d: Gib Kaffee!
+    e: Ich möchten Kaffee.
+    f: Ich muss Kaffee bitte.
+q18:
+  text: 'أكمل: Ich habe ___ Bruder.'
+  show: 4
+  options:
+    a: einen
+    b: einen (Akkusativ مذكر)
+    c: ein
+    d: eine
+    e: einem
+    f: einer
+q19:
+  text: '«سيارتها» (لها):'
+  show: 4
+  options:
+    a: ihr Auto
+    b: Annas Auto (إذا كانت لآنا)
+    c: sein Auto
+    d: sie Auto
+    e: ihre Auto
+    f: ihren Auto
+q20:
+  text: 'طلب مهذب في المخبز:'
+  show: 4
+  options:
+    a: Ich hätte gern zwei Brötchen.
+    b: Zwei Brötchen, bitte.
+    c: Ich will zwei Brötchen jetzt.
+    d: Gib mir Brötchen.
+    e: Ich habe gern zwei Brötchen.
+    f: Ich hätte zwei Brötchen gern haben.
+q21:
+  text: '«يوجد سوبرماركت هنا»:'
+  show: 4
+  options:
+    a: Hier gibt es einen Supermarkt.
+    b: Es gibt hier einen Supermarkt.
+    c: Hier gibt es ein Supermarkt.
+    d: Hier ist es einen Supermarkt.
+    e: Hier gibt einen Supermarkt.
+    f: Hier hat es Supermarkt.
+q22:
+  text: '«أذهب بالأتوبيس»:'
+  show: 4
+  options:
+    a: Ich fahre mit dem Bus.
+    b: Ich fahre mit dem Bus zur Arbeit.
+    c: Ich fahre mit den Bus.
+    d: Ich fahre mit Bus der.
+    e: Ich fahre mit einen Bus.
+    f: Ich gehe mit der Bus.
+q23:
+  text: '«ذهبت إلى السينما» (Perfekt):'
+  show: 4
+  options:
+    a: Ich bin ins Kino gegangen.
+    b: Gestern bin ich ins Kino gegangen.
+    c: Ich habe ins Kino gegangen.
+    d: Ich bin ins Kino gegeht.
+    e: Ich habe ins Kino gegeht.
+    f: Ich bin gegangen ins Kino.
+q24:
+  text: 'اسم المفعول من essen:'
+  show: 4
+  options:
+    a: gegessen
+    b: Ich habe gegessen.
+    c: geesst
+    d: geessen
+    e: gegesst
+    f: essen
+q25:
+  text: '«أمس كنت تعبانًا»:'
+  show: 4
+  options:
+    a: Gestern war ich müde.
+    b: Ich war gestern müde.
+    c: Gestern ich war müde.
+    d: Gestern bin ich müde gewesen war.
+    e: Gestern hatte ich müde.
+    f: Gestern was ich müde.

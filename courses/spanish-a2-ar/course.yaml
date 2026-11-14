@@ -1,0 +1,208 @@
+id: spanish-a2-ar
+title: الإسباني مستوى A2
+version: 1
+language: ar
+description: 'المستوى الثاني بعد الإسباني A1، والشرح بالعربي. كل وحدة تبدأ بالكلام مع فيديو اختياري لمحادثة حقيقية
+  بإسبانية بطيئة: الخطط، و pretérito perfecto و indefinido و imperfecto، والطفولة، والأكل والسفر والمقارنة، والضمائر
+  والأمر والطبيب، والمستقبل والشرط والرأي. الخطة: 5 أسابيع، 30 إلى 45 دقيقة يوميًا.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'الأيام 1-5: ابدأ بالكلام: خططك وما فعلته'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'محادثة: خططك (ir a, querer, pensar)'
+    file: lessons/m1-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=ZO548K8i18c
+  - id: m1-l3
+    title: 'ما فعلته: pretérito perfecto'
+    file: lessons/m1-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=36397&end=37511
+  - id: m1-l4
+    title: saber أم poder أم conocer؟
+    file: lessons/m1-l4.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=37511
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): احكِ عن خططك للعام القادم، وعن 3 أشياء فعلتها هذا الأسبوع (pretérito perfecto).'
+  - id: m1-explain
+    type: explain
+    prompt: 'Escribe 6 frases: 3 cosas que has hecho este año y 3 cosas que nunca has hecho.'
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'الأيام 6-11: الماضي البسيط: pretérito indefinido'
+  lessons:
+  - id: m2-l1
+    title: الماضي البسيط المنتظم
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'الماضي الشاذ: fui, tuve, hice'
+    file: lessons/m2-l2.md
+    minutes: 40
+  - id: m2-l3
+    title: احكِ عن يوم أو رحلة
+    file: lessons/m2-l3.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): احكِ ما فعلته أمس من الصباح إلى الليل، أو عن آخر سفرة لك.'
+  - id: m2-explain
+    type: explain
+    prompt: Escribe un correo a un amigo contando tu último fin de semana (8-10 frases, en indefinido).
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'الأيام 12-17: الطفولة والوصف في الماضي: el imperfecto'
+  lessons:
+  - id: m3-l1
+    title: 'كنت أفعل: el imperfecto'
+    file: lessons/m3-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=76jg_xxMBSY
+  - id: m3-l2
+    title: imperfecto أم indefinido؟
+    file: lessons/m3-l2.md
+    minutes: 40
+  - id: m3-l3
+    title: صِف مكانًا أو شخصًا من الماضي
+    file: lessons/m3-l3.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): كيف كانت حياتك وأنت طفل؟ أين كنت تعيش، ماذا كنت تحب، وماذا حدث في يوم لا تنساه.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Escribe una historia corta (10 frases) que empiece así: «Era un día normal de invierno...».'
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'الأيام 18-23: الأكل والسفر، والمقارنة'
+  lessons:
+  - id: m4-l1
+    title: 'محادثة: اطلب أكل الشارع'
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=6CwX_8xM8eE
+  - id: m4-l2
+    title: المقارنة والأفضل
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=11120&end=12186
+  - id: m4-l3
+    title: 'السفر: الفندق والمواصلات والمشاكل'
+    file: lessons/m4-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=jmDQ9AC7UzY
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): قارن بين بلدك وبلد زرته أو تحب زيارته: الأكل، الطقس، الأسعار، الناس.'
+  - id: m4-explain
+    type: explain
+    prompt: 'Escribe una reseña de un restaurante o un hotel (8 frases): qué pediste, qué te gustó y qué no, y si
+      lo recomiendas.'
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'الأيام 24-29: الضمائر، والأمر، والصحة'
+  lessons:
+  - id: m5-l1
+    title: 'lo, la, le: لا تكرر الاسم'
+    file: lessons/m5-l1.md
+    minutes: 40
+  - id: m5-l2
+    title: 'الأمر: نصائح وتعليمات'
+    file: lessons/m5-l2.md
+    minutes: 35
+  - id: m5-l3
+    title: 'عند الطبيب: me duele'
+    file: lessons/m5-l3.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'تسجيل صوتي: أعطِ تعليمات للوصول من بيتك إلى أقرب صيدلية، ثم 3 نصائح لصديق مريض.'
+  - id: m5-explain
+    type: explain
+    prompt: 'Escribe un mensaje a un amigo que viene a tu ciudad: 6 consejos (qué hacer, qué no hacer, qué comer).'
+    min_words: 40
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'الأيام 30-35: المستقبل، و «لو»، والرأي، ومراجعة A2'
+  lessons:
+  - id: m6-l1
+    title: المستقبل البسيط
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: '«لو» و «أود»: si + المضارع، والشرط'
+    file: lessons/m6-l2.md
+    minutes: 30
+  - id: m6-l3
+    title: قل رأيك، ومراجعة A2
+    file: lessons/m6-l3.md
+    minutes: 35
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): ما رأيك في التعلم عبر الإنترنت؟ قل رأيك بسببين، وما ستفعله العام القادم، وماذا
+      ستفعل لو كان عندك وقت أكثر.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Escribe un texto de 120 palabras: «Mi vida hace diez años y mi vida dentro de diez años».'
+    min_words: 120
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70

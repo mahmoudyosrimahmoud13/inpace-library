@@ -1,0 +1,218 @@
+id: german-b1-ar
+title: الألماني مستوى B1
+version: 1
+language: ar
+description: 'المستوى الثالث بعد الألماني A2، والشرح بالعربي. المستوى المطلوب غالبًا للعمل والتدريب المهني في ألمانيا:
+  مقابلة العمل والنقاش، و Präteritum و Plusquamperfekt، وجمل الوصل، و hätte gemacht، و Passiv، والرسائل الرسمية،
+  والروابط و Genitiv. كل أسبوع يبدأ بالكلام، مع جزء اختياري من فيلم «Nicos Weg B1» أو حلقة من Easy German. الخطة:
+  6 أسابيع، 40 دقيقة يوميًا.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'الأسبوع 1: ابدأ بالكلام: مقابلة العمل والرأي'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'محادثة: أسئلة مقابلة العمل'
+    file: lessons/m1-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=I1y460_dViU
+  - id: m1-l3
+    title: 'النقاش: الرأي والموافقة والاعتراض'
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=LkufozluseI&end=1140
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'تسجيل صوتي (2 دقيقة): قدّم نفسك كما في مقابلة عمل: من أنت، ماذا درست وعملت، نقاط قوتك، ولماذا تريد
+      العمل في ألمانيا.'
+  - id: m1-explain
+    type: explain
+    prompt: 'Schreib einen Meinungstext (120 Wörter): «Homeoffice: mehr Vorteile oder mehr Nachteile?».'
+    min_words: 120
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'الأسبوع 2: الحكاية: Präteritum و Plusquamperfekt'
+  lessons:
+  - id: m2-l1
+    title: 'Präteritum: لغة القصص والأخبار'
+    file: lessons/m2-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=1140&end=2280
+  - id: m2-l2
+    title: Plusquamperfekt و nachdem / bevor
+    file: lessons/m2-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=1140&end=2280
+  - id: m2-l3
+    title: اكتب قصة
+    file: lessons/m2-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=1140&end=2280
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'تسجيل صوتي (2 دقيقة): احكِ قصة حقيقية مرت بك (سفر، عمل، موقف مضحك) بالترتيب وبروابط القصة.'
+  - id: m2-explain
+    type: explain
+    prompt: 'Schreib eine Geschichte (150 Wörter): «Eine Reise, die anders lief als geplant».'
+    min_words: 150
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'الأسبوع 3: جمل الوصل (Relativsätze)'
+  lessons:
+  - id: m3-l1
+    title: der, die, das كضمائر وصل
+    file: lessons/m3-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=2280&end=3420
+  - id: m3-l2
+    title: was, wo, worüber
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=2280&end=3420
+  - id: m3-l3
+    title: 'صِف بدقة: Relativsätze في الكلام'
+    file: lessons/m3-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=2280&end=3420
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): صِف أهم 3 أشخاص في حياتك بجمل وصل (der, den, dem, mit dem...).'
+  - id: m3-explain
+    type: explain
+    prompt: Beschreib deine Traumwohnung oder deinen Traumjob (120 Wörter) mit mindestens fünf Relativsätzen.
+    min_words: 120
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'الأسبوع 4: لو كان...: Konjunktiv II'
+  lessons:
+  - id: m4-l1
+    title: 'Konjunktiv II في الماضي: hätte gemacht'
+    file: lessons/m4-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=3420&end=4560
+  - id: m4-l2
+    title: als ob، و sollte، و die Bitte
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=3420&end=4560
+  - id: m4-l3
+    title: 'نقاش: ماذا كنت ستفعل؟'
+    file: lessons/m4-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=3420&end=4560
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'تسجيل صوتي (2 دقيقة): شيء تندم عليه أو قرار كنت ستتخذه بشكل مختلف: ماذا حدث، وماذا كان سيحدث لو...'
+  - id: m4-explain
+    type: explain
+    prompt: 'Schreib einen Text (150 Wörter): «Wenn ich in einem anderen Land geboren wäre...».'
+    min_words: 150
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'الأسبوع 5: المبني للمجهول، والرسائل الرسمية'
+  lessons:
+  - id: m5-l1
+    title: 'Passiv: wird gemacht'
+    file: lessons/m5-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=4560&end=5700
+  - id: m5-l2
+    title: 'الرسالة الرسمية: شكوى وطلب'
+    file: lessons/m5-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=4560&end=5700
+  - id: m5-l3
+    title: الرسائل غير الرسمية والبريد في العمل
+    file: lessons/m5-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=4560&end=5700
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): صِف عملية تعرفها بالمبني للمجهول (كيف يُصنع الخبز، كيف يُقدَّم طلب، كيف يُطبخ
+      طبق مصري).'
+  - id: m5-explain
+    type: explain
+    prompt: 'Schreib eine formelle Beschwerde (120 Wörter) an ein Online-Geschäft: Die Lieferung ist zu spät und
+      falsch.'
+    min_words: 120
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'الأسبوع 6: الروابط، و Genitiv، ومراجعة B1'
+  lessons:
+  - id: m6-l1
+    title: obwohl، trotzdem، damit، deshalb
+    file: lessons/m6-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=5700
+  - id: m6-l2
+    title: Genitiv و wegen / trotz
+    file: lessons/m6-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=5700
+  - id: m6-l3
+    title: مراجعة B1، وماذا بعد
+    file: lessons/m6-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=LkufozluseI&t=5700
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (2 دقيقة): «مزايا وعيوب العيش في بلد آخر»: رأيك بحجتين وحجة معارضة وخاتمة، بـ obwohl و trotzdem
+      و deshalb.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Schreib einen Forumsbeitrag (150 Wörter): «Sollten alle Schüler ein Jahr im Ausland verbringen?» Benutze
+      mindestens vier Konnektoren.'
+    min_words: 150
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70

@@ -1,0 +1,240 @@
+q1:
+  text: 'أكمل: No creo que ___ verdad.'
+  show: 4
+  options:
+    a: sea
+    b: sea (subjuntivo بعد no creo que)
+    c: es
+    d: está
+    e: será
+    f: ser
+q2:
+  text: 'subjuntivo من tener مع nosotros:'
+  show: 4
+  options:
+    a: tengamos
+    b: nosotros tengamos
+    c: tenemos
+    d: tenamos
+    e: tengemos
+    f: tuvimos
+q3:
+  text: 'أكمل: Creo que ___ razón.'
+  show: 4
+  options:
+    a: tienes
+    b: tiene
+    c: tengas
+    d: tenga usted siempre
+    e: tener
+    f: tenido
+q4:
+  text: '«الأفضل أن تذهب بالقطار»:'
+  show: 4
+  options:
+    a: Es mejor que vayas en tren.
+    b: Es mejor ir en tren.
+    c: Es mejor que vas en tren.
+    d: Es mejor que irás en tren.
+    e: Es mejor que fuiste en tren.
+    f: Es mejor que ve en tren.
+q5:
+  text: '«أريد أن تأتي معي»:'
+  show: 4
+  options:
+    a: Quiero que vengas conmigo.
+    b: Quiero que vengas tú conmigo.
+    c: Quiero que vienes conmigo.
+    d: Quiero venir tú conmigo.
+    e: Quiero que vendrás conmigo.
+    f: Quiero que venir conmigo.
+q6:
+  text: '«سأتصل بك عندما أصل»:'
+  show: 4
+  options:
+    a: Te llamaré cuando llegue.
+    b: Cuando llegue, te llamaré.
+    c: Te llamaré cuando llegaré.
+    d: Te llamaré cuando llego.
+    e: Te llamaré cuando llegué.
+    f: Te llamo cuando llegaría.
+q7:
+  text: 'أكمل: Me alegra que ___ aquí.'
+  show: 4
+  options:
+    a: estés
+    b: estéis
+    c: estás
+    d: estar
+    e: estarás
+    f: estuviste
+q8:
+  text: '«أتمنى أن أصل في الموعد» (نفس الفاعل):'
+  show: 4
+  options:
+    a: Espero llegar a tiempo.
+    b: Ojalá llegue a tiempo.
+    c: Espero que llegue yo a tiempo siempre.
+    d: Espero llego a tiempo.
+    e: Espero que llegar a tiempo.
+    f: Espero a llegaré a tiempo.
+q9:
+  text: '«عندما وصلت كان القطار قد غادر»:'
+  show: 4
+  options:
+    a: Cuando llegué, el tren ya había salido.
+    b: El tren ya había salido cuando llegué.
+    c: Cuando llegué, el tren ya salía.
+    d: Cuando llegaba, el tren ha salido.
+    e: Cuando llegué, el tren ya ha salido.
+    f: Cuando llegué, el tren ya había salió.
+q10:
+  text: أي زمن للمشهد والوصف في القصة؟
+  show: 4
+  options:
+    a: imperfecto
+    b: el imperfecto (Era de noche, llovía)
+    c: indefinido
+    d: futuro
+    e: presente de subjuntivo
+    f: condicional
+q11:
+  text: '«ما زلت أعيش في الإسكندرية»:'
+  show: 4
+  options:
+    a: Sigo viviendo en Alejandría.
+    b: Todavía vivo en Alejandría.
+    c: Sigo vivir en Alejandría.
+    d: Suelo vivido en Alejandría.
+    e: Dejo de vivir en Alejandría.
+    f: Sigo a vivir en Alejandría.
+q12:
+  text: '«توقفت عن التدخين»:'
+  show: 4
+  options:
+    a: Dejé de fumar.
+    b: He dejado de fumar.
+    c: Dejé fumar.
+    d: Dejé a fumar.
+    e: Volví a fumar.
+    f: Dejé fumando.
+q13:
+  text: '«لو كان عندي وقت لسافرت»:'
+  show: 4
+  options:
+    a: Si tuviera tiempo, viajaría.
+    b: Viajaría si tuviera tiempo.
+    c: Si tendría tiempo, viajaría.
+    d: Si tengo tiempo, viajaría ayer.
+    e: Si tuviera tiempo, viajaré.
+    f: Si tenía tiempo, viajo.
+q14:
+  text: 'subjuntivo الماضي من ir مع yo:'
+  show: 4
+  options:
+    a: fuera
+    b: yo fuera
+    c: iría
+    d: iba
+    e: vaya
+    f: fui
+q15:
+  text: '«يتكلم كأنه يعرف كل شيء»:'
+  show: 4
+  options:
+    a: Habla como si lo supiera todo.
+    b: Habla como si supiera todo.
+    c: Habla como si lo sabe todo.
+    d: Habla como si lo sepa todo.
+    e: Habla como si lo sabría todo.
+    f: Habla como que lo supiera todo.
+q16:
+  text: 'أكمل: Puede que ___ razón.'
+  show: 4
+  options:
+    a: tengas
+    b: tenga
+    c: tienes
+    d: tendrás
+    e: tuviste
+    f: tener
+q17:
+  text: «Estoy cansada» → Dijo que ___ cansada.
+  show: 4
+  options:
+    a: estaba
+    b: estaba (رجوع الزمن)
+    c: está ayer
+    d: estuvo siempre
+    e: esté
+    f: estará
+q18:
+  text: «¿Tienes coche?» → Me preguntó ___ tenía coche.
+  show: 4
+  options:
+    a: si
+    b: si (هل)
+    c: que
+    d: qué
+    e: cuando
+    f: por qué
+q19:
+  text: '«قلته له» بضميرين:'
+  show: 4
+  options:
+    a: Se lo dije.
+    b: Se lo dije a él.
+    c: Le lo dije.
+    d: Lo le dije.
+    e: Se le dije.
+    f: Me lo dijo a él.
+q20:
+  text: «Ven aquí» → Me dijo que ___ allí.
+  show: 4
+  options:
+    a: fuera
+    b: fuera (imperativo → subjuntivo الماضي)
+    c: ven
+    d: venía siempre
+    e: vendría
+    f: viene
+q21:
+  text: '«الكتاب الذي أعرتني إياه رائع»:'
+  show: 4
+  options:
+    a: El libro que me prestaste es genial.
+    b: El libro que me has prestado es genial.
+    c: El libro quien me prestaste es genial.
+    d: El libro lo que me prestaste es genial.
+    e: El libro donde me prestaste es genial.
+    f: El libro que me lo prestaste genial es.
+q22:
+  text: '«أبحث عن شقة فيها تراس» (لا أعرف إن وُجدت):'
+  show: 4
+  options:
+    a: Busco un piso que tenga terraza.
+    b: Busco un piso con terraza.
+    c: Busco un piso que tiene terraza siempre.
+    d: Busco un piso quien tenga terraza.
+    e: Busco un piso que tendría terraza.
+    f: Busco un piso que tuvo terraza.
+q23:
+  text: '«ما يعجبني أكثر هو السفر»:'
+  show: 4
+  options:
+    a: Lo que más me gusta es viajar.
+    b: Lo que me gusta más es viajar.
+    c: Que más me gusta es viajar.
+    d: El que más me gusta es viajar yo.
+    e: Lo cual más me gusta viajar.
+    f: Qué más me gusta es viajar.
+q24:
+  text: '«حتى لو أمطرت سأخرج»:'
+  show: 4
+  options:
+    a: Aunque llueva, saldré.
+    b: Saldré aunque llueva.
+    c: Aunque llueve, saldré mañana seguro.
+    d: Aunque lloverá, saldré.
+    e: Aunque lloviera, salgo.
+    f: Aunque llover, saldré.

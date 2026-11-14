@@ -1,0 +1,15 @@
+id: german-a1-to-b1
+title: الألماني من الصفر إلى B1
+description: ثلاث دورات بالترتيب، والشرح بالعربي، من أول «Hallo» إلى مستوى B1 المطلوب غالبًا للعمل والتدريب المهني في ألمانيا، مع فيلم «Nicos Weg» من Deutsche Welle.
+language: ar
+author: inPace
+official: true
+order: 16
+tags: [german, arabic, grammar, speaking]
+steps:
+  - course: german-a1-ar
+    note: "من الصفر: تكلّم من اليوم الأول، ثم der / die / das وترتيب الجملة والتسوق."
+  - course: german-a2-ar
+    note: الماضي، وجمل weil و dass، والسكن والطبيب والعمل.
+  - course: german-b1-ar
+    note: مقابلة العمل، والرسائل الرسمية، ومستوى العمل في ألمانيا.

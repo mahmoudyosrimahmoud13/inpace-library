@@ -1,0 +1,220 @@
+id: german-a2-ar
+title: الألماني مستوى A2
+version: 1
+language: ar
+description: 'المستوى الثاني بعد الألماني A1، والشرح بالعربي. كل وحدة تبدأ بالكلام: نهاية الأسبوع، و Perfekt كاملًا،
+  و war و hatte، و als و wenn، والأماكن بـ Dativ و Akkusativ، والسكن والمواعيد، وجمل weil و dass و ob، و um ...
+  zu، والمقارنة، والطبيب، والعمل، و würde و hätte. فوق أغلب الدروس جزء اختياري من فيلم «Nicos Weg A2» أو حلقة من
+  Easy German. الخطة: 5 أسابيع، 30 إلى 45 دقيقة يوميًا.'
+image: cover.jpg
+modules:
+- id: m1
+  title: 'الأيام 1-5: ابدأ بالكلام: نهاية الأسبوع والماضي'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'محادثة: ماذا فعلت في نهاية الأسبوع؟'
+    file: lessons/m1-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=u8M5d4XyNYQ
+  - id: m1-l3
+    title: 'Perfekt كاملًا: haben أم sein، والأفعال المنفصلة'
+    file: lessons/m1-l3.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&end=1110
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): احكِ نهاية أسبوعك الماضي بـ 8 أفعال على الأقل في Perfekt (مع haben و sein).'
+  - id: m1-explain
+    type: explain
+    prompt: 'Schreib eine Nachricht an einen Freund: Was hast du letzte Woche gemacht? (80 Wörter)'
+    min_words: 80
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: 'الأيام 6-11: Präteritum وكلمات الوقت'
+  lessons:
+  - id: m2-l1
+    title: war, hatte, konnte, musste
+    file: lessons/m2-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=1110&end=2220
+  - id: m2-l2
+    title: als أم wenn؟ وكلمات الوقت
+    file: lessons/m2-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=1110&end=2220
+  - id: m2-l3
+    title: 'احكِ عن حياتك: محطات'
+    file: lessons/m2-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=1110&end=2220
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): احكِ قصة حياتك باختصار: أين وُلدت، أين درست، متى بدأت العمل أو الدراسة، ومنذ
+      متى تتعلم الألمانية.'
+  - id: m2-explain
+    type: explain
+    prompt: Schreib deinen Lebenslauf als Text (10 Sätze) mit als, vor ... Jahren und seit.
+    min_words: 100
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: 'الأيام 12-17: الأماكن: أين؟ وإلى أين؟'
+  lessons:
+  - id: m3-l1
+    title: 'in, an, auf: Dativ أم Akkusativ؟'
+    file: lessons/m3-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=2220&end=3330
+  - id: m3-l2
+    title: 'السكن: الشقة والبحث عنها'
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=2220&end=3330
+  - id: m3-l3
+    title: 'في المكاتب: المواعيد والنماذج'
+    file: lessons/m3-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=2220&end=3330
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): صِف شقتك أو بيتك وأين توجد الأشياء في غرفة الجلوس، ثم مثّل مكالمة تحدد فيها
+      موعدًا لمعاينة شقة.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Schreib eine formelle E-Mail an einen Vermieter: Du interessierst dich für eine Wohnung und hast drei
+      Fragen (80 Wörter).'
+    min_words: 30
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: 'الأيام 18-23: جمل الربط: weil, dass, wenn'
+  lessons:
+  - id: m4-l1
+    title: 'weil و dass: الفعل في الآخر'
+    file: lessons/m4-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=3330&end=4440
+  - id: m4-l2
+    title: 'الرأي: Ich finde, dass...'
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=3330&end=4440
+  - id: m4-l3
+    title: um ... zu و zu + المصدر
+    file: lessons/m4-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=3330&end=4440
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): لماذا تتعلم الألمانية؟ أعطِ 3 أسباب بـ weil و um ... zu، وقل رأيك في الحياة
+      في ألمانيا بـ ich finde, dass.'
+  - id: m4-explain
+    type: explain
+    prompt: 'Schreib einen Text (100 Wörter): Vorteile und Nachteile von Online-Kursen. Benutze weil, dass und einerseits
+      ... andererseits.'
+    min_words: 100
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: 'الأيام 24-29: الصفات والمقارنة، والانعكاسية، والطبيب'
+  lessons:
+  - id: m5-l1
+    title: المقارنة والأفضل
+    file: lessons/m5-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=4440&end=5550
+  - id: m5-l2
+    title: الأفعال الانعكاسية و Imperativ
+    file: lessons/m5-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=4440&end=5550
+  - id: m5-l3
+    title: عند الطبيب
+    file: lessons/m5-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=4440&end=5550
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): قارن بين مدينتين تعرفهما (5 مقارنات)، ثم اتصل بالعمل وقل إنك مريض ولن تأتي اليوم،
+      واذكر أعراضك.'
+  - id: m5-explain
+    type: explain
+    prompt: 'Schreib eine Nachricht an deinen Chef: Du bist krank, du gehst zum Arzt und kommst morgen vielleicht
+      nicht (60 Wörter).'
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: 'الأيام 30-35: würde و könnte، والعمل، ومراجعة A2'
+  lessons:
+  - id: m6-l1
+    title: 'محادثة: في Jobcenter والعمل'
+    file: lessons/m6-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=IChcogLkMrs
+  - id: m6-l2
+    title: würde, hätte, wäre, könnte
+    file: lessons/m6-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=5550
+  - id: m6-l3
+    title: المستقبل، ومراجعة A2
+    file: lessons/m6-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Lg5P2w_Ro1c&t=5550
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): ماذا كنت ستفعل لو عشت سنة في ألمانيا؟ ثم قل ماذا ستفعل الشهر القادم (werden).'
+  - id: m6-explain
+    type: explain
+    prompt: 'Schreib einen Text (100 Wörter): «Mein Traumjob». Benutze würde, hätte, wäre und weil.'
+    min_words: 100
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70

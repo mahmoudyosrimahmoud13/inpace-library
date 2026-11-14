@@ -52,6 +52,12 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/docker-kubernetes-en/files/cover.jpg" width="160" alt=""> | [Docker and Kubernetes: from a container to a cluster](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-kubernetes-en.html) (same video, in Egyptian Arabic, with English notes) | 3 weeks |
 | <img src="courses/system-design-beginners/files/cover.jpg" width="160" alt=""> | [System design for beginners: design a live streaming service](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/system-design-beginners.html) (video by Gaurav Sen, freeCodeCamp.org) | 1 week |
 | <img src="courses/data-analytics-beginners/files/cover.jpg" width="160" alt=""> | [Data analytics for beginners: spreadsheets, Power BI and Python](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-analytics-beginners.html) | 4 weeks |
+| <img src="courses/spanish-a1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a1-ar.html) | 4 أسابيع |
+| <img src="courses/spanish-a2-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a2-ar.html) | 5 أسابيع |
+| <img src="courses/spanish-b1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-b1-ar.html) | 6 أسابيع |
+| <img src="courses/german-a1-ar/files/cover.jpg" width="160" alt=""> | [الألماني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a1-ar.html) | 4 أسابيع |
+| <img src="courses/german-a2-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a2-ar.html) | 5 أسابيع |
+| <img src="courses/german-b1-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-b1-ar.html) | 6 أسابيع |
 | <img src="courses/english-a1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a1-ar.html) | 4 أسابيع |
 | <img src="courses/english-a2-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a2-ar.html) | 5 أسابيع |
 | <img src="courses/english-b1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-b1-ar.html) | 6 أسابيع |
@@ -93,6 +99,8 @@ roadmap needs inPace 1.24 or newer; older versions can still add each course on 
 | [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
 | [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
 | [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
+| [الإسباني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/spanish-a1-to-b1.html) | 3 | Arabic |
+| [الألماني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/german-a1-to-b1.html) | 3 | Arabic |
 
 Roadmaps live in [`roadmaps/`](roadmaps), one small YAML file each:
 

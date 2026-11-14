@@ -1,0 +1,240 @@
+q1:
+  text: '«بقيت في البيت»:'
+  show: 4
+  options:
+    a: Ich bin zu Hause geblieben.
+    b: Ich bin daheim geblieben.
+    c: Ich habe zu Hause geblieben.
+    d: Ich bin zu Hause gebleibt.
+    e: Ich habe zu Hause bleiben.
+    f: Ich bin zu Hause bleibt.
+q2:
+  text: 'اسم المفعول من einkaufen:'
+  show: 4
+  options:
+    a: eingekauft
+    b: Ich habe eingekauft.
+    c: geeinkauft
+    d: einkaufte
+    e: eingekaufen
+    f: gekaufein
+q3:
+  text: 'اسم المفعول من besuchen:'
+  show: 4
+  options:
+    a: besucht
+    b: Ich habe Oma besucht.
+    c: gebesucht
+    d: besuchen
+    e: begesucht
+    f: besuchtet
+q4:
+  text: '«سافرت بالطائرة إلى القاهرة»:'
+  show: 4
+  options:
+    a: Ich bin nach Kairo geflogen.
+    b: Letzte Woche bin ich nach Kairo geflogen.
+    c: Ich habe nach Kairo geflogen.
+    d: Ich bin nach Kairo gefliegt.
+    e: Ich bin geflogen nach Kairo.
+    f: Ich habe nach Kairo fliegen.
+q5:
+  text: '«أمس كنت مريضًا»:'
+  show: 4
+  options:
+    a: Gestern war ich krank.
+    b: Ich war gestern krank.
+    c: Gestern bin ich krank.
+    d: Gestern habe ich krank gewesen.
+    e: Gestern hatte ich krank.
+    f: Gestern ich war krank.
+q6:
+  text: 'أكمل: ___ ich in Berlin ankam, hat es geregnet.'
+  show: 4
+  options:
+    a: Als
+    b: Als (مرة واحدة في الماضي)
+    c: Wenn
+    d: Wann
+    e: Ob
+    f: Dass
+q7:
+  text: '«أتعلم الألمانية منذ ثلاثة أشهر»:'
+  show: 4
+  options:
+    a: Ich lerne seit drei Monaten Deutsch.
+    b: Seit drei Monaten lerne ich Deutsch.
+    c: Ich habe seit drei Monaten Deutsch gelernt.
+    d: Ich lerne vor drei Monaten Deutsch.
+    e: Ich lerne seit drei Monate Deutsch.
+    f: Ich lerne für drei Monaten Deutsch.
+q8:
+  text: 'الماضي من können مع ich:'
+  show: 4
+  options:
+    a: konnte
+    b: ich konnte
+    c: kannte
+    d: könnte
+    e: konnten
+    f: gekonnt habe
+q9:
+  text: '«أذهب إلى السينما»:'
+  show: 4
+  options:
+    a: Ich gehe ins Kino.
+    b: Ich gehe heute ins Kino.
+    c: Ich gehe im Kino.
+    d: Ich gehe in dem Kino.
+    e: Ich gehe zu Kino in.
+    f: Ich gehe in Kino.
+q10:
+  text: '«الكتاب موضوع على الطاولة»:'
+  show: 4
+  options:
+    a: Das Buch liegt auf dem Tisch.
+    b: Auf dem Tisch liegt das Buch.
+    c: Das Buch liegt auf den Tisch.
+    d: Das Buch legt auf dem Tisch.
+    e: Das Buch liegt auf der Tisch.
+    f: Das Buch ist legen auf dem Tisch.
+q11:
+  text: '«أضع الزجاجة في الثلاجة»:'
+  show: 4
+  options:
+    a: Ich stelle die Flasche in den Kühlschrank.
+    b: Ich stelle die Flasche in den Kühlschrank rein.
+    c: Ich stehe die Flasche in den Kühlschrank.
+    d: Ich stelle die Flasche im Kühlschrank.
+    e: Ich stelle die Flasche in dem Kühlschrank.
+    f: Ich lege die Flasche im Kühlschrank.
+q12:
+  text: '«أريد تحديد موعد»:'
+  show: 4
+  options:
+    a: Ich möchte einen Termin vereinbaren.
+    b: Ich hätte gern einen Termin.
+    c: Ich möchte ein Termin machen haben.
+    d: Ich will Termin.
+    e: Ich möchte einen Termin vereinbart.
+    f: Ich möchte einem Termin vereinbaren.
+q13:
+  text: '«أبقى في البيت لأني مريض»:'
+  show: 4
+  options:
+    a: Ich bleibe zu Hause, weil ich krank bin.
+    b: Ich bleibe zu Hause, denn ich bin krank.
+    c: Ich bleibe zu Hause, weil ich bin krank.
+    d: Ich bleibe zu Hause, weil bin ich krank.
+    e: Ich bleibe zu Hause, denn ich krank bin.
+    f: Weil ich krank bin, ich bleibe zu Hause.
+q14:
+  text: '«لا أعرف هل عندها وقت»:'
+  show: 4
+  options:
+    a: Ich weiß nicht, ob sie Zeit hat.
+    b: Ich weiß nicht, ob sie heute Zeit hat.
+    c: Ich weiß nicht, ob sie hat Zeit.
+    d: Ich weiß nicht, wenn sie Zeit hat.
+    e: Ich weiß nicht, dass hat sie Zeit.
+    f: Ich weiß nicht ob hat sie Zeit.
+q15:
+  text: '«أتعلم الألمانية لكي أعمل في ألمانيا»:'
+  show: 4
+  options:
+    a: Ich lerne Deutsch, um in Deutschland zu arbeiten.
+    b: Ich lerne Deutsch, weil ich in Deutschland arbeiten will.
+    c: Ich lerne Deutsch, um in Deutschland arbeiten.
+    d: Ich lerne Deutsch, zu in Deutschland arbeiten um.
+    e: Ich lerne Deutsch, damit in Deutschland zu arbeiten.
+    f: Ich lerne Deutsch, für in Deutschland arbeiten.
+q16:
+  text: '«في رأيي هذا غالٍ جدًا»:'
+  show: 4
+  options:
+    a: Meiner Meinung nach ist das zu teuer.
+    b: Ich finde das zu teuer.
+    c: Meiner Meinung nach das ist zu teuer.
+    d: Meine Meinung ist das zu teuer nach.
+    e: Ich finde, dass das ist zu teuer.
+    f: In meiner Meinung das ist zu teuer.
+q17:
+  text: '«القطار أسرع من الأتوبيس»:'
+  show: 4
+  options:
+    a: Der Zug ist schneller als der Bus.
+    b: Der Zug fährt schneller als der Bus.
+    c: Der Zug ist schneller wie der Bus.
+    d: Der Zug ist mehr schnell als der Bus.
+    e: Der Zug ist schneller dann der Bus.
+    f: Der Zug ist am schnellsten als der Bus.
+q18:
+  text: 'المقارنة من gut:'
+  show: 4
+  options:
+    a: besser
+    b: besser (am besten)
+    c: guter
+    d: güter
+    e: mehr gut
+    f: beste als
+q19:
+  text: '«أنا متحمس لنهاية الأسبوع»:'
+  show: 4
+  options:
+    a: Ich freue mich auf das Wochenende.
+    b: Ich freue mich aufs Wochenende.
+    c: Ich freue auf das Wochenende.
+    d: Ich freue mich über das Wochenende morgen.
+    e: Ich freue mir auf das Wochenende.
+    f: Ich freue mich für das Wochenende.
+q20:
+  text: '«رأسي يؤلمني»:'
+  show: 4
+  options:
+    a: Ich habe Kopfschmerzen.
+    b: Mein Kopf tut weh.
+    c: Ich bin Kopfschmerzen.
+    d: Mir Kopf tut weh.
+    e: Ich habe Kopf weh.
+    f: Mein Kopf hat weh.
+q21:
+  text: '«لو كان عندي وقت لقرأت أكثر»:'
+  show: 4
+  options:
+    a: Wenn ich Zeit hätte, würde ich mehr lesen.
+    b: Ich würde mehr lesen, wenn ich Zeit hätte.
+    c: Wenn ich Zeit habe, würde ich mehr lesen gestern.
+    d: Wenn ich Zeit hätte, ich würde mehr lesen.
+    e: Wenn ich hätte Zeit, würde ich mehr lesen.
+    f: Wenn ich Zeit würde, hätte ich mehr lesen.
+q22:
+  text: 'طلب مهذب: «هل يمكنك مساعدتي؟»'
+  show: 4
+  options:
+    a: Könnten Sie mir bitte helfen?
+    b: Würden Sie mir bitte helfen?
+    c: Können Sie mich helfen?
+    d: Hilf mir sofort!
+    e: Könnten Sie mir helfen bitte zu?
+    f: Könnte Sie mir helfen?
+q23:
+  text: '«أعمل ممرضًا»:'
+  show: 4
+  options:
+    a: Ich arbeite als Krankenpfleger.
+    b: Ich bin Krankenpfleger.
+    c: Ich arbeite wie Krankenpfleger.
+    d: Ich arbeite für Krankenpfleger.
+    e: Ich arbeite als ein Krankenpfleger bin.
+    f: Ich arbeite Krankenpfleger als.
+q24:
+  text: '«سأتصل بك» (وعد):'
+  show: 4
+  options:
+    a: Ich werde dich anrufen.
+    b: Ich rufe dich an.
+    c: Ich werde dich anrufe.
+    d: Ich wird dich anrufen.
+    e: Ich werde anrufen dich.
+    f: Ich würde dich angerufen.
