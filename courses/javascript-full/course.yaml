@@ -1,0 +1,353 @@
+id: javascript-full
+title: 'JavaScript: the full course'
+version: 1
+language: en
+description: From your first line to a published web app. Variables, strings, conditions, arrays and loops (map,
+  filter, reduce), functions, objects and JSON, classes and modules, the DOM and events, async with promises and
+  fetch, errors, tests and publishing. You build Study Tasks step by step, with tests and a live link. The written
+  lessons are the course; parts of freeCodeCamp's full JavaScript course are optional videos on top.
+image: cover.jpg
+modules:
+- id: m1
+  title: 'Start: running JavaScript and variables'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: Three ways to run JavaScript
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=84&end=356
+  - id: m1-l3
+    title: Variables and types
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=356&end=845
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install Node.js and VS Code. Write `about.js` with const and let variables about you (name, city, age,
+      a boolean), print them, change the let variable and print it again. Upload the file and a screenshot of the
+      terminal.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between const and let, and between undefined and null, with an example of each.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: Numbers and strings
+  lessons:
+  - id: m2-l1
+    title: Math with numbers
+    file: lessons/m2-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=845&end=1279
+  - id: m2-l2
+    title: Strings
+    file: lessons/m2-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=1279&end=2188
+  - id: m2-l3
+    title: Template literals
+    file: lessons/m2-l3.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=11199&end=11443
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Write `receipt.js`: three items with prices in piastres or cents (whole numbers), print a receipt with
+      template literals, the total, 14% tax, and the total formatted with two decimals. Upload the file and the
+      output.'
+  - id: m2-explain
+    type: explain
+    prompt: Why is 0.1 + 0.2 not 0.3 in JavaScript, and what do you do about it when you work with money?
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: Conditions and logic
+  lessons:
+  - id: m3-l1
+    title: if, else and comparisons
+    file: lessons/m3-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=4121&end=5535
+  - id: m3-l2
+    title: switch, ternary, ?? and ?.
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=5535&end=6218
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Write `grade.js`: a score from 0 to 100 gives a grade (A to F) with if/else, a weekday name gives "weekend"
+      or "work day" with switch, and an invalid score (negative, over 100, NaN) prints a clear message. Upload the
+      file and outputs for 5 different inputs.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain the difference between == and ===, and between || and ??, with one example each where they give
+      different results.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: Arrays and loops
+  lessons:
+  - id: m4-l1
+    title: Arrays
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=2444&end=3101
+  - id: m4-l2
+    title: 'Loops: for, while, for...of'
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=7815&end=8652
+  - id: m4-l3
+    title: map, filter, reduce
+    file: lessons/m4-l3.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Write `stats.js`: an array of 8 study sessions `{ subject, minutes }`. Print the total minutes, the
+      longest session, the subjects without repeats, and the minutes per subject, using map, filter, reduce and
+      a for...of loop. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: What do map, filter and reduce each return? Give a real example where you'd chain two of them.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: Functions
+  lessons:
+  - id: m5-l1
+    title: Functions, parameters and return
+    file: lessons/m5-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3101&end=4121
+  - id: m5-l2
+    title: Arrow functions, rest and spread
+    file: lessons/m5-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=10037&end=10638
+  - id: m5-l3
+    title: Writing good functions
+    file: lessons/m5-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=6071&end=6218
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Write `tools.js` with 5 small pure functions (for example: minutesToText(95) gives "1 h 35 min", isWeekend(day),
+      average(nums), capitalize(word), countWords(text)) and call each with 3 inputs. Upload the file and the output.'
+  - id: m5-explain
+    type: explain
+    prompt: What is a pure function, and why are pure functions easier to test? Show one pure and one impure function.
+    min_words: 50
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: Objects and JSON
+  lessons:
+  - id: m6-l1
+    title: Objects
+    file: lessons/m6-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=6551&end=7815
+  - id: m6-l2
+    title: Destructuring and spread
+    file: lessons/m6-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=10638&end=11199
+  - id: m6-l3
+    title: JSON
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Write `library.js`: an array of 5 book objects { title, author, year, read }. Print the unread titles,
+      the oldest book, a lookup object from title to author, then save the array to `books.json` with JSON.stringify
+      and read it back. (Node: `import fs from "node:fs"` and `fs.writeFileSync`.) Upload both files.'
+  - id: m6-explain
+    type: explain
+    prompt: Why does changing b also change a after `const b = a` when a is an object? How do you make a real copy?
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: let and const, classes and modules
+  lessons:
+  - id: m7-l1
+    title: var, let and const
+    file: lessons/m7-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=9417&end=10037
+  - id: m7-l2
+    title: Classes
+    file: lessons/m7-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=11576&end=12025
+  - id: m7-l3
+    title: 'Modules: import and export'
+    file: lessons/m7-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=12025&end=12360
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Make a folder with package.json ("type": "module"), `shapes.js` exporting a class Rectangle (area,
+      perimeter, a getter isSquare) and a subclass Square, and `main.js` importing them and printing 3 shapes. Upload
+      the folder as a zip.'
+  - id: m7-explain
+    type: explain
+    prompt: Why does modern JavaScript avoid var? Explain with the loop example.
+    min_words: 40
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'The DOM and events: project step 1'
+  lessons:
+  - id: m8-l1
+    title: 'The DOM: find and change the page'
+    file: lessons/m8-l1.md
+    minutes: 35
+  - id: m8-l2
+    title: Events
+    file: lessons/m8-l2.md
+    minutes: 30
+  - id: m8-l3
+    title: 'Project step 1: the page and the logic'
+    file: lessons/m8-l3.md
+    minutes: 45
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Project step 1: create index.html, style.css and tasks.js as in the lesson. In the browser console,
+      import tasks.js (`const m = await import("./tasks.js")`) and try createTask, toggleTask and summary. Upload
+      a screenshot and the files.'
+  - id: m8-explain
+    type: explain
+    prompt: Why should user text go into the page with textContent and not innerHTML? Describe what could happen.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'Async: promises, fetch, storage: project step 2'
+  lessons:
+  - id: m9-l1
+    title: The event loop and promises
+    file: lessons/m9-l1.md
+    minutes: 35
+  - id: m9-l2
+    title: async, await and fetch
+    file: lessons/m9-l2.md
+    minutes: 35
+  - id: m9-l3
+    title: 'Project step 2: connect, save, load a quote'
+    file: lessons/m9-l3.md
+    minutes: 45
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'Project step 2: add storage.js and app.js. Add 3 tasks, tick one, reload the page (they must stay),
+      and delete one. Then add a feature of your own: a "Clear done tasks" button. Upload a short screen recording
+      or screenshots and the code.'
+  - id: m9-explain
+    type: explain
+    prompt: Why does setTimeout(..., 0) run after the code below it? Explain the event loop in your own words.
+    min_words: 50
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'Errors, tests, tools and publishing: project step 3'
+  lessons:
+  - id: m10-l1
+    title: Errors and debugging
+    file: lessons/m10-l1.md
+    minutes: 30
+  - id: m10-l2
+    title: 'Project step 3: tests and publishing'
+    file: lessons/m10-l2.md
+    minutes: 45
+  - id: m10-l3
+    title: Where to go next
+    file: lessons/m10-l3.md
+    minutes: 15
+    optional: true
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'Project step 3: add the tests, run npm test (screenshot), break and fix one test, publish on GitHub
+      Pages and write the README. Upload the live link and the repository link.'
+  - id: m10-explain
+    type: explain
+    prompt: Why did we keep the task logic in a file without the DOM? What does that make possible?
+    min_words: 50
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

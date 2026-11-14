@@ -1,0 +1,346 @@
+id: javascript-full-ar
+title: الدورة الكاملة في JavaScript
+version: 1
+language: ar
+description: من أول سطر إلى تطبيق ويب منشور. المتغيرات والنصوص والشروط، والمصفوفات والحلقات (map و filter و reduce)،
+  والدوال، والكائنات و JSON، والأصناف والوحدات، والـ DOM والأحداث، والبرمجة غير المتزامنة بـ promises و fetch، والأخطاء
+  والاختبارات والنشر. تبني تطبيق Study Tasks خطوة بخطوة، باختبارات ورابط حي. الدروس المكتوبة هي الدورة، وأجزاء من
+  كورس JavaScript الكامل على freeCodeCamp فيديوهات اختيارية فوقها.
+image: cover.jpg
+modules:
+- id: m1
+  title: 'البداية: تشغيل JavaScript والمتغيرات'
+  lessons:
+  - id: m1-l1
+    title: ابدأ من هنا
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: ثلاث طرق لتشغيل JavaScript
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=84&end=356
+  - id: m1-l3
+    title: المتغيرات والأنواع
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=356&end=845
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: ثبّت Node.js و VS Code. اكتب `about.js` بمتغيرات const و let عنك (الاسم، المدينة، العمر، وقيمة boolean)،
+      واطبعها، ثم غيّر متغير let واطبعه مرة أخرى. ارفع الملف وصورة للطرفية.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح الفرق بين const و let، وبين undefined و null، مع مثال لكل منها.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    pass: 70
+- id: m2
+  title: الأرقام والنصوص
+  lessons:
+  - id: m2-l1
+    title: الحساب بالأرقام
+    file: lessons/m2-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=845&end=1279
+  - id: m2-l2
+    title: النصوص
+    file: lessons/m2-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=1279&end=2188
+  - id: m2-l3
+    title: النصوص القالبية (template literals)
+    file: lessons/m2-l3.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=11199&end=11443
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'اكتب `receipt.js`: ثلاثة أصناف بأسعار بالقروش (أرقام صحيحة)، واطبع إيصالًا بالنصوص القالبية، والمجموع،
+      وضريبة 14%، والمجموع بخانتين عشريتين. ارفع الملف والمخرجات.'
+  - id: m2-explain
+    type: explain
+    prompt: لماذا لا تساوي 0.1 + 0.2 القيمة 0.3 في JavaScript، وماذا تفعل حيال ذلك عند التعامل مع المال؟
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q5
+    - q6
+    - q7
+    - q8
+    pass: 70
+- id: m3
+  title: الشروط والمنطق
+  lessons:
+  - id: m3-l1
+    title: if و else والمقارنات
+    file: lessons/m3-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=4121&end=5535
+  - id: m3-l2
+    title: switch و ternary و ?? و ?.
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=5535&end=6218
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'اكتب `grade.js`: درجة من 0 إلى 100 تعطي تقديرًا (A إلى F) بـ if/else، واسم يوم يعطي "weekend" أو "work
+      day" بـ switch، ودرجة غير صالحة (سالبة أو فوق 100 أو NaN) تطبع رسالة واضحة. ارفع الملف ومخرجات 5 مدخلات مختلفة.'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح الفرق بين == و ===، وبين || و ??، مع مثال لكل منها تختلف فيه النتيجة.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m4
+  title: المصفوفات والحلقات
+  lessons:
+  - id: m4-l1
+    title: المصفوفات
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=2444&end=3101
+  - id: m4-l2
+    title: 'الحلقات: for و while و for...of'
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=7815&end=8652
+  - id: m4-l3
+    title: map و filter و reduce
+    file: lessons/m4-l3.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'اكتب `stats.js`: مصفوفة من 8 جلسات مذاكرة `{ subject, minutes }`. اطبع مجموع الدقائق، وأطول جلسة، والمواد
+      بدون تكرار، والدقائق لكل مادة، باستخدام map و filter و reduce وحلقة for...of. ارفعه.'
+  - id: m4-explain
+    type: explain
+    prompt: ماذا تعيد كل من map و filter و reduce؟ أعطِ مثالًا حقيقيًا تربط فيه اثنتين منها.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    pass: 70
+- id: m5
+  title: الدوال
+  lessons:
+  - id: m5-l1
+    title: الدوال والمعاملات و return
+    file: lessons/m5-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3101&end=4121
+  - id: m5-l2
+    title: الدوال السهمية و rest و spread
+    file: lessons/m5-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=10037&end=10638
+  - id: m5-l3
+    title: كتابة دوال جيدة
+    file: lessons/m5-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=6071&end=6218
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'اكتب `tools.js` فيه 5 دوال نقية صغيرة (مثلًا: minutesToText(95) تعطي "1 h 35 min"، و isWeekend(day)،
+      و average(nums)، و capitalize(word)، و countWords(text)) واستدعِ كلًا منها بـ 3 مدخلات. ارفع الملف والمخرجات.'
+  - id: m5-explain
+    type: explain
+    prompt: ما الدالة النقية، ولماذا يسهل اختبارها؟ اعرض دالة نقية وأخرى غير نقية.
+    min_words: 50
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m6
+  title: الكائنات و JSON
+  lessons:
+  - id: m6-l1
+    title: الكائنات
+    file: lessons/m6-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=6551&end=7815
+  - id: m6-l2
+    title: التفكيك (destructuring) و spread
+    file: lessons/m6-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=10638&end=11199
+  - id: m6-l3
+    title: JSON
+    file: lessons/m6-l3.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'اكتب `library.js`: مصفوفة من 5 كائنات كتب { title, author, year, read }. اطبع عناوين غير المقروءة،
+      وأقدم كتاب، وكائن بحث من العنوان إلى المؤلف، ثم احفظ المصفوفة في `books.json` بـ JSON.stringify واقرأها مرة
+      أخرى. (في Node: `import fs from "node:fs"` و `fs.writeFileSync`.) ارفع الملفين.'
+  - id: m6-explain
+    type: explain
+    prompt: لماذا يتغير a عندما تغيّر b بعد `const b = a` إذا كان a كائنًا؟ وكيف تصنع نسخة حقيقية؟
+    min_words: 40
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m7
+  title: let و const، والأصناف، والوحدات
+  lessons:
+  - id: m7-l1
+    title: var و let و const
+    file: lessons/m7-l1.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=9417&end=10037
+  - id: m7-l2
+    title: الأصناف (classes)
+    file: lessons/m7-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=11576&end=12025
+  - id: m7-l3
+    title: 'الوحدات: import و export'
+    file: lessons/m7-l3.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=PkZNo7MFNFg&t=12025&end=12360
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'أنشئ مجلدًا فيه package.json ("type": "module")، و `shapes.js` يصدّر صنف Rectangle (المساحة والمحيط
+      و getter باسم isSquare) وصنفًا فرعيًا Square، و `main.js` يستوردهما ويطبع 3 أشكال. ارفع المجلد مضغوطًا.'
+  - id: m7-explain
+    type: explain
+    prompt: لماذا تتجنب JavaScript الحديثة var؟ اشرح بمثال الحلقة.
+    min_words: 40
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    pass: 70
+- id: m8
+  title: 'الـ DOM والأحداث: المشروع، الخطوة 1'
+  lessons:
+  - id: m8-l1
+    title: 'الـ DOM: ابحث في الصفحة وغيّرها'
+    file: lessons/m8-l1.md
+    minutes: 35
+  - id: m8-l2
+    title: الأحداث
+    file: lessons/m8-l2.md
+    minutes: 30
+  - id: m8-l3
+    title: 'المشروع، الخطوة 1: الصفحة والمنطق'
+    file: lessons/m8-l3.md
+    minutes: 45
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'المشروع، الخطوة 1: أنشئ index.html و style.css و tasks.js كما في الدرس. وفي وحدة التحكم في المتصفح
+      استورد tasks.js (`const m = await import("./tasks.js")`) وجرّب createTask و toggleTask و summary. ارفع صورة
+      والملفات.'
+  - id: m8-explain
+    type: explain
+    prompt: لماذا يجب وضع نص المستخدم في الصفحة بـ textContent وليس innerHTML؟ صِف ما قد يحدث.
+    min_words: 40
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    pass: 70
+- id: m9
+  title: 'غير المتزامن: promises و fetch والتخزين: المشروع، الخطوة 2'
+  lessons:
+  - id: m9-l1
+    title: حلقة الأحداث و promises
+    file: lessons/m9-l1.md
+    minutes: 35
+  - id: m9-l2
+    title: async و await و fetch
+    file: lessons/m9-l2.md
+    minutes: 35
+  - id: m9-l3
+    title: 'المشروع، الخطوة 2: الربط والحفظ واقتباس من الإنترنت'
+    file: lessons/m9-l3.md
+    minutes: 45
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'المشروع، الخطوة 2: أضف storage.js و app.js. أضف 3 مهام، وعلّم واحدة، وأعد تحميل الصفحة (يجب أن تبقى)،
+      واحذف واحدة. ثم أضف ميزة من عندك: زر "Clear done tasks" لحذف المنجز. ارفع تسجيلًا قصيرًا للشاشة أو صورًا والكود.'
+  - id: m9-explain
+    type: explain
+    prompt: لماذا يعمل setTimeout(..., 0) بعد الكود الذي يليه؟ اشرح حلقة الأحداث بكلماتك.
+    min_words: 50
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m10
+  title: 'الأخطاء والاختبارات والأدوات والنشر: المشروع، الخطوة 3'
+  lessons:
+  - id: m10-l1
+    title: الأخطاء وتتبعها
+    file: lessons/m10-l1.md
+    minutes: 30
+  - id: m10-l2
+    title: 'المشروع، الخطوة 3: الاختبارات والنشر'
+    file: lessons/m10-l2.md
+    minutes: 45
+  - id: m10-l3
+    title: إلى أين بعد ذلك
+    file: lessons/m10-l3.md
+    minutes: 15
+    optional: true
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'المشروع، الخطوة 3: أضف الاختبارات، وشغّل npm test (صورة)، واكسر اختبارًا ثم أصلحه، وانشر على GitHub
+      Pages واكتب الـ README. ارفع الرابط الحي ورابط المستودع.'
+  - id: m10-explain
+    type: explain
+    prompt: لماذا أبقينا منطق المهام في ملف بلا DOM؟ وماذا يتيح ذلك؟
+    min_words: 50
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

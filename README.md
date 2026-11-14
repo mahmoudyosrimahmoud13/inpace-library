@@ -30,6 +30,8 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/python-full-ar/files/cover.jpg" width="160" alt=""> | [بايثون: الدورة الكاملة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full-ar.html) (على منهج CS50P من هارفارد) | 11 أسبوعًا |
 | <img src="courses/csharp-dotnet-beginners/files/cover.jpg" width="160" alt=""> | [C# and .NET for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners.html) (on Microsoft Learn's docs) | 10 weeks |
 | <img src="courses/csharp-dotnet-beginners-ar/files/cover.jpg" width="160" alt=""> | [C# و.NET للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners-ar.html) (على توثيق Microsoft Learn) | 10 أسابيع |
+| <img src="courses/javascript-full/files/cover.jpg" width="160" alt=""> | [JavaScript: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full.html) (optional videos from freeCodeCamp) | 10 weeks |
+| <img src="courses/javascript-full-ar/files/cover.jpg" width="160" alt=""> | [الدورة الكاملة في JavaScript](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full-ar.html) (فيديوهات اختيارية من freeCodeCamp) | 10 أسابيع |
 | <img src="courses/inpace-inside/files/cover.jpg" width="160" alt=""> | [inPace from the inside: how the app works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/inpace-inside.html) | 1 week |
 | <img src="courses/html-css-for-inpace/files/cover.jpg" width="160" alt=""> | [HTML & CSS for inPace's pages](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/html-css-for-inpace.html) | 1 week |
 | <img src="courses/javascript-for-inpace/files/cover.jpg" width="160" alt=""> | [JavaScript, the inPace way](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-for-inpace.html) | 1 week |
@@ -94,13 +96,15 @@ roadmap needs inPace 1.24 or newer; older versions can still add each course on 
 | [الإنجليزي من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/english-a1-to-b1.html) | 3 | Arabic |
 | [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 9 | English |
 | [مطوّر باك إند بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend-ar.html) | 5 | Arabic |
-| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 6 | English |
+| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 7 | English |
 | [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 2 | English |
 | [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
 | [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
 | [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
 | [الإسباني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/spanish-a1-to-b1.html) | 3 | Arabic |
 | [الألماني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/german-a1-to-b1.html) | 3 | Arabic |
+| [Front-end web developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer.html) | 4 | English |
+| [مطوّر واجهات ويب](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer-ar.html) | 4 | Arabic |
 
 Roadmaps live in [`roadmaps/`](roadmaps), one small YAML file each:
 

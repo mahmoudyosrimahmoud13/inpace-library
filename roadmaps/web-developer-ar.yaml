@@ -1,0 +1,20 @@
+id: web-developer-ar
+title: مطوّر واجهات ويب
+description: من أول صفحة ويب إلى تطبيق JavaScript تنشره على الإنترنت، باختبارات ورابط تضعه في سيرتك الذاتية.
+language: ar
+author: inPace
+official: true
+order: 18
+tags: [web, javascript, frontend, arabic]
+steps:
+  - course: javascript-full-ar
+    note: قلب المسار. تبني تطبيق Study Tasks وتنشره على GitHub Pages.
+  - course: html-css-for-inpace
+    note: بالإنجليزية. بداية قصيرة عن مكونات كل صفحة، بأمثلة من صفحات inPace نفسها.
+    optional: true
+  - course: docker-kubernetes-ar
+    note: ضع عملك في حاوية. مفيد عندما تنتقل إلى full-stack.
+    optional: true
+  - course: system-design-beginners
+    note: بالإنجليزية. كيف تُصمَّم خدمات الويب الكبيرة، وهو موضوع معتاد في المقابلات.
+    optional: true

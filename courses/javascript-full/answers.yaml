@@ -1,0 +1,200 @@
+q1:
+  right:
+  - a
+  - b
+  why: Use const by default, let when the value changes.
+q2:
+  right:
+  - a
+  - b
+  why: JavaScript has one number type.
+q3:
+  right:
+  - a
+  - b
+  why: node + the file name.
+q4:
+  right:
+  - a
+  - b
+  why: No value assigned means undefined.
+q5:
+  right:
+  - a
+  - b
+  why: '% gives the remainder.'
+q6:
+  right:
+  - a
+  - b
+  why: ${} works only inside backticks.
+q7:
+  right:
+  - a
+  - b
+  why: Text that isn't a number becomes NaN.
+q8:
+  right:
+  - a
+  - b
+  why: From index 1 up to, not including, 3.
+q9:
+  right:
+  - a
+  - b
+  why: === compares type too.
+q10:
+  right:
+  - a
+  - b
+  why: Empty string and 0 are falsy; "0" and [] are truthy.
+q11:
+  right:
+  - a
+  - b
+  why: 0 isn't null or undefined.
+q12:
+  right:
+  - a
+  - b
+  why: break ends the switch.
+q13:
+  right:
+  - a
+  - b
+  why: map transforms each item.
+q14:
+  right:
+  - a
+  - b
+  why: Zero-based indexes.
+q15:
+  right:
+  - a
+  - b
+  why: Without a compare function, sort compares text.
+q16:
+  right:
+  - a
+  - b
+  why: for...in gives keys (indexes); for...of gives values.
+q17:
+  right:
+  - a
+  - b
+  why: No return means undefined.
+q18:
+  right:
+  - a
+  - b
+  why: An arrow function with one expression returns it.
+q19:
+  right:
+  - a
+  - b
+  why: Spread unpacks the items.
+q20:
+  right:
+  - a
+  - b
+  why: let and const are block scoped.
+q21:
+  right:
+  - a
+  - b
+  why: obj.k reads a key literally named k.
+q22:
+  right:
+  - a
+  - b
+  why: It takes the value of key a.
+q23:
+  right:
+  - a
+  - b
+  why: 'stringify: object to text; parse: text to object.'
+q24:
+  right:
+  - a
+  - b
+  why: Spread into a new object.
+q25:
+  right:
+  - a
+  - b
+  why: let and const are block scoped; var is function scoped.
+q26:
+  right:
+  - a
+  - b
+  why: super calls the parent constructor.
+q27:
+  right:
+  - a
+  - b
+  why: A default import has no braces.
+q28:
+  right:
+  - a
+  - b
+  why: '# makes a private field.'
+q29:
+  right:
+  - a
+  - b
+  why: querySelectorAll returns all matches; .task is a class selector.
+q30:
+  right:
+  - a
+  - b
+  why: preventDefault stops the default action.
+q31:
+  right:
+  - a
+  - b
+  why: textContent never runs HTML.
+q32:
+  right:
+  - a
+  - b
+  why: Delegation uses bubbling to handle many items in one place.
+q33:
+  right:
+  - a
+  - b
+  why: A 404 is still a response.
+q34:
+  right:
+  - a
+  - b
+  why: The callback waits for the current code.
+q35:
+  right:
+  - a
+  - b
+  why: localStorage stores text only.
+q36:
+  right:
+  - a
+  - b
+  why: Sequential awaits wait one after the other.
+q37:
+  right:
+  - a
+  - b
+  why: finally always runs.
+q38:
+  right:
+  - a
+  - b
+  why: The test script runs node --test.
+q39:
+  right:
+  - a
+  - b
+  why: throw stops the function and passes the error up.
+q40:
+  right:
+  - a
+  - b
+  why: Breakpoints let you step through and watch variables.

@@ -1,0 +1,400 @@
+q1:
+  text: أي كلمة لقيمة لن يُعاد إسنادها؟
+  show: 4
+  options:
+    a: const
+    b: const (افتراضيًا)
+    c: let
+    d: var
+    e: static
+    f: final
+q2:
+  text: ماذا تعطي typeof 3.5؟
+  show: 4
+  options:
+    a: '"number"'
+    b: number (رقم)
+    c: '"float"'
+    d: '"decimal"'
+    e: '"double"'
+    f: '"integer"'
+q3:
+  text: كيف تشغّل hello.js بـ Node؟
+  show: 4
+  options:
+    a: node hello.js
+    b: node hello.js (في الطرفية)
+    c: run hello.js
+    d: js hello.js
+    e: npm hello.js
+    f: start hello
+q4:
+  text: متغير مُعلن بـ let بدون قيمة يكون...
+  show: 4
+  options:
+    a: undefined
+    b: undefined (بلا قيمة بعد)
+    c: 'null'
+    d: '0'
+    e: '""'
+    f: 'false'
+q5:
+  text: قيمة 7 % 3 هي...
+  show: 4
+  options:
+    a: '1'
+    b: 1 (الباقي)
+    c: '2'
+    d: '2.33'
+    e: '0'
+    f: '21'
+q6:
+  text: أيها يطبع Hi, Mona! إذا كانت name تساوي "Mona"؟
+  show: 4
+  options:
+    a: console.log(`Hi, ${name}!`)
+    b: console.log("Hi, " + name + "!")
+    c: console.log("Hi, ${name}!")
+    d: console.log('Hi, {name}!')
+    e: console.log(`Hi, $name!`)
+    f: console.log(Hi, name!)
+q7:
+  text: ماذا تعطي Number("abc")؟
+  show: 4
+  options:
+    a: NaN
+    b: NaN (ليس رقمًا)
+    c: '0'
+    d: undefined
+    e: '"abc"'
+    f: an error
+q8:
+  text: قيمة "hello".slice(1, 3) هي...
+  show: 4
+  options:
+    a: '"el"'
+    b: el (من 1 حتى قبل 3)
+    c: '"hel"'
+    d: '"ell"'
+    e: '"he"'
+    f: '"llo"'
+q9:
+  text: قيمة 5 === "5" هي...
+  show: 4
+  options:
+    a: 'false'
+    b: false (نوعان مختلفان)
+    c: 'true'
+    d: undefined
+    e: NaN
+    f: an error
+q10:
+  text: أي القيم كاذبة (falsy)؟
+  show: 4
+  options:
+    a: '""'
+    b: '0'
+    c: '"0"'
+    d: '[]'
+    e: '"false"'
+    f: '{}'
+q11:
+  text: قيمة 0 ?? 10 هي...
+  show: 4
+  options:
+    a: '0'
+    b: 0 (?? تستبدل null و undefined فقط)
+    c: '10'
+    d: 'null'
+    e: undefined
+    f: 'false'
+q12:
+  text: ماذا يحدث في case داخل switch بدون break؟
+  show: 4
+  options:
+    a: يكمل إلى الـ case التالية أيضًا
+    b: السقوط (fall-through)
+    c: خطأ
+    d: يتوقف
+    e: يتخطى default
+    f: يبدأ من جديد
+q13:
+  text: ماذا تعطي [10, 20, 30].map((x) => x / 10)؟
+  show: 4
+  options:
+    a: '[1, 2, 3]'
+    b: مصفوفة جديدة [1, 2, 3]
+    c: '6'
+    d: '[10, 20, 30]'
+    e: '[1]'
+    f: '60'
+q14:
+  text: موضع العنصر الأول هو...
+  show: 4
+  options:
+    a: '0'
+    b: 0 (المصفوفات تبدأ من الصفر)
+    c: '1'
+    d: '-1'
+    e: first
+    f: length
+q15:
+  text: 'رتّب الأرقام من الصغير للكبير بشكل صحيح:'
+  show: 4
+  options:
+    a: nums.sort((a, b) => a - b)
+    b: '[...nums].sort((a, b) => a - b)'
+    c: nums.sort()
+    d: nums.sort((a, b) => b - a)
+    e: nums.order()
+    f: sort(nums)
+q16:
+  text: أي حلقة تعطي كل قيمة في المصفوفة مباشرة؟
+  show: 4
+  options:
+    a: for (const x of arr)
+    b: for...of
+    c: for (const x in arr)
+    d: while (arr)
+    e: do arr
+    f: loop arr
+q17:
+  text: الدالة بدون return تعيد...
+  show: 4
+  options:
+    a: undefined
+    b: undefined (لا شيء)
+    c: 'null'
+    d: '0'
+    e: '""'
+    f: 'false'
+q18:
+  text: const sq = (n) => n * n; ما قيمة sq(4)؟
+  show: 4
+  options:
+    a: '16'
+    b: 16 (التعبير الواحد يُعاد)
+    c: '8'
+    d: undefined
+    e: '4'
+    f: '44'
+q19:
+  text: قيمة [...[1, 2], 3] هي...
+  show: 4
+  options:
+    a: '[1, 2, 3]'
+    b: مصفوفة جديدة [1, 2, 3]
+    c: '[[1, 2], 3]'
+    d: '6'
+    e: '[1, 2]'
+    f: an error
+q20:
+  text: متغير معلن بـ const داخل دالة يكون...
+  show: 4
+  options:
+    a: مرئيًا داخل الدالة فقط
+    b: محليًا للدالة
+    c: عامًا
+    d: مرئيًا في كل مكان
+    e: مشتركًا مع الملفات الأخرى
+    f: غير معرّف
+q21:
+  text: 'اقرأ المفتاح المحفوظ في المتغير k من obj:'
+  show: 4
+  options:
+    a: obj[k]
+    b: obj[k] (الأقواس المربعة)
+    c: obj.k
+    d: obj->k
+    e: obj(k)
+    f: obj{k}
+q22:
+  text: 'const { a } = { a: 1, b: 2 } تجعل a تساوي...'
+  show: 4
+  options:
+    a: '1'
+    b: 1 (التفكيك)
+    c: '{ a: 1 }'
+    d: '2'
+    e: undefined
+    f: '[1]'
+q23:
+  text: 'حوّل كائنًا إلى نص JSON:'
+  show: 4
+  options:
+    a: JSON.stringify(obj)
+    b: JSON.stringify
+    c: JSON.parse(obj)
+    d: obj.toJSON()
+    e: String(obj)
+    f: JSON.text(obj)
+q24:
+  text: 'نسخة من task مع done = true دون تغيير task:'
+  show: 4
+  options:
+    a: '{ ...task, done: true }'
+    b: 'Object.assign({}, task, { done: true })'
+    c: task.done = true
+    d: const t = task; t.done = true
+    e: '[...task, true]'
+    f: 'task + { done: true }'
+q25:
+  text: أي إعلان نطاقه الكتلة { }؟
+  show: 4
+  options:
+    a: let
+    b: const
+    c: var
+    d: global
+    e: function
+    f: static
+q26:
+  text: 'استدعِ مُنشئ الأب في صنف فرعي:'
+  show: 4
+  options:
+    a: super(...)
+    b: super()
+    c: parent()
+    d: this.constructor()
+    e: base()
+    f: extends()
+q27:
+  text: 'استورد التصدير الافتراضي:'
+  show: 4
+  options:
+    a: import square from "./math.js"
+    b: import square, { add } from "./math.js"
+    c: import { default square } from "./math.js"
+    d: require square from "./math.js"
+    e: import * square from "./math.js"
+    f: include "./math.js"
+q28:
+  text: 'حقل مكتوب #seconds داخل صنف يكون...'
+  show: 4
+  options:
+    a: خاصًا بالصنف
+    b: غير مقروء من الخارج
+    c: تعليقًا
+    d: حقل أرقام فقط
+    e: عامًا
+    f: معرّف CSS
+q29:
+  text: 'اعثر على كل العناصر ذات الصنف "task":'
+  show: 4
+  options:
+    a: document.querySelectorAll(".task")
+    b: document.getElementsByClassName("task")
+    c: document.querySelector(".task")
+    d: document.querySelectorAll("task")
+    e: document.find(".task")
+    f: document.getElementById("task")
+q30:
+  text: 'امنع النموذج من إعادة تحميل الصفحة:'
+  show: 4
+  options:
+    a: event.preventDefault()
+    b: preventDefault داخل مستمع submit
+    c: event.stop()
+    d: return false in HTML only
+    e: form.reload = false
+    f: event.cancel()
+q31:
+  text: 'الطريقة الآمنة لعرض نص المستخدم:'
+  show: 4
+  options:
+    a: el.textContent = text
+    b: textContent
+    c: el.innerHTML = text
+    d: document.write(text)
+    e: el.outerHTML = text
+    f: eval(text)
+q32:
+  text: مستمع واحد على القائمة لكل عناصرها يسمى...
+  show: 4
+  options:
+    a: تفويض الأحداث
+    b: التفويض (delegation)
+    c: صعود الأحداث فقط
+    d: الاستطلاع
+    e: جحيم الـ callbacks
+    f: الرفع (hoisting)
+q33:
+  text: هل ترفض fetch مع 404؟
+  show: 4
+  options:
+    a: 'لا: افحص res.ok'
+    b: لا، فقط عند فشل الشبكة
+    c: نعم، دائمًا
+    d: نعم، بخطأ SyntaxError
+    e: تعيد null
+    f: تعيد المحاولة
+q34:
+  text: 'ترتيب الطباعة: log 1، ثم setTimeout(log 3, 0)، ثم log 2'
+  show: 4
+  options:
+    a: 1 2 3
+    b: 1 ثم 2 ثم 3
+    c: 1 3 2
+    d: 3 1 2
+    e: 2 1 3
+    f: 1 2
+q35:
+  text: 'احفظ مصفوفة في localStorage:'
+  show: 4
+  options:
+    a: localStorage.setItem("k", JSON.stringify(arr))
+    b: JSON.stringify أولًا
+    c: localStorage.setItem("k", arr)
+    d: localStorage.save(arr)
+    e: localStorage.k = arr.toString() only
+    f: sessionStorage.push(arr)
+q36:
+  text: 'شغّل طلبين معًا وانتظر الاثنين:'
+  show: 4
+  options:
+    a: await Promise.all([a(), b()])
+    b: Promise.all
+    c: await a(); await b();
+    d: Promise.wait(a, b)
+    e: await [a(), b()].join()
+    f: fetch.all(a, b)
+q37:
+  text: أي كتلة تعمل سواء حدث خطأ أم لا؟
+  show: 4
+  options:
+    a: finally
+    b: finally { }
+    c: catch
+    d: else
+    e: always
+    f: end
+q38:
+  text: 'شغّل اختبارات المشروع:'
+  show: 4
+  options:
+    a: npm test
+    b: node --test
+    c: npm run
+    d: node tasks.js
+    e: test npm
+    f: npm build
+q39:
+  text: 'ارمِ خطأ من عندك:'
+  show: 4
+  options:
+    a: throw new Error("message")
+    b: throw new Error(...)
+    c: return Error("message")
+    d: error("message")
+    e: raise Error("message")
+    f: console.error() only
+q40:
+  text: 'أوقف الكود عند سطر في المتصفح:'
+  show: 4
+  options:
+    a: breakpoint في Sources
+    b: debugger; في الكود
+    c: alert() في كل مكان
+    d: إعادة التحميل أسرع
+    e: pause();
+    f: stop(line)

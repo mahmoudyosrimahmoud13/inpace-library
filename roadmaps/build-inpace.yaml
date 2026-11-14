@@ -12,6 +12,9 @@ steps:
     optional: true
   - course: html-css-for-inpace
     note: What every page is made of.
+  - course: javascript-full
+    note: The full JavaScript course. Take it if JavaScript is new to you; skip it if it isn't.
+    optional: true
   - course: javascript-for-inpace
     note: The small scripts that make the pages move.
   - course: jinja-for-inpace

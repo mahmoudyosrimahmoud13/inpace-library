@@ -1,0 +1,400 @@
+q1:
+  text: Which keyword for a value that never gets reassigned?
+  show: 4
+  options:
+    a: const
+    b: const (by default)
+    c: let
+    d: var
+    e: static
+    f: final
+q2:
+  text: What does typeof 3.5 give?
+  show: 4
+  options:
+    a: '"number"'
+    b: number
+    c: '"float"'
+    d: '"decimal"'
+    e: '"double"'
+    f: '"integer"'
+q3:
+  text: How do you run hello.js with Node?
+  show: 4
+  options:
+    a: node hello.js
+    b: node hello.js (in the terminal)
+    c: run hello.js
+    d: js hello.js
+    e: npm hello.js
+    f: start hello
+q4:
+  text: A variable declared with let and no value is...
+  show: 4
+  options:
+    a: undefined
+    b: undefined (no value yet)
+    c: 'null'
+    d: '0'
+    e: '""'
+    f: 'false'
+q5:
+  text: 7 % 3 is...
+  show: 4
+  options:
+    a: '1'
+    b: 1 (the remainder)
+    c: '2'
+    d: '2.33'
+    e: '0'
+    f: '21'
+q6:
+  text: Which prints Hi, Mona! when name is "Mona"?
+  show: 4
+  options:
+    a: console.log(`Hi, ${name}!`)
+    b: console.log("Hi, " + name + "!")
+    c: console.log("Hi, ${name}!")
+    d: console.log('Hi, {name}!')
+    e: console.log(`Hi, $name!`)
+    f: console.log(Hi, name!)
+q7:
+  text: Number("abc") gives...
+  show: 4
+  options:
+    a: NaN
+    b: NaN (not a number)
+    c: '0'
+    d: undefined
+    e: '"abc"'
+    f: an error
+q8:
+  text: '"hello".slice(1, 3) is...'
+  show: 4
+  options:
+    a: '"el"'
+    b: el
+    c: '"hel"'
+    d: '"ell"'
+    e: '"he"'
+    f: '"llo"'
+q9:
+  text: 5 === "5" is...
+  show: 4
+  options:
+    a: 'false'
+    b: false (different types)
+    c: 'true'
+    d: undefined
+    e: NaN
+    f: an error
+q10:
+  text: Which values are falsy?
+  show: 4
+  options:
+    a: '""'
+    b: '0'
+    c: '"0"'
+    d: '[]'
+    e: '"false"'
+    f: '{}'
+q11:
+  text: 0 ?? 10 is...
+  show: 4
+  options:
+    a: '0'
+    b: 0 (?? only replaces null and undefined)
+    c: '10'
+    d: 'null'
+    e: undefined
+    f: 'false'
+q12:
+  text: What happens in a switch case without break?
+  show: 4
+  options:
+    a: It runs into the next case too
+    b: Fall-through
+    c: An error
+    d: It stops
+    e: It skips default
+    f: It restarts
+q13:
+  text: '[10, 20, 30].map((x) => x / 10) gives...'
+  show: 4
+  options:
+    a: '[1, 2, 3]'
+    b: a new array [1, 2, 3]
+    c: '6'
+    d: '[10, 20, 30]'
+    e: '[1]'
+    f: '60'
+q14:
+  text: The index of the first item is...
+  show: 4
+  options:
+    a: '0'
+    b: 0 (arrays start at zero)
+    c: '1'
+    d: '-1'
+    e: first
+    f: length
+q15:
+  text: 'Sort numbers correctly from small to big:'
+  show: 4
+  options:
+    a: nums.sort((a, b) => a - b)
+    b: '[...nums].sort((a, b) => a - b)'
+    c: nums.sort()
+    d: nums.sort((a, b) => b - a)
+    e: nums.order()
+    f: sort(nums)
+q16:
+  text: Which loop gives each value of an array directly?
+  show: 4
+  options:
+    a: for (const x of arr)
+    b: for...of
+    c: for (const x in arr)
+    d: while (arr)
+    e: do arr
+    f: loop arr
+q17:
+  text: A function with no return statement returns...
+  show: 4
+  options:
+    a: undefined
+    b: undefined (nothing)
+    c: 'null'
+    d: '0'
+    e: '""'
+    f: 'false'
+q18:
+  text: const sq = (n) => n * n; sq(4) is...
+  show: 4
+  options:
+    a: '16'
+    b: 16 (one expression is returned)
+    c: '8'
+    d: undefined
+    e: '4'
+    f: '44'
+q19:
+  text: '[...[1, 2], 3] is...'
+  show: 4
+  options:
+    a: '[1, 2, 3]'
+    b: a new array [1, 2, 3]
+    c: '[[1, 2], 3]'
+    d: '6'
+    e: '[1, 2]'
+    f: an error
+q20:
+  text: A variable declared with const inside a function is...
+  show: 4
+  options:
+    a: Only visible inside that function
+    b: Local to the function
+    c: Global
+    d: Visible everywhere
+    e: Shared with other files
+    f: Undefined
+q21:
+  text: 'Read the key held in the variable k from obj:'
+  show: 4
+  options:
+    a: obj[k]
+    b: obj[k] (bracket notation)
+    c: obj.k
+    d: obj->k
+    e: obj(k)
+    f: obj{k}
+q22:
+  text: 'const { a } = { a: 1, b: 2 } makes a equal to...'
+  show: 4
+  options:
+    a: '1'
+    b: 1 (destructuring)
+    c: '{ a: 1 }'
+    d: '2'
+    e: undefined
+    f: '[1]'
+q23:
+  text: 'Turn an object into JSON text:'
+  show: 4
+  options:
+    a: JSON.stringify(obj)
+    b: JSON.stringify
+    c: JSON.parse(obj)
+    d: obj.toJSON()
+    e: String(obj)
+    f: JSON.text(obj)
+q24:
+  text: 'A copy of task with done set to true, task unchanged:'
+  show: 4
+  options:
+    a: '{ ...task, done: true }'
+    b: 'Object.assign({}, task, { done: true })'
+    c: task.done = true
+    d: const t = task; t.done = true
+    e: '[...task, true]'
+    f: 'task + { done: true }'
+q25:
+  text: Which declaration is scoped to the block { }?
+  show: 4
+  options:
+    a: let
+    b: const
+    c: var
+    d: global
+    e: function
+    f: static
+q26:
+  text: 'Call the parent''s constructor in a subclass:'
+  show: 4
+  options:
+    a: super(...)
+    b: super()
+    c: parent()
+    d: this.constructor()
+    e: base()
+    f: extends()
+q27:
+  text: 'Import a default export:'
+  show: 4
+  options:
+    a: import square from "./math.js"
+    b: import square, { add } from "./math.js"
+    c: import { default square } from "./math.js"
+    d: require square from "./math.js"
+    e: import * square from "./math.js"
+    f: include "./math.js"
+q28:
+  text: 'A field written #seconds in a class is...'
+  show: 4
+  options:
+    a: Private to the class
+    b: Not readable from outside
+    c: A comment
+    d: A number field only
+    e: Global
+    f: A CSS id
+q29:
+  text: 'Find all elements with class "task":'
+  show: 4
+  options:
+    a: document.querySelectorAll(".task")
+    b: document.getElementsByClassName("task")
+    c: document.querySelector(".task")
+    d: document.querySelectorAll("task")
+    e: document.find(".task")
+    f: document.getElementById("task")
+q30:
+  text: 'Stop a form from reloading the page:'
+  show: 4
+  options:
+    a: event.preventDefault()
+    b: preventDefault in the submit listener
+    c: event.stop()
+    d: return false in HTML only
+    e: form.reload = false
+    f: event.cancel()
+q31:
+  text: 'Safe way to show user text:'
+  show: 4
+  options:
+    a: el.textContent = text
+    b: textContent
+    c: el.innerHTML = text
+    d: document.write(text)
+    e: el.outerHTML = text
+    f: eval(text)
+q32:
+  text: One listener on a list for all its items is called...
+  show: 4
+  options:
+    a: Event delegation
+    b: Delegation
+    c: Event bubbling only
+    d: Polling
+    e: Callback hell
+    f: Hoisting
+q33:
+  text: Does fetch reject on a 404?
+  show: 4
+  options:
+    a: 'No: check res.ok'
+    b: No, only on network failure
+    c: Yes, always
+    d: Yes, with a SyntaxError
+    e: It returns null
+    f: It retries
+q34:
+  text: 'Order printed: log 1, setTimeout(log 3, 0), log 2'
+  show: 4
+  options:
+    a: 1 2 3
+    b: 1, 2, then 3
+    c: 1 3 2
+    d: 3 1 2
+    e: 2 1 3
+    f: 1 2
+q35:
+  text: 'Save an array in localStorage:'
+  show: 4
+  options:
+    a: localStorage.setItem("k", JSON.stringify(arr))
+    b: JSON.stringify first
+    c: localStorage.setItem("k", arr)
+    d: localStorage.save(arr)
+    e: localStorage.k = arr.toString() only
+    f: sessionStorage.push(arr)
+q36:
+  text: 'Run two requests at the same time and wait for both:'
+  show: 4
+  options:
+    a: await Promise.all([a(), b()])
+    b: Promise.all
+    c: await a(); await b();
+    d: Promise.wait(a, b)
+    e: await [a(), b()].join()
+    f: fetch.all(a, b)
+q37:
+  text: Which block runs whether or not an error happened?
+  show: 4
+  options:
+    a: finally
+    b: finally { }
+    c: catch
+    d: else
+    e: always
+    f: end
+q38:
+  text: 'Run the project''s tests:'
+  show: 4
+  options:
+    a: npm test
+    b: node --test
+    c: npm run
+    d: node tasks.js
+    e: test npm
+    f: npm build
+q39:
+  text: 'Make your own error:'
+  show: 4
+  options:
+    a: throw new Error("message")
+    b: throw new Error(...)
+    c: return Error("message")
+    d: error("message")
+    e: raise Error("message")
+    f: console.error() only
+q40:
+  text: 'Pause the code at a line in the browser:'
+  show: 4
+  options:
+    a: A breakpoint in Sources
+    b: debugger; in the code
+    c: alert() everywhere
+    d: Reload faster
+    e: pause();
+    f: stop(line)
