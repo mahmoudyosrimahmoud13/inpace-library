@@ -1,0 +1,19 @@
+id: data-analyst
+title: Become a data analyst
+description: From your first spreadsheet to dashboards and Python, in the order that makes each step easier.
+language: en
+author: inPace
+official: true
+order: 1
+tags: [data analysis, excel, power bi, python, career]
+steps:
+  - course: excel-tutorial-for-data-analysts
+    note: Start with spreadsheets. Most data work begins in Excel, and every later idea (tables, filters, pivots) shows up here first.
+  - course: data-analytics-beginners
+    note: The analyst's whole toolkit, Excel to Power BI to pandas, on one real dataset.
+  - course: python-basics
+    note: If the Python part of the last course felt fast, slow down here. Skip it if it didn't.
+    optional: true
+  - course: system-design-beginners
+    note: For later. How data moves through a real product, so you know where your numbers come from.
+    optional: true

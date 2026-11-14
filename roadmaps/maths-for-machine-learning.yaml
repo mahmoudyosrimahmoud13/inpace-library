@@ -1,0 +1,17 @@
+id: maths-for-machine-learning
+title: Maths for machine learning
+description: The four parts of the free book Mathematics for Machine Learning, with videos, explorers and exercises. Linear algebra first, then calculus, probability and the models that use them.
+language: en
+author: inPace
+official: true
+order: 3
+tags: [math, machine learning, linear algebra, probability]
+steps:
+  - course: mml-1-linear-algebra-geometry
+    note: Vectors, matrices and projections. Everything else in machine learning is written in this language.
+  - course: mml-2-decompositions-calculus
+    note: Eigenvalues, the SVD and gradients. This is where backpropagation comes from.
+  - course: mml-3-probability-optimization
+    note: "Uncertainty and how models learn: probability, Bayes and gradient descent."
+  - course: mml-4-machine-learning-problems
+    note: The payoff. Regression, PCA, mixtures and SVMs, built from the three parts before.

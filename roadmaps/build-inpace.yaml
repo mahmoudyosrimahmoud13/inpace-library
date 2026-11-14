@@ -1,0 +1,19 @@
+id: build-inpace
+title: Build inPace yourself
+description: Learn the whole stack behind this app, one layer at a time, then read how it all fits together. A good way to start contributing.
+language: en
+author: inPace
+official: true
+order: 8
+tags: [web, python, frontend, backend, open source]
+steps:
+  - course: html-css-for-inpace
+    note: What every page is made of.
+  - course: javascript-for-inpace
+    note: The small scripts that make the pages move.
+  - course: jinja-for-inpace
+    note: How Python fills the pages with your courses.
+  - course: fastapi-starlette-for-inpace
+    note: The server that answers every click.
+  - course: inpace-inside
+    note: Now the whole app, from the vault to the island.

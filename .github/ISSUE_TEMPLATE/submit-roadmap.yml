@@ -1,0 +1,37 @@
+name: Submit a roadmap
+description: Share a roadmap (a path through several library courses) with everyone. Needs inPace 1.24 or newer.
+title: "Roadmap: "
+labels: ["roadmap-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing! In inPace, open your roadmap, press **Share**, then **Open the form**: the roadmap below
+        is filled in for you. A bot checks it within a few minutes and replies here.
+
+        A library roadmap can only use courses that are already in the library.
+  - type: input
+    id: roadmap_title
+    attributes:
+      label: Roadmap title
+    validations:
+      required: true
+  - type: textarea
+    id: roadmap
+    attributes:
+      label: Roadmap
+      description: Filled in by inPace. You can still fix a typo in a note here.
+      render: yaml
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes for the reviewers (optional)
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Before you submit
+      options:
+        - label: I understand everything in the library is public, and I picked these courses and wrote these notes myself.
+          required: true

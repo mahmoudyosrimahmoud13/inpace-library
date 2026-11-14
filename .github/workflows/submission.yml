@@ -1,7 +1,7 @@
-name: Check a course submission
+name: Check a course or roadmap submission
 
-# Runs when someone opens or edits a "Submit a course" issue. Checks the attached course and, if it's good,
-# opens a pull request that adds it. A maintainer reviews and merges it.
+# Runs when someone opens or edits a "Submit a course" or "Submit a roadmap" issue. Checks the attached course
+# (or the pasted roadmap) and, if it's good, opens a pull request that adds it. A maintainer reviews and merges it.
 on:
   issues:
     types: [opened, edited, reopened]
@@ -17,12 +17,13 @@ concurrency:
 
 jobs:
   check:
-    if: contains(github.event.issue.labels.*.name, 'course-submission') && github.event.issue.state == 'open'
+    if: (contains(github.event.issue.labels.*.name, 'course-submission') || contains(github.event.issue.labels.*.name, 'roadmap-submission')) && github.event.issue.state == 'open'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
       GH_TOKEN: ${{ github.token }}
       ISSUE: ${{ github.event.issue.number }}
+      WHAT: ${{ contains(github.event.issue.labels.*.name, 'roadmap-submission') && 'roadmap' || 'course' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,12 +32,12 @@ jobs:
           cache: pip
           cache-dependency-path: .github/workflows/submission.yml
       - name: Say the check started
-        run: gh issue comment "$ISSUE" --body "🐢 Got it! Checking your course now. I'll reply here in a minute or two."
+        run: gh issue comment "$ISSUE" --body "🐢 Got it! Checking your $WHAT now. I'll reply here in a minute or two."
       - name: Install inPace
         run: |
           git clone -q --depth 1 https://github.com/mahmoudyosrimahmoud13/inpace.git /tmp/inpace
           pip install -q --disable-pip-version-check /tmp/inpace pyyaml
-      - name: Check the course
+      - name: Check the course or roadmap
         id: check
         timeout-minutes: 4
         run: |
@@ -64,48 +65,54 @@ jobs:
               r = {}
           problems = r.get("problems") or ["The library bot couldn't finish checking (see the Actions tab). "
                                            "A maintainer will look at it, and you don't need to do anything yet."]
-          print("🐢 Thanks for sharing! I found something to fix before this course can go in the library:\n")
+          what = "roadmap" if r.get("kind") == "roadmap" else "course"
+          print(f"🐢 Thanks for sharing! I found something to fix before this {what} can go in the library:\n")
           for p in problems:
               print("- " + p.replace("\n", "\n  "))
-          print("\nEdit this issue when it's fixed (for example, attach a new course file), and I'll check again.")
+          print("\nEdit this issue when it's fixed" + (" (for example, attach a new course file)" if what == "course" else "")
+                + ", and I'll check again.")
           PY
           gh issue comment "$ISSUE" --body-file comment.md
           gh issue edit "$ISSUE" --add-label "needs-changes" || true
       - name: Open a pull request
         if: steps.check.outputs.ok == 'true'
         run: |
-          ID=$(python -c "import json;print(json.load(open('result.json'))['id'])")
           TITLE=$(python -c "import json;print(json.load(open('result.json'))['title'])")
+          ADD_PATH=$(python -c "import json;print(json.load(open('result.json'))['path'])")
+          KIND=$(python -c "import json;print(json.load(open('result.json')).get('kind', 'course'))")
           BRANCH="submission/issue-$ISSUE"
           git config user.name "inpace-library-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
-          git add "courses/$ID"
-          git commit -m "Add course: $TITLE (closes #$ISSUE)" || { echo "nothing changed"; exit 0; }
+          git add "$ADD_PATH"
+          git commit -m "Add $KIND: $TITLE (closes #$ISSUE)" || { echo "nothing changed"; exit 0; }
           git push -f origin "$BRANCH"
           python - <<'PY' > pr.md
           import json, os
           r = json.load(open("result.json"))
-          print(f"Adds **{r['title']}** (version {r['version']}) by {r['author']}." + (" This is an update." if r["update"] else ""))
-          if r["downloads"]:
+          if r.get("kind") == "roadmap":
+              print(f"Adds the roadmap **{r['title']}** ({r['courses']} courses) by {r['author']}." + (" This is an update." if r["update"] else ""))
+          else:
+              print(f"Adds **{r['title']}** (version {r['version']}) by {r['author']}." + (" This is an update." if r["update"] else ""))
+          if r.get("downloads"):
               print("\nThe course points to these downloads. Please check they're the author's own and they work:")
               for d in r["downloads"]:
                   print(f"- [{d['title']}]({d['url']})" + (f" ({d['size']})" if d.get('size') else ""))
           print(f"\nCloses #{os.environ['ISSUE']}")
           PY
           URL=$(gh pr list --head "$BRANCH" --json url --jq '.[0].url')
-          if [ -z "$URL" ]; then URL=$(gh pr create --head "$BRANCH" --title "Add course: $TITLE" --body-file pr.md 2>pr-error.txt) || URL=""; fi
+          if [ -z "$URL" ]; then URL=$(gh pr create --head "$BRANCH" --title "Add $KIND: $TITLE" --body-file pr.md 2>pr-error.txt) || URL=""; fi
           if [ -z "$URL" ]; then
             # GitHub only lets the bot open pull requests when the repository allows it (Settings → Actions → General).
             COMPARE="https://github.com/$GITHUB_REPOSITORY/compare/main...$BRANCH?expand=1"
-            gh issue comment "$ISSUE" --body "✅ The course looks good! A maintainer will add it soon. (Maintainer: I couldn't open the pull request myself, so [open it here]($COMPARE). To let me do it next time, turn on **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.)"
+            gh issue comment "$ISSUE" --body "✅ The $KIND looks good! A maintainer will add it soon. (Maintainer: I couldn't open the pull request myself, so [open it here]($COMPARE). To let me do it next time, turn on **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.)"
             cat pr-error.txt
             exit 0
           fi
-          gh issue comment "$ISSUE" --body "✅ The course looks good! I opened $URL. It goes live in the library when a maintainer merges it."
+          gh issue comment "$ISSUE" --body "✅ The $KIND looks good! I opened $URL. It goes live in the library when a maintainer merges it."
           gh issue edit "$ISSUE" --remove-label "needs-changes" || true
       - name: Say something went wrong
         # Any step failing, or the job running out of time, still gets a reply, so nobody waits for nothing.
         if: failure()
         run: |
-          gh issue comment "$ISSUE" --body "🐢 Sorry, the library bot ran into a problem while checking this course. A maintainer has been told and will look at it. You don't need to do anything. (Details: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)" || true
+          gh issue comment "$ISSUE" --body "🐢 Sorry, the library bot ran into a problem while checking this $WHAT. A maintainer has been told and will look at it. You don't need to do anything. (Details: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)" || true

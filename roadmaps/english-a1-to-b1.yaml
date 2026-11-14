@@ -1,0 +1,15 @@
+id: english-a1-to-b1
+title: الإنجليزي من الصفر إلى B1
+description: ثلاث دورات بالترتيب، من أول كلمة إلى الكلام اليومي بثقة. كل مستوى يبني على اللي قبله.
+language: ar
+author: inPace
+official: true
+order: 5
+tags: [english, arabic, grammar]
+steps:
+  - course: english-a1-ar
+    note: "من الصفر: الحروف والتهجئة، وأول جمل تقدّم بها نفسك."
+  - course: english-a2-ar
+    note: تكلّم عن الماضي والمستقبل، وعن يومك وخططك.
+  - course: english-b1-ar
+    note: من الكلام اليومي إلى الطلاقة.

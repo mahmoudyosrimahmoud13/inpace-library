@@ -4,7 +4,7 @@
 <p align="center"><b>Free courses made and shared by people who learn with <a href="https://github.com/mahmoudyosrimahmoud13/inpace">inPace</a>.</b><br>
 <a href="https://mahmoudyosrimahmoud13.github.io/inpace-library/"><b>Browse the library</b></a> (English and Arabic) · <a href="../../issues/new?template=submit-course.yml"><b>Share your course</b></a></p>
 
-<p align="center"><a href="https://mahmoudyosrimahmoud13.github.io/inpace-library/"><img alt="Courses in the library" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmahmoudyosrimahmoud13.github.io%2Finpace-library%2Fstats.json&query=%24.courses&label=courses&color=FFD43B&labelColor=111111&style=for-the-badge"> <img alt="Hours of lessons" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmahmoudyosrimahmoud13.github.io%2Finpace-library%2Fstats.json&query=%24.hours&label=hours%20of%20lessons&color=CDE8F2&labelColor=111111&style=for-the-badge"></a></p>
+<p align="center"><a href="https://mahmoudyosrimahmoud13.github.io/inpace-library/"><img alt="Courses in the library" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmahmoudyosrimahmoud13.github.io%2Finpace-library%2Fstats.json&query=%24.courses&label=courses&color=FFD43B&labelColor=111111&style=for-the-badge"> <img alt="Roadmaps" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmahmoudyosrimahmoud13.github.io%2Finpace-library%2Fstats.json&query=%24.roadmaps&label=roadmaps&color=E6007E&labelColor=111111&style=for-the-badge"> <img alt="Hours of lessons" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmahmoudyosrimahmoud13.github.io%2Finpace-library%2Fstats.json&query=%24.hours&label=hours%20of%20lessons&color=CDE8F2&labelColor=111111&style=for-the-badge"></a></p>
 
 ---
 
@@ -53,6 +53,47 @@ The app checks every course against the library's list before adding it. Your pr
 The four Maths for ML courses follow the free book *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong). The book is **not** included: its licence allows personal use only. Each learner downloads it from [mml-book.com](https://mml-book.com), and inPace 1.20 or newer finds it on their computer or phone. The courses add notes, 3Blue1Brown videos, interactive explorers and exercises.
 
 The three Machine Learning refresh courses include the original slides of Andrew Ng's Machine Learning Specialization, by DeepLearning.AI and Stanford Online, shared under Creative Commons BY-SA 2.0 for non-commercial educational use.
+
+## Roadmaps (new in inPace 1.24)
+
+A roadmap is a path through several courses of the library, in order, toward one goal. Follow one in inPace
+(**Roadmaps** in the menu, or **Course library → Roadmaps**): it keeps your place, shows the next course, adds each
+course when you get to it, and Tempo sails it with you on his island (**Tempo's island → Voyages**). Following a
+roadmap needs inPace 1.24 or newer; older versions can still add each course on its own.
+
+| Roadmap | Courses | Language |
+|---|---|---|
+| [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 4 | English |
+| [Machine learning, from the maths up](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/machine-learning-engineer.html) | 13 | English |
+| [Maths for machine learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/maths-for-machine-learning.html) | 4 | English |
+| [Python backend developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend.html) | 4 | English |
+| [الإنجليزي من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/english-a1-to-b1.html) | 3 | Arabic |
+| [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 8 | English |
+| [مطوّر باك إند بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend-ar.html) | 4 | Arabic |
+| [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 5 | English |
+| [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 2 | English |
+| [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
+
+Roadmaps live in [`roadmaps/`](roadmaps), one small YAML file each:
+
+```yaml
+id: data-analyst
+title: Become a data analyst
+description: From your first spreadsheet to dashboards and Python.
+language: en
+author: Your name
+tags: [data, career]
+steps:
+  - course: excel-tutorial-for-data-analysts
+    note: Start with spreadsheets.
+  - course: data-analytics-beginners
+  - course: python-basics
+    optional: true
+```
+
+Every course on a roadmap must be in the library. **Share a roadmap:** make it in inPace (**Roadmaps → Make a
+roadmap**: type a goal and inPace suggests the courses), then **Share → Open the form**. The roadmap is filled in for
+you; a bot checks it and opens a pull request.
 
 ## Share your own course
 
@@ -126,5 +167,5 @@ The site at `mahmoudyosrimahmoud13.github.io/inpace-library/` has:
 
 ## License
 
-The tools in this repository are MIT licensed. Each course has its own license, shown in its `library.yaml` and on
+The tools in this repository are MIT licensed, copyright (c) 2026 Mahmoud Saad Mahmoud Yosri (see [LICENSE](LICENSE)). Each course has its own license, shown in its `library.yaml` and on
 the library page.

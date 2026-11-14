@@ -1,0 +1,17 @@
+id: python-backend
+title: Python backend developer
+description: Write Python, build APIs with FastAPI, ship them in containers, and learn to design systems that hold up.
+language: en
+author: inPace
+official: true
+order: 4
+tags: [python, backend, web, devops, career]
+steps:
+  - course: python-basics
+    note: The language first.
+  - course: fastapi
+    note: Your first API, all the way to production.
+  - course: docker-kubernetes-en
+    note: Pack the API in a container and run it on a cluster.
+  - course: system-design-beginners
+    note: "Step back and design a whole service: the questions interviewers ask."

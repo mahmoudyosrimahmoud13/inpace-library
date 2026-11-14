@@ -1,0 +1,29 @@
+id: machine-learning-engineer
+title: Machine learning, from the maths up
+description: The long road, taken in the right order. Python, the maths, classic machine learning, then deep learning up to transformers.
+language: en
+author: inPace
+official: true
+order: 2
+tags: [machine learning, deep learning, math, python, career]
+steps:
+  - course: python-basics
+    note: Every course after this one uses Python. Skip it if you already write Python comfortably.
+    optional: true
+  - course: mml-1-linear-algebra-geometry
+    note: The maths starts here. Take your time with it, it pays off for the rest of the road.
+  - course: mml-2-decompositions-calculus
+  - course: mml-3-probability-optimization
+  - course: mml-4-machine-learning-problems
+  - course: mls-1-supervised
+    note: Now the classic algorithms, with the maths already in your pocket.
+  - course: mls-2-advanced-algorithms
+  - course: mls-3-unsupervised-rl
+  - course: dl-1-neural-networks
+    note: Deep learning, in five parts. The first one builds a network by hand.
+  - course: dl-2-improving-networks
+  - course: dl-3-ml-projects
+    note: Short and practical. How to run a real machine learning project.
+  - course: dl-4-cnns
+  - course: dl-5-sequence-models
+    note: Attention and transformers, the ideas behind today's language models.

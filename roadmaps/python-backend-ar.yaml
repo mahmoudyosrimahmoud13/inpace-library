@@ -1,0 +1,18 @@
+id: python-backend-ar
+title: مطوّر باك إند بايثون
+description: تعلّم بايثون، ثم ابنِ واجهات برمجية بـ FastAPI، وشغّلها في حاويات، وتعلّم تصميم الأنظمة.
+language: ar
+author: inPace
+official: true
+order: 7
+tags: [python, backend, web, devops, arabic]
+steps:
+  - course: python-basics-ar
+    note: ابدأ باللغة نفسها.
+  - course: fastapi
+    note: هذه الدورة بالإنجليزية، لكن الكود هو نفسه بأي لغة.
+  - course: docker-kubernetes-ar
+    note: ضع الـ API في حاوية وشغّله على Cluster.
+  - course: system-design-beginners
+    note: بالإنجليزية. صمّم خدمة كاملة، وهي أسئلة المقابلات المعتادة.
+    optional: true

@@ -19,5 +19,6 @@ jobs:
     steps:
       - run: |
           gh label create course-submission --color FFD43B --description "A new or updated course" --force
+          gh label create roadmap-submission --color 3D8FD1 --description "A new or updated roadmap" --force
           gh label create needs-changes --color E6007E --description "The bot found something to fix" --force
           gh label create report --color B60205 --description "A problem with a course" --force

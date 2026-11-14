@@ -1,7 +1,7 @@
 """Tools the library's GitHub Actions run. Needs the inpace package (installed from its repository).
 
-  python scripts/library_tools.py submit EVENT.json   read a submission issue, check the course, add it to courses/
-  python scripts/library_tools.py check               check every course in courses/
+  python scripts/library_tools.py submit EVENT.json   read a submission issue, check the course (or roadmap), add it
+  python scripts/library_tools.py check               check every course in courses/ and roadmap in roadmaps/
   python scripts/library_tools.py build _site         build library.json, the course files and the web page
 """
 from __future__ import annotations
@@ -26,6 +26,8 @@ from inpace.library import AUTHOR_FILE, MAX_COURSE_BYTES, SITE, LibraryProblem, 
 
 ROOT = Path(__file__).resolve().parent.parent
 COURSES = ROOT / "courses"
+ROADMAPS = ROOT / "roadmaps"  # roadmaps (inPace 1.24+): a path through several courses of the library, as YAML
+ROADMAP_VERSION = "1.24"
 LICENSES = ("CC-BY-4.0", "CC-BY-SA-4.0", "CC0-1.0")
 ATTACHMENT = re.compile(r"https://github\.com/(?:user-attachments/files|[\w.-]+/[\w.-]+/files)/[^\s)\]>\"']+")
 
@@ -70,6 +72,8 @@ def existing_author(cid: str) -> str | None:
 def submit(event_path: str) -> dict:
     event = json.loads(Path(event_path).read_text(encoding="utf-8"))
     issue = event["issue"]
+    if any(l.get("name") == "roadmap-submission" for l in issue.get("labels") or []):
+        return submit_roadmap(event)
     fields = form_fields(issue.get("body") or "")
     problems: list[str] = []
     agree = fields.get("before you submit", "")
@@ -125,8 +129,108 @@ def submit(event_path: str) -> dict:
     meta = {"license": lic, "tags": tags, "submitted_by": issue["user"]["login"], "issue": issue["number"],
             "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d")}
     (target / "library.yaml").write_text(yaml.safe_dump(meta, sort_keys=False, allow_unicode=True), encoding="utf-8")
-    return {"ok": True, "id": course.id, "title": course.title, "version": course.version, "update": bool(owner),
-            "author": author["name"], "downloads": course.extra.get("downloads", [])}
+    return {"ok": True, "kind": "course", "id": course.id, "title": course.title, "version": course.version,
+            "update": bool(owner), "author": author["name"], "downloads": course.extra.get("downloads", []),
+            "path": f"courses/{course.id}"}
+
+
+# ---------------------------------------------------------------------------
+# Roadmaps (inPace 1.24): a path through several courses that are in the library
+# ---------------------------------------------------------------------------
+
+class RoadmapProblem(Exception):
+    pass
+
+
+def parse_roadmap(text: str) -> dict:
+    """Read a roadmap the same way the app does (inpace.roadmaps), or with a small fallback for older installs."""
+    try:
+        from inpace.roadmaps import RoadmapError, parse
+    except ImportError:  # the inpace package from before 1.24: the basic checks only
+        data = yaml.safe_load(text)
+        if not isinstance(data, dict) or not data.get("title") or not isinstance(data.get("steps"), list) or not data["steps"]:
+            raise RoadmapProblem("A roadmap needs a title and at least one course under steps.")
+        steps = [s if isinstance(s, dict) else {"course": str(s)} for s in data["steps"]]
+        return {**data, "author": str(data.get("author") or ""), "tags": data.get("tags") or [], "steps": steps,
+                "language": data.get("language") or "en", "description": data.get("description") or ""}
+    try:
+        return parse(text, "library")
+    except RoadmapError as e:
+        raise RoadmapProblem(" ".join(e.problems))
+
+
+def roadmap_meta(path: Path) -> dict:
+    """Fields the app doesn't need but the library does (official, submitted_by), straight from the YAML."""
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {k: data[k] for k in ("official", "order", "submitted_by", "issue", "updated") if k in data}
+
+
+def load_roadmaps() -> list[tuple[Path, dict]]:
+    """Every roadmap, the library team's picks first (order: in the YAML), then the newest."""
+    if not ROADMAPS.is_dir():
+        return []
+    found = [(f, parse_roadmap(f.read_text(encoding="utf-8"))) for f in ROADMAPS.glob("*.yaml")]
+    def key(item):
+        meta = roadmap_meta(item[0])
+        return (int(meta.get("order") or 999), "" if meta.get("order") else str(-int(str(meta.get("updated") or "0").replace("-", "") or 0)), item[1]["title"])
+    return sorted(found, key=key)
+
+
+def roadmap_problems(path: Path | None, rm: dict, course_ids: set[str]) -> list[str]:
+    problems = []
+    if path is not None and rm["id"] != path.stem:
+        problems.append(f"the file is named {path.name} but the roadmap id is {rm['id']}")
+    missing = [s["course"] for s in rm["steps"] if s["course"] not in course_ids]
+    if missing:
+        problems.append("these courses aren't in the library: " + ", ".join(missing))
+    return problems
+
+
+def submit_roadmap(event: dict) -> dict:
+    """A "Submit a roadmap" issue: the roadmap's YAML pasted in the form. Checks it and writes roadmaps/<id>.yaml."""
+    issue = event["issue"]
+    fields = form_fields(issue.get("body") or "")
+    problems = []
+    agree = fields.get("before you submit", "")
+    if agree.count("[X]") + agree.count("[x]") < 1:
+        problems.append("Please tick the box under **Before you submit**.")
+    text = re.sub(r"^```(?:ya?ml)?\s*|```\s*$", "", fields.get("roadmap", "").strip())
+    if not text:
+        problems.append("I couldn't find the roadmap. In inPace, open the roadmap, press **Share**, then "
+                        "**Open the form**: the roadmap is filled in for you.")
+    if problems:
+        return {"ok": False, "problems": problems, "kind": "roadmap"}
+    try:
+        rm = parse_roadmap(text)
+    except RoadmapProblem as e:
+        return {"ok": False, "problems": [str(e)], "kind": "roadmap"}
+    except Exception:
+        return {"ok": False, "problems": ["The roadmap couldn't be read. Copy it again from inPace (Share → Copy the roadmap)."],
+            "kind": "roadmap"}
+    course_ids = {p.name for p in COURSES.iterdir() if p.is_dir()}
+    found = roadmap_problems(None, rm, course_ids)
+    if found:
+        return {"ok": False, "problems": [f"A library roadmap can only use courses in the library: {found[0].split(': ', 1)[1]}. "
+                                          "Publish those courses first, or take them off the roadmap."], "kind": "roadmap"}
+    target = ROADMAPS / f"{rm['id']}.yaml"
+    login = issue["user"]["login"]
+    update = target.exists()
+    if update:
+        old = roadmap_meta(target)
+        if old.get("official") or old.get("submitted_by") != login:
+            return {"ok": False, "problems": [f"A roadmap with the id `{rm['id']}` is already in the library, made by someone else. "
+                                              "Give yours another title in inPace and submit again."], "kind": "roadmap"}
+        if parse_roadmap(target.read_text(encoding="utf-8"))["steps"] == rm["steps"] and \
+                parse_roadmap(target.read_text(encoding="utf-8"))["title"] == rm["title"]:
+            return {"ok": False, "problems": ["This is the same as the version already in the library."], "kind": "roadmap"}
+    data = {"id": rm["id"], "title": rm["title"], "description": rm.get("description", ""), "language": rm.get("language", "en"),
+            "author": rm.get("author") or login, "tags": rm.get("tags", []),
+            "steps": [{k: st[k] for k in ("course", "note", "optional") if st.get(k)} for st in rm["steps"]],
+            "submitted_by": login, "issue": issue["number"], "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d")}
+    ROADMAPS.mkdir(exist_ok=True)
+    target.write_text(yaml.safe_dump(data, sort_keys=False, allow_unicode=True, width=110), encoding="utf-8")
+    return {"ok": True, "kind": "roadmap", "id": rm["id"], "title": rm["title"], "update": update,
+            "author": data["author"], "path": f"roadmaps/{rm['id']}.yaml", "courses": len(rm["steps"])}
 
 
 # ---------------------------------------------------------------------------
@@ -167,6 +271,17 @@ def check() -> int:
         except Exception as e:
             bad += 1
             print(f"FAIL {folder.name}: {e}")
+    course_ids = {p.name for p in COURSES.iterdir() if p.is_dir()}
+    for f in sorted(ROADMAPS.glob("*.yaml")) if ROADMAPS.is_dir() else []:
+        try:
+            rm = parse_roadmap(f.read_text(encoding="utf-8"))
+            problems = roadmap_problems(f, rm, course_ids)
+            if problems:
+                raise ValueError("; ".join(problems))
+            print(f"OK   roadmaps/{f.name}: {rm['title']} ({len(rm['steps'])} courses)")
+        except Exception as e:
+            bad += 1
+            print(f"FAIL roadmaps/{f.name}: {e}")
     return 1 if bad else 0
 
 
@@ -221,24 +336,50 @@ def build(out: Path) -> None:
             entry["book"] = course.extra["book_info"]
         entry["link"] = to_link(share_data(entry))
         entries.append(entry)
+    by_id = {c["id"]: c for c in entries}
+    road = []
+    for f, rm in load_roadmaps():
+        problems = roadmap_problems(f, rm, set(by_id))
+        if problems:
+            raise SystemExit(f"roadmaps/{f.name}: " + "; ".join(problems))
+        meta = roadmap_meta(f)
+        steps = [{k: st[k] for k in ("course", "note", "optional") if st.get(k)} for st in rm["steps"]]
+        entry = {"id": rm["id"], "title": rm["title"], "description": rm.get("description", ""),
+                 "language": rm.get("language", "en"), "tags": rm.get("tags", []),
+                 "author": {"name": rm.get("author") or "inPace", "verified": bool(meta.get("official"))},
+                 "steps": steps, "courses": len(steps),
+                 "minutes": sum(by_id[st["course"]].get("minutes") or 0 for st in steps),
+                 "lessons": sum(by_id[st["course"]].get("lessons") or 0 for st in steps),
+                 "updated": meta.get("updated"), "needs": ROADMAP_VERSION}
+        entry["hash"] = hashlib.sha256(json.dumps({"title": entry["title"], "description": entry["description"], "steps": steps},
+                                                  sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()[:16]
+        entry["link"] = to_link({"inpace": "library-roadmap", "id": entry["id"], "title": entry["title"],
+                                 "author": entry["author"]["name"]})
+        road.append(entry)
+    for c in entries:  # each course knows the roadmaps it's on (for its page)
+        c["roadmaps"] = [r["id"] for r in road if any(st["course"] == c["id"] for st in r["steps"])]
     index = {"inpace": "library", "v": 1, "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-             "courses": entries}
+             "courses": entries, "roadmaps": road}
     (out / "library.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     # A tiny summary other pages can read (inPace's website shows the number of courses from it).
     stats = {"courses": len(entries), "lessons": sum(c["lessons"] for c in entries),
              "hours": round(sum(c.get("minutes") or 0 for c in entries) / 60),
-             "languages": sorted({c["language"] for c in entries}), "updated": index["updated"]}
+             "languages": sorted({c["language"] for c in entries}), "roadmaps": len(road), "updated": index["updated"]}
     (out / "stats.json").write_text(json.dumps(stats), encoding="utf-8")
-    (out / "index.html").write_text(page(entries), encoding="utf-8")
+    (out / "index.html").write_text(page(entries, road), encoding="utf-8")
     (out / "c").mkdir()
     for entry in entries:
-        (out / "c" / f"{entry['id']}.html").write_text(course_page(entry), encoding="utf-8")
+        (out / "c" / f"{entry['id']}.html").write_text(course_page(entry, road), encoding="utf-8")
+    (out / "r").mkdir()
+    for r in road:
+        (out / "r" / f"{r['id']}.html").write_text(roadmap_page(r, by_id), encoding="utf-8")
     (out / ".nojekyll").write_text("")
-    print(f"Built {len(entries)} courses into {out}")
+    print(f"Built {len(entries)} courses and {len(road)} roadmaps into {out}")
 
 
 SITE_MAIN = "https://mahmoudyosrimahmoud13.github.io/inPace/"
 FORM = "https://github.com/mahmoudyosrimahmoud13/inpace-library/issues/new?template=submit-course.yml"
+FORM_ROADMAP = "https://github.com/mahmoudyosrimahmoud13/inpace-library/issues/new?template=submit-roadmap.yml"
 REPORT = "https://github.com/mahmoudyosrimahmoud13/inpace-library/issues/new?template=report.yml"
 
 
@@ -291,6 +432,7 @@ ICONS = {
     "check": '<path d="m5 12 4 4 10-10"/>',
     "search": '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
     "back": '<path d="M15 6l-6 6 6 6"/>',
+    "route": '<circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="5" r="2.2"/><path d="M8.2 19H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h6.8"/>',
 }
 
 
@@ -460,6 +602,46 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
   .sticky-add .btn { flex: 1; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+/* Roadmaps (inPace 1.24) */
+.new { display: inline-flex; align-items: center; gap: .3rem; font-size: .78rem; font-weight: 800; background: var(--pink); color: #fff;
+  border: 2px solid var(--ink); padding: .05rem .5rem; vertical-align: middle; }
+.roadmaps { padding-block: .6rem 1rem; }
+.roadmaps-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem 1rem; }
+.roadmaps-head h2 { font-size: 1.8rem; margin: 0; }
+.roadmaps-lead { margin: .5rem 0 0; color: var(--muted); max-width: 48em; }
+.rgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 1.4rem; padding-block: 1rem 1.6rem; }
+.rcard .top-band { display: flex; align-items: center; justify-content: space-between; padding: .8rem 1.1rem; color: #111; background: var(--sky);
+  border-bottom: 3px solid var(--ink); background-image: repeating-linear-gradient(90deg, transparent 0 22px, rgba(255,255,255,.55) 22px 30px); text-decoration: none; }
+.rcard .badge { display: grid; place-items: center; width: 46px; height: 46px; background: var(--sun); border: 3px solid var(--ink); }
+.rcard .badge .i { width: 26px; height: 26px; }
+.rcard .count { font-weight: 800; background: #fff; border: 2px solid var(--ink); padding: .05rem .55rem; }
+.rpath { list-style: none; margin: 0; padding: 0; counter-reset: rp; display: grid; gap: .3rem; font-size: .9rem; }
+.rpath li { counter-increment: rp; display: flex; gap: .5rem; align-items: baseline; }
+.rpath li::before { content: counter(rp); flex: none; display: grid; place-items: center; width: 1.35rem; height: 1.35rem; font-size: .72rem; font-weight: 800;
+  border: 2px solid var(--ink); background: var(--cream); }
+.rpath li.more { color: var(--muted); } .rpath li.more::before { content: "…"; border-style: dashed; }
+.rpath a { text-decoration: none; } .rpath a:hover { text-decoration: underline; }
+.needs { font-size: .85rem; color: var(--muted); margin: .2rem 0 0; }
+.on-roadmaps { display: flex; flex-wrap: wrap; gap: .4rem .6rem; align-items: center; margin: .8rem 0; padding: .6rem .9rem; background: var(--sky); color: #111;
+  border: 2px solid var(--ink); font-size: .92rem; }
+.on-roadmaps a { font-weight: 700; color: #111; }
+.road { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; gap: 1rem; position: relative; }
+.road::before { content: ""; position: absolute; inset-block: 24px; inset-inline-start: 23px; border-inline-start: 3px dashed var(--ink); opacity: .5; }
+.road > li { display: grid; grid-template-columns: 50px 1fr; gap: .9rem; align-items: start; }
+.road .n { display: grid; place-items: center; width: 50px; height: 50px; font-weight: 800; font-size: 1.05rem; background: var(--sun); color: #111;
+  border: 3px solid var(--ink); position: relative; z-index: 1; }
+.road li.opt .n { background: var(--surface); color: var(--ink); border-style: dashed; }
+.road li.harbour .n { background: var(--sky); font-size: 1.3rem; }
+.road .step { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; background: var(--surface); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink);
+  padding: .9rem 1rem; }
+[dir=rtl] .road .step { box-shadow: -5px 5px 0 var(--ink); }
+.road .step .cover { width: 108px; aspect-ratio: 16 / 10; object-fit: cover; border: 2px solid var(--ink); font-size: 1.6rem; }
+.road .step h3 { margin: 0; font-size: 1.1rem; } .road .step h3 a { text-decoration: none; } .road .step h3 a:hover { text-decoration: underline; }
+.road .step .grow { flex: 1 1 14rem; display: flex; flex-direction: column; gap: .3rem; }
+.road .note { margin: .2rem 0 0; padding: .45rem .7rem; background: var(--cream); border-inline-start: 4px solid var(--sun); font-size: .95rem; }
+.road .opt-tag { font-size: .75rem; font-weight: 700; border: 1.5px dashed var(--ink); padding: 0 .4rem; }
+@media (max-width: 640px) { .road > li { grid-template-columns: 40px 1fr; gap: .55rem; } .road .n { width: 40px; height: 40px; }
+  .road::before { inset-inline-start: 18px; } .road .step .cover { display: none; } }
 """
 
 HEAD_SCRIPT = """<script>
@@ -511,7 +693,7 @@ def shell(title: str, description: str, body: str, root: str, script: str = "") 
 <style>{STYLE}</style></head><body>
 <div class="top">
   <a class="brand" href="{SITE_MAIN}"><img src="{SITE_MAIN}assets/icon.svg" width="30" height="30" alt=""><b><span>in</span>Pace</b></a>
-  <nav><a href="{root}index.html">{t("Library", "المكتبة")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
+  <nav><a href="{root}index.html">{t("Library", "المكتبة")}</a><a href="{root}index.html#roadmaps">{t("Roadmaps", "مسارات التعلّم")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
     <a href="{root}index.html#share">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
   <button class="sq theme" type="button" id="theme" aria-label="Light or dark mode" title="Light or dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
   <button class="sq" type="button" id="lang">{t("عربي", "English")}</button>
@@ -539,7 +721,44 @@ def byline(c: dict) -> str:
     return f'<p class="by">{t("by", "من إعداد")} <bdi>{e(c["author"]["name"])}</bdi>{tick}</p>'
 
 
-def page(entries: list[dict]) -> str:
+def new_badge() -> str:
+    return f'<span class="new">{t("New in inPace " + ROADMAP_VERSION, "جديد في inPace " + ROADMAP_VERSION)}</span>'
+
+
+def needs_note() -> str:
+    return (f'<p class="needs">{t(f"Following a roadmap needs inPace {ROADMAP_VERSION} or newer. With an older version you can still add each course on its own.", f"متابعة مسار التعلّم تحتاج inPace {ROADMAP_VERSION} أو أحدث. ومع إصدار أقدم يمكنك إضافة كل دورة وحدها.")} '
+            f'<a href="{SITE_MAIN}#download">{t("Get the newest inPace", "حمّل أحدث inPace")}</a></p>')
+
+
+def roadmap_card(r: dict, by_id: dict, root: str = "") -> str:
+    e = html.escape
+    items = []
+    for st in r["steps"][:4]:
+        c = by_id.get(st["course"], {})
+        items.append(f'<li dir="auto"><a href="{root}c/{e(st["course"])}.html">{e(c.get("title", st["course"]))}</a></li>')
+    extra = len(r["steps"]) - 4
+    if extra > 0:
+        items.append(f'<li class="more">{t(f"and {extra} more", f"و{extra} أخرى")}</li>')
+    words = " ".join([r["id"], r["title"], r.get("description", ""), r["author"]["name"]] + list(r.get("tags") or [])).lower()
+    hrs = hours(r.get("minutes") or 0)
+    return f"""<article class="card rcard" id="r-{e(r["id"])}" data-q="{e(words)}" data-tags="{e('|'.join(str(x).lower() for x in r.get("tags") or []))}">
+  <a class="top-band" href="{root}r/{e(r["id"])}.html" tabindex="-1" aria-hidden="true"><span class="badge">{ic("route")}</span>
+    <span class="count">{len(r["steps"])} {t("courses", "دورات")}</span></a>
+  <div class="body">
+    <h2 dir="auto"><a href="{root}r/{e(r["id"])}.html">{e(r["title"])}</a></h2>
+    <ul class="facts">{f'<li>{ic("clock")}{hrs}</li>' if hrs else ''}<li>{ic("globe")}{lang_name(r["language"])}</li></ul>
+    <p class="desc" dir="auto">{e(r.get("description", ""))}</p>
+    <ol class="rpath">{"".join(items)}</ol>
+    <p class="by">{t("by", "من إعداد")} <bdi>{e(r["author"]["name"])}</bdi>{f' <span class="ok">{ic("check")}{t("checked", "موثّق")}</span>' if r["author"]["verified"] else ""}</p>
+    <div class="actions"><a class="btn primary" href="{e(r["link"])}">{t("Follow in inPace", "تابِعه في inPace")}</a>
+      <a class="btn" href="{root}r/{e(r["id"])}.html">{t("See the path", "شاهد المسار")}</a></div>
+  </div>
+</article>"""
+
+
+def page(entries: list[dict], road: list[dict] | None = None) -> str:
+    road = road or []
+    by_id = {c["id"]: c for c in entries}
     e = html.escape
     counts: dict[str, int] = {}
     for c in entries:
@@ -566,6 +785,15 @@ def page(entries: list[dict]) -> str:
   </div>
 </article>""")
     total_h = round(sum(c.get("minutes") or 0 for c in entries) / 60)
+    roadmaps_section = ""
+    if road:
+        roadmaps_section = f"""<section class="roadmaps" id="roadmaps">
+  <div class="roadmaps-head"><h2>{t("Roadmaps", "مسارات التعلّم")}</h2>{new_badge()}</div>
+    <p class="roadmaps-lead">{t("A roadmap is a path through several courses of the library, in the order that makes sense, toward one goal. Follow one in inPace: it keeps your place, shows the next course, and Tempo sails it with you on his island.", "مسار التعلّم طريق يمرّ بعدة دورات من المكتبة بالترتيب المناسب نحو هدف واحد. تابِعه في inPace: يحفظ مكانك، ويريك الدورة التالية، ويُبحر به تمبو معك على جزيرته.")}</p>
+  <div class="rgrid">{"".join(roadmap_card(r, by_id) for r in road)}</div>
+  {needs_note()}
+</section>
+<h2 class="section-title" id="courses">{t("Courses", "الدورات")}</h2>"""
     chips = (f'<button class="topic" type="button" data-topic="" aria-pressed="true">{t("All", "الكل")}</button>' +
              "".join(f'<button class="topic" type="button" data-topic="{e(x)}" aria-pressed="false">{e(x)}</button>' for x in topics))
     body = f"""<div class="wrap">
@@ -575,8 +803,9 @@ def page(entries: list[dict]) -> str:
     <p class="lead">{t("Free courses made and shared by people who learn with inPace. Look inside any course first, then press <b>Add to inPace</b> and it opens in the app, ready to start. Your progress stays on your device.",
         "دورات مجانية صنعها وشاركها متعلمون يستخدمون inPace. اطّلع على محتوى أي دورة أولًا، ثم اضغط <b>أضف إلى inPace</b> فتفتح في التطبيق جاهزة للبدء. ويبقى تقدّمك على جهازك.")}</p>
   </div>
-  <div class="stats"><div><b>{len(entries)}</b><span>{t("courses", "دورة")}</span></div><div><b>{total_h}</b><span>{t("hours of lessons", "ساعة دروس")}</span></div><div><b>0</b><span>{t("cost", "تكلفة")}</span></div></div>
+  <div class="stats"><div><b>{len(entries)}</b><span>{t("courses", "دورة")}</span></div>{f'<div><b>{len(road)}</b><span>{t("roadmaps", "مسار")}</span></div>' if road else ''}<div><b>{total_h}</b><span>{t("hours of lessons", "ساعة دروس")}</span></div><div><b>0</b><span>{t("cost", "تكلفة")}</span></div></div>
 </header>
+{roadmaps_section}
 <div class="tools">
   <label class="find">{ic("search")}<input type="search" id="q" dir="auto" data-ph-en="Search courses" data-ph-ar="ابحث في الدورات"></label>
   <div class="topics" role="group" aria-label="Topics">{chips}</div>
@@ -597,9 +826,12 @@ def page(entries: list[dict]) -> str:
         "فيديوهات كبيرة؟ ارفعها إلى Google Drive أو MEGA أو archive.org وأضف رابط التحميل في تفاصيل الدورة. شارك فقط ما صنعته بنفسك.")}</p>
   <p><a class="btn" href="{SITE_MAIN}#download">{t("Get inPace", "احصل على inPace")}</a>
      <a class="btn" href="{FORM}">{t("Open the submission form", "افتح نموذج الإرسال")}</a></p>
+  <h2>{t("Share a roadmap", "شارك مسار تعلّم")} {new_badge()}</h2>
+  <p>{t("In inPace, open <b>Roadmaps → Make a roadmap</b>. Type a goal and inPace suggests the courses, in order. Add a note to each one, save, then press <b>Share → Open the form</b>: your roadmap is filled in for you. Roadmaps can only use courses that are in the library.", "في inPace افتح <b>مسارات التعلّم ← اصنع مسارًا</b>. اكتب هدفًا فيقترح inPace الدورات بالترتيب. أضف ملاحظة لكل دورة واحفظ، ثم اضغط <b>شارك ← افتح النموذج</b>: يُملأ المسار لك. ولا يستخدم المسار إلا دورات موجودة في المكتبة.")}</p>
+  <p><a class="btn" href="{FORM_ROADMAP}">{t("Open the roadmap form", "افتح نموذج المسار")}</a></p>
 </div></section>"""
     script = """<script>
-var q = document.getElementById("q"), cards = [].slice.call(document.querySelectorAll(".card")), topic = "";
+var q = document.getElementById("q"), cards = [].slice.call(document.querySelectorAll("#list .card")), topic = "";
 function run() {
   var w = q.value.toLowerCase().split(/\\s+/).filter(Boolean), shown = 0;
   cards.forEach(function (c) {
@@ -675,8 +907,13 @@ def notebooks_html(c: dict) -> str:
             f'<ul class="nbs">{"".join(rows)}</ul>')
 
 
-def course_page(c: dict) -> str:
+def course_page(c: dict, road: list[dict] | None = None) -> str:
     e = html.escape
+    mine = [r for r in road or [] if r["id"] in (c.get("roadmaps") or [])]
+    on_rm = ""
+    if mine:
+        links = ", ".join(f'<a href="../r/{e(r["id"])}.html" dir="auto">{e(r["title"])}</a>' for r in mine)
+        on_rm = f'<p class="on-roadmaps">{ic("route")}<span>{t("On these roadmaps:", "ضمن هذه المسارات:")} {links}</span></p>'
     try:  # the app's own renderer: code colours, each paragraph's direction, and diagrams, like in inPace
         from inpace.app import md
     except Exception:
@@ -717,6 +954,7 @@ def course_page(c: dict) -> str:
     <div class="actions">{actions}</div>
   </div>
 </header>
+{on_rm}
 <h2 class="section-title">{t("What's inside", "محتوى الدورة")}</h2>
 <p class="by">{t("Each module ends with tasks. The next module opens when they're done.", "تنتهي كل وحدة بمهام، وتُفتح الوحدة التالية عند إنجازها.")}</p>
 {outline_html(c) or '<p class="empty">' + t("Add the course to see its lessons.", "أضف الدورة لترى دروسها.") + '</p>'}
@@ -744,6 +982,44 @@ if (more && s) {
 }
 </script>"""
     return shell(f"{c['title']} · inPace course library", c["description"][:300], body, "../", script)
+
+
+def roadmap_page(r: dict, by_id: dict) -> str:
+    e = html.escape
+    steps = []
+    for i, st in enumerate(r["steps"], 1):
+        c = by_id[st["course"]]
+        note = f'<p class="note" dir="auto">{e(st["note"])}</p>' if st.get("note") else ""
+        opt = f' <span class="opt-tag">{t("optional", "اختيارية")}</span>' if st.get("optional") else ""
+        steps.append(f"""<li class="{'opt' if st.get('optional') else ''}"><span class="n">{i:02d}</span>
+  <div class="step">{cover_html(c, "../")}
+    <div class="grow"><h3 dir="auto"><a href="../c/{e(c["id"])}.html">{e(c["title"])}</a>{opt}</h3>
+      {facts(c)}{note}</div>
+    <div class="actions"><a class="btn" href="{e(c["link"])}">{t("Add to inPace", "أضف إلى inPace")}</a></div></div></li>""")
+    steps.append(f"""<li class="harbour"><span class="n" aria-hidden="true">⚓</span><div class="step"><div class="grow"><h3>{t("The harbour", "الميناء")}</h3>
+  <p class="by">{t("Finish every course that isn't optional. In inPace, Tempo reaches the harbour and opens a chest of shells on his island.", "أنهِ كل دورة غير اختيارية. في inPace يصل تمبو إلى الميناء ويفتح صندوق أصداف على جزيرته.")}</p></div></div></li>""")
+    hrs = hours(r.get("minutes") or 0)
+    tags = "".join(f'<span class="tag">{e(x)}</span>' for x in (r.get("tags") or [])[:8])
+    body = f"""<div class="wrap">
+<a class="crumb" href="../index.html#roadmaps">{ic("back")}{t("All roadmaps", "كل المسارات")}</a>
+<header class="course-head" style="grid-template-columns: 1fr">
+  <div>
+    <p>{new_badge()}</p>
+    <h1 dir="auto">{e(r["title"])}</h1>
+    <ul class="facts"><li>{ic("layers")}{len(r["steps"])} {t("courses", "دورات")} · {r.get("lessons") or 0} {t("lessons", "دروس")}</li>{f'<li>{ic("clock")}{hrs}</li>' if hrs else ''}<li>{ic("globe")}{lang_name(r["language"])}</li></ul>
+    <p class="desc" dir="auto">{e(r.get("description", ""))}</p>
+    <p class="by">{t("by", "من إعداد")} <bdi>{e(r["author"]["name"])}</bdi>{f' <span class="ok">{ic("check")}{t("checked", "موثّق")}</span>' if r["author"]["verified"] else ""}</p>
+    <div class="tags">{tags}</div>
+    <div class="actions"><a class="btn primary" href="{e(r["link"])}">{t("Follow in inPace", "تابِعه في inPace")}</a>
+      <button class="btn" type="button" data-copy="{e(r["link"])}">{t("Copy link", "انسخ الرابط")}</button></div>
+    {needs_note()}
+  </div>
+</header>
+<h2 class="section-title">{t("The path", "المسار")}</h2>
+<ol class="road">{"".join(steps)}</ol>
+</div>
+<div class="sticky-add"><a class="btn primary" href="{e(r["link"])}">{t("Follow in inPace", "تابِعه في inPace")}</a></div>"""
+    return shell(f"{r['title']} · inPace roadmaps", r.get("description", "")[:300] or r["title"], body, "../")
 
 
 if __name__ == "__main__":
