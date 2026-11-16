@@ -1,0 +1,12 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<g font-family="JBM" font-weight="700" text-anchor="middle">
+<g filter="url(#s)">
+<rect x="30" y="40" width="140" height="140" rx="22" fill="#ff8fab"/><rect x="190" y="40" width="140" height="140" rx="22" fill="#fff"/><rect x="350" y="40" width="140" height="140" rx="22" fill="#fff"/>
+<rect x="30" y="200" width="140" height="140" rx="22" fill="#fff"/><rect x="190" y="200" width="140" height="140" rx="22" fill="#fff"/><rect x="350" y="200" width="140" height="140" rx="22" fill="#ffd166"/></g>
+<g font-size="64" fill="#2d1b3d"><text x="100" y="128">A</text><text x="260" y="128">B</text><text x="420" y="128">C</text><text x="100" y="288">D</text><text x="260" y="288">E</text><text x="420" y="288">F</text></g>
+<g font-size="15" font-weight="500" fill="#2d1b3d" opacity=".75"><text x="100" y="160">reporting</text><text x="260" y="160">planning</text><text x="420" y="160">performance</text><text x="100" y="320">cost</text><text x="260" y="320">controls</text><text x="420" y="320">analytics</text></g>
+</g>
+<g transform="translate(30 380)"><rect width="460" height="22" rx="11" fill="#4b2d66"/><rect width="300" height="22" rx="11" fill="#ff8fab"/>
+<text x="0" y="62" font-family="JBM" font-size="20" fill="#fbf2ff">week 8 of 12 · on pace</text></g>
+</svg>

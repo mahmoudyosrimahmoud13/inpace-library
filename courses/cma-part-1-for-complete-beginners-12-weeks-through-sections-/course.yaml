@@ -472,5 +472,5 @@ modules:
     - q47
     - q48
     pass: 70
-image: cover.webp
+image: cover.jpg
 book: CMA_Part1_Study_Material.pdf

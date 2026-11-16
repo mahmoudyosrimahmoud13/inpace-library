@@ -48,3 +48,19 @@ courses:
     title: انجح في<br>اختبار FMAA
     sub: المحاسبة والقوائم والنسب والموازنات والتكاليف والأخلاقيات، مع اختبار بعد كل وحدة
     tags: [120 سؤالًا, مناسب للمبتدئين]
+
+  cma-part-1-for-complete-beginners-12-weeks-through-sections-:
+    theme: plum
+    art: cma.svg
+    chip: Beginner · 12 weeks
+    title: CMA Part 1,<br>from zero
+    sub: Sections A to F in plain words, with worked examples and a quiz every week
+    tags: [36 lessons, 12 modules]
+
+  excel-tutorial-for-data-analysts:
+    theme: mint
+    art: excel.svg
+    chip: Beginner · 7 lessons
+    title: Excel for<br>data analysts
+    sub: Formulas, XLOOKUP, pivot tables, charts, data cleaning and a full project
+    tags: [Full project, For beginners]
