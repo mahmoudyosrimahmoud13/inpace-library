@@ -1,0 +1,336 @@
+id: fmaa-prc-ar
+title: 'التحضير لاختبار FMAA: الإدارة المالية والمحاسبة'
+version: 1
+language: ar
+description: 'تحضير كامل لاختبار FMAA (PRC) في 12 وحدة: المحاسبة الأساسية والقوائم المالية، والحوكمة والرقابة الداخلية،
+  والأصول والالتزامات والإيرادات، وتحليل القوائم والنسب المالية، والموازنات، والتكاليف والتكاليف غير المباشرة، وتحليل
+  الأداء ونقطة التعادل، والأخلاقيات المهنية والاحتيال. الشرح بالعربي والمصطلحات بالإنجليزي كما في الاختبار. اختبار
+  من 10 أسئلة بعد كل وحدة، والنجاح بنسبة 60%. الوحدتان الأخيرتان مراجعة شاملة.'
+image: cover.jpg
+modules:
+- id: m1
+  title: المصطلحات المحاسبية ومعادلة المحاسبة
+  lessons:
+  - id: m1-l1
+    title: دور المحاسبة وأنواع المنشآت
+    file: lessons/m1-l1.md
+    minutes: 20
+    media: fmaa-session-01.pdf
+  - id: m1-l2
+    title: معادلة المحاسبة والمصطلحات الأساسية
+    file: lessons/m1-l2.md
+    minutes: 20
+  requires:
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - m1q1
+    - m1q2
+    - m1q3
+    - m1q4
+    - m1q5
+    - m1q6
+    - m1q7
+    - m1q8
+    - m1q9
+    - m1q10
+    pass: 60
+- id: m2
+  title: القوائم المالية
+  lessons:
+  - id: m2-l1
+    title: الميزانية وقائمة الدخل
+    file: lessons/m2-l1.md
+    minutes: 20
+    media: fmaa-session-02.pdf
+  - id: m2-l2
+    title: قائمة التغيرات في حقوق الملكية والتدفقات النقدية
+    file: lessons/m2-l2.md
+    minutes: 20
+  requires:
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - m2q1
+    - m2q2
+    - m2q3
+    - m2q4
+    - m2q5
+    - m2q6
+    - m2q7
+    - m2q8
+    - m2q9
+    - m2q10
+    pass: 60
+- id: m3
+  title: الحوكمة والرقابة الداخلية
+  lessons:
+  - id: m3-l1
+    title: حوكمة الشركات وإدارة المخاطر
+    file: lessons/m3-l1.md
+    minutes: 20
+    media: fmaa-session-03.pdf
+  - id: m3-l2
+    title: أنظمة الرقابة الداخلية وحماية الأصول
+    file: lessons/m3-l2.md
+    minutes: 20
+  requires:
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - m3q1
+    - m3q2
+    - m3q3
+    - m3q4
+    - m3q5
+    - m3q6
+    - m3q7
+    - m3q8
+    - m3q9
+    - m3q10
+    pass: 60
+- id: m4
+  title: الأصول
+  lessons:
+  - id: m4-l1
+    title: الذمم المدينة وتقييم المخزون
+    file: lessons/m4-l1.md
+    minutes: 25
+    media: fmaa-session-04.pdf
+  - id: m4-l2
+    title: الأصول الثابتة والأصول غير الملموسة
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - m4q1
+    - m4q2
+    - m4q3
+    - m4q4
+    - m4q5
+    - m4q6
+    - m4q7
+    - m4q8
+    - m4q9
+    - m4q10
+    pass: 60
+- id: m5
+  title: الالتزامات والاعتراف بالإيراد
+  lessons:
+  - id: m5-l1
+    title: الالتزامات المتداولة وطويلة الأجل
+    file: lessons/m5-l1.md
+    minutes: 20
+    media: fmaa-session-04.pdf
+  - id: m5-l2
+    title: الاعتراف بالإيراد (النموذج الخماسي) وعمليات حقوق الملكية
+    file: lessons/m5-l2.md
+    minutes: 20
+  requires:
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - m5q1
+    - m5q2
+    - m5q3
+    - m5q4
+    - m5q5
+    - m5q6
+    - m5q7
+    - m5q8
+    - m5q9
+    - m5q10
+    pass: 60
+- id: m6
+  title: التحليل بالنسب المئوية وتحليل الاتجاه
+  lessons:
+  - id: m6-l1
+    title: 'القوائم بالنسب المئوية: التحليل الرأسي والأفقي'
+    file: lessons/m6-l1.md
+    minutes: 20
+    media: fmaa-session-05.pdf
+  - id: m6-l2
+    title: تحليل الاتجاه وقراءة البيانات المالية
+    file: lessons/m6-l2.md
+    minutes: 20
+  requires:
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - m6q1
+    - m6q2
+    - m6q3
+    - m6q4
+    - m6q5
+    - m6q6
+    - m6q7
+    - m6q8
+    - m6q9
+    - m6q10
+    pass: 60
+- id: m7
+  title: تحليل النسب المالية
+  lessons:
+  - id: m7-l1
+    title: نسب السيولة والرافعة والنشاط
+    file: lessons/m7-l1.md
+    minutes: 25
+    media: fmaa-session-05.pdf
+  - id: m7-l2
+    title: نسب الربحية وجمع الصورة كاملة
+    file: lessons/m7-l2.md
+    minutes: 20
+  requires:
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - m7q1
+    - m7q2
+    - m7q3
+    - m7q4
+    - m7q5
+    - m7q6
+    - m7q7
+    - m7q8
+    - m7q9
+    - m7q10
+    pass: 60
+- id: m8
+  title: الموازنات
+  lessons:
+  - id: m8-l1
+    title: ما الموازنة ولماذا تهم
+    file: lessons/m8-l1.md
+    minutes: 20
+    media: fmaa-session-06.pdf
+  - id: m8-l2
+    title: أنواع الموازنات وخطوات إعدادها
+    file: lessons/m8-l2.md
+    minutes: 20
+  requires:
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - m8q1
+    - m8q2
+    - m8q3
+    - m8q4
+    - m8q5
+    - m8q6
+    - m8q7
+    - m8q8
+    - m8q9
+    - m8q10
+    pass: 60
+- id: m9
+  title: مفاهيم التكاليف وتكلفة المنتج
+  lessons:
+  - id: m9-l1
+    title: التكاليف الثابتة والمتغيرة والمختلطة
+    file: lessons/m9-l1.md
+    minutes: 20
+    media: fmaa-session-07.pdf
+  - id: m9-l2
+    title: التكاليف المعيارية وأنظمة تكلفة المنتج
+    file: lessons/m9-l2.md
+    minutes: 20
+  requires:
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - m9q1
+    - m9q2
+    - m9q3
+    - m9q4
+    - m9q5
+    - m9q6
+    - m9q7
+    - m9q8
+    - m9q9
+    - m9q10
+    pass: 60
+- id: m10
+  title: التكاليف الصناعية غير المباشرة
+  lessons:
+  - id: m10-l1
+    title: التكاليف غير المباشرة الثابتة والمتغيرة
+    file: lessons/m10-l1.md
+    minutes: 20
+    media: fmaa-session-08.pdf
+  - id: m10-l2
+    title: طرق توزيع التكاليف غير المباشرة
+    file: lessons/m10-l2.md
+    minutes: 20
+  requires:
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - m10q1
+    - m10q2
+    - m10q3
+    - m10q4
+    - m10q5
+    - m10q6
+    - m10q7
+    - m10q8
+    - m10q9
+    - m10q10
+    pass: 60
+- id: m11
+  title: تحليل الأداء ونقطة التعادل (مراجعة شاملة)
+  lessons:
+  - id: m11-l1
+    title: تحليل الربحية والعائد على الاستثمار
+    file: lessons/m11-l1.md
+    minutes: 20
+    media: fmaa-session-09.pdf
+  - id: m11-l2
+    title: نقطة التعادل وقرارات التكلفة
+    file: lessons/m11-l2.md
+    minutes: 20
+    media: fmaa-exam-support-2024.pdf
+  requires:
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - m11q1
+    - m11q2
+    - m11q3
+    - m11q4
+    - m11q5
+    - m11q6
+    - m11q7
+    - m11q8
+    - m11q9
+    - m11q10
+    pass: 60
+- id: m12
+  title: الأخلاقيات المهنية والاحتيال (مراجعة شاملة)
+  lessons:
+  - id: m12-l1
+    title: أخلاقيات الأعمال واتخاذ القرار الأخلاقي
+    file: lessons/m12-l1.md
+    minutes: 20
+    media: fmaa-session-10.pdf
+  - id: m12-l2
+    title: أنواع الاحتيال والمخالفات الأخلاقية
+    file: lessons/m12-l2.md
+    minutes: 15
+    media: fmaa-exam-support-2024.pdf
+  requires:
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - m12q1
+    - m12q2
+    - m12q3
+    - m12q4
+    - m12q5
+    - m12q6
+    - m12q7
+    - m12q8
+    - m12q9
+    - m12q10
+    pass: 60
