@@ -1,0 +1,392 @@
+q1:
+  text: أي جملة صحيحة؟
+  show: 4
+  options:
+    a: Did you see the match?
+    b: Did you saw the match?
+    c: Did you seen the match?
+    d: Did you seed the match?
+q2:
+  text: أي جملة صحيحة؟
+  show: 4
+  options:
+    a: I have eaten already.
+    b: I have ate already.
+    c: I have eat already.
+    d: I have eated already.
+q3:
+  text: أي فعل منتظم؟
+  show: 4
+  options:
+    a: work
+    b: go
+    c: buy
+    d: write
+q4:
+  text: “It ___ in 1950.” (write)
+  show: 4
+  options:
+    a: was written
+    b: was wrote
+    c: was write
+    d: was writed
+q5:
+  text: “I ___ to Aswan last year.” (go)
+  show: 4
+  options:
+    a: went
+    b: gone
+    c: have gone
+    d: goed
+q6:
+  text: ما الماضي البسيط للفعل **cost**؟
+  show: 4
+  options:
+    a: cost
+    b: costed
+    c: costen
+    d: costt
+q7:
+  text: ما التصريف الثالث للفعل **run**؟
+  show: 4
+  options:
+    a: run
+    b: runed
+    c: ran
+    d: raned
+q8:
+  text: ما الماضي البسيط للفعل **become**؟
+  show: 4
+  options:
+    a: became
+    b: becomed
+    c: become
+    d: becameed
+q9:
+  text: ما التصريف الثالث للفعل **let**؟
+  show: 4
+  options:
+    a: let
+    b: leted
+    c: leten
+    d: lett
+q10:
+  text: “She ___ back yesterday.” (come)
+  show: 4
+  options:
+    a: came
+    b: come
+    c: comed
+    d: has came
+q11:
+  text: “It ___ 10 pounds now.” (cost)
+  show: 4
+  options:
+    a: costs
+    b: cost
+    c: costed
+    d: costes
+q12:
+  text: ما الماضي البسيط للفعل **buy**؟
+  show: 4
+  options:
+    a: bought
+    b: buyed
+    c: buy
+    d: boughted
+q13:
+  text: ما التصريف الثالث للفعل **teach**؟
+  show: 4
+  options:
+    a: taught
+    b: teached
+    c: teach
+    d: taughted
+q14:
+  text: ما الماضي البسيط للفعل **keep**؟
+  show: 4
+  options:
+    a: kept
+    b: keeped
+    c: keep
+    d: kepted
+q15:
+  text: ما الماضي البسيط للفعل **pay**؟
+  show: 4
+  options:
+    a: paid
+    b: payed
+    c: pay
+    d: paided
+q16:
+  text: ما التصريف الثالث للفعل **leave**؟
+  show: 4
+  options:
+    a: left
+    b: leaved
+    c: leave
+    d: lefted
+q17:
+  text: ما الماضي البسيط للفعل **sell**؟
+  show: 4
+  options:
+    a: sold
+    b: selled
+    c: sell
+    d: solded
+q18:
+  text: ما التصريف الثالث للفعل **send**؟
+  show: 4
+  options:
+    a: sent
+    b: sended
+    c: send
+    d: sented
+q19:
+  text: ما الماضي البسيط للفعل **catch**؟
+  show: 4
+  options:
+    a: caught
+    b: catched
+    c: catch
+    d: caughted
+q20:
+  text: أيها مكتوب بشكل صحيح؟
+  show: 4
+  options:
+    a: She said yes.
+    b: She sayed yes.
+    c: She saied yes.
+    d: She sayd yes.
+q21:
+  text: ما التصريف الثالث للفعل **drink**؟
+  show: 4
+  options:
+    a: drunk
+    b: drinked
+    c: drank
+    d: drink
+q22:
+  text: ما الماضي البسيط للفعل **begin**؟
+  show: 4
+  options:
+    a: began
+    b: begined
+    c: begun
+    d: begin
+q23:
+  text: ما التصريف الثالث للفعل **write**؟
+  show: 4
+  options:
+    a: written
+    b: writed
+    c: wrote
+    d: write
+q24:
+  text: ما التصريف الثالث للفعل **break**؟
+  show: 4
+  options:
+    a: broken
+    b: breaked
+    c: broke
+    d: break
+q25:
+  text: ما الماضي البسيط للفعل **know**؟
+  show: 4
+  options:
+    a: knew
+    b: knowed
+    c: known
+    d: know
+q26:
+  text: ما التصريف الثالث للفعل **fly**؟
+  show: 4
+  options:
+    a: flown
+    b: flyed
+    c: flew
+    d: fly
+q27:
+  text: ما الماضي البسيط للفعل **take**؟
+  show: 4
+  options:
+    a: took
+    b: taked
+    c: taken
+    d: take
+q28:
+  text: ما التصريف الثالث للفعل **eat**؟
+  show: 4
+  options:
+    a: eaten
+    b: eated
+    c: ate
+    d: eat
+q29:
+  text: ما الماضي البسيط للفعل **wear**؟
+  show: 4
+  options:
+    a: wore
+    b: weared
+    c: worn
+    d: wear
+q30:
+  text: “She isn't here. She has ___ to the bank.”
+  show: 4
+  options:
+    a: gone
+    b: been
+    c: went
+    d: go
+q31:
+  text: “___ you at home yesterday?”
+  show: 4
+  options:
+    a: Were
+    b: Was
+    c: Been
+    d: Are
+q32:
+  text: أي جملة صحيحة؟
+  show: 4
+  options:
+    a: I didn't know that.
+    b: I didn't knew that.
+    c: I didn't known that.
+    d: I didn't knowed that.
+q33:
+  text: أي جملة صحيحة؟
+  show: 4
+  options:
+    a: I saw him yesterday.
+    b: I have seen him yesterday.
+    c: I have saw him yesterday.
+    d: I seen him yesterday.
+q34:
+  text: “She ___ her hand to ask a question.”
+  show: 4
+  options:
+    a: raised
+    b: rose
+    c: risen
+    d: rised
+q35:
+  text: “I ___ in bed all morning.” (على السرير)
+  show: 4
+  options:
+    a: lay
+    b: laid
+    c: lied
+    d: lain
+q36:
+  text: “He ___ off his bike.”
+  show: 4
+  options:
+    a: fell
+    b: felt
+    c: falled
+    d: fallen
+q37:
+  text: أيها أمريكي؟
+  show: 4
+  options:
+    a: I've gotten better.
+    b: I've got better.
+    c: I've getten better.
+    d: I've getted better.
+q38:
+  text: ما الماضي البسيط للفعل **bring**؟
+  show: 4
+  options:
+    a: brought
+    b: bringed
+    c: bring
+    d: broughted
+q39:
+  text: ما التصريف الثالث للفعل **choose**؟
+  show: 4
+  options:
+    a: chosen
+    b: choosed
+    c: chose
+    d: choose
+q40:
+  text: ما التصريف الثالث للفعل **forget**؟
+  show: 4
+  options:
+    a: forgotten
+    b: forgeted
+    c: forgot
+    d: forget
+q41:
+  text: ما الماضي البسيط للفعل **hold**؟
+  show: 4
+  options:
+    a: held
+    b: holded
+    c: hold
+    d: helded
+q42:
+  text: ما الماضي البسيط للفعل **swim**؟
+  show: 4
+  options:
+    a: swam
+    b: swimed
+    c: swum
+    d: swim
+q43:
+  text: ما التصريف الثالث للفعل **throw**؟
+  show: 4
+  options:
+    a: thrown
+    b: throwed
+    c: threw
+    d: throw
+q44:
+  text: ما الماضي البسيط للفعل **lose**؟
+  show: 4
+  options:
+    a: lost
+    b: losed
+    c: lose
+    d: losted
+q45:
+  text: ما التصريف الثالث للفعل **hide**؟
+  show: 4
+  options:
+    a: hidden
+    b: hided
+    c: hid
+    d: hide
+q46:
+  text: ما الماضي البسيط للفعل **understand**؟
+  show: 4
+  options:
+    a: understood
+    b: understanded
+    c: understand
+    d: understooded
+q47:
+  text: ما التصريف الثالث للفعل **give**؟
+  show: 4
+  options:
+    a: given
+    b: gived
+    c: gave
+    d: give
+q48:
+  text: ما الماضي البسيط للفعل **feel**؟
+  show: 4
+  options:
+    a: felt
+    b: feeled
+    c: feel
+    d: felted
+q49:
+  text: ما الماضي البسيط للفعل **speak**؟
+  show: 4
+  options:
+    a: spoke
+    b: speaked
+    c: spoken
+    d: speak

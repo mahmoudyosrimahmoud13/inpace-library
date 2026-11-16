@@ -29,6 +29,11 @@ jobs:
       - run: pip install -q "git+https://github.com/mahmoudyosrimahmoud13/inpace.git" pyyaml
       - run: python scripts/library_tools.py check
       - run: python scripts/library_tools.py build _site
+      - name: Post new courses to Discord (does nothing without the DISCORD_WEBHOOKS secret)
+        continue-on-error: true
+        env:
+          DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+        run: python scripts/library_tools.py announce _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

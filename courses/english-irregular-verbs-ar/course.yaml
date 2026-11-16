@@ -1,0 +1,197 @@
+id: english-irregular-verbs-ar
+title: الأفعال الشاذة في الإنجليزية بطريقة سهلة
+version: 1
+language: ar
+description: الأفعال الشاذة التي تحتاجها فعلًا (أكثر من 100 فعل)، مقسّمة إلى مجموعات تتغيّر بالطريقة نفسها، فتحفظ
+  أنماطًا لا قائمة طويلة. لكل مجموعة جدول بالمعنى العربي وأمثلة، وحيلة للحفظ، وتمرين واختبار. ثم الأخطاء الشائعة
+  (I have went و did you saw)، والفرق بين البريطاني والأمريكي، والقائمة الكاملة للمراجعة. الشرح بالعربي والأمثلة
+  بالإنجليزي. أسبوعان تقريبًا، 15 دقيقة يوميًا.
+image: cover.jpg
+modules:
+- id: m1
+  title: 'ابدأ هنا: ما الفعل الشاذ؟'
+  lessons:
+  - id: m1-l1
+    title: التصريفات الثلاثة لكل فعل
+    file: lessons/m1-l1.md
+    minutes: 12
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'اكتب 6 جمل عن حياتك: 2 بالمصدر (الآن)، و2 بالماضي البسيط (yesterday أو last year)، و2 بـ have + التصريف
+      الثالث. استخدم go و see و do. مثال: I went to the market yesterday.'
+  - id: m1-explain
+    type: explain
+    prompt: 'بكلماتك: متى تستخدم الماضي البسيط، ومتى تستخدم التصريف الثالث؟'
+    min_words: 25
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'العائلتان A و B: الأسهل'
+  lessons:
+  - id: m2-l1
+    title: 'العائلة A: أفعال لا تتغيّر'
+    file: lessons/m2-l1.md
+    minutes: 12
+  - id: m2-l2
+    title: 'العائلة B: come و become و run'
+    file: lessons/m2-l2.md
+    minutes: 8
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'اختر 8 أفعال من العائلتين A و B. اكتب لكل فعل جملة حقيقية في الماضي عن أسبوعك. ثم قلها بصوت عالٍ، وابدأ
+      كل مرة بالتصريفات الثلاثة: cut, cut, cut.'
+  - id: m2-explain
+    type: explain
+    prompt: كيف تعرف إن كانت جملة “I put my bag here” عن الحاضر أم الماضي؟ أعطِ مثالًا لكل حالة.
+    min_words: 20
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    - q11
+    pass: 70
+- id: m3
+  title: 'العائلة C: الماضي والتصريف الثالث متشابهان'
+  lessons:
+  - id: m3-l1
+    title: ought- و t- و ept-
+    file: lessons/m3-l1.md
+    minutes: 15
+  - id: m3-l2
+    title: aid- والأفعال اليومية
+    file: lessons/m3-l2.md
+    minutes: 15
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اكتب قصة قصيرة (8 إلى 10 جمل) عن آخر مرة ذهبت فيها للتسوق أو سافرت. استخدم 10 أفعال على الأقل من العائلة
+      C في الماضي البسيط، وضع تحتها خطًا.
+  - id: m3-explain
+    type: explain
+    prompt: اختر نمطين من العائلة C (مثل ought- أو ept-). اشرح كل نمط وأعطِ ثلاثة أفعال له.
+    min_words: 25
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q12
+    - q13
+    - q14
+    - q15
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m4
+  title: 'العائلة D: ثلاثة تصريفات مختلفة'
+  lessons:
+  - id: m4-l1
+    title: i-a-u والتصريف الذي ينتهي بـ en
+    file: lessons/m4-l1.md
+    minutes: 15
+  - id: m4-l2
+    title: ew-/own- و ook-/aken- و ore-/orn- والأفعال الغريبة
+    file: lessons/m4-l2.md
+    minutes: 15
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'اكتب قائمة “I have / I haven''t” خاصة بك: 10 جمل بتصريفات العائلة D الثالثة عن أشياء فعلتها أو لم تفعلها
+      (I have ridden a horse. I haven''t flown in a plane). ثم اسأل شخصًا الأسئلة نفسها: Have you ever ridden a
+      horse?'
+  - id: m4-explain
+    type: explain
+    prompt: اشرح الفرق بين “She has gone to Alexandria” و “She has been to Alexandria”.
+    min_words: 20
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    - q31
+    pass: 70
+- id: m5
+  title: استخدمها بشكل صحيح
+  lessons:
+  - id: m5-l1
+    title: الأخطاء التي يقع فيها الجميع
+    file: lessons/m5-l1.md
+    minutes: 15
+  - id: m5-l2
+    title: البريطاني والأمريكي
+    file: lessons/m5-l2.md
+    minutes: 8
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'صحّح الأخطاء في هذه الجمل الست، ثم اكتب 4 جمل من عندك بالتصريفات الصحيحة: 1) I have saw this film.
+      2) Did you went out? 3) She buyed a dress. 4) The letter was wrote by hand. 5) I didn''t knew that. 6) He
+      has broke his phone yesterday.'
+  - id: m5-explain
+    type: explain
+    prompt: لماذا جملة “I have seen him yesterday” خطأ؟ كيف تصحّحها، ومتى تكون “I have seen him” صحيحة؟
+    min_words: 25
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q32
+    - q33
+    - q34
+    - q35
+    - q36
+    - q37
+    pass: 70
+- id: m6
+  title: 'المراجعة: القائمة الكاملة'
+  lessons:
+  - id: m6-l1
+    title: كل الأفعال في جدول واحد
+    file: lessons/m6-l1.md
+    minutes: 15
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: اكتب نصًا قصيرًا (حوالي 120 كلمة) عن أجمل رحلة أو يوم في حياتك. استخدم 15 فعلًا شاذًا مختلفًا على الأقل،
+      بالماضي البسيط وبـ have + التصريف الثالث. ثم اقرأه بصوت عالٍ مرة واحدة.
+  - id: m6-explain
+    type: explain
+    prompt: أي عائلة من الأفعال الشاذة كانت الأصعب عليك، وماذا ستفعل لتحفظها؟
+    min_words: 20
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q38
+    - q39
+    - q40
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    - q46
+    - q47
+    - q48
+    - q49
+    pass: 70

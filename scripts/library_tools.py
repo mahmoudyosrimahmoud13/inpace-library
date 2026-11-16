@@ -506,7 +506,8 @@ a { color: inherit; }
 .sq svg { width: 20px; height: 20px; } .theme .sun { display: none; }
 :root[data-theme=dark] .theme .sun { display: block; } :root[data-theme=dark] .theme .moon { display: none; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme=light]) .theme .sun { display: block; } :root:not([data-theme=light]) .theme .moon { display: none; } }
-@media (max-width: 720px) { .top nav { display: none; } .theme { margin-inline-start: auto; } }
+.sq.discord { color: #5865F2; text-decoration: none; }
+@media (max-width: 720px) { .top nav { display: none; } .sq.discord { margin-inline-start: auto; } }
 .wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: end; padding-block: 2.6rem 1.2rem; }
 h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); margin: 0 0 .6rem; line-height: 1.05; letter-spacing: -.02em; }
@@ -750,12 +751,14 @@ def shell(title: str, description: str, body: str, root: str, script: str = "", 
   <a class="brand" href="{SITE_MAIN}"><img src="{SITE_MAIN}assets/icon.svg" width="30" height="30" alt=""><b><span>in</span>Pace</b></a>
   <nav><a href="{root}index.html">{t("Library", "المكتبة")}</a><a href="{root}index.html#roadmaps">{t("Roadmaps", "مسارات التعلّم")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
     <a href="{root}share.html">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
+  <a class="sq discord" href="{SITE_MAIN}discord.html" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></a>
   <button class="sq theme" type="button" id="theme" aria-label="Light or dark mode" title="Light or dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
   <button class="sq" type="button" id="lang">{t("عربي", "English")}</button>
 </div>
 {body}
 <footer>{t("Something wrong with a course?", "مشكلة في دورة؟")} <a href="{REPORT}">{t("Report it", "أبلغ عنها")}</a> ·
   <a href="{FEEDBACK}">{t("Feedback and ideas", "الملاحظات والأفكار")}</a> ·
+  <a href="{SITE_MAIN}discord.html">Discord</a> ·
   <a href="https://github.com/mahmoudyosrimahmoud13/inpace-library">GitHub</a></footer>
 {COMMON_SCRIPT}{script}
 </body></html>
@@ -1202,6 +1205,54 @@ def roadmap_page(r: dict, by_id: dict) -> str:
     return shell(f"{r['title']} · free learning path · inPace", desc, body, "../", "", seo)
 
 
+def new_on_site(out: Path, live: dict | None) -> list[tuple[str, dict]]:
+    """Courses and roadmaps in this build that the live library doesn't have yet."""
+    if not live:
+        return []
+    have_c = {c["id"] for c in live.get("courses", [])}
+    have_r = {r["id"] for r in live.get("roadmaps", [])}
+    index = json.loads((out / "library.json").read_text(encoding="utf-8"))
+    return [("course", c) for c in index["courses"] if c["id"] not in have_c] + \
+        [("roadmap", r) for r in index["roadmaps"] if r["id"] not in have_r]
+
+
+def announce_message(kind: str, item: dict) -> dict:
+    page = SITE + ("c/" if kind == "course" else "r/") + item["id"] + ".html"
+    facts_line = (f"{item.get('lessons', 0)} lessons" if kind == "course" else f"{item.get('courses', 0)} courses") + \
+        (f" · about {max(1, round((item.get('minutes') or 0) / 60))} h" if item.get("minutes") else "") + \
+        (" · Arabic" if item.get("language") == "ar" else "")
+    embed = {"title": ("📚 New course: " if kind == "course" else "🗺️ New roadmap: ") + item["title"], "url": page,
+             "description": (item.get("description") or "")[:600] + f"\n\n{facts_line}\nOpen it, then add it to inPace with one press.",
+             "color": 0x1F9D6A if kind == "course" else 0x5DADE2}
+    if item.get("cover"):
+        embed["thumbnail"] = {"url": item["cover"]}
+    return {"username": "inPace library", "embeds": [embed], "allowed_mentions": {"parse": []}}
+
+
+def announce(out: Path) -> int:
+    """Post new courses and roadmaps to the Discord #new-courses channel (before the new site goes live)."""
+    try:
+        hook = json.loads(os.environ.get("DISCORD_WEBHOOKS") or "{}").get("courses")
+    except ValueError:
+        hook = None
+    if not hook:
+        print("No DISCORD_WEBHOOKS secret: nothing to post.")
+        return 0
+    try:
+        with urllib.request.urlopen(SITE + "library.json", timeout=30) as r:
+            live = json.load(r)
+    except Exception as e:  # never post everything just because the live list couldn't be read
+        print("Couldn't read the live library, so nothing is posted:", e)
+        return 0
+    new = new_on_site(out, live)
+    for kind, item in new[:10]:
+        req = urllib.request.Request(hook, data=json.dumps(announce_message(kind, item)).encode(), method="POST",
+                                     headers={"Content-Type": "application/json", "User-Agent": "inPace-library"})
+        urllib.request.urlopen(req, timeout=30).read()
+        print("Posted", kind, item["id"])
+    return 0
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "submit":
@@ -1212,6 +1263,8 @@ if __name__ == "__main__":
         sys.exit(check())
     elif cmd == "build":
         build(Path(sys.argv[2] if len(sys.argv) > 2 else "_site"))
+    elif cmd == "announce":
+        sys.exit(announce(Path(sys.argv[2] if len(sys.argv) > 2 else "_site")))
     else:
         print(__doc__)
         sys.exit(2)
