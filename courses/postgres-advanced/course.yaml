@@ -1,0 +1,148 @@
+id: postgres-advanced
+title: 'Advanced PostgreSQL: how Postgres really works'
+version: 1
+language: en
+description: 'Go past basic SQL and learn how Postgres works inside: processes and memory, MVCC, the WAL, isolation
+  levels, locks, vacuum and bloat, B-tree and other indexes, reading EXPLAIN plans, query patterns that scale, partitioning,
+  replication and sharding. Built around Hussein Nasser''s Database Engineering videos, the go-to advanced database
+  series on YouTube. For developers who already write SQL. About 2 weeks, 30 to 40 minutes a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: Inside Postgres
+  lessons:
+  - id: m1-l1
+    title: How Postgres works under the hood
+    file: lessons/m1-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=q9jixKv4h2I
+  - id: m1-l2
+    title: WAL, redo and undo
+    file: lessons/m1-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=uHvR7nOu5m4
+  requires:
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: Transactions and isolation
+  lessons:
+  - id: m2-l1
+    title: ACID transactions, explained by example
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=pomxJOFVcQs
+  - id: m2-l2
+    title: Isolation levels and read phenomena
+    file: lessons/m2-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=KoULlXKK1H8
+  requires:
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: Locks, vacuum and bloat
+  lessons:
+  - id: m3-l1
+    title: Locks in Postgres
+    file: lessons/m3-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=URwmzTeuHdk
+  - id: m3-l2
+    title: VACUUM, bloat and autovacuum
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=qcInj-XW1Vc
+  requires:
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: Indexing
+  lessons:
+  - id: m4-l1
+    title: B-tree indexes and how Postgres uses them
+    file: lessons/m4-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=-qNSXK7s7_w
+  - id: m4-l2
+    title: 'Indexes in production: cost, locking and bloat'
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=ykVumkmkbik
+  requires:
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: Query planning and performance
+  lessons:
+  - id: m5-l1
+    title: Reading EXPLAIN and EXPLAIN ANALYZE
+    file: lessons/m5-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=P7EUFtjeAmI
+  - id: m5-l2
+    title: Query patterns that scale
+    file: lessons/m5-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=wybjsKtA9hI
+  requires:
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: Scaling Postgres
+  lessons:
+  - id: m6-l1
+    title: Partitioning
+    file: lessons/m6-l1.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=sitUYx2EfhY
+  - id: m6-l2
+    title: Replication, sharding and scaling out
+    file: lessons/m6-l2.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=9aFu7APZQmY
+  requires:
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

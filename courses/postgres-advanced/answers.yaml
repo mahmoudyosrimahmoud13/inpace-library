@@ -1,0 +1,121 @@
+q1:
+  right:
+  - a
+  why: Postgres forks one backend process per connection, which is why many connections are costly and poolers help.
+q2:
+  right:
+  - a
+  why: MVCC writes a new tuple version and marks the old one dead; VACUUM reclaims it later.
+q3:
+  right:
+  - a
+  why: 'Write-ahead logging: the commit is safe once the WAL is fsynced; data pages are written later.'
+q4:
+  right:
+  - a
+  why: 'Recovery is redo: replay WAL records written after the last checkpoint.'
+q5:
+  right:
+  - a
+  why: Replication, PITR and CDC all read the WAL. Autovacuum is triggered by dead tuple counts.
+q6:
+  right:
+  - a
+  why: Read Committed is the default; each statement gets a fresh snapshot.
+q7:
+  right:
+  - a
+  why: Postgres Repeatable Read uses one snapshot per transaction, which also prevents phantoms.
+q8:
+  right:
+  - a
+  why: Write skew is a serialization anomaly; only Serializable (SSI) catches it.
+q9:
+  right:
+  - a
+  why: SSI aborts conflicting transactions with a serialization failure; the app must retry them.
+q10:
+  right:
+  - a
+  why: Open transactions hold back the cleanup horizon, causing bloat across the database.
+q11:
+  right:
+  - a
+  why: Most ALTER TABLE forms take ACCESS EXCLUSIVE, which conflicts with every other lock.
+q12:
+  right:
+  - a
+  why: Lock requests queue in order, so everything waits behind the ALTER. Use lock_timeout.
+q13:
+  right:
+  - a
+  why: SKIP LOCKED lets each worker take an unlocked row without waiting.
+q14:
+  right:
+  - a
+  why: Plain VACUUM reclaims space for reuse without blocking; VACUUM FULL rewrites and locks.
+q15:
+  right:
+  - a
+  why: Heap-only tuple updates skip index writes if no indexed column changes and the new version fits on the same
+    page.
+q16:
+  right:
+  - a
+  why: A B-tree is ordered by its leading column first; filtering only on the second column can't use it well.
+q17:
+  right:
+  - a
+  why: Postgres can skip the heap only if the index covers the columns and pages are marked all-visible.
+q18:
+  right:
+  - a
+  why: GIN indexes many keys per row, which suits jsonb, arrays and full-text.
+q19:
+  right:
+  - a
+  why: A plain CREATE INDEX takes a SHARE lock that blocks writes; CONCURRENTLY doesn't.
+q20:
+  right:
+  - a
+  why: Wrapping the column in a function hides it from a plain index; use a range or index the expression.
+q21:
+  right:
+  - a
+  why: Big estimate errors lead to bad join and scan choices; fix statistics first.
+q22:
+  right:
+  - a
+  why: The sort spilled to disk because it didn't fit in work_mem.
+q23:
+  right:
+  - a
+  why: Nested loop with an index lookup per outer row is ideal for a small outer input.
+q24:
+  right:
+  - a
+  why: OFFSET work grows with the page number; keyset pagination keeps every page cheap.
+q25:
+  right:
+  - a
+  why: pg_stat_statements aggregates calls and time per normalized query.
+q26:
+  right:
+  - a
+  why: Postgres enforces uniqueness per partition, so the key must be included.
+q27:
+  right:
+  - a
+  why: Retention becomes a cheap metadata operation instead of a big delete plus vacuum.
+q28:
+  right:
+  - a
+  why: Async replicas lag slightly; route read-after-write traffic to the primary.
+q29:
+  right:
+  - a
+  why: Logical replication sends row changes and works across major versions.
+q30:
+  right:
+  - a
+  why: Sharding adds lots of complexity; exhaust simpler options first.

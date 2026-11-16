@@ -1,0 +1,120 @@
+q1:
+  right:
+  - a
+  why: In Compose, containers resolve each other by service name; localhost means the container itself.
+q2:
+  right:
+  - a
+  why: Chunked reads keep memory bounded; COPY is the fastest bulk path.
+q3:
+  right:
+  - a
+  why: plan is a dry run that diffs config, state and reality.
+q4:
+  right:
+  - a
+  why: Remote state with locking keeps one source of truth for the team.
+q5:
+  right:
+  - a
+  why: -/+ means replace; always check it for stateful resources.
+q6:
+  right:
+  - a
+  why: Orchestrators manage execution; they don't speed up individual queries.
+q7:
+  right:
+  - a
+  why: Passing references keeps tasks small, retryable and decoupled.
+q8:
+  right:
+  - a
+  why: Triggers (Schedule, webhook, flow events) start executions.
+q9:
+  right:
+  - a
+  why: Idempotency makes retries and backfills safe.
+q10:
+  right:
+  - a
+  why: Replacing the whole period (or MERGE on a unique key) gives the same result on re-runs.
+q11:
+  right:
+  - a
+  why: The watermark marks where the last run stopped; add a small overlap for late updates.
+q12:
+  right:
+  - a
+  why: Staging plus MERGE gives clean, validated, re-runnable loads.
+q13:
+  right:
+  - a
+  why: Columnar compression lets engines read only needed columns, with types preserved.
+q14:
+  right:
+  - a
+  why: ELT lands raw data first, then transforms with SQL in the warehouse.
+q15:
+  right:
+  - a
+  why: Billing is by bytes of columns read; LIMIT doesn't reduce the scan.
+q16:
+  right:
+  - a
+  why: dbt runs SELECT-based transformations inside the warehouse.
+q17:
+  right:
+  - a
+  why: ref() links models and lets dbt build the DAG in the right order.
+q18:
+  right:
+  - a
+  why: Incremental models filter with is_incremental() and merge into the existing table.
+q19:
+  right:
+  - a
+  why: Facts hold events and numeric measures; dimensions describe them.
+q20:
+  right:
+  - a
+  why: relationships enforces referential integrity between models.
+q21:
+  right:
+  - a
+  why: Spark is lazy; actions such as count or write trigger execution.
+q22:
+  right:
+  - a
+  why: groupBy, joins and repartition shuffle data, which is costly in disk and network.
+q23:
+  right:
+  - a
+  why: Broadcasting avoids shuffling the big table.
+q24:
+  right:
+  - a
+  why: Skew puts most rows of one key in one partition; use AQE, salting or broadcasting.
+q25:
+  right:
+  - a
+  why: Use coalesce to shrink partition count cheaply; repartition to rebalance.
+q26:
+  right:
+  - a
+  why: Event time reflects when things happened; processing time depends on delays.
+q27:
+  right:
+  - a
+  why: Watermarks trade completeness for latency by bounding lateness.
+q28:
+  right:
+  - a
+  why: Records with the same key go to one partition, which is ordered.
+q29:
+  right:
+  - a
+  why: acks=all waits for in-sync replicas; idempotence removes duplicates from retries.
+q30:
+  right:
+  - a
+  why: Compatibility rules block breaking schema changes at publish time.

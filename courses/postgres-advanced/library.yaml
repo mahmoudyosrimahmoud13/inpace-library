@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- postgresql
+- databases
+- sql
+- performance
+- advanced
+updated: '2026-11-16'
+credit: Written for the inPace library. Videos by Hussein Nasser (Database Engineering series on YouTube), linked,
+  not copied.

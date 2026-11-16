@@ -1,0 +1,240 @@
+q1:
+  text: 'Inside a Docker Compose network, your ingest container should reach Postgres at:'
+  show: 4
+  options:
+    a: The service name, e.g. pgdatabase:5432
+    b: localhost:5432
+    c: 127.0.0.1:5432
+    d: The host's public IP
+q2:
+  text: 'Loading a 10 GB CSV into Postgres with pandas, you should:'
+  show: 4
+  options:
+    a: Read and insert in chunks (or use Parquet / COPY)
+    b: Load the whole file into memory at once
+    c: Insert one row per transaction
+    d: Convert it to JSON first
+q3:
+  text: What does terraform plan do?
+  show: 4
+  options:
+    a: Shows what would change without changing anything
+    b: Creates the resources
+    c: Deletes all resources
+    d: Downloads providers only
+q4:
+  text: Why store Terraform state in a remote backend with locking?
+  show: 4
+  options:
+    a: So two people can't apply at once and corrupt or diverge the state
+    b: Because local state is illegal
+    c: To make plans faster
+    d: To avoid needing providers
+q5:
+  text: 'A plan line marked -/+ on a bucket means:'
+  show: 4
+  options:
+    a: It will be destroyed and recreated, which can delete data
+    b: It will be renamed in place
+    c: Nothing will change
+    d: It will be backed up
+q6:
+  text: Which is NOT a core benefit of a workflow orchestrator over cron?
+  show: 4
+  options:
+    a: Making SQL queries run faster
+    b: Retries and timeouts
+    c: Backfills of past dates
+    d: Dependencies between tasks
+q7:
+  text: 'Between tasks, a good pipeline passes:'
+  show: 4
+  options:
+    a: References like a file path or table name
+    b: Huge dataframes in memory
+    c: Screenshots of results
+    d: Nothing; each task recomputes everything
+q8:
+  text: In Kestra, what starts a flow on a schedule?
+  show: 4
+  options:
+    a: A trigger
+    b: An output
+    c: A namespace
+    d: A secret
+q9:
+  text: 'A task is idempotent if:'
+  show: 4
+  options:
+    a: Running it twice for the same date gives the same result
+    b: It runs only once ever
+    c: It never fails
+    d: It uses no SQL
+q10:
+  text: Which load pattern is idempotent for a monthly partition?
+  show: 4
+  options:
+    a: Delete that month, then insert it, in one transaction
+    b: INSERT INTO final SELECT * FROM staging every run
+    c: Append rows to latest.csv
+    d: Increment a counter each run
+q11:
+  text: 'Incremental loading usually relies on:'
+  show: 4
+  options:
+    a: A watermark like max(updated_at) stored between runs
+    b: Reloading everything daily
+    c: Random sampling
+    d: Manual exports
+q12:
+  text: Why load into a staging table before the final table?
+  show: 4
+  options:
+    a: To isolate each run, validate, then merge idempotently
+    b: Because warehouses can't write to final tables
+    c: To avoid using SQL
+    d: To double storage on purpose
+q13:
+  text: Why is Parquet preferred over CSV in a data lake?
+  show: 4
+  options:
+    a: It's columnar, compressed and typed
+    b: It's human-readable
+    c: It's required by Terraform
+    d: It stores images
+q14:
+  text: 'In ELT, transformations happen:'
+  show: 4
+  options:
+    a: Inside the warehouse after loading
+    b: Before loading in a separate engine
+    c: In the BI tool only
+    d: On the source database
+q15:
+  text: 'In BigQuery on-demand pricing, adding LIMIT 10 to SELECT * on a big table:'
+  show: 4
+  options:
+    a: Does not reduce bytes scanned or cost
+    b: Cuts the cost to almost zero
+    c: Scans only 10 rows
+    d: Disables caching
+q16:
+  text: 'dbt is mainly the ___ in ELT:'
+  show: 4
+  options:
+    a: T (transform)
+    b: E (extract)
+    c: L (load)
+    d: All three equally
+q17:
+  text: Which dbt function creates dependencies between models?
+  show: 4
+  options:
+    a: ref()
+    b: source() only
+    c: config()
+    d: run_query()
+q18:
+  text: Which materialization processes only new or changed rows?
+  show: 4
+  options:
+    a: incremental
+    b: view
+    c: table
+    d: ephemeral
+q19:
+  text: 'In a star schema, the fact table holds:'
+  show: 4
+  options:
+    a: Measures at a declared grain, like one row per trip
+    b: Only descriptive text
+    c: Lookup values for zones
+    d: Configuration settings
+q20:
+  text: 'A dbt relationships test checks that:'
+  show: 4
+  options:
+    a: Every foreign key value exists in the referenced model
+    b: The table is not empty
+    c: Columns are sorted
+    d: The model ran fast
+q21:
+  text: 'Spark transformations like filter and groupBy:'
+  show: 4
+  options:
+    a: Only build a plan until an action runs
+    b: Run immediately
+    c: Write to disk instantly
+    d: Require a GPU
+q22:
+  text: What is the main cost in most Spark jobs?
+  show: 4
+  options:
+    a: Shuffles that move data across the network
+    b: Reading the driver logs
+    c: Creating the SparkSession
+    d: Printing schemas
+q23:
+  text: 'Joining a huge trips table with a small zones lookup, the best strategy is:'
+  show: 4
+  options:
+    a: Broadcast the small table
+    b: Sort-merge join both sides
+    c: Cross join
+    d: Collect both to the driver
+q24:
+  text: 'One task takes an hour while others take seconds. The likely cause:'
+  show: 4
+  options:
+    a: Data skew on a hot key
+    b: Too much memory
+    c: Too few columns
+    d: Parquet compression
+q25:
+  text: 'repartition(n) vs coalesce(n):'
+  show: 4
+  options:
+    a: repartition does a full shuffle; coalesce only reduces partitions without a full shuffle
+    b: They are identical
+    c: coalesce always increases partitions
+    d: repartition never shuffles
+q26:
+  text: 'Streaming aggregations should use:'
+  show: 4
+  options:
+    a: Event time
+    b: Processing time
+    c: Server boot time
+    d: Random time
+q27:
+  text: 'A watermark in stream processing:'
+  show: 4
+  options:
+    a: Sets how late events can arrive before being dropped or diverted
+    b: Encrypts messages
+    c: Compresses topics
+    d: Marks the first event ever
+q28:
+  text: 'In Kafka, ordering is guaranteed:'
+  show: 4
+  options:
+    a: Only within a partition
+    b: Across the whole topic
+    c: Across all topics
+    d: Never
+q29:
+  text: Which producer settings help prevent data loss and retry duplicates?
+  show: 4
+  options:
+    a: acks=all with enable.idempotence=true
+    b: acks=0
+    c: Disabling replication
+    d: Committing offsets before sending
+q30:
+  text: Why use a Schema Registry with Avro?
+  show: 4
+  options:
+    a: To enforce compatibility so producers can't break consumers
+    b: To make Kafka faster than memory
+    c: To replace consumer groups
+    d: To store offsets

@@ -1,0 +1,241 @@
+q1:
+  text: 'Postgres handles each client connection with:'
+  show: 4
+  options:
+    a: A separate backend process
+    b: A lightweight thread
+    c: A shared event loop
+    d: A coroutine
+q2:
+  text: 'After an UPDATE, the old row version in Postgres is:'
+  show: 4
+  options:
+    a: Left in the table as a dead tuple until VACUUM
+    b: Overwritten in place
+    c: Moved to an undo log
+    d: Deleted immediately
+q3:
+  text: When is a COMMIT durable in Postgres?
+  show: 4
+  options:
+    a: When its WAL records are flushed to disk
+    b: When the checkpointer writes the data pages
+    c: When autovacuum runs
+    d: When the client disconnects
+q4:
+  text: 'After a crash, Postgres recovers by:'
+  show: 4
+  options:
+    a: Replaying WAL from the last checkpoint
+    b: Applying an undo log
+    c: Running VACUUM FULL
+    d: Rebuilding all indexes
+q5:
+  text: Which feature is NOT built on the WAL?
+  show: 4
+  options:
+    a: Autovacuum thresholds
+    b: Streaming replication
+    c: Point-in-time recovery
+    d: Logical decoding / CDC
+q6:
+  text: What is the default isolation level in Postgres?
+  show: 4
+  options:
+    a: Read Committed
+    b: Repeatable Read
+    c: Serializable
+    d: Read Uncommitted
+q7:
+  text: 'Under Repeatable Read in Postgres, phantom reads:'
+  show: 4
+  options:
+    a: Do not happen
+    b: Always happen
+    c: Happen only with indexes
+    d: Happen only on SELECT FOR UPDATE
+q8:
+  text: Two on-call doctors both go off call because each saw the other on call. Which level prevents this write
+    skew?
+  show: 4
+  options:
+    a: Serializable
+    b: Repeatable Read
+    c: Read Committed
+    d: Read Uncommitted
+q9:
+  text: 'When using Serializable isolation, your application must:'
+  show: 4
+  options:
+    a: Retry transactions that fail with SQLSTATE 40001
+    b: Disable autovacuum
+    c: Use only one connection
+    d: Avoid indexes
+q10:
+  text: Why is a session left 'idle in transaction' harmful?
+  show: 4
+  options:
+    a: Its snapshot prevents VACUUM from removing dead tuples
+    b: It deletes WAL files
+    c: It forces Serializable isolation
+    d: It disables indexes
+q11:
+  text: Which statement takes an ACCESS EXCLUSIVE lock that blocks even SELECT?
+  show: 4
+  options:
+    a: ALTER TABLE ... ADD COLUMN
+    b: CREATE INDEX CONCURRENTLY
+    c: UPDATE on one row
+    d: SELECT ... FOR UPDATE
+q12:
+  text: An ALTER TABLE waits behind a long SELECT. What happens to new queries?
+  show: 4
+  options:
+    a: They queue behind the waiting ALTER
+    b: They skip ahead of it
+    c: They run on a replica automatically
+    d: They fail instantly
+q13:
+  text: What does FOR UPDATE SKIP LOCKED help build?
+  show: 4
+  options:
+    a: A job queue where workers grab different rows
+    b: A full table backup
+    c: A covering index
+    d: A logical replica
+q14:
+  text: What does plain VACUUM do?
+  show: 4
+  options:
+    a: Marks dead tuple space reusable and updates the visibility map
+    b: Returns all free space to the OS
+    c: Locks the table exclusively
+    d: Rebuilds every index
+q15:
+  text: 'A HOT update can happen when:'
+  show: 4
+  options:
+    a: No indexed column changes and the page has free space
+    b: Every column changes
+    c: The table has no primary key
+    d: The transaction is Serializable
+q16:
+  text: 'An index on (customer_id, created_at) is LEAST useful for:'
+  show: 4
+  options:
+    a: WHERE created_at > now() - interval '7 days' alone
+    b: WHERE customer_id = 7
+    c: WHERE customer_id = 7 AND created_at > ...
+    d: WHERE customer_id = 7 ORDER BY created_at
+q17:
+  text: 'An Index Only Scan requires:'
+  show: 4
+  options:
+    a: All needed columns in the index and an up-to-date visibility map
+    b: A hash index
+    c: A partitioned table
+    d: Serializable isolation
+q18:
+  text: Which index type fits jsonb containment and full-text search?
+  show: 4
+  options:
+    a: GIN
+    b: B-tree
+    c: Hash
+    d: BRIN
+q19:
+  text: What does CREATE INDEX CONCURRENTLY avoid?
+  show: 4
+  options:
+    a: Blocking inserts, updates and deletes during the build
+    b: Using disk space
+    c: Writing WAL
+    d: Needing statistics
+q20:
+  text: 'The planner ignores your index on created_at for WHERE date(created_at) = ''2026-11-01''. Best fix:'
+  show: 4
+  options:
+    a: Rewrite as a range on created_at or add an expression index
+    b: Run VACUUM FULL
+    c: Switch to Serializable
+    d: Increase max_connections
+q21:
+  text: 'In EXPLAIN ANALYZE, the most important first check is:'
+  show: 4
+  options:
+    a: Estimated rows vs actual rows
+    b: Total cost number alone
+    c: Number of columns
+    d: The query text length
+q22:
+  text: 'A Sort node shows ''external merge Disk: 200MB''. What does it suggest?'
+  show: 4
+  options:
+    a: work_mem is too small for this sort
+    b: The index is unused
+    c: The table needs partitioning
+    d: Replication lag
+q23:
+  text: Which join method is best when the outer side is small and the inner side has an index?
+  show: 4
+  options:
+    a: Nested Loop
+    b: Hash Join
+    c: Merge Join
+    d: Cross Join
+q24:
+  text: Why is OFFSET 100000 slow?
+  show: 4
+  options:
+    a: Postgres still reads and discards 100,000 rows
+    b: OFFSET disables indexes entirely
+    c: OFFSET forces a table lock
+    d: OFFSET runs VACUUM
+q25:
+  text: Which tool shows the queries using the most total time?
+  show: 4
+  options:
+    a: pg_stat_statements
+    b: pg_stat_replication
+    c: pg_partman
+    d: pg_trgm
+q26:
+  text: Which is a rule of declarative partitioning?
+  show: 4
+  options:
+    a: The partition key must be part of every primary key or unique constraint
+    b: Partitions must live on different servers
+    c: Each partition needs its own database
+    d: Queries must name the partition directly
+q27:
+  text: 'The main operational win of time-based partitions is:'
+  show: 4
+  options:
+    a: Dropping old data with DROP or DETACH instead of a huge DELETE
+    b: Faster single-row lookups by primary key
+    c: No need for indexes
+    d: Automatic sharding
+q28:
+  text: 'A user saves a profile change, then reads it from an async replica and sees the old value. This is:'
+  show: 4
+  options:
+    a: Replication lag breaking read-your-writes
+    b: A deadlock
+    c: Index bloat
+    d: A phantom read
+q29:
+  text: 'Logical replication is especially useful for:'
+  show: 4
+  options:
+    a: Zero-downtime major version upgrades
+    b: Making an exact byte copy of the cluster
+    c: Replicating DDL automatically
+    d: Speeding up sorts
+q30:
+  text: 'According to the scaling order, sharding should come:'
+  show: 4
+  options:
+    a: Last, after query tuning, pooling, scaling up, replicas and partitioning
+    b: First, before tuning
+    c: Instead of indexes
+    d: Before connection pooling

@@ -1,0 +1,167 @@
+id: data-engineering-advanced
+title: 'Data engineering: building production pipelines'
+version: 1
+language: en
+description: 'Build pipelines the way production teams do: Docker and Terraform, orchestration with Kestra, idempotent
+  loads and backfills, data lake to BigQuery with partitioning and clustering, analytics engineering with dbt (staging,
+  star schemas, tests, CI), Spark internals (shuffles, joins, skew) and streaming with Kafka. Built around DataTalksClub''s
+  Data Engineering Zoomcamp, the most recommended free data engineering course on YouTube. For people who already
+  know SQL and Python. About 3 weeks, 30 to 40 minutes a day.'
+image: cover.jpg
+modules:
+- id: m1
+  title: Containers and infrastructure as code
+  lessons:
+  - id: m1-l1
+    title: Docker for data pipelines
+    file: lessons/m1-l1.md
+    minutes: 35
+    media: https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb
+  - id: m1-l2
+    title: 'Terraform primer: infrastructure as code'
+    file: lessons/m1-l2.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=s2bOYDCKl_M
+  - id: m1-l3
+    title: Terraform basics in practice
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Y2ux7gq3Z0o
+  requires:
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: Workflow orchestration
+  lessons:
+  - id: m2-l1
+    title: What workflow orchestration is
+    file: lessons/m2-l1.md
+    minutes: 25
+    media: https://www.youtube.com/watch?v=Np6QmmcgLCs
+  - id: m2-l2
+    title: Kestra concepts
+    file: lessons/m2-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=MNOKVx8780E
+  - id: m2-l3
+    title: Scheduling, backfills and idempotency
+    file: lessons/m2-l3.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=_-li_z97zog
+  requires:
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: Ingestion, data lake and warehouse
+  lessons:
+  - id: m3-l1
+    title: 'Ingestion: from an API to a database'
+    file: lessons/m3-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=Maidfe7oKLs
+  - id: m3-l2
+    title: Data lake to warehouse (ELT)
+    file: lessons/m3-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=JKp_uzM-XsM
+  - id: m3-l3
+    title: 'BigQuery internals: partitioning, clustering and cost'
+    file: lessons/m3-l3.md
+    minutes: 35
+  requires:
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: Analytics engineering with dbt
+  lessons:
+  - id: m4-l1
+    title: Analytics engineering and dbt
+    file: lessons/m4-l1.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=auzcdLRyEIk
+  - id: m4-l2
+    title: dbt project structure and dimensional modeling
+    file: lessons/m4-l2.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=2dYDS4OQbT0
+  - id: m4-l3
+    title: dbt seeds, macros, tests and deployment
+    file: lessons/m4-l3.md
+    minutes: 35
+    media: https://www.youtube.com/watch?v=lT4fmTDEqVk
+  requires:
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: Batch processing with Spark
+  lessons:
+  - id: m5-l1
+    title: Batch processing with Spark
+    file: lessons/m5-l1.md
+    minutes: 35
+    media: https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb
+  - id: m5-l2
+    title: 'Spark internals: shuffles, joins and skew'
+    file: lessons/m5-l2.md
+    minutes: 35
+  requires:
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: Streaming
+  lessons:
+  - id: m6-l1
+    title: Stream processing fundamentals
+    file: lessons/m6-l1.md
+    minutes: 40
+    media: https://www.youtube.com/watch?v=P2loELMUUeI
+  - id: m6-l2
+    title: Kafka in depth
+    file: lessons/m6-l2.md
+    minutes: 35
+    media: https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb
+  requires:
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

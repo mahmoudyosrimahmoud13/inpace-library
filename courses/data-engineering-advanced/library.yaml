@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+tags:
+- data engineering
+- pipelines
+- dbt
+- spark
+- kafka
+- bigquery
+- advanced
+updated: '2026-11-16'
+credit: Written for the inPace library. Videos from DataTalksClub's Data Engineering Zoomcamp (and Zach Wilson's
+  streaming session), linked, not copied.
