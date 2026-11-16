@@ -29,6 +29,9 @@ COURSES = ROOT / "courses"
 ROADMAPS = ROOT / "roadmaps"  # roadmaps (inPace 1.24+): a path through several courses of the library, as YAML
 ROADMAP_VERSION = "1.24"
 LICENSES = ("CC-BY-4.0", "CC-BY-SA-4.0", "CC0-1.0")
+LICENSE_URLS = {"CC-BY-4.0": "https://creativecommons.org/licenses/by/4.0/",
+                "CC-BY-SA-4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "CC0-1.0": "https://creativecommons.org/publicdomain/zero/1.0/"}
 ATTACHMENT = re.compile(r"https://github\.com/(?:user-attachments/files|[\w.-]+/[\w.-]+/files)/[^\s)\]>\"']+")
 
 
@@ -373,8 +376,23 @@ def build(out: Path) -> None:
     (out / "r").mkdir()
     for r in road:
         (out / "r" / f"{r['id']}.html").write_text(roadmap_page(r, by_id), encoding="utf-8")
+    (out / "share.html").write_text(share_page(), encoding="utf-8")
+    for proof in ROOT.glob("google*.html"):  # Google Search Console's ownership file
+        shutil.copyfile(proof, out / proof.name)
+    day = index["updated"][:10]
+    urls = [("", day), ("share.html", day)] + [(f"c/{c['id']}.html", str(c.get("updated") or day)[:10]) for c in entries] + \
+        [(f"r/{r['id']}.html", str(r.get("updated") or day)[:10]) for r in road]
+    (out / "sitemap.xml").write_text(sitemap(urls), encoding="utf-8")
+    (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n", encoding="utf-8")
     (out / ".nojekyll").write_text("")
     print(f"Built {len(entries)} courses and {len(road)} roadmaps into {out}")
+
+
+def sitemap(urls: list[tuple[str, str]]) -> str:
+    rows = "".join(f"<url><loc>{html.escape(SITE + path)}</loc><lastmod>{html.escape(day)}</lastmod></url>\n"
+                   for path, day in urls if re.match(r"\d{4}-\d{2}-\d{2}$", day or ""))
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + rows + "</urlset>\n")
 
 
 SITE_MAIN = "https://mahmoudyosrimahmoud13.github.io/inPace/"
@@ -567,7 +585,7 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
 .mod li { display: flex; gap: .6rem; align-items: baseline; padding: .35rem 0; border-bottom: 1px dashed var(--hair); }
 .mod li:last-child { border-bottom: 0; }
 .mod li .mins { margin-inline-start: auto; color: var(--muted); font-size: .85rem; white-space: nowrap; }
-.mod li .kind { font-size: .75rem; font-weight: 700; border: 1.5px solid var(--ink); padding: 0 .35rem; }
+.mod li .kind { font-size: .75rem; font-weight: 700; border: 1.5px solid var(--ink); padding: 0 .35rem; white-space: nowrap; flex-shrink: 0; }
 .mod li .kind.opt { border-style: dashed; font-weight: 600; }
 .mod .tasks { display: flex; flex-wrap: wrap; gap: .45rem; padding: .2rem 1.1rem 1rem; }
 .mod .task { display: inline-flex; gap: .35rem; align-items: center; font-size: .82rem; font-weight: 700; background: var(--sky); color: var(--ink); padding: .2rem .6rem; }
@@ -696,12 +714,33 @@ document.getElementById("theme").addEventListener("click", function () {
 </script>"""
 
 
-def shell(title: str, description: str, body: str, root: str, script: str = "") -> str:
+FEEDBACK = SITE_MAIN + "feedback.html"
+
+
+def seo_head(title: str, description: str, path: str, image: str = "", lang: str = "en", data: dict | list | None = None) -> str:
+    """What search engines and link previews read: the page's real address, a preview card, and structured data."""
+    e = html.escape
+    url = SITE + path
+    image = image or SITE_MAIN + "assets/og.jpg"
+    out = [f'<link rel="canonical" href="{e(url)}">',
+           '<meta property="og:type" content="website">', '<meta property="og:site_name" content="inPace course library">',
+           f'<meta property="og:title" content="{e(title)}">', f'<meta property="og:description" content="{e(description)}">',
+           f'<meta property="og:url" content="{e(url)}">', f'<meta property="og:image" content="{e(image)}">',
+           f'<meta property="og:locale" content="{"ar_AR" if lang == "ar" else "en_US"}">',
+           '<meta name="twitter:card" content="summary_large_image">']
+    if data:
+        text = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+        out.append(f'<script type="application/ld+json">{text}</script>')
+    return "\n".join(out)
+
+
+def shell(title: str, description: str, body: str, root: str, script: str = "", seo: str = "") -> str:
     e = html.escape
     return f"""<!doctype html>
 <html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
+{seo}
 <link rel="icon" href="{SITE_MAIN}assets/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -710,16 +749,87 @@ def shell(title: str, description: str, body: str, root: str, script: str = "") 
 <div class="top">
   <a class="brand" href="{SITE_MAIN}"><img src="{SITE_MAIN}assets/icon.svg" width="30" height="30" alt=""><b><span>in</span>Pace</b></a>
   <nav><a href="{root}index.html">{t("Library", "المكتبة")}</a><a href="{root}index.html#roadmaps">{t("Roadmaps", "مسارات التعلّم")}</a><a href="{SITE_MAIN}guide.html">{t("Guide", "الدليل")}</a>
-    <a href="{root}index.html#share">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
+    <a href="{root}share.html">{t("Share your course", "شارك دورتك")}</a><a href="{SITE_MAIN}#download">{t("Download inPace", "حمّل inPace")}</a></nav>
   <button class="sq theme" type="button" id="theme" aria-label="Light or dark mode" title="Light or dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
   <button class="sq" type="button" id="lang">{t("عربي", "English")}</button>
 </div>
 {body}
 <footer>{t("Something wrong with a course?", "مشكلة في دورة؟")} <a href="{REPORT}">{t("Report it", "أبلغ عنها")}</a> ·
+  <a href="{FEEDBACK}">{t("Feedback and ideas", "الملاحظات والأفكار")}</a> ·
   <a href="https://github.com/mahmoudyosrimahmoud13/inpace-library">GitHub</a></footer>
 {COMMON_SCRIPT}{script}
 </body></html>
 """
+
+
+SHARE_LICENSES = (("CC-BY-4.0 (anyone can use and share it, and must credit you)",
+                   "CC BY 4.0: anyone can use and share it, and must credit you", "CC BY 4.0: يستطيع أي شخص استخدامها ومشاركتها مع ذكر اسمك"),
+                  ("CC-BY-SA-4.0 (like CC BY, and changed copies use the same license)",
+                   "CC BY-SA 4.0: like CC BY, and changed copies keep the same license", "CC BY-SA 4.0: مثل CC BY، والنسخ المعدّلة تبقى بالترخيص نفسه"),
+                  ("CC0-1.0 (no rights reserved)", "CC0: no rights reserved", "CC0: بلا أي حقوق محفوظة"))
+
+
+def share_page() -> str:
+    """A form on the website that fills in the GitHub submission form for you."""
+    e = html.escape
+    langs = "".join(f'<option value="{v}">{en}</option>' for v, en in (("English", "English"), ("Arabic", "العربية"), ("Other", "Other / أخرى")))
+    lic = "".join(f'<option value="{e(v)}">{e(en)} / {e(ar)}</option>' for v, en, ar in SHARE_LICENSES)
+    body = f"""<style>
+.share-form {{ display: grid; gap: 1rem; max-width: 46rem; margin: 0 0 2rem; padding: 1.4rem; background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); }}
+[dir=rtl] .share-form {{ box-shadow: -6px 6px 0 var(--ink); }}
+.share-form label {{ display: grid; gap: .35rem; font-weight: 700; }}
+.share-form small {{ font-weight: 400; opacity: .8; }}
+.share-form input, .share-form textarea, .share-form select {{ font: inherit; padding: .6rem .7rem; border: 2px solid var(--ink); background: var(--cream); color: var(--ink); border-radius: 0; width: 100%; box-sizing: border-box; }}
+.share-form textarea {{ min-height: 6rem; resize: vertical; }}
+.share-form .pair {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }}
+@media (max-width: 640px) {{ .share-form .pair {{ grid-template-columns: 1fr; }} }}
+.share-steps li {{ margin-bottom: .5rem; }}
+</style>
+<div class="wrap" style="padding-block:2rem">
+<h1>{t("Share your course with everyone", "شارك دورتك مع الجميع")}</h1>
+<p>{t("The library is made by learners. Anything you share is free for everyone, forever.", "المكتبة يصنعها المتعلّمون. كل ما تشاركه مجاني للجميع، للأبد.")}</p>
+<h2>{t("Before the form", "قبل النموذج")}</h2>
+<ol class="share-steps">
+  <li>{t("Make your course in inPace: by hand, with AI, or from a folder of videos.", "اصنع دورتك في inPace: بنفسك، أو بالذكاء الاصطناعي، أو من مجلد فيديوهات.")} <a href="{SITE_MAIN}#download">{t("Get inPace", "احصل على inPace")}</a></li>
+  <li>{t("In <b>My courses</b>, open <b>More</b> on the course and choose <b>Publish to the library</b>. Download the course file it makes.", "في <b>دوراتي</b>، افتح <b>المزيد</b> على الدورة واختر <b>انشر في المكتبة</b>. حمّل ملف الدورة الذي يصنعه.")}</li>
+  <li>{t("Fill in this form and press the button. GitHub opens with everything filled in.", "املأ هذا النموذج واضغط الزر. يفتح GitHub وكل شيء مكتوب.")}</li>
+  <li>{t("Drag the course file into the <b>Course file</b> box on GitHub, tick the two boxes and press <b>Create</b>. A bot checks it in a few minutes.", "اسحب ملف الدورة إلى خانة <b>Course file</b> في GitHub، وعلّم المربعين واضغط <b>Create</b>. يفحصه روبوت خلال دقائق.")}</li>
+</ol>
+<form class="share-form" id="share-form" action="{e(FORM)}" method="get">
+  <input type="hidden" name="template" value="submit-course.yml">
+  <label>{t("Course title", "اسم الدورة")}<input name="course_title" required maxlength="120"></label>
+  <label>{t("What will people learn?", "ماذا سيتعلم الناس؟")} <small>{t("One or two sentences.", "جملة أو جملتان.")}</small><textarea name="description" maxlength="1500"></textarea></label>
+  <div class="pair">
+    <label>{t("Language", "اللغة")}<select name="language">{langs}</select></label>
+    <label>{t("Tags", "الوسوم")} <small>{t("Like: python, web, beginner", "مثل: python, web, beginner")}</small><input name="tags" maxlength="200"></label>
+  </div>
+  <label>{t("License", "الترخيص")}<select name="license">{lic}</select></label>
+  <label>{t("Notes for the reviewers (optional)", "ملاحظات للمراجعين (اختياري)")}<textarea name="notes" maxlength="1500"></textarea></label>
+  <p><button class="btn" type="submit">{t("Continue on GitHub", "أكمل على GitHub")}</button></p>
+  <p><small>{t("Your course and this message are public. You need a free GitHub account to send it.", "دورتك وهذه الرسالة علنية. تحتاج حسابًا مجانيًا على GitHub لإرسالها.")}</small></p>
+</form>
+<p>{t("Big videos? Upload them to Google Drive, MEGA or archive.org and add the download link in the course details. Only share what you made yourself.",
+      "فيديوهات كبيرة؟ ارفعها إلى Google Drive أو MEGA أو archive.org وأضف رابط التحميل في تفاصيل الدورة. شارك فقط ما صنعته بنفسك.")}</p>
+<h2>{t("Share a roadmap", "شارك مسار تعلّم")}</h2>
+<p>{t("In inPace, open <b>Roadmaps → Make a roadmap</b>, save it, then press <b>Share → Open the form</b>.", "في inPace افتح <b>مسارات التعلّم ← اصنع مسارًا</b>، واحفظه، ثم اضغط <b>شارك ← افتح النموذج</b>.")}
+  <a href="{e(FORM_ROADMAP)}">{t("Open the roadmap form", "افتح نموذج المسار")}</a></p>
+</div>"""
+    script = """<script>
+document.getElementById("share-form").addEventListener("submit", function (ev) {
+  ev.preventDefault();
+  var f = ev.target, p = ["template=submit-course.yml"];
+  var title = f.course_title.value.trim();
+  p.push("title=" + encodeURIComponent("Course: " + title));
+  ["course_title", "description", "language", "tags", "license", "notes"].forEach(function (k) {
+    var v = (f[k].value || "").trim().slice(0, 1500);
+    if (v) p.push(k + "=" + encodeURIComponent(v));
+  });
+  window.open(f.action.split("?")[0] + "?" + p.join("&"), "_blank", "noopener");
+});
+</script>"""
+    desc = "Share a course you made with everyone: fill in a short form and send it to the free inPace course library."
+    seo = seo_head("Share your course · inPace course library", desc, "share.html")
+    return shell("Share your course · inPace course library", desc, body, "", script, seo)
 
 
 def facts(c: dict) -> str:
@@ -851,7 +961,7 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
   <p>{t("Big videos? Upload them to Google Drive, MEGA or archive.org and add the download link in the course details. Only share what you made yourself.",
         "فيديوهات كبيرة؟ ارفعها إلى Google Drive أو MEGA أو archive.org وأضف رابط التحميل في تفاصيل الدورة. شارك فقط ما صنعته بنفسك.")}</p>
   <p><a class="btn" href="{SITE_MAIN}#download">{t("Get inPace", "احصل على inPace")}</a>
-     <a class="btn" href="{FORM}">{t("Open the submission form", "افتح نموذج الإرسال")}</a></p>
+     <a class="btn" href="share.html">{t("Open the submission form", "افتح نموذج الإرسال")}</a></p>
   <h2>{t("Share a roadmap", "شارك مسار تعلّم")} {new_badge()}</h2>
   <p>{t("In inPace, open <b>Roadmaps → Make a roadmap</b>. Type a goal and inPace suggests the courses, in order. Add a note to each one, save, then press <b>Share → Open the form</b>: your roadmap is filled in for you. Roadmaps can only use courses that are in the library.", "في inPace افتح <b>مسارات التعلّم ← اصنع مسارًا</b>. اكتب هدفًا فيقترح inPace الدورات بالترتيب. أضف ملاحظة لكل دورة واحفظ، ثم اضغط <b>شارك ← افتح النموذج</b>: يُملأ المسار لك. ولا يستخدم المسار إلا دورات موجودة في المكتبة.")}</p>
   <p><a class="btn" href="{FORM_ROADMAP}">{t("Open the roadmap form", "افتح نموذج المسار")}</a></p>
@@ -895,8 +1005,13 @@ tabs.forEach(function (x) {
 window.addEventListener("hashchange", function () { fromHash(true); });
 fromHash(false);
 </script>"""
-    return shell("inPace course library", "Free courses made and shared by inPace learners. Look inside, then add one to inPace with a click.",
-                 body, "", script)
+    desc = (f"{len(entries)} free courses and {len(road)} learning paths in English and Arabic: Python, JavaScript, C#, Git, "
+            "machine learning, languages and more. Look inside any course, add it to the free inPace app, or share your own.")
+    data = {"@context": "https://schema.org", "@type": "ItemList", "name": "inPace course library",
+            "itemListElement": [{"@type": "ListItem", "position": i, "url": SITE + f"c/{c['id']}.html"}
+                                for i, c in enumerate(entries, 1)]}
+    seo = seo_head("Free courses · inPace course library", desc, "", lang="en", data=data)
+    return shell("Free courses in English and Arabic · inPace course library", desc, body, "", script, seo)
 
 
 def outline_html(c: dict) -> str:
@@ -1028,7 +1143,19 @@ if (more && s) {
   more.addEventListener("click", function () { s.classList.add("open"); more.parentNode.hidden = true; });
 }
 </script>"""
-    return shell(f"{c['title']} · inPace course library", c["description"][:300], body, "../", script)
+    data = {"@context": "https://schema.org", "@type": "Course", "name": c["title"], "description": c["description"][:500],
+            "url": SITE + f"c/{c['id']}.html", "inLanguage": c["language"], "isAccessibleForFree": True,
+            "provider": {"@type": "Organization", "name": (c.get("author") or {}).get("name") or "inPace", "sameAs": SITE_MAIN},
+            "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD", "category": "Free"},
+            "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "Online",
+                                  "courseWorkload": f"PT{max(1, round((c.get('minutes') or 60) / 60))}H"}}
+    if c.get("cover"):
+        data["image"] = c["cover"]
+    if c.get("license"):
+        data["license"] = LICENSE_URLS.get(c["license"], c["license"])
+    seo = seo_head(f"{c['title']} · free course on inPace", c["description"][:300], f"c/{c['id']}.html", c.get("cover") or "",
+                   c["language"], data)
+    return shell(f"{c['title']} · free course · inPace library", c["description"][:300], body, "../", script, seo)
 
 
 def roadmap_page(r: dict, by_id: dict) -> str:
@@ -1066,7 +1193,13 @@ def roadmap_page(r: dict, by_id: dict) -> str:
 <ol class="road">{"".join(steps)}</ol>
 </div>
 <div class="sticky-add"><a class="btn primary" href="{e(r["link"])}">{t("Follow in inPace", "تابِعه في inPace")}</a></div>"""
-    return shell(f"{r['title']} · inPace roadmaps", r.get("description", "")[:300] or r["title"], body, "../")
+    desc = r.get("description", "")[:300] or r["title"]
+    data = {"@context": "https://schema.org", "@type": "ItemList", "name": r["title"], "description": desc,
+            "url": SITE + f"r/{r['id']}.html",
+            "itemListElement": [{"@type": "ListItem", "position": i, "url": SITE + f"c/{st['course']}.html"}
+                                for i, st in enumerate(r["steps"], 1)]}
+    seo = seo_head(f"{r['title']} · free learning path on inPace", desc, f"r/{r['id']}.html", lang=r.get("language", "en"), data=data)
+    return shell(f"{r['title']} · free learning path · inPace", desc, body, "../", "", seo)
 
 
 if __name__ == "__main__":
