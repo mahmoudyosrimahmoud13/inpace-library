@@ -1,0 +1,16 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g stroke="#7fd3ff" stroke-width="3" fill="none" opacity=".9">
+<path d="M260 118 C260 170 110 160 110 230"/><path d="M260 118 L260 230"/><path d="M260 118 C260 170 410 160 410 230"/>
+<path d="M110 290 C110 340 55 330 55 390"/><path d="M110 290 C110 340 165 330 165 390"/>
+<path d="M260 290 L260 390"/><path d="M410 290 C410 340 355 330 355 390"/><path d="M410 290 C410 340 465 330 465 390"/></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="22" text-anchor="middle">
+<rect x="170" y="62" width="180" height="58" rx="14" fill="#ffd166"/><text x="260" y="99" fill="#10233f">40 · 80</text>
+<rect x="40" y="232" width="140" height="58" rx="14" fill="#fff"/><text x="110" y="269" fill="#10233f">12 · 27</text>
+<rect x="190" y="232" width="140" height="58" rx="14" fill="#fff"/><text x="260" y="269" fill="#10233f">52 · 66</text>
+<rect x="340" y="232" width="140" height="58" rx="14" fill="#fff"/><text x="410" y="269" fill="#10233f">91 · 97</text></g>
+<g font-family="JBM" font-weight="500" font-size="15" text-anchor="middle" fill="#cfe9ff">
+<rect x="11" y="392" width="88" height="44" rx="10" fill="#1d3b66" stroke="#7fd3ff" stroke-width="2"/><text x="55" y="420">ctid</text><rect x="121" y="392" width="88" height="44" rx="10" fill="#1d3b66" stroke="#7fd3ff" stroke-width="2"/><text x="165" y="420">ctid</text><rect x="216" y="392" width="88" height="44" rx="10" fill="#1d3b66" stroke="#7fd3ff" stroke-width="2"/><text x="260" y="420">ctid</text><rect x="311" y="392" width="88" height="44" rx="10" fill="#1d3b66" stroke="#7fd3ff" stroke-width="2"/><text x="355" y="420">ctid</text><rect x="421" y="392" width="88" height="44" rx="10" fill="#1d3b66" stroke="#7fd3ff" stroke-width="2"/><text x="465" y="420">ctid</text>
+<path d="M99 414 H121 M209 414 H216 M304 414 H311 M399 414 H421" stroke="#7fd3ff" stroke-width="2"/></g>
+<text x="260" y="500" text-anchor="middle" font-family="JBM" font-size="20" fill="#7fd3ff" opacity=".85">Index Only Scan on orders</text>
+</svg>

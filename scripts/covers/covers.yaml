@@ -1,0 +1,50 @@
+# Course covers. Edit a block, then run:  python scripts/covers/make_covers.py <course-id> [more ids]
+# (no ids = redraw every course listed here)
+#
+# theme: one of the names under "themes" below
+# art:   file in scripts/covers/art/ (an SVG about 520x560), drawn on the right (left for Arabic)
+# rtl:   true for Arabic courses
+
+themes:
+  navy:   {bg: '#10233f', ink: '#f3f7ff', accent: '#ffd166', chipink: '#10233f', glow: '#1e4b85', dot: '#7fd3ff'}
+  forest: {bg: '#1f3d36', ink: '#fdf6e9', accent: '#f4d35e', chipink: '#1f3d36', glow: '#2f6a5c', dot: '#f4d35e'}
+  sand:   {bg: '#e9dcc3', ink: '#16302b', accent: '#16302b', chipink: '#f6efe1', glow: '#d8c39a', dot: '#16302b'}
+  plum:   {bg: '#2d1b3d', ink: '#fbf2ff', accent: '#ff8fab', chipink: '#2d1b3d', glow: '#4b2d66', dot: '#ff8fab'}
+  sky:    {bg: '#d7ebf7', ink: '#0f2a3d', accent: '#0f2a3d', chipink: '#eef7fc', glow: '#b8d9ee', dot: '#0f2a3d'}
+  coral:  {bg: '#ffd8c7', ink: '#3a1408', accent: '#3a1408', chipink: '#fff1ea', glow: '#ffbfa3', dot: '#3a1408'}
+  mint:   {bg: '#cfeee0', ink: '#0d3324', accent: '#0d3324', chipink: '#ecf9f2', glow: '#acdfc7', dot: '#0d3324'}
+  sun:    {bg: '#ffe08a', ink: '#2b1d00', accent: '#2b1d00', chipink: '#fff6d6', glow: '#ffd04d', dot: '#2b1d00'}
+
+courses:
+  postgres-advanced:
+    theme: navy
+    art: postgres-advanced.svg
+    chip: Advanced · 2 weeks
+    title: Postgres,<br>under the hood
+    sub: MVCC, WAL, indexes, EXPLAIN, locks and scaling, with Hussein Nasser's videos
+    tags: [30 quiz questions, 12 lessons]
+
+  data-engineering-advanced:
+    theme: forest
+    art: data-engineering-advanced.svg
+    chip: Advanced · 3 weeks
+    title: Data<br>pipelines<br>that last
+    sub: Kestra, BigQuery, dbt, Spark and Kafka, with the Data Engineering Zoomcamp
+    tags: [16 lessons, 6 modules]
+
+  fmaa-prc:
+    theme: sand
+    art: fmaa.svg
+    chip: Exam prep · 12 modules
+    title: Pass the<br>FMAA
+    sub: Accounting, statements, ratios, budgets, costs and ethics, with a quiz after every module
+    tags: [120 questions, Beginner friendly]
+
+  fmaa-prc-ar:
+    theme: sand
+    art: fmaa.svg
+    rtl: true
+    chip: تحضير للاختبار · 12 وحدة
+    title: انجح في<br>اختبار FMAA
+    sub: المحاسبة والقوائم والنسب والموازنات والتكاليف والأخلاقيات، مع اختبار بعد كل وحدة
+    tags: [120 سؤالًا, مناسب للمبتدئين]

@@ -1,0 +1,13 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="40" width="440" height="470" rx="26" fill="#fffaf0"/></g>
+<g font-family="JBM" font-size="20" fill="#16302b">
+<text x="80" y="104" font-weight="700" font-size="22">BALANCE SHEET</text>
+<line x1="80" y1="124" x2="440" y2="124" stroke="#16302b" stroke-width="2"/>
+<text x="80" y="168">Assets</text><text x="440" y="168" text-anchor="end" font-weight="700">$200,000</text>
+<text x="80" y="208">Liabilities</text><text x="440" y="208" text-anchor="end">$80,000</text>
+<text x="80" y="248">Equity</text><text x="440" y="248" text-anchor="end">$120,000</text>
+<line x1="80" y1="272" x2="440" y2="272" stroke="#16302b" stroke-width="1" stroke-dasharray="4 6"/></g>
+<g><rect x="90" y="400" width="44" height="70" rx="8" fill="#c9a227"/><rect x="160" y="360" width="44" height="110" rx="8" fill="#e0b53a"/><rect x="230" y="380" width="44" height="90" rx="8" fill="#c9a227"/><rect x="300" y="320" width="44" height="150" rx="8" fill="#2a9d8f"/><rect x="370" y="295" width="44" height="175" rx="8" fill="#16302b"/>
+<line x1="76" y1="472" x2="444" y2="472" stroke="#16302b" stroke-width="3"/></g>
+</svg>

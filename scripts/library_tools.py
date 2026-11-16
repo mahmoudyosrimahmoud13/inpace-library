@@ -317,7 +317,9 @@ def build(out: Path) -> None:
         if img and (folder / "files" / img).is_file() and media_kind(img) == "image":
             name = f"{course.id}{Path(img).suffix.lower()}"
             shutil.copyfile(folder / "files" / img, out / "covers" / name)
-            cover = SITE + "covers/" + name
+            # the ?v= tag changes whenever the picture changes, so browsers and the CDN fetch the new cover
+            stamp = hashlib.sha256((folder / "files" / img).read_bytes()).hexdigest()[:10]
+            cover = SITE + "covers/" + name + "?v=" + stamp
         verified = bool(author and not check_author(author, course))
         entry = {
             "id": course.id, "title": course.title, "description": course.description, "language": course.language,
