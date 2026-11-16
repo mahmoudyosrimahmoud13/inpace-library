@@ -1,0 +1,599 @@
+m1q1:
+  right:
+  - b
+  why: Accounting's primary purpose is to provide financial information useful to decision-makers — investors, creditors,
+    and management. Tax minimization and compliance are secondary outcomes.
+m1q2:
+  right:
+  - c
+  why: The fundamental accounting equation is Assets = Liabilities + Equity. Every transaction must keep this equation
+    in balance.
+m1q3:
+  right:
+  - c
+  why: A corporation is a separate legal entity; shareholders are protected from personal liability beyond their
+    investment. Sole proprietors and partners are personally liable.
+m1q4:
+  right:
+  - b
+  why: Owner investing cash increases the asset Cash and increases Owner's Equity. Both sides of the equation rise
+    by the same amount.
+m1q5:
+  right:
+  - c
+  why: Sales Revenue appears on the Income Statement. Accounts Receivable, Inventory, Land, and Notes Payable are
+    balance sheet items.
+m1q6:
+  right:
+  - b
+  why: Debits increase assets (normal debit balance) and expenses (also normal debit balance). Credits increase
+    liabilities, equity, and revenue.
+m1q7:
+  right:
+  - c
+  why: Accounts Payable is an obligation to pay suppliers — a liability. Prepaid insurance, accounts receivable,
+    office equipment, and cash are assets.
+m1q8:
+  right:
+  - b
+  why: 'Purchasing supplies on credit: debit Office Supplies (asset increases) and credit Accounts Payable (liability
+    increases). No cash changes hands.'
+m1q9:
+  right:
+  - d
+  why: Wages Payable is an obligation (liability), not an asset. Cash, inventory, accounts receivable, prepaid rent,
+    and equipment are all assets.
+m1q10:
+  right:
+  - c
+  why: Equity = Assets − Liabilities = $80,000 − $30,000 = $50,000.
+m2q1:
+  right:
+  - c
+  why: The Balance Sheet (Statement of Financial Position) reports assets, liabilities, and equity at a specific
+    date — a snapshot. The Income Statement covers a period.
+m2q2:
+  right:
+  - b
+  why: Gross Profit = Revenue − Cost of Goods Sold. It measures profit before operating expenses.
+m2q3:
+  right:
+  - c
+  why: Purchasing equipment is an investing activity — acquiring long-term assets. Operating activities relate to
+    core business; financing to debt and equity.
+m2q4:
+  right:
+  - c
+  why: Dividends paid to shareholders is a financing activity — it represents a return of capital to owners.
+m2q5:
+  right:
+  - c
+  why: Cash collected from customers appears in the Statement of Cash Flows (operating section), not in the Statement
+    of Changes in Equity, which shows opening balance, net income, dividends, and share capital changes.
+m2q6:
+  right:
+  - c
+  why: An increase in sales revenue directly increases gross profit and net income, everything else equal.
+m2q7:
+  right:
+  - c
+  why: Current liabilities are obligations due within one year (or one operating cycle). Longer-term obligations
+    are non-current liabilities.
+m2q8:
+  right:
+  - c
+  why: Retained earnings = cumulative net income earned by the company minus dividends paid out over its life. It
+    is an equity account, not a cash reserve.
+m2q9:
+  right:
+  - b
+  why: Depreciation is a non-cash expense that reduced net income but did not use cash. It is added back under the
+    indirect method to reconcile net income to operating cash flows.
+m2q10:
+  right:
+  - b
+  why: Equity = Total Assets − Total Liabilities = $200,000 − ($50,000 + $30,000) = $200,000 − $80,000 = $120,000.
+m3q1:
+  right:
+  - b
+  why: Corporate governance is the system of rules, practices, and processes by which a company is directed and
+    controlled, balancing the interests of stakeholders.
+m3q2:
+  right:
+  - b
+  why: The board of directors is elected by shareholders to oversee management and protect shareholder interests.
+    External auditors report to the board but are not responsible for oversight.
+m3q3:
+  right:
+  - c
+  why: Requiring dual approval before payments are made prevents unauthorized transactions — this is a preventive
+    control. Bank reconciliation and audits detect errors after the fact.
+m3q4:
+  right:
+  - b
+  why: Segregation of duties means no single employee controls authorization, custody, and recording of a transaction.
+    This limits any one person's ability to commit and conceal fraud.
+m3q5:
+  right:
+  - c
+  why: Transferring risk means sharing it with another party — most commonly through insurance or outsourcing. Avoid
+    eliminates the activity; mitigate reduces the likelihood or impact.
+m3q6:
+  right:
+  - c
+  why: The external auditor's role is to express an independent opinion on whether the financial statements present
+    fairly. They do not prepare statements or design controls.
+m3q7:
+  right:
+  - c
+  why: Bank reconciliation is a detective control — it identifies errors or discrepancies after they occur. Passwords,
+    pre-numbered invoices, and authorization limits are preventive.
+m3q8:
+  right:
+  - c
+  why: Inherent risk is the natural susceptibility of an account or assertion to material misstatement before considering
+    any controls. Residual risk (after controls) is called control risk or residual risk.
+m3q9:
+  right:
+  - b
+  why: One person authorizing and processing payments violates segregation of duties, creating the opportunity for
+    unauthorized or fictitious payments.
+m3q10:
+  right:
+  - d
+  why: 'Financial forecasting is not a component of the COSO framework. The five components are: Control Environment,
+    Risk Assessment, Control Activities, Information and Communication, and Monitoring Activities.'
+m4q1:
+  right:
+  - b
+  why: LIFO (Last In, First Out) assigns the most recently purchased (highest-cost) units to cost of goods sold
+    first during rising prices, resulting in the highest COGS and lowest reported profit.
+m4q2:
+  right:
+  - b
+  why: The allowance method matches bad debt expense to the period when the related revenue was recognized, in accordance
+    with the matching principle.
+m4q3:
+  right:
+  - d
+  why: 'FIFO: first 40 units at $10 = $400; next 10 units at $12 = $120. Total COGS = $400 + $120 = $520.'
+m4q4:
+  right:
+  - c
+  why: Declining balance methods are accelerated — they front-load depreciation, resulting in higher expense in
+    early years and lower expense later.
+m4q5:
+  right:
+  - b
+  why: Straight-line depreciation = (Cost − Residual value) ÷ Useful life = ($50,000 − $5,000) ÷ 5 = $45,000 ÷ 5
+    = $9,000 per year.
+m4q6:
+  right:
+  - c
+  why: Intangible assets with indefinite useful lives (like goodwill) are not amortized. Instead, they are tested
+    for impairment at least annually.
+m4q7:
+  right:
+  - c
+  why: The cost of an asset includes all costs to acquire and make it ready for use — including installation, testing,
+    and freight-in. Ongoing repair and maintenance costs after the asset is in use are expensed.
+m4q8:
+  right:
+  - b
+  why: Goodwill = Purchase price − Fair value of net identifiable assets. It arises only in a business acquisition
+    when the buyer pays more than the fair value of what can be specifically identified.
+m4q9:
+  right:
+  - c
+  why: An impairment loss occurs when an asset's carrying value (book value) exceeds its recoverable amount. The
+    asset is written down to the recoverable amount and an impairment loss is recognized.
+m4q10:
+  right:
+  - c
+  why: FIFO assigns old (lower-cost) units to COGS and leaves newer (higher-cost) units in ending inventory. In
+    a period of rising prices, FIFO ending inventory is higher than LIFO.
+m5q1:
+  right:
+  - c
+  why: Accounts payable due in 30 days is a current liability — due within one year. The other options are all long-term
+    obligations.
+m5q2:
+  right:
+  - c
+  why: Under IFRS 15 / ASC 606, revenue is recognized when (or as) a performance obligation is satisfied — when
+    control of the goods or services passes to the customer.
+m5q3:
+  right:
+  - c
+  why: Bonds issued at a premium are sold above face value. This occurs when the coupon (stated) rate exceeds the
+    market interest rate, so buyers pay more to earn the higher coupon.
+m5q4:
+  right:
+  - b
+  why: A warranty provision is recorded in the same period as the related sale (matching principle). It represents
+    the best estimate of costs to honor warranty obligations on goods already sold.
+m5q5:
+  right:
+  - d
+  why: 'Collecting cash is not a step in revenue recognition — it relates to cash flow, not revenue recognition.
+    The five steps are: identify contract, identify obligations, determine price, allocate price, recognize revenue.'
+m5q6:
+  right:
+  - c
+  why: Cash received in advance for future services creates a liability — Deferred Revenue (Unearned Revenue). Revenue
+    is recognized as the service is delivered over the subscription period.
+m5q7:
+  right:
+  - b
+  why: A share premium (additional paid-in capital) arises when shares are sold at a price above their par value.
+    The excess over par is recorded in a separate share premium account.
+m5q8:
+  right:
+  - b
+  why: A contingent liability is recognized when the loss is both probable and can be reasonably estimated. If only
+    possible, it is disclosed in notes but not recorded. If remote, no disclosure is needed.
+m5q9:
+  right:
+  - c
+  why: Borrowing from a bank increases Cash (asset) and Notes Payable (liability). Both sides of the equation increase
+    by the same amount.
+m5q10:
+  right:
+  - c
+  why: The current portion of long-term debt — the amount due within the next 12 months — must be reclassified as
+    a current liability on the balance sheet.
+m6q1:
+  right:
+  - c
+  why: In a common-size (vertical analysis) income statement, every line item is expressed as a percentage of total
+    revenue (net sales). This allows comparison of cost and profit structures.
+m6q2:
+  right:
+  - c
+  why: In a common-size balance sheet, every item is expressed as a percentage of total assets, showing the relative
+    composition of the company's asset base and how it is financed.
+m6q3:
+  right:
+  - c
+  why: Horizontal analysis compares financial data across different time periods to identify trends, growth rates,
+    and changes — either in dollar amounts or as percentages of a base period.
+m6q4:
+  right:
+  - c
+  why: Horizontal change % = (Year 2 − Year 1) ÷ Year 1 = ($600,000 − $500,000) ÷ $500,000 = $100,000 ÷ $500,000
+    = 20%.
+m6q5:
+  right:
+  - b
+  why: A declining gross margin indicates that COGS is consuming a larger share of revenue — either input costs
+    have risen faster than selling prices, or selling prices have been cut.
+m6q6:
+  right:
+  - d
+  why: In trend analysis, the base year is set to 100. Subsequent years are expressed as an index relative to that
+    base, making it easy to see proportional changes over time.
+m6q7:
+  right:
+  - b
+  why: Tracking selling expenses as a percentage of sales over time reveals a trend in cost efficiency — whether
+    the company is becoming more or less efficient in generating revenue relative to its selling costs.
+m6q8:
+  right:
+  - b
+  why: Different accounting policies (e.g., different depreciation methods, inventory valuation) can make one company's
+    statements look very different from another's even if underlying economics are similar.
+m6q9:
+  right:
+  - b
+  why: Gross profit = Revenue × Gross margin % = $1,000,000 × 35% = $350,000.
+m6q10:
+  right:
+  - b
+  why: Comparative (multi-period) financial statements are designed to allow users to identify trends, evaluate
+    performance changes, and make year-over-year comparisons without separately obtaining prior-year data.
+m7q1:
+  right:
+  - c
+  why: Current Ratio = Current Assets ÷ Current Liabilities. It measures the ability to cover short-term obligations
+    with short-term assets. A ratio above 1.0 means current assets exceed current liabilities.
+m7q2:
+  right:
+  - d
+  why: The quick ratio excludes inventory (and sometimes prepaid expenses) because inventory may not be quickly
+    convertible to cash. Quick Ratio = (Cash + Marketable Securities + Accounts Receivable) ÷ Current Liabilities.
+m7q3:
+  right:
+  - b
+  why: Debt-to-equity = Total Debt ÷ Total Equity. A ratio of 2.0 means for every $1 of equity, there is $2 of debt
+    — the company is more leveraged (debt-financed) than equity-financed.
+m7q4:
+  right:
+  - b
+  why: Inventory Turnover = Cost of Goods Sold ÷ Average Inventory. It shows how many times per year inventory is
+    sold and replaced. Higher turnover means inventory is moving quickly.
+m7q5:
+  right:
+  - b
+  why: Return on Equity (ROE) = Net Income ÷ Total Equity. It measures how much profit is generated for each dollar
+    of shareholders' equity.
+m7q6:
+  right:
+  - b
+  why: Days Sales Outstanding (DSO) = (Accounts Receivable ÷ Revenue) × 365. It measures the average number of days
+    it takes to collect payment after a sale.
+m7q7:
+  right:
+  - b
+  why: Interest Coverage = EBIT ÷ Interest Expense. It shows how many times operating earnings can cover interest
+    obligations. A higher ratio means less financial risk.
+m7q8:
+  right:
+  - b
+  why: Asset Turnover = Revenue ÷ Average Total Assets. A higher ratio means the company is generating more revenue
+    from its asset base — more efficient use of assets.
+m7q9:
+  right:
+  - c
+  why: Net Profit Margin = Net Income ÷ Revenue × 100%. It shows what percentage of each sales dollar results in
+    net profit after all expenses.
+m7q10:
+  right:
+  - c
+  why: A current ratio below 1.0 means current liabilities exceed current assets — the company may have difficulty
+    meeting its short-term obligations without additional financing.
+m8q1:
+  right:
+  - c
+  why: The master budget begins with the Sales Budget, since all other budgets — production, materials, labor, cash
+    — depend on the sales forecast.
+m8q2:
+  right:
+  - b
+  why: A flexible budget adjusts revenues and variable costs to the actual level of activity achieved, making it
+    useful for performance evaluation by comparing like for like.
+m8q3:
+  right:
+  - b
+  why: Zero-based budgeting starts from zero each period — every expense must be justified based on current needs,
+    not simply carried forward from last year's budget.
+m8q4:
+  right:
+  - b
+  why: 'The production budget calculates how many units must be manufactured: Sales units + Required ending inventory
+    − Beginning inventory = Units to produce.'
+m8q5:
+  right:
+  - c
+  why: Participative (bottom-up) budgeting involves managers at all levels, which improves commitment, morale, and
+    the quality of information — but can introduce budgetary slack.
+m8q6:
+  right:
+  - b
+  why: Budgetary slack occurs when managers deliberately build in a cushion by understating expected revenues or
+    overstating expected costs, making targets easier to achieve.
+m8q7:
+  right:
+  - e
+  why: 'Budget: 500 × $100 = $50,000. Actual: 480 × $102 = $48,960. Variance = $48,960 − $50,000 = −$1,040 (unfavorable,
+    actual revenue is below budget).'
+m8q8:
+  right:
+  - d
+  why: The cash budget is usually prepared last — it incorporates the timing of cash receipts and payments from
+    all other budgets to show the projected cash position.
+m8q9:
+  right:
+  - a
+  why: Rolling (continuous) budgets always extend the same number of periods into the future. As each period ends,
+    the next period is added, keeping the planning horizon constant.
+m8q10:
+  right:
+  - b
+  why: Units to produce = Planned sales + Target ending inventory − Beginning inventory. Target ending inventory
+    = 20% × 1,000 = 200 units. Units to produce = 1,000 + 200 − 150 = 1,050 units.
+m9q1:
+  right:
+  - c
+  why: Factory rent is a fixed cost — it does not change with production volume within the relevant range. Direct
+    materials, sales commissions, freight, and direct labor are variable.
+m9q2:
+  right:
+  - c
+  why: Variable cost per unit remains constant as production volume changes. Total variable costs increase proportionally
+    with volume, but the per-unit amount stays the same.
+m9q3:
+  right:
+  - c
+  why: A mixed (semi-variable) cost contains both a fixed component (the base charge, unchanged with volume) and
+    a variable component (which increases with activity).
+m9q4:
+  right:
+  - b
+  why: Standard costs are predetermined benchmarks for materials, labor, and overhead. They are used to compare
+    against actual costs and calculate variances for performance evaluation.
+m9q5:
+  right:
+  - c
+  why: Job order costing tracks costs to individual jobs or batches — suitable for custom or small-batch production.
+    Process costing is used for homogeneous mass production.
+m9q6:
+  right:
+  - c
+  why: Process costing is best for mass production of identical units (chemicals, oil, beverages, cement). Job order
+    costing suits custom or project-based work.
+m9q7:
+  right:
+  - b
+  why: Direct labor refers to wages paid to workers who physically work on the product. Supervisors, maintenance
+    workers, and administrative staff are indirect labor (overhead).
+m9q8:
+  right:
+  - c
+  why: Factory electricity and utilities are indirect manufacturing costs — overhead. Direct materials (steel, packaging)
+    and direct labor (assembly workers) are direct costs.
+m9q9:
+  right:
+  - b
+  why: Direct Material Price Variance = (Actual Price − Standard Price) × Actual Quantity. It isolates the effect
+    of paying more or less than the standard price per unit of material.
+m9q10:
+  right:
+  - b
+  why: 'Absorption costing (full costing) includes all manufacturing costs in product cost: direct materials, direct
+    labor, variable overhead, and fixed overhead. Selling and admin costs are period costs.'
+m10q1:
+  right:
+  - b
+  why: Predetermined Overhead Rate = Budgeted Total Overhead ÷ Budgeted Activity Level. It is calculated before
+    the period starts and used to apply overhead to production throughout the year.
+m10q2:
+  right:
+  - b
+  why: If applied overhead > actual overhead, overhead was over-applied — too much was charged to production. This
+    is typically closed by reducing (crediting) Cost of Goods Sold.
+m10q3:
+  right:
+  - b
+  why: ABC is most beneficial when overhead is a significant cost and products consume overhead resources in different
+    proportions. With one product or simple processes, traditional methods suffice.
+m10q4:
+  right:
+  - b
+  why: A cost driver is the activity or factor that causes overhead costs to change. In ABC, each activity has its
+    own cost driver (e.g., number of setups, inspection hours, purchase orders).
+m10q5:
+  right:
+  - a
+  why: The direct method allocates support department costs directly to production departments only, ignoring any
+    services that support departments provide to each other. It is the simplest method.
+m10q6:
+  right:
+  - c
+  why: If some products are machine-intensive and others are labor-intensive, a machine-hour rate will over-cost
+    machine-intensive products and under-cost labor-intensive ones, distorting product costs.
+m10q7:
+  right:
+  - b
+  why: Fixed overhead per unit = Total Fixed Overhead ÷ Units produced. If production volume increases, the same
+    total fixed cost is spread over more units, so per-unit fixed overhead falls.
+m10q8:
+  right:
+  - c
+  why: The simple approach is to close any under-applied or over-applied overhead to Cost of Goods Sold, since most
+    completed production has passed through COGS by year-end.
+m10q9:
+  right:
+  - a
+  why: Fixed overhead spending variance = Budgeted fixed overhead − Actual fixed overhead = $120,000 − $118,000
+    = $2,000 favorable (actual was lower than budgeted).
+m10q10:
+  right:
+  - b
+  why: The step-down method allocates support department costs in a sequence, starting with the department that
+    serves the most others. It partially (but not fully) accounts for inter-department services.
+m11q1:
+  right:
+  - b
+  why: Residual Income = Operating Income − (Assets × Required Rate) = $80,000 − ($400,000 × 15%) = $80,000 − $60,000
+    = $20,000. This is positive, meaning the division exceeds the required return.
+m11q2:
+  right:
+  - b
+  why: Division A's current ROI is 25%. The new project offers 21%, which would drag the average below 25%. ROI-evaluated
+    managers reject good projects that exceed the company's cost of capital (18%) if they lower the division's ROI
+    — a known weakness of ROI as a measure.
+m11q3:
+  right:
+  - c
+  why: Breakeven units = Fixed Costs ÷ Contribution Margin per unit = $90,000 ÷ ($80 − $50) = $90,000 ÷ $30 = 3,000
+    units.
+m11q4:
+  right:
+  - b
+  why: Margin of Safety = Actual (or budgeted) Sales − Breakeven Sales. It shows the buffer between current sales
+    and the point where losses begin.
+m11q5:
+  right:
+  - c
+  why: In a make-or-buy decision, relevant costs are variable manufacturing cost per unit plus any avoidable fixed
+    costs, compared to the supplier's purchase price. Full absorption cost includes allocated fixed overhead that
+    may not change — that portion is irrelevant.
+m11q6:
+  right:
+  - c
+  why: Fixed overhead that will not change whether the special order is accepted or not is irrelevant (a sunk/unavoidable
+    cost). Only incremental costs — variable costs and any new fixed costs — are relevant.
+m11q7:
+  right:
+  - b
+  why: If a segment has a positive segment margin (revenue > variable costs + traceable fixed costs), it is contributing
+    to covering common fixed costs. Dropping it would reduce total profit by its segment margin.
+m11q8:
+  right:
+  - c
+  why: Joint costs are sunk at the split-off point — they have already been incurred and cannot be changed by the
+    sell-or-process-further decision. Only incremental revenue and incremental post-split-off costs are relevant.
+m11q9:
+  right:
+  - a
+  why: Profit Margin = $60,000 ÷ $600,000 = 10%. Asset Turnover = $600,000 ÷ $400,000 = 1.5. ROI = 10% × 1.5 = 15%.
+m11q10:
+  right:
+  - c
+  why: Contribution Margin = Sales − Variable Costs = $500,000 − $300,000 = $200,000. CM Ratio = $200,000 ÷ $500,000
+    = 40%.
+m12q1:
+  right:
+  - c
+  why: Recording fictitious sales is financial statement fraud. The IMA Integrity standard requires avoiding conflicts
+    of interest, refusing gifts that might influence behavior, and refusing to engage in or condone activities that
+    discredit the profession.
+m12q2:
+  right:
+  - c
+  why: Rationalization is the third element of the fraud triangle — the fraudster justifies the action ('I deserve
+    it,' 'I'll pay it back,' 'everyone does it'). The other two are Pressure (incentive) and Opportunity.
+m12q3:
+  right:
+  - b
+  why: The IMA Credibility standard requires communicating information fairly and objectively and disclosing all
+    relevant information, including unfavorable results. Withholding negative information violates Credibility.
+m12q4:
+  right:
+  - c
+  why: Placement is the first stage of money laundering — introducing illegal funds into the financial system, often
+    by depositing cash in small amounts or mixing it with legitimate business receipts.
+m12q5:
+  right:
+  - c
+  why: Capitalizing a repair expense instead of expensing it inflates both assets (on the balance sheet) and net
+    income (on the income statement), making it financial statement fraud.
+m12q6:
+  right:
+  - b
+  why: One employee controlling both custody of cash and recording creates the opportunity for asset misappropriation
+    — specifically skimming (before recording) or larceny (after recording). This is a classic segregation of duties
+    failure.
+m12q7:
+  right:
+  - c
+  why: The utilitarian approach to ethics focuses on the action that produces the greatest good for the greatest
+    number of people. It evaluates decisions by their outcomes.
+m12q8:
+  right:
+  - b
+  why: Integrity is violated by accepting gifts that could influence her objectivity. Credibility is violated by
+    not disclosing relevant information (the overcharging) to management. Both standards require her to disclose
+    and refuse the conflict.
+m12q9:
+  right:
+  - c
+  why: 'The IMA''s recommended escalation path: (1) consult organization''s policies, (2) immediate supervisor (if
+    not involved), (3) escalate to next level, audit committee, or board, (4) legal counsel if needed, (5) external
+    reporting if internal channels fail.'
+m12q10:
+  right:
+  - b
+  why: A moral employee applies the organization's ethical guidelines. A virtuous employee goes beyond the required
+    minimum — doing what is right even when not required — and may set new standards of ethical behavior for others
+    to follow.

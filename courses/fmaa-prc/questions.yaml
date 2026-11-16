@@ -1,0 +1,1349 @@
+# questions.yaml — FMAA (PRC) Course
+# Format: qID: { text: "...", show: 4, options: { a: "...", b: "...", c: "...", d: "...", e: "...", f: "..." } }
+# show: 4 means display 4 of the options at a time
+
+# ─── Module 1: Accounting Terminology and the Accounting Equation ───────────
+
+m1q1:
+  text: "Which of the following best describes the primary purpose of accounting?"
+  show: 4
+  options:
+    a: "To minimize taxes payable by a business"
+    b: "To provide financial information useful for decision-making"
+    c: "To prepare payroll for employees"
+    d: "To ensure all transactions are legally compliant"
+    e: "To manage the day-to-day operations of a business"
+    f: "To calculate the market value of a company"
+
+m1q2:
+  text: "The accounting equation is:"
+  show: 4
+  options:
+    a: "Assets = Liabilities − Equity"
+    b: "Assets = Equity + Revenue"
+    c: "Assets = Liabilities + Equity"
+    d: "Liabilities = Assets + Equity"
+    e: "Equity = Assets − Revenue"
+    f: "Assets + Revenue = Liabilities"
+
+m1q3:
+  text: "Which type of business entity provides the most protection from personal liability for its owners?"
+  show: 4
+  options:
+    a: "Sole proprietorship"
+    b: "Partnership"
+    c: "Corporation"
+    d: "Informal association"
+    e: "Joint venture"
+    f: "Cooperative"
+
+m1q4:
+  text: "An owner invests $20,000 cash into her business. What is the effect on the accounting equation?"
+  show: 4
+  options:
+    a: "Assets increase; Liabilities increase"
+    b: "Assets increase; Equity increases"
+    c: "Assets decrease; Equity decreases"
+    d: "No effect — only the bank account changes"
+    e: "Liabilities increase; Equity decreases"
+    f: "Assets increase; Revenue increases"
+
+m1q5:
+  text: "Which account would appear on the Income Statement?"
+  show: 4
+  options:
+    a: "Accounts Receivable"
+    b: "Owner's Equity"
+    c: "Sales Revenue"
+    d: "Inventory"
+    e: "Notes Payable"
+    f: "Land"
+
+m1q6:
+  text: "Debits increase which of the following account types?"
+  show: 4
+  options:
+    a: "Liabilities and equity"
+    b: "Assets and expenses"
+    c: "Revenue and equity"
+    d: "Liabilities and revenue"
+    e: "Equity and assets"
+    f: "Revenue and expenses"
+
+m1q7:
+  text: "Which of the following is a liability?"
+  show: 4
+  options:
+    a: "Prepaid insurance"
+    b: "Accounts receivable"
+    c: "Accounts payable"
+    d: "Owner's capital"
+    e: "Office equipment"
+    f: "Cash"
+
+m1q8:
+  text: "A business purchases office supplies on credit for $500. The correct journal entry includes:"
+  show: 4
+  options:
+    a: "Debit Cash $500; Credit Office Supplies $500"
+    b: "Debit Office Supplies $500; Credit Accounts Payable $500"
+    c: "Debit Accounts Payable $500; Credit Office Supplies $500"
+    d: "Debit Expenses $500; Credit Cash $500"
+    e: "Debit Office Supplies $500; Credit Revenue $500"
+    f: "Debit Cash $500; Credit Accounts Receivable $500"
+
+m1q9:
+  text: "Which of the following is NOT an example of an asset?"
+  show: 4
+  options:
+    a: "Cash"
+    b: "Inventory"
+    c: "Accounts receivable"
+    d: "Wages payable"
+    e: "Prepaid rent"
+    f: "Equipment"
+
+m1q10:
+  text: "A business has assets of $80,000 and liabilities of $30,000. What is the owner's equity?"
+  show: 4
+  options:
+    a: "$110,000"
+    b: "$80,000"
+    c: "$50,000"
+    d: "$30,000"
+    e: "$20,000"
+    f: "$60,000"
+
+# ─── Module 2: Financial Statements ─────────────────────────────────────────
+
+m2q1:
+  text: "Which financial statement reports a company's financial position at a specific point in time?"
+  show: 4
+  options:
+    a: "Income Statement"
+    b: "Statement of Cash Flows"
+    c: "Balance Sheet"
+    d: "Statement of Changes in Equity"
+    e: "Budget Report"
+    f: "Trial Balance"
+
+m2q2:
+  text: "On the Income Statement, Gross Profit is calculated as:"
+  show: 4
+  options:
+    a: "Revenue minus Operating Expenses"
+    b: "Revenue minus Cost of Goods Sold"
+    c: "Revenue minus all expenses"
+    d: "Net Income plus Taxes"
+    e: "Sales minus Administrative Expenses"
+    f: "Cost of Goods Sold minus Revenue"
+
+m2q3:
+  text: "Which section of the Statement of Cash Flows includes the purchase of equipment?"
+  show: 4
+  options:
+    a: "Operating activities"
+    b: "Financing activities"
+    c: "Investing activities"
+    d: "Capital activities"
+    e: "Non-cash activities"
+    f: "Supplemental activities"
+
+m2q4:
+  text: "If a company pays dividends, this would appear in which section of the cash flow statement?"
+  show: 4
+  options:
+    a: "Operating activities"
+    b: "Investing activities"
+    c: "Financing activities"
+    d: "Capital activities"
+    e: "Supplemental activities"
+    f: "Asset activities"
+
+m2q5:
+  text: "The Statement of Changes in Equity shows all of the following EXCEPT:"
+  show: 4
+  options:
+    a: "Opening balance of equity"
+    b: "Net income for the period"
+    c: "Cash collected from customers"
+    d: "Dividends paid to shareholders"
+    e: "New share capital issued"
+    f: "Closing balance of equity"
+
+m2q6:
+  text: "Which of the following would increase net income on the Income Statement?"
+  show: 4
+  options:
+    a: "Payment of dividends"
+    b: "Repayment of a bank loan"
+    c: "Increase in sales revenue"
+    d: "Purchase of equipment"
+    e: "Receipt of a loan"
+    f: "Increase in accounts payable"
+
+m2q7:
+  text: "Current liabilities on the Balance Sheet are those due within:"
+  show: 4
+  options:
+    a: "Five years"
+    b: "Three years"
+    c: "One year"
+    d: "Six months"
+    e: "Two years"
+    f: "Ten years"
+
+m2q8:
+  text: "Retained earnings represent:"
+  show: 4
+  options:
+    a: "Cash held in reserve accounts"
+    b: "Dividends declared but not yet paid"
+    c: "Cumulative net income not distributed to shareholders"
+    d: "Total revenue since the company was founded"
+    e: "Long-term debt repaid by the company"
+    f: "Owner contributions to the business"
+
+m2q9:
+  text: "Which of the following is a non-cash item commonly added back to net income under the indirect method of cash flow?"
+  show: 4
+  options:
+    a: "Increase in accounts payable"
+    b: "Depreciation expense"
+    c: "Dividend payments"
+    d: "Sales revenue"
+    e: "Tax expense"
+    f: "Interest received"
+
+m2q10:
+  text: "A company reports total assets of $200,000, long-term liabilities of $50,000, and current liabilities of $30,000. What is the equity?"
+  show: 4
+  options:
+    a: "$80,000"
+    b: "$120,000"
+    c: "$150,000"
+    d: "$170,000"
+    e: "$200,000"
+    f: "$250,000"
+
+# ─── Module 3: Corporate Governance and Internal Control ─────────────────────
+
+m3q1:
+  text: "Corporate governance primarily refers to:"
+  show: 4
+  options:
+    a: "Tax planning strategies for corporations"
+    b: "The system of rules and practices directing and controlling a company"
+    c: "The marketing strategy of a corporation"
+    d: "The process of issuing shares to the public"
+    e: "The HR policies of a business"
+    f: "Annual audit procedures"
+
+m3q2:
+  text: "Which body is typically responsible for overseeing a company's management and protecting shareholder interests?"
+  show: 4
+  options:
+    a: "The external auditors"
+    b: "The board of directors"
+    c: "The finance department"
+    d: "The shareholders directly"
+    e: "The tax authorities"
+    f: "The operations team"
+
+m3q3:
+  text: "An example of a preventive internal control is:"
+  show: 4
+  options:
+    a: "Bank reconciliation"
+    b: "Physical inventory count"
+    c: "Requiring dual approval for large payments"
+    d: "Monthly financial reporting"
+    e: "Annual audit"
+    f: "Variance analysis"
+
+m3q4:
+  text: "Segregation of duties means:"
+  show: 4
+  options:
+    a: "Separating domestic and international operations"
+    b: "No single employee controls all phases of a transaction"
+    c: "Rotating staff between departments annually"
+    d: "Keeping payroll data separate from HR records"
+    e: "Outsourcing accounting to external firms"
+    f: "Separating tax and financial reporting functions"
+
+m3q5:
+  text: "Which risk management strategy involves sharing risk with another party?"
+  show: 4
+  options:
+    a: "Avoid"
+    b: "Accept"
+    c: "Transfer"
+    d: "Mitigate"
+    e: "Ignore"
+    f: "Eliminate"
+
+m3q6:
+  text: "An external auditor's primary responsibility is to:"
+  show: 4
+  options:
+    a: "Detect all fraud within an organization"
+    b: "Prepare financial statements for the company"
+    c: "Express an opinion on whether financial statements are fairly presented"
+    d: "Report directly to management on operational issues"
+    e: "Design the company's internal control system"
+    f: "Approve capital expenditures"
+
+m3q7:
+  text: "Which of the following is a detective internal control?"
+  show: 4
+  options:
+    a: "Requiring a password to access the accounting system"
+    b: "Pre-numbered invoices"
+    c: "Monthly bank reconciliation"
+    d: "Authorization limits on purchases"
+    e: "Background checks on new employees"
+    f: "Physical locks on storeroom doors"
+
+m3q8:
+  text: "Which of the following best describes 'inherent risk'?"
+  show: 4
+  options:
+    a: "Risk that remains after controls are applied"
+    b: "Risk that an auditor fails to detect misstatement"
+    c: "The natural susceptibility of an item to misstatement before controls"
+    d: "The risk that controls themselves fail"
+    e: "Risk from poor management decisions"
+    f: "Risk from changing market conditions"
+
+m3q9:
+  text: "A company discovers that one employee has been both authorizing and processing payments to vendors. This is a failure of:"
+  show: 4
+  options:
+    a: "Competence"
+    b: "Segregation of duties"
+    c: "Physical safeguards"
+    d: "Documentation controls"
+    e: "Information technology controls"
+    f: "Risk assessment"
+
+m3q10:
+  text: "Which of the following is NOT a component of the COSO internal control framework?"
+  show: 4
+  options:
+    a: "Control environment"
+    b: "Risk assessment"
+    c: "Control activities"
+    d: "Financial forecasting"
+    e: "Information and communication"
+    f: "Monitoring activities"
+
+# ─── Module 4: Assets ────────────────────────────────────────────────────────
+
+m4q1:
+  text: "Which inventory valuation method results in the highest cost of goods sold during a period of rising prices?"
+  show: 4
+  options:
+    a: "FIFO"
+    b: "LIFO"
+    c: "Weighted Average Cost"
+    d: "Specific Identification"
+    e: "Lower of Cost or Net Realizable Value"
+    f: "Retail Method"
+
+m4q2:
+  text: "The allowance method for bad debts is preferred over the direct write-off method because:"
+  show: 4
+  options:
+    a: "It is simpler to apply"
+    b: "It matches bad debt expense to the period revenue was earned"
+    c: "It is required by tax law"
+    d: "It eliminates the need for an aging schedule"
+    e: "It records bad debts only when they are confirmed"
+    f: "It increases net income"
+
+m4q3:
+  text: "A company has 100 units of inventory: 40 units bought at $10 each and 60 units bought at $12 each. Using FIFO, if 50 units are sold, what is the Cost of Goods Sold?"
+  show: 4
+  options:
+    a: "$500"
+    b: "$550"
+    c: "$600"
+    d: "$520"
+    e: "$480"
+    f: "$610"
+
+m4q4:
+  text: "Which depreciation method results in higher depreciation expense in the early years of an asset's life?"
+  show: 4
+  options:
+    a: "Straight-line"
+    b: "Units of production"
+    c: "Declining balance (accelerated)"
+    d: "FIFO"
+    e: "Weighted average"
+    f: "Sum-of-years method only"
+
+m4q5:
+  text: "A machine is purchased for $50,000, has a residual value of $5,000, and an estimated useful life of 5 years. Under straight-line depreciation, the annual charge is:"
+  show: 4
+  options:
+    a: "$10,000"
+    b: "$9,000"
+    c: "$11,000"
+    d: "$5,000"
+    e: "$50,000"
+    f: "$45,000"
+
+m4q6:
+  text: "An intangible asset with an indefinite useful life:"
+  show: 4
+  options:
+    a: "Must be amortized over 40 years"
+    b: "Is never recognized on the balance sheet"
+    c: "Is tested for impairment annually rather than amortized"
+    d: "Must be expensed immediately"
+    e: "Is amortized over 20 years"
+    f: "Cannot be reported as an asset"
+
+m4q7:
+  text: "Which of the following would be included in the cost of a piece of manufacturing equipment?"
+  show: 4
+  options:
+    a: "Repair costs after the asset is in use"
+    b: "Annual maintenance contract"
+    c: "Installation costs required to make the equipment operational"
+    d: "Interest on a loan taken after the asset is in use"
+    e: "Training costs for employees"
+    f: "Insurance premiums after the asset is in use"
+
+m4q8:
+  text: "Goodwill arises when a business is acquired and:"
+  show: 4
+  options:
+    a: "The purchase price is less than the fair value of net assets"
+    b: "The purchase price exceeds the fair value of identifiable net assets"
+    c: "The company has a strong brand reputation"
+    d: "The company generates above-average profits internally"
+    e: "The company has loyal customers"
+    f: "The company's market price exceeds book value"
+
+m4q9:
+  text: "Which of the following is an example of an impairment loss on a long-lived asset?"
+  show: 4
+  options:
+    a: "Recording annual depreciation expense"
+    b: "Selling the asset below book value"
+    c: "Writing down the asset because its carrying value exceeds its recoverable amount"
+    d: "Revaluing the asset upward due to market appreciation"
+    e: "Recording amortization on an intangible asset"
+    f: "Expensing a repair cost"
+
+m4q10:
+  text: "Under FIFO, in a period of rising prices, ending inventory will be:"
+  show: 4
+  options:
+    a: "Lower than under LIFO"
+    b: "Equal to weighted average cost"
+    c: "Higher than under LIFO"
+    d: "Equal to LIFO"
+    e: "Lower than weighted average"
+    f: "Zero"
+
+# ─── Module 5: Liabilities and Revenue ───────────────────────────────────────
+
+m5q1:
+  text: "Which of the following is a current liability?"
+  show: 4
+  options:
+    a: "10-year bonds payable"
+    b: "Mortgage payable due in 15 years"
+    c: "Accounts payable due in 30 days"
+    d: "Deferred tax liability (long-term)"
+    e: "Pension obligation (long-term)"
+    f: "Long-term lease obligation"
+
+m5q2:
+  text: "Under the five-step revenue recognition model, revenue is recognized when:"
+  show: 4
+  options:
+    a: "Cash is received from the customer"
+    b: "A contract is signed"
+    c: "The performance obligation is satisfied"
+    d: "An invoice is sent to the customer"
+    e: "Goods are ordered by the customer"
+    f: "The goods are manufactured"
+
+m5q3:
+  text: "A company issues bonds at a premium. This means the bonds were sold at:"
+  show: 4
+  options:
+    a: "Their face value"
+    b: "Below their face value"
+    c: "Above their face value"
+    d: "The coupon rate"
+    e: "The market rate of interest"
+    f: "Less than par"
+
+m5q4:
+  text: "A warranty provision is recorded because:"
+  show: 4
+  options:
+    a: "The company has already paid the warranty claims"
+    b: "It matches the estimated future warranty cost to the period of the related sale"
+    c: "Tax law requires it"
+    d: "The warranty period has expired"
+    e: "Customers have requested repairs"
+    f: "Management estimates no warranty costs will arise"
+
+m5q5:
+  text: "Which of the following is NOT one of the five steps in the IFRS/ASC 606 revenue recognition model?"
+  show: 4
+  options:
+    a: "Identify the contract with a customer"
+    b: "Identify the performance obligations"
+    c: "Determine the transaction price"
+    d: "Collect the cash from the customer"
+    e: "Allocate the transaction price to performance obligations"
+    f: "Recognize revenue when each obligation is satisfied"
+
+m5q6:
+  text: "If a company receives cash in advance for a 12-month subscription service, it initially records:"
+  show: 4
+  options:
+    a: "Revenue immediately"
+    b: "An asset (prepaid revenue)"
+    c: "A liability (deferred revenue)"
+    d: "An expense"
+    e: "Owner's equity"
+    f: "Nothing — until the service is delivered"
+
+m5q7:
+  text: "Shares issued at a premium means:"
+  show: 4
+  options:
+    a: "Shares were sold below their par value"
+    b: "Shares were sold above their par value"
+    c: "Shares were issued for free"
+    d: "The company has negative equity"
+    e: "The shares were repurchased"
+    f: "The share price dropped after issue"
+
+m5q8:
+  text: "A contingent liability should be recognized in the financial statements when:"
+  show: 4
+  options:
+    a: "The outcome is possible but not probable"
+    b: "The loss is probable and can be reasonably estimated"
+    c: "Legal proceedings have been filed against the company"
+    d: "Management decides to disclose it in notes"
+    e: "The amount is small and immaterial"
+    f: "The outcome is remote"
+
+m5q9:
+  text: "Which of the following transactions would increase both assets and liabilities?"
+  show: 4
+  options:
+    a: "Owner withdraws cash from the business"
+    b: "Company pays off a bank loan with cash"
+    c: "Company borrows $10,000 from a bank"
+    d: "Company earns revenue from a cash sale"
+    e: "Company declares a dividend"
+    f: "Company purchases inventory for cash"
+
+m5q10:
+  text: "A company has long-term debt. The portion due within 12 months should be classified as:"
+  show: 4
+  options:
+    a: "Long-term liability"
+    b: "Non-current liability"
+    c: "Current liability"
+    d: "Equity"
+    e: "Deferred liability"
+    f: "Contingent liability"
+
+# ─── Module 6: Common-Size Analysis and Trends ───────────────────────────────
+
+m6q1:
+  text: "In a common-size Income Statement, each item is expressed as a percentage of:"
+  show: 4
+  options:
+    a: "Total assets"
+    b: "Net income"
+    c: "Total revenue (sales)"
+    d: "Cost of goods sold"
+    e: "Total expenses"
+    f: "Gross profit"
+
+m6q2:
+  text: "In a common-size Balance Sheet, each item is expressed as a percentage of:"
+  show: 4
+  options:
+    a: "Total revenue"
+    b: "Total equity"
+    c: "Total assets"
+    d: "Total liabilities"
+    e: "Net income"
+    f: "Total current assets"
+
+m6q3:
+  text: "Horizontal analysis compares:"
+  show: 4
+  options:
+    a: "Items within the same period as percentages of a base"
+    b: "Financial data across different companies"
+    c: "Financial data across different time periods"
+    d: "Income statement items to balance sheet items"
+    e: "Industry averages to company performance"
+    f: "Budget to actual results"
+
+m6q4:
+  text: "Sales in Year 1 were $500,000. Sales in Year 2 were $600,000. What is the horizontal change percentage?"
+  show: 4
+  options:
+    a: "10%"
+    b: "15%"
+    c: "20%"
+    d: "25%"
+    e: "83%"
+    f: "120%"
+
+m6q5:
+  text: "A company's gross margin decreased from 40% to 35% over two years. This most likely indicates:"
+  show: 4
+  options:
+    a: "Revenue has increased significantly"
+    b: "Cost of goods sold has risen faster than revenue, or selling prices have dropped"
+    c: "Operating expenses have increased"
+    d: "Interest rates have risen"
+    e: "The company is growing rapidly"
+    f: "Tax rates have changed"
+
+m6q6:
+  text: "Trend analysis using index numbers sets the base year equal to:"
+  show: 4
+  options:
+    a: "0"
+    b: "10"
+    c: "50"
+    d: "100"
+    e: "1000"
+    f: "The industry average"
+
+m6q7:
+  text: "A company shows that selling expenses as a percentage of sales have increased from 8% to 12%. This is most useful for:"
+  show: 4
+  options:
+    a: "Calculating the return on equity"
+    b: "Identifying a trend in cost efficiency"
+    c: "Determining the company's liquidity"
+    d: "Calculating net asset value"
+    e: "Projecting future dividends"
+    f: "Measuring leverage"
+
+m6q8:
+  text: "Which of the following limitations applies to common-size analysis when comparing two companies?"
+  show: 4
+  options:
+    a: "The analysis requires complex calculations"
+    b: "Different accounting policies can make comparisons misleading"
+    c: "It requires audited statements"
+    d: "Common-size analysis only works for manufacturing companies"
+    e: "Only current-year data can be used"
+    f: "It cannot be applied to Balance Sheets"
+
+m6q9:
+  text: "A vertical (common-size) analysis of the income statement shows cost of goods sold at 65% and gross margin at 35%. If revenue is $1,000,000, what is the gross profit?"
+  show: 4
+  options:
+    a: "$65,000"
+    b: "$350,000"
+    c: "$650,000"
+    d: "$1,000,000"
+    e: "$300,000"
+    f: "$400,000"
+
+m6q10:
+  text: "Comparative financial statements show two or more periods side by side primarily to:"
+  show: 4
+  options:
+    a: "Satisfy regulatory requirements"
+    b: "Allow users to identify trends and changes over time"
+    c: "Show all historical transactions"
+    d: "Replace ratio analysis"
+    e: "Disclose management compensation"
+    f: "Compare the company to competitors"
+
+# ─── Module 7: Ratio Analysis ────────────────────────────────────────────────
+
+m7q1:
+  text: "The current ratio is calculated as:"
+  show: 4
+  options:
+    a: "Current liabilities ÷ Current assets"
+    b: "Current assets ÷ Total liabilities"
+    c: "Current assets ÷ Current liabilities"
+    d: "Total assets ÷ Current liabilities"
+    e: "Cash ÷ Current liabilities"
+    f: "Current assets − Current liabilities"
+
+m7q2:
+  text: "The quick ratio (acid-test) excludes which item from current assets?"
+  show: 4
+  options:
+    a: "Cash"
+    b: "Accounts receivable"
+    c: "Marketable securities"
+    d: "Inventory"
+    e: "Short-term investments"
+    f: "Prepaid liabilities"
+
+m7q3:
+  text: "A company's debt-to-equity ratio is 2.0. This means:"
+  show: 4
+  options:
+    a: "The company has twice as much equity as debt"
+    b: "The company has twice as much debt as equity"
+    c: "Total assets are double total liabilities"
+    d: "The company is not using any leverage"
+    e: "Return on equity is 2.0"
+    f: "The company will repay its debt in 2 years"
+
+m7q4:
+  text: "The inventory turnover ratio measures:"
+  show: 4
+  options:
+    a: "How many times equity turns over in a year"
+    b: "How quickly inventory is sold and replaced"
+    c: "The profit margin on inventory sales"
+    d: "The number of days in the operating cycle"
+    e: "How much cash is tied up in inventory"
+    f: "The growth rate of inventory purchases"
+
+m7q5:
+  text: "Return on Equity (ROE) is calculated as:"
+  show: 4
+  options:
+    a: "Net income ÷ Total assets"
+    b: "Net income ÷ Total equity"
+    c: "Gross profit ÷ Total equity"
+    d: "Operating income ÷ Equity"
+    e: "Net income ÷ Revenue"
+    f: "Total equity ÷ Net income"
+
+m7q6:
+  text: "Days Sales Outstanding (DSO) is used to measure:"
+  show: 4
+  options:
+    a: "How long it takes to sell inventory"
+    b: "How long it takes to collect accounts receivable"
+    c: "The average payment period to suppliers"
+    d: "The number of days of operating cash"
+    e: "How long goods are held before sale"
+    f: "The length of the production cycle"
+
+m7q7:
+  text: "The interest coverage ratio indicates:"
+  show: 4
+  options:
+    a: "How many times total debt can be repaid from net income"
+    b: "How many times operating income covers interest expense"
+    c: "The company's total interest payments for the year"
+    d: "The proportion of earnings distributed as dividends"
+    e: "The company's credit rating"
+    f: "The effective interest rate on debt"
+
+m7q8:
+  text: "A higher asset turnover ratio generally suggests:"
+  show: 4
+  options:
+    a: "The company has too few assets"
+    b: "The company is generating more revenue per dollar of assets"
+    c: "The company's profit margins are high"
+    d: "The company has high leverage"
+    e: "The company is growing slowly"
+    f: "The company is capital-intensive"
+
+m7q9:
+  text: "Net profit margin is calculated as:"
+  show: 4
+  options:
+    a: "Gross profit ÷ Revenue"
+    b: "Operating income ÷ Revenue"
+    c: "Net income ÷ Revenue"
+    d: "Revenue ÷ Net income"
+    e: "Net income ÷ Total assets"
+    f: "EBIT ÷ Revenue"
+
+m7q10:
+  text: "Company A has a current ratio of 0.8. This suggests:"
+  show: 4
+  options:
+    a: "The company has strong liquidity"
+    b: "Current assets exceed current liabilities"
+    c: "The company may struggle to meet short-term obligations"
+    d: "The company is very profitable"
+    e: "The company has no debt"
+    f: "The company's stock is undervalued"
+
+# ─── Module 8: Budgeting ─────────────────────────────────────────────────────
+
+m8q1:
+  text: "The master budget begins with which budget?"
+  show: 4
+  options:
+    a: "Production budget"
+    b: "Cash budget"
+    c: "Sales budget"
+    d: "Capital expenditure budget"
+    e: "Operating expense budget"
+    f: "Labor budget"
+
+m8q2:
+  text: "A flexible budget:"
+  show: 4
+  options:
+    a: "Is prepared before the period starts and never changed"
+    b: "Adjusts revenue and cost targets based on actual activity level"
+    c: "Is used only for capital expenditure planning"
+    d: "Shows the maximum budget available for each department"
+    e: "Applies only to fixed costs"
+    f: "Requires approval from the board of directors"
+
+m8q3:
+  text: "Zero-based budgeting requires that:"
+  show: 4
+  options:
+    a: "All budgets begin at prior year levels"
+    b: "Each expense must be justified from zero each period"
+    c: "Only new projects are budgeted"
+    d: "Budgets are prepared at the departmental level only"
+    e: "Capital expenditures are excluded from the budget"
+    f: "Variable costs are excluded"
+
+m8q4:
+  text: "A production budget is primarily used to determine:"
+  show: 4
+  options:
+    a: "How much cash will be collected from customers"
+    b: "How many units need to be manufactured"
+    c: "How much overhead to allocate"
+    d: "The selling price of products"
+    e: "The balance of accounts receivable"
+    f: "The expected tax liability"
+
+m8q5:
+  text: "Which of the following is an advantage of participative (bottom-up) budgeting?"
+  show: 4
+  options:
+    a: "It is faster to prepare"
+    b: "It eliminates the possibility of budgetary slack"
+    c: "It improves employee commitment and morale"
+    d: "Top management retains full control"
+    e: "It is less costly than top-down budgeting"
+    f: "It is more accurate than other methods"
+
+m8q6:
+  text: "Budgetary slack occurs when:"
+  show: 4
+  options:
+    a: "The budget is prepared too early"
+    b: "Managers understate revenue or overstate costs to make targets easier to meet"
+    c: "The budget cannot be revised during the year"
+    d: "Capital budgets and operating budgets conflict"
+    e: "The budget process takes too long"
+    f: "Managers exceed their budget targets"
+
+m8q7:
+  text: "A sales budget for Q1 forecasts 500 units at $100 each. Actual Q1 sales were 480 units at $102 each. The sales revenue variance is:"
+  show: 4
+  options:
+    a: "$2,000 favorable"
+    b: "$960 favorable"
+    c: "$1,040 unfavorable"
+    d: "$2,000 unfavorable"
+    e: "$50,000 budget vs $48,960 actual = $1,040 unfavorable"
+    f: "$960 unfavorable"
+
+m8q8:
+  text: "Which budget is typically prepared last in the master budget process?"
+  show: 4
+  options:
+    a: "Sales budget"
+    b: "Production budget"
+    c: "Materials budget"
+    d: "Cash budget"
+    e: "Capital expenditure budget"
+    f: "Labor budget"
+
+m8q9:
+  text: "Rolling (continuous) budgets are updated by:"
+  show: 4
+  options:
+    a: "Adding a new month as each month passes, maintaining a constant planning horizon"
+    b: "Starting the budget from zero each quarter"
+    c: "Adding actual results to the budget at year-end"
+    d: "Revising the budget only when variances exceed 10%"
+    e: "Preparing a new budget at board meetings"
+    f: "Extending the budget to cover five years"
+
+m8q10:
+  text: "A company wants to maintain ending inventory equal to 20% of next period's sales. If next period sales are 1,000 units and beginning inventory is 150 units, how many units need to be produced this period?"
+  show: 4
+  options:
+    a: "1,000 units"
+    b: "1,050 units"
+    c: "850 units"
+    d: "950 units"
+    e: "1,150 units"
+    f: "1,200 units"
+
+# ─── Module 9: Cost Concepts ─────────────────────────────────────────────────
+
+m9q1:
+  text: "Which of the following is a fixed cost for a manufacturing company?"
+  show: 4
+  options:
+    a: "Direct materials used in production"
+    b: "Sales commissions paid per unit sold"
+    c: "Rent on the factory building"
+    d: "Freight costs on goods shipped"
+    e: "Direct labor paid per hour worked"
+    f: "Packaging materials"
+
+m9q2:
+  text: "Variable costs per unit:"
+  show: 4
+  options:
+    a: "Increase as production volume increases"
+    b: "Decrease as production volume increases"
+    c: "Remain constant regardless of production volume"
+    d: "Only apply to service businesses"
+    e: "Are always controllable by management"
+    f: "Cannot be predicted in advance"
+
+m9q3:
+  text: "A mixed cost (semi-variable cost) has:"
+  show: 4
+  options:
+    a: "No fixed component"
+    b: "Only a variable component"
+    c: "Both a fixed component and a variable component"
+    d: "Variable behavior below a certain volume and fixed behavior above"
+    e: "Equal fixed and variable components"
+    f: "A step function behavior only"
+
+m9q4:
+  text: "Standard costs are used in manufacturing to:"
+  show: 4
+  options:
+    a: "Record historical transaction costs"
+    b: "Provide predetermined benchmarks for comparison to actual costs"
+    c: "Calculate the market value of inventory"
+    d: "Replace financial accounting"
+    e: "Determine the selling price automatically"
+    f: "Report taxes payable"
+
+m9q5:
+  text: "Which costing system assigns costs to specific jobs or batches?"
+  show: 4
+  options:
+    a: "Process costing"
+    b: "Activity-based costing"
+    c: "Job order costing"
+    d: "Variable costing"
+    e: "Target costing"
+    f: "Throughput costing"
+
+m9q6:
+  text: "Process costing is best suited for:"
+  show: 4
+  options:
+    a: "Custom furniture manufacturing"
+    b: "Construction projects"
+    c: "Mass production of identical products (e.g., chemicals, oil refining)"
+    d: "Professional service firms"
+    e: "Special-order printing"
+    f: "Research and development projects"
+
+m9q7:
+  text: "Direct labor cost is:"
+  show: 4
+  options:
+    a: "Any labor cost incurred in the factory"
+    b: "The wages of workers who directly work on the product"
+    c: "Supervisory salaries"
+    d: "Maintenance workers' wages"
+    e: "Administrative salaries"
+    f: "Payroll taxes and benefits"
+
+m9q8:
+  text: "Which of the following is an example of an indirect manufacturing cost (factory overhead)?"
+  show: 4
+  options:
+    a: "Steel used to make cars"
+    b: "Wages of assembly line workers"
+    c: "Factory electricity and utilities"
+    d: "Packaging materials"
+    e: "Direct materials consumed"
+    f: "Sales commissions"
+
+m9q9:
+  text: "A direct material price variance is calculated as:"
+  show: 4
+  options:
+    a: "(Actual quantity − Standard quantity) × Standard price"
+    b: "(Actual price − Standard price) × Actual quantity"
+    c: "(Standard price − Actual price) × Standard quantity"
+    d: "Actual cost − Standard cost"
+    e: "(Actual quantity − Standard quantity) × Actual price"
+    f: "Standard quantity × Standard price"
+
+m9q10:
+  text: "Total product cost per unit under absorption costing includes:"
+  show: 4
+  options:
+    a: "Only variable manufacturing costs"
+    b: "Variable and fixed manufacturing costs"
+    c: "Variable manufacturing costs and variable selling costs"
+    d: "Only fixed manufacturing costs"
+    e: "All costs of the business"
+    f: "Manufacturing and administrative costs"
+
+# ─── Module 10: Overhead Costing ─────────────────────────────────────────────
+
+m10q1:
+  text: "The predetermined overhead rate is calculated as:"
+  show: 4
+  options:
+    a: "Actual overhead ÷ Actual activity"
+    b: "Budgeted overhead ÷ Budgeted activity"
+    c: "Actual overhead ÷ Budgeted activity"
+    d: "Budgeted overhead ÷ Actual activity"
+    e: "Total overhead ÷ Units produced"
+    f: "Fixed overhead ÷ Variable overhead"
+
+m10q2:
+  text: "If applied overhead exceeds actual overhead, the overhead is:"
+  show: 4
+  options:
+    a: "Under-applied"
+    b: "Over-applied"
+    c: "Correctly applied"
+    d: "Irrelevant to the income statement"
+    e: "Added to work-in-process"
+    f: "Transferred to equity"
+
+m10q3:
+  text: "Activity-based costing (ABC) is superior to traditional costing when:"
+  show: 4
+  options:
+    a: "The company makes only one product"
+    b: "Products consume overhead in different proportions and overhead is significant"
+    c: "The company has a simple manufacturing process"
+    d: "Total overhead costs are small"
+    e: "The company uses job order costing exclusively"
+    f: "Only one overhead cost driver exists"
+
+m10q4:
+  text: "In ABC, a 'cost driver' is:"
+  show: 4
+  options:
+    a: "The person who approves overhead spending"
+    b: "An activity or factor that causes overhead costs to change"
+    c: "The difference between budgeted and actual overhead"
+    d: "Any overhead cost allocated to products"
+    e: "The rate used to apply overhead"
+    f: "A type of fixed overhead"
+
+m10q5:
+  text: "The direct method of support department cost allocation:"
+  show: 4
+  options:
+    a: "Allocates costs to production departments only, ignoring inter-department services"
+    b: "Allocates costs between support departments first, then to production"
+    c: "Mathematically allocates all inter-department services simultaneously"
+    d: "Is the most accurate method"
+    e: "Uses reciprocal equations"
+    f: "Requires department heads to approve allocations"
+
+m10q6:
+  text: "If a company uses machine hours as its overhead allocation base, which situation would create the most distortion in product costs?"
+  show: 4
+  options:
+    a: "All products use the same number of machine hours"
+    b: "Machine hours are the only overhead driver"
+    c: "Some products are labor-intensive and some are machine-intensive"
+    d: "Total overhead is small relative to direct costs"
+    e: "The company makes a single product"
+    f: "Variable overhead is higher than fixed overhead"
+
+m10q7:
+  text: "Fixed factory overhead per unit will decrease if:"
+  show: 4
+  options:
+    a: "Total fixed overhead increases"
+    b: "Production volume increases"
+    c: "Variable overhead increases"
+    d: "Selling prices increase"
+    e: "Administrative costs increase"
+    f: "Direct materials prices rise"
+
+m10q8:
+  text: "Under-applied overhead at year-end is typically closed to:"
+  show: 4
+  options:
+    a: "Sales revenue"
+    b: "Owner's equity"
+    c: "Cost of goods sold"
+    d: "Work-in-process inventory"
+    e: "Accounts payable"
+    f: "Raw materials inventory"
+
+m10q9:
+  text: "A company has budgeted fixed overhead of $120,000 for the year and budgeted 10,000 machine hours. Actual machine hours were 9,500 and actual fixed overhead was $118,000. The fixed overhead spending variance is:"
+  show: 4
+  options:
+    a: "$2,000 favorable"
+    b: "$6,000 unfavorable"
+    c: "$2,000 unfavorable"
+    d: "$8,000 favorable"
+    e: "$6,000 favorable"
+    f: "Zero"
+
+m10q10:
+  text: "The step-down method of support department cost allocation differs from the direct method in that it:"
+  show: 4
+  options:
+    a: "Uses reciprocal equations"
+    b: "Partially recognizes services that support departments provide to each other"
+    c: "Allocates only variable overhead"
+    d: "Is simpler to apply"
+    e: "Requires no allocation sequence"
+    f: "Only allocates fixed overhead"
+
+# ─── Module 11: Performance Analysis (Capstone) ──────────────────────────────
+# More comprehensive — draws from multiple topics
+
+m11q1:
+  text: "A division reports operating income of $80,000 and uses assets of $400,000. The company's minimum required return is 15%. What is the division's Residual Income?"
+  show: 4
+  options:
+    a: "$20,000"
+    b: "−$20,000"
+    c: "$60,000"
+    d: "$80,000"
+    e: "$20,000 negative"
+    f: "$140,000"
+
+m11q2:
+  text: "Division A's ROI is 25%. The company's cost of capital is 18%. Division A is offered a new project with an expected ROI of 21%. Division A's manager is likely to:"
+  show: 4
+  options:
+    a: "Accept — it exceeds the cost of capital"
+    b: "Reject — it would lower the division's current ROI from 25% to below 25%"
+    c: "Accept — it always maximizes shareholder value"
+    d: "Reject — 21% is below the company's cost of capital"
+    e: "Accept — the company's overall ROI would increase"
+    f: "Reject — the project has insufficient margin of safety"
+
+m11q3:
+  text: "A product has a selling price of $80, variable cost of $50, and the company has $90,000 in fixed costs. The breakeven point in units is:"
+  show: 4
+  options:
+    a: "1,125 units"
+    b: "1,800 units"
+    c: "3,000 units"
+    d: "1,500 units"
+    e: "1,000 units"
+    f: "2,000 units"
+
+m11q4:
+  text: "The margin of safety measures:"
+  show: 4
+  options:
+    a: "The minimum profit required to continue operations"
+    b: "By how much sales can fall before the company reaches breakeven"
+    c: "The percentage of fixed costs covered by contribution margin"
+    d: "The maximum discount that can be offered to customers"
+    e: "The difference between budgeted and actual sales"
+    f: "How much profit exceeds the required return"
+
+m11q5:
+  text: "A company is considering whether to make a component internally or buy it. The relevant costs to compare are:"
+  show: 4
+  options:
+    a: "Total overhead absorption cost vs. purchase price"
+    b: "Full absorption cost per unit vs. supplier price"
+    c: "Variable manufacturing cost (plus any avoidable fixed costs) vs. supplier price"
+    d: "Sunk costs plus variable costs vs. purchase price"
+    e: "Total fixed costs vs. purchase price"
+    f: "Transfer price vs. market price"
+
+m11q6:
+  text: "Which of the following costs should be IGNORED when deciding whether to accept a special order at a price below the normal selling price (assuming spare capacity exists)?"
+  show: 4
+  options:
+    a: "Variable manufacturing cost per unit"
+    b: "Special packaging cost for the order"
+    c: "Fixed overhead that will not change"
+    d: "Direct materials for the order"
+    e: "Direct labor for the order"
+    f: "Incremental delivery costs"
+
+m11q7:
+  text: "A product line shows a negative net income but a positive segment margin. The correct decision is to:"
+  show: 4
+  options:
+    a: "Drop the product immediately"
+    b: "Keep the product — dropping it would reduce total profit"
+    c: "Replace it with a new product"
+    d: "Reduce the selling price to increase volume"
+    e: "Move production to a lower-cost location"
+    f: "Outsource production"
+
+m11q8:
+  text: "At the split-off point in a joint process, management must decide whether to sell the product or process it further. The joint costs incurred up to the split-off are:"
+  show: 4
+  options:
+    a: "Relevant to the decision"
+    b: "Variable and therefore relevant"
+    c: "Sunk costs and therefore irrelevant"
+    d: "The primary factor in the decision"
+    e: "Allocated equally to all products"
+    f: "Deducted from the incremental revenue"
+
+m11q9:
+  text: "Using the DuPont decomposition, ROI = Profit Margin × Asset Turnover. A company has net income of $60,000, sales of $600,000, and assets of $400,000. What is the ROI?"
+  show: 4
+  options:
+    a: "15%"
+    b: "10%"
+    c: "25%"
+    d: "150%"
+    e: "6.67%"
+    f: "12%"
+
+m11q10:
+  text: "A company has sales of $500,000, variable costs of $300,000, and fixed costs of $120,000. The contribution margin ratio is:"
+  show: 4
+  options:
+    a: "24%"
+    b: "60%"
+    c: "40%"
+    d: "75%"
+    e: "16%"
+    f: "50%"
+
+# ─── Module 12: Ethics (Capstone) ────────────────────────────────────────────
+# Comprehensive — draws from ethics content and applies it to accounting scenarios
+
+m12q1:
+  text: "An accountant discovers that her employer has been recording fictitious sales. Under the IMA Statement of Ethical Professional Practice, which standard is MOST directly violated by participating in this practice?"
+  show: 4
+  options:
+    a: "Competence"
+    b: "Confidentiality"
+    c: "Integrity"
+    d: "Accountability"
+    e: "Independence"
+    f: "Transparency"
+
+m12q2:
+  text: "Which element of the fraud triangle refers to the fraudster convincing themselves that the action is justified?"
+  show: 4
+  options:
+    a: "Pressure"
+    b: "Opportunity"
+    c: "Rationalization"
+    d: "Incentive"
+    e: "Risk"
+    f: "Motive"
+
+m12q3:
+  text: "A management accountant is asked by his supervisor to withhold negative financial information from the board report. The IMA standard being tested is:"
+  show: 4
+  options:
+    a: "Competence — the accountant may lack the skills to present the information"
+    b: "Credibility — the accountant must communicate information fairly and disclose unfavorable results"
+    c: "Confidentiality — the accountant must keep the information private"
+    d: "Integrity — the accountant should refuse gifts"
+    e: "Independence — the accountant should not report to the supervisor"
+    f: "Objectivity — the accountant must calculate the numbers correctly"
+
+m12q4:
+  text: "Which of the following is the FIRST step in money laundering?"
+  show: 4
+  options:
+    a: "Layering — moving funds through complex transactions"
+    b: "Integration — returning funds to the economy as legitimate"
+    c: "Placement — introducing illegal funds into the financial system"
+    d: "Conversion — exchanging currency into another denomination"
+    e: "Concealment — hiding the source of funds in accounting records"
+    f: "Structuring — creating shell companies"
+
+m12q5:
+  text: "A CFO instructs the accounting team to capitalize a large repair expense instead of expensing it, in order to meet earnings targets. This is an example of:"
+  show: 4
+  options:
+    a: "Asset misappropriation"
+    b: "Corruption"
+    c: "Financial statement fraud"
+    d: "Money laundering"
+    e: "Aggressive but acceptable accounting"
+    f: "A change in accounting estimate"
+
+m12q6:
+  text: "An employee handles both the custody of company cash AND the recording of cash transactions. This situation creates the greatest risk of:"
+  show: 4
+  options:
+    a: "Financial statement fraud by management"
+    b: "Asset misappropriation through skimming or larceny"
+    c: "Corruption through bribery"
+    d: "Money laundering"
+    e: "Conflict of interest"
+    f: "Inadequate financial reporting disclosures"
+
+m12q7:
+  text: "Which ethical decision-making framework focuses on producing the greatest benefit for the greatest number of people?"
+  show: 4
+  options:
+    a: "Rights-based (deontological) approach"
+    b: "Virtue approach"
+    c: "Utilitarian approach"
+    d: "Justice/fairness approach"
+    e: "Common good approach"
+    f: "Whistleblower approach"
+
+m12q8:
+  text: "A management accountant learns that a supplier is overcharging the company due to errors in pricing. She keeps this information private because she received expensive gifts from the supplier. Which TWO IMA standards are most clearly violated? (Select the best combined answer)"
+  show: 4
+  options:
+    a: "Competence and Confidentiality"
+    b: "Integrity and Credibility"
+    c: "Competence and Credibility"
+    d: "Integrity and Competence"
+    e: "Confidentiality and Credibility"
+    f: "Independence and Objectivity"
+
+m12q9:
+  text: "According to the IMA's recommended approach, if an ethical conflict cannot be resolved through the immediate supervisor, the accountant should next:"
+  show: 4
+  options:
+    a: "Resign immediately"
+    b: "Report the matter to external regulators"
+    c: "Escalate to the next level of management, audit committee, or board"
+    d: "Contact the media"
+    e: "Consult a personal lawyer and resign"
+    f: "Do nothing and document the situation"
+
+m12q10:
+  text: "Which of the following BEST describes the difference between a 'moral' employee and a 'virtuous' employee, according to business ethics principles?"
+  show: 4
+  options:
+    a: "A moral employee follows the law; a virtuous employee ignores the law"
+    b: "A moral employee applies the organization's ethical guidelines; a virtuous employee goes beyond those guidelines by doing what is right even when not required"
+    c: "A virtuous employee only follows the IMA Code; a moral employee follows all laws"
+    d: "A moral employee is more ethical than a virtuous employee"
+    e: "There is no meaningful difference between moral and virtuous employees"
+    f: "A virtuous employee maximizes profits; a moral employee minimizes costs"
