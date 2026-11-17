@@ -408,6 +408,9 @@ def t(en: str, ar: str) -> str:
     return f'<span class="en">{en}</span><span class="ar">{ar}</span>'
 
 
+VIDEO_LINE = re.compile(r"(?m)^[ \t]*<?https?://(?:www\.|m\.)?(?:youtube\.com/watch\?\S*v=|youtu\.be/|youtube-nocookie\.com/embed/|vimeo\.com/)\S+>?[ \t]*$")
+
+
 def outline(course) -> list[dict]:
     """Modules, lessons and tasks, so people can see what's inside before adding a course (no answers)."""
     mods = []
@@ -419,6 +422,9 @@ def outline(course) -> list[dict]:
                 ref = str(les["media"]).split("#")[0]
                 kind = media_kind(ref) or ("video" if "youtu" in ref else "")
             entry = {"title": les["title"], "minutes": int(les.get("minutes") or 0), "media": kind}
+            vids = len(VIDEO_LINE.findall(str(les.get("content") or "")))
+            if vids:
+                entry["videos"] = vids  # YouTube or Vimeo links alone on a line: each one plays in the lesson
             if les.get("optional"):
                 entry["optional"] = True  # inPace 1.25+: the module can finish without it
             lessons.append(entry)
@@ -1030,7 +1036,10 @@ def outline_html(c: dict) -> str:
             kind = {"pdf": t("slides", "شرائح"), "video": t("video", "فيديو"), "audio": t("audio", "صوت"),
                     "youtube": t("YouTube", "يوتيوب"), "link": t("link", "رابط")}.get(les["media"], "")
             opt = f'<span class="kind opt">{t("optional", "اختياري")}</span>' if les.get("optional") else ""
-            rows.append(f'<li><span dir="auto">{e(les["title"])}</span>{opt}{f"<span class=kind>{kind}</span>" if kind else ""}'
+            n = int(les.get("videos") or 0)
+            vid = (f'<span class="kind">{t(f"{n} videos" if n > 1 else "video", f"{n} فيديو" if n > 1 else "فيديو")}</span>'
+                   if n and les["media"] not in ("video", "youtube") else "")
+            rows.append(f'<li><span dir="auto">{e(les["title"])}</span>{opt}{vid}{f"<span class=kind>{kind}</span>" if kind else ""}'
                         f'<span class="mins">{les["minutes"] or ""}{t(" min", " د") if les["minutes"] else ""}</span></li>')
         tasks = []
         for tk in m["tasks"]:
