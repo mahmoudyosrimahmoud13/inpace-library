@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: Policy says what must be true; mechanisms enforce it.
+q2:
+  right:
+  - a
+  why: Bind it to 127.0.0.1 or a private IP.
+q3:
+  right:
+  - a
+  why: Smaller power, smaller damage.
+q4:
+  right:
+  - a
+  why: Removing beats defending.
+q5:
+  right:
+  - a
+  why: Understand each suggestion before applying it.
+q6:
+  right:
+  - a
+  why: Containers use veth pairs to connect to a bridge.
+q7:
+  right:
+  - a
+  why: dig skips /etc/hosts and nsswitch.
+q8:
+  right:
+  - a
+  why: It's off by default on most systems.
+q9:
+  right:
+  - a
+  why: Without the gateway's MAC nothing leaves the network.
+q10:
+  right:
+  - a
+  why: Configure upstreams in netplan or NetworkManager.
+q11:
+  right:
+  - a
+  why: One ruleset for both families.
+q12:
+  right:
+  - a
+  why: Destination NAT happens before the routing decision.
+q13:
+  right:
+  - a
+  why: Bind to 127.0.0.1 or use DOCKER-USER.
+q14:
+  right:
+  - a
+  why: Blocking 'too big' messages breaks big transfers.
+q15:
+  right:
+  - a
+  why: Each covers gaps in the other.
+q16:
+  right:
+  - a
+  why: Small, fast and strong.
+q17:
+  right:
+  - a
+  why: A simple, strong access list.
+q18:
+  right:
+  - a
+  why: It reads logs and reacts.
+q19:
+  right:
+  - a
+  why: Failures are noise when keys-only is on.
+q20:
+  right:
+  - a
+  why: A CA signs short-lived user certificates.
+q21:
+  right:
+  - a
+  why: Certificates are public.
+q22:
+  right:
+  - a
+  why: A cert without the right SAN fails.
+q23:
+  right:
+  - a
+  why: Turn it on once HTTPS works everywhere.
+q24:
+  right:
+  - a
+  why: certbot installs a renewal timer.
+q25:
+  right:
+  - a
+  why: Common between internal services.
+q26:
+  right:
+  - a
+  why: That's the t in drwxrwxrwt.
+q27:
+  right:
+  - a
+  why: Perfect for team folders.
+q28:
+  right:
+  - a
+  why: rwx may not tell the whole story.
+q29:
+  right:
+  - a
+  why: Edit it carefully with a root session open.
+q30:
+  right:
+  - a
+  why: requisite stops at once.
+q31:
+  right:
+  - a
+  why: Central logs keep the evidence.
+q32:
+  right:
+  - a
+  why: auditctl -w watches files.
+q33:
+  right:
+  - a
+  why: Keep the baseline off the server.
+q34:
+  right:
+  - a
+  why: Rebooting loses memory evidence.
+q35:
+  right:
+  - a
+  why: Investigate from a clean system.
+q36:
+  right:
+  - a
+  why: 127.0.0.1 only would explain it.
+q37:
+  right:
+  - a
+  why: Host-level drops still show packets in tcpdump.
+q38:
+  right:
+  - a
+  why: Reverse path filtering stops spoofing.
+q39:
+  right:
+  - a
+  why: Lynis checks many of the same items.
+q40:
+  right:
+  - a
+  why: Reasons make changes maintainable.

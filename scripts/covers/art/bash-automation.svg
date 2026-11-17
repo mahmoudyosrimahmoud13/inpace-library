@@ -1,0 +1,13 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)"><rect x="30" y="60" width="460" height="420" rx="18" fill="#0d3324"/></g>
+<g font-family="JBM" font-size="19" font-weight="600">
+<text x="56" y="110" fill="#6bd18f">#!/usr/bin/env bash</text>
+<text x="56" y="146" fill="#ecf9f2">set -euo pipefail</text>
+<text x="56" y="194" fill="#acdfc7">trap cleanup EXIT</text>
+<text x="56" y="230" fill="#ecf9f2">for f in "$@"; do</text>
+<text x="84" y="266" fill="#ecf9f2">backup "$f" || die</text>
+<text x="56" y="302" fill="#ecf9f2">done</text>
+<text x="56" y="350" fill="#acdfc7">notify "backup OK"</text>
+<text x="56" y="420" fill="#6bd18f">✓ shellcheck: 0 warnings</text></g>
+</svg>

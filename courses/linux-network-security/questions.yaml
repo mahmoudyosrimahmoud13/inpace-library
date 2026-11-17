@@ -1,0 +1,320 @@
+q1:
+  text: Which is the threat model?
+  show: 4
+  options:
+    a: Who you defend against and what they can do
+    b: The firewall rules
+    c: The list of open ports
+    d: The password policy
+q2:
+  text: 'Redis shows as 0.0.0.0:6379 in ss. The risk:'
+  show: 4
+  options:
+    a: It accepts connections from every network the server is on
+    b: Nothing, 0.0.0.0 means disabled
+    c: Only localhost can reach it
+    d: It's using IPv6
+q3:
+  text: 'Least privilege means:'
+  show: 4
+  options:
+    a: Every user, service and key gets only what it needs
+    b: Only root can log in
+    c: Few users exist
+    d: Passwords are short
+q4:
+  text: Why reduce attack surface first?
+  show: 4
+  options:
+    a: A service that isn't running or exposed can't be attacked
+    b: It's required by law
+    c: It speeds up the server
+    d: Firewalls can't block ports
+q5:
+  text: What does lynis do?
+  show: 4
+  options:
+    a: Audits many security settings and suggests improvements
+    b: Blocks attacks
+    c: Encrypts the disk
+    d: Replaces the firewall
+q6:
+  text: 'A veth pair is:'
+  show: 4
+  options:
+    a: A virtual cable with two ends, often one in a container and one on the host
+    b: A pair of physical NICs
+    c: Two IP addresses on one NIC
+    d: A VPN tunnel
+q7:
+  text: Which command resolves a name exactly the way applications do?
+  show: 4
+  options:
+    a: getent hosts name
+    b: dig name
+    c: nslookup name
+    d: host name
+q8:
+  text: What makes a Linux box forward packets between interfaces?
+  show: 4
+  options:
+    a: net.ipv4.ip_forward=1
+    b: ip link set forward on
+    c: Installing a bridge
+    d: Disabling the firewall
+q9:
+  text: '`ip neigh` shows FAILED for the gateway. The problem is at:'
+  show: 4
+  options:
+    a: 'Layer 2: the gateway isn''t answering ARP'
+    b: DNS
+    c: TLS
+    d: The application
+q10:
+  text: 'On Ubuntu, /etc/resolv.conf points at 127.0.0.53. That is:'
+  show: 4
+  options:
+    a: systemd-resolved, the local resolver that forwards to real DNS servers
+    b: A broken setting
+    c: Google DNS
+    d: The router
+q11:
+  text: 'An inet table in nftables covers:'
+  show: 4
+  options:
+    a: IPv4 and IPv6 together
+    b: Only IPv4
+    c: Only internet-facing interfaces
+    d: Only NAT
+q12:
+  text: Port forwarding from public 8443 to an internal server is done in which hook?
+  show: 4
+  options:
+    a: prerouting (DNAT)
+    b: postrouting
+    c: output
+    d: input
+q13:
+  text: Why do ufw rules not protect a port published with docker -p?
+  show: 4
+  options:
+    a: Docker's traffic goes through the forward path and its own NAT rules, not the input chain
+    b: ufw doesn't work with Docker installed
+    c: Docker disables the firewall
+    d: Published ports are encrypted
+q14:
+  text: Why allow ICMP in a strict firewall?
+  show: 4
+  options:
+    a: Path MTU discovery and diagnostics depend on it
+    b: It's required by SSH
+    c: It encrypts traffic
+    d: It's harmless to block
+q15:
+  text: Why keep both cloud and host firewalls?
+  show: 4
+  options:
+    a: 'Defence in depth: the cloud rules survive a compromised server, the host rules cover what the cloud can''t see'
+    b: One is enough
+    c: Cloud firewalls are faster
+    d: Host firewalls are required by law
+q16:
+  text: Which key type is the modern default for SSH?
+  show: 4
+  options:
+    a: ed25519
+    b: dsa
+    c: rsa-1024
+    d: md5
+q17:
+  text: What does AllowGroups ssh-users do?
+  show: 4
+  options:
+    a: Only members of that group may log in over SSH
+    b: Creates the group
+    c: Gives sudo to the group
+    d: Blocks the group
+q18:
+  text: What does fail2ban do?
+  show: 4
+  options:
+    a: Bans IPs that fail too often, by adding firewall rules
+    b: Encrypts logins
+    c: Replaces SSH keys
+    d: Deletes failed users
+q19:
+  text: Which login event is the real alarm?
+  show: 4
+  options:
+    a: A successful login from an unexpected place
+    b: Thousands of failed root logins
+    c: A failed password
+    d: A banned IP
+q20:
+  text: Why use SSH certificates in a team?
+  show: 4
+  options:
+    a: Access expires automatically and you don't edit authorized_keys on every server
+    b: They're faster
+    c: They replace TLS
+    d: They allow passwords
+q21:
+  text: Which file must stay secret, mode 600?
+  show: 4
+  options:
+    a: The private key
+    b: The certificate
+    c: The intermediate certificate
+    d: fullchain.pem
+q22:
+  text: 'Modern clients check the certificate''s hostname in:'
+  show: 4
+  options:
+    a: subjectAltName (SAN)
+    b: CN only
+    c: The issuer field
+    d: The serial number
+q23:
+  text: What does HSTS do?
+  show: 4
+  options:
+    a: Tells browsers to use only HTTPS for the domain for a set time
+    b: Encrypts DNS
+    c: Renews certificates
+    d: Blocks old browsers
+q24:
+  text: 'Let''s Encrypt certificates are short-lived, so:'
+  show: 4
+  options:
+    a: Automatic renewal is essential
+    b: You renew them by hand monthly
+    c: They never expire in practice
+    d: You buy a paid one instead
+q25:
+  text: 'In mutual TLS:'
+  show: 4
+  options:
+    a: The server also verifies a certificate from the client
+    b: Two servers share one key
+    c: The certificate is self-signed
+    d: TLS runs twice
+q26:
+  text: 'The sticky bit on /tmp means:'
+  show: 4
+  options:
+    a: Users can only delete their own files there
+    b: Files are kept in RAM
+    c: Files can't be executed
+    d: Only root can write
+q27:
+  text: 'SGID on a directory makes new files:'
+  show: 4
+  options:
+    a: Inherit the directory's group
+    b: Run as the group
+    c: Read-only
+    d: Owned by root
+q28:
+  text: 'A + at the end of ls -l permissions means:'
+  show: 4
+  options:
+    a: An ACL is set; check getfacl
+    b: The file is executable
+    c: The file is encrypted
+    d: The file is a link
+q29:
+  text: 'PAM controls:'
+  show: 4
+  options:
+    a: How programs like sshd and sudo authenticate users
+    b: Packet filtering
+    c: Disk encryption
+    d: Package updates
+q30:
+  text: 'A `required` PAM module that fails:'
+  show: 4
+  options:
+    a: Makes the whole check fail, though later modules still run
+    b: Is ignored
+    c: Stops immediately and succeeds
+    d: Locks the account forever
+q31:
+  text: Why ship logs off the server?
+  show: 4
+  options:
+    a: An attacker with root can edit or delete local logs
+    b: Local disks are too small
+    c: journald can't store auth logs
+    d: It's faster
+q32:
+  text: Which tool records precise events like writes to /etc/passwd?
+  show: 4
+  options:
+    a: auditd
+    b: fail2ban
+    c: ss
+    d: lynis
+q33:
+  text: What does AIDE do?
+  show: 4
+  options:
+    a: Detects changes to files by comparing them with a stored baseline
+    b: Blocks malware
+    c: Encrypts files
+    d: Backs up files
+q34:
+  text: 'First step when you suspect a breach:'
+  show: 4
+  options:
+    a: Isolate the machine and preserve evidence; don't reboot
+    b: Reboot to clear it
+    c: Delete suspicious files
+    d: Reinstall immediately
+q35:
+  text: Why not trust `ps` on a compromised server?
+  show: 4
+  options:
+    a: Attackers can replace system tools to hide themselves
+    b: ps is always inaccurate
+    c: ps doesn't show root processes
+    d: ps needs a reboot
+q36:
+  text: 'curl to localhost on the server works, but outside users can''t connect. First check:'
+  show: 4
+  options:
+    a: ss -tlnp to see which address nginx listens on
+    b: The TLS certificate
+    c: DNS TTL
+    d: The disk space
+q37:
+  text: 'tcpdump on the server sees no packets at all when you test from outside. Likely:'
+  show: 4
+  options:
+    a: Blocked before arriving (cloud firewall) or DNS points elsewhere
+    b: nginx is stopped
+    c: The host firewall drops them after they arrive
+    d: The certificate expired
+q38:
+  text: What does `net.ipv4.conf.all.rp_filter = 1` do?
+  show: 4
+  options:
+    a: Drops packets with source addresses that couldn't have come from that interface
+    b: Enables routing
+    c: Blocks ping
+    d: Encrypts traffic
+q39:
+  text: What are the CIS Benchmarks?
+  show: 4
+  options:
+    a: Industry hardening guides per operating system
+    b: A performance test
+    c: A Linux distribution
+    d: A firewall product
+q40:
+  text: Why document why each hardening change was made?
+  show: 4
+  options:
+    a: So others don't undo it by mistake, or keep it when it's no longer needed
+    b: Auditors forbid undocumented changes
+    c: It speeds up the server
+    d: Linux requires it

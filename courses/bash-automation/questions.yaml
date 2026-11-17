@@ -1,0 +1,320 @@
+q1:
+  text: What does the shebang line `#!/usr/bin/env bash` do?
+  show: 4
+  options:
+    a: Tells the kernel to run the file with bash, found on the PATH
+    b: Makes the file executable
+    c: Comments out the first line
+    d: Loads .bashrc
+q2:
+  text: Which is a correct variable assignment in bash?
+  show: 4
+  options:
+    a: name="web01"
+    b: name = "web01"
+    c: $name=web01
+    d: set name web01
+q3:
+  text: What do double quotes prevent?
+  show: 4
+  options:
+    a: Word splitting and globbing, while still expanding variables
+    b: All expansion
+    c: Command substitution only
+    d: Nothing
+q4:
+  text: '`${BACKUP_DIR:-/var/backups}` means:'
+  show: 4
+  options:
+    a: Use BACKUP_DIR if set and not empty, otherwise /var/backups
+    b: Always use /var/backups
+    c: Delete BACKUP_DIR
+    d: Set BACKUP_DIR permanently
+q5:
+  text: How do you see each command after expansion as a script runs?
+  show: 4
+  options:
+    a: bash -x script.sh
+    b: bash -v --expand
+    c: echo -x
+    d: set -e
+q6:
+  text: Which expands to all arguments, each kept as a separate word?
+  show: 4
+  options:
+    a: '"$@"'
+    b: $*
+    c: '"$*"'
+    d: $#
+q7:
+  text: What does `$#` hold?
+  show: 4
+  options:
+    a: The number of arguments
+    b: The script name
+    c: The last exit code
+    d: The process ID
+q8:
+  text: Why send error messages to stderr with >&2?
+  show: 4
+  options:
+    a: So they don't mix into output someone redirects to a file
+    b: It's faster
+    c: stderr is encrypted
+    d: stdout can't print text
+q9:
+  text: 'With pipefail, `cat missing.txt | sort` exits with:'
+  show: 4
+  options:
+    a: A failure, because cat failed
+    b: Success, because sort worked
+    c: 0 always
+    d: It doesn't run
+q10:
+  text: Why write `cd "$dir" || exit 1`?
+  show: 4
+  options:
+    a: So the script never runs the next commands in the wrong directory
+    b: cd needs it to work
+    c: To speed up cd
+    d: To create the directory
+q11:
+  text: Which test is true when a path is a directory?
+  show: 4
+  options:
+    a: '[[ -d $p ]]'
+    b: '[[ -f $p ]]'
+    c: '[[ -z $p ]]'
+    d: '[[ -x $p ]]'
+q12:
+  text: How should you compare numbers in bash?
+  show: 4
+  options:
+    a: 'With arithmetic: (( a > b ))'
+    b: '[[ $a > $b ]] which compares numbers'
+    c: if a > b
+    d: test a gt b
+q13:
+  text: 'The safe way to read a file line by line is:'
+  show: 4
+  options:
+    a: while IFS= read -r line; do ...; done < file
+    b: for line in $(cat file)
+    c: cat file | for line
+    d: read file
+q14:
+  text: What does `case` match against?
+  show: 4
+  options:
+    a: Glob patterns like start, *.tgz or [yY]
+    b: Only exact numbers
+    c: Regular expressions only
+    d: File contents
+q15:
+  text: '`continue` inside a loop:'
+  show: 4
+  options:
+    a: Skips to the next round
+    b: Ends the loop
+    c: Ends the script
+    d: Restarts the script
+q16:
+  text: How does a bash function hand back a string?
+  show: 4
+  options:
+    a: It prints it, and the caller captures it with $(...)
+    b: return "text"
+    c: export it
+    d: It can't
+q17:
+  text: Why use `local` in functions?
+  show: 4
+  options:
+    a: So the variable doesn't leak into or overwrite the rest of the script
+    b: To make it faster
+    c: To make it read-only
+    d: To export it
+q18:
+  text: Given f=/var/log/app.log.gz, what is ${f##*/}?
+  show: 4
+  options:
+    a: app.log.gz
+    b: /var/log
+    c: app
+    d: /var/log/app.log
+q19:
+  text: How do you loop over an array so items with spaces stay whole?
+  show: 4
+  options:
+    a: for x in "${arr[@]}"
+    b: for x in ${arr}
+    c: for x in $arr[@]
+    d: for x in "${arr[*]}"
+q20:
+  text: Why build a command's options in an array?
+  show: 4
+  options:
+    a: Each option stays one argument, even with spaces, and you can add options conditionally
+    b: Arrays run faster
+    c: Options must be arrays
+    d: To hide them
+q21:
+  text: When does `trap cleanup EXIT` run cleanup?
+  show: 4
+  options:
+    a: 'Whenever the script ends: success, error or Ctrl+C (not SIGKILL)'
+    b: Only on success
+    c: Only on Ctrl+C
+    d: Never automatically
+q22:
+  text: Why use mktemp instead of /tmp/out.txt?
+  show: 4
+  options:
+    a: 'Unique names: runs don''t clash and other users can''t hijack the file'
+    b: mktemp is faster
+    c: /tmp is read-only
+    d: Fixed names are deleted at once
+q23:
+  text: What does flock -n do if the lock is taken?
+  show: 4
+  options:
+    a: Fails immediately instead of waiting
+    b: Waits forever
+    c: Deletes the lock
+    d: Kills the other script
+q24:
+  text: What does ShellCheck do?
+  show: 4
+  options:
+    a: Finds common bugs and risky patterns in shell scripts
+    b: Formats scripts
+    c: Runs scripts faster
+    d: Converts bash to Python
+q25:
+  text: Why put -- before file names in `rm -- "$f"`?
+  show: 4
+  options:
+    a: So a file whose name starts with - isn't read as an option
+    b: To delete faster
+    c: To ask for confirmation
+    d: To delete directories
+q26:
+  text: Which tool is made for reading JSON in the shell?
+  show: 4
+  options:
+    a: jq
+    b: sed
+    c: cut
+    d: tr
+q27:
+  text: '`<<''EOF''` (quoted) in a here-document means:'
+  show: 4
+  options:
+    a: The text is taken literally; variables aren't expanded
+    b: Variables are expanded
+    c: Tabs are removed
+    d: The file is deleted after
+q28:
+  text: Why does a variable set inside `cmd | while read` disappear after the loop?
+  show: 4
+  options:
+    a: The loop runs in a subshell because of the pipe
+    b: read clears variables
+    c: bash resets variables after loops
+    d: It doesn't
+q29:
+  text: Why use awk to compare a load average like 1.42 with nproc?
+  show: 4
+  options:
+    a: Bash arithmetic only handles whole numbers
+    b: awk is the only tool that can read /proc
+    c: bash can't compare at all
+    d: It's required by systemd
+q30:
+  text: Why prefer printf over echo in scripts?
+  show: 4
+  options:
+    a: It behaves the same everywhere and formats columns
+    b: echo is deprecated
+    c: printf is a builtin and echo isn't
+    d: echo can't print variables
+q31:
+  text: Why does ssh in a while-read loop often run only once?
+  show: 4
+  options:
+    a: ssh reads the rest of the loop's input; use ssh -n
+    b: ssh closes the file
+    c: while can't run ssh
+    d: The second host is always down
+q32:
+  text: What does BatchMode=yes do for ssh?
+  show: 4
+  options:
+    a: Never prompts; fails instead of asking for a password
+    b: Runs faster
+    c: Runs in the background
+    d: Compresses data
+q33:
+  text: Where should a webhook URL secret live?
+  show: 4
+  options:
+    a: A root-only env file or secret store, not inside the script
+    b: Hard-coded in the script
+    c: In ~/.bashrc of every user
+    d: In the Git repository
+q34:
+  text: What does a dead-man's switch alert on?
+  show: 4
+  options:
+    a: A job that stops checking in, even one that never ran
+    b: CPU temperature
+    c: Every successful run
+    d: Disk errors only
+q35:
+  text: '`xargs -P 8` does what?'
+  show: 4
+  options:
+    a: Runs up to 8 commands in parallel
+    b: Retries 8 times
+    c: Sends 8 arguments
+    d: Waits 8 seconds
+q36:
+  text: Why check free space before starting the backup?
+  show: 4
+  options:
+    a: To fail early with a clear message instead of halfway with a broken archive
+    b: tar needs it
+    c: It makes compression better
+    d: To delete old backups
+q37:
+  text: What does `gzip -t` check?
+  show: 4
+  options:
+    a: That the compressed file is intact
+    b: Its size
+    c: Its owner
+    d: That it's encrypted
+q38:
+  text: Why save a .sha256 next to each archive?
+  show: 4
+  options:
+    a: To detect later if the archive was corrupted or changed
+    b: To compress it
+    c: To encrypt it
+    d: To name it
+q39:
+  text: What does `bash -n script.sh` do?
+  show: 4
+  options:
+    a: Checks syntax without running anything
+    b: Runs without network
+    c: Runs in dry-run mode
+    d: Prints line numbers
+q40:
+  text: 'The final proof that a backup works is:'
+  show: 4
+  options:
+    a: A successful restore
+    b: A big file size
+    c: No errors in the log
+    d: The timer ran

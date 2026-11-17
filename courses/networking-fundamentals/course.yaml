@@ -1,0 +1,253 @@
+id: networking-fundamentals
+title: 'Networking Fundamentals: how data really moves'
+version: 1
+language: en
+description: 'Understand networks from the ground up: hosts, switches and routers, the OSI and TCP/IP layers, binary, MAC
+  addresses, ARP and VLANs, IPv4, CIDR and subnetting, routing tables, BGP, TCP and UDP, ports and sockets, NAT and IPv6,
+  DNS and DHCP, HTTP and TLS, latency, loss and MTU, tcpdump, and a packet''s whole journey. Ends with troubleshooting by
+  layer. Built around Ed Harmoush''s Practical Networking videos and MIT 6.858; the videos are optional. Course 6 of the Linux,
+  Cloud and DevOps track. About 8 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'Practical Networking: free articles and the Packet Traveling series'
+  url: https://www.practicalnetworking.net/
+modules:
+- id: m1
+  title: 'Day 1: Networks, devices and layers'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: hosts, addresses, networks and devices'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: 'Layers: OSI, TCP/IP and encapsulation'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Draw your home or office network (photo or diagram): every device, the switch, the router and the internet link,
+      with your laptop''s IP and the gateway''s IP from `ip -br addr` and `ip route`. Upload it with the command output.'
+  - id: m1-explain
+    type: explain
+    prompt: 'Explain encapsulation: what each layer adds to an HTTP request on its way out of your laptop.'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Ethernet, MAC addresses and ARP'
+  lessons:
+  - id: m2-l1
+    title: Binary, hex, MAC addresses and Ethernet
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: ARP and switches
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Convert 172, 200, 13 and 255 to binary by hand. Then run `ip neigh`, ping a device on your network you haven't
+      talked to, and run `ip neigh` again to see the new ARP entry. Capture the ARP exchange with `sudo tcpdump -n -i any
+      arp` and upload it.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what ARP does and why a host ARPs for the gateway when talking to a server on the internet.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: IPv4 and subnetting'
+  lessons:
+  - id: m3-l1
+    title: IPv4 addresses, masks and CIDR
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Subnetting, step by step
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Solve all seven attributes for 10.40.77.200/21, 192.168.10.130/26 and 172.20.5.9/30, then check with ipcalc. Then
+      plan a 10.20.0.0/16 VPC with public, app and database subnets in two zones. Upload your working and the plan.
+  - id: m3-explain
+    type: explain
+    prompt: Explain to a friend what /24 means and how many hosts it holds, using binary.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Routing'
+  lessons:
+  - id: m4-l1
+    title: 'Routing: gateways and routing tables'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'The internet: summarization and BGP'
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Run `ip route`, `ip route get 8.8.8.8`, `traceroute -n 1.1.1.1` and `mtr -rwc 20 1.1.1.1`. Upload the output
+      and mark: your gateway, the first hop outside your ISP, and any hop with loss (and whether that loss continues to the
+      end).'
+  - id: m4-explain
+    type: explain
+    prompt: Explain longest prefix match with an example of two routes that both contain the same destination.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: TCP, UDP, NAT and IPv6'
+  lessons:
+  - id: m5-l1
+    title: TCP, UDP, ports and sockets
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: NAT and IPv6
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Start `python3 -m http.server 8000`. From another terminal: `nc -zv localhost 8000` (works), `nc -zv localhost
+      8001` (refused), and `nc -zv -w3 10.255.255.1 80` (timeout). Capture the handshake with `sudo tcpdump -n -i lo port
+      8000` while running `curl localhost:8000`. Upload everything and explain refused vs timeout.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain how NAT lets many private devices share one public IP, and why inbound connections don't work without
+      a port forward.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: DNS, DHCP, HTTP and TLS'
+  lessons:
+  - id: m6-l1
+    title: DNS and DHCP
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: HTTP and TLS, from the network's point of view
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Run `dig +trace` for a domain you like, and `dig` its A, MX and TXT records. Then check its certificate with openssl
+      (issuer, subject, expiry dates) and `curl -v` it. Upload output and name the record types and the certificate authority.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why a DNS change can take hours to reach everyone, and what you do the day before a planned server move.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Performance and packet captures'
+  lessons:
+  - id: m7-l1
+    title: Latency, bandwidth, loss and MTU
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: Reading packets with tcpdump
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Find your path MTU to 8.8.8.8 with ping -M do (find the biggest size that works). Then capture a DNS lookup and
+      a curl to a website with tcpdump, and label the DNS query, the answer, the TCP handshake and the TLS start. Upload captures
+      and labels.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why a page can load slowly on a fast connection when the server is far away.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: The whole journey and the capstone'
+  lessons:
+  - id: m8-l1
+    title: A packet's whole journey
+    file: lessons/m8-l1.md
+    minutes: 35
+  - id: m8-l2
+    title: 'Capstone: troubleshooting by layer'
+    file: lessons/m8-l2.md
+    minutes: 35
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Capstone: break three things on purpose on a VM (wrong DNS server, a wrong default route, a firewall dropping
+      port 443) one at a time. For each, a partner or your future self diagnoses it from the symptom alone using the layer
+      checklist. Upload the write-ups: symptom, checks, broken layer, fix, verification.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain, step by step, everything that happens on the network when you open https://example.com, from DNS to the
+      first byte of the page.
+    min_words: 120
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

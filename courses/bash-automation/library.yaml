@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+tags:
+- bash
+- automation
+- linux
+- intermediate
+credit: Written for the inPace library. Optional videos by MIT's Missing Semester and freeCodeCamp (Bash Scripting for Beginners,
+  Herbertech), linked, not copied.
+section: linux-cloud-devops

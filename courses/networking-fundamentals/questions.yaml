@@ -1,0 +1,320 @@
+q1:
+  text: Which device forwards traffic between different networks using IP addresses?
+  show: 4
+  options:
+    a: A router
+    b: A switch
+    c: A hub
+    d: A repeater
+q2:
+  text: At which layer do IP addresses and routing work?
+  show: 4
+  options:
+    a: Layer 3, network
+    b: Layer 2
+    c: Layer 4
+    d: Layer 7
+q3:
+  text: TCP and UDP belong to which layer?
+  show: 4
+  options:
+    a: Transport (4)
+    b: Network (3)
+    c: Data link (2)
+    d: Application (7)
+q4:
+  text: What does `default via 192.168.1.1` in `ip route` mean?
+  show: 4
+  options:
+    a: Traffic for other networks goes to the router 192.168.1.1
+    b: 192.168.1.1 is your IP
+    c: DNS is 192.168.1.1
+    d: Only local traffic is allowed
+q5:
+  text: Why troubleshoot from the bottom layer up?
+  show: 4
+  options:
+    a: Each layer depends on the one below, so the first failing layer is the cause
+    b: It's the fastest to type
+    c: Higher layers have no tools
+    d: Firewalls require it
+q6:
+  text: What is 192 in binary?
+  show: 4
+  options:
+    a: '11000000'
+    b: '10100000'
+    c: '11100000'
+    d: '10000000'
+q7:
+  text: 'ARP finds:'
+  show: 4
+  options:
+    a: The MAC address for an IP address on the local network
+    b: The IP for a domain name
+    c: The route to a network
+    d: A free IP address
+q8:
+  text: 'A switch receives a frame for a MAC it doesn''t know. It:'
+  show: 4
+  options:
+    a: Floods it out every other port
+    b: Drops it
+    c: Sends it to the router
+    d: Asks DNS
+q9:
+  text: Which header changes at every router hop?
+  show: 4
+  options:
+    a: The Ethernet (MAC) header
+    b: The IP addresses
+    c: The TCP ports
+    d: The HTTP request
+q10:
+  text: What is a VLAN?
+  show: 4
+  options:
+    a: One switch split into separate layer 2 networks
+    b: A virtual router
+    c: A VPN
+    d: A wireless network
+q11:
+  text: How many usable hosts are in a /26?
+  show: 4
+  options:
+    a: '62'
+    b: '64'
+    c: '30'
+    d: '126'
+q12:
+  text: Which is a private address?
+  show: 4
+  options:
+    a: 10.4.5.6
+    b: 8.8.8.8
+    c: 100.25.3.1
+    d: 172.32.0.1
+q13:
+  text: 'For 172.16.35.123/20, the network address is:'
+  show: 4
+  options:
+    a: 172.16.32.0
+    b: 172.16.35.0
+    c: 172.16.0.0
+    d: 172.16.16.0
+q14:
+  text: 'A host has 169.254.12.3. That means:'
+  show: 4
+  options:
+    a: It didn't get an address from DHCP
+    b: It's a public server
+    c: It's the loopback
+    d: It's an IPv6 host
+q15:
+  text: Why avoid overlapping ranges between your VPCs and office network?
+  show: 4
+  options:
+    a: Overlapping networks can't be routed to each other
+    b: It wastes money
+    c: DNS stops working
+    d: It's illegal
+q16:
+  text: A router has routes 10.0.0.0/8 and 10.0.9.0/24. A packet goes to 10.0.9.7. Which route?
+  show: 4
+  options:
+    a: 10.0.9.0/24, the longest prefix match
+    b: 10.0.0.0/8
+    c: The default route
+    d: Both
+q17:
+  text: What does a router do to TTL?
+  show: 4
+  options:
+    a: Decrements it by one and drops the packet at 0
+    b: Increments it
+    c: Resets it to 64
+    d: Ignores it
+q18:
+  text: Which protocol exchanges routes between internet providers?
+  show: 4
+  options:
+    a: BGP
+    b: OSPF
+    c: ARP
+    d: DHCP
+q19:
+  text: 'In mtr, loss at one middle hop that doesn''t continue to later hops usually means:'
+  show: 4
+  options:
+    a: That router just deprioritizes replies; usually harmless
+    b: The link is broken
+    c: DNS failed
+    d: Your Wi-Fi is down
+q20:
+  text: Which command shows the route Linux would use for one destination?
+  show: 4
+  options:
+    a: ip route get 8.8.8.8
+    b: ip neigh 8.8.8.8
+    c: ss -r
+    d: dig 8.8.8.8
+q21:
+  text: 'The TCP handshake is:'
+  show: 4
+  options:
+    a: SYN, SYN-ACK, ACK
+    b: ACK, SYN, FIN
+    c: SYN, ACK, FIN
+    d: HELLO, OK, START
+q22:
+  text: '''Connection refused'' usually means:'
+  show: 4
+  options:
+    a: The host answered but nothing listens on that port
+    b: The host is down
+    c: DNS failed
+    d: A firewall silently dropped it
+q23:
+  text: Which uses UDP?
+  show: 4
+  options:
+    a: DNS queries and HTTP/3 (QUIC)
+    b: SSH
+    c: HTTPS over HTTP/1.1
+    d: PostgreSQL
+q24:
+  text: 'Many connections stuck in CLOSE-WAIT on a server suggest:'
+  show: 4
+  options:
+    a: The application isn't closing its connections
+    b: Normal busy traffic
+    c: The network is down
+    d: DNS is slow
+q25:
+  text: Why must firewalls cover IPv6 too?
+  show: 4
+  options:
+    a: IPv6 hosts often have global addresses with no NAT in front
+    b: IPv6 is always encrypted
+    c: IPv6 has no ports
+    d: Firewalls can't see IPv4
+q26:
+  text: Which DNS record holds an IPv4 address?
+  show: 4
+  options:
+    a: A
+    b: AAAA
+    c: MX
+    d: CNAME
+q27:
+  text: What does a DNS TTL control?
+  show: 4
+  options:
+    a: How long resolvers may cache the answer
+    b: How many hops a query takes
+    c: The record's priority
+    d: Encryption strength
+q28:
+  text: 'DHCP''s four steps are:'
+  show: 4
+  options:
+    a: Discover, Offer, Request, Acknowledge
+    b: Send, Receive, Ack, Close
+    c: Ask, Reply, Store, Use
+    d: Query, Answer, Cache, Expire
+q29:
+  text: What does SNI do in TLS?
+  show: 4
+  options:
+    a: Tells the server which hostname the client wants, so it can pick the right certificate
+    b: Encrypts the hostname
+    c: Checks DNS
+    d: Speeds up TCP
+q30:
+  text: 'A 502 Bad Gateway from a load balancer means:'
+  show: 4
+  options:
+    a: The proxy couldn't get a valid answer from the server behind it
+    b: Your request was wrong
+    c: The page doesn't exist
+    d: Your password is wrong
+q31:
+  text: 'Latency is:'
+  show: 4
+  options:
+    a: 'The time for data to travel (RTT: there and back)'
+    b: How much data per second
+    c: Packet loss
+    d: The number of hops
+q32:
+  text: 'Small requests work but big transfers hang. A classic cause:'
+  show: 4
+  options:
+    a: An MTU problem with blocked ICMP 'too big' messages
+    b: DNS failure
+    c: Wrong IP address
+    d: Expired certificate
+q33:
+  text: 'In tcpdump, repeated SYNs with no reply mean:'
+  show: 4
+  options:
+    a: Packets are dropped on the way or the reply is lost
+    b: The port is closed
+    c: The connection is open
+    d: DNS is broken
+q34:
+  text: Which tool measures real throughput between two machines?
+  show: 4
+  options:
+    a: iperf3
+    b: ping
+    c: dig
+    d: ss
+q35:
+  text: '`tcpdump -n` means:'
+  show: 4
+  options:
+    a: Don't resolve names; show plain IPs and ports
+    b: Capture only new connections
+    c: Capture n packets
+    d: No payload
+q36:
+  text: 'Before sending a packet to an internet server, a laptop first needs:'
+  show: 4
+  options:
+    a: The gateway's MAC address (from ARP)
+    b: The server's MAC address
+    c: A TLS certificate
+    d: The server's routing table
+q37:
+  text: Where does the source address change from private to public?
+  show: 4
+  options:
+    a: At the NAT router
+    b: At the DNS server
+    c: At the switch
+    d: Never
+q38:
+  text: Which comes first when opening an HTTPS page?
+  show: 4
+  options:
+    a: DNS lookup, then TCP handshake, then TLS handshake
+    b: TLS, then DNS, then TCP
+    c: TCP, then DNS, then TLS
+    d: HTTP, then TLS
+q39:
+  text: 'Ping to 1.1.1.1 works, but dig example.com fails. The problem is:'
+  show: 4
+  options:
+    a: DNS
+    b: The gateway
+    c: The cable
+    d: The certificate
+q40:
+  text: 'nc -zv db 5432 times out. Next you check:'
+  show: 4
+  options:
+    a: Firewalls (host and cloud) and routing between the two
+    b: Whether Postgres is listening (that would be refused)
+    c: The TLS certificate
+    d: DNS TTL

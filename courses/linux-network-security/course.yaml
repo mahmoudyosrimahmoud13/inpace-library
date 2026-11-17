@@ -1,0 +1,257 @@
+id: linux-network-security
+title: Linux Networking and Security
+version: 1
+language: en
+description: 'Configure, secure and troubleshoot Linux on the network: threat models and attack surface, auditing what''s
+  exposed, ip, routes, bridges, veth and namespaces, name resolution, nftables firewalls, NAT and port forwarding (and the
+  Docker gotcha), SSH hardening, fail2ban, TLS certificates, openssl and mTLS, ACLs, SUID and sudo hardening, PAM and MFA,
+  auditd and log shipping, signs of intrusion, a hardening checklist, and a lab where HTTP stops working. Built around MIT
+  6.858 Computer Systems Security (Nickolai Zeldovich) and MIT''s Missing Semester; the videos are optional. Course 7 of the
+  Linux, Cloud and DevOps track. About 8 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: MIT 6.858 lecture notes and papers
+  url: https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/
+- title: nftables wiki
+  url: https://wiki.nftables.org/
+modules:
+- id: m1
+  title: 'Day 1: Threat models and attack surface'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: threat models and attack surface'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: 'Audit a server: what''s exposed?'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Audit a server you control (a VM is fine): open ports and their bind addresses, enabled services, accounts with
+      a shell, sudo rules, SUID files, pending updates, and an nmap scan from another machine. Run lynis and note the hardening
+      index. Upload a short findings table: finding, risk, fix.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain policy, threat model and mechanism using a small web shop as the example.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Linux network configuration'
+  lessons:
+  - id: m2-l1
+    title: Linux network configuration in depth
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Name resolution and network troubleshooting on Linux
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the network namespace and veth pair from the lesson and ping across it. Then add a name to /etc/hosts and
+      show `getent hosts` finding it while `dig` doesn't. Upload commands and output, and explain the difference.
+  - id: m2-explain
+    type: explain
+    prompt: Explain how a Docker container reaches the internet, using veth pairs, a bridge and NAT.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: nftables, NAT and port forwarding'
+  lessons:
+  - id: m3-l1
+    title: Firewalls with nftables
+    file: lessons/m3-l1.md
+    minutes: 40
+  - id: m3-l2
+    title: NAT, port forwarding, and the Docker gotcha
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write and load the default-deny nftables ruleset from the lesson (adapted to your server) with the 60-second safety
+      net. Show allowed and blocked connections from another machine, and the drop counter or log lines. Then run a container
+      with `-p 127.0.0.1:8080:80` and with `-p 8080:80` and show the difference with nmap from outside. Upload ruleset and
+      results.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why `ct state established,related accept` lets you write rules only for new connections.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: SSH hardening and authentication logs'
+  lessons:
+  - id: m4-l1
+    title: SSH hardening beyond the basics
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: fail2ban and watching authentication
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Apply the hardened sshd settings with AllowGroups, verify with `sshd -T` and ssh-audit, set up fail2ban with nftables
+      and trigger a ban from a test machine (then unban). Upload config, ssh-audit summary and the fail2ban status.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why agent forwarding is risky and what you'd use instead to reach a server behind a bastion.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: TLS on your servers'
+  lessons:
+  - id: m5-l1
+    title: TLS certificates on your servers
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: openssl in practice, mTLS and expiry
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Get a certificate (Let's Encrypt on a real domain, or a self-signed one in a lab) and configure nginx with the
+      modern settings and an HTTP-to-HTTPS redirect. Check it with openssl s_client and, if public, SSL Labs. Write the expiry
+      check function and run it. Upload configs and results.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why you must serve fullchain.pem and what goes wrong for some visitors if you serve only cert.pem.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Permissions and authentication'
+  lessons:
+  - id: m6-l1
+    title: 'Permissions in depth: ACLs, special bits and capabilities'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'Authentication: PAM, passwords and MFA'
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Create a shared team directory with SGID and a default ACL so every new file is group-writable, and prove it with
+      two users. Then audit SUID files and file capabilities on your server, and tighten one sudo rule. Upload commands, getfacl
+      output and your audit.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why `sudo vim` (or sudo on any program with a shell escape) is as good as giving full root.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Logging, auditing and intrusions'
+  lessons:
+  - id: m7-l1
+    title: Logging and auditing for security
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: Signs of intrusion, and what to do
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Set up two auditd watches (passwd and sshd_config), change both files, and find the events with ausearch. Build
+      an AIDE baseline, change a file in /etc, and show AIDE reporting it. Then write your own one-page incident checklist.
+      Upload output and the checklist.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why you rebuild a compromised server instead of cleaning it, and which secrets you rotate.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Hardening and the capstone lab'
+  lessons:
+  - id: m8-l1
+    title: A hardening checklist
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: 'Capstone: the lab where HTTP stopped working'
+    file: lessons/m8-l2.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Capstone: run the ''HTTP stopped working'' lab for at least five of the seven breakages, with the check that
+      identified each. Then harden the server with the checklist, run lynis before and after, and write the one-page runbook.
+      Upload the lab notes, lynis scores and runbook.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain how you'd tell apart 'the firewall drops port 80' and 'nginx listens only on 127.0.0.1', using one command
+      each.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

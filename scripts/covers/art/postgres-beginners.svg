@@ -1,0 +1,13 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="70" width="440" height="300" rx="16" fill="#fff6d6"/></g>
+<rect x="40" y="70" width="440" height="56" rx="16" fill="#2b1d00"/><rect x="40" y="110" width="440" height="16" fill="#2b1d00"/>
+<g font-family="JBM" font-weight="700" font-size="17" fill="#fff6d6"><text x="64" y="106">id</text><text x="130" y="106">name</text><text x="290" y="106">country</text><text x="400" y="106">total</text></g>
+<g font-family="JBM" font-weight="500" font-size="17" fill="#2b1d00">
+<text x="64" y="170">1</text><text x="130" y="170">Sara</text><text x="290" y="170">EG</text><text x="400" y="170">120.00</text>
+<text x="64" y="220">2</text><text x="130" y="220">Omar</text><text x="290" y="220">EG</text><text x="400" y="220">85.50</text>
+<text x="64" y="270">3</text><text x="130" y="270">Lena</text><text x="290" y="270">DE</text><text x="400" y="270">310.00</text>
+<text x="64" y="320">4</text><text x="130" y="320">Tom</text><text x="290" y="320">US</text><text x="400" y="320">42.00</text></g>
+<g filter="url(#s)"><rect x="40" y="400" width="440" height="100" rx="16" fill="#2b1d00"/></g>
+<g font-family="JBM" font-weight="600" font-size="19" fill="#ffd04d"><text x="64" y="440">SELECT country, sum(total)</text><text x="64" y="474">FROM orders GROUP BY 1;</text></g>
+</svg>

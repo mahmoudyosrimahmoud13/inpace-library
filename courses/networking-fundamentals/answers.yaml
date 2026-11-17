@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: Switches work inside one network by MAC address.
+q2:
+  right:
+  - a
+  why: Layer 2 is MAC and Ethernet; layer 4 TCP/UDP.
+q3:
+  right:
+  - a
+  why: They deliver data to the right program via ports.
+q4:
+  right:
+  - a
+  why: That's the default gateway.
+q5:
+  right:
+  - a
+  why: Guessing at layer 7 wastes time if the link is down.
+q6:
+  right:
+  - a
+  why: 128 + 64.
+q7:
+  right:
+  - a
+  why: DNS does names; DHCP gives addresses.
+q8:
+  right:
+  - a
+  why: It learns the MAC from the reply.
+q9:
+  right:
+  - a
+  why: IP addresses stay the same end to end (without NAT).
+q10:
+  right:
+  - a
+  why: VLANs segment networks for security and order.
+q11:
+  right:
+  - a
+  why: 2^6 = 64 addresses, minus network and broadcast.
+q12:
+  right:
+  - a
+  why: 10/8, 172.16/12 and 192.168/16 are private; 172.32 is outside 172.16-31.
+q13:
+  right:
+  - a
+  why: 'Block size 16 in the third byte: 32 to 47.'
+q14:
+  right:
+  - a
+  why: 169.254/16 is self-assigned link-local.
+q15:
+  right:
+  - a
+  why: Plan unique ranges before you connect them.
+q16:
+  right:
+  - a
+  why: The most specific route wins.
+q17:
+  right:
+  - a
+  why: That stops loops and makes traceroute possible.
+q18:
+  right:
+  - a
+  why: OSPF works inside one organization.
+q19:
+  right:
+  - a
+  why: Real loss continues to the destination.
+q20:
+  right:
+  - a
+  why: It names the gateway and interface.
+q21:
+  right:
+  - a
+  why: Three packets open the connection.
+q22:
+  right:
+  - a
+  why: Silent drops cause timeouts instead.
+q23:
+  right:
+  - a
+  why: DNS is UDP by default; QUIC runs over UDP.
+q24:
+  right:
+  - a
+  why: CLOSE-WAIT waits for the app to close.
+q25:
+  right:
+  - a
+  why: Without NAT, every device can be directly reachable.
+q26:
+  right:
+  - a
+  why: AAAA is IPv6; MX mail; CNAME an alias.
+q27:
+  right:
+  - a
+  why: Lower it before planned changes.
+q28:
+  right:
+  - a
+  why: DORA.
+q29:
+  right:
+  - a
+  why: One IP can host many HTTPS sites.
+q30:
+  right:
+  - a
+  why: 5xx means a server-side problem.
+q31:
+  right:
+  - a
+  why: Bandwidth is the amount per second.
+q32:
+  right:
+  - a
+  why: Big packets get dropped silently.
+q33:
+  right:
+  - a
+  why: A closed port sends a reset.
+q34:
+  right:
+  - a
+  why: Run iperf3 -s on one side and -c on the other.
+q35:
+  right:
+  - a
+  why: It's faster and clearer.
+q36:
+  right:
+  - a
+  why: Off-network traffic goes to the gateway.
+q37:
+  right:
+  - a
+  why: NAT rewrites the source address.
+q38:
+  right:
+  - a
+  why: Each step needs the one before.
+q39:
+  right:
+  - a
+  why: Routing works; name resolution doesn't.
+q40:
+  right:
+  - a
+  why: Timeouts point to drops on the path.

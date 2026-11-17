@@ -1,0 +1,10 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<g stroke="#0f2a3d" stroke-width="4" fill="none"><path d="M110 150 L260 280 L410 150"/><path d="M260 280 L260 420"/><path d="M110 150 L410 150" stroke-dasharray="8 8"/></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" text-anchor="middle">
+<rect x="40" y="110" width="140" height="80" rx="14" fill="#0f2a3d"/><text x="110" y="146" fill="#eef7fc" font-size="18">laptop</text><text x="110" y="172" fill="#7fd3ff" font-size="15">192.168.1.20</text>
+<rect x="340" y="110" width="140" height="80" rx="14" fill="#0f2a3d"/><text x="410" y="146" fill="#eef7fc" font-size="18">server</text><text x="410" y="172" fill="#7fd3ff" font-size="15">10.0.5.10</text>
+<circle cx="260" cy="280" r="58" fill="#eef7fc" stroke="#0f2a3d" stroke-width="4"/><text x="260" y="288" fill="#0f2a3d" font-size="20">router</text>
+<rect x="150" y="420" width="220" height="70" rx="14" fill="#0f2a3d"/><text x="260" y="463" fill="#eef7fc" font-size="19">10.0.0.0/16</text></g>
+<g font-family="JBM" font-size="15" font-weight="600" fill="#0f2a3d"><text x="70" y="250">TCP :443</text><text x="340" y="250">DNS · ARP</text></g>
+</svg>

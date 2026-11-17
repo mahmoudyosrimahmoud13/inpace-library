@@ -240,6 +240,22 @@ def submit_roadmap(event: dict) -> dict:
 # Checks
 # ---------------------------------------------------------------------------
 
+def sections() -> list[dict]:
+    """The library's sections in order (sections.yaml). Courses name theirs in library.yaml: `section: id`."""
+    f = ROOT / "sections.yaml"
+    out = yaml.safe_load(f.read_text(encoding="utf-8")) if f.exists() else []
+    out = [s for s in (out or []) if isinstance(s, dict) and s.get("id")]
+    if not any(s["id"] == "other" for s in out):
+        out.append({"id": "other", "en": "More courses", "ar": "دورات أخرى"})
+    return out
+
+
+def section_of(meta: dict) -> str:
+    ids = {s["id"] for s in sections()}
+    sec = str(meta.get("section") or "other")
+    return sec if sec in ids else "other"
+
+
 def load(folder: Path):
     course = load_course(files_from_folder(folder))
     meta = yaml.safe_load((folder / "library.yaml").read_text(encoding="utf-8")) if (folder / "library.yaml").exists() else {}
@@ -326,7 +342,7 @@ def build(out: Path) -> None:
             "version": course.version, "hash": course.hash, "modules": len(course.modules),
             "lessons": course.lesson_count,
             "minutes": sum(int(les.get("minutes") or 0) for m in course.modules for les in m["lessons"]),
-            "tags": meta.get("tags", []), "license": meta.get("license"),
+            "tags": meta.get("tags", []), "section": section_of(meta), "license": meta.get("license"),
             "author": {"name": author["name"] if author else meta.get("author", "inPace"),
                        "id": author["author"] if author else None, "verified": verified or bool(meta.get("official"))},
             "downloads": course.extra.get("downloads", []),
@@ -364,6 +380,7 @@ def build(out: Path) -> None:
     for c in entries:  # each course knows the roadmaps it's on (for its page)
         c["roadmaps"] = [r["id"] for r in road if any(st["course"] == c["id"] for st in r["steps"])]
     index = {"inpace": "library", "v": 1, "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+             "sections": [x for x in sections() if any(c["section"] == x["id"] for c in entries)],
              "courses": entries, "roadmaps": road}
     (out / "library.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     # A tiny summary other pages can read (inPace's website shows the number of courses from it).
@@ -532,6 +549,11 @@ h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); margin: 0 0 .6rem; line-height: 1.05
 .topics { display: flex; flex-wrap: wrap; gap: .45rem; }
 .topic { font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; padding: .3rem .75rem; background: var(--surface); color: var(--ink); border: 2px solid var(--ink); }
 .topic[aria-pressed=true] { background: var(--ink); color: var(--paper); }
+.sec { margin-top: 1.2rem; }
+.filters { display: flex; gap: .5rem; flex-wrap: wrap; margin: .2rem 0 .6rem; }
+.filters select { font: inherit; font-size: .9rem; padding: .35rem .55rem; border: 2px solid var(--ink); background: var(--surface); color: var(--ink); flex: 0 1 12rem; }
+.sec-title { font-size: 1.35rem; margin: 1.6rem 0 .8rem; display: flex; align-items: center; gap: .6rem; }
+.sec-n { font-size: .85rem; font-weight: 700; border: 2px solid var(--ink); padding: 0 .45rem; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 1.6rem; padding-block: .4rem 3rem; }
 .card { display: flex; flex-direction: column; background: var(--surface); border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); transition: transform .12s, box-shadow .12s; }
 [dir=rtl] .card { box-shadow: -6px 6px 0 var(--ink); }
@@ -901,16 +923,32 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
     for c in entries:
         for tag in {str(x).lower() for x in c["tags"]}:
             counts[tag] = counts.get(tag, 0) + 1
-    topics = [k for k, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])) if n > 1][:10]
+    secs = [x for x in sections() if any(c.get("section", "other") == x["id"] for c in entries)]
+    order = {x["id"]: i for i, x in enumerate(secs)}
+    rank = {"beginner": 0, "intermediate": 1, "advanced": 2}
+    level = lambda c: min([rank[str(x).lower()] for x in c["tags"] if str(x).lower() in rank] or [1])
+    entries = sorted(entries, key=lambda c: (order.get(c.get("section", "other"), 99), level(c), c.get("language") != "en", c["title"].lower()))
     cards = []
+    shown_sec = None
     for c in entries:
-        words = " ".join([c["id"], c["title"], c["description"], c["author"]["name"]] + c["tags"]).lower()
+        sec = c.get("section", "other")
+        if sec != shown_sec:
+            if shown_sec is not None:
+                cards.append("</div></section>")
+            label = next((x for x in secs if x["id"] == sec), {"en": sec, "ar": sec})
+            n = sum(1 for x in entries if x.get("section", "other") == sec)
+            cards.append(f'<section class="sec" data-sec="{e(sec)}"><h2 class="sec-title">{t(e(label["en"]), e(label.get("ar") or label["en"]))} '
+                         f'<span class="sec-n">{n}</span></h2><div class="grid">')
+            shown_sec = sec
+        lesson_titles = " ".join(m["title"] + " " + " ".join(l["title"] for l in m["lessons"]) for m in c.get("outline") or [])
+        words = " ".join([c["id"], c["title"], " ".join(c["tags"]), sec, c["description"], c["author"]["name"], lesson_titles]).lower()
+        lvl = next((x for x in ("beginner", "intermediate", "advanced") if x in [str(y).lower() for y in c["tags"]]), "")
         dl = ""
         if c["downloads"]:
             d = c["downloads"][0]
             size = " · " + e(d["size"]) if d.get("size") else ""
-            dl = f'<p class="by">{ic("video")} {t("Videos download separately", "الفيديوهات تُحمّل منفصلة")}{size}</p>'
-        cards.append(f"""<article class="card" id="{e(c["id"])}" data-q="{e(words)}" data-tags="{e('|'.join(x.lower() for x in c['tags']))}">
+            dl = f'<p class="by">{ic("video")} {t("Extra downloads", "تنزيلات إضافية")}{size}</p>'
+        cards.append(f"""<article class="card" id="{e(c["id"])}" data-q="{e(words)}" data-title="{e((c["title"] + " " + " ".join(c["tags"])).lower())}" data-level="{lvl}" data-lang="{e(c["language"])}" data-sec="{e(sec)}" data-tags="{e('|'.join(x.lower() for x in c['tags']))}">
   <a class="cover-link" href="c/{e(c["id"])}.html" tabindex="-1" aria-hidden="true">{cover_html(c, "")}</a>
   <div class="body">
     <h2 dir="auto"><a href="c/{e(c["id"])}.html">{e(c["title"])}</a></h2>
@@ -921,6 +959,8 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
       <a class="btn" href="c/{e(c["id"])}.html">{t("See what's inside", "شاهد المحتوى")}</a></div>
   </div>
 </article>""")
+    if shown_sec is not None:
+        cards.append("</div></section>")
     total_h = round(sum(c.get("minutes") or 0 for c in entries) / 60)
     roadmaps_section = ""
     if road:
@@ -939,7 +979,8 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
                 f'<a class="tab" id="tab-roadmaps" role="tab" href="#roadmaps" data-tab="roadmaps" aria-selected="false">{ic("route")}{t("Roadmaps", "مسارات التعلّم")} <span class="n">{len(road)}</span>'
                 f' <span class="new">{t("New", "جديد")}</span></a></nav>')
     chips = (f'<button class="topic" type="button" data-topic="" aria-pressed="true">{t("All", "الكل")}</button>' +
-             "".join(f'<button class="topic" type="button" data-topic="{e(x)}" aria-pressed="false">{e(x)}</button>' for x in topics))
+             "".join(f'<button class="topic" type="button" data-topic="{e(x["id"])}" aria-pressed="false">{t(e(x["en"]), e(x.get("ar") or x["en"]))}</button>'
+                     for x in secs))
     body = f"""<div class="wrap">
 <header class="hero">
   <div>
@@ -953,9 +994,13 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
 <section class="panel" id="courses" data-panel="courses" role="tabpanel" aria-labelledby="tab-courses">
 <div class="tools">
   <label class="find">{ic("search")}<input type="search" id="q" dir="auto" data-ph-en="Search courses" data-ph-ar="ابحث في الدورات"></label>
+  <div class="filters">
+    <select id="lvl" aria-label="Level"><option value="">{t("Any level", "أي مستوى")}</option><option value="beginner">{t("Beginner", "مبتدئ")}</option><option value="intermediate">{t("Intermediate", "متوسط")}</option><option value="advanced">{t("Advanced", "متقدم")}</option></select>
+    <select id="lng" aria-label="Language"><option value="">{t("Any language", "أي لغة")}</option><option value="en">English</option><option value="ar">العربية</option></select>
+  </div>
   <div class="topics" role="group" aria-label="Topics">{chips}</div>
 </div>
-<main class="grid" id="list">
+<main id="list">
 {"".join(cards) or '<p class="empty">' + t("No courses yet.", "لا توجد دورات بعد.") + '</p>'}
 </main>
 <p class="empty" id="none" hidden>{t("No course matches that. Try another word or topic.", "لا توجد دورة تطابق ذلك. جرّب كلمة أو موضوعًا آخر.")}</p>
@@ -979,14 +1024,47 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
 </div></section>"""
     script = """<script>
 var q = document.getElementById("q"), cards = [].slice.call(document.querySelectorAll("#list .card")), topic = "";
+var lvl = document.getElementById("lvl"), lng = document.getElementById("lng");
+var SAME = {k8s: "kubernetes", js: "javascript", py: "python", ml: "machine learning", dl: "deep learning", db: "database",
+  postgres: "postgresql", pg: "postgresql", ai: "artificial intelligence", cicd: "ci/cd", os: "operating systems",
+  "بايثون": "python", "لينكس": "linux", "انجليزي": "english", "الماني": "german", "اسباني": "spanish"};
+function fold(s) { return String(s || "").toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f\\u064b-\\u065f\\u0670]/g, "")
+  .replace(/[أإآٱ]/g, "ا").replace(/ة/g, "ه").replace(/ى/g, "ي").replace(/ـ/g, ""); }
+function near(t, words) {
+  if (t.length < 5) return false;
+  return words.some(function (w) {
+    if (Math.abs(w.length - t.length) > 1 || w[0] !== t[0]) return false;
+    var i = 0, j = 0, ed = 0;
+    while (i < t.length && j < w.length) {
+      if (t[i] === w[j]) { i++; j++; continue; }
+      if (++ed > 1) return false;
+      if (t.length > w.length) i++; else if (w.length > t.length) j++; else { i++; j++; }
+    }
+    return ed + (t.length - i) + (w.length - j) <= 1;
+  });
+}
+cards.forEach(function (c, i) { c._o = i; c._q = fold(c.dataset.q); c._t = fold(c.dataset.title); c._w = c._q.split(/[^\\p{L}\\p{N}#+.]+/u); });
 function run() {
-  var w = q.value.toLowerCase().split(/\\s+/).filter(Boolean), shown = 0;
+  var w = fold(q.value).split(/\\s+/).filter(Boolean), shown = 0, L = lvl.value, G = lng.value;
   cards.forEach(function (c) {
-    var ok = w.every(function (x) { return c.dataset.q.indexOf(x) >= 0; }) && (!topic || c.dataset.tags.split("|").indexOf(topic) >= 0);
+    var sc = 0;
+    for (var k = 0; k < w.length; k++) {
+      var x = w[k], alt = SAME[x] ? fold(SAME[x]) : null;
+      var has = function (s) { return s.indexOf(x) >= 0 || (alt && s.indexOf(alt) >= 0); };
+      if (has(c._t)) sc += 3; else if (has(c._q)) sc += 1; else if (near(x, c._w)) sc += 0.5; else { sc = -1; break; }
+    }
+    c._s = sc;
+    var ok = sc >= 0 && (!topic || c.dataset.sec === topic || c.dataset.tags.split("|").indexOf(topic) >= 0) &&
+      (!L || c.dataset.level === L) && (!G || c.dataset.lang === G);
     c.hidden = !ok; shown += ok; });
+  [].forEach.call(document.querySelectorAll("#list .grid"), function (g) {
+    var kids = [].slice.call(g.children).sort(function (a, b) { return w.length ? (b._s - a._s) || (a._o - b._o) : a._o - b._o; });
+    kids.forEach(function (k) { g.appendChild(k); }); });
+  [].forEach.call(document.querySelectorAll("#list .sec"), function (s) {
+    s.hidden = !s.querySelector(".card:not([hidden])"); });
   document.getElementById("none").hidden = shown > 0;
 }
-q.addEventListener("input", run);
+q.addEventListener("input", run); lvl.addEventListener("change", run); lng.addEventListener("change", run);
 [].forEach.call(document.querySelectorAll(".topic"), function (b) {
   b.addEventListener("click", function () {
     topic = b.dataset.topic;
@@ -1106,7 +1184,7 @@ def course_page(c: dict, road: list[dict] | None = None) -> str:
     dl = ""
     if c["downloads"]:
         d = c["downloads"][0]
-        dl = f'<p class="by">{ic("video")} {t("Videos download separately", "الفيديوهات تُحمّل منفصلة")}{" · " + e(d["size"]) if d.get("size") else ""}</p>'
+        dl = f'<p class="by">{ic("video")} {t("Extra downloads", "تنزيلات إضافية")}{" · " + e(d["size"]) if d.get("size") else ""}</p>'
     credit = f'<p>{e(c["credit"])}</p>' if c.get("credit") else ""
     if c.get("book"):
         b = c["book"]

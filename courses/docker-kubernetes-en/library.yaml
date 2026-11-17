@@ -7,6 +7,8 @@ tags:
 - devops
 - containers
 - interview
+- intermediate
 updated: '2026-11-13'
-credit: 'Video: Docker and Kubernetes by Ahmed Sami (Big Data بالعربي on YouTube), embedded from YouTube. Companion
-  files: github.com/ahmedsami76/AraBigData. Notes, tasks and questions: inPace.'
+credit: 'Video: Docker and Kubernetes by Ahmed Sami (Big Data بالعربي on YouTube), embedded from YouTube. Companion files:
+  github.com/ahmedsami76/AraBigData. Notes, tasks and questions: inPace.'
+section: linux-cloud-devops

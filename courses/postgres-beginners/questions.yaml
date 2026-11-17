@@ -1,0 +1,320 @@
+q1:
+  text: 'In a relational database, data lives in:'
+  show: 4
+  options:
+    a: Tables of rows and columns that link to each other
+    b: One big text file
+    c: Folders of documents
+    d: Key-value pairs only
+q2:
+  text: What does `\dt` do in psql?
+  show: 4
+  options:
+    a: Lists the tables in the current database
+    b: Deletes a table
+    c: Describes a database
+    d: Shows the time
+q3:
+  text: Why must SQL statements end with a semicolon in psql?
+  show: 4
+  options:
+    a: psql waits for it to know the statement is complete
+    b: To save the data
+    c: It's a comment
+    d: To run them faster
+q4:
+  text: 'String values in SQL use:'
+  show: 4
+  options:
+    a: Single quotes
+    b: Double quotes
+    c: Backticks
+    d: No quotes
+q5:
+  text: What's true about DROP DATABASE?
+  show: 4
+  options:
+    a: It deletes the database permanently, with no undo
+    b: It moves it to a recycle bin
+    c: It only disconnects
+    d: It needs a reboot to apply
+q6:
+  text: Which type should store money?
+  show: 4
+  options:
+    a: numeric(10,2)
+    b: double precision
+    c: real
+    d: text
+q7:
+  text: Which type is best for a moment in time?
+  show: 4
+  options:
+    a: timestamptz
+    b: timestamp
+    c: text
+    d: date
+q8:
+  text: What does `GENERATED ALWAYS AS IDENTITY` give a column?
+  show: 4
+  options:
+    a: Automatic numbers 1, 2, 3...
+    b: Random UUIDs
+    c: The current date
+    d: A unique email
+q9:
+  text: How do you find rows where country_code has no value?
+  show: 4
+  options:
+    a: WHERE country_code IS NULL
+    b: WHERE country_code = NULL
+    c: WHERE country_code = ''
+    d: WHERE country_code = 0
+q10:
+  text: What does RETURNING do on an INSERT?
+  show: 4
+  options:
+    a: Shows values of the new rows, like generated ids
+    b: Undoes the insert
+    c: Returns the old values
+    d: Repeats the insert
+q11:
+  text: Which keeps only the first 10 rows?
+  show: 4
+  options:
+    a: LIMIT 10
+    b: TOP 10 only
+    c: FIRST 10
+    d: MAX 10
+q12:
+  text: Which matches any case?
+  show: 4
+  options:
+    a: ILIKE
+    b: LIKE
+    c: MATCH
+    d: SIMILAR
+q13:
+  text: 'BETWEEN 1 AND 10 includes:'
+  show: 4
+  options:
+    a: Both 1 and 10
+    b: Neither end
+    c: Only 1
+    d: Only 10
+q14:
+  text: Why can't you use a SELECT alias inside WHERE?
+  show: 4
+  options:
+    a: WHERE runs before SELECT
+    b: Aliases are only for tables
+    c: WHERE can't read columns
+    d: It's a Postgres bug
+q15:
+  text: What does `SELECT DISTINCT country_code` return?
+  show: 4
+  options:
+    a: Each country code once
+    b: The number of countries
+    c: Only NULL codes
+    d: The first row
+q16:
+  text: What does count(column) do with NULLs?
+  show: 4
+  options:
+    a: Skips them
+    b: Counts them as 0
+    c: Fails
+    d: Counts them twice
+q17:
+  text: '''column must appear in the GROUP BY clause'' means:'
+  show: 4
+  options:
+    a: A selected column is neither grouped nor aggregated
+    b: The table is empty
+    c: You need an index
+    d: GROUP BY is misspelled
+q18:
+  text: 'HAVING filters:'
+  show: 4
+  options:
+    a: Groups, after aggregation
+    b: Rows, before grouping
+    c: Columns
+    d: Tables
+q19:
+  text: What is 7 / 2 in Postgres?
+  show: 4
+  options:
+    a: '3'
+    b: '3.5'
+    c: '4'
+    d: An error
+q20:
+  text: 'COALESCE(country_code, ''unknown'') returns:'
+  show: 4
+  options:
+    a: country_code, or 'unknown' when it's NULL
+    b: Always 'unknown'
+    c: NULL when country_code is NULL
+    d: The length of country_code
+q21:
+  text: What does `now() - interval '7 days'` give?
+  show: 4
+  options:
+    a: The moment exactly a week ago
+    b: Seven
+    c: Today's date
+    d: An error
+q22:
+  text: '`SET timezone = ''Africa/Cairo''` changes:'
+  show: 4
+  options:
+    a: How timestamptz values are displayed, not what's stored
+    b: The stored values
+    c: The server clock
+    d: Only dates
+q23:
+  text: Why filter one day with a range instead of `ordered_at::date = ...`?
+  show: 4
+  options:
+    a: The range can use an index on ordered_at
+    b: Casting is wrong
+    c: Ranges are shorter
+    d: Dates can't be compared
+q24:
+  text: 'A primary key guarantees:'
+  show: 4
+  options:
+    a: Unique and never NULL
+    b: Only unique
+    c: Only not NULL
+    d: An index on every column
+q25:
+  text: Why use a surrogate id as the primary key instead of the email?
+  show: 4
+  options:
+    a: Emails can change; an id never needs to
+    b: Emails are too long to index
+    c: Postgres forbids text keys
+    d: IDs are encrypted
+q26:
+  text: 'An UPDATE without WHERE:'
+  show: 4
+  options:
+    a: Changes every row in the table
+    b: Changes nothing
+    c: Changes only the first row
+    d: Fails
+q27:
+  text: What does ROLLBACK do?
+  show: 4
+  options:
+    a: Undoes everything since BEGIN
+    b: Saves the changes
+    c: Deletes the table
+    d: Restarts Postgres
+q28:
+  text: 'Other sessions see your changes inside a transaction:'
+  show: 4
+  options:
+    a: Only after you COMMIT
+    b: Immediately
+    c: Never
+    d: After a minute
+q29:
+  text: 'In ON CONFLICT DO UPDATE, EXCLUDED is:'
+  show: 4
+  options:
+    a: The row you tried to insert
+    b: The existing row
+    c: A deleted row
+    d: A system table
+q30:
+  text: ON CONFLICT needs which on the conflict column?
+  show: 4
+  options:
+    a: A unique constraint or unique index
+    b: A foreign key
+    c: A CHECK constraint
+    d: Nothing
+q31:
+  text: 'A foreign key guarantees:'
+  show: 4
+  options:
+    a: The referenced row exists
+    b: Values are unique
+    c: The column isn't NULL
+    d: The column is indexed
+q32:
+  text: How do you model many-to-many (orders and products)?
+  show: 4
+  options:
+    a: A join table with both ids, like order_items
+    b: Put a list of ids in a text column
+    c: Two foreign keys in each table
+    d: It can't be done
+q33:
+  text: Which finds customers who never ordered?
+  show: 4
+  options:
+    a: LEFT JOIN orders ... WHERE o.id IS NULL
+    b: INNER JOIN orders
+    c: JOIN ... WHERE o.id = 0
+    d: RIGHT JOIN customers
+q34:
+  text: 'ON DELETE CASCADE on order_items means:'
+  show: 4
+  options:
+    a: Deleting an order deletes its items too
+    b: Items can't be deleted
+    c: Orders can't be deleted
+    d: Items are copied
+q35:
+  text: Sums are too big after joining customers to orders and reviews. Why?
+  show: 4
+  options:
+    a: Each order is paired with each review, multiplying rows
+    b: NULLs are counted twice
+    c: numeric overflow
+    d: Joins round numbers
+q36:
+  text: 'Gaps in identity column numbers are:'
+  show: 4
+  options:
+    a: 'Normal: rolled-back inserts still use numbers'
+    b: A sign of data loss
+    c: A bug to fix
+    d: Impossible
+q37:
+  text: Which function creates a random UUID in modern Postgres?
+  show: 4
+  options:
+    a: gen_random_uuid()
+    b: uuid()
+    c: random_id()
+    d: newid()
+q38:
+  text: '`\copy` in psql reads files from:'
+  show: 4
+  options:
+    a: Your computer, the client
+    b: The database server only
+    c: The internet
+    d: The Postgres data folder
+q39:
+  text: Which command backs up a whole database?
+  show: 4
+  options:
+    a: pg_dump
+    b: pg_copy
+    c: \backup
+    d: SELECT * INTO FILE
+q40:
+  text: Which index stops a copy being on two open loans at once?
+  show: 4
+  options:
+    a: A unique partial index on copy_id WHERE returned_on IS NULL
+    b: A primary key on copy_id
+    c: A foreign key on copy_id
+    d: A CHECK constraint on returned_on

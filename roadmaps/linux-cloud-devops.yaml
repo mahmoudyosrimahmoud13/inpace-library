@@ -1,19 +1,29 @@
 id: linux-cloud-devops
 title: Linux, Cloud and DevOps
-description: From what an operating system really does to running Linux servers and containers. Built for people who want to be genuinely strong at servers, cloud and troubleshooting. New courses join this path as they are published.
+description: From what an operating system really does to running, securing and automating Linux servers, then containers and delivery pipelines. Built for people who want to be genuinely strong at servers, cloud and troubleshooting. New courses join this path as they are published.
 language: en
 author: inPace
 official: true
 order: 19
-tags: [linux, operating systems, sysadmin, devops, cloud]
+tags: [linux, operating systems, sysadmin, networking, security, devops, cloud]
 steps:
   - course: os-fundamentals
-    note: The mental model first. Processes, memory, files and boot, so everything Linux does later makes sense.
+    note: "The mental model first. Processes, memory, files and boot, so everything Linux does later makes sense."
   - course: linux-fundamentals
-    note: Become fluent in the terminal. Files, pipes, text tools, permissions and processes.
+    note: "Become fluent in the terminal. Files, pipes, text tools, permissions and processes."
   - course: linux-sysadmin
-    note: Run real servers. Services, logs, users, SSH, disks, firewall and backups.
+    note: "Run real servers. Services, logs, users, SSH, disks, firewall and backups."
   - course: linux-advanced-internals
-    note: Look inside. /proc, signals, performance, namespaces and cgroups, and a container built by hand.
+    note: "Look inside. /proc, signals, performance, namespaces and cgroups, and a container built by hand."
+  - course: bash-automation
+    note: "Automate it. Scripts you can trust, ending with a backup script that checks, verifies, alerts and cleans up."
+  - course: networking-fundamentals
+    note: "How data really moves. Layers, subnetting, routing, TCP, DNS and TLS, from the ground up."
+  - course: linux-network-security
+    note: "Put networking to work on servers. nftables, NAT, SSH and TLS, auditing, and a hardening lab."
+  - course: git-zero-to-master
+    note: "Professional Git, from the first commit to recovering lost work with the reflog."
   - course: docker-kubernetes-en
-    note: Containers and clusters. After the internals course you'll know which kernel feature does each part. The video is in Egyptian Arabic; the English notes cover everything.
+    note: "Containers and clusters. After the internals course you'll know which kernel feature does each part. The video is in Egyptian Arabic; the English notes cover everything."
+  - course: github-actions-cli
+    note: "Pull requests, the GitHub CLI and Actions: your first steps into CI/CD."

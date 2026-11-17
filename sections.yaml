@@ -1,0 +1,13 @@
+# The library's sections, in the order they appear on the site and in the app.
+# Every course belongs to exactly one (its library.yaml has `section: <id>`).
+# scripts/organize_library.py fills in sections and tidies tags for all courses.
+- {id: linux-cloud-devops, en: "Linux, Cloud and DevOps", ar: "لينكس والسحابة وDevOps"}
+- {id: programming-web,    en: "Programming and Web",     ar: "البرمجة والويب"}
+- {id: data-databases,     en: "Data and Databases",      ar: "البيانات وقواعد البيانات"}
+- {id: ai-ml,              en: "AI and Machine Learning", ar: "الذكاء الاصطناعي وتعلّم الآلة"}
+- {id: maths,              en: "Maths",                   ar: "الرياضيات"}
+- {id: careers,            en: "Careers and Interviews",  ar: "الوظائف والمقابلات"}
+- {id: business-finance,   en: "Business and Accounting", ar: "الأعمال والمحاسبة"}
+- {id: languages,          en: "Languages",               ar: "اللغات"}
+- {id: build-inpace,       en: "Build inPace",            ar: "ابنِ inPace"}
+- {id: other,              en: "More courses",            ar: "دورات أخرى"}

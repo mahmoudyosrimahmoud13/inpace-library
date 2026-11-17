@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: Tables relate through keys.
+q2:
+  right:
+  - a
+  why: Backslash commands belong to psql itself.
+q3:
+  right:
+  - a
+  why: Without it you see the -# continuation prompt.
+q4:
+  right:
+  - a
+  why: Double quotes are for identifiers like column names.
+q5:
+  right:
+  - a
+  why: Keep backups.
+q6:
+  right:
+  - a
+  why: Floating point can't represent cents exactly.
+q7:
+  right:
+  - a
+  why: It's stored in UTC and shown in your time zone.
+q8:
+  right:
+  - a
+  why: It's the modern replacement for serial.
+q9:
+  right:
+  - a
+  why: NULL is never equal to anything.
+q10:
+  right:
+  - a
+  why: Handy for getting the id back in one step.
+q11:
+  right:
+  - a
+  why: FETCH FIRST 10 ROWS ONLY is the standard spelling.
+q12:
+  right:
+  - a
+  why: ILIKE is case-insensitive LIKE.
+q13:
+  right:
+  - a
+  why: Both ends are inclusive.
+q14:
+  right:
+  - a
+  why: ORDER BY runs after SELECT, so it can.
+q15:
+  right:
+  - a
+  why: DISTINCT removes duplicate rows.
+q16:
+  right:
+  - a
+  why: count(*) counts every row.
+q17:
+  right:
+  - a
+  why: Every selected column must be grouped or aggregated.
+q18:
+  right:
+  - a
+  why: WHERE filters rows first.
+q19:
+  right:
+  - a
+  why: Integer division truncates; use 7 / 2.0.
+q20:
+  right:
+  - a
+  why: The first non-NULL value.
+q21:
+  right:
+  - a
+  why: Intervals do date arithmetic.
+q22:
+  right:
+  - a
+  why: Storage stays in UTC.
+q23:
+  right:
+  - a
+  why: Wrapping the column hides it from normal indexes.
+q24:
+  right:
+  - a
+  why: It identifies each row.
+q25:
+  right:
+  - a
+  why: Give the email a UNIQUE constraint instead.
+q26:
+  right:
+  - a
+  why: Always write and test the WHERE first.
+q27:
+  right:
+  - a
+  why: COMMIT makes changes permanent.
+q28:
+  right:
+  - a
+  why: Uncommitted changes are private.
+q29:
+  right:
+  - a
+  why: Use EXCLUDED.column for the new values.
+q30:
+  right:
+  - a
+  why: That's how Postgres detects the conflict.
+q31:
+  right:
+  - a
+  why: Index foreign key columns yourself.
+q32:
+  right:
+  - a
+  why: The join table can also hold quantity and price.
+q33:
+  right:
+  - a
+  why: LEFT JOIN keeps unmatched customers with NULLs.
+q34:
+  right:
+  - a
+  why: Use it only where children belong to the parent.
+q35:
+  right:
+  - a
+  why: Aggregate each side first, then join.
+q36:
+  right:
+  - a
+  why: Never rely on IDs having no gaps.
+q37:
+  right:
+  - a
+  why: Built in since Postgres 13.
+q38:
+  right:
+  - a
+  why: Plain COPY reads from the server.
+q39:
+  right:
+  - a
+  why: pg_restore loads it back.
+q40:
+  right:
+  - a
+  why: Partial unique indexes enforce rules on a subset of rows.

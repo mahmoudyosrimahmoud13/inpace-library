@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: 'The kernel reads #! to pick the interpreter.'
+q2:
+  right:
+  - a
+  why: No spaces around =.
+q3:
+  right:
+  - a
+  why: Single quotes prevent everything.
+q4:
+  right:
+  - a
+  why: :- gives a default value.
+q5:
+  right:
+  - a
+  why: -x traces commands with a + prefix.
+q6:
+  right:
+  - a
+  why: Quoted $@ keeps each argument whole.
+q7:
+  right:
+  - a
+  why: $0 is the name, $? the last exit code, $$ the PID.
+q8:
+  right:
+  - a
+  why: Errors stay visible even when stdout is redirected.
+q9:
+  right:
+  - a
+  why: Without pipefail only the last command counts.
+q10:
+  right:
+  - a
+  why: A failed cd followed by rm can be catastrophic.
+q11:
+  right:
+  - a
+  why: -d directory, -f regular file.
+q12:
+  right:
+  - a
+  why: Inside [[ ]], > compares strings.
+q13:
+  right:
+  - a
+  why: IFS= and -r keep spaces and backslashes.
+q14:
+  right:
+  - a
+  why: case uses shell patterns.
+q15:
+  right:
+  - a
+  why: break leaves the loop.
+q16:
+  right:
+  - a
+  why: return only gives a status 0-255.
+q17:
+  right:
+  - a
+  why: Variables are global by default.
+q18:
+  right:
+  - a
+  why: '## removes the longest match from the left.'
+q19:
+  right:
+  - a
+  why: Quoted [@] keeps each item separate.
+q20:
+  right:
+  - a
+  why: Strings of options break on spaces.
+q21:
+  right:
+  - a
+  why: That's why it's the right place to remove temp files.
+q22:
+  right:
+  - a
+  why: Predictable names in /tmp are a security and correctness problem.
+q23:
+  right:
+  - a
+  why: -n means non-blocking.
+q24:
+  right:
+  - a
+  why: Run it on every script.
+q25:
+  right:
+  - a
+  why: -- ends the option list.
+q26:
+  right:
+  - a
+  why: jq parses JSON properly.
+q27:
+  right:
+  - a
+  why: Unquoted EOF expands variables.
+q28:
+  right:
+  - a
+  why: Process substitution keeps the loop in the main shell.
+q29:
+  right:
+  - a
+  why: (( )) is integer-only.
+q30:
+  right:
+  - a
+  why: echo's handling of -e and backslashes varies.
+q31:
+  right:
+  - a
+  why: -n stops ssh reading stdin.
+q32:
+  right:
+  - a
+  why: Scripts can't answer prompts.
+q33:
+  right:
+  - a
+  why: Scripts get shared and committed.
+q34:
+  right:
+  - a
+  why: Silence is a failure too.
+q35:
+  right:
+  - a
+  why: -P sets parallelism.
+q36:
+  right:
+  - a
+  why: Fail before doing work.
+q37:
+  right:
+  - a
+  why: -t tests integrity.
+q38:
+  right:
+  - a
+  why: Compare the checksum before restoring.
+q39:
+  right:
+  - a
+  why: -n means no execution.
+q40:
+  right:
+  - a
+  why: Only a restore proves it.

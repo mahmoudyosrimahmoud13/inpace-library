@@ -96,3 +96,35 @@ courses:
     title: Linux,<br>from the inside
     sub: /proc, signals, performance, namespaces, cgroups and a container by hand
     tags: [16 lessons, 6 incident drills]
+
+  bash-automation:
+    theme: mint
+    art: bash-automation.svg
+    chip: Track 5 · 8 days
+    title: Scripts you<br>can trust
+    sub: Bash, strict mode, traps, locks, alerts and a real backup.sh
+    tags: [16 lessons, 40 quiz questions]
+
+  networking-fundamentals:
+    theme: sky
+    art: networking-fundamentals.svg
+    chip: Track 6 · 8 days
+    title: How data<br>really moves
+    sub: Layers, subnetting, routing, TCP, DNS, TLS and tcpdump
+    tags: [16 lessons, 40 quiz questions]
+
+  linux-network-security:
+    theme: plum
+    art: linux-network-security.svg
+    chip: Track 7 · 8 days
+    title: Lock down<br>Linux servers
+    sub: nftables, NAT, SSH, TLS, auditd and a hardening lab, with MIT 6.858
+    tags: [16 lessons, 40 quiz questions]
+
+  postgres-beginners:
+    theme: sun
+    art: postgres-beginners.svg
+    chip: Beginner · 8 days
+    title: SQL,<br>from zero
+    sub: Tables, queries, GROUP BY, keys and JOINs, then on to the advanced course
+    tags: [16 lessons, 40 quiz questions]

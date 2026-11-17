@@ -7,6 +7,7 @@ tags:
 - internals
 - performance
 - containers
-- devops-track
+- advanced
 credit: Written for the inPace library. Optional videos by Michael Kerrisk (man7.org), Brendan Gregg and MIT 6.S081, linked,
   not copied.
+section: linux-cloud-devops

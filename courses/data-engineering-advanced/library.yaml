@@ -10,5 +10,6 @@ tags:
 - bigquery
 - advanced
 updated: '2026-11-16'
-credit: Written for the inPace library. Videos from DataTalksClub's Data Engineering Zoomcamp (and Zach Wilson's
-  streaming session), linked, not copied.
+credit: Written for the inPace library. Videos from DataTalksClub's Data Engineering Zoomcamp (and Zach Wilson's streaming
+  session), linked, not copied.
+section: data-databases

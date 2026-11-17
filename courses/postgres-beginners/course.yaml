@@ -1,0 +1,255 @@
+id: postgres-beginners
+title: 'PostgreSQL for Beginners: from zero to real queries'
+version: 1
+language: en
+description: 'Start from nothing and finish writing the SQL people use every day: what a database is, installing Postgres
+  and psql, tables and data types, inserting data and NULL, SELECT with WHERE, ORDER BY and LIMIT, IN, BETWEEN and LIKE, GROUP
+  BY and HAVING, calculations, CASE, COALESCE and NULLIF, dates and time zones, keys and constraints, UPDATE, DELETE and transactions,
+  upserts, foreign keys and JOINs, UUIDs, CSV import and export, and a library database capstone. Built around Amigoscode''s
+  full PostgreSQL course on freeCodeCamp; the videos are optional. The prequel to Advanced PostgreSQL. About 8 days, 45 to
+  60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: PostgreSQL official documentation
+  url: https://www.postgresql.org/docs/current/
+- title: PostgreSQL tutorial in the official docs
+  url: https://www.postgresql.org/docs/current/tutorial.html
+modules:
+- id: m1
+  title: 'Day 1: Databases, Postgres and psql'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: databases, SQL and PostgreSQL'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: Install Postgres and meet psql
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install PostgreSQL (any way from the lesson), create your own role and a database called shop, connect with psql,
+      and run \l, \conninfo and SELECT version();. Upload a screenshot or the output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain to a friend why a company keeps customer data in a database instead of a shared spreadsheet.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Tables and data'
+  lessons:
+  - id: m2-l1
+    title: Creating tables and choosing data types
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Inserting data, and NULL
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Create the customers table from the lesson, insert five rows by hand (one with a NULL country), try inserting
+      a duplicate email to see the error, and generate 1,000 more rows with generate_series or Mockaroo. Upload your SQL and
+      `SELECT count(*), count(country_code) FROM customers;`.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what NULL means, and why `WHERE country_code = NULL` finds nothing.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Querying'
+  lessons:
+  - id: m3-l1
+    title: 'SELECT: filtering, sorting and limiting'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: IN, BETWEEN, LIKE and ILIKE
+    file: lessons/m3-l2.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Write and run queries for: the 10 newest customers; customers from EG or SA born in the 1990s; every distinct
+      country; emails ending with gmail.com in any case; page 3 of customers ordered by last name (10 per page). Upload queries
+      and results.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why rows come back in an unpredictable order without ORDER BY, even if they look ordered.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Aggregates and calculations'
+  lessons:
+  - id: m4-l1
+    title: 'Aggregates: COUNT, SUM, AVG and GROUP BY'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Calculations, aliases, COALESCE and NULLIF
+    file: lessons/m4-l2.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Create and fill the orders table. Answer: orders and revenue per status; the 10 customers who spent most (excluding
+      cancelled); revenue per month; how many orders are small, medium and large using CASE. Upload queries and results.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain the difference between WHERE and HAVING with one example of each in the same query.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Dates and constraints'
+  lessons:
+  - id: m5-l1
+    title: Dates, times and intervals
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: 'Keys and constraints: letting the database protect your data'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Answer: orders in the last 30 days; customers'' ages; orders per weekday. Then add constraints: lower-case emails,
+      valid statuses, and a reviews table with stars 1-5 and one review per customer per product. Show each constraint rejecting
+      a bad insert. Upload SQL and errors.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain why constraints in the database are more reliable than checks in the application code.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Changing data safely'
+  lessons:
+  - id: m6-l1
+    title: UPDATE, DELETE and transactions
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'Upserts: ON CONFLICT'
+    file: lessons/m6-l2.md
+    minutes: 20
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Inside a transaction: mark all old ''new'' orders as cancelled, check the count, and ROLLBACK. Do it again and
+      COMMIT. Then write an upsert that imports the same 3 customers twice without errors, and a page-view counter with ON
+      CONFLICT. Upload your SQL and outputs.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain your safe routine for running a DELETE on real data.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Relationships and joins'
+  lessons:
+  - id: m7-l1
+    title: Relationships and foreign keys
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: JOINs
+    file: lessons/m7-l2.md
+    minutes: 35
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Add the foreign key from orders to customers, create products and order_items, and fill them. Answer: customers
+      who never ordered; revenue per country; the items in one order; the top 5 products by quantity sold. Upload SQL and
+      results.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain the difference between INNER JOIN and LEFT JOIN using customers and orders.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: IDs, data in and out, and the capstone'
+  lessons:
+  - id: m8-l1
+    title: IDs, UUIDs, sequences, import and export
+    file: lessons/m8-l1.md
+    minutes: 25
+  - id: m8-l2
+    title: 'Capstone: design and query a small library database'
+    file: lessons/m8-l2.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Capstone: design, build and fill the library database and answer all eight questions. Upload your schema (or
+      `\d` output), the SQL for each question with results, and the exported overdue CSV. Bonus: the EXPLAIN ANALYZE of question
+      3.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain when you'd choose a UUID primary key instead of an identity column.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

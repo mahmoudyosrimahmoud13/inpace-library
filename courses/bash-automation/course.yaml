@@ -1,0 +1,257 @@
+id: bash-automation
+title: Bash and Linux Automation
+version: 1
+language: en
+description: 'Turn repetitive admin work into scripts you can trust: shebangs and variables, quoting and expansion, arguments
+  and getopts, exit codes and strict mode, tests, loops and reading files safely, functions, arrays and string tricks, traps,
+  temp files, locks and logging, ShellCheck and defensive habits, awk, sed and jq in scripts, scheduling and alerts, running
+  across many servers, and a full backup.sh that checks, backs up, verifies, logs, alerts and prunes. Built around MIT''s
+  Missing Semester and freeCodeCamp''s Bash course; the videos are optional. Course 5 of the Linux, Cloud and DevOps track.
+  About 8 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: Bash reference manual (GNU)
+  url: https://www.gnu.org/software/bash/manual/bash.html
+- title: 'ShellCheck wiki: every warning explained'
+  url: https://www.shellcheck.net/wiki/
+modules:
+- id: m1
+  title: 'Day 1: First scripts and quoting'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: your first script'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Quoting, expansion and command substitution
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write info.sh that prints your user, hostname, today's date, how many files are in /etc and the root disk use
+      percentage, using variables and command substitution. Run it with `bash -x` and upload the script and output. Then create
+      a file named 'my file.txt' and show a command that breaks without quotes and works with them.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why `rm $file` is dangerous and `rm "$file"` is safe, using word splitting and globbing.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Arguments and exit codes'
+  lessons:
+  - id: m2-l1
+    title: Arguments, input and options
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Exit codes and failing safely
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Write copyto.sh with getopts options -v (verbose) and -n (dry run) that copies the given files to a destination,
+      prints a usage message to stderr on wrong use and exits 2, checks every file exists, and uses set -euo pipefail. Upload
+      it with three runs: correct, missing file, and no arguments, showing `echo $?` after each.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain what each part of `set -euo pipefail` protects you from, with one example each.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Conditions and loops'
+  lessons:
+  - id: m3-l1
+    title: Tests, if and case
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Loops, and reading files line by line
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write svc.sh that takes start|stop|status and a service name (case statement), and a second script that reads
+      a hosts.txt file line by line and pings each host with a timeout, printing UP or DOWN. Upload both and their output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why `for f in $(ls)` is a bad way to loop over files and what to use instead.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Functions and arrays'
+  lessons:
+  - id: m4-l1
+    title: Functions
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: Arrays and string tricks
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Rewrite yesterday's host checker with a main function, a log function and an is_up function that returns a status.
+      Use an array for the ssh options and an associative array to count UP and DOWN hosts. Rename every .jpeg file in a test
+      folder to .jpg with parameter expansion. Upload the scripts and output.
+  - id: m4-explain
+    type: explain
+    prompt: Explain the difference between a function's return status and its output, and how you capture each.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Robust scripts'
+  lessons:
+  - id: m5-l1
+    title: Traps, temp files, locks and logging
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Defensive scripting and ShellCheck
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Take one of your scripts and make it robust: trap EXIT cleanup of an mktemp directory, a flock so two copies
+      can''t run, logging with timestamps, and zero ShellCheck warnings. Show two copies started at once and the second exiting
+      cleanly, and upload the shellcheck output before and after.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain what idempotent means with a configuration example, and why it matters for automation.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Text, JSON and a report'
+  lessons:
+  - id: m6-l1
+    title: 'Text and JSON inside scripts: awk, sed, jq, here-docs'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'Project: a daily server report'
+    file: lessons/m6-l2.md
+    minutes: 35
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build report.sh from the lesson, add two checks of your own, and run it on a real machine. Then fetch any public
+      JSON API with curl and pull two fields out with jq. Upload the script and both outputs.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why the report loop uses `done < <(df ...)` instead of `df ... | while`, and what goes wrong with the
+      pipe.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Scheduling, alerts and many servers'
+  lessons:
+  - id: m7-l1
+    title: Scheduling scripts and sending alerts
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'Many servers: ssh loops and parallel work'
+    file: lessons/m7-l2.md
+    minutes: 25
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Schedule report.sh with a systemd timer and make it send an alert (a webhook, or just a line to a log with logger)
+      when it exits non-zero. Then run one command across at least two machines (or localhost twice) with an ssh loop using
+      BatchMode and ConnectTimeout. Upload unit files and output.
+  - id: m7-explain
+    type: explain
+    prompt: Explain the classic `while read host; do ssh $host ...; done < hosts.txt` bug and the fix.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: The backup capstone'
+  lessons:
+  - id: m8-l1
+    title: 'Capstone: backup.sh, done properly'
+    file: lessons/m8-l1.md
+    minutes: 45
+  - id: m8-l2
+    title: Testing scripts, and putting them into service
+    file: lessons/m8-l2.md
+    minutes: 25
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Capstone: get backup.sh running on your server as a systemd service and timer with an env file. Test every failure
+      case from the lesson (missing dir, full disk, two at once, failed alert) and do a real restore with diff -r. Upload
+      the units, test results and restore proof. Bonus: two bats tests.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain why the backup script writes to a .partial file and renames it only after verifying, and what would go
+      wrong otherwise.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

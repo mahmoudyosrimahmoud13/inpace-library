@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+tags:
+- linux
+- security
+- networking
+- firewall
+- intermediate
+credit: Written for the inPace library. Optional videos by MIT 6.858 Computer Systems Security (Nickolai Zeldovich) and MIT's
+  Missing Semester, linked, not copied.
+section: linux-cloud-devops
