@@ -1,4 +1,4 @@
-name: "Discord: post the whole library"
+name: "Discord and Telegram: post the whole library"
 
 # Posts every course (with its cover) and every roadmap to the Discord #new-courses channel, section by section.
 # Only when you press "Run workflow". Meant to be run once: running it again posts everything again.
@@ -8,6 +8,11 @@ on:
       sure:
         description: "Type yes to post the whole library (about 100 posts, takes about 5 minutes)"
         default: "no"
+      where:
+        description: "Where to post"
+        type: choice
+        default: both
+        options: [both, discord, telegram]
 
 permissions:
   contents: read
@@ -30,5 +35,7 @@ jobs:
       - run: python scripts/library_tools.py build _site
       - name: Post to Discord
         env:
-          DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+          DISCORD_WEBHOOKS: ${{ inputs.where != 'telegram' && secrets.DISCORD_WEBHOOKS || '' }}
+          TELEGRAM_BOT_TOKEN: ${{ inputs.where != 'discord' && secrets.TELEGRAM_BOT_TOKEN || '' }}
+          TELEGRAM_CHAT: ${{ inputs.where != 'discord' && secrets.TELEGRAM_CHAT || '' }}
         run: python scripts/library_tools.py announce-all _site

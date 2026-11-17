@@ -1,4 +1,4 @@
-name: Discord announcement
+name: Discord and Telegram announcement
 
 # Posts an announcement with pictures to the Discord #announcements channel, only when you press
 # "Run workflow" (GitHub > Actions > Discord announcement). The text and pictures are in promo/.
@@ -8,6 +8,11 @@ on:
       post:
         description: "Which announcement (a file in promo/)"
         default: launch.yaml
+      where:
+        description: "Where to post"
+        type: choice
+        default: both
+        options: [both, discord, telegram]
 
 permissions:
   contents: read
@@ -25,5 +30,7 @@ jobs:
       - run: pip install -q pyyaml
       - name: Post to Discord
         env:
-          DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+          DISCORD_WEBHOOKS: ${{ inputs.where != 'telegram' && secrets.DISCORD_WEBHOOKS || '' }}
+          TELEGRAM_BOT_TOKEN: ${{ inputs.where != 'discord' && secrets.TELEGRAM_BOT_TOKEN || '' }}
+          TELEGRAM_CHAT: ${{ inputs.where != 'discord' && secrets.TELEGRAM_CHAT || '' }}
         run: python3 scripts/discord_promo.py "promo/${{ inputs.post }}"

@@ -36,6 +36,9 @@ def main(argv: list[str]) -> int:
         hook = json.loads(os.environ.get("DISCORD_WEBHOOKS") or "{}").get("announcements")
     except ValueError:
         hook = None
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import html
+    import telegram_post as tg
     for p in posts:
         files = [src.parent / f for f in p.get("files", [])]
         missing = [f.name for f in files if not f.is_file()]
@@ -44,8 +47,14 @@ def main(argv: list[str]) -> int:
         text = p["text"].strip()
         if len(text) > 2000:
             print("A post is longer than Discord allows (2000 characters):", len(text)); return 1
-        if dry or not hook:
-            print(("DRY RUN" if dry else "No DISCORD_WEBHOOKS secret") + f": would post {len(text)} characters and {len(files)} pictures")
+        if dry:
+            print(f"DRY RUN: would post {len(text)} characters and {len(files)} pictures")
+            continue
+        if tg.config():  # the same post in the Telegram channel: the pictures as an album, the text under them
+            tg.send(html.escape(text).replace("**", ""), pictures=files)
+            print(f"Posted to Telegram ({len(files)} pictures).")
+        if not hook:
+            print("No DISCORD_WEBHOOKS secret: not posted to Discord.")
             continue
         body, ctype = form({"username": "inPace", "content": text, "allowed_mentions": {"parse": []}}, files)
         req = urllib.request.Request(hook + "?wait=true", data=body, method="POST",

@@ -1490,8 +1490,9 @@ def announce(out: Path) -> int:
         hook = json.loads(os.environ.get("DISCORD_WEBHOOKS") or "{}").get("courses")
     except ValueError:
         hook = None
-    if not hook:
-        print("No DISCORD_WEBHOOKS secret: nothing to post.")
+    import telegram_post as tg
+    if not hook and not tg.config():
+        print("No DISCORD_WEBHOOKS or Telegram secrets: nothing to post.")
         return 0
     try:
         with urllib.request.urlopen(SITE + "library.json", timeout=30) as r:
@@ -1506,7 +1507,9 @@ def announce(out: Path) -> int:
             item["cover"] = covers.get(item["steps"][0]["course"])
     for msg in announce_messages(changes):
         pic = cover_file(out, msg)
-        post_to_discord(hook, msg, pic)
+        if hook:
+            post_to_discord(hook, msg, pic)
+        tg.send(tg.from_discord(msg), pic)
         print("Posted:", msg["embeds"][0]["title"], "(with its cover)" if pic else "")
     return 0
 
@@ -1552,13 +1555,16 @@ def announce_all(out: Path) -> int:
             m = announce_message("roadmap", r)
             m["embeds"][0]["title"] = m["embeds"][0]["title"].replace("🗺️ New roadmap · مسار جديد: ", "🗺️ ")
             plan.append((m, cover_file(out, m)))
-    if not hook:
-        print(f"No DISCORD_WEBHOOKS secret. Would post {len(plan)} messages.")
+    import telegram_post as tg
+    if not hook and not tg.config():
+        print(f"No DISCORD_WEBHOOKS or Telegram secrets. Would post {len(plan)} messages.")
         return 0
     for i, (msg, pic) in enumerate(plan, 1):
-        post_to_discord(hook, msg, pic)
+        if hook:
+            post_to_discord(hook, msg, pic)
+            time.sleep(2.2)  # Discord allows about 30 posts a minute in one channel
+        tg.send(tg.from_discord(msg), pic)  # waits about 3 seconds itself
         print(f"{i}/{len(plan)}")
-        time.sleep(2.2)  # Discord allows about 30 posts a minute in one channel
     return 0
 
 
