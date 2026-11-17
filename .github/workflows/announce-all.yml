@@ -38,4 +38,5 @@ jobs:
           DISCORD_WEBHOOKS: ${{ inputs.where != 'telegram' && secrets.DISCORD_WEBHOOKS || '' }}
           TELEGRAM_BOT_TOKEN: ${{ inputs.where != 'discord' && secrets.TELEGRAM_BOT_TOKEN || '' }}
           TELEGRAM_CHAT: ${{ inputs.where != 'discord' && secrets.TELEGRAM_CHAT || '' }}
+          TELEGRAM_TOPICS: ${{ secrets.TELEGRAM_TOPICS }}
         run: python scripts/library_tools.py announce-all _site

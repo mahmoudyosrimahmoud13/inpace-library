@@ -34,12 +34,21 @@ def main() -> None:
         hook = json.loads(os.environ.get("DISCORD_WEBHOOKS") or "{}").get("devlog")
     except ValueError:
         hook = None
-    if not hook or not os.environ.get("GITHUB_EVENT_PATH"):
-        print("No DISCORD_WEBHOOKS secret: nothing to post.")
+    if not os.environ.get("GITHUB_EVENT_PATH"):
+        print("Nothing to post.")
         return
     msg = message(json.load(open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8")))
     if not msg:
         print("Nothing to post.")
+        return
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import telegram_post as tg
+    if tg.topic("devlog"):  # the same dev log in the Telegram group's dev log topic
+        tg.send(tg.from_discord(msg), where="devlog")
+        print("Posted to Telegram (dev log).")
+    if not hook:
+        print("No DISCORD_WEBHOOKS secret: not posted to Discord.")
         return
     req = urllib.request.Request(hook + "?wait=true", data=json.dumps(msg).encode(), method="POST",
                                  headers={"Content-Type": "application/json", "User-Agent": "inPace-library"})

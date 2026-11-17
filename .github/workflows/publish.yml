@@ -35,6 +35,9 @@ jobs:
           DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
+          TELEGRAM_TOPICS: ${{ secrets.TELEGRAM_TOPICS }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
         run: python scripts/library_tools.py announce _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

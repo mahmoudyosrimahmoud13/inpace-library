@@ -20,4 +20,7 @@ jobs:
       - name: Post to Discord
         env:
           DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
+          TELEGRAM_TOPICS: ${{ secrets.TELEGRAM_TOPICS }}
         run: python3 scripts/discord_devlog.py

@@ -51,7 +51,7 @@ def main(argv: list[str]) -> int:
             print(f"DRY RUN: would post {len(text)} characters and {len(files)} pictures")
             continue
         if tg.config():  # the same post in the Telegram channel: the pictures as an album, the text under them
-            tg.send(html.escape(text).replace("**", ""), pictures=files)
+            tg.send(html.escape(text).replace("**", ""), pictures=files, where="announcements")
             print(f"Posted to Telegram ({len(files)} pictures).")
         if not hook:
             print("No DISCORD_WEBHOOKS secret: not posted to Discord.")

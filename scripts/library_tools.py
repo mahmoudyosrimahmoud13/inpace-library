@@ -1512,12 +1512,12 @@ def announce(out: Path) -> int:
         pic = cover_file(out, msg)
         if hook:
             post_to_discord(hook, msg, pic)
-        tg.send(tg.from_discord(msg), pic)
+        tg.send(tg.from_discord(msg), pic, where="courses")
         print("Posted:", msg["embeds"][0]["title"], "(with its cover)" if pic else "")
     return 0
 
 
-def announce_all(out: Path) -> int:
+def announce_all(out: Path, start: int = 1) -> int:
     """Posts the whole library to #new-courses, once: a title post, then each section with its courses (big covers),
     then every roadmap. Started by hand (Actions > Discord: post the whole library). Running it twice posts twice."""
     import time
@@ -1563,10 +1563,12 @@ def announce_all(out: Path) -> int:
         print(f"No DISCORD_WEBHOOKS or Telegram secrets. Would post {len(plan)} messages.")
         return 0
     for i, (msg, pic) in enumerate(plan, 1):
+        if i < start:  # carry on after a stop: --from 37 skips the first 36 posts
+            continue
         if hook:
             post_to_discord(hook, msg, pic)
             time.sleep(2.2)  # Discord allows about 30 posts a minute in one channel
-        tg.send(tg.from_discord(msg), pic)  # waits about 3 seconds itself
+        tg.send(tg.from_discord(msg), pic, where="courses")  # waits about 3 seconds itself
         print(f"{i}/{len(plan)}")
     return 0
 
@@ -1581,8 +1583,10 @@ if __name__ == "__main__":
         sys.exit(check())
     elif cmd == "build":
         build(Path(sys.argv[2] if len(sys.argv) > 2 else "_site"))
-    elif cmd == "announce-all":
-        sys.exit(announce_all(Path(sys.argv[2] if len(sys.argv) > 2 else "_site")))
+    elif cmd == "announce-all":  # announce-all _site [--from N]
+        args = sys.argv[2:]
+        start = int(args[args.index("--from") + 1]) if "--from" in args else 1
+        sys.exit(announce_all(Path(next((a for a in args if not a.startswith("--") and not a.isdigit()), "_site")), start))
     elif cmd == "announce":
         sys.exit(announce(Path(sys.argv[2] if len(sys.argv) > 2 else "_site")))
     else:

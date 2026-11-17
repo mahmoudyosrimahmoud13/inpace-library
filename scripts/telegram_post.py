@@ -1,8 +1,9 @@
 """Posts to the inPace Telegram channel, next to Discord: new and updated courses and roadmaps, the whole library,
 and announcements with pictures. The app repo posts new releases the same way.
 
-Needs two GitHub secrets: TELEGRAM_BOT_TOKEN (from @BotFather) and TELEGRAM_CHAT (the channel, like @inpace_app).
-The bot must be an admin of the channel. Without the secrets, nothing is posted.
+Needs the GitHub secrets TELEGRAM_BOT_TOKEN (from @BotFather), TELEGRAM_CHAT (the group, like @inPace_app) and
+TELEGRAM_TOPICS (which topic gets what; community/telegram_setup.py in the app repo makes the group and prints it).
+The bot must be an admin of the group. Without the secrets, nothing is posted.
 """
 from __future__ import annotations
 
@@ -19,6 +20,14 @@ from pathlib import Path
 def config() -> tuple[str, str] | None:
     token, chat = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip(), os.environ.get("TELEGRAM_CHAT", "").strip()
     return (token, chat) if token and chat else None
+
+
+def topic(key: str) -> int | None:
+    """The topic (Telegram's message_thread_id) for a kind of post: courses, announcements, devlog..."""
+    try:
+        return json.loads(os.environ.get("TELEGRAM_TOPICS") or "{}").get(key)
+    except ValueError:
+        return None
 
 
 def _call(token: str, method: str, fields: dict, files: list[tuple[str, Path]] | None = None) -> dict:
@@ -40,13 +49,19 @@ def _call(token: str, method: str, fields: dict, files: list[tuple[str, Path]] |
             with urllib.request.urlopen(req, timeout=60) as r:
                 return json.load(r)
         except urllib.error.HTTPError as e:  # 429: Telegram says how long to wait
+            if e.code != 429:
+                raise
             try:
                 wait = json.loads(e.read() or b"{}").get("parameters", {}).get("retry_after")
             except ValueError:
                 wait = None
-            if e.code != 429 or not wait or attempt == 5:
+            if not wait or attempt == 5:
                 raise
             time.sleep(min(float(wait), 60) + 0.5)
+        except urllib.error.URLError:  # the internet dropped for a moment: wait and try again
+            if attempt == 5:
+                raise
+            time.sleep(5 * (attempt + 1))
     return {}
 
 
@@ -68,26 +83,29 @@ def from_discord(msg: dict) -> str:
     return "\n\n".join(x for x in out if x)
 
 
-def send(text: str, picture: Path | None = None, pictures: list[Path] | None = None) -> None:
-    """One post: text alone, text under one picture, or an album of pictures with the text under the first."""
+def send(text: str, picture: Path | None = None, pictures: list[Path] | None = None, where: str = "") -> None:
+    """One post: text alone, text under one picture, or an album of pictures with the text under the first.
+    where: the topic (courses, announcements, devlog...); without topics, the group's main chat."""
     cfg = config()
     if not cfg:
         return
     token, chat = cfg
+    thread = topic(where) if where else None
+    extra = {"message_thread_id": thread} if thread else {}
     pics = pictures or ([picture] if picture else [])
     if not pics:
         _call(token, "sendMessage", {"chat_id": chat, "text": cut(text, 4000), "parse_mode": "HTML",
-                                     "link_preview_options": {"is_disabled": True}})
+                                     "link_preview_options": {"is_disabled": True}, **extra})
     elif len(pics) == 1 and len(text) <= 1024:
-        _call(token, "sendPhoto", {"chat_id": chat, "caption": text, "parse_mode": "HTML"}, [("photo", pics[0])])
+        _call(token, "sendPhoto", {"chat_id": chat, "caption": text, "parse_mode": "HTML", **extra}, [("photo", pics[0])])
     else:
         media = [{"type": "photo", "media": f"attach://p{i}"} for i in range(len(pics))]
         if len(text) <= 1024:
             media[0].update({"caption": text, "parse_mode": "HTML"})
-        _call(token, "sendMediaGroup", {"chat_id": chat, "media": json.dumps(media)},
+        _call(token, "sendMediaGroup", {"chat_id": chat, "media": json.dumps(media), **extra},
               [(f"p{i}", p) for i, p in enumerate(pics)])
         if len(text) > 1024:
-            _call(token, "sendMessage", {"chat_id": chat, "text": cut(text, 4000), "parse_mode": "HTML"})
+            _call(token, "sendMessage", {"chat_id": chat, "text": cut(text, 4000), "parse_mode": "HTML", **extra})
     time.sleep(3.1)  # Telegram allows about 20 posts a minute in one channel
 
 
