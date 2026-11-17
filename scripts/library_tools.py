@@ -1377,12 +1377,16 @@ def new_on_site(out: Path, live: dict | None) -> list[tuple[str, dict]]:
     if not live:
         return []
     old_c = {c["id"]: c for c in live.get("courses", [])}
-    have_r = {r["id"] for r in live.get("roadmaps", [])}
+    old_r = {r["id"]: r for r in live.get("roadmaps", [])}
     index = json.loads((out / "library.json").read_text(encoding="utf-8"))
+
+    def changed(item: dict, old: dict) -> bool:
+        return item["id"] in old and bool(item.get("hash")) and bool(old[item["id"]].get("hash")) \
+            and item["hash"] != old[item["id"]]["hash"]
     return [("course", c) for c in index["courses"] if c["id"] not in old_c] + \
-        [("roadmap", r) for r in index["roadmaps"] if r["id"] not in have_r] + \
-        [("updated", c) for c in index["courses"] if c["id"] in old_c and c.get("hash") and old_c[c["id"]].get("hash")
-         and c["hash"] != old_c[c["id"]]["hash"]]
+        [("roadmap", r) for r in index["roadmaps"] if r["id"] not in old_r] + \
+        [("updated", c) for c in index["courses"] if changed(c, old_c)] + \
+        [("updated", r) for r in index["roadmaps"] if changed(r, old_r)]
 
 
 def announce_message(kind: str, item: dict) -> dict:
@@ -1396,14 +1400,45 @@ def announce_message(kind: str, item: dict) -> dict:
         en = f"{item.get('courses', 0)} courses" + (f" · about {h} h" if h else "")
         ar = f"{item.get('courses', 0)} دورات" + (f" · حوالي {h} ساعة" if h else "")
     lang = " · Arabic · بالعربية" if item.get("language") == "ar" else ""
+    who = (item.get("author") or {}).get("name") or ""
+    if who and who != "inPace":  # a course someone shared: thank them by name
+        lang += f"\nBy {who} · من إعداد {who}. Thank you! شكرًا!"
     head = "📚 New course · دورة جديدة: " if kind == "course" else "🗺️ New roadmap · مسار جديد: "
     embed = {"title": (head + item["title"])[:256], "url": page,
              "description": (item.get("description") or "")[:600] + f"\n\n{en}{lang}\n{ar}\n\n"
                             "Open it, then add it to inPace with one press.\nافتحها، ثم أضفها إلى inPace بضغطة واحدة.",
              "color": 0x1F9D6A if kind == "course" else 0x5DADE2}
     if item.get("cover"):
-        embed["thumbnail"] = {"url": item["cover"]}
+        embed["image"] = {"url": item["cover"]}
     return {"username": "inPace library", "embeds": [embed], "allowed_mentions": {"parse": []}}
+
+
+def cover_file(out: Path, msg: dict) -> Path | None:
+    """The cover in this build, so it can go to Discord with the post: the site isn't live yet when we post, so
+    Discord couldn't load a brand-new course's cover from its address."""
+    url = ((msg.get("embeds") or [{}])[0].get("image") or {}).get("url") or ""
+    if "/covers/" not in url:
+        return None
+    f = out / "covers" / url.split("/covers/", 1)[1].split("?", 1)[0]
+    return f if f.is_file() else None
+
+
+def post_to_discord(hook: str, msg: dict, picture: Path | None = None) -> None:
+    """Sends one post; with a picture, as a file attached to it (multipart), shown as the post's big image."""
+    if not picture:
+        body, ctype = json.dumps(msg).encode(), "application/json"
+    else:
+        msg = json.loads(json.dumps(msg))
+        msg["embeds"][0]["image"] = {"url": "attachment://" + picture.name}
+        b = hashlib.sha256(os.urandom(16)).hexdigest()[:32]
+        body = (f'--{b}\r\nContent-Disposition: form-data; name="payload_json"\r\nContent-Type: application/json\r\n\r\n'.encode()
+                + json.dumps(msg).encode() + b"\r\n"
+                + f'--{b}\r\nContent-Disposition: form-data; name="files[0]"; filename="{picture.name}"\r\n'
+                  f'Content-Type: image/jpeg\r\n\r\n'.encode() + picture.read_bytes() + f"\r\n--{b}--\r\n".encode())
+        ctype = f"multipart/form-data; boundary={b}"
+    req = urllib.request.Request(hook + "?wait=true", data=body, method="POST",
+                                 headers={"Content-Type": ctype, "User-Agent": "inPace-library"})
+    urllib.request.urlopen(req, timeout=60).read()
 
 
 def list_message(title: str, items: list[dict], color: int, note: str) -> dict:
@@ -1427,7 +1462,10 @@ def announce_messages(changes: list[tuple[str, dict]]) -> list[dict]:
                                 [i for _, i in fresh[10:]], 0x1F9D6A,
                                 "Open any of them, then add it to inPace with one press.\nافتح أيًّا منها، ثم أضفه إلى inPace بضغطة واحدة."))
     if updated:
-        out.append(list_message(f"🔄 {len(updated)} course{'s' if len(updated) != 1 else ''} updated · تحديث {len(updated)} دورة", updated, 0xFFD43B,
+        n_r = sum(1 for i in updated if "steps" in i)
+        what = (f"{len(updated) - n_r} course{'s' if len(updated) - n_r != 1 else ''}" if not n_r else
+                f"{n_r} roadmap{'s' if n_r != 1 else ''}" if n_r == len(updated) else f"{len(updated)} courses and roadmaps")
+        out.append(list_message(f"🔄 Updated · تم التحديث: {what}", updated, 0xFFD43B,
                                 "If you have it, inPace offers the new version (your progress stays).\n"
                                 "إن كانت عندك، يعرض inPace النسخة الجديدة (ويبقى تقدّمك كما هو)."))
     return out
@@ -1448,11 +1486,15 @@ def announce(out: Path) -> int:
     except Exception as e:  # never post everything just because the live list couldn't be read
         print("Couldn't read the live library, so nothing is posted:", e)
         return 0
-    for msg in announce_messages(new_on_site(out, live)):
-        req = urllib.request.Request(hook, data=json.dumps(msg).encode(), method="POST",
-                                     headers={"Content-Type": "application/json", "User-Agent": "inPace-library"})
-        urllib.request.urlopen(req, timeout=30).read()
-        print("Posted:", msg["embeds"][0]["title"])
+    changes = new_on_site(out, live)
+    covers = {c["id"]: c.get("cover") for c in json.loads((out / "library.json").read_text(encoding="utf-8"))["courses"]}
+    for kind, item in changes:  # a new roadmap shows the cover of its first course
+        if kind == "roadmap" and item.get("steps") and not item.get("cover"):
+            item["cover"] = covers.get(item["steps"][0]["course"])
+    for msg in announce_messages(changes):
+        pic = cover_file(out, msg)
+        post_to_discord(hook, msg, pic)
+        print("Posted:", msg["embeds"][0]["title"], "(with its cover)" if pic else "")
     return 0
 
 
