@@ -1,0 +1,12 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="60" width="440" height="260" rx="18" fill="#1d1129"/></g>
+<g font-family="JBM" font-weight="700"><text x="66" y="100" fill="#fbf2ff" font-size="17">p95 latency, /checkout</text>
+<polyline points="66,270 110,255 150,262 190,248 230,256 270,250 300,180 320,140 340,150 360,245 400,252 450,247" fill="none" stroke="#ff8fab" stroke-width="5" stroke-linejoin="round"/>
+<line x1="300" y1="120" x2="300" y2="290" stroke="#fbf2ff" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="308" y="300" fill="#fbf2ff" font-size="13">deploy sha-3f2c</text>
+<line x1="66" y1="210" x2="454" y2="210" stroke="#4b2d66" stroke-width="2"/><text x="400" y="204" fill="#c9a8e6" font-size="13">SLO</text></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" text-anchor="middle">
+<rect x="40" y="360" width="200" height="140" rx="16" fill="#ff8fab"/><text x="140" y="410" fill="#2d1b3d" font-size="16">error budget</text><text x="140" y="458" fill="#2d1b3d" font-size="36">71%</text>
+<rect x="280" y="360" width="200" height="140" rx="16" fill="#fbf2ff"/><text x="380" y="410" fill="#2d1b3d" font-size="16">SLO 99.5%</text><text x="380" y="458" fill="#2d1b3d" font-size="30">99.71% ✓</text></g>
+</svg>

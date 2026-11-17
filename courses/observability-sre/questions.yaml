@@ -1,0 +1,280 @@
+q1:
+  text: '99.9% availability over 30 days allows about:'
+  show: 4
+  options:
+    a: 43 minutes of downtime
+    b: 4 minutes
+    c: 7 hours
+    d: 1 day
+q2:
+  text: 'RED stands for:'
+  show: 4
+  options:
+    a: Rate, Errors, Duration
+    b: Read, Execute, Delete
+    c: Requests, Events, Disks
+    d: Retries, Errors, Downtime
+q3:
+  text: Which signal shows where time went inside one request across services?
+  show: 4
+  options:
+    a: Traces
+    b: Metrics
+    c: Logs only
+    d: Dashboards
+q4:
+  text: Why not use user_id as a metric label?
+  show: 4
+  options:
+    a: It creates huge numbers of time series (cardinality)
+    b: It's private
+    c: Prometheus forbids strings
+    d: It's slow to type
+q5:
+  text: What links a log line to its trace?
+  show: 4
+  options:
+    a: A shared trace_id
+    b: The hostname
+    c: The log level
+    d: The timestamp only
+q6:
+  text: How does Prometheus get metrics?
+  show: 4
+  options:
+    a: It scrapes (pulls) /metrics endpoints
+    b: Apps push to it by email
+    c: It reads log files
+    d: It queries CloudTrail
+q7:
+  text: 'Before graphing a counter you should:'
+  show: 4
+  options:
+    a: Apply rate()
+    b: Divide by 100
+    c: Take the max
+    d: Nothing
+q8:
+  text: Which metric type suits latency?
+  show: 4
+  options:
+    a: Histogram
+    b: Counter
+    c: Gauge
+    d: Label
+q9:
+  text: 'To get p95 across many hosts:'
+  show: 4
+  options:
+    a: Sum the histogram buckets by le, then take the quantile
+    b: Average each host's p95
+    c: Take the max p95
+    d: Use a gauge
+q10:
+  text: '`predict_linear(...[6h], 4*3600) < 0` on free disk space warns:'
+  show: 4
+  options:
+    a: The disk will fill within 4 hours at the current trend
+    b: Disk is full now
+    c: Disk is 4% used
+    d: Nothing
+q11:
+  text: 'Top row of a good service dashboard:'
+  show: 4
+  options:
+    a: 'Is it OK for users: SLO, errors, latency'
+    b: CPU per core
+    c: Disk inodes
+    d: Kernel version
+q12:
+  text: 'Deploy annotations help because:'
+  show: 4
+  options:
+    a: Many incidents start with a change
+    b: They look nice
+    c: Grafana requires them
+    d: They reduce cost
+q13:
+  text: 'Loki indexes:'
+  show: 4
+  options:
+    a: Labels only, not full log text
+    b: Every word
+    c: Nothing
+    d: Only errors
+q14:
+  text: Which should never be logged?
+  show: 4
+  options:
+    a: Passwords and tokens
+    b: Route
+    c: Status code
+    d: trace_id
+q15:
+  text: 'Dashboards as code means:'
+  show: 4
+  options:
+    a: Stored in Git and provisioned, so reviewed and restorable
+    b: Screenshots in a wiki
+    c: Only one dashboard
+    d: Coded in Python
+q16:
+  text: 'A span is:'
+  show: 4
+  options:
+    a: One timed operation within a trace
+    b: A log level
+    c: A metric type
+    d: A dashboard row
+q17:
+  text: 'Trace context passes between services in:'
+  show: 4
+  options:
+    a: The traceparent HTTP header
+    b: Cookies only
+    c: DNS
+    d: The URL path
+q18:
+  text: Why use an OTel Collector?
+  show: 4
+  options:
+    a: To batch, sample, filter and route telemetry to any backend
+    b: To store metrics forever
+    c: To replace apps
+    d: To render dashboards
+q19:
+  text: 'Good sampling keeps:'
+  show: 4
+  options:
+    a: A share of normal traces plus all errors and slow ones
+    b: Only fast traces
+    c: Nothing
+    d: Only 1 trace a day
+q20:
+  text: 'In a flame graph, wide boxes mean:'
+  show: 4
+  options:
+    a: Functions where much of the time is spent
+    b: Recent calls
+    c: Errors
+    d: Network calls only
+q21:
+  text: 'An SLO of 99.5% gives an error budget of:'
+  show: 4
+  options:
+    a: 0.5% of events
+    b: 99.5%
+    c: 5%
+    d: None
+q22:
+  text: Where should an SLI be measured?
+  show: 4
+  options:
+    a: As close to the user as possible
+    b: On the database CPU
+    c: In the build system
+    d: In the office
+q23:
+  text: Which should page someone?
+  show: 4
+  options:
+    a: A fast error-budget burn affecting users
+    b: CPU at 85% with happy users
+    c: A finished backup
+    d: A new deploy
+q24:
+  text: Why add a short window to a burn-rate alert?
+  show: 4
+  options:
+    a: So it stops firing soon after the problem ends
+    b: To fire more often
+    c: To save storage
+    d: It's required
+q25:
+  text: Alertmanager inhibition does what?
+  show: 4
+  options:
+    a: Suppresses child alerts when a parent cause is firing
+    b: Deletes alerts
+    c: Sends SMS
+    d: Writes runbooks
+q26:
+  text: 'During an incident, the first priority is:'
+  show: 4
+  options:
+    a: Restore service (mitigate)
+    b: Find the root cause
+    c: Write the postmortem
+    d: Assign blame
+q27:
+  text: 'The incident commander should:'
+  show: 4
+  options:
+    a: Coordinate and decide, not debug
+    b: Fix the bug personally
+    c: Write code
+    d: Stay silent
+q28:
+  text: 'A common fastest mitigation:'
+  show: 4
+  options:
+    a: Roll back the last change
+    b: Rewrite the service
+    c: Add logging
+    d: Upgrade the OS
+q29:
+  text: 'Postmortem action items need:'
+  show: 4
+  options:
+    a: Owners and due dates
+    b: Only descriptions
+    c: Anonymous authors
+    d: No tracking
+q30:
+  text: 'Blameless means:'
+  show: 4
+  options:
+    a: Focus on what in the system allowed the failure
+    b: No one is responsible for fixes
+    c: No postmortems
+    d: Hiding mistakes
+q31:
+  text: 'Toil is:'
+  show: 4
+  options:
+    a: Manual, repetitive, automatable work that grows with the service
+    b: Any hard work
+    c: Writing code
+    d: Meetings
+q32:
+  text: 'Retries should use:'
+  show: 4
+  options:
+    a: Backoff with jitter and a limit
+    b: Immediate infinite retries
+    c: No timeouts
+    d: Bigger servers
+q33:
+  text: 'A game day is:'
+  show: 4
+  options:
+    a: A planned practice of failures and incident response
+    b: A day off
+    c: A hackathon
+    d: A sales event
+q34:
+  text: 'Load testing before a big sale finds:'
+  show: 4
+  options:
+    a: The breaking point before users do
+    b: Bugs in CSS
+    c: Expired certificates
+    d: Drift
+q35:
+  text: 'Graceful degradation means:'
+  show: 4
+  options:
+    a: Keeping core features working when a dependency fails
+    b: Slowing down on purpose
+    c: Shutting everything off
+    d: Deleting data

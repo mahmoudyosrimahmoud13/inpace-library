@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: Each nine is 10x less.
+q2:
+  right:
+  - a
+  why: For request-driven services.
+q3:
+  right:
+  - a
+  why: Spans with timings.
+q4:
+  right:
+  - a
+  why: Put it in logs or traces.
+q5:
+  right:
+  - a
+  why: Correlation is the point.
+q6:
+  right:
+  - a
+  why: Pull every 15-30 s.
+q7:
+  right:
+  - a
+  why: Raw counters only climb.
+q8:
+  right:
+  - a
+  why: Then histogram_quantile.
+q9:
+  right:
+  - a
+  why: Percentiles can't be averaged.
+q10:
+  right:
+  - a
+  why: A ticket-level alert.
+q11:
+  right:
+  - a
+  why: Then drill down.
+q12:
+  right:
+  - a
+  why: See cause next to effect.
+q13:
+  right:
+  - a
+  why: That's why it's cheap.
+q14:
+  right:
+  - a
+  why: Scrub at the source.
+q15:
+  right:
+  - a
+  why: Like the rest of your infra.
+q16:
+  right:
+  - a
+  why: Spans nest.
+q17:
+  right:
+  - a
+  why: W3C Trace Context.
+q18:
+  right:
+  - a
+  why: Instrument once, send anywhere.
+q19:
+  right:
+  - a
+  why: Tail sampling.
+q20:
+  right:
+  - a
+  why: x-axis is share of samples.
+q21:
+  right:
+  - a
+  why: 100% minus the SLO.
+q22:
+  right:
+  - a
+  why: Load balancer or client.
+q23:
+  right:
+  - a
+  why: Symptoms, not causes.
+q24:
+  right:
+  - a
+  why: Long window for significance.
+q25:
+  right:
+  - a
+  why: One page, not thirty.
+q26:
+  right:
+  - a
+  why: Root cause comes after.
+q27:
+  right:
+  - a
+  why: Someone must see the whole picture.
+q28:
+  right:
+  - a
+  why: Check deploy annotations.
+q29:
+  right:
+  - a
+  why: Track them like features.
+q30:
+  right:
+  - a
+  why: People speak up when safe.
+q31:
+  right:
+  - a
+  why: Automate it away.
+q32:
+  right:
+  - a
+  why: Avoid retry storms.
+q33:
+  right:
+  - a
+  why: Find gaps safely.
+q34:
+  right:
+  - a
+  why: k6, Locust.
+q35:
+  right:
+  - a
+  why: Show cached data, hide extras.

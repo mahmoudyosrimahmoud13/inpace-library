@@ -1,6 +1,6 @@
 id: linux-cloud-devops
 title: Linux, Cloud and DevOps
-description: From what an operating system really does to running, securing and automating Linux servers, then containers and delivery pipelines. Built for people who want to be genuinely strong at servers, cloud and troubleshooting. New courses join this path as they are published.
+description: From what an operating system really does to running, securing and automating Linux servers, then containers and delivery pipelines. Built for people who want to be genuinely strong at servers, cloud and troubleshooting. Ends with a final project you can show in interviews.
 language: en
 author: inPace
 official: true
@@ -35,3 +35,9 @@ steps:
     note: "Run Linux on AWS day to day. Session Manager, cloud-init, secrets, patching, golden AMIs."
   - course: devops-cicd
     note: "Pipelines that ship safely. Scanning, signed images, OIDC, canary, GitOps and rollback."
+  - course: iac-terraform-ansible
+    note: "Your whole cloud in Git. Terraform for resources, Ansible for servers, rebuilt in minutes."
+  - course: observability-sre
+    note: "Keep it running. Metrics, logs, traces, SLOs, alerts people trust, and blameless postmortems."
+  - course: linux-cloud-capstone
+    note: "The final project. One system that uses every course, tested with a game day and written up for your portfolio."

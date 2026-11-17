@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+section: linux-cloud-devops
+tags:
+- sre
+- observability
+- monitoring
+- prometheus
+- incident response
+- advanced
+credit: Written for the inPace library, drawing on the free Google SRE books. Optional MIT Missing Semester lecture, linked,
+  not copied.

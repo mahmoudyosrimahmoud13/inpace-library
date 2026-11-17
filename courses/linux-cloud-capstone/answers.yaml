@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Interviewers ask about these.
+q2:
+  right:
+  - a
+  why: How well, not what.
+q3:
+  right:
+  - a
+  why: Avoid surprise bills.
+q4:
+  right:
+  - a
+  why: Choices without context get repeated.
+q5:
+  right:
+  - a
+  why: Logged and IAM-controlled.
+q6:
+  right:
+  - a
+  why: Code matches reality.
+q7:
+  right:
+  - a
+  why: Everything else is chained.
+q8:
+  right:
+  - a
+  why: AWS owns it.
+q9:
+  right:
+  - a
+  why: Aim for a lower score.
+q10:
+  right:
+  - a
+  why: Fast boots, fast refreshes.
+q11:
+  right:
+  - a
+  why: Build once.
+q12:
+  right:
+  - a
+  why: Use it for drift checks.
+q13:
+  right:
+  - a
+  why: One at a time.
+q14:
+  right:
+  - a
+  why: Changes go through Git.
+q15:
+  right:
+  - a
+  why: Old and new code both work.
+q16:
+  right:
+  - a
+  why: Close to users.
+q17:
+  right:
+  - a
+  why: Untested backups are hopes.
+q18:
+  right:
+  - a
+  why: Rotating and temporary.
+q19:
+  right:
+  - a
+  why: Important, not urgent.
+q20:
+  right:
+  - a
+  why: Correlation.
+q21:
+  right:
+  - a
+  why: Then compare reality.
+q22:
+  right:
+  - a
+  why: Safety first.
+q23:
+  right:
+  - a
+  why: Evidence it works.
+q24:
+  right:
+  - a
+  why: Fix at least one.
+q25:
+  right:
+  - a
+  why: NAT and RDS cost money.

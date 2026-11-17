@@ -1,0 +1,280 @@
+q1:
+  text: 'Running a declarative IaC config twice with no changes should:'
+  show: 4
+  options:
+    a: Change nothing
+    b: Create duplicates
+    c: Delete everything
+    d: Fail
+q2:
+  text: Which command shows what would change without changing it?
+  show: 4
+  options:
+    a: terraform plan
+    b: terraform apply
+    c: terraform init
+    d: terraform fmt
+q3:
+  text: 'A `data` block:'
+  show: 4
+  options:
+    a: Reads something that already exists
+    b: Creates a resource
+    c: Deletes a resource
+    d: Stores secrets
+q4:
+  text: '`-/+` in a plan means:'
+  show: 4
+  options:
+    a: The resource will be destroyed and recreated
+    b: Updated in place
+    c: Imported
+    d: Ignored
+q5:
+  text: 'Terraform orders resource creation using:'
+  show: 4
+  options:
+    a: References between resources (the dependency graph)
+    b: File names
+    c: Alphabetical order
+    d: Line numbers
+q6:
+  text: Why must the state bucket be encrypted and restricted?
+  show: 4
+  options:
+    a: State can contain secrets in plain text
+    b: It's large
+    c: AWS requires it
+    d: It speeds up plans
+q7:
+  text: What does state locking prevent?
+  show: 4
+  options:
+    a: Two applies running at once and corrupting state
+    b: Reading state
+    c: Using modules
+    d: Drift
+q8:
+  text: 'Adopt a bucket created by hand into Terraform with:'
+  show: 4
+  options:
+    a: An import block or terraform import
+    b: terraform taint
+    c: Deleting and recreating it
+    d: terraform fmt
+q9:
+  text: 'Someone changed a security group in the console. Next plan shows:'
+  show: 4
+  options:
+    a: Terraform wants to change it back (drift)
+    b: Nothing
+    c: An error
+    d: A new VPC
+q10:
+  text: Where should secret variable values come from?
+  show: 4
+  options:
+    a: CI secrets or a secrets manager, never Git
+    b: terraform.tfvars in Git
+    c: Comments in main.tf
+    d: The README
+q11:
+  text: Why pin module and provider versions?
+  show: 4
+  options:
+    a: So an upstream release can't change your infrastructure unexpectedly
+    b: To speed up init
+    c: Required by AWS
+    d: To save state space
+q12:
+  text: 'A good module:'
+  show: 4
+  options:
+    a: Does one thing with clear inputs, secure defaults and useful outputs
+    b: Wraps every single resource
+    c: Has 200 variables
+    d: Hard-codes the region
+q13:
+  text: What protects a database from being destroyed by Terraform?
+  show: 4
+  options:
+    a: lifecycle prevent_destroy and deletion_protection
+    b: ignore_changes
+    c: count = 0
+    d: A comment
+q14:
+  text: 'In CI, plan on PRs should use:'
+  show: 4
+  options:
+    a: A read-only role through OIDC
+    b: Admin access keys
+    c: The root user
+    d: No credentials
+q15:
+  text: 'Module outputs are used to:'
+  show: 4
+  options:
+    a: Pass values like IDs to other modules or callers
+    b: Print secrets
+    c: Store state
+    d: Choose the region
+q16:
+  text: What does Ansible need on the managed servers?
+  show: 4
+  options:
+    a: SSH access and Python
+    b: An agent daemon
+    c: A database
+    d: Docker
+q17:
+  text: '`--check --diff` does what?'
+  show: 4
+  options:
+    a: Shows what would change without changing it
+    b: Applies and logs
+    c: Checks syntax only
+    d: Encrypts vars
+q18:
+  text: 'A handler runs:'
+  show: 4
+  options:
+    a: Only when a task that changed something notifies it
+    b: After every task
+    c: Before the play
+    d: Never in check mode only
+q19:
+  text: Why prefer modules over `shell:`?
+  show: 4
+  options:
+    a: Modules check state and are idempotent
+    b: They're shorter
+    c: Shell is disabled
+    d: Modules don't need SSH
+q20:
+  text: 'The app security group in the lesson allows port 80 from:'
+  show: 4
+  options:
+    a: The ALB security group
+    b: 0.0.0.0/0
+    c: The NAT gateway
+    d: Nobody
+q21:
+  text: Where do a role's overridable defaults live?
+  show: 4
+  options:
+    a: defaults/main.yml
+    b: tasks/main.yml
+    c: meta/main.yml
+    d: handlers/main.yml
+q22:
+  text: 'Encrypt secret variables in Ansible with:'
+  show: 4
+  options:
+    a: ansible-vault
+    b: ansible-lint
+    c: Molecule
+    d: Galaxy
+q23:
+  text: '`no_log: true` on a task:'
+  show: 4
+  options:
+    a: Hides its values from output and logs
+    b: Skips the task
+    c: Disables handlers
+    d: Turns off facts
+q24:
+  text: 'The aws_ec2 inventory plugin finds hosts by:'
+  show: 4
+  options:
+    a: Querying AWS, filtered by tags and state
+    b: Reading /etc/hosts
+    c: Scanning the network
+    d: DNS only
+q25:
+  text: 'Molecule is used to:'
+  show: 4
+  options:
+    a: Test roles on throwaway machines, including idempotence
+    b: Encrypt files
+    c: Build AMIs
+    d: Lint YAML only
+q26:
+  text: 'The default hand-off from Terraform to Ansible in the cloud:'
+  show: 4
+  options:
+    a: Tags on instances plus dynamic inventory
+    b: Copying IPs by hand
+    c: remote-exec provisioners
+    d: Shared SSH keys
+q27:
+  text: 'HashiCorp describes Terraform provisioners as:'
+  show: 4
+  options:
+    a: A last resort
+    b: The best practice
+    c: Required
+    d: Deprecated tools for Ansible
+q28:
+  text: 'Strongest separation between dev and prod:'
+  show: 4
+  options:
+    a: Separate AWS accounts
+    b: Separate tags
+    c: Separate folders only
+    d: Different instance types
+q29:
+  text: '`manage_master_user_password = true` on RDS:'
+  show: 4
+  options:
+    a: Lets AWS create and store the password in Secrets Manager
+    b: Puts the password in state as plain text
+    c: Disables passwords
+    d: Uses IAM only
+q30:
+  text: 'Two tools managing the same security group leads to:'
+  show: 4
+  options:
+    a: Them fighting and undoing each other
+    b: Better security
+    c: Faster applies
+    d: Automatic merging
+q31:
+  text: '`Error acquiring the state lock` usually means:'
+  show: 4
+  options:
+    a: Another run is in progress or crashed holding the lock
+    b: The bucket is deleted
+    c: Your syntax is wrong
+    d: AWS is down
+q32:
+  text: 'A task that always shows changed should:'
+  show: 4
+  options:
+    a: 'Use a module, or creates:/changed_when:'
+    b: Be ignored
+    c: Run twice
+    d: Use -vvv
+q33:
+  text: '`ignore_changes` is useful for:'
+  show: 4
+  options:
+    a: Attributes something else manages, like an ASG's desired count
+    b: Hiding all drift
+    c: Secrets
+    d: Speeding up plans
+q34:
+  text: 'To see every API call Terraform makes:'
+  show: 4
+  options:
+    a: TF_LOG=DEBUG
+    b: terraform fmt
+    c: terraform output
+    d: -target
+q35:
+  text: 'Ansible UNREACHABLE first check:'
+  show: 4
+  options:
+    a: Can you `ssh` to that host directly with the same user and jump?
+    b: Reinstall Ansible
+    c: Run with -K
+    d: Delete facts

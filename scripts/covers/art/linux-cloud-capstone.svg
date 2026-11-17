@@ -1,0 +1,10 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="16" text-anchor="middle">
+<rect x="40" y="420" width="440" height="60" rx="12" fill="#ffd166"/><text x="260" y="456" fill="#10233f">Linux · networking · SSH · Bash</text>
+<rect x="70" y="340" width="380" height="60" rx="12" fill="#f3f7ff"/><text x="260" y="376" fill="#10233f">AWS · cloud Linux</text>
+<rect x="100" y="260" width="320" height="60" rx="12" fill="#7fd3ff"/><text x="260" y="296" fill="#10233f">Terraform · Ansible</text>
+<rect x="130" y="180" width="260" height="60" rx="12" fill="#f3f7ff"/><text x="260" y="216" fill="#10233f">CI/CD · containers</text>
+<rect x="160" y="100" width="200" height="60" rx="12" fill="#ffd166"/><text x="260" y="136" fill="#10233f">SLOs · game day</text></g>
+<g font-family="JBM" font-size="15" font-weight="600" fill="#7fd3ff" text-anchor="middle"><text x="260" y="70">one system, every course</text></g>
+</svg>

@@ -1,0 +1,226 @@
+id: observability-sre
+title: Observability, Reliability and Production Operations
+version: 1
+language: en
+description: Run services the way SRE teams do. Reliability defined by users, metrics, logs and traces and how they connect,
+  RED and USE, Prometheus and PromQL, Grafana dashboards, Loki and CloudWatch logs, OpenTelemetry tracing, profiling slow
+  code, SLIs, SLOs and error budgets, burn-rate alerts people trust, incident response, blameless postmortems, capacity, toil
+  and resilience testing, and a game-day capstone. Built on the free Google SRE books; optional MIT Missing Semester lecture.
+  Course 14 of the Linux, Cloud and DevOps track. About 7 days, 45 to 60 minutes a day.
+image: cover.jpg
+downloads:
+- title: Google SRE books (free online)
+  url: https://sre.google/books/
+- title: Prometheus documentation
+  url: https://prometheus.io/docs/introduction/overview/
+- title: OpenTelemetry documentation
+  url: https://opentelemetry.io/docs/
+modules:
+- id: m1
+  title: 'Day 1: Reliability and the three signals'
+  lessons:
+  - id: m1-l1
+    title: What reliability means
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: 'The three signals: metrics, logs, traces'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Pick a service you run (or a sample app). Write its most important user journey, the RED metrics you'd want, three
+      USE resources, and what a structured log line for it should contain. Upload the one-page plan.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why 100% availability is the wrong target.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Prometheus and PromQL'
+  lessons:
+  - id: m2-l1
+    title: 'Prometheus: collecting metrics'
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'PromQL: asking questions of metrics'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Run Prometheus and node_exporter (Docker is fine), add a counter and a latency histogram to a small app, and scrape
+      both. Write PromQL for request rate by route, error ratio, p95 latency and disk-full prediction. Upload the config,
+      app code and query results.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why average latency can hide a real problem, and what to use instead.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Dashboards and logs'
+  lessons:
+  - id: m3-l1
+    title: Grafana dashboards that help at 3 a.m.
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: 'Logs at scale: Loki and CloudWatch'
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build a Grafana dashboard following the five-row layout, with variables and deploy annotations, and export it
+      as JSON into Git. Ship your app's JSON logs to Loki (or CloudWatch) and write a LogQL/Logs Insights query that counts
+      5xx by route. Upload the JSON, a screenshot and the query.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why a dashboard should start with the user's view before resources.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Tracing and profiling'
+  lessons:
+  - id: m4-l1
+    title: Distributed tracing with OpenTelemetry
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Finding the slow part: profiling and debugging'
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Add OpenTelemetry auto-instrumentation and one custom span to your app, send traces through a Collector to Jaeger
+      or Tempo, and find the slowest span of a slow request. Profile it with py-spy (or your language's profiler) or EXPLAIN
+      ANALYZE. Upload a trace screenshot and the profile.
+  - id: m4-explain
+    type: explain
+    prompt: Explain how you would go from 'checkout p99 doubled' to the line of code or query responsible.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: SLOs and alerting'
+  lessons:
+  - id: m5-l1
+    title: SLIs, SLOs and error budgets
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: Alerts people trust
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Define an availability and a latency SLI for one journey, set SLOs, and write an error budget policy. Add multi-window
+      burn-rate alert rules with runbook links, and route them with Alertmanager. Upload the SLO document and the rules.
+  - id: m5-explain
+    type: explain
+    prompt: Explain what an error budget policy is and how it settles arguments between shipping and stability.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Incidents and postmortems'
+  lessons:
+  - id: m6-l1
+    title: Incident response
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Blameless postmortems
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Write your team''s incident process on one page: severity levels, roles, how to declare, where to communicate.
+      Then write a blameless postmortem for a real or realistic incident using the template, with at least three owned action
+      items. Upload both.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain why postmortems should be blameless, and what you lose when they aren't.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Capacity, resilience and the capstone'
+  lessons:
+  - id: m7-l1
+    title: Capacity, toil and resilience testing
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'Capstone: make a service observable and reliable'
+    file: lessons/m7-l2.md
+    minutes: 45
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Capstone: make your service observable and reliable with all seven requirements, then run a game day with an
+      injected bug, mitigate it with a rollback and write the postmortem. Upload the repo link, dashboard screenshot, SLO
+      document and postmortem.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain what toil is, with one example from your own work and how you'd automate it.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

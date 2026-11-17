@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: That's idempotence.
+q2:
+  right:
+  - a
+  why: Read every plan.
+q3:
+  right:
+  - a
+  why: Resources are owned; data is read.
+q4:
+  right:
+  - a
+  why: Dangerous for databases.
+q5:
+  right:
+  - a
+  why: Independent ones run in parallel.
+q6:
+  right:
+  - a
+  why: Treat it like a password file.
+q7:
+  right:
+  - a
+  why: S3 native lockfile or DynamoDB.
+q8:
+  right:
+  - a
+  why: Then plan should show no changes.
+q9:
+  right:
+  - a
+  why: Code is the source of truth.
+q10:
+  right:
+  - a
+  why: Mark variables sensitive too.
+q11:
+  right:
+  - a
+  why: Commit .terraform.lock.hcl.
+q12:
+  right:
+  - a
+  why: Small and focused.
+q13:
+  right:
+  - a
+  why: Defence in depth.
+q14:
+  right:
+  - a
+  why: Apply gets a separate, approved role.
+q15:
+  right:
+  - a
+  why: module.network.vpc_id.
+q16:
+  right:
+  - a
+  why: Agentless.
+q17:
+  right:
+  - a
+  why: A dry run.
+q18:
+  right:
+  - a
+  why: Reloads only when needed.
+q19:
+  right:
+  - a
+  why: Shell always reports changed.
+q20:
+  right:
+  - a
+  why: Referenced by ID.
+q21:
+  right:
+  - a
+  why: Lowest precedence.
+q22:
+  right:
+  - a
+  why: Decrypt at run time.
+q23:
+  right:
+  - a
+  why: For secrets.
+q24:
+  right:
+  - a
+  why: Servers come and go.
+q25:
+  right:
+  - a
+  why: Run it in CI.
+q26:
+  right:
+  - a
+  why: No files to pass around.
+q27:
+  right:
+  - a
+  why: Prefer images or config tools.
+q28:
+  right:
+  - a
+  why: A mistake in dev can't reach prod.
+q29:
+  right:
+  - a
+  why: Terraform never sees it.
+q30:
+  right:
+  - a
+  why: One owner per resource.
+q31:
+  right:
+  - a
+  why: Force-unlock only if truly stale.
+q32:
+  right:
+  - a
+  why: Make it idempotent.
+q33:
+  right:
+  - a
+  why: Use sparingly.
+q34:
+  right:
+  - a
+  why: Write it to a file.
+q35:
+  right:
+  - a
+  why: It's an SSH problem.

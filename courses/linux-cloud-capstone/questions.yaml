@@ -1,0 +1,200 @@
+q1:
+  text: 'An ADR records:'
+  show: 4
+  options:
+    a: A decision, its context, alternatives and consequences
+    b: Every commit
+    c: Server logs
+    d: Test results
+q2:
+  text: 'Non-functional requirements include:'
+  show: 4
+  options:
+    a: SLO targets, RPO/RTO, cost limits
+    b: The app's features
+    c: Button colours
+    d: Team names
+q3:
+  text: 'First thing to set before building in your account:'
+  show: 4
+  options:
+    a: A budget alert
+    b: A DNS name
+    c: A logo
+    d: Spot instances
+q4:
+  text: Why record rejected alternatives?
+  show: 4
+  options:
+    a: They show your reasoning and the trade-offs
+    b: They're required by AWS
+    c: To fill space
+    d: For billing
+q5:
+  text: 'Admin access for this project should be:'
+  show: 4
+  options:
+    a: Session Manager, no SSH port
+    b: SSH open to 0.0.0.0/0
+    c: Shared root keys
+    d: RDP
+q6:
+  text: 'After a clean apply, `terraform plan` should show:'
+  show: 4
+  options:
+    a: No changes
+    b: Everything replaced
+    c: Errors
+    d: Drift
+q7:
+  text: 'The only security group open to the internet:'
+  show: 4
+  options:
+    a: The ALB's, on 443 (and 80 to redirect)
+    b: The database's
+    c: The app's
+    d: All of them
+q8:
+  text: '`manage_master_user_password` keeps the DB password:'
+  show: 4
+  options:
+    a: In Secrets Manager, out of Terraform code
+    b: In tfvars
+    c: In Git
+    d: In user data
+q9:
+  text: '`systemd-analyze security app.service` shows:'
+  show: 4
+  options:
+    a: How exposed the service is, so you can harden it
+    b: CPU usage
+    c: Logs
+    d: Open ports only
+q10:
+  text: 'User data in a baked-AMI setup should:'
+  show: 4
+  options:
+    a: Do only quick per-instance steps
+    b: Install everything
+    c: Contain secrets
+    d: Run for 20 minutes
+q11:
+  text: 'Production should run:'
+  show: 4
+  options:
+    a: The same image digest that passed staging
+    b: A rebuilt image
+    c: latest
+    d: Whatever is on the laptop
+q12:
+  text: '`-detailed-exitcode` exit code 2 means:'
+  show: 4
+  options:
+    a: The plan has changes (drift)
+    b: Success, no changes
+    c: An error
+    d: Locked state
+q13:
+  text: '`concurrency` on the prod deploy job prevents:'
+  show: 4
+  options:
+    a: Two deploys overlapping
+    b: Tests running
+    c: Rollbacks
+    d: Approvals
+q14:
+  text: 'Console access to prod should be:'
+  show: 4
+  options:
+    a: Read-only, with a logged break-glass role
+    b: Full admin for everyone
+    c: Disabled for audits
+    d: Shared
+q15:
+  text: 'Database migrations in this pipeline follow:'
+  show: 4
+  options:
+    a: Expand and contract
+    b: Drop and recreate
+    c: Manual SQL in prod
+    d: Rebuild the DB each deploy
+q16:
+  text: 'Your availability SLI is best measured at:'
+  show: 4
+  options:
+    a: The load balancer
+    b: The database CPU
+    c: The CI server
+    d: Your laptop
+q17:
+  text: 'A restore test gives you:'
+  show: 4
+  options:
+    a: Your real RTO and RPO
+    b: Faster backups
+    c: Cheaper storage
+    d: Fewer alerts
+q18:
+  text: 'Instance credentials should come from:'
+  show: 4
+  options:
+    a: The instance role via the metadata service (IMDSv2)
+    b: Access keys in env files
+    c: The AMI
+    d: Git
+q19:
+  text: 'A ticket-level (not paging) alert:'
+  show: 4
+  options:
+    a: Certificate expires in 14 days
+    b: Error budget burning 14x
+    c: Site down
+    d: All instances unhealthy
+q20:
+  text: Logs should include which field to join with traces?
+  show: 4
+  options:
+    a: trace_id
+    b: user password
+    c: full card number
+    d: random noise
+q21:
+  text: 'Each game day test starts with:'
+  show: 4
+  options:
+    a: A written hypothesis of what should happen
+    b: Deleting prod
+    c: A new feature
+    d: Turning off monitoring
+q22:
+  text: 'If a test causes unexpected harm:'
+  show: 4
+  options:
+    a: Stop immediately and record it as a finding
+    b: Continue to the end
+    c: Hide it
+    d: Delete the logs
+q23:
+  text: 'The README''s results section should show:'
+  show: 4
+  options:
+    a: 'Measured numbers: lead time, rollback, rebuild, RTO/RPO, cost'
+    b: Only screenshots of code
+    c: Your opinions
+    d: Nothing
+q24:
+  text: 'A useful postmortem from a game day produces:'
+  show: 4
+  options:
+    a: Owned, dated action items
+    b: Blame
+    c: A longer README only
+    d: No changes
+q25:
+  text: 'Before leaving the project, you should:'
+  show: 4
+  options:
+    a: Destroy what you don't need running and check the bill
+    b: Leave everything on
+    c: Delete the repo
+    d: Open port 22

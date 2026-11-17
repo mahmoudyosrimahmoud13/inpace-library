@@ -1,0 +1,17 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="60" width="440" height="270" rx="18" fill="#2b1d00"/></g>
+<g font-family="JBM" font-size="16" font-weight="600">
+<text x="66" y="104" fill="#ffd04d">module "web" {</text>
+<text x="90" y="132" fill="#fff6d6">source   = "./modules/web"</text>
+<text x="90" y="160" fill="#fff6d6">min_size = 2</text>
+<text x="66" y="188" fill="#ffd04d">}</text>
+<text x="66" y="232" fill="#fff6d6">$ terraform plan</text>
+<text x="66" y="262" fill="#ffd04d">Plan: 6 to add, 0 to change,</text>
+<text x="66" y="288" fill="#ffd04d">      0 to destroy.</text></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" text-anchor="middle" font-size="17">
+<rect x="40" y="370" width="200" height="130" rx="16" fill="#fff6d6" stroke="#2b1d00" stroke-width="4"/>
+<text x="140" y="420" fill="#2b1d00">- hosts: web</text><text x="140" y="450" fill="#2b1d00">roles:</text><text x="140" y="478" fill="#2b1d00">[nginx, app]</text>
+<rect x="280" y="370" width="200" height="130" rx="16" fill="#2b1d00"/>
+<text x="380" y="425" fill="#fff6d6">changed=0</text><text x="380" y="458" fill="#ffd04d" font-size="15">idempotent ✓</text></g>
+</svg>

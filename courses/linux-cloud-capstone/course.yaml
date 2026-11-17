@@ -1,0 +1,166 @@
+id: linux-cloud-capstone
+title: Linux, Cloud and DevOps Final Project
+version: 1
+language: en
+description: 'One project that uses the whole track: design a small web service with ADRs, build its AWS infrastructure with
+  Terraform, configure and bake servers with Ansible and Packer, deliver it with a secure CI/CD pipeline and OIDC, add metrics,
+  logs, traces, SLOs and burn-rate alerts, pass a security and backup review, run a game day with real failures and a restore
+  test, and write it up as a portfolio piece. The final course (15) of the Linux, Cloud and DevOps track. About 5 days of
+  focused work, or spread over two weeks.'
+image: cover.jpg
+downloads:
+- title: AWS Well-Architected Framework
+  url: https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+- title: Google SRE books (free online)
+  url: https://sre.google/books/
+modules:
+- id: m1
+  title: 'Day 1: Design'
+  lessons:
+  - id: m1-l1
+    title: 'The final project: what you''ll build'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Design document and decisions
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write docs/design.md (goal, requirements with SLO, RPO/RTO and cost targets, architecture diagram, risks) and
+      at least four ADRs covering compute, configuration, admin access and secrets. Set a budget alert. Upload the design
+      and ADRs.
+  - id: m1-explain
+    type: explain
+    prompt: 'Explain one decision from your ADRs: the alternatives you rejected and what your choice costs you.'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Infrastructure and servers'
+  lessons:
+  - id: m2-l1
+    title: 'Infrastructure: network, compute and data'
+    file: lessons/m2-l1.md
+    minutes: 40
+  - id: m2-l2
+    title: Server images and configuration
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the bootstrap, network, service and data modules and the staging environment with Terraform. Bake an AMI
+      with Packer and your Ansible roles. Show a plan with no changes after apply, and terminate an instance to prove replacement
+      works. Upload the repo link and evidence.
+  - id: m2-explain
+    type: explain
+    prompt: Explain how a request reaches your app and which security group allows each hop.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Delivery pipelines'
+  lessons:
+  - id: m3-l1
+    title: The application pipeline
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Infrastructure pipeline and drift
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build the app pipeline (PR checks, scans, image by SHA, staging, approved prod, smoke tests, rollback script)
+      and the infra pipeline (plan comments, apply with approval, daily drift check). Show a change reaching prod and a one-command
+      rollback. Upload run screenshots and timings.
+  - id: m3-explain
+    type: explain
+    prompt: Explain how you stop the app pipeline and the infra pipeline from fighting over the same settings.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Operations and security'
+  lessons:
+  - id: m4-l1
+    title: Observability and SLOs
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Security and backups review
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Add metrics, logs, traces, a dashboard as code, two SLOs and burn-rate alerts with runbooks. Complete the security
+      and backup checklist, including a real database restore test with timings. Upload docs/slo.md, docs/security.md and
+      a dashboard screenshot.
+  - id: m4-explain
+    type: explain
+    prompt: Explain your real RTO and RPO from the restore test and whether they meet the targets in your design.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Game day and write-up'
+  lessons:
+  - id: m5-l1
+    title: 'Game day: break it and recover'
+    file: lessons/m5-l1.md
+    minutes: 40
+  - id: m5-l2
+    title: Write it up and show it
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Run at least five of the seven game day tests with hypotheses and timings, write a blameless postmortem for the
+      biggest surprise, fix one action item, and finish the README with results and evidence. Upload the repo link, timeline
+      and postmortem.
+  - id: m5-explain
+    type: explain
+    prompt: 'Give your 2-minute interview summary of this project: problem, two key decisions, one thing that broke, one number.'
+    min_words: 120
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

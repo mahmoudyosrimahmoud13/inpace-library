@@ -160,3 +160,27 @@ courses:
     title: Ship it,<br>safely
     sub: CI, images, OIDC, environments, canary, GitOps and rollback
     tags: [14 lessons, 35 quiz questions]
+
+  iac-terraform-ansible:
+    theme: sun
+    art: iac-terraform-ansible.svg
+    chip: Track 13 · 7 days
+    title: Your cloud,<br>as code
+    sub: Terraform modules and state, Ansible roles, Packer, CI and drift
+    tags: [14 lessons, 35 quiz questions]
+
+  observability-sre:
+    theme: plum
+    art: observability-sre.svg
+    chip: Track 14 · 7 days
+    title: Keep it<br>running
+    sub: Prometheus, Grafana, logs, tracing, SLOs, alerts and postmortems
+    tags: [14 lessons, 35 quiz questions]
+
+  linux-cloud-capstone:
+    theme: navy
+    art: linux-cloud-capstone.svg
+    chip: Track 15 · Final project
+    title: Build it<br>all, end<br>to end
+    sub: Design, Terraform, pipelines, SLOs, a game day and a portfolio write-up
+    tags: [10 lessons, 25 quiz questions]

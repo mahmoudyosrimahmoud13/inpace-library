@@ -1,0 +1,224 @@
+id: iac-terraform-ansible
+title: Infrastructure as Code with Terraform and Ansible
+version: 1
+language: en
+description: 'Describe your whole cloud in Git and rebuild it in minutes. Terraform: providers, resources, plan and apply,
+  variables, for_each, state and remote backends, drift, import and moved blocks, modules, and plan/apply in CI with OIDC.
+  Ansible: inventory, playbooks, handlers, templates, roles, Vault, dynamic AWS inventory and testing with ansible-lint and
+  Molecule. Then both together with Packer, environments, secrets, safety rules, troubleshooting and a rebuild-from-Git capstone.
+  Optional videos by Andrew Brown (freeCodeCamp) and Jeff Geerling. Course 13 of the Linux, Cloud and DevOps track. About
+  7 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: Terraform documentation
+  url: https://developer.hashicorp.com/terraform/docs
+- title: Ansible documentation
+  url: https://docs.ansible.com/
+modules:
+- id: m1
+  title: 'Day 1: IaC and Terraform basics'
+  lessons:
+  - id: m1-l1
+    title: Why infrastructure as code
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: 'Terraform basics: providers, resources, plan, apply'
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install Terraform (or OpenTofu). Write a config with the AWS provider, default tags, a versioned S3 bucket and
+      an output. Run init, fmt, validate, plan, apply, then destroy. Upload the .tf file and the plan summary lines.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between provisioning and configuration management, with one example of each.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Variables and state'
+  lessons:
+  - id: m2-l1
+    title: Variables, outputs, expressions and loops
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'State: what Terraform remembers'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Create an S3 backend with locking and encryption, then move your Day 1 config to it. Add variables with validation,
+      a locals block, and subnets created with for_each from a map. Rename one resource with a moved block and show the plan
+      has no destroys. Upload code and plan output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why for_each with a map is safer than count for a list of subnets.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Modules and team workflow'
+  lessons:
+  - id: m3-l1
+    title: 'Modules: reusable building blocks'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Terraform in a team and in CI
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Refactor your code into a network module used by two environment folders (staging, prod) with different CIDRs.
+      Add a GitHub Actions workflow that runs fmt, validate and plan on pull requests. Upload the folder tree, the module's
+      variables/outputs and a PR with the plan.
+  - id: m3-explain
+    type: explain
+    prompt: Explain what reviewers should look for in a Terraform pull request besides the code itself.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: A web tier in Terraform, and Ansible basics'
+  lessons:
+  - id: m4-l1
+    title: Build a VPC and web tier with Terraform
+    file: lessons/m4-l1.md
+    minutes: 40
+  - id: m4-l2
+    title: 'Ansible basics: inventory, ad-hoc and playbooks'
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Apply the VPC, security groups, launch template, ALB and Auto Scaling group from the lesson; prove the site answers
+      through the ALB; then destroy. Separately, write a playbook that installs and configures nginx with a template and handler,
+      and show the second run has changed=0. Upload code and outputs.
+  - id: m4-explain
+    type: explain
+    prompt: Explain what an Ansible handler is and why nginx should reload only through one.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Roles, secrets and dynamic inventory'
+  lessons:
+  - id: m5-l1
+    title: 'Ansible: variables, templates and roles'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Ansible secrets, dynamic inventory and testing
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Split your playbook into common, nginx and app roles with defaults and templates. Store one secret with Ansible
+      Vault and use it with no_log. Use the aws_ec2 dynamic inventory to target instances by tag. Run ansible-lint clean.
+      Upload the tree, inventory file and lint output.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why dynamic inventory fits cloud servers better than a hand-written inventory file.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Putting them together safely'
+  lessons:
+  - id: m6-l1
+    title: Terraform and Ansible together
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Environments, secrets and safety at scale
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Use Packer with your Ansible roles to bake an AMI, then have Terraform pick the newest one with a data source
+      and roll it out with an instance refresh. Upload the Packer file, the data source and the refresh output.
+  - id: m6-explain
+    type: explain
+    prompt: 'Compare a folder per environment with Terraform workspaces: which would you choose for prod and why?'
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Troubleshooting and the capstone'
+  lessons:
+  - id: m7-l1
+    title: Troubleshooting IaC
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'Capstone: a whole environment from Git'
+    file: lessons/m7-l2.md
+    minutes: 45
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Capstone: build the shop-infra repository with all seven requirements. Destroy staging and rebuild it from scratch,
+      timing it. Introduce drift and show the scheduled plan catching it. Upload the repo link, README and rebuild time.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain how you would handle a plan that unexpectedly wants to replace the production database.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
