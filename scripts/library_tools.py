@@ -534,6 +534,9 @@ a { color: inherit; }
 .sq.discord { color: #5865F2; text-decoration: none; }
 @media (max-width: 720px) { .top nav { display: none; } .sq.discord { margin-inline-start: auto; } }
 .wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; }
+.hero-main { display: flex; align-items: center; gap: 1.2rem; }
+.tempo-lib { flex: none; } .tempo-lib svg { display: block; } [dir=rtl] .tempo-lib svg { transform: scaleX(-1); }
+@media (max-width: 640px) { .hero-main { flex-direction: column; align-items: flex-start; gap: .4rem; } .tempo-lib svg { width: 104px; height: auto; } }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: end; padding-block: 2.6rem 1.2rem; }
 h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); margin: 0 0 .6rem; line-height: 1.05; letter-spacing: -.02em; }
 .lead { color: var(--muted); max-width: 40em; margin: 0; font-size: 1.08rem; }
@@ -759,7 +762,8 @@ HEAD_SCRIPT = """<script>
 COMMON_SCRIPT = """<script>
 var html = document.documentElement;
 function labels() { var ar = html.lang === "ar";
-  [].forEach.call(document.querySelectorAll("[data-ph-en]"), function (el) { el.placeholder = ar ? el.dataset.phAr : el.dataset.phEn; el.setAttribute("aria-label", el.placeholder); }); }
+  [].forEach.call(document.querySelectorAll("[data-ph-en]"), function (el) { el.placeholder = ar ? el.dataset.phAr : el.dataset.phEn; el.setAttribute("aria-label", el.placeholder); });
+  [].forEach.call(document.querySelectorAll("option[data-en]"), function (o) { o.textContent = ar ? o.dataset.ar : o.dataset.en; }); }
 labels();
 document.getElementById("lang").addEventListener("click", function () {
   var next = html.lang === "ar" ? "en" : "ar"; html.lang = next; html.dir = next === "ar" ? "rtl" : "ltr";
@@ -928,6 +932,15 @@ def needs_note() -> str:
 RM_THUMB_COLORS = ("#FFD43B", "#9ED8F0", "#FF8FC2", "#9EE6B8", "#C9B6FF", "#FFB86B")
 
 
+def librarian() -> str:
+    """Tempo the librarian, drawn by the app's own mascot code (left out quietly on older inPace versions)."""
+    try:
+        from inpace.mascot import mascot
+        return f'<span class="tempo-lib" title="Tempo the librarian">{mascot("librarian", 130, "Tempo the librarian")}</span>'
+    except Exception:
+        return ""
+
+
 def roadmap_thumb(r: dict, by_id: dict, big: bool = False) -> str:
     """A neobrutalist picture for a roadmap, made from its first three courses' covers (the same one the app shows)."""
     e = html.escape
@@ -1044,11 +1057,11 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
                      for x in secs))
     body = f"""<div class="wrap">
 <header class="hero">
-  <div>
+  <div class="hero-main">{librarian()}<div>
     <h1>{t("The inPace course library", "مكتبة دورات inPace")}</h1>
     <p class="lead">{t("Free courses made and shared by people who learn with inPace. Look inside any course first, then press <b>Add to inPace</b> and it opens in the app, ready to start. Your progress stays on your device.",
         "دورات مجانية صنعها وشاركها متعلمون يستخدمون inPace. اطّلع على محتوى أي دورة أولًا، ثم اضغط <b>أضف إلى inPace</b> فتفتح في التطبيق جاهزة للبدء. ويبقى تقدّمك على جهازك.")}</p>
-  </div>
+  </div></div>
   <div class="stats"><div><b>{len(entries)}</b><span>{t("courses", "دورة")}</span></div>{f'<div><b>{len(road)}</b><span>{t("roadmaps", "مسار")}</span></div>' if road else ''}<div><b>{total_h}</b><span>{t("hours of lessons", "ساعة دروس")}</span></div><div><b>0</b><span>{t("cost", "تكلفة")}</span></div></div>
 </header>
 {tabs}
@@ -1056,8 +1069,8 @@ def page(entries: list[dict], road: list[dict] | None = None) -> str:
 <div class="tools">
   <label class="find">{ic("search")}<input type="search" id="q" dir="auto" data-ph-en="Search courses" data-ph-ar="ابحث في الدورات"></label>
   <div class="filters">
-    <select id="lvl" aria-label="Level"><option value="">{t("Any level", "أي مستوى")}</option><option value="beginner">{t("Beginner", "مبتدئ")}</option><option value="intermediate">{t("Intermediate", "متوسط")}</option><option value="advanced">{t("Advanced", "متقدم")}</option></select>
-    <select id="lng" aria-label="Language"><option value="">{t("Any language", "أي لغة")}</option><option value="en">English</option><option value="ar">العربية</option></select>
+    <select id="lvl" aria-label="Level"><option value="" data-en="Any level" data-ar="أي مستوى">Any level</option><option value="beginner" data-en="Beginner" data-ar="مبتدئ">Beginner</option><option value="intermediate" data-en="Intermediate" data-ar="متوسط">Intermediate</option><option value="advanced" data-en="Advanced" data-ar="متقدم">Advanced</option></select>
+    <select id="lng" aria-label="Language"><option value="" data-en="Any language" data-ar="أي لغة">Any language</option><option value="en">English</option><option value="ar">العربية</option></select>
   </div>
   <div class="topics" role="group" aria-label="Topics">{chips}</div>
 </div>
