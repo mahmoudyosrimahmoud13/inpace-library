@@ -707,6 +707,42 @@ footer { text-align: center; padding: 2rem 16px; color: var(--muted); font-size:
 .road .opt-tag { font-size: .75rem; font-weight: 700; border: 1.5px dashed var(--ink); padding: 0 .4rem; }
 @media (max-width: 640px) { .road > li { grid-template-columns: 40px 1fr; gap: .55rem; } .road .n { width: 40px; height: 40px; }
   .road::before { inset-inline-start: 18px; } .road .step .cover { display: none; } }
+/* Roadmap thumbnails (v1.29): neobrutalist cards made from the first courses' covers. Fixed colours: they
+   sit on their own bright background, so they read the same in light and dark mode. */
+.rt { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--rt-bg, #FFD43B);
+  color: #111; isolation: isolate; container-type: inline-size; }
+.rt-dots { position: absolute; inset: 0; background-image: radial-gradient(#111 1.4px, transparent 1.5px); background-size: 18px 18px; opacity: .16; }
+.rt-stack { position: absolute; inset: 9% 7% 26% 7%; }
+.rt-c { position: absolute; top: 0; width: 52%; aspect-ratio: 16 / 10; background: #fff; border: 3px solid #111; box-shadow: 6px 6px 0 #111; overflow: hidden; }
+.rt-c img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.rt-blank { display: grid; place-items: center; width: 100%; height: 100%; font-size: 2.6rem; font-weight: 800; color: #111;
+  background: hsl(var(--hue, 40) 75% 78%); }
+.rt-c0 { inset-inline-start: 0; transform: rotate(-6deg); z-index: 1; }
+.rt-c1 { inset-inline-start: 24%; top: -4%; transform: rotate(2deg); z-index: 2; }
+.rt-c2 { inset-inline-start: 48%; top: 6%; transform: rotate(7deg); z-index: 3; }
+.rt-n1 .rt-c0 { inset-inline-start: 22%; width: 56%; transform: rotate(-3deg); }
+.rt-n2 .rt-c0 { inset-inline-start: 6%; } .rt-n2 .rt-c1 { inset-inline-start: 40%; top: 4%; transform: rotate(5deg); }
+.rt-path { position: absolute; inset-inline-start: 7%; bottom: 8%; display: flex; align-items: center; gap: 10px; z-index: 4; }
+.rt-path::before { content: ""; position: absolute; inset-inline: 12px; top: 50%; border-top: 3px dashed #111; z-index: -1; }
+.rt-path i { display: grid; place-items: center; min-width: 26px; height: 26px; padding-inline: 4px; font-style: normal; font-weight: 800; font-size: 13px;
+  background: #fff; border: 2.5px solid #111; box-shadow: 2px 2px 0 #111; }
+.rt-path i:first-child { background: #111; color: #fff; }
+.rt-path .rt-more { background: #FFF6D6; }
+.rt-path .rt-port { background: #fff; font-size: 14px; }
+.rt-count { position: absolute; inset-inline-end: 5%; bottom: 8%; z-index: 4; font-weight: 800; font-size: 14px; padding: 4px 10px;
+  background: #fff; border: 2.5px solid #111; box-shadow: 3px 3px 0 #111; transform: rotate(-3deg); white-space: nowrap; }
+[dir="rtl"] .rt-c0 { transform: rotate(6deg); } [dir="rtl"] .rt-c1 { transform: rotate(-2deg); } [dir="rtl"] .rt-c2 { transform: rotate(-7deg); }
+[dir="rtl"] .rt-count { transform: rotate(3deg); }
+@container (max-width: 300px) { .rt-path i { min-width: 22px; height: 22px; font-size: 11px; } .rt-path i:nth-child(3):not(.rt-port):not(.rt-more) { display: none; }
+  .rt-count { font-size: 12px; padding: 3px 7px; } .rt-c { box-shadow: 4px 4px 0 #111; border-width: 2.5px; } }
+.rt.big { border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); }
+[dir="rtl"] .rt.big { box-shadow: -8px 8px 0 var(--ink); }
+@container (min-width: 520px) { .rt-path i { min-width: 34px; height: 34px; font-size: 16px; } .rt-count { font-size: 18px; padding: 6px 14px; } }
+.rt-link { display: block; border-bottom: 3px solid var(--ink); text-decoration: none; }
+.rm-head { grid-template-columns: 1fr; }
+.rm-head-thumb { max-width: 520px; }
+@media (min-width: 900px) { .rm-head { grid-template-columns: 1fr minmax(300px, 440px); }
+  .rm-head > .rm-head-thumb { order: 2; } }
 """
 
 HEAD_SCRIPT = """<script>
@@ -889,6 +925,32 @@ def needs_note() -> str:
             f'<a href="{SITE_MAIN}#download">{t("Get the newest inPace", "حمّل أحدث inPace")}</a></p>')
 
 
+RM_THUMB_COLORS = ("#FFD43B", "#9ED8F0", "#FF8FC2", "#9EE6B8", "#C9B6FF", "#FFB86B")
+
+
+def roadmap_thumb(r: dict, by_id: dict, big: bool = False) -> str:
+    """A neobrutalist picture for a roadmap, made from its first three courses' covers (the same one the app shows)."""
+    e = html.escape
+    steps = r["steps"]
+    color = RM_THUMB_COLORS[sum(ord(ch) for ch in r["id"]) % len(RM_THUMB_COLORS)]
+    cards = []
+    for i, st in enumerate(steps[:3]):
+        c = by_id.get(st["course"], {})
+        if c.get("cover"):
+            inner = f'<img src="{e(c["cover"])}" alt="" loading="lazy">'
+        else:
+            hue = sum(ord(ch) for ch in st["course"]) % 360
+            inner = f'<b class="rt-blank" style="--hue:{hue}">{e((c.get("title") or st["course"])[:1].upper())}</b>'
+        cards.append(f'<span class="rt-c rt-c{i}">{inner}</span>')
+    dots = "".join(f"<i>{n}</i>" for n in range(1, min(len(steps), 3) + 1))
+    more = f'<i class="rt-more">+{len(steps) - 3}</i>' if len(steps) > 3 else ""
+    n = len(steps)
+    label = t(f"{n} courses", f"{n} دورات") if n != 1 else t("1 course", "دورة واحدة")
+    return (f'<span class="rt{" big" if big else ""}" style="--rt-bg:{color}" aria-hidden="true"><span class="rt-dots"></span>'
+            f'<span class="rt-stack rt-n{len(cards)}">{"".join(cards)}</span><span class="rt-path">{dots}{more}<i class="rt-port">⚓</i></span>'
+            f'<span class="rt-count">{label}</span></span>')
+
+
 def roadmap_card(r: dict, by_id: dict, root: str = "") -> str:
     e = html.escape
     items = []
@@ -901,8 +963,7 @@ def roadmap_card(r: dict, by_id: dict, root: str = "") -> str:
     words = " ".join([r["id"], r["title"], r.get("description", ""), r["author"]["name"]] + list(r.get("tags") or [])).lower()
     hrs = hours(r.get("minutes") or 0)
     return f"""<article class="card rcard" id="r-{e(r["id"])}" data-q="{e(words)}" data-tags="{e('|'.join(str(x).lower() for x in r.get("tags") or []))}">
-  <a class="top-band" href="{root}r/{e(r["id"])}.html" tabindex="-1" aria-hidden="true"><span class="badge">{ic("route")}</span>
-    <span class="count">{len(r["steps"])} {t("courses", "دورات")}</span></a>
+  <a class="rt-link" href="{root}r/{e(r["id"])}.html" tabindex="-1" aria-hidden="true">{roadmap_thumb(r, by_id)}</a>
   <div class="body">
     <h2 dir="auto"><a href="{root}r/{e(r["id"])}.html">{e(r["title"])}</a></h2>
     <ul class="facts">{f'<li>{ic("clock")}{hrs}</li>' if hrs else ''}<li>{ic("globe")}{lang_name(r["language"])}</li></ul>
@@ -1268,7 +1329,8 @@ def roadmap_page(r: dict, by_id: dict) -> str:
     tags = "".join(f'<span class="tag">{e(x)}</span>' for x in (r.get("tags") or [])[:8])
     body = f"""<div class="wrap">
 <a class="crumb" href="../index.html#roadmaps">{ic("back")}{t("All roadmaps", "كل المسارات")}</a>
-<header class="course-head" style="grid-template-columns: 1fr">
+<header class="course-head rm-head">
+  <div class="rm-head-thumb">{roadmap_thumb(r, by_id, big=True)}</div>
   <div>
     <p>{new_badge()}</p>
     <h1 dir="auto">{e(r["title"])}</h1>
@@ -1290,7 +1352,9 @@ def roadmap_page(r: dict, by_id: dict) -> str:
             "url": SITE + f"r/{r['id']}.html",
             "itemListElement": [{"@type": "ListItem", "position": i, "url": SITE + f"c/{st['course']}.html"}
                                 for i, st in enumerate(r["steps"], 1)]}
-    seo = seo_head(f"{r['title']} · free learning path on inPace", desc, f"r/{r['id']}.html", lang=r.get("language", "en"), data=data)
+    first = by_id.get(r["steps"][0]["course"], {}) if r["steps"] else {}
+    seo = seo_head(f"{r['title']} · free learning path on inPace", desc, f"r/{r['id']}.html", first.get("cover") or "",
+                   lang=r.get("language", "en"), data=data)
     return shell(f"{r['title']} · free learning path · inPace", desc, body, "../", "", seo)
 
 
