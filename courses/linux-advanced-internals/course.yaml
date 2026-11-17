@@ -1,0 +1,257 @@
+id: linux-advanced-internals
+title: Advanced Linux and System Internals
+version: 1
+language: en
+description: 'Understand and troubleshoot Linux deeply: /proc and /sys, sysctl and limits, signals, zombies and D-state processes,
+  strace and lsof, the USE method and pressure stall information, memory pressure and the OOM killer, the page cache and writeback,
+  file system failures, namespaces, capabilities and user namespaces, cgroups v2, systemd dependencies and sandboxing, seccomp,
+  SELinux and AppArmor, a container built by hand, boot and crash investigation, and six incident drills. Built around talks
+  by Michael Kerrisk (author of The Linux Programming Interface), Brendan Gregg and MIT''s 6.S081; the videos are optional,
+  every lesson stands on its own. Course 4 of the Linux, Cloud and DevOps track. About 8 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: Linux man pages online (Michael Kerrisk)
+  url: https://man7.org/linux/man-pages/
+- title: Brendan Gregg's Linux performance page
+  url: https://www.brendangregg.com/linuxperf.html
+modules:
+- id: m1
+  title: 'Day 1: /proc, /sys and sysctl'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: /proc, the kernel''s window'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: '/sys and sysctl: tuning the kernel'
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Pick one running service. From /proc only (no ps or lsof), find: its command line, working directory, number
+      of open files, open-files limit, memory use (VmRSS) and state. Then change one sysctl temporarily and make another permanent
+      in /etc/sysctl.d. Upload commands and output.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain why /proc files show a size of 0 but still have content, and what really happens when you cat one.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Signals and tracing'
+  lessons:
+  - id: m2-l1
+    title: Signals in depth
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'Watching a process from outside: strace, lsof, ltrace'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a small script that traps SIGTERM and SIGINT and prints a message before exiting. Send it each signal and
+      show the output, then kill -9 it and note the difference. Then use `strace -f -e trace=file` on a program to find a
+      config file it looks for that doesn't exist. Upload script, commands and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why `kill -9` doesn't stop a process in D state, and what you should look at instead.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Performance and memory pressure'
+  lessons:
+  - id: m3-l1
+    title: 'Performance: the USE method and the 60-second check'
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Memory pressure and the OOM killer
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Run Gregg's 60-second checklist on an idle machine and save it. Then load it with `stress-ng --cpu 4 --vm 2 --vm-bytes
+      75% --timeout 120` and run it again, plus `cat /proc/pressure/*`. Upload both and write the USE findings for CPU and
+      memory.
+  - id: m3-explain
+    type: explain
+    prompt: Explain the USE method and why you check every resource in order instead of jumping to the one you suspect.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: I/O and file system failures'
+  lessons:
+  - id: m4-l1
+    title: 'I/O: the page cache, writeback and disk bottlenecks'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: File system troubleshooting
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Run a heavy write (`dd if=/dev/zero of=big bs=1M count=3000 status=progress`) while watching `iostat -xz 1`, `grep
+      Dirty /proc/meminfo` and `/proc/pressure/io` in other terminals. Then create 200,000 empty files in a small test file
+      system until inodes run out. Upload your observations.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why copying a large file can make the whole machine stall for a few seconds, using dirty pages and writeback.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Namespaces and capabilities'
+  lessons:
+  - id: m5-l1
+    title: 'Namespaces: giving a process its own view'
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: User namespaces and capabilities
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Use unshare to start a shell with its own UTS, PID and network namespaces, show that hostname, ps and ip a differ
+      from the host, and find it in `lsns`. Then give a small server the ability to bind port 80 without root using setcap
+      or AmbientCapabilities. Upload commands and output.
+  - id: m5-explain
+    type: explain
+    prompt: Explain what namespaces change and what they don't, and why containers still need cgroups.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: cgroups and systemd internals'
+  lessons:
+  - id: m6-l1
+    title: 'cgroups v2: limiting what a process can use'
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: 'systemd internals: dependencies, sockets and sandboxing'
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Run a memory-hungry command with `systemd-run --scope -p MemoryMax=100M` and show it being killed in its own cgroup
+      (memory.events). Then harden a test service with the sandbox options from the lesson, and show `systemd-analyze security`
+      before and after. Upload commands and output.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the difference between Requires= and After=, and the bug you get when you use only Requires=.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Security layers and a hand-made container'
+  lessons:
+  - id: m7-l1
+    title: seccomp, SELinux and AppArmor
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: Build a container by hand
+    file: lessons/m7-l2.md
+    minutes: 40
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Build the container by hand from the lesson: Alpine root file system, unshare and chroot, then a cgroup limiting
+      memory, CPU and processes. Show it''s isolated, then show the pids limit stopping a fork bomb. Upload commands, output
+      and a short table matching each step to the Docker feature it imitates.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain the six layers that isolate a container (permissions, capabilities, namespaces, cgroups, seccomp, MAC),
+      one sentence each.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Boot, crashes and incident drills'
+  lessons:
+  - id: m8-l1
+    title: Boot troubleshooting and crash investigation
+    file: lessons/m8-l1.md
+    minutes: 35
+  - id: m8-l2
+    title: 'Capstone: incident drills'
+    file: lessons/m8-l2.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Run at least four of the six incident drills. For each, upload what you checked in order, the evidence that pointed
+      to the cause, the fix, and how you verified it.
+  - id: m8-explain
+    type: explain
+    prompt: Explain how you would get a server back after a bad /etc/fstab line sends it to emergency mode.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

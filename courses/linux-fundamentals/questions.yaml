@@ -1,0 +1,320 @@
+q1:
+  text: What is a Linux distribution?
+  show: 4
+  options:
+    a: The Linux kernel packaged with tools, a package manager and defaults
+    b: A different kernel
+    c: A desktop theme
+    d: A version of bash
+q2:
+  text: Where does Linux keep system configuration files?
+  show: 4
+  options:
+    a: /etc
+    b: /home
+    c: /bin
+    d: /tmp
+q3:
+  text: What does `cd ..` do?
+  show: 4
+  options:
+    a: Moves to the parent directory
+    b: Moves to your home directory
+    c: Lists hidden files
+    d: Goes back to the previous directory
+q4:
+  text: Which path is absolute?
+  show: 4
+  options:
+    a: /var/log/syslog
+    b: log/syslog
+    c: ./syslog
+    d: ~syslog/log
+q5:
+  text: 'Files whose names start with a dot are:'
+  show: 4
+  options:
+    a: Hidden from plain ls; shown with ls -a
+    b: Deleted on reboot
+    c: Executable
+    d: Owned by root
+q6:
+  text: What does an exit code of 0 mean?
+  show: 4
+  options:
+    a: The command succeeded
+    b: The command failed
+    c: The command is still running
+    d: No output was printed
+q7:
+  text: 'In `cmd1 && cmd2`, cmd2 runs:'
+  show: 4
+  options:
+    a: Only if cmd1 succeeded
+    b: Always
+    c: Only if cmd1 failed
+    d: At the same time as cmd1
+q8:
+  text: Who expands `*.txt`?
+  show: 4
+  options:
+    a: The shell, before the command runs
+    b: The ls command
+    c: The kernel
+    d: The file system
+q9:
+  text: Which quotes stop $HOME from being expanded?
+  show: 4
+  options:
+    a: Single quotes
+    b: Double quotes
+    c: Backticks
+    d: No quotes
+q10:
+  text: Where do you read a command's full documentation in the terminal?
+  show: 4
+  options:
+    a: man command
+    b: help me command
+    c: info --all
+    d: cat command
+q11:
+  text: Which command keeps printing new lines as a log grows?
+  show: 4
+  options:
+    a: tail -f
+    b: head -f
+    c: cat -n
+    d: less -n
+q12:
+  text: In vim, how do you quit without saving?
+  show: 4
+  options:
+    a: :q!
+    b: :wq
+    c: ZZ
+    d: Ctrl+C
+q13:
+  text: In less, how do you search for the word error?
+  show: 4
+  options:
+    a: /error
+    b: ?find error
+    c: Ctrl+F error
+    d: grep error
+q14:
+  text: Why learn some vim even if you prefer nano?
+  show: 4
+  options:
+    a: vi is on almost every Unix system, including minimal containers and rescue shells
+    b: nano can't edit config files
+    c: vim is required by sudo
+    d: nano only works on desktops
+q15:
+  text: What does `wc -l file` print?
+  show: 4
+  options:
+    a: The number of lines in the file
+    b: The longest line
+    c: The file's size in bytes
+    d: The word list
+q16:
+  text: How do you send both normal output and errors into one file?
+  show: 4
+  options:
+    a: cmd > all.txt 2>&1
+    b: cmd 2>&1 > all.txt
+    c: cmd | all.txt
+    d: cmd >> 2 all.txt
+q17:
+  text: What does `grep -v DEBUG app.log` show?
+  show: 4
+  options:
+    a: Lines that do NOT contain DEBUG
+    b: Only DEBUG lines
+    c: A count of DEBUG lines
+    d: DEBUG lines with line numbers
+q18:
+  text: Which tool finds files larger than 100 MB?
+  show: 4
+  options:
+    a: find with -size +100M
+    b: grep -r 100M
+    c: ls -100M
+    d: locate --big
+q19:
+  text: What does tee do?
+  show: 4
+  options:
+    a: Writes its input to a file and also passes it on down the pipe
+    b: Splits a file in two
+    c: Runs two commands at once
+    d: Sorts output
+q20:
+  text: What does $(date +%F) do inside a command?
+  show: 4
+  options:
+    a: Replaces itself with the output of date, like 2026-11-17
+    b: Runs date in the background
+    c: Prints the text $(date +%F)
+    d: Sets a variable named date
+q21:
+  text: Why does `uniq -c` usually follow sort?
+  show: 4
+  options:
+    a: uniq only merges repeated lines that are next to each other
+    b: uniq needs numbers
+    c: sort adds the counts
+    d: uniq can't read files
+q22:
+  text: What does `sed -i.bak 's/8080/9090/' app.conf` do?
+  show: 4
+  options:
+    a: Replaces 8080 with 9090 in the file itself, keeping a backup app.conf.bak
+    b: Prints the file with changes but leaves it alone
+    c: Deletes app.conf
+    d: Only creates app.conf.bak
+q23:
+  text: In awk, what is $1?
+  show: 4
+  options:
+    a: The first field (column) of the current line
+    b: The first line of the file
+    c: The first argument to awk
+    d: The exit code
+q24:
+  text: '`cut -d: -f1 /etc/passwd` prints:'
+  show: 4
+  options:
+    a: The user names
+    b: The passwords
+    c: The home directories
+    d: The shells
+q25:
+  text: What does `awk '{s += $5} END {print s}'` print?
+  show: 4
+  options:
+    a: The sum of column 5 across all lines
+    b: Line 5
+    c: The fifth file
+    d: Column 5 of the last line
+q26:
+  text: Why doesn't typing `script.sh` run a script in the current directory?
+  show: 4
+  options:
+    a: The current directory isn't in PATH; use ./script.sh
+    b: Scripts can't run in the home directory
+    c: bash only runs files in /usr/bin
+    d: The file needs a .exe extension
+q27:
+  text: What does export do?
+  show: 4
+  options:
+    a: Makes a variable visible to programs started from this shell
+    b: Saves a variable permanently
+    c: Deletes a variable
+    d: Prints all variables
+q28:
+  text: Which file is the usual place for your aliases?
+  show: 4
+  options:
+    a: ~/.bashrc
+    b: /etc/passwd
+    c: ~/.ssh/config
+    d: /var/log/bash
+q29:
+  text: 'Ctrl+Z on a running command:'
+  show: 4
+  options:
+    a: Pauses it (stopped); bg or fg resumes it
+    b: Kills it
+    c: Sends it to another terminal
+    d: Saves its output
+q30:
+  text: Which signal can never be caught or ignored?
+  show: 4
+  options:
+    a: SIGKILL (9)
+    b: SIGTERM (15)
+    c: SIGINT (2)
+    d: SIGHUP (1)
+q31:
+  text: What does chmod 640 give?
+  show: 4
+  options:
+    a: Owner read/write, group read, others nothing
+    b: Everyone read/write
+    c: Owner read only
+    d: Owner everything, others read
+q32:
+  text: Deleting a file needs which permission?
+  show: 4
+  options:
+    a: Write on the directory that contains it
+    b: Write on the file
+    c: Execute on the file
+    d: Read on the file
+q33:
+  text: What permission must an SSH private key have?
+  show: 4
+  options:
+    a: '600: only the owner can read and write'
+    b: '755'
+    c: '644'
+    d: '777'
+q34:
+  text: Why `sudo apt update` before `sudo apt install`?
+  show: 4
+  options:
+    a: It refreshes the list of available packages and versions
+    b: It installs updates for everything
+    c: It removes old packages
+    d: It reboots the system
+q35:
+  text: How should you edit /etc/sudoers?
+  show: 4
+  options:
+    a: With visudo, which checks the syntax before saving
+    b: With any editor as root
+    c: By appending with echo
+    d: It can't be edited
+q36:
+  text: Which command shows your machine's IP addresses?
+  show: 4
+  options:
+    a: ip a
+    b: ifconfig --all-ips
+    c: ping self
+    d: hostname --ports
+q37:
+  text: Which command lists the TCP ports this machine listens on?
+  show: 4
+  options:
+    a: ss -tlnp
+    b: ping -l
+    c: ip route
+    d: dig ports
+q38:
+  text: What does `curl -I` fetch?
+  show: 4
+  options:
+    a: Only the response headers
+    b: Only images
+    c: The page and all its links
+    d: Nothing; it checks the internet
+q39:
+  text: With an SSH key pair, which part goes onto the server?
+  show: 4
+  options:
+    a: The public key (.pub)
+    b: The private key
+    c: Both
+    d: Neither
+q40:
+  text: 'A 4-CPU machine has a load average of 12. That means:'
+  show: 4
+  options:
+    a: Much more work wants CPU (or disk) than the machine can do at once
+    b: It's 12% busy
+    c: It has 12 users
+    d: It's idle

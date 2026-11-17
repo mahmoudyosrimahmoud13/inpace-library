@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: maps lists each region with permissions and the file behind it.
+q2:
+  right:
+  - a
+  why: sysctl -w changes it until the next boot.
+q3:
+  right:
+  - a
+  why: limits.conf applies to login sessions, not services.
+q4:
+  right:
+  - a
+  why: 1 means a spinning disk.
+q5:
+  right:
+  - a
+  why: /proc is a virtual file system.
+q6:
+  right:
+  - a
+  why: They're handled by the kernel directly.
+q7:
+  right:
+  - a
+  why: That gives the service a chance to shut down cleanly.
+q8:
+  right:
+  - a
+  why: Zombies are already dead; the parent must reap them.
+q9:
+  right:
+  - a
+  why: 'ENOENT: no such file or directory.'
+q10:
+  right:
+  - a
+  why: Files with link count 0 that are still open.
+q11:
+  right:
+  - a
+  why: Utilization is busy; saturation is queued work.
+q12:
+  right:
+  - a
+  why: PSI measures time lost waiting.
+q13:
+  right:
+  - a
+  why: Lower adjust means less likely to be picked.
+q14:
+  right:
+  - a
+  why: The work can't spread across cores.
+q15:
+  right:
+  - a
+  why: A sawtooth is usually GC; endless growth is a leak.
+q16:
+  right:
+  - a
+  why: That's the stall people feel during big copies.
+q17:
+  right:
+  - a
+  why: Each request is slow even though the device isn't busy.
+q18:
+  right:
+  - a
+  why: errors=remount-ro protects your data; check dmesg.
+q19:
+  right:
+  - a
+  why: Millions of tiny files can use every inode.
+q20:
+  right:
+  - a
+  why: Look at 'available', not 'free'.
+q21:
+  right:
+  - a
+  why: Each network namespace has its own network stack.
+q22:
+  right:
+  - a
+  why: Great for debugging containers that lack tools.
+q23:
+  right:
+  - a
+  why: Ports below 1024 normally need root.
+q24:
+  right:
+  - a
+  why: That's why rootless containers are safer.
+q25:
+  right:
+  - a
+  why: Fewer SUID programs means fewer paths to root.
+q26:
+  right:
+  - a
+  why: memory.high throttles; memory.max is the hard limit.
+q27:
+  right:
+  - a
+  why: Quota of 50 ms per 100 ms period.
+q28:
+  right:
+  - a
+  why: Ordering is a separate directive.
+q29:
+  right:
+  - a
+  why: Add ReadWritePaths= for the folders it must write.
+q30:
+  right:
+  - a
+  why: Hitting a memory limit is the most common cause.
+q31:
+  right:
+  - a
+  why: Each system call is checked against a small BPF program.
+q32:
+  right:
+  - a
+  why: Fix the label; don't turn SELinux off.
+q33:
+  right:
+  - a
+  why: Red Hat's family uses SELinux.
+q34:
+  right:
+  - a
+  why: That's what you built by hand.
+q35:
+  right:
+  - a
+  why: It caps the number of processes in the cgroup.
+q36:
+  right:
+  - a
+  why: Fix fstab from the emergency shell.
+q37:
+  right:
+  - a
+  why: A spare kernel boots after a crash and writes the dump.
+q38:
+  right:
+  - a
+  why: coredumpctl shows signal, binary and stack trace.
+q39:
+  right:
+  - a
+  why: Often the new initramfs is missing a driver.
+q40:
+  right:
+  - a
+  why: One change, verify, record.

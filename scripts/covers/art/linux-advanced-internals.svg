@@ -1,0 +1,14 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g font-family="JBM" font-weight="700" font-size="18">
+<rect x="30" y="50" width="460" height="460" rx="22" fill="none" stroke="#7fd3ff" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="56" y="88" fill="#7fd3ff">cgroup: memory.max 512M</text>
+<rect x="70" y="112" width="380" height="350" rx="18" fill="none" stroke="#ffd166" stroke-width="3"/>
+<text x="94" y="148" fill="#ffd166">namespaces: pid net mnt user</text>
+<g filter="url(#s)"><rect x="110" y="176" width="300" height="250" rx="16" fill="#f3f7ff"/></g>
+<text x="260" y="226" fill="#10233f" text-anchor="middle" font-size="24">PID 1: app</text>
+<text x="260" y="276" fill="#10233f" text-anchor="middle" font-weight="500" font-size="17">caps: NET_BIND_SERVICE</text>
+<text x="260" y="312" fill="#10233f" text-anchor="middle" font-weight="500" font-size="17">seccomp: on</text>
+<text x="260" y="348" fill="#10233f" text-anchor="middle" font-weight="500" font-size="17">/proc/1/status</text>
+<text x="260" y="396" fill="#1e4b85" text-anchor="middle" font-size="17">strace · lsof · PSI</text></g>
+</svg>

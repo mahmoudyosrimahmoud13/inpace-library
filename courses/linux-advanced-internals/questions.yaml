@@ -1,0 +1,320 @@
+q1:
+  text: Which file shows every memory region of a process and what backs it?
+  show: 4
+  options:
+    a: /proc/PID/maps
+    b: /proc/PID/status
+    c: /proc/meminfo
+    d: /sys/memory
+q2:
+  text: How do you make a sysctl setting survive reboot?
+  show: 4
+  options:
+    a: Put it in a file under /etc/sysctl.d/ and run sysctl --system
+    b: sysctl -w only
+    c: Edit /proc/sys directly
+    d: Add it to ~/.bashrc
+q3:
+  text: Where should you raise a service's open-files limit?
+  show: 4
+  options:
+    a: LimitNOFILE= in its systemd unit
+    b: /etc/security/limits.conf
+    c: ulimit in .bashrc
+    d: /proc/sys/fs/file-nr
+q4:
+  text: '`cat /sys/block/sda/queue/rotational` prints 0. That means:'
+  show: 4
+  options:
+    a: The kernel thinks sda is an SSD (non-rotational)
+    b: The disk has failed
+    c: No I/O scheduler
+    d: The disk is idle
+q5:
+  text: Why does a /proc file's content change each time you read it?
+  show: 4
+  options:
+    a: The kernel generates it from current state on every read
+    b: It's a log file
+    c: A cron job rewrites it
+    d: It's cached from disk
+q6:
+  text: Which two signals can never be caught or ignored?
+  show: 4
+  options:
+    a: SIGKILL and SIGSTOP
+    b: SIGTERM and SIGINT
+    c: SIGHUP and SIGUSR1
+    d: SIGSEGV and SIGPIPE
+q7:
+  text: What does systemd do when stopping a service by default?
+  show: 4
+  options:
+    a: Sends SIGTERM, waits, then SIGKILL if it's still running
+    b: Sends SIGKILL immediately
+    c: Sends SIGHUP
+    d: Reboots the machine
+q8:
+  text: Many zombie processes keep appearing. What do you fix?
+  show: 4
+  options:
+    a: Their parent, which isn't calling wait()
+    b: Kill the zombies with -9
+    c: Add swap
+    d: Reboot nightly
+q9:
+  text: 'In a strace line, `= -1 ENOENT` means:'
+  show: 4
+  options:
+    a: The call failed because the file or path doesn't exist
+    b: Permission denied
+    c: Success
+    d: Timed out
+q10:
+  text: Which command finds deleted files still held open?
+  show: 4
+  options:
+    a: lsof +L1
+    b: strace -d
+    c: find -deleted
+    d: df --open
+q11:
+  text: 'In the USE method, saturation means:'
+  show: 4
+  options:
+    a: Work waiting for a resource that can't keep up
+    b: How many errors occurred
+    c: How busy the resource is
+    d: How much it costs
+q12:
+  text: What does `some avg10=20` in /proc/pressure/memory mean?
+  show: 4
+  options:
+    a: At least one task was stalled waiting for memory 20% of the last 10 seconds
+    b: 20 MB is free
+    c: 20 processes use memory
+    d: Swap is 20% full
+q13:
+  text: How do you make the OOM killer avoid your database?
+  show: 4
+  options:
+    a: Set a negative oom_score_adj (OOMScoreAdjust= in its unit)
+    b: Give it more swap
+    c: Run it as root
+    d: Set nice to -20
+q14:
+  text: 'One CPU at 100% while others idle, in mpstat, suggests:'
+  show: 4
+  options:
+    a: A single-threaded bottleneck
+    b: The machine needs more RAM
+    c: A disk problem
+    d: Everything is fine
+q15:
+  text: 'Steady RSS growth under constant load that never drops suggests:'
+  show: 4
+  options:
+    a: A memory leak
+    b: Normal caching
+    c: Garbage collection
+    d: Swap working well
+q16:
+  text: What happens when dirty data exceeds vm.dirty_ratio?
+  show: 4
+  options:
+    a: The writing process is blocked until data is written to disk
+    b: Data is lost
+    c: Writeback stops
+    d: The OOM killer runs
+q17:
+  text: 'iostat shows high await but low %util. A likely cause:'
+  show: 4
+  options:
+    a: A slow device or network storage, not a busy local disk
+    b: The disk is saturated
+    c: The CPU is too slow
+    d: Swap is full
+q18:
+  text: 'The root file system is suddenly read-only. The likely reason:'
+  show: 4
+  options:
+    a: The kernel remounted it after a file system or disk error
+    b: Someone ran chmod
+    c: Swap is full
+    d: A cron job
+q19:
+  text: '''No space left on device'' with free space in df -h. Check:'
+  show: 4
+  options:
+    a: df -i for inode exhaustion
+    b: free -h
+    c: lsmod
+    d: ip a
+q20:
+  text: Why is free memory small on a healthy server?
+  show: 4
+  options:
+    a: The kernel uses spare RAM as page cache and gives it back when needed
+    b: A memory leak
+    c: Swap is too big
+    d: The OOM killer is broken
+q21:
+  text: Which namespace gives a process its own interfaces, routes and ports?
+  show: 4
+  options:
+    a: net
+    b: mnt
+    c: uts
+    d: ipc
+q22:
+  text: What does `nsenter -t PID -n ss -tlnp` do?
+  show: 4
+  options:
+    a: Runs the host's ss inside that process's network namespace
+    b: Kills the process
+    c: Copies ss into the container
+    d: Moves the process to the host
+q23:
+  text: Which capability lets a non-root program bind port 80?
+  show: 4
+  options:
+    a: CAP_NET_BIND_SERVICE
+    b: CAP_SYS_ADMIN
+    c: CAP_NET_RAW
+    d: CAP_CHOWN
+q24:
+  text: 'In a user namespace with --map-root-user, you are root inside. Outside you are:'
+  show: 4
+  options:
+    a: Your normal unprivileged user
+    b: Real root
+    c: Nobody at all
+    d: The kernel
+q25:
+  text: Why keep SUID-root binaries to a minimum?
+  show: 4
+  options:
+    a: Each runs as root for whoever starts it, so a bug can become root access
+    b: They are slow
+    c: They use more disk
+    d: They can't be updated
+q26:
+  text: Which cgroup v2 file sets a hard memory limit?
+  show: 4
+  options:
+    a: memory.max
+    b: memory.high
+    c: memory.current
+    d: memory.events
+q27:
+  text: '`cpu.max` set to `50000 100000` means:'
+  show: 4
+  options:
+    a: Half of one CPU
+    b: 50 CPUs
+    c: 100% of all CPUs
+    d: 50 processes
+q28:
+  text: 'Requires=b without After=b starts the two units:'
+  show: 4
+  options:
+    a: At the same time
+    b: b first, always
+    c: Never
+    d: In alphabetical order
+q29:
+  text: What does ProtectSystem=strict do?
+  show: 4
+  options:
+    a: Makes most of the file system read-only for the service
+    b: Blocks the network
+    c: Runs it as root
+    d: Disables logging
+q30:
+  text: Where do you look first when a container randomly restarts?
+  show: 4
+  options:
+    a: memory.events in its cgroup, and the kernel log for OOM kills
+    b: ~/.bashrc
+    c: /etc/hosts
+    d: The GRUB config
+q31:
+  text: What does seccomp filter?
+  show: 4
+  options:
+    a: Which system calls a process may make
+    b: Which files it may open by path
+    c: How much memory it uses
+    d: Which users can log in
+q32:
+  text: 'nginx can''t read files in /srv/www on Rocky Linux though permissions are fine. Likely fix:'
+  show: 4
+  options:
+    a: Give the files the right SELinux label with semanage fcontext and restorecon
+    b: setenforce 0
+    c: chmod 777
+    d: Reinstall nginx
+q33:
+  text: Which distributions use AppArmor by default?
+  show: 4
+  options:
+    a: Ubuntu and Debian
+    b: Fedora and RHEL
+    c: Android
+    d: All of them
+q34:
+  text: 'A container is best described as:'
+  show: 4
+  options:
+    a: A normal process wrapped in namespaces, limited by cgroups and filtered by seccomp and MAC
+    b: A small virtual machine
+    c: A separate kernel
+    d: A special file system
+q35:
+  text: What does pids.max protect against?
+  show: 4
+  options:
+    a: 'Fork bombs: too many processes'
+    b: Too many open files
+    c: Port scans
+    d: Disk full
+q36:
+  text: '''You are in emergency mode'' after reboot most often means:'
+  show: 4
+  options:
+    a: A mount in /etc/fstab failed
+    b: The kernel is missing
+    c: The firmware lost its settings
+    d: A user deleted /home
+q37:
+  text: What does kdump do?
+  show: 4
+  options:
+    a: Saves the crashed kernel's memory to disk for later analysis
+    b: Prevents all panics
+    c: Updates the kernel
+    d: Backs up user files
+q38:
+  text: Where do you see crashed applications that systemd caught?
+  show: 4
+  options:
+    a: coredumpctl list
+    b: dmesg -crash
+    c: /var/www
+    d: systemctl --crashed-apps
+q39:
+  text: 'A kernel panic says ''unable to mount root fs'' after an update. First step:'
+  show: 4
+  options:
+    a: Boot the previous kernel from GRUB, then rebuild the initramfs
+    b: Reinstall the OS
+    c: Run fsck on /home
+    d: Disable SELinux
+q40:
+  text: 'In the drills, after making one change you should:'
+  show: 4
+  options:
+    a: Verify the fix and write down what you found
+    b: Make several more changes at once
+    c: Reboot immediately
+    d: Delete the logs

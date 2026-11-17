@@ -1,0 +1,256 @@
+id: linux-sysadmin
+title: 'Linux System Administration: run real servers'
+version: 1
+language: en
+description: 'Go from using Linux to running it: the boot process and rescue mode, kernel modules and dmesg, systemd services
+  and your own unit files, journalctl and logrotate, users, groups and sudo rules, a safe SSH server, disks, fstab, LVM, RAID
+  and swap, updates and repositories, cron and systemd timers, static IPs and DNS, ufw and firewalld, resources and full disks,
+  backups that restore, and nginx. Ends with building and documenting a small server. Built around Shawn Powers'' Linux Server
+  course on freeCodeCamp; the videos are optional, every lesson stands on its own. Course 3 of the Linux, Cloud and DevOps
+  track. About 8 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: Ubuntu Server documentation
+  url: https://documentation.ubuntu.com/server/
+- title: Red Hat Enterprise Linux 9 documentation (free)
+  url: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9
+modules:
+- id: m1
+  title: 'Day 1: Boot and the kernel'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: from user to administrator, and the boot process'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: Kernel modules, devices and dmesg
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'On your lab VM: show `systemctl get-default`, `cat /proc/cmdline`, `systemd-analyze blame | head`, and `sudo
+      dmesg -T | tail -20`. Then boot once into rescue.target from the GRUB menu and take a screenshot. Upload everything.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain what you'd do if a server stops booting right after a kernel update, step by step.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Services and logs'
+  lessons:
+  - id: m2-l1
+    title: Services with systemd
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'Logs: journalctl, syslog and logrotate'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a systemd service for a tiny script (for example a Python web server on port 8000) that runs as its own
+      user and restarts on failure. Enable and start it, kill its process and show systemd restarting it in `journalctl -u`.
+      Add a logrotate rule for a log it writes and test it with `logrotate -d`. Upload the unit file and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between starting and enabling a service, and the mistake people make by mixing them up.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Users and SSH'
+  lessons:
+  - id: m3-l1
+    title: Managing users, groups and sudo
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Running the SSH server safely
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Create a user with SSH key login, a group, a service account with no login shell, and a sudo rule that lets one
+      user run exactly one command. Then switch sshd to keys only and no root login, following the safe order from the lesson.
+      Upload `sudo sshd -T | grep -E 'permitroot|password'`, `sudo -l -U <user>` and your sudoers file.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why each service should run as its own user, and what an attacker gains if it runs as root instead.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Storage'
+  lessons:
+  - id: m4-l1
+    title: Disks, partitions, file systems and fstab
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: LVM, RAID and swap
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Add two small virtual disks to your VM. Make an LVM volume group from them, create a logical volume, format it,
+      mount it at /srv by UUID in fstab and verify with `mount -a`. Then grow it with `lvextend -r` and add a 1 GB swap file.
+      Upload `lsblk`, `sudo lvs`, `findmnt /srv`, `swapon --show` and your fstab.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why fstab should use UUIDs instead of names like /dev/sdb1, and what nofail protects you from.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Updates and scheduled jobs'
+  lessons:
+  - id: m5-l1
+    title: Packages, repositories and keeping servers updated
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: 'Scheduled jobs: cron, systemd timers and at'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Turn on automatic security updates. Then schedule the same small script twice: once with cron (full paths, output
+      to a log) and once as a systemd timer. Upload `crontab -l`, your two unit files, `systemctl list-timers` and the journal
+      output of one run.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain three reasons a command works in your terminal but fails in cron.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Network configuration and firewall'
+  lessons:
+  - id: m6-l1
+    title: 'Configuring the network: addresses, DNS and hostnames'
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: 'A host firewall: ufw and firewalld'
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Give your VM a static IP using netplan try (or nmcli), set its hostname, and add a name to /etc/hosts. Then set
+      up ufw or firewalld allowing only SSH and HTTP. Start `python3 -m http.server 8000 --bind 127.0.0.1` and show why another
+      machine can't reach it, then fix it. Upload your config and the checks.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the steps you'd take when a service is running but nobody outside can reach it.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Resources and backups'
+  lessons:
+  - id: m7-l1
+    title: Watching resources and fixing a full disk
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: Backups that actually restore
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Fill a small test file system until it is nearly full and track the space down with du and find. Then back up
+      a directory with rsync to another disk or server and with a dated tar, delete a file, and restore it. Upload the commands
+      and a short note on how long the restore took.
+  - id: m7-explain
+    type: explain
+    prompt: Explain the 3-2-1 backup rule and why a backup you have never restored can't be trusted.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Server roles and the capstone'
+  lessons:
+  - id: m8-l1
+    title: 'Server roles: setting up a web server'
+    file: lessons/m8-l1.md
+    minutes: 35
+  - id: m8-l2
+    title: 'Capstone: build and document a small server'
+    file: lessons/m8-l2.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Capstone: build web01 following all eight steps of the brief, run the checks, and write the runbook. Upload the
+      runbook and the check output.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain why nginx is often put in front of an application as a reverse proxy, and why the app then listens only
+      on 127.0.0.1.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

@@ -1,0 +1,251 @@
+id: linux-fundamentals
+title: Linux Fundamentals and the Command Line
+version: 1
+language: en
+description: 'Become fluent in a Linux terminal: the file system tree, paths, commands and help, files and globs, less and
+  vim, pipes and redirection, grep and find, sort, sed and awk, environment variables and PATH, processes, jobs and signals,
+  users, permissions and sudo, packages, first network commands, and a ten-minute tour of any unfamiliar machine. Built around
+  MIT''s Missing Semester lectures and freeCodeCamp''s Introduction to Linux (Beau Carnes); the videos are optional, every
+  lesson stands on its own. Course 2 of the Linux, Cloud and DevOps track. About 8 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: MIT Missing Semester lecture notes
+  url: https://missing.csail.mit.edu/2020/
+modules:
+- id: m1
+  title: 'Day 1: Linux and the file system'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: Linux, distributions and the terminal'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: The file system tree and paths
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Run `cat /etc/os-release`, `uname -a`, `pwd`, `ls -la ~` and `ls /`. Upload the output and write next to five
+      of the top-level directories what they hold.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between an absolute and a relative path, with an example of each that leads to the same
+      file.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Commands and files'
+  lessons:
+  - id: m2-l1
+    title: Commands, options, arguments and help
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: Working with files and directories
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: In ~/lab, use one `mkdir -p` command with braces to create 2026/jan, 2026/feb and 2026/mar, create three files
+      with touch, copy, rename and delete one with `rm -i`. Upload your commands and `ls -R ~/lab` output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why `rm -rf $DIR/*` is dangerous in a script, and one habit that prevents the disaster.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Reading and editing files'
+  lessons:
+  - id: m3-l1
+    title: 'Reading files: cat, less, head, tail'
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: 'Editing files: nano and enough vim'
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Open `/etc/services` in less and find the line for ssh. Then copy /etc/hosts to ~/lab/hosts, edit the copy in
+      vim (add a line, save with :wq), and show the change with `diff -u /etc/hosts ~/lab/hosts`. Upload the diff.
+  - id: m3-explain
+    type: explain
+    prompt: Explain vim's normal and insert modes to someone who just got stuck in vim and can't get out.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Pipes, grep and find'
+  lessons:
+  - id: m4-l1
+    title: Streams, redirection and pipes
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Finding things: grep and find'
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Answer with one command each and upload them with their output: (1) the five largest files in /var/log, (2) how
+      many lines in /etc/passwd end with bash, (3) every .conf file under /etc changed in the last 30 days, (4) the errors
+      from `ls /etc /nope` saved to errors.txt while the normal output still shows on screen.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain what a pipe does with `ps aux | sort -k4 -nr | head -5`, stage by stage.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Text processing'
+  lessons:
+  - id: m5-l1
+    title: 'Text processing: sort, uniq, cut, sed and awk'
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: 'Practice: answer questions from a log file'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Make the sample access.log from the lesson and answer all seven questions. Then add your own eighth question and
+      answer it. Upload your commands and results.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why you need `sort` before `uniq -c` to count how often each IP appears.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: The environment and processes'
+  lessons:
+  - id: m6-l1
+    title: 'The shell environment: variables, PATH and .bashrc'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Processes and jobs from the shell
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Add an alias and a ~/bin directory on your PATH in ~/.bashrc, put a small script in ~/bin, open a new terminal
+      and run it by name. Then start `sleep 600`, pause it with Ctrl+Z, list jobs, resume it in the background, and stop it
+      with kill. Upload your .bashrc changes and terminal output.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why you should send SIGTERM before SIGKILL, and what can go wrong with kill -9.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Users, permissions and packages'
+  lessons:
+  - id: m7-l1
+    title: Users, groups and permissions
+    file: lessons/m7-l1.md
+    minutes: 35
+  - id: m7-l2
+    title: Installing software with package managers
+    file: lessons/m7-l2.md
+    minutes: 25
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: In ~/lab create secret.txt and make it readable only by you (600), a script that you and your group can run but
+      not edit (750), and a shared directory your group can write to. Show `ls -l`. Then install htop with your package manager
+      and find which package owns /usr/bin/ls. Upload commands and output.
+  - id: m7-explain
+    type: explain
+    prompt: Explain what rwx mean on a directory, and why a user can delete a file they can't even read.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Networking basics and the capstone'
+  lessons:
+  - id: m8-l1
+    title: First network commands
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: 'Capstone: find your way around an unfamiliar machine'
+    file: lessons/m8-l2.md
+    minutes: 35
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Capstone: run the ten-minute tour from the last lesson on any Linux machine you can reach (a VM or cloud server
+      is ideal) and fill in the notes template. Upload the filled template plus the commands'' output.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain how you would work out why a server can't reach a website, step by step, from your own IP address to the
+      web service answering.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

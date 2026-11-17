@@ -1,0 +1,320 @@
+q1:
+  text: Which systemd target is a normal server without a desktop?
+  show: 4
+  options:
+    a: multi-user.target
+    b: graphical.target
+    c: rescue.target
+    d: emergency.target
+q2:
+  text: 'After changing /etc/default/grub on Ubuntu, you must:'
+  show: 4
+  options:
+    a: Run sudo update-grub
+    b: Reboot twice
+    c: Run systemctl daemon-reload
+    d: Nothing; it's read at boot
+q3:
+  text: How do you boot into rescue mode from GRUB?
+  show: 4
+  options:
+    a: Press e, add systemd.unit=rescue.target to the linux line, Ctrl+X
+    b: Hold Shift during the kernel load
+    c: Type rescue at the login prompt
+    d: Unplug the network
+q4:
+  text: Which command loads a kernel module with its dependencies?
+  show: 4
+  options:
+    a: modprobe
+    b: insmod --all
+    c: lsmod
+    d: modinfo
+q5:
+  text: Where do you look first for a disk error or an out-of-memory kill?
+  show: 4
+  options:
+    a: 'The kernel log: dmesg or journalctl -k'
+    b: /etc/fstab
+    c: ~/.bashrc
+    d: /var/www
+q6:
+  text: 'After editing a unit file you must run:'
+  show: 4
+  options:
+    a: sudo systemctl daemon-reload
+    b: sudo reboot
+    c: sudo update-grub
+    d: journalctl --vacuum
+q7:
+  text: Where should you put your own unit files and overrides?
+  show: 4
+  options:
+    a: /etc/systemd/system/
+    b: /usr/lib/systemd/system/
+    c: /var/log/systemd/
+    d: ~/.config only
+q8:
+  text: Which shows only errors and worse from the current boot?
+  show: 4
+  options:
+    a: journalctl -p err -b
+    b: journalctl -f
+    c: dmesg --all
+    d: systemctl --failed -b
+q9:
+  text: What does logrotate do?
+  show: 4
+  options:
+    a: Renames, compresses and deletes old log files on a schedule
+    b: Sends logs to a server
+    c: Fixes corrupted logs
+    d: Deletes all logs at reboot
+q10:
+  text: What does Restart=on-failure do?
+  show: 4
+  options:
+    a: Restarts the service automatically if it exits with an error or crashes
+    b: Restarts it every hour
+    c: Restarts the whole server
+    d: Retries failed log-ins
+q11:
+  text: Why `usermod -aG` and not `usermod -G`?
+  show: 4
+  options:
+    a: -a appends; without it the user is removed from all other supplementary groups
+    b: -a is faster
+    c: -G needs root
+    d: They are identical
+q12:
+  text: Where are password hashes stored?
+  show: 4
+  options:
+    a: /etc/shadow
+    b: /etc/passwd
+    c: /etc/group
+    d: ~/.ssh
+q13:
+  text: How should you edit sudo rules?
+  show: 4
+  options:
+    a: visudo (or visudo -f for files in /etc/sudoers.d)
+    b: nano /etc/sudoers
+    c: echo >> /etc/sudoers
+    d: usermod --sudo
+q14:
+  text: 'Before setting PasswordAuthentication no, you must:'
+  show: 4
+  options:
+    a: Confirm key login works in a new session
+    b: Reboot
+    c: Disable the firewall
+    d: Delete all users
+q15:
+  text: What does `sshd -t` do?
+  show: 4
+  options:
+    a: Checks the SSH server config for errors without applying it
+    b: Restarts sshd
+    c: Tests your network speed
+    d: Lists logged-in users
+q16:
+  text: What's the safe way to check a new fstab line?
+  show: 4
+  options:
+    a: sudo mount -a (and findmnt --verify) before rebooting
+    b: Reboot and see
+    c: cat /etc/fstab
+    d: fsck the root disk
+q17:
+  text: Which command grows an LVM volume and its file system together?
+  show: 4
+  options:
+    a: lvextend -r
+    b: lvcreate --grow
+    c: resize2fs only
+    d: pvcreate -r
+q18:
+  text: '`df` shows 100% but `du` finds much less. A likely cause is:'
+  show: 4
+  options:
+    a: Deleted files still held open by a running process
+    b: A broken RAID
+    c: Too much swap
+    d: A slow disk
+q19:
+  text: 'In /proc/mdstat, [U_] means:'
+  show: 4
+  options:
+    a: 'The RAID array is degraded: one disk has failed or is missing'
+    b: The array is healthy
+    c: The array is being created
+    d: Swap is on
+q20:
+  text: Can you shrink an XFS file system?
+  show: 4
+  options:
+    a: No; XFS can only grow
+    b: Yes, online
+    c: Yes, with lvreduce -r
+    d: Only with swap off
+q21:
+  text: Which cron schedule runs at 02:30 every day?
+  show: 4
+  options:
+    a: 30 2 * * *
+    b: 2 30 * * *
+    c: '* * 2 30 *'
+    d: 30 * 2 * *
+q22:
+  text: What does Persistent=true do on a systemd timer?
+  show: 4
+  options:
+    a: Runs a missed job when the machine comes back on
+    b: Keeps the job running forever
+    c: Logs to a file
+    d: Makes the timer survive deletion
+q23:
+  text: How do you stop one package from being upgraded on Ubuntu?
+  show: 4
+  options:
+    a: sudo apt-mark hold package
+    b: sudo apt remove --keep
+    c: Delete it from /etc/apt
+    d: dnf versionlock
+q24:
+  text: When does a kernel update take effect?
+  show: 4
+  options:
+    a: After a reboot
+    b: Immediately
+    c: After apt autoremove
+    d: After logging out
+q25:
+  text: Where does output of a systemd timer's job go?
+  show: 4
+  options:
+    a: 'The journal, under its service: journalctl -u name.service'
+    b: Nowhere
+    c: Root's email
+    d: /tmp/timer.log
+q26:
+  text: Why use `netplan try` over SSH instead of `netplan apply`?
+  show: 4
+  options:
+    a: It rolls back automatically unless you confirm, so a mistake can't lock you out
+    b: It's faster
+    c: apply doesn't work on servers
+    d: try saves a backup to /tmp
+q27:
+  text: Which command resolves a name exactly the way programs do?
+  show: 4
+  options:
+    a: getent hosts name
+    b: ping -n name
+    c: cat /etc/resolv.conf
+    d: ip route name
+q28:
+  text: What must you allow before `ufw enable` on a remote server?
+  show: 4
+  options:
+    a: SSH
+    b: HTTP
+    c: ICMP
+    d: DNS
+q29:
+  text: An app listens on 127.0.0.1:8000. Who can reach it?
+  show: 4
+  options:
+    a: Only programs on the same machine
+    b: Anyone on the internet
+    c: Only the LAN
+    d: Nobody
+q30:
+  text: 'In firewalld, a rule added without --permanent:'
+  show: 4
+  options:
+    a: Is lost at the next reload or reboot
+    b: Is permanent anyway
+    c: Is applied only after reboot
+    d: Is ignored
+q31:
+  text: 'High load average, CPU mostly idle, high ''wa'' in vmstat means:'
+  show: 4
+  options:
+    a: Processes are waiting on disk I/O
+    b: The CPU is overheating
+    c: Memory is plentiful
+    d: The network is down
+q32:
+  text: 'Safe way to empty a log file a running service still writes to:'
+  show: 4
+  options:
+    a: sudo truncate -s 0 file
+    b: rm file
+    c: mv file /tmp
+    d: chmod 000 file
+q33:
+  text: Why not back up a running database by copying its files?
+  show: 4
+  options:
+    a: The copy can be inconsistent; use the database's own dump or snapshot tools
+    b: It's too slow
+    c: Copying needs root
+    d: Databases don't have files
+q34:
+  text: 'In `rsync -a src/ dst/`, the trailing slash on src means:'
+  show: 4
+  options:
+    a: Copy the contents of src into dst
+    b: Copy the folder src into dst
+    c: Delete src after copying
+    d: Nothing
+q35:
+  text: What does `df -i` show?
+  show: 4
+  options:
+    a: 'Inode usage: you can run out with many tiny files even when space is free'
+    b: Disk speed
+    c: Disk temperature
+    d: Mount options
+q36:
+  text: What should you run before reloading nginx after a config change?
+  show: 4
+  options:
+    a: sudo nginx -t
+    b: sudo nginx --restart-all
+    c: sudo apt upgrade nginx
+    d: curl localhost
+q37:
+  text: 'A reverse proxy:'
+  show: 4
+  options:
+    a: Receives clients' requests and forwards them to the app behind it
+    b: Blocks all traffic
+    c: Replaces DNS
+    d: Stores backups
+q38:
+  text: certbot --nginx does what?
+  show: 4
+  options:
+    a: Gets a free Let's Encrypt certificate and configures nginx for HTTPS
+    b: Installs nginx
+    c: Opens the firewall
+    d: Creates a DNS record
+q39:
+  text: 'The most useful part of a backup section in a runbook is:'
+  show: 4
+  options:
+    a: The exact commands to restore
+    b: The backup software's version
+    c: Who wrote it
+    d: The disk brand
+q40:
+  text: Why do the capstone by hand before learning automation?
+  show: 4
+  options:
+    a: You understand exactly what you are automating
+    b: Automation tools need it
+    c: It's faster
+    d: Servers can't be automated

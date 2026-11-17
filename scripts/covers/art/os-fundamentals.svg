@@ -1,0 +1,18 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="22" text-anchor="middle">
+<rect x="40" y="60" width="130" height="70" rx="14" fill="#fff"/><text x="105" y="103" fill="#2d1b3d">shell</text>
+<rect x="195" y="60" width="130" height="70" rx="14" fill="#fff"/><text x="260" y="103" fill="#2d1b3d">nginx</text>
+<rect x="350" y="60" width="130" height="70" rx="14" fill="#fff"/><text x="415" y="103" fill="#2d1b3d">python</text>
+<rect x="40" y="200" width="440" height="150" rx="18" fill="#ff8fab"/>
+<text x="260" y="240" fill="#2d1b3d" font-size="26">kernel</text></g>
+<g font-family="JBM" font-weight="600" font-size="17" text-anchor="middle" fill="#2d1b3d">
+<rect x="62" y="262" width="118" height="64" rx="10" fill="#ffd1dc"/><text x="121" y="300">sched</text>
+<rect x="201" y="262" width="118" height="64" rx="10" fill="#ffd1dc"/><text x="260" y="300">memory</text>
+<rect x="340" y="262" width="118" height="64" rx="10" fill="#ffd1dc"/><text x="399" y="300">files</text></g>
+<g stroke="#ff8fab" stroke-width="3" stroke-dasharray="6 6"><path d="M105 130 V200"/><path d="M260 130 V200"/><path d="M415 130 V200"/><path d="M260 350 V420"/></g>
+<g font-family="JBM" font-size="15" fill="#fbf2ff" text-anchor="middle"><text x="200" y="172">syscalls</text></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="20" text-anchor="middle">
+<rect x="40" y="420" width="440" height="80" rx="16" fill="#4b2d66" stroke="#ff8fab" stroke-width="3"/>
+<text x="260" y="468" fill="#fbf2ff">CPU · RAM · disk · network</text></g>
+</svg>

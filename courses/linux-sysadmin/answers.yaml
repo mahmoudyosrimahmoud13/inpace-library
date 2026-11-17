@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: multi-user is the old runlevel 3.
+q2:
+  right:
+  - a
+  why: GRUB reads the generated grub.cfg, not the defaults file.
+q3:
+  right:
+  - a
+  why: Kernel options can be changed for one boot from the GRUB editor.
+q4:
+  right:
+  - a
+  why: modprobe resolves dependencies; insmod doesn't.
+q5:
+  right:
+  - a
+  why: Hardware and kernel events land in the kernel log first.
+q6:
+  right:
+  - a
+  why: systemd caches unit files until it reloads them.
+q7:
+  right:
+  - a
+  why: /etc wins over the package's files and survives package updates.
+q8:
+  right:
+  - a
+  why: -p sets the priority, -b the boot.
+q9:
+  right:
+  - a
+  why: It keeps logs from filling the disk.
+q10:
+  right:
+  - a
+  why: It's the minimum for a production service.
+q11:
+  right:
+  - a
+  why: Forgetting -a is a classic way to lose sudo rights.
+q12:
+  right:
+  - a
+  why: shadow is readable only by root.
+q13:
+  right:
+  - a
+  why: visudo checks the syntax so you can't lock out sudo.
+q14:
+  right:
+  - a
+  why: Otherwise you can lock yourself out.
+q15:
+  right:
+  - a
+  why: Always test before reloading.
+q16:
+  right:
+  - a
+  why: Mistakes show now instead of stopping the next boot.
+q17:
+  right:
+  - a
+  why: -r runs the file system resize too.
+q18:
+  right:
+  - a
+  why: lsof +L1 shows them; restart the process to free the space.
+q19:
+  right:
+  - a
+  why: U is up, _ is a missing member.
+q20:
+  right:
+  - a
+  why: Plan sizes to grow, especially on XFS.
+q21:
+  right:
+  - a
+  why: Fields are minute, hour, day of month, month, day of week.
+q22:
+  right:
+  - a
+  why: cron simply skips runs that happened while the machine was off.
+q23:
+  right:
+  - a
+  why: unhold reverses it; dnf versionlock is the Red Hat way.
+q24:
+  right:
+  - a
+  why: The running kernel stays until you reboot.
+q25:
+  right:
+  - a
+  why: That's one advantage over cron.
+q26:
+  right:
+  - a
+  why: Without confirmation it reverts after a timeout.
+q27:
+  right:
+  - a
+  why: 'getent follows nsswitch.conf: /etc/hosts and DNS.'
+q28:
+  right:
+  - a
+  why: Otherwise the firewall cuts your own session.
+q29:
+  right:
+  - a
+  why: 127.0.0.1 is the loopback address.
+q30:
+  right:
+  - a
+  why: Use --permanent, then --reload.
+q31:
+  right:
+  - a
+  why: wa is time spent waiting for I/O.
+q32:
+  right:
+  - a
+  why: rm frees nothing while the file is open.
+q33:
+  right:
+  - a
+  why: Files change mid-copy; dumps are consistent.
+q34:
+  right:
+  - a
+  why: Without the slash you get dst/src.
+q35:
+  right:
+  - a
+  why: No free inodes means no new files.
+q36:
+  right:
+  - a
+  why: -t tests the configuration.
+q37:
+  right:
+  - a
+  why: nginx in front handles TLS, static files and the internet.
+q38:
+  right:
+  - a
+  why: It also sets up automatic renewal.
+q39:
+  right:
+  - a
+  why: At 3 a.m. people need the restore steps, not the theory.
+q40:
+  right:
+  - a
+  why: Automating steps you don't understand just makes mistakes faster.

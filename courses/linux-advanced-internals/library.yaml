@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+tags:
+- linux
+- internals
+- performance
+- containers
+- devops-track
+credit: Written for the inPace library. Optional videos by Michael Kerrisk (man7.org), Brendan Gregg and MIT 6.S081, linked,
+  not copied.

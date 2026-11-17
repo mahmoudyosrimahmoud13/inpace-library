@@ -1,0 +1,400 @@
+q1:
+  text: What does the timer interrupt guarantee?
+  show: 4
+  options:
+    a: The kernel regularly gets the CPU back, even from a program stuck in a loop
+    b: Programs finish faster
+    c: Files are saved every second
+    d: The disk spins at a steady speed
+q2:
+  text: A user program tries to run a privileged instruction. What happens?
+  show: 4
+  options:
+    a: The CPU raises an exception and the kernel handles it, usually by killing the program
+    b: The instruction runs normally
+    c: The CPU silently skips it
+    d: The machine reboots
+q3:
+  text: When a program makes a system call, where does it enter the kernel?
+  show: 4
+  options:
+    a: Only at entry points the kernel set up in its trap table at boot
+    b: At any kernel address the program chooses
+    c: In the program's own code
+    d: Wherever the C library decides
+q4:
+  text: Which is an exception rather than an interrupt?
+  show: 4
+  options:
+    a: A page fault caused by the current instruction
+    b: A network packet arriving
+    c: A key press
+    d: The disk finishing a read
+q5:
+  text: On most Linux systems, what is PID 1?
+  show: 4
+  options:
+    a: systemd, the first user process, which starts and supervises services
+    b: The kernel itself
+    c: The bootloader
+    d: The login shell
+q6:
+  text: What does fork() return in the child process?
+  show: 4
+  options:
+    a: '0'
+    b: The child's PID
+    c: The parent's PID
+    d: '-1'
+q7:
+  text: What does exec() do?
+  show: 4
+  options:
+    a: Replaces the current program with a new one, keeping the same PID
+    b: Creates a new process
+    c: Waits for a child
+    d: Copies the parent's memory
+q8:
+  text: What is a zombie process?
+  show: 4
+  options:
+    a: A process that has exited but whose parent hasn't collected its status with wait()
+    b: A process using 100% CPU
+    c: A process with no open files
+    d: A process waiting for the disk
+q9:
+  text: A process waiting for a disk read is in which state?
+  show: 4
+  options:
+    a: Blocked
+    b: Running
+    c: Ready
+    d: Zombie
+q10:
+  text: 'Many nonvoluntary context switches for one process usually means:'
+  show: 4
+  options:
+    a: It wanted the CPU but kept having it taken away when its time slice ended
+    b: It waits for I/O a lot
+    c: It is a zombie
+    d: It has crashed
+q11:
+  text: Which policy gives the best average turnaround when all job lengths are known and they arrive together?
+  show: 4
+  options:
+    a: Shortest job first
+    b: First come, first served
+    c: Round Robin
+    d: Random
+q12:
+  text: What is the main strength of Round Robin?
+  show: 4
+  options:
+    a: 'Good response time: every job starts quickly'
+    b: Best turnaround time
+    c: No context switches
+    d: It needs no timer
+q13:
+  text: 'The convoy effect describes:'
+  show: 4
+  options:
+    a: Short jobs stuck waiting behind one long job under FCFS
+    b: Two threads deadlocking
+    c: A disk arm moving back and forth
+    d: Too many context switches
+q14:
+  text: Why does MLFQ periodically boost every job to the top queue?
+  show: 4
+  options:
+    a: To prevent starvation and let jobs that became interactive move back up
+    b: To save power
+    c: To reduce memory use
+    d: To flush the TLB
+q15:
+  text: 'On Linux, a nice value of 19 means:'
+  show: 4
+  options:
+    a: 'Very low priority: the process gets a small share of CPU'
+    b: Highest priority
+    c: Real-time scheduling
+    d: The process is paused
+q16:
+  text: Which of these is private to each thread?
+  show: 4
+  options:
+    a: Its stack and registers
+    b: The heap
+    c: Global variables
+    d: Open files
+q17:
+  text: 'A critical section is:'
+  show: 4
+  options:
+    a: Code that touches shared data and must not be run by two threads at once
+    b: The kernel's boot code
+    c: The fastest part of a program
+    d: Code that runs only in kernel mode
+q18:
+  text: Why do locks need special atomic instructions like test-and-set?
+  show: 4
+  options:
+    a: Because checking and setting a flag in two separate steps lets another thread slip in between
+    b: Because normal instructions are too slow
+    c: To save memory
+    d: Because the compiler requires it
+q19:
+  text: When is a spin lock a good choice?
+  show: 4
+  options:
+    a: When the wait is very short and the holder runs on another core
+    b: When the wait may take seconds
+    c: On a single-core machine
+    d: For disk I/O
+q20:
+  text: 'Concurrency vs parallelism:'
+  show: 4
+  options:
+    a: Concurrency is tasks in progress at once; parallelism is tasks running at the same instant on different cores
+    b: They mean the same
+    c: Parallelism needs only one core
+    d: Concurrency needs a GPU
+q21:
+  text: Why must a thread re-check its condition in a while loop after waking from a condition variable wait?
+  show: 4
+  options:
+    a: Another thread may have changed the state before it got the lock back
+    b: The compiler requires a loop
+    c: Condition variables never wake threads
+    d: To make the program faster
+q22:
+  text: 'A semaphore that starts at 3 can be used to:'
+  show: 4
+  options:
+    a: Allow at most 3 threads into a section at once
+    b: Make exactly 3 threads deadlock
+    c: Count CPU cores
+    d: Replace the scheduler
+q23:
+  text: Which is the practical fix for deadlock in most code?
+  show: 4
+  options:
+    a: Always take locks in the same global order
+    b: Never use locks
+    c: Use more threads
+    d: Restart the machine regularly
+q24:
+  text: 'Two threads keep backing off and retrying at the same moment, and neither makes progress. This is:'
+  show: 4
+  options:
+    a: Livelock
+    b: Deadlock
+    c: Starvation by the scheduler
+    d: A page fault
+q25:
+  text: '`if (p != NULL) use(p);` while another thread may set p to NULL is an example of:'
+  show: 4
+  options:
+    a: An atomicity violation
+    b: A deadlock
+    c: A memory leak
+    d: Correct code
+q26:
+  text: What does the TLB cache?
+  show: 4
+  options:
+    a: Recent virtual-to-physical address translations
+    b: File contents
+    c: Recently run instructions
+    d: Network packets
+q27:
+  text: Why are page tables multi-level trees instead of one flat array?
+  show: 4
+  options:
+    a: So unused parts of the huge address space need no table at all
+    b: Because the CPU is slow at arrays
+    c: To make lookups faster
+    d: So processes can share them
+q28:
+  text: 'A program reads an address that isn''t part of its address space. The result is:'
+  show: 4
+  options:
+    a: 'The kernel sends SIGSEGV: a segmentation fault'
+    b: The kernel allocates a page silently
+    c: The value 0 is returned
+    d: The program is swapped out
+q29:
+  text: Why is fork() cheap even for a big process?
+  show: 4
+  options:
+    a: 'Copy-on-write: parent and child share pages until one of them writes'
+    b: fork copies memory using DMA
+    c: The child gets no memory
+    d: fork doesn't copy the address space at all ever
+q30:
+  text: In `free -h`, which number tells you how much memory programs can still get?
+  show: 4
+  options:
+    a: available
+    b: free
+    c: used
+    d: shared
+q31:
+  text: What does DMA let a device do?
+  show: 4
+  options:
+    a: Copy data to and from RAM by itself, interrupting the CPU only when done
+    b: Run user programs
+    c: Bypass the file system permissions
+    d: Switch the CPU to kernel mode
+q32:
+  text: When might a driver prefer polling to interrupts?
+  show: 4
+  options:
+    a: When the device is extremely fast and would otherwise flood the CPU with interrupts
+    b: When the device is very slow
+    c: Always
+    d: Never
+q33:
+  text: 'RAID 1 with two disks gives you:'
+  show: 4
+  options:
+    a: 'A mirror: survives one disk failing, with half the raw space'
+    b: Double speed and no redundancy
+    c: Protection against deleting files
+    d: Twice the space
+q34:
+  text: What does mounting a file system do?
+  show: 4
+  options:
+    a: Attaches it at a directory so its files appear in the single tree
+    b: Formats the disk
+    c: Copies files into RAM
+    d: Creates a partition
+q35:
+  text: Why do databases call fsync() when a transaction commits?
+  show: 4
+  options:
+    a: Because normal writes sit in the page cache and may not be on disk yet
+    b: To make the disk spin
+    c: To free memory
+    d: To close the file
+q36:
+  text: Where is a file's name stored?
+  show: 4
+  options:
+    a: In the directory that contains it
+    b: In the file's inode
+    c: In the super block
+    d: In the data blocks
+q37:
+  text: You delete a file that a running process still has open. What happens to the disk space?
+  show: 4
+  options:
+    a: It is freed only when the process closes the file
+    b: It is freed immediately
+    c: It is never freed
+    d: The process crashes
+q38:
+  text: 'A symbolic link contains:'
+  show: 4
+  options:
+    a: A path to another file
+    b: The other file's inode number
+    c: A copy of the data
+    d: Nothing
+q39:
+  text: What does ext4 journal by default?
+  show: 4
+  options:
+    a: Metadata (inodes, bitmaps, directories), with data written first
+    b: Nothing
+    c: Every byte of every file twice
+    d: Only file names
+q40:
+  text: '/proc is:'
+  show: 4
+  options:
+    a: A virtual file system the kernel generates when you read it
+    b: A folder of program files
+    c: A partition on disk
+    d: Swap space
+q41:
+  text: What does accept() return on a listening TCP socket?
+  show: 4
+  options:
+    a: A new socket for that one client
+    b: The listening socket again
+    c: The client's IP only
+    d: Nothing until close
+q42:
+  text: Which is true of UDP?
+  show: 4
+  options:
+    a: Messages may be lost or reordered; there's no connection
+    b: It retransmits lost data
+    c: It needs a three-way handshake
+    d: It guarantees order
+q43:
+  text: What is the initramfs for?
+  show: 4
+  options:
+    a: Holding the drivers needed to reach and mount the real root file system
+    b: Storing user files
+    c: Replacing the kernel
+    d: Swap space
+q44:
+  text: What happens if PID 1 dies?
+  show: 4
+  options:
+    a: The kernel panics
+    b: Nothing
+    c: The shell becomes PID 1
+    d: The machine sleeps
+q45:
+  text: 'In a monolithic kernel like Linux, device drivers run:'
+  show: 4
+  options:
+    a: In kernel mode, inside the kernel
+    b: As normal user processes
+    c: On the device itself only
+    d: In the bootloader
+q46:
+  text: When you type ls in bash, which call creates the new process?
+  show: 4
+  options:
+    a: fork() (or clone())
+    b: execve()
+    c: openat()
+    d: write()
+q47:
+  text: Which system call does ls use to read a directory's entries on Linux?
+  show: 4
+  options:
+    a: getdents64
+    b: readdir_file
+    c: listdir
+    d: stat only
+q48:
+  text: Why does the first run of a big program often show major page faults?
+  show: 4
+  options:
+    a: Its code pages are loaded from disk the first time they are touched
+    b: The program has a bug
+    c: The TLB is broken
+    d: Swap is full
+q49:
+  text: 'ls prints to the terminal by calling:'
+  show: 4
+  options:
+    a: write() on file descriptor 1
+    b: printf() in the kernel
+    c: send() on a socket
+    d: exec() on the terminal
+q50:
+  text: After ls exits, how does the shell know to print the prompt again?
+  show: 4
+  options:
+    a: Its wait() call returns with ls's exit status
+    b: The terminal tells it
+    c: It polls /proc every second
+    d: The kernel restarts the shell

@@ -1,0 +1,317 @@
+id: os-fundamentals
+title: 'Operating Systems Fundamentals: what the OS really does'
+version: 1
+language: en
+description: 'The mental model under Linux, servers and the cloud: kernel and user space, system calls, processes, scheduling,
+  threads and locks, deadlock, virtual memory and paging, devices and storage, file systems, sockets and booting. Ends with
+  what really happens when you type ls. Built around MIT''s 6.S081 operating systems lectures (Robert Morris and Frans Kaashoek)
+  and Remzi Arpaci-Dusseau''s lectures at the University of Wisconsin, author of the free OSTEP book; the videos are optional,
+  every lesson stands on its own. Course 1 of the Linux, Cloud and DevOps track. About 10 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'Operating Systems: Three Easy Pieces (free book, every chapter as a PDF)'
+  url: https://pages.cs.wisc.edu/~remzi/OSTEP/
+- title: MIT 6.S081 schedule, notes and lecture videos
+  url: https://pdos.csail.mit.edu/6.S081/2020/schedule.html
+modules:
+- id: m1
+  title: 'Day 1: What an operating system is'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: what an operating system does'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: System calls, privilege, interrupts and booting
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: On a Linux machine run `strace -c ls` and `strace ls 2>&1 | head -40`. Upload (or paste) the output and mark three
+      system calls you recognize, with one line each on what you think they ask the kernel for.
+  - id: m1-explain
+    type: explain
+    prompt: Explain to a friend why a normal program can't just read the disk or another program's memory, and what a system
+      call is, using the idea of a door into the kernel.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Processes'
+  lessons:
+  - id: m2-l1
+    title: 'Processes: a program in motion'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Context switches and limited direct execution
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Run `ps -ef --forest | head -40`, `echo $$` and `grep ctxt /proc/$$/status`. Upload the output and point out:
+      your shell, its parent, one process with many children, and your shell''s voluntary vs involuntary context switches.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain how a shell runs `ls > out.txt` using fork, exec and wait, and why the split into fork and exec makes
+      the redirection easy.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: CPU scheduling'
+  lessons:
+  - id: m3-l1
+    title: 'Scheduling policies: FCFS, SJF and Round Robin'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: MLFQ, and how Linux schedules
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Jobs A (60 ms), B (20 ms) and C (10 ms) all arrive at time 0. Work out the average turnaround time and average
+      response time under FCFS (A, B, C order), SJF and Round Robin with a 10 ms slice. Show your timelines. Then run `nice
+      -n 19 yes > /dev/null &` and `top` for a few seconds, note the NI column, and `kill %1`.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why an interactive program like a text editor stays responsive on a busy Linux machine, using the idea
+      of virtual runtime or MLFQ.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Threads and locks'
+  lessons:
+  - id: m4-l1
+    title: 'Threads: concurrency inside one process'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Locks: mutual exclusion'
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write a small program (Python with threads, or C with pthreads) where two threads each add 1 to a shared counter
+      1,000,000 times. Run it three times without a lock and three times with one. Upload the code and the results. (In Python,
+      use `x = counter; counter = x + 1` to make the race easy to see.)
+  - id: m4-explain
+    type: explain
+    prompt: Explain to a friend why `counter = counter + 1` can lose updates when two threads run it, and how a lock fixes
+      it.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Synchronization and deadlock'
+  lessons:
+  - id: m5-l1
+    title: Condition variables, semaphores and producer/consumer
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Deadlock, livelock and concurrency bugs
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Draw (photo or diagram) a bounded buffer with 2 producers and 2 consumers. Mark where each waits on full and empty,
+      and where the lock is taken. Then describe one real system you use that works this way (a pipe, a print queue, a job
+      queue).
+  - id: m5-explain
+    type: explain
+    prompt: Explain the four conditions needed for deadlock and which one you'd break in real code, and why always taking
+      locks in the same order works.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Memory and virtual memory'
+  lessons:
+  - id: m6-l1
+    title: Address spaces and address translation
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Multi-level page tables, page faults and swapping
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Run `free -h`, `vmstat 1 5` and `/usr/bin/time -v python3 -c ''x = bytearray(200_000_000)''`. Upload the output
+      and explain: how much memory is really available, whether the machine is swapping, and how many page faults that one
+      command caused.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain what happens, step by step, when a program touches a heap page for the very first time, from the TLB miss
+      to the program continuing.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Devices, I/O and storage'
+  lessons:
+  - id: m7-l1
+    title: Devices, drivers, interrupts and DMA
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'Storage: hard drives, SSDs, partitions and RAID'
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Run `lsblk -f`, `findmnt`, `df -h` and `cat /proc/interrupts | head`. Upload the output and label your disks,
+      partitions, file systems and mount points, and which device has handled the most interrupts.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why sequential reads are so much faster than random reads on a hard drive, and what is different on an
+      SSD.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: File systems'
+  lessons:
+  - id: m8-l1
+    title: Files, directories, inodes and file descriptors
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: 'Inside a file system: blocks, caching and crash consistency'
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'In a test folder: create a file, make a hard link and a symlink to it (`ln`, `ln -s`), run `ls -li` and `stat`
+      on all three, then delete the original and `cat` the other two. Upload the output and explain each result using inodes.'
+  - id: m8-explain
+    type: explain
+    prompt: 'Explain journaling: what problem a power cut causes for a file system, and how writing to a journal first makes
+      recovery fast.'
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m9
+  title: 'Day 9: Sockets and booting'
+  lessons:
+  - id: m9-l1
+    title: 'Networking as an OS service: sockets'
+    file: lessons/m9-l1.md
+    minutes: 30
+  - id: m9-l2
+    title: Boot, the kernel and the first process
+    file: lessons/m9-l2.md
+    minutes: 25
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Run `python3 -m http.server 8080 &`, then `ss -tlnp | grep 8080`, `curl -s localhost:8080 | head -3`, `systemd-analyze
+      blame | head`, and `cat /proc/cmdline`. Upload the output and say which process owns port 8080, which service was slowest
+      to start, and one kernel option your machine booted with. Stop the server with `kill %1`.
+  - id: m9-explain
+    type: explain
+    prompt: Explain the boot sequence from power on to your shell prompt, one sentence per stage.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    pass: 70
+- id: m10
+  title: 'Day 10: Putting it together'
+  lessons:
+  - id: m10-l1
+    title: 'Putting it together: what happens when you type ls'
+    file: lessons/m10-l1.md
+    minutes: 35
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'Final project. Run `strace -f -o /tmp/trace.txt bash -c ''ls > /dev/null''` and `/usr/bin/time -v ls`. Then write
+      (or record) your own step-by-step answer to: what happens when I type ls and press Enter? Use at least 10 steps, and
+      point to real lines in your trace for at least five of them.'
+  - id: m10-explain
+    type: explain
+    prompt: In about 150 words, explain to a friend the difference between a program, a process and a thread, using what the
+      OS keeps for each.
+    min_words: 120
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q46
+    - q47
+    - q48
+    - q49
+    - q50
+    pass: 70

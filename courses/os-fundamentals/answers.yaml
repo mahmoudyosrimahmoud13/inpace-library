@@ -1,0 +1,200 @@
+q1:
+  right:
+  - a
+  why: Without a timer interrupt, a program that never makes a system call could keep the CPU forever.
+q2:
+  right:
+  - a
+  why: 'Privilege is enforced by the CPU: user mode can''t run privileged instructions, so the kernel gets control.'
+q3:
+  right:
+  - a
+  why: The trap table means user code can't jump into the middle of the kernel.
+q4:
+  right:
+  - a
+  why: Exceptions come from the instruction being run; interrupts come from devices at any time.
+q5:
+  right:
+  - a
+  why: The kernel starts one process, init (systemd on most distributions), and everything else descends from it.
+q6:
+  right:
+  - a
+  why: fork returns 0 in the child and the child's PID in the parent, so each knows which one it is.
+q7:
+  right:
+  - a
+  why: exec loads a new program into the current process; fork is what makes a new process.
+q8:
+  right:
+  - a
+  why: The kernel keeps a tiny record until the parent reaps it with wait().
+q9:
+  right:
+  - a
+  why: It can't run until the I/O completes, so it's blocked; then it becomes ready.
+q10:
+  right:
+  - a
+  why: Voluntary switches mean it blocked; nonvoluntary means the scheduler preempted it.
+q11:
+  right:
+  - a
+  why: Running short jobs first cuts the waiting of everyone behind them.
+q12:
+  right:
+  - a
+  why: Each job gets a slice soon, so response is good; turnaround suffers.
+q13:
+  right:
+  - a
+  why: FCFS makes every job wait for the long one in front of it.
+q14:
+  right:
+  - a
+  why: Without a boost, CPU-heavy jobs at the bottom could starve forever.
+q15:
+  right:
+  - a
+  why: Nice runs from -20 (greedy) to 19 (polite).
+q16:
+  right:
+  - a
+  why: Threads share the address space and files; each has its own stack and registers.
+q17:
+  right:
+  - a
+  why: Only one thread at a time may be inside it.
+q18:
+  right:
+  - a
+  why: The read and write must happen as one unbreakable step.
+q19:
+  right:
+  - a
+  why: Spinning wastes CPU, which only pays off for tiny waits.
+q20:
+  right:
+  - a
+  why: You can have concurrency on one core by taking turns; parallelism needs several cores.
+q21:
+  right:
+  - a
+  why: Waking is a hint, not a guarantee; re-check every time.
+q22:
+  right:
+  - a
+  why: Each wait takes one of the 3 slots; the 4th sleeps until a post.
+q23:
+  right:
+  - a
+  why: A fixed order makes a circular wait impossible.
+q24:
+  right:
+  - a
+  why: They are active but stuck; random back-off fixes it.
+q25:
+  right:
+  - a
+  why: The check and the use must happen together; protect them with a lock.
+q26:
+  right:
+  - a
+  why: It saves walking the page table on every memory access.
+q27:
+  right:
+  - a
+  why: A flat table for 48-bit addresses would be enormous for every process.
+q28:
+  right:
+  - a
+  why: Faults on valid but absent pages are fixed; faults outside the address space are errors.
+q29:
+  right:
+  - a
+  why: Pages are copied only when written.
+q30:
+  right:
+  - a
+  why: available includes cache the kernel can give back; free alone looks scary for no reason.
+q31:
+  right:
+  - a
+  why: The CPU doesn't have to move the data word by word.
+q32:
+  right:
+  - a
+  why: Fast network cards and NVMe drives switch to polling under heavy load.
+q33:
+  right:
+  - a
+  why: Mirroring keeps two copies; it is still not a backup.
+q34:
+  right:
+  - a
+  why: Linux has one tree from /; mount points join file systems into it.
+q35:
+  right:
+  - a
+  why: fsync forces the cached data to stable storage.
+q36:
+  right:
+  - a
+  why: A directory maps names to inode numbers; the inode has no name.
+q37:
+  right:
+  - a
+  why: Deleting removes the name; the data stays until the last reference goes.
+q38:
+  right:
+  - a
+  why: That's why it can point across file systems, or to nothing.
+q39:
+  right:
+  - a
+  why: Metadata journaling keeps the structure valid after a crash at low cost.
+q40:
+  right:
+  - a
+  why: Its files describe processes and kernel state, created on the fly.
+q41:
+  right:
+  - a
+  why: Each client gets its own socket; the listener keeps waiting for more.
+q42:
+  right:
+  - a
+  why: UDP is best effort; TCP is the reliable stream.
+q43:
+  right:
+  - a
+  why: RAID, LVM or encrypted roots need drivers before / can be mounted.
+q44:
+  right:
+  - a
+  why: PID 1 is required; the kernel can't continue without it.
+q45:
+  right:
+  - a
+  why: That's fast, and a buggy driver can crash the whole system.
+q46:
+  right:
+  - a
+  why: fork makes the process; execve then loads /usr/bin/ls into it.
+q47:
+  right:
+  - a
+  why: getdents64 returns the directory's entries in a buffer.
+q48:
+  right:
+  - a
+  why: Demand paging loads pages only when touched; later runs find them in the page cache.
+q49:
+  right:
+  - a
+  why: Standard output is file descriptor 1.
+q50:
+  right:
+  - a
+  why: The parent shell blocks in wait() until the child exits.

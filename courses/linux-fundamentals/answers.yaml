@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: Ubuntu, Fedora and Debian all use the Linux kernel with their own tools around it.
+q2:
+  right:
+  - a
+  why: /etc holds configuration, mostly plain text.
+q3:
+  right:
+  - a
+  why: .. is the parent; cd - goes back, cd alone goes home.
+q4:
+  right:
+  - a
+  why: Absolute paths start at the root, /.
+q5:
+  right:
+  - a
+  why: Dotfiles like .bashrc are hidden by default.
+q6:
+  right:
+  - a
+  why: 0 is success; any other number is a kind of failure.
+q7:
+  right:
+  - a
+  why: '&& means ''and then, if that worked''.'
+q8:
+  right:
+  - a
+  why: Globs are expanded by the shell; echo *.txt shows the result.
+q9:
+  right:
+  - a
+  why: Inside single quotes everything is literal.
+q10:
+  right:
+  - a
+  why: man pages are the full manual; --help gives a summary.
+q11:
+  right:
+  - a
+  why: tail -f follows the file; in less, F does the same.
+q12:
+  right:
+  - a
+  why: :q! discards changes; :wq saves and quits.
+q13:
+  right:
+  - a
+  why: / searches forward; n jumps to the next match.
+q14:
+  right:
+  - a
+  why: When nano isn't installed, vi almost always is.
+q15:
+  right:
+  - a
+  why: -l counts lines; -w words; -c bytes.
+q16:
+  right:
+  - a
+  why: Redirect stdout first, then point stderr at it.
+q17:
+  right:
+  - a
+  why: -v inverts the match.
+q18:
+  right:
+  - a
+  why: find searches by name, type, size and time.
+q19:
+  right:
+  - a
+  why: Handy for saving a log while still watching it.
+q20:
+  right:
+  - a
+  why: That's command substitution.
+q21:
+  right:
+  - a
+  why: Sorting puts equal lines together so uniq can count them.
+q22:
+  right:
+  - a
+  why: -i edits in place; .bak keeps the original.
+q23:
+  right:
+  - a
+  why: awk splits each line into fields $1, $2, ...
+q24:
+  right:
+  - a
+  why: Field 1 of each colon-separated line is the account name.
+q25:
+  right:
+  - a
+  why: END runs after all lines are read.
+q26:
+  right:
+  - a
+  why: The shell only searches the directories listed in PATH.
+q27:
+  right:
+  - a
+  why: Without export, the variable stays inside the shell.
+q28:
+  right:
+  - a
+  why: It's read by every interactive bash.
+q29:
+  right:
+  - a
+  why: It sends SIGTSTP, which stops the process.
+q30:
+  right:
+  - a
+  why: That's why it can't clean up.
+q31:
+  right:
+  - a
+  why: 6 = rw, 4 = r, 0 = nothing.
+q32:
+  right:
+  - a
+  why: Deleting changes the directory's list of names.
+q33:
+  right:
+  - a
+  why: SSH refuses keys others can read.
+q34:
+  right:
+  - a
+  why: update refreshes the index; upgrade installs newer versions.
+q35:
+  right:
+  - a
+  why: A broken sudoers file can lock everyone out of sudo.
+q36:
+  right:
+  - a
+  why: ip a (or ip -br a) lists every interface and its addresses.
+q37:
+  right:
+  - a
+  why: t = TCP, l = listening, n = numbers, p = process.
+q38:
+  right:
+  - a
+  why: Useful to check status codes and redirects.
+q39:
+  right:
+  - a
+  why: The private key never leaves your machine.
+q40:
+  right:
+  - a
+  why: Load is processes wanting to run; compare it with the number of CPUs.

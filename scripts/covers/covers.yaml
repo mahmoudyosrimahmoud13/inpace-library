@@ -64,3 +64,35 @@ courses:
     title: Excel for<br>data analysts
     sub: Formulas, XLOOKUP, pivot tables, charts, data cleaning and a full project
     tags: [Full project, For beginners]
+
+  os-fundamentals:
+    theme: plum
+    art: os-fundamentals.svg
+    chip: Track 1 · 10 days
+    title: How an OS<br>really works
+    sub: Processes, scheduling, memory, files and boot, with MIT and OSTEP lectures
+    tags: [19 lessons, 50 quiz questions]
+
+  linux-fundamentals:
+    theme: navy
+    art: linux-fundamentals.svg
+    chip: Track 2 · 8 days
+    title: Fluent in<br>the terminal
+    sub: Files, pipes, grep, sed, awk, permissions and processes, with MIT's Missing Semester
+    tags: [16 lessons, 40 quiz questions]
+
+  linux-sysadmin:
+    theme: sand
+    art: linux-sysadmin.svg
+    chip: Track 3 · 8 days
+    title: Run real<br>Linux servers
+    sub: systemd, logs, users, SSH, disks, LVM, firewall and backups
+    tags: [16 lessons, 40 quiz questions]
+
+  linux-advanced-internals:
+    theme: navy
+    art: linux-advanced-internals.svg
+    chip: Track 4 · 8 days
+    title: Linux,<br>from the inside
+    sub: /proc, signals, performance, namespaces, cgroups and a container by hand
+    tags: [16 lessons, 6 incident drills]

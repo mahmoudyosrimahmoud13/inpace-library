@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+tags:
+- operating-systems
+- linux
+- computer-science
+- systems
+- devops-track
+credit: 'Written for the inPace library. Optional videos by MIT 6.S081 (Robert Morris, Frans Kaashoek) and Remzi Arpaci-Dusseau
+  (University of Wisconsin), linked, not copied. Book: Operating Systems: Three Easy Pieces (free online).'

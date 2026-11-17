@@ -1,0 +1,19 @@
+id: linux-cloud-devops
+title: Linux, Cloud and DevOps
+description: From what an operating system really does to running Linux servers and containers. Built for people who want to be genuinely strong at servers, cloud and troubleshooting. New courses join this path as they are published.
+language: en
+author: inPace
+official: true
+order: 19
+tags: [linux, operating systems, sysadmin, devops, cloud]
+steps:
+  - course: os-fundamentals
+    note: The mental model first. Processes, memory, files and boot, so everything Linux does later makes sense.
+  - course: linux-fundamentals
+    note: Become fluent in the terminal. Files, pipes, text tools, permissions and processes.
+  - course: linux-sysadmin
+    note: Run real servers. Services, logs, users, SSH, disks, firewall and backups.
+  - course: linux-advanced-internals
+    note: Look inside. /proc, signals, performance, namespaces and cgroups, and a container built by hand.
+  - course: docker-kubernetes-en
+    note: Containers and clusters. After the internals course you'll know which kernel feature does each part. The video is in Egyptian Arabic; the English notes cover everything.

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<g filter="url(#s)">
+<rect x="70" y="60" width="380" height="96" rx="14" fill="#16302b"/>
+<rect x="70" y="176" width="380" height="96" rx="14" fill="#16302b"/>
+<rect x="70" y="292" width="380" height="96" rx="14" fill="#16302b"/></g>
+<g fill="#6bd18f"><circle cx="110" cy="108" r="10"/><circle cx="110" cy="224" r="10"/></g><circle cx="110" cy="340" r="10" fill="#ffd166"/>
+<g fill="#2f5a50"><rect x="140" y="96" width="150" height="24" rx="6"/><rect x="140" y="212" width="150" height="24" rx="6"/><rect x="140" y="328" width="150" height="24" rx="6"/></g>
+<g font-family="JBM" font-weight="700" font-size="18" fill="#f6efe1">
+<text x="310" y="115">nginx ✓</text><text x="310" y="231">sshd ✓</text><text x="310" y="347">backup ⏱</text></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="19" text-anchor="middle">
+<rect x="60" y="420" width="190" height="62" rx="14" fill="#f6efe1"/><text x="155" y="458" fill="#16302b">systemctl</text>
+<rect x="270" y="420" width="190" height="62" rx="14" fill="#f6efe1"/><text x="365" y="458" fill="#16302b">journalctl</text></g>
+</svg>

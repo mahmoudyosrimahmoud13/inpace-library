@@ -1,0 +1,14 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)"><rect x="30" y="70" width="460" height="400" rx="18" fill="#0f2a3d"/></g>
+<rect x="30" y="70" width="460" height="46" rx="18" fill="#1d4560"/><rect x="30" y="96" width="460" height="20" fill="#1d4560"/>
+<circle cx="62" cy="93" r="8" fill="#ff6b6b"/><circle cx="88" cy="93" r="8" fill="#ffd166"/><circle cx="114" cy="93" r="8" fill="#6bd18f"/>
+<g font-family="JBM" font-size="21" font-weight="600">
+<text x="56" y="168" fill="#7fd3ff">$ <tspan fill="#eef7fc">ls -la ~</tspan></text>
+<text x="56" y="208" fill="#7fd3ff">$ <tspan fill="#eef7fc">grep -r error /var/log</tspan></text>
+<text x="56" y="248" fill="#7fd3ff">$ <tspan fill="#eef7fc">ps aux | sort -k4 -nr</tspan></text>
+<text x="56" y="288" fill="#7fd3ff">$ <tspan fill="#eef7fc">chmod 600 key</tspan></text>
+<text x="56" y="328" fill="#7fd3ff">$ <tspan fill="#eef7fc">awk '{print $1}' log</tspan></text>
+<text x="56" y="368" fill="#7fd3ff">$ <tspan fill="#eef7fc">sudo apt install htop</tspan></text>
+<text x="56" y="420" fill="#7fd3ff">$ <tspan fill="#ffd166">▌</tspan></text></g>
+</svg>
