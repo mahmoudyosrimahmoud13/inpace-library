@@ -1,6 +1,6 @@
 id: mml-2-decompositions-calculus
 title: 'Maths for ML 2: matrix decompositions and vector calculus'
-version: 1
+version: 2
 language: en
 description: 'Part 2 of 4, following the free book Mathematics for Machine Learning (Deisenroth, Faisal, Ong). Determinants
   and trace, eigenvalues and eigenvectors, Cholesky, eigendecomposition, the singular value decomposition and low-rank
@@ -13,6 +13,7 @@ book: mml-book.pdf
 book_info:
   title: Mathematics for Machine Learning
   url: https://mml-book.com
+  download: https://mml-book.github.io/book/mml-book.pdf
   pages: 412
 modules:
 - id: m1

@@ -1,12 +1,15 @@
 id: mls-3-unsupervised-rl
 title: 'Machine Learning refresh 3: unsupervised learning, recommenders and reinforcement learning'
-version: 1
+version: 2
 language: en
 description: 'An advanced refresh of part 3 of Andrew Ng''s Machine Learning Specialization, with the original slides
   inside each lesson: k-means, anomaly detection, collaborative and content-based recommenders, retrieval and ranking,
   reinforcement learning, the Bellman equation and deep Q-learning, plus PCA and an interview drill. Plan: about
   9 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
 image: cover.jpg
+downloads:
+- title: 'Official slides (DeepLearning.AI, Course 3)'
+  url: https://community.deeplearning.ai/t/mls-course-3-lecture-notes/178332
 modules:
 - id: m1
   title: 'Day 1: Clustering with k-means'

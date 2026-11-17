@@ -1,12 +1,15 @@
 id: mls-1-supervised
 title: 'Machine Learning refresh 1: supervised learning (regression and classification)'
-version: 1
+version: 2
 language: en
 description: 'An advanced refresh of part 1 of Andrew Ng''s Machine Learning Specialization, with the original slides
   inside each lesson: linear regression, cost functions, gradient descent, vectorization, feature scaling and engineering,
   logistic regression, overfitting and regularization, then a from-scratch build and an interview drill. Plan: about
   10 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
 image: cover.jpg
+downloads:
+- title: 'Official slides (DeepLearning.AI, Course 1)'
+  url: https://community.deeplearning.ai/t/mls-course-1-lecture-notes/148503
 modules:
 - id: m1
   title: 'Day 1: What machine learning is'

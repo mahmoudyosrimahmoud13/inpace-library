@@ -139,3 +139,27 @@ q28:
   - o7a7ee7
   - o47f01c
   why: Local-first moves the scaling problem away from a central server.
+q29:
+  right:
+  - a
+  why: The comparison was right; the code's own number was wrong. Now the release writes the tag's number into the
+    code before building.
+q30:
+  right:
+  - a
+  why: Content-addressed links (a fingerprint of the file) change exactly when the file changes, so caches can keep
+    everything else.
+q31:
+  right:
+  - a
+  why: YouTubeMedia implements play, pause, currentTime, volume and the video events, so the same player works for
+    files and YouTube.
+q32:
+  right:
+  - a
+  why: Nothing is blocked. inPace only stops counting the ad as the lesson and lets YouTube's own Skip button work.
+q33:
+  right:
+  - a
+  why: Self-unpacking one-file executables are a common malware pattern. A one-folder build inside a normal installer,
+    with version details, looks like a regular program.

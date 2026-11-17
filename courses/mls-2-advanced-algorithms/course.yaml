@@ -1,6 +1,6 @@
 id: mls-2-advanced-algorithms
 title: 'Machine Learning refresh 2: neural networks, ML practice and decision trees'
-version: 1
+version: 2
 language: en
 description: 'An advanced refresh of part 2 of Andrew Ng''s Machine Learning Specialization, with the original slides
   inside each lesson: neural networks and forward propagation, TensorFlow, backprop, activations, softmax, Adam,
@@ -8,6 +8,9 @@ description: 'An advanced refresh of part 2 of Andrew Ng''s Machine Learning Spe
   forests and XGBoost, plus an interview drill. Plan: about 12 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI
   (CC BY-SA 2.0, non-commercial).'
 image: cover.jpg
+downloads:
+- title: 'Official slides (DeepLearning.AI, Course 2)'
+  url: https://community.deeplearning.ai/t/mls-course-2-lecture-notes/149431
 modules:
 - id: m1
   title: 'Day 1: Neurons and layers'

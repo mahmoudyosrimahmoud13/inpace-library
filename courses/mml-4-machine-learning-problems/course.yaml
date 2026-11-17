@@ -1,6 +1,6 @@
 id: mml-4-machine-learning-problems
 title: 'Maths for ML 4: regression, PCA, mixtures and SVMs'
-version: 1
+version: 2
 language: en
 description: 'Part 4 of 4, following the free book Mathematics for Machine Learning (Deisenroth, Faisal, Ong). When
   models meet data (empirical risk, maximum likelihood, MAP, graphical models, model selection), then the four classic
@@ -13,6 +13,7 @@ book: mml-book.pdf
 book_info:
   title: Mathematics for Machine Learning
   url: https://mml-book.com
+  download: https://mml-book.github.io/book/mml-book.pdf
   pages: 412
 modules:
 - id: m1

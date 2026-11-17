@@ -1,10 +1,12 @@
 id: inpace-inside
 title: 'inPace from the inside: how the app works'
-version: 1
+version: 2
 language: en
-description: 'A one-week tour of inPace''s code and system design: the local server, the data and its signatures,
-  courses, the web layer, the learner-checker trust model, Tempo''s island, notifications, builds and releases.
-  Ends with how to present it in a job interview. Plan: 7 days, about 1.5 hours a day.'
+description: 'A tour of inPace''s code and system design: the local server, the data and its signatures, courses,
+  the web layer, the learner-checker trust model, Tempo''s island, notifications, builds and releases, then everything
+  added since: 14 languages, honest updates and caching, one video player for files and YouTube with an ad guard,
+  library alerts, Markdown extras and a real Windows installer. Ends with how to present it in a job interview.
+  Plan: 8 days, about 1.5 hours a day.'
 image: cover.jpg
 modules:
 - id: m1
@@ -236,4 +238,34 @@ modules:
     - q26
     - q27
     - q28
+    pass: 70
+- id: m8
+  title: 'Day 8: What''s new since 1.22, as engineering stories'
+  lessons:
+  - id: m8-l1
+    title: Speaking 14 languages, and keeping updates honest
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: One video player for files and YouTube, and an ad guard you can update
+    file: lessons/m8-l2.md
+    minutes: 30
+  - id: m8-l3
+    title: 'Shipping it: library alerts, Markdown, a real installer, and deleting everything'
+    file: lessons/m8-l3.md
+    minutes: 30
+  requires:
+  - id: m8-explain
+    type: explain
+    min_words: 80
+    prompt: 'Pick one bug from Day 8 (the version label, the cache, the working directory or the installer). Explain
+      it as you would in an interview: what users saw, the real cause, the fix, and what you''d check next time.'
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q29
+    - q30
+    - q31
+    - q32
+    - q33
     pass: 70

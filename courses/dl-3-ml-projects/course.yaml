@@ -1,6 +1,6 @@
 id: dl-3-ml-projects
 title: 'Deep Learning 3: structuring machine learning projects'
-version: 1
+version: 2
 language: en
 description: 'Part 3 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
   lesson: orthogonalization, single-number and satisficing metrics, dev and test sets, human-level performance and
@@ -8,6 +8,9 @@ description: 'Part 3 of a refresh of Andrew Ng''s Deep Learning Specialization, 
   updated for the era of pre-trained models. One real project in a notebook you can open in Colab, download or read
   as a PDF. Plan: 6 days. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
 image: cover.jpg
+downloads:
+- title: 'Official slides (DeepLearning.AI, Course 3)'
+  url: https://community.deeplearning.ai/t/dls-course-3-lecture-notes/11868
 modules:
 - id: m1
   title: 'Day 1: Orthogonalization and your goal'

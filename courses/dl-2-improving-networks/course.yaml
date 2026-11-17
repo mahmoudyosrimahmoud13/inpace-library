@@ -1,6 +1,6 @@
 id: dl-2-improving-networks
 title: 'Deep Learning 2: improving deep networks (regularization, optimizers, tuning)'
-version: 1
+version: 2
 language: en
 description: 'Part 2 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
   lesson and everything updated for PyTorch 2.15, TensorFlow 2.21 and Keras 3.15: train/dev/test splits, bias and
@@ -9,6 +9,9 @@ description: 'Part 2 of a refresh of Andrew Ng''s Deep Learning Specialization, 
   you can open in Colab, download or read as PDFs, and new charts. Plan: 8 days. Slides by DeepLearning.AI (CC BY-SA
   2.0, non-commercial).'
 image: cover.jpg
+downloads:
+- title: 'Official slides (DeepLearning.AI, Course 2)'
+  url: https://community.deeplearning.ai/t/dls-course-2-lecture-notes/11866
 modules:
 - id: m1
   title: 'Day 1: Setting up: data splits, bias and variance'

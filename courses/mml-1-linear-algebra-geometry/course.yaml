@@ -1,6 +1,6 @@
 id: mml-1-linear-algebra-geometry
 title: 'Maths for ML 1: linear algebra and analytic geometry'
-version: 1
+version: 2
 language: en
 description: 'Part 1 of 4, following the free book Mathematics for Machine Learning (Deisenroth, Faisal, Ong). Systems
   of equations, matrices, Gaussian elimination, vector spaces, basis and rank, linear maps and change of basis,
@@ -12,6 +12,7 @@ book: mml-book.pdf
 book_info:
   title: Mathematics for Machine Learning
   url: https://mml-book.com
+  download: https://mml-book.github.io/book/mml-book.pdf
   pages: 412
 modules:
 - id: m1

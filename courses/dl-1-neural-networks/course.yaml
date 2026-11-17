@@ -1,6 +1,6 @@
 id: dl-1-neural-networks
 title: 'Deep Learning 1: neural networks and deep learning, with PyTorch and Keras'
-version: 1
+version: 2
 language: en
 description: 'Part 1 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
   lesson and everything updated for PyTorch 2.15, TensorFlow 2.21 and Keras 3.15: logistic regression as a neural
@@ -8,6 +8,9 @@ description: 'Part 1 of a refresh of Andrew Ng''s Deep Learning Specialization, 
   Comes with notebooks you can open in Google Colab, download, or read as PDFs, and new charts made from real runs.
   Plan: 8 days. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
 image: cover.jpg
+downloads:
+- title: 'Official slides (DeepLearning.AI, Course 1)'
+  url: https://community.deeplearning.ai/t/dls-course-1-lecture-notes/11862
 modules:
 - id: m1
   title: 'Day 1: What a neural network is'

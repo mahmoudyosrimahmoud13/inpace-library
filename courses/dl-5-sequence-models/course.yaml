@@ -1,6 +1,6 @@
 id: dl-5-sequence-models
 title: 'Deep Learning 5: sequence models, attention and transformers'
-version: 1
+version: 2
 language: en
 description: 'Part 5 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
   lesson and everything updated for PyTorch 2.15 and Keras 3.15: RNNs, language models and sampling, GRU and LSTM,
@@ -9,6 +9,9 @@ description: 'Part 5 of a refresh of Andrew Ng''s Deep Learning Specialization, 
   for Colab, as files and PDFs, and new charts from real runs. Plan: 9 days. Slides by DeepLearning.AI (CC BY-SA
   2.0, non-commercial).'
 image: cover.jpg
+downloads:
+- title: 'Official slides (DeepLearning.AI, Course 5)'
+  url: https://community.deeplearning.ai/t/dls-course-5-lecture-notes/11884
 modules:
 - id: m1
   title: 'Day 1: Recurrent neural networks'

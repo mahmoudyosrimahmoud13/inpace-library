@@ -1,6 +1,6 @@
 id: mml-3-probability-optimization
 title: 'Maths for ML 3: probability and optimization'
-version: 1
+version: 2
 language: en
 description: 'Part 3 of 4, following the free book Mathematics for Machine Learning (Deisenroth, Faisal, Ong). Probability
   spaces, discrete and continuous distributions, the sum and product rules, Bayes'' theorem, expectations and covariance,
@@ -13,6 +13,7 @@ book: mml-book.pdf
 book_info:
   title: Mathematics for Machine Learning
   url: https://mml-book.com
+  download: https://mml-book.github.io/book/mml-book.pdf
   pages: 412
 modules:
 - id: m1

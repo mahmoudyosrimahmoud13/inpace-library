@@ -278,3 +278,43 @@ q28:
     o7a7ee7: Each device holds one person's data; the shared library is static files on GitHub Pages
     oae08e4: It doesn't, that's a weakness
     o47f01c: Per-user load is tiny, and the shared part is a CDN-served static site
+q29:
+  text: Why did every copy of inPace say "1.28.2 is out", even the newest one?
+  show: 4
+  options:
+    a: The release was tagged v1.28.2 while the code still said 1.28.0
+    b: GitHub's API returned an old release
+    c: The comparison of version numbers was wrong
+    d: The app never saved the update status
+q30:
+  text: Static files are cached for a year. What makes that safe?
+  show: 4
+  options:
+    a: A link that changes whenever the file changes, like a hash of its bytes
+    b: A hand-written ?v= number
+    c: Restarting the app
+    d: Turning caching off
+q31:
+  text: How does inPace's player drive a YouTube video without knowing about YouTube?
+  show: 4
+  options:
+    a: An adapter object that acts like a <video> element and talks to the iframe with postMessage
+    b: It downloads YouTube's player script and edits it
+    c: It plays the video file directly from YouTube's servers
+    d: It shows YouTube's own controls
+q32:
+  text: What does the ad guard do while an ad plays?
+  show: 4
+  options:
+    a: Steps aside so the ad and Skip ad work, and doesn't save the ad's time as your place
+    b: Blocks the ad
+    c: Skips the ad automatically
+    d: Mutes the ad and hides it
+q33:
+  text: Why did Windows Defender distrust the old Windows download?
+  show: 4
+  options:
+    a: It was a one-file .exe that unpacked itself to a temp folder on every start
+    b: It was too big
+    c: It had no icon
+    d: It used Python
