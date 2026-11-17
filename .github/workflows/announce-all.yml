@@ -1,0 +1,34 @@
+name: "Discord: post the whole library"
+
+# Posts every course (with its cover) and every roadmap to the Discord #new-courses channel, section by section.
+# Only when you press "Run workflow". Meant to be run once: running it again posts everything again.
+on:
+  workflow_dispatch:
+    inputs:
+      sure:
+        description: "Type yes to post the whole library (about 100 posts, takes about 5 minutes)"
+        default: "no"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: discord-all
+  cancel-in-progress: false
+
+jobs:
+  post:
+    if: ${{ inputs.sure == 'yes' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q "git+https://github.com/mahmoudyosrimahmoud13/inPace.git" pyyaml
+      - run: python scripts/library_tools.py build _site
+      - name: Post to Discord
+        env:
+          DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+        run: python scripts/library_tools.py announce-all _site

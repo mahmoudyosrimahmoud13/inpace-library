@@ -1436,9 +1436,22 @@ def post_to_discord(hook: str, msg: dict, picture: Path | None = None) -> None:
                 + f'--{b}\r\nContent-Disposition: form-data; name="files[0]"; filename="{picture.name}"\r\n'
                   f'Content-Type: image/jpeg\r\n\r\n'.encode() + picture.read_bytes() + f"\r\n--{b}--\r\n".encode())
         ctype = f"multipart/form-data; boundary={b}"
-    req = urllib.request.Request(hook + "?wait=true", data=body, method="POST",
-                                 headers={"Content-Type": ctype, "User-Agent": "inPace-library"})
-    urllib.request.urlopen(req, timeout=60).read()
+    import time
+    import urllib.error
+    for attempt in range(6):
+        req = urllib.request.Request(hook + "?wait=true", data=body, method="POST",
+                                     headers={"Content-Type": ctype, "User-Agent": "inPace-library"})
+        try:
+            urllib.request.urlopen(req, timeout=60).read()
+            return
+        except urllib.error.HTTPError as e:  # 429: Discord says "slow down" and how long to wait
+            if e.code != 429 or attempt == 5:
+                raise
+            try:
+                wait = float(json.loads(e.read() or b"{}").get("retry_after") or 2)
+            except ValueError:
+                wait = 2.0
+            time.sleep(min(wait, 60) + 0.5)
 
 
 def list_message(title: str, items: list[dict], color: int, note: str) -> dict:
@@ -1498,6 +1511,57 @@ def announce(out: Path) -> int:
     return 0
 
 
+def announce_all(out: Path) -> int:
+    """Posts the whole library to #new-courses, once: a title post, then each section with its courses (big covers),
+    then every roadmap. Started by hand (Actions > Discord: post the whole library). Running it twice posts twice."""
+    import time
+    try:
+        hook = json.loads(os.environ.get("DISCORD_WEBHOOKS") or "{}").get("courses")
+    except ValueError:
+        hook = None
+    index = json.loads((out / "library.json").read_text(encoding="utf-8"))
+    courses, road = index["courses"], index["roadmaps"]
+    covers = {c["id"]: c.get("cover") for c in courses}
+    names = {x["id"]: x for x in index.get("sections") or []}
+    order = [x["id"] for x in index.get("sections") or []]
+    groups: dict[str, list[dict]] = {}
+    for c in courses:
+        groups.setdefault(c.get("section") or "other", []).append(c)
+    plan: list[tuple[dict, Path | None]] = []
+    plan.append(({"username": "inPace library", "allowed_mentions": {"parse": []}, "embeds": [{
+        "title": f"📚 The whole inPace library · مكتبة inPace كاملة", "url": SITE, "color": 0xFFD43B,
+        "description": f"**{len(courses)} free courses and {len(road)} roadmaps**, all here, section by section. "
+                       f"New ones will be posted here as they arrive.\n**{len(courses)} دورة مجانية و{len(road)} مسار تعلّم**، "
+                       "كلها هنا قسمًا قسمًا. وكل جديد سيُنشر هنا فور وصوله.\n\n" + SITE}]}, None))
+    for sid in order + [k for k in groups if k not in order]:
+        items = groups.get(sid) or []
+        if not items:
+            continue
+        sec = names.get(sid) or {"en": sid, "ar": sid}
+        plan.append(({"username": "inPace library", "allowed_mentions": {"parse": []},
+                      "content": f"## {sec.get('en', sid)} · {sec.get('ar') or sec.get('en', sid)} ({len(items)})"}, None))
+        for c in items:
+            m = announce_message("course", c)
+            m["embeds"][0]["title"] = m["embeds"][0]["title"].replace("📚 New course · دورة جديدة: ", "📚 ")
+            plan.append((m, cover_file(out, m)))
+    if road:
+        plan.append(({"username": "inPace library", "allowed_mentions": {"parse": []},
+                      "content": f"## 🗺️ Roadmaps · مسارات التعلّم ({len(road)})"}, None))
+        for r in road:
+            r = {**r, "cover": r.get("cover") or (covers.get(r["steps"][0]["course"]) if r.get("steps") else None)}
+            m = announce_message("roadmap", r)
+            m["embeds"][0]["title"] = m["embeds"][0]["title"].replace("🗺️ New roadmap · مسار جديد: ", "🗺️ ")
+            plan.append((m, cover_file(out, m)))
+    if not hook:
+        print(f"No DISCORD_WEBHOOKS secret. Would post {len(plan)} messages.")
+        return 0
+    for i, (msg, pic) in enumerate(plan, 1):
+        post_to_discord(hook, msg, pic)
+        print(f"{i}/{len(plan)}")
+        time.sleep(2.2)  # Discord allows about 30 posts a minute in one channel
+    return 0
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "submit":
@@ -1508,6 +1572,8 @@ if __name__ == "__main__":
         sys.exit(check())
     elif cmd == "build":
         build(Path(sys.argv[2] if len(sys.argv) > 2 else "_site"))
+    elif cmd == "announce-all":
+        sys.exit(announce_all(Path(sys.argv[2] if len(sys.argv) > 2 else "_site")))
     elif cmd == "announce":
         sys.exit(announce(Path(sys.argv[2] if len(sys.argv) > 2 else "_site")))
     else:
