@@ -1,6 +1,6 @@
 id: dl-3-ml-projects
 title: 'Deep Learning 3: structuring machine learning projects'
-version: 2
+version: 3
 language: en
 description: 'Part 3 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
   lesson: orthogonalization, single-number and satisficing metrics, dev and test sets, human-level performance and

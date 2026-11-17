@@ -1,6 +1,6 @@
 id: dl-5-sequence-models
 title: 'Deep Learning 5: sequence models, attention and transformers'
-version: 2
+version: 3
 language: en
 description: 'Part 5 of a refresh of Andrew Ng''s Deep Learning Specialization, with the original slides in each
   lesson and everything updated for PyTorch 2.15 and Keras 3.15: RNNs, language models and sampling, GRU and LSTM,
