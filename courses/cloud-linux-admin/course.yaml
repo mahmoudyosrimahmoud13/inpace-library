@@ -1,0 +1,224 @@
+id: cloud-linux-admin
+title: Cloud Linux Administration
+version: 1
+language: en
+description: 'Run Linux servers on AWS the way cloud sysadmins do: launching instances well, cloud-init, Session Manager instead
+  of open SSH ports, growing and snapshotting EBS disks, private subnets, NAT, VPC endpoints and DNS, nginx behind a load
+  balancer with TLS, secrets from Parameter Store and Secrets Manager, RDS connections and AWS Backup, the CloudWatch agent,
+  fleet patching, golden AMIs, rolling instance refresh, troubleshooting, and a build-break-fix capstone. Optional AWS re:Invent
+  talks. Course 11 of the Linux, Cloud and DevOps track. About 7 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: AWS Systems Manager user guide
+  url: https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html
+- title: cloud-init documentation
+  url: https://cloudinit.readthedocs.io/
+modules:
+- id: m1
+  title: 'Day 1: Launching servers and cloud-init'
+  lessons:
+  - id: m1-l1
+    title: Launching a Linux server the right way
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: 'cloud-init: configure servers on first boot'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Look up the latest Amazon Linux or Ubuntu AMI through its SSM parameter and launch an instance with a #cloud-config
+      that creates a user, installs nginx and writes a file. Show `cloud-init status --long` and the output log. Upload the
+      cloud-config and output.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain why secrets must never go in user data, and where they should come from instead.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Session Manager and disks'
+  lessons:
+  - id: m2-l1
+    title: 'Session Manager: shell access without SSH'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'EBS in practice: attach, grow, snapshot'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Remove port 22 from an instance's security group and connect with Session Manager. Attach a new 10 GB gp3 volume,
+      format it, mount it at /data through fstab with UUID and nofail, then grow it to 20 GB without downtime. Upload commands
+      and lsblk/df output before and after.
+  - id: m2-explain
+    type: explain
+    prompt: Explain three advantages of Session Manager over SSH through a bastion.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Private networks and serving apps'
+  lessons:
+  - id: m3-l1
+    title: 'Private networks: NAT, endpoints and DNS'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'Serving an app: nginx behind a load balancer with TLS'
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Put an instance in a private subnet with no public IP. Give it outbound access (NAT or endpoints) and reach it
+      with Session Manager. Run a small app behind nginx as a systemd service, put an ALB with an ACM certificate in front,
+      and show HTTPS working with the real client IP in nginx logs. Upload configs and output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain how traffic gets from a user's browser to your app process, naming every hop and where TLS ends.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Secrets, databases and backups'
+  lessons:
+  - id: m4-l1
+    title: Secrets and configuration
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: Connecting to RDS and backing everything up
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Store two config values and one SecureString in Parameter Store under /yourapp/dev/. Write a boot script that
+      turns them into a 0640 env file and restart the app. Give the role access to that path only, and show that reading /yourapp/prod/
+      fails. Upload the script, the policy and output.
+  - id: m4-explain
+    type: explain
+    prompt: Explain RPO and RTO with numbers for an app you know, and how you would test that you can meet them.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Monitoring and patching'
+  lessons:
+  - id: m5-l1
+    title: 'CloudWatch agent: metrics and logs from inside Linux'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Patching fleets with Systems Manager
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Install the CloudWatch agent with a config from Parameter Store that sends memory, disk and nginx logs. Set log
+      retention and an alarm for disk > 85%. Then run a Patch Manager scan and show the compliance result. Upload the config,
+      a screenshot of metrics and the compliance output.
+  - id: m5-explain
+    type: explain
+    prompt: 'Compare patching servers in place with replacing them from a new image: one advantage of each.'
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Golden AMIs and rolling updates'
+  lessons:
+  - id: m6-l1
+    title: Golden AMIs
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: Rolling out changes with instance refresh
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build a golden AMI (Image Builder, Packer, or by hand after `cloud-init clean`). Create a new launch template
+      version with it and run an instance refresh with a checkpoint at 50%. Upload commands and the refresh status output.
+  - id: m6-explain
+    type: explain
+    prompt: Explain what should and shouldn't be baked into a golden AMI, and why.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Troubleshooting and the capstone'
+  lessons:
+  - id: m7-l1
+    title: 'Break and fix: troubleshooting cloud servers'
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'Capstone: a production-style app on EC2'
+    file: lessons/m7-l2.md
+    minutes: 45
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Capstone: build the production-style setup with all eight requirements, do at least three break-and-fix exercises,
+      then delete everything. Upload your runbook (deploy, patch, restore, shell access) and the notes from each break-and-fix.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain how you would troubleshoot 'the site returns 503', layer by layer, from the ALB down to the app.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

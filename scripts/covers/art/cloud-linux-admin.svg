@@ -1,0 +1,17 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="70" width="440" height="330" rx="18" fill="#122722"/></g>
+<rect x="40" y="70" width="440" height="40" rx="18" fill="#2f6a5c"/><circle cx="70" cy="90" r="7" fill="#f4d35e"/><circle cx="94" cy="90" r="7" fill="#fdf6e9" opacity=".6"/>
+<g font-family="JBM" font-size="16" font-weight="600">
+<text x="64" y="148" fill="#f4d35e">$ aws ssm start-session \</text><text x="90" y="174" fill="#f4d35e">--target i-0abc123</text>
+<text x="64" y="214" fill="#fdf6e9">ec2-user@web01:~$ df -h /data</text>
+<text x="64" y="240" fill="#fdf6e9" opacity=".75">/dev/nvme1n1  20G  4G  /data</text>
+<text x="64" y="280" fill="#fdf6e9">ec2-user@web01:~$ systemctl is-active app</text>
+<text x="64" y="306" fill="#f4d35e">active</text>
+<text x="64" y="346" fill="#fdf6e9">ec2-user@web01:~$ cloud-init status</text>
+<text x="64" y="372" fill="#f4d35e">status: done</text></g>
+<g font-family="JBM" font-weight="700" font-size="16" text-anchor="middle" filter="url(#s)">
+<rect x="40" y="440" width="130" height="60" rx="12" fill="#f4d35e"/><text x="105" y="476" fill="#1f3d36">AMI</text>
+<rect x="195" y="440" width="130" height="60" rx="12" fill="#fdf6e9"/><text x="260" y="476" fill="#1f3d36">patch</text>
+<rect x="350" y="440" width="130" height="60" rx="12" fill="#fdf6e9"/><text x="415" y="476" fill="#1f3d36">refresh</text></g>
+</svg>

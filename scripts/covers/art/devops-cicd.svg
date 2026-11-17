@@ -1,0 +1,11 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g stroke="#0d3324" stroke-width="4" fill="none"><path d="M260 135 V430"/><path d="M260 430 C 420 430, 460 260, 300 150" stroke-dasharray="9 8"/></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="17" text-anchor="middle">
+<rect x="150" y="80" width="220" height="56" rx="28" fill="#0d3324"/><text x="260" y="114" fill="#ecf9f2">pull request</text>
+<rect x="150" y="165" width="220" height="56" rx="28" fill="#ecf9f2" stroke="#0d3324" stroke-width="3"/><text x="260" y="199" fill="#0d3324">test + scan ✓</text>
+<rect x="150" y="250" width="220" height="56" rx="28" fill="#ecf9f2" stroke="#0d3324" stroke-width="3"/><text x="260" y="284" fill="#0d3324">image sha-3f2c1ab</text>
+<rect x="150" y="335" width="220" height="56" rx="28" fill="#ecf9f2" stroke="#0d3324" stroke-width="3"/><text x="260" y="369" fill="#0d3324">staging ✓</text>
+<rect x="150" y="420" width="220" height="56" rx="28" fill="#0d3324"/><text x="260" y="454" fill="#ecf9f2">production</text></g>
+<g font-family="JBM" font-size="15" font-weight="600" fill="#0d3324"><text x="40" y="530">rollback = one command</text></g>
+</svg>

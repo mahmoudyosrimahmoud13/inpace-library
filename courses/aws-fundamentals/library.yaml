@@ -1,0 +1,15 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+section: linux-cloud-devops
+tags:
+- aws
+- cloud
+- iam
+- vpc
+- ec2
+- s3
+- beginner
+credit: Written for the inPace library. Optional videos from AWS re:Invent 2023 and Andrew Brown (freeCodeCamp), linked, not
+  copied.

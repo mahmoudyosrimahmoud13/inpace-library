@@ -128,3 +128,35 @@ courses:
     title: SQL,<br>from zero
     sub: Tables, queries, GROUP BY, keys and JOINs, then on to the advanced course
     tags: [16 lessons, 40 quiz questions]
+
+  ssh-remote-admin:
+    theme: coral
+    art: ssh-remote-admin.svg
+    chip: Track 9 · 7 days
+    title: SSH,<br>done right
+    sub: Keys, config, tunnels, bastions, certificates and troubleshooting
+    tags: [14 lessons, 35 quiz questions]
+
+  aws-fundamentals:
+    theme: navy
+    art: aws-fundamentals.svg
+    chip: Track 10 · 8 days
+    title: Cloud and<br>AWS basics
+    sub: IAM, EC2, VPC, S3, RDS, load balancers, scaling and cost
+    tags: [16 lessons, 40 quiz questions]
+
+  cloud-linux-admin:
+    theme: forest
+    art: cloud-linux-admin.svg
+    chip: Track 11 · 7 days
+    title: Linux<br>servers<br>in the cloud
+    sub: cloud-init, Session Manager, EBS, secrets, patching, golden AMIs
+    tags: [14 lessons, 35 quiz questions]
+
+  devops-cicd:
+    theme: mint
+    art: devops-cicd.svg
+    chip: Track 12 · 7 days
+    title: Ship it,<br>safely
+    sub: CI, images, OIDC, environments, canary, GitOps and rollback
+    tags: [14 lessons, 35 quiz questions]

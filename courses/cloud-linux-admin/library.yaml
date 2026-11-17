@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+section: linux-cloud-devops
+tags:
+- aws
+- linux
+- ec2
+- sysadmin
+- cloud
+- intermediate
+credit: Written for the inPace library. Optional videos from AWS re:Invent 2023, linked, not copied.

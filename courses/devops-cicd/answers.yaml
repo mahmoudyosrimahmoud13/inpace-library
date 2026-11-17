@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: Main stays green.
+q2:
+  right:
+  - a
+  why: 'Elite: under a day.'
+q3:
+  right:
+  - a
+  why: Separate deploy from release.
+q4:
+  right:
+  - a
+  why: Feedback comes late.
+q5:
+  right:
+  - a
+  why: Every image is traceable.
+q6:
+  right:
+  - a
+  why: Saves time and minutes.
+q7:
+  right:
+  - a
+  why: With a health check.
+q8:
+  right:
+  - a
+  why: Red builds must mean something.
+q9:
+  right:
+  - a
+  why: Dependabot, pip-audit, Trivy.
+q10:
+  right:
+  - a
+  why: Avoid alert fatigue.
+q11:
+  right:
+  - a
+  why: Only config changes.
+q12:
+  right:
+  - a
+  why: Tags can be moved.
+q13:
+  right:
+  - a
+  why: Search it when a new CVE lands.
+q14:
+  right:
+  - a
+  why: Nothing to steal.
+q15:
+  right:
+  - a
+  why: Storage costs grow otherwise.
+q16:
+  right:
+  - a
+  why: No secrets stored in GitHub.
+q17:
+  right:
+  - a
+  why: So the job can request a token.
+q18:
+  right:
+  - a
+  why: Always restrict repo and environment.
+q19:
+  right:
+  - a
+  why: A deliberate gate.
+q20:
+  right:
+  - a
+  why: Prod runs what was tested.
+q21:
+  right:
+  - a
+  why: Both copies run during the switch.
+q22:
+  right:
+  - a
+  why: Error rate and latency comparisons.
+q23:
+  right:
+  - a
+  why: CI never holds cluster credentials.
+q24:
+  right:
+  - a
+  why: Git is the source of truth.
+q25:
+  right:
+  - a
+  why: GitOps tools detect it.
+q26:
+  right:
+  - a
+  why: No redeploy needed.
+q27:
+  right:
+  - a
+  why: Each step can roll back.
+q28:
+  right:
+  - a
+  why: Avoids long locks.
+q29:
+  right:
+  - a
+  why: Stability, not speed.
+q30:
+  right:
+  - a
+  why: Measuring people backfires.
+q31:
+  right:
+  - a
+  why: Dependabot keeps SHAs updated.
+q32:
+  right:
+  - a
+  why: Least privilege.
+q33:
+  right:
+  - a
+  why: 'Pass it through env: and quote it.'
+q34:
+  right:
+  - a
+  why: Forks get secret access.
+q35:
+  right:
+  - a
+  why: Anyone can open a PR.

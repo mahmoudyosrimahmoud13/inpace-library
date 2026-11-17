@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: Your user key proves who you are.
+q2:
+  right:
+  - a
+  why: known_hosts on your side stores servers' host keys.
+q3:
+  right:
+  - a
+  why: The agent means you type it once per session.
+q4:
+  right:
+  - a
+  why: .ssh 700, authorized_keys 600, home not group-writable.
+q5:
+  right:
+  - a
+  why: Ideal for automation keys.
+q6:
+  right:
+  - a
+  why: Only the IdentityFile for that host is tried.
+q7:
+  right:
+  - a
+  why: Specific hosts first, defaults last.
+q8:
+  right:
+  - a
+  why: Great for Ansible and repeated commands.
+q9:
+  right:
+  - a
+  why: Pre-load known_hosts from a trusted source instead.
+q10:
+  right:
+  - a
+  why: Scripts can rely on it.
+q11:
+  right:
+  - a
+  why: rsync -avP resumes and compares.
+q12:
+  right:
+  - a
+  why: -n is a dry run.
+q13:
+  right:
+  - a
+  why: exit closes the shell inside tmux.
+q14:
+  right:
+  - a
+  why: tmux keeps the session on the server.
+q15:
+  right:
+  - a
+  why: It survives network changes.
+q16:
+  right:
+  - a
+  why: The target is resolved on the server.
+q17:
+  right:
+  - a
+  why: Remote forwarding.
+q18:
+  right:
+  - a
+  why: Point a browser at it to reach internal sites.
+q19:
+  right:
+  - a
+  why: Handy for long-lived tunnels.
+q20:
+  right:
+  - a
+  why: Easier to audit and revoke.
+q21:
+  right:
+  - a
+  why: Your key never touches the bastion.
+q22:
+  right:
+  - a
+  why: Use ProxyJump instead.
+q23:
+  right:
+  - a
+  why: One controlled door.
+q24:
+  right:
+  - a
+  why: Limited and revocable.
+q25:
+  right:
+  - a
+  why: Access goes through the cloud's API.
+q26:
+  right:
+  - a
+  why: Everything after Match belongs to it.
+q27:
+  right:
+  - a
+  why: Combine with ChrootDirectory.
+q28:
+  right:
+  - a
+  why: sshd refuses unsafe chroot directories.
+q29:
+  right:
+  - a
+  why: Test Match rules before anyone connects.
+q30:
+  right:
+  - a
+  why: Access expires with the certificate.
+q31:
+  right:
+  - a
+  why: Silent drops cause timeouts.
+q32:
+  right:
+  - a
+  why: The server log says exactly which.
+q33:
+  right:
+  - a
+  why: Turn them off if not needed.
+q34:
+  right:
+  - a
+  why: So a mistake doesn't lock you out.
+q35:
+  right:
+  - a
+  why: sshd logs the reason.

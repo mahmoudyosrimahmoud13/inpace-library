@@ -1,0 +1,228 @@
+id: devops-cicd
+title: DevOps and CI/CD Pipelines
+version: 1
+language: en
+description: 'Design delivery pipelines that are fast and safe. Starts where the GitHub Actions course stops: CI/CD and DORA
+  metrics, trunk-based development and feature flags, a real CI workflow with caching, matrix and service containers, the
+  test pyramid and security scanning, image tagging and registries, SBOMs and signed images, OIDC to AWS instead of stored
+  keys, environments and approvals, rolling, blue-green and canary deployments, GitOps, rollback and safe database migrations,
+  pipeline hardening, and a full pipeline capstone. Optional videos from MIT Missing Semester and TechWorld with Nana. Course
+  12 of the Linux, Cloud and DevOps track. About 7 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: GitHub Actions security hardening guide
+  url: https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions
+- title: DORA research and metrics
+  url: https://dora.dev/
+modules:
+- id: m1
+  title: 'Day 1: DevOps, CI/CD and branching'
+  lessons:
+  - id: m1-l1
+    title: What DevOps and CI/CD actually mean
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Branching and trunk-based development
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Pick a repository. Protect main (required checks, one review, no force push) and write down your branching model
+      in the README. Estimate your current DORA metrics. Upload the protection settings (screenshot or `gh api` output) and
+      your estimates.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between continuous delivery and continuous deployment, and what a team needs before turning
+      on the second.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: CI that''s fast and catches problems'
+  lessons:
+  - id: m2-l1
+    title: 'The CI workflow: lint, test, build'
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Testing strategy and security scanning
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a CI workflow with lint, a test matrix, a database service container, dependency caching and concurrency
+      cancel. Add secret scanning and a dependency/filesystem scan that fails on fixable critical issues. Upload the workflow
+      and a run's timing.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the test pyramid and what goes wrong when a team relies mostly on end-to-end tests.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Artifacts and the supply chain'
+  lessons:
+  - id: m3-l1
+    title: Artifacts and container images
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'Supply chain: SBOMs and signed images'
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Extend your workflow to build an image with buildx and layer caching, tag it with the SHA, push it to a registry
+      (only on main), and produce an SBOM. Stretch: sign it with cosign keyless and verify it. Upload the workflow and the
+      image/SBOM evidence.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why you should never deploy by the `latest` tag.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Secrets, OIDC and environments'
+  lessons:
+  - id: m4-l1
+    title: Secrets in pipelines, and OIDC to the cloud
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Environments, approvals and promotion
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Set up GitHub OIDC to AWS: an identity provider, a role whose trust policy is limited to your repo and the staging
+      environment, and a job that runs `aws sts get-caller-identity` without any stored keys. Create staging and production
+      environments with an approval on production. Upload the trust policy and run output.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain what the `sub` condition in an OIDC trust policy protects against.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Deployment strategies and GitOps'
+  lessons:
+  - id: m5-l1
+    title: Deployment strategies
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: GitOps
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Implement one strategy beyond recreate for your app: a rolling update with health checks (ASG or Kubernetes),
+      a weighted canary with an ALB, or Argo CD syncing from a config repo. Show a version change going out and how you''d
+      see it go wrong. Upload configs and output.'
+  - id: m5-explain
+    type: explain
+    prompt: 'Compare blue-green and canary: what each costs and when you''d choose it.'
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Rollback, migrations and metrics'
+  lessons:
+  - id: m6-l1
+    title: Rollback and safe database changes
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'Measuring delivery: DORA and post-deploy checks'
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Write a smoke test script for your app and run it after deploys. Plan an expand-and-contract migration for a column
+      rename, as five deploys. Then practise a rollback and time it. Upload the script, the migration plan and the rollback
+      timing.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why database changes must work with both the old and new version of the code during a deploy.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Hardening and the capstone'
+  lessons:
+  - id: m7-l1
+    title: Hardening the pipeline itself
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'Capstone: a complete delivery pipeline'
+    file: lessons/m7-l2.md
+    minutes: 45
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Capstone: build the complete pipeline with all eight requirements. Pin every action by SHA, set least permissions,
+      and run actionlint or zizmor. Break it on purpose with a failing smoke test and show the rollback. Upload the repo link,
+      a run screenshot and the pipeline README.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain three ways a CI/CD pipeline itself can be attacked, and the defence for each.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-17'
+section: linux-cloud-devops
+tags:
+- ssh
+- linux
+- remote access
+- security
+- intermediate
+credit: Written for the inPace library. Optional videos by Jay LaCroix (LearnLinuxTV) and MIT 6.858, linked, not copied.

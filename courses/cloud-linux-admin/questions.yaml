@@ -1,0 +1,280 @@
+q1:
+  text: 'Best way to find the latest official AMI:'
+  show: 4
+  options:
+    a: Read its public SSM parameter
+    b: Copy an ID from an old blog post
+    c: Use the newest community AMI
+    d: Search Marketplace by price
+q2:
+  text: Where does cloud-init write your script's output?
+  show: 4
+  options:
+    a: /var/log/cloud-init-output.log
+    b: /etc/cloud-init
+    c: ~/.bash_history
+    d: CloudTrail
+q3:
+  text: 'User data runs:'
+  show: 4
+  options:
+    a: Once, as root, on first boot
+    b: At every login
+    c: As ec2-user every hour
+    d: Only when you SSH in
+q4:
+  text: 'Default user on Ubuntu AMIs:'
+  show: 4
+  options:
+    a: ubuntu
+    b: ec2-user
+    c: root
+    d: admin
+q5:
+  text: Who can read an instance's user data?
+  show: 4
+  options:
+    a: Anyone allowed to describe the instance's attributes
+    b: Only root
+    c: Nobody
+    d: Only AWS
+q6:
+  text: What does Session Manager need on the network side?
+  show: 4
+  options:
+    a: Outbound HTTPS from the instance to SSM endpoints
+    b: Inbound port 22
+    c: A public IP
+    d: A bastion
+q7:
+  text: Which managed policy lets an instance register with SSM?
+  show: 4
+  options:
+    a: AmazonSSMManagedInstanceCore
+    b: AdministratorAccess
+    c: AmazonS3ReadOnlyAccess
+    d: CloudWatchFullAccess
+q8:
+  text: Why use `nofail` in fstab for data disks?
+  show: 4
+  options:
+    a: A missing disk won't stop the server from booting
+    b: Faster mounts
+    c: Encrypts the disk
+    d: Prevents writes
+q9:
+  text: 'After `modify-volume` to grow a root disk, you must:'
+  show: 4
+  options:
+    a: Grow the partition and the file system on the instance
+    b: Reboot twice
+    c: Create a snapshot first, always
+    d: Nothing
+q10:
+  text: 'EBS snapshots are, by default:'
+  show: 4
+  options:
+    a: Crash-consistent
+    b: Application-consistent
+    c: Encrypted per file
+    d: Instant restores of RAM
+q11:
+  text: 'The VPC DNS resolver is at:'
+  show: 4
+  options:
+    a: The VPC base address + 2
+    b: 8.8.8.8
+    c: The internet gateway
+    d: The NAT gateway
+q12:
+  text: 'Cheapest way for private instances to reach S3:'
+  show: 4
+  options:
+    a: A gateway endpoint
+    b: A NAT gateway
+    c: A public IP
+    d: An interface endpoint per bucket
+q13:
+  text: Where does TLS end in the lesson's setup?
+  show: 4
+  options:
+    a: At the ALB, with an ACM certificate
+    b: At nginx
+    c: At the app
+    d: Nowhere
+q14:
+  text: 'The instances'' security group should allow port 80 from:'
+  show: 4
+  options:
+    a: The ALB's security group only
+    b: 0.0.0.0/0
+    c: The NAT gateway
+    d: Your laptop
+q15:
+  text: Why `set_real_ip_from` in nginx?
+  show: 4
+  options:
+    a: To log users' real IPs instead of the ALB's
+    b: To block the ALB
+    c: To enable HTTP/2
+    d: For caching
+q16:
+  text: Which service rotates RDS passwords automatically?
+  show: 4
+  options:
+    a: Secrets Manager
+    b: Parameter Store standard
+    c: IAM
+    d: CloudTrail
+q17:
+  text: 'Instance roles should be able to read:'
+  show: 4
+  options:
+    a: Only their own environment's parameter path
+    b: All parameters
+    c: All secrets
+    d: Nothing; use env files in Git
+q18:
+  text: '`sslmode=verify-full` in a Postgres connection:'
+  show: 4
+  options:
+    a: Encrypts and checks the server's certificate and name
+    b: Turns TLS off
+    c: Only encrypts
+    d: Uses IAM auth
+q19:
+  text: 'RPO answers:'
+  show: 4
+  options:
+    a: How much data can we afford to lose?
+    b: How long can we be down?
+    c: How much does it cost?
+    d: Who is on call?
+q20:
+  text: 'AWS Backup selects resources by:'
+  show: 4
+  options:
+    a: Tags (or resource IDs) in a backup plan
+    b: Region only
+    c: IAM user
+    d: Instance type
+q21:
+  text: 'Memory usage of an EC2 instance needs:'
+  show: 4
+  options:
+    a: The CloudWatch agent
+    b: Nothing extra
+    c: CloudTrail
+    d: VPC Flow Logs
+q22:
+  text: 'Default retention for a CloudWatch log group:'
+  show: 4
+  options:
+    a: Never expire
+    b: 7 days
+    c: 30 days
+    d: 1 year
+q23:
+  text: 'Patch Manager picks instances through:'
+  show: 4
+  options:
+    a: Patch groups (tags) and maintenance windows
+    b: SSH keys
+    c: Security groups
+    d: Subnet names
+q24:
+  text: 'A kernel update takes effect:'
+  show: 4
+  options:
+    a: After a reboot (or live patching)
+    b: Immediately
+    c: After logout
+    d: Never
+q25:
+  text: 'System status check failed means:'
+  show: 4
+  options:
+    a: 'An AWS hardware/host problem: stop and start moves it'
+    b: Your OS is broken
+    c: The disk is full
+    d: IAM is wrong
+q26:
+  text: Should a golden AMI contain database passwords?
+  show: 4
+  options:
+    a: No, fetch secrets at boot
+    b: Yes, it's faster
+    c: Only for staging
+    d: Only encrypted ones
+q27:
+  text: 'Before imaging by hand, run:'
+  show: 4
+  options:
+    a: '`cloud-init clean --logs --machine-id`'
+    b: '`rm -rf /etc`'
+    c: '`passwd -d root`'
+    d: '`dnf remove cloud-init`'
+q28:
+  text: How do you roll a new AMI out to an ASG?
+  show: 4
+  options:
+    a: New launch template version, then an instance refresh
+    b: SSH into each instance
+    c: Delete the ASG
+    d: Change the AMI on running instances
+q29:
+  text: 'MinHealthyPercentage 90 means:'
+  show: 4
+  options:
+    a: At least 90% of capacity stays healthy during the refresh
+    b: 90% of instances replaced at once
+    c: 90% CPU target
+    d: A 90-second warmup
+q30:
+  text: Connection draining does what?
+  show: 4
+  options:
+    a: Lets in-flight requests finish before an instance is removed
+    b: Drains the disk
+    c: Clears logs
+    d: Stops new instances
+q31:
+  text: 'An instance won''t boot after an fstab edit. A way in:'
+  show: 4
+  options:
+    a: EC2 serial console, or fix the root volume from another instance
+    b: SSH as usual
+    c: Reboot it more
+    d: Change the security group
+q32:
+  text: Which shows what an instance printed while booting?
+  show: 4
+  options:
+    a: '`aws ec2 get-console-output`'
+    b: CloudTrail
+    c: S3
+    d: Route 53
+q33:
+  text: 'An app suddenly gets AccessDenied for a secret. Look in:'
+  show: 4
+  options:
+    a: CloudTrail for the denied call
+    b: nginx logs
+    c: fstab
+    d: VPC route tables
+q34:
+  text: 'Session Manager doesn''t list your instance. Check:'
+  show: 4
+  options:
+    a: Its role, the SSM agent, and its route to SSM endpoints
+    b: Port 22
+    c: The key pair
+    d: The AMI name
+q35:
+  text: 'Before deleting the capstone, the most important thing to check:'
+  show: 4
+  options:
+    a: NAT gateways, load balancers, RDS and EIPs are really gone
+    b: The VPC name
+    c: Your shell history
+    d: The AMI's creation date

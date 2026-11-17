@@ -1,0 +1,257 @@
+id: aws-fundamentals
+title: Cloud Computing and AWS Fundamentals
+version: 1
+language: en
+description: 'Understand the cloud by building on what you know about Linux and networks: service models and shared responsibility,
+  regions and Availability Zones, pricing and budgets, IAM users, roles and policies and how AWS evaluates them, EC2 and EBS,
+  VPC subnets, route tables, NAT and security groups, S3 and keeping it private, RDS, DynamoDB, Route 53 and CloudFront, load
+  balancers and Auto Scaling, CloudWatch, CloudTrail and cost control, and a three-tier design capstone. Optional AWS re:Invent
+  talks and Andrew Brown''s free Cloud Practitioner course. Course 10 of the Linux, Cloud and DevOps track. About 8 days,
+  45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: AWS Well-Architected Framework
+  url: https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+- title: AWS Pricing Calculator
+  url: https://calculator.aws/
+modules:
+- id: m1
+  title: 'Day 1: What the cloud is'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: what the cloud really is'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Regions, Availability Zones and pricing
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Create (or open) an AWS account. Turn on MFA for the root user, set a monthly budget alert, install the AWS CLI
+      and run `aws sts get-caller-identity` and `aws ec2 describe-regions`. Upload screenshots of the budget and MFA status
+      (hide account numbers) and the CLI output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the shared responsibility model with two things AWS is responsible for and three things you are.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: IAM'
+  lessons:
+  - id: m2-l1
+    title: 'IAM: users, groups, roles and policies'
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'How AWS decides: policy evaluation'
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Set up IAM Identity Center with one admin user (MFA on) and stop using root. Create a role an EC2 instance could
+      use with read-only access to one S3 bucket only, writing the policy JSON yourself. Test it with the Policy Simulator.
+      Upload the policy and the simulator result.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why roles with temporary credentials are safer than access keys, with one real way keys leak.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: EC2 and disks'
+  lessons:
+  - id: m3-l1
+    title: 'EC2: virtual servers'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'Disks: EBS, instance store and snapshots'
+    file: lessons/m3-l2.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Launch a t3.micro (or free-tier) instance with IMDSv2 required, a user-data script that installs nginx, and a
+      tag. Fetch its instance ID from the metadata service with a token. Snapshot its volume, then terminate it and delete
+      the snapshot. Upload commands and output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain the difference between stopping and terminating an instance, and what you still pay for when it's stopped.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: VPC networking'
+  lessons:
+  - id: m4-l1
+    title: 'VPC: your private network in AWS'
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Security groups and network ACLs
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Create a VPC with one public and one private subnet in two AZs, an internet gateway, and route tables. Put an
+      instance in the public subnet reachable on port 80 from your IP only. Use Reachability Analyzer to explain why the private
+      instance isn't reachable. Upload a diagram and screenshots.
+  - id: m4-explain
+    type: explain
+    prompt: Explain what makes a subnet public, and how a private instance can still download updates.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: S3'
+  lessons:
+  - id: m5-l1
+    title: 'S3: object storage'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Keeping S3 private
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Create a bucket with Block Public Access on, versioning on, and a lifecycle rule. Add a bucket policy that denies
+      non-TLS requests. Upload, overwrite and restore an old version of a file, and share one file with a presigned URL. Upload
+      commands, the policy and output.
+  - id: m5-explain
+    type: explain
+    prompt: Explain how to serve files publicly to users while the bucket stays private.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Databases, DNS and CDN'
+  lessons:
+  - id: m6-l1
+    title: 'Managed databases: RDS, Aurora and DynamoDB'
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: 'DNS and content delivery: Route 53 and CloudFront'
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Create a small RDS PostgreSQL instance in private subnets (not publicly accessible), connect to it from an instance
+      in the same VPC, and check its backup settings. Delete it when done. Optional: put CloudFront in front of your S3 bucket
+      from Day 5. Upload commands and screenshots.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain when you'd pick RDS PostgreSQL over DynamoDB and the other way round.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Load balancing and scaling'
+  lessons:
+  - id: m7-l1
+    title: Load balancers
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: Auto Scaling groups
+    file: lessons/m7-l2.md
+    minutes: 25
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Create a launch template, an Auto Scaling group of 2 instances across 2 AZs behind an ALB with a /health check,
+      and a target tracking policy. Terminate one instance by hand and watch it get replaced. Clean up. Upload screenshots
+      of the target group and the ASG activity history.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why instances behind an Auto Scaling group should be stateless, with an example of state that has to move
+      elsewhere.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Monitoring, cost and the capstone'
+  lessons:
+  - id: m8-l1
+    title: 'Watching it: CloudWatch, CloudTrail and costs'
+    file: lessons/m8-l1.md
+    minutes: 25
+  - id: m8-l2
+    title: 'Capstone: design a three-tier web app on AWS'
+    file: lessons/m8-l2.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Capstone: write the three-tier design document from the lesson (all seven parts) with a diagram and a Pricing
+      Calculator estimate. If you build it, show the alarms and prove everything was deleted afterwards. Upload the document.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain how CloudTrail and CloudWatch differ, with one question each one answers.
+    min_words: 80
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

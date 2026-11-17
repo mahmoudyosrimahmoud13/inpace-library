@@ -1,0 +1,280 @@
+q1:
+  text: What does the server's host key prove?
+  show: 4
+  options:
+    a: That you're talking to the real server
+    b: Who you are
+    c: That the connection is fast
+    d: That your key is valid
+q2:
+  text: Where does your public key go on the server?
+  show: 4
+  options:
+    a: ~/.ssh/authorized_keys of the account you log in as
+    b: /etc/ssh/ssh_host_key
+    c: ~/.ssh/known_hosts
+    d: /etc/passwd
+q3:
+  text: Why protect a private key with a passphrase?
+  show: 4
+  options:
+    a: A stolen copy of the key file is useless without it
+    b: It speeds up login
+    c: Servers require it
+    d: It replaces the host key
+q4:
+  text: 'Keys are ignored though correctly pasted. A common cause:'
+  show: 4
+  options:
+    a: ~/.ssh or authorized_keys has permissions others could change
+    b: The key is too long
+    c: The agent is running
+    d: The server uses ed25519
+q5:
+  text: What does `command="..."` in front of a key do?
+  show: 4
+  options:
+    a: That key can only run that one command
+    b: Runs the command at every login for all keys
+    c: Blocks the key
+    d: Sets the shell
+q6:
+  text: What does `IdentitiesOnly yes` prevent?
+  show: 4
+  options:
+    a: Offering every key in the agent and hitting 'Too many authentication failures'
+    b: Using passwords
+    c: Using the agent at all
+    d: Connecting to new hosts
+q7:
+  text: In ~/.ssh/config, where should `Host *` go?
+  show: 4
+  options:
+    a: Last, because the first value found for each setting wins
+    b: First
+    c: Anywhere
+    d: In a separate file only
+q8:
+  text: What does ControlMaster/ControlPersist give you?
+  show: 4
+  options:
+    a: Reuse of one connection so later ssh/scp start instantly
+    b: Encryption
+    c: A VPN
+    d: Root access
+q9:
+  text: Why avoid StrictHostKeyChecking=no in scripts?
+  show: 4
+  options:
+    a: It silently accepts impostor servers
+    b: It's slower
+    c: It disables keys
+    d: It needs root
+q10:
+  text: What exit code does ssh return for a remote command?
+  show: 4
+  options:
+    a: The remote command's exit code (255 if ssh itself failed)
+    b: Always 0
+    c: Always 1
+    d: The number of bytes sent
+q11:
+  text: Which tool copies only what changed and can resume?
+  show: 4
+  options:
+    a: rsync
+    b: scp
+    c: cat over ssh
+    d: sftp get
+q12:
+  text: '`rsync -avzn --delete src/ host:dst/` does what?'
+  show: 4
+  options:
+    a: Shows what would be copied and deleted, changing nothing
+    b: Deletes everything on the host
+    c: Copies without compression
+    d: Syncs only new files
+q13:
+  text: How do you leave a tmux session running and disconnect?
+  show: 4
+  options:
+    a: Ctrl+b then d
+    b: Ctrl+c
+    c: exit
+    d: Ctrl+d
+q14:
+  text: Why does a job die when your Wi-Fi drops in a plain SSH session?
+  show: 4
+  options:
+    a: The shell gets a hangup signal (SIGHUP) and its children end
+    b: The server reboots
+    c: Disk writes stop
+    d: The key expires
+q15:
+  text: 'mosh is best for:'
+  show: 4
+  options:
+    a: Unreliable or roaming connections
+    b: Copying files
+    c: Tunnels
+    d: Root logins
+q16:
+  text: '`ssh -L 5433:localhost:5432 db01` makes:'
+  show: 4
+  options:
+    a: Your laptop's port 5433 reach port 5432 on db01 itself
+    b: db01's port 5433 reach your laptop
+    c: A SOCKS proxy
+    d: Port 5432 public on the internet
+q17:
+  text: Which flag exposes a port from your side on the remote server?
+  show: 4
+  options:
+    a: -R
+    b: -L
+    c: -D
+    d: -J
+q18:
+  text: What does `ssh -D 1080 bastion` create?
+  show: 4
+  options:
+    a: A SOCKS proxy that sends traffic out from the bastion
+    b: A VPN for everyone
+    c: A local port forward to port 1080
+    d: A bastion
+q19:
+  text: '`-fN` with a tunnel means:'
+  show: 4
+  options:
+    a: Run in the background with no remote shell, just the tunnel
+    b: Force new keys
+    c: Forward all ports
+    d: Fail if no network
+q20:
+  text: 'For daily network access for a whole team, prefer:'
+  show: 4
+  options:
+    a: A managed VPN or session manager
+    b: Everyone running ssh -D
+    c: Opening database ports to the internet
+    d: Sharing one SSH key
+q21:
+  text: With ProxyJump, where is your SSH session to the private server decrypted?
+  show: 4
+  options:
+    a: Only on your laptop and the private server; the bastion just passes bytes
+    b: On the bastion
+    c: On every hop
+    d: Nowhere, it's not encrypted
+q22:
+  text: What's the danger of `ssh -A` to a bastion?
+  show: 4
+  options:
+    a: Root on the bastion can use your agent to log in wherever your keys work
+    b: It's slow
+    c: It disables MFA
+    d: It leaks your passphrase in logs
+q23:
+  text: 'Private servers'' firewalls should accept SSH from:'
+  show: 4
+  options:
+    a: Only the bastion (or the VPN)
+    b: Anywhere
+    c: The whole internet on port 2222
+    d: Nobody, even admins
+q24:
+  text: 'A server needs to git pull from a private repo. Best choice:'
+  show: 4
+  options:
+    a: A read-only deploy key for that repo on the server
+    b: Agent forwarding
+    c: Your personal key copied to the server
+    d: Making the repo public
+q25:
+  text: What do cloud session managers remove?
+  show: 4
+  options:
+    a: The need for an open SSH port or a bastion
+    b: The need for IAM
+    c: Logging
+    d: Encryption
+q26:
+  text: Where do Match blocks go in sshd_config?
+  show: 4
+  options:
+    a: At the end, because they apply until the next Match
+    b: At the start
+    c: In ssh_config
+    d: Anywhere
+q27:
+  text: What does `ForceCommand internal-sftp` do?
+  show: 4
+  options:
+    a: Allows only SFTP for those users, no shell
+    b: Speeds up SFTP
+    c: Disables SFTP
+    d: Forces passwords
+q28:
+  text: 'A chroot directory must be:'
+  show: 4
+  options:
+    a: Owned by root and not writable by others
+    b: Owned by the user
+    c: World-writable
+    d: On a separate disk
+q29:
+  text: '`sshd -T -C user=x,host=y,addr=z` shows:'
+  show: 4
+  options:
+    a: The settings that would apply for that user and address
+    b: Active sessions
+    c: Failed logins
+    d: The host key
+q30:
+  text: 'TrustedUserCAKeys on a server means:'
+  show: 4
+  options:
+    a: Any user key signed by that CA (with a valid, allowed certificate) can log in
+    b: Only the CA can log in
+    c: Host keys are ignored
+    d: Passwords are required
+q31:
+  text: '`Connection refused` on port 22 usually means:'
+  show: 4
+  options:
+    a: 'Nothing is listening there: sshd stopped or on another port'
+    b: A firewall silently drops packets
+    c: Your key is wrong
+    d: DNS failed
+q32:
+  text: '`Permission denied (publickey)` points to:'
+  show: 4
+  options:
+    a: The key, the user, or permissions on the server's .ssh files
+    b: The firewall
+    c: The host key
+    d: MTU
+q33:
+  text: 'Login prompt takes 30 seconds to appear. A common cause:'
+  show: 4
+  options:
+    a: The server doing reverse DNS lookups (UseDNS) or GSSAPI
+    b: A weak key
+    c: Too many users
+    d: tmux
+q34:
+  text: 'Best habit when editing sshd_config remotely:'
+  show: 4
+  options:
+    a: Keep the current session open and test in a second one
+    b: Reboot after each change
+    c: Edit it as a normal user
+    d: Disable the firewall first
+q35:
+  text: Where do you look on the server for why a login failed?
+  show: 4
+  options:
+    a: journalctl -u ssh (or auth.log)
+    b: ~/.ssh/known_hosts
+    c: /etc/hosts
+    d: dmesg only

@@ -1,0 +1,280 @@
+q1:
+  text: 'Continuous Integration means:'
+  show: 4
+  options:
+    a: Merging small changes to main often, each built and tested automatically
+    b: Deploying every commit to production
+    c: Weekly integration meetings
+    d: Long-lived feature branches
+q2:
+  text: Which DORA metric measures commit-to-production time?
+  show: 4
+  options:
+    a: Lead time for changes
+    b: Deployment frequency
+    c: Change failure rate
+    d: Time to restore
+q3:
+  text: 'Feature flags let you:'
+  show: 4
+  options:
+    a: Deploy code without releasing the feature yet
+    b: Skip tests
+    c: Avoid code review
+    d: Use long-lived branches
+q4:
+  text: 'Biggest weakness of Git flow for CI/CD:'
+  show: 4
+  options:
+    a: Long-lived branches and slow, painful merges
+    b: No tags
+    c: No main branch
+    d: Can't use PRs
+q5:
+  text: 'For a web service, the most reliable version identifier is often:'
+  show: 4
+  options:
+    a: The commit SHA
+    b: The date
+    c: '''latest'''
+    d: The developer's name
+q6:
+  text: What does `concurrency` with cancel-in-progress do?
+  show: 4
+  options:
+    a: Cancels older runs of the same branch when a new push arrives
+    b: Runs jobs in parallel
+    c: Retries failed jobs
+    d: Locks the repo
+q7:
+  text: How do tests get a real PostgreSQL in GitHub Actions?
+  show: 4
+  options:
+    a: A service container
+    b: Install it on your laptop
+    c: Use production
+    d: Mock everything
+q8:
+  text: 'A flaky test should be:'
+  show: 4
+  options:
+    a: Quarantined and fixed or deleted
+    b: Retried forever
+    c: Ignored
+    d: Moved to production
+q9:
+  text: Which finds vulnerable libraries?
+  show: 4
+  options:
+    a: Dependency scanning (SCA)
+    b: Linting
+    c: SAST only
+    d: Unit tests
+q10:
+  text: 'A sensible gate for scans:'
+  show: 4
+  options:
+    a: Fail on critical/high issues that have a fix
+    b: Fail on every finding
+    c: Never fail
+    d: Only scan in production
+q11:
+  text: '''Build once, deploy everywhere'' means:'
+  show: 4
+  options:
+    a: The tested image is the one promoted to every environment
+    b: Rebuild per environment
+    c: Build only in production
+    d: Use one server
+q12:
+  text: 'The most immutable way to reference an image:'
+  show: 4
+  options:
+    a: By digest (@sha256:...)
+    b: By 'latest'
+    c: By branch tag
+    d: By date
+q13:
+  text: 'An SBOM is:'
+  show: 4
+  options:
+    a: A list of every package in your software
+    b: A signing key
+    c: A test report
+    d: A deployment plan
+q14:
+  text: 'Keyless cosign signing uses:'
+  show: 4
+  options:
+    a: The CI job's OIDC identity
+    b: A key stored in secrets
+    c: Your SSH key
+    d: No identity
+q15:
+  text: 'Registry lifecycle rules are for:'
+  show: 4
+  options:
+    a: Deleting old, untagged images
+    b: Signing images
+    c: Running tests
+    d: Scaling
+q16:
+  text: 'With OIDC, the job gets AWS credentials that are:'
+  show: 4
+  options:
+    a: Temporary, for one role
+    b: Permanent access keys
+    c: The root user's
+    d: Shared with all repos
+q17:
+  text: Which workflow permission does OIDC need?
+  show: 4
+  options:
+    a: 'id-token: write'
+    b: 'contents: write'
+    c: 'packages: write'
+    d: 'actions: write'
+q18:
+  text: 'Without a `sub` condition in the trust policy:'
+  show: 4
+  options:
+    a: Any GitHub repo could assume your role
+    b: Nothing changes
+    c: Only forks can assume it
+    d: The role is disabled
+q19:
+  text: 'Required reviewers on the production environment mean:'
+  show: 4
+  options:
+    a: A person approves before the prod job starts
+    b: Code needs two reviews
+    c: Tests run twice
+    d: Secrets are hidden
+q20:
+  text: 'Moving from staging to prod should:'
+  show: 4
+  options:
+    a: Deploy the same digest, not rebuild
+    b: Rebuild with prod settings
+    c: Use latest
+    d: Skip smoke tests
+q21:
+  text: Which strategy gives an instant switch back with double capacity?
+  show: 4
+  options:
+    a: Blue-green
+    b: Recreate
+    c: Rolling
+    d: Feature flags
+q22:
+  text: 'Canary deployments need:'
+  show: 4
+  options:
+    a: Metrics good enough to spot problems in a small share of traffic
+    b: Twice the servers
+    c: Downtime
+    d: No monitoring
+q23:
+  text: In GitOps, who applies changes to the cluster?
+  show: 4
+  options:
+    a: An agent in the cluster that pulls from Git
+    b: The CI job with kubectl
+    c: Developers by hand
+    d: The registry
+q24:
+  text: 'Rollback in GitOps is usually:'
+  show: 4
+  options:
+    a: A git revert of the config change
+    b: Deleting the cluster
+    c: Re-running old CI
+    d: Editing pods by hand
+q25:
+  text: 'Drift means:'
+  show: 4
+  options:
+    a: The running state differs from what Git says
+    b: Slow deploys
+    c: Clock skew
+    d: Network latency
+q26:
+  text: 'The fastest rollback is usually:'
+  show: 4
+  options:
+    a: Turning off a feature flag or shifting traffic back
+    b: Restoring a database backup
+    c: Rebuilding the image
+    d: Rewriting history
+q27:
+  text: In expand and contract, when do you drop the old column?
+  show: 4
+  options:
+    a: In a later release after nothing reads or writes it
+    b: In the same deploy
+    c: Before adding the new one
+    d: Never
+q28:
+  text: 'Safe index creation on a busy PostgreSQL table:'
+  show: 4
+  options:
+    a: CREATE INDEX CONCURRENTLY
+    b: CREATE INDEX in a transaction at peak
+    c: DROP TABLE and recreate
+    d: VACUUM FULL
+q29:
+  text: 'Change failure rate counts:'
+  show: 4
+  options:
+    a: Deploys that need a rollback, hotfix or cause an incident
+    b: Failed unit tests
+    c: Lines of code
+    d: Number of deploys
+q30:
+  text: 'DORA metrics should be used to:'
+  show: 4
+  options:
+    a: Improve the delivery system
+    b: Rank individual developers
+    c: Set bonuses
+    d: Replace code review
+q31:
+  text: Why pin actions by commit SHA?
+  show: 4
+  options:
+    a: Tags like @v4 can be moved to malicious code
+    b: It's faster
+    c: GitHub requires it
+    d: It caches better
+q32:
+  text: 'Safe default for GITHUB_TOKEN:'
+  show: 4
+  options:
+    a: '`permissions: contents: read` at the top, widen per job'
+    b: write-all
+    c: No setting
+    d: admin
+q33:
+  text: 'Putting a PR title directly into `run:` risks:'
+  show: 4
+  options:
+    a: Script injection
+    b: Slow builds
+    c: Lost artifacts
+    d: Merge conflicts
+q34:
+  text: '`pull_request_target` with a checkout of PR code is dangerous because:'
+  show: 4
+  options:
+    a: Untrusted code runs with your secrets
+    b: It's slower
+    c: It skips tests
+    d: It can't comment
+q35:
+  text: 'Self-hosted runners for public repos:'
+  show: 4
+  options:
+    a: Should not be used; prefer ephemeral runners anyway
+    b: Are safest
+    c: Are required
+    d: Never keep state

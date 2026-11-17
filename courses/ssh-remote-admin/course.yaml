@@ -1,0 +1,226 @@
+id: ssh-remote-admin
+title: SSH and Remote Linux Administration
+version: 1
+language: en
+description: 'Manage remote machines securely and comfortably: how SSH works, host and user keys, passphrases and the agent,
+  ~/.ssh/config, remote commands and SSH in scripts, scp, sftp, rsync and sshfs, tmux and mosh, local, remote and dynamic
+  tunnels, bastions and ProxyJump, why agent forwarding is risky, Match blocks and SFTP-only users, SSH certificates that
+  expire, troubleshooting, and a team access capstone. Optional videos by Jay LaCroix (LearnLinuxTV) and MIT 6.858. Course
+  9 of the Linux, Cloud and DevOps track. About 7 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: OpenSSH manual pages (ssh, ssh_config, sshd_config)
+  url: https://www.openssh.com/manual.html
+modules:
+- id: m1
+  title: 'Day 1: How SSH works, and keys'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how SSH works'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Keys, passphrases and the agent
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Create a passphrase-protected ed25519 key, load it into your agent, copy it to a server, and log in with `ssh
+      -v`. Then add a restricted key (from= and command=) for a script. Upload the relevant -v lines, `ssh-add -l`, and the
+      authorized_keys line (public parts only).
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between a host key and a user key, and what the 'REMOTE HOST IDENTIFICATION HAS CHANGED'
+      warning means.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Client config and SSH in scripts'
+  lessons:
+  - id: m2-l1
+    title: '~/.ssh/config: stop typing long commands'
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: Remote commands and SSH in scripts
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a ~/.ssh/config with at least two hosts, a wildcard block, keep-alives and multiplexing. Show `ssh -G` for
+      one host. Then write a loop that checks a service on two hosts with BatchMode and ConnectTimeout. Upload your config
+      (no private data) and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why `ssh web01 echo $HOME` and `ssh web01 'echo $HOME'` print different things.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Files and long sessions'
+  lessons:
+  - id: m3-l1
+    title: 'Copying files: scp, sftp and rsync'
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: 'Long sessions: tmux and mosh'
+    file: lessons/m3-l2.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Sync a folder to a server with rsync (dry run first, then real, then with --delete), and copy one file with scp.
+      Then start a long command inside tmux on the server, detach, log out, log back in and re-attach. Upload commands and
+      output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why long jobs shouldn't run in a bare SSH session, and two better ways to run them.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Tunnels'
+  lessons:
+  - id: m4-l1
+    title: 'Tunnels: local and remote port forwarding'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Dynamic forwarding (SOCKS) and when to use a VPN
+    file: lessons/m4-l2.md
+    minutes: 20
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: On a server, run a service bound to 127.0.0.1 (a database or `python3 -m http.server 8000 --bind 127.0.0.1`).
+      Reach it from your laptop with ssh -L. Then start ssh -D and fetch an internal URL with curl through the SOCKS proxy.
+      Upload the commands and output.
+  - id: m4-explain
+    type: explain
+    prompt: 'Explain local forwarding with a picture or words: which machine resolves ''localhost'' in `ssh -L 5433:localhost:5432
+      db01`, and why.'
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Bastions'
+  lessons:
+  - id: m5-l1
+    title: Bastions and ProxyJump
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Agent forwarding risks, and alternatives
+    file: lessons/m5-l2.md
+    minutes: 20
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Set up a bastion and a private server that accepts SSH only from the bastion. Configure ProxyJump in ~/.ssh/config
+      and show ssh, scp and rsync all working through it with no agent forwarding. Upload your config, the firewall rule on
+      the private server, and the output.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why ProxyJump is safer than agent forwarding when using a bastion.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Server-side control and certificates'
+  lessons:
+  - id: m6-l1
+    title: 'Server side: Match blocks and SFTP-only users'
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: 'SSH certificates: access that expires'
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Create an SFTP-only, chrooted upload account and prove it can sftp but not ssh. Test your Match rules with `sshd
+      -T -C`. Stretch: make a user CA, sign your key for 8 hours, and log in to a server that trusts the CA without any authorized_keys
+      entry. Upload configs and output.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain how SSH user certificates make removing someone's access easier than plain keys.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Troubleshooting and the capstone'
+  lessons:
+  - id: m7-l1
+    title: Troubleshooting SSH
+    file: lessons/m7-l1.md
+    minutes: 20
+  - id: m7-l2
+    title: 'Capstone: secure remote access for a small team'
+    file: lessons/m7-l2.md
+    minutes: 40
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Capstone: build the bastion setup from the lesson with all eight parts (certificates are a stretch), run the
+      proof commands, and write the team one-pager. Upload the one-pager and the proof output.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain how you'd tell apart a firewall problem, sshd not running, and a key problem, using only the client's
+      error messages.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

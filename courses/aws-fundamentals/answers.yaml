@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: 'EC2 is IaaS: the OS is yours.'
+q2:
+  right:
+  - a
+  why: Spread across 2+ AZs to survive one failing.
+q3:
+  right:
+  - a
+  why: Up to ~90% off, but can be reclaimed.
+q4:
+  right:
+  - a
+  why: Most resources are per region.
+q5:
+  right:
+  - a
+  why: Both bill per GB.
+q6:
+  right:
+  - a
+  why: Everything is denied unless allowed.
+q7:
+  right:
+  - a
+  why: Explicit Deny always wins.
+q8:
+  right:
+  - a
+  why: Temporary credentials rotate automatically.
+q9:
+  right:
+  - a
+  why: Bots scan for keys within minutes.
+q10:
+  right:
+  - a
+  why: It reads CloudTrail history.
+q11:
+  right:
+  - a
+  why: Install packages, configure the app.
+q12:
+  right:
+  - a
+  why: Tokens stop simple SSRF attacks.
+q13:
+  right:
+  - a
+  why: Use it only for scratch data.
+q14:
+  right:
+  - a
+  why: Snapshot to move it.
+q15:
+  right:
+  - a
+  why: IOPS and throughput set separately from size.
+q16:
+  right:
+  - a
+  why: Only the route table decides.
+q17:
+  right:
+  - a
+  why: Outbound only.
+q18:
+  right:
+  - a
+  why: Replies are allowed automatically.
+q19:
+  right:
+  - a
+  why: Scales without IP lists.
+q20:
+  right:
+  - a
+  why: Cheaper and private.
+q21:
+  right:
+  - a
+  why: The console just displays them as folders.
+q22:
+  right:
+  - a
+  why: Old versions are kept.
+q23:
+  right:
+  - a
+  why: It overrides mistakes.
+q24:
+  right:
+  - a
+  why: It expires.
+q25:
+  right:
+  - a
+  why: Cheaper storage, retrieval fee.
+q26:
+  right:
+  - a
+  why: Production must-have.
+q27:
+  right:
+  - a
+  why: Never 'publicly accessible'.
+q28:
+  right:
+  - a
+  why: Different from relational design.
+q29:
+  right:
+  - a
+  why: Regular CNAMEs can't be at the apex.
+q30:
+  right:
+  - a
+  why: A classic gotcha.
+q31:
+  right:
+  - a
+  why: Layer 7.
+q32:
+  right:
+  - a
+  why: Give the app a simple /health.
+q33:
+  right:
+  - a
+  why: Only through the load balancer.
+q34:
+  right:
+  - a
+  why: AWS does the math.
+q35:
+  right:
+  - a
+  why: The source is the ALB.
+q36:
+  right:
+  - a
+  why: Every API call is recorded.
+q37:
+  right:
+  - a
+  why: AWS can't see inside your OS.
+q38:
+  right:
+  - a
+  why: Then filter Cost Explorer by tag.
+q39:
+  right:
+  - a
+  why: There are six pillars.
+q40:
+  right:
+  - a
+  why: That's why everything spans 2 AZs.

@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: IDs differ per region and change.
+q2:
+  right:
+  - a
+  why: Check it first when user data 'didn't work'.
+q3:
+  right:
+  - a
+  why: Changing it later doesn't touch running instances.
+q4:
+  right:
+  - a
+  why: Amazon Linux uses ec2-user.
+q5:
+  right:
+  - a
+  why: So no secrets in it.
+q6:
+  right:
+  - a
+  why: No inbound ports at all.
+q7:
+  right:
+  - a
+  why: Attach it via the instance role.
+q8:
+  right:
+  - a
+  why: A classic boot-loop cause.
+q9:
+  right:
+  - a
+  why: growpart, then xfs_growfs or resize2fs.
+q10:
+  right:
+  - a
+  why: Use database backups for databases.
+q11:
+  right:
+  - a
+  why: 10.0.0.2 for 10.0.0.0/16.
+q12:
+  right:
+  - a
+  why: Gateway endpoints are free.
+q13:
+  right:
+  - a
+  why: ACM renews it automatically.
+q14:
+  right:
+  - a
+  why: No direct access.
+q15:
+  right:
+  - a
+  why: Taken from X-Forwarded-For.
+q16:
+  right:
+  - a
+  why: Parameter Store doesn't rotate.
+q17:
+  right:
+  - a
+  why: Staging can't read prod.
+q18:
+  right:
+  - a
+  why: Protects against impostors.
+q19:
+  right:
+  - a
+  why: RTO is downtime.
+q20:
+  right:
+  - a
+  why: Tag backup=daily and they're covered.
+q21:
+  right:
+  - a
+  why: AWS can't see inside the OS.
+q22:
+  right:
+  - a
+  why: Set it, or pay forever.
+q23:
+  right:
+  - a
+  why: Policy, not hand work.
+q24:
+  right:
+  - a
+  why: Check needs-restarting or reboot-required.
+q25:
+  right:
+  - a
+  why: Instance status check = your OS.
+q26:
+  right:
+  - a
+  why: Images get copied and shared.
+q27:
+  right:
+  - a
+  why: New instances get fresh identities.
+q28:
+  right:
+  - a
+  why: Replacement, not mutation.
+q29:
+  right:
+  - a
+  why: Controls speed versus safety.
+q30:
+  right:
+  - a
+  why: Users don't see errors.
+q31:
+  right:
+  - a
+  why: The OS never gets as far as networking.
+q32:
+  right:
+  - a
+  why: Kernel and cloud-init messages.
+q33:
+  right:
+  - a
+  why: It names the action and principal.
+q34:
+  right:
+  - a
+  why: All three are needed.
+q35:
+  right:
+  - a
+  why: These bill every hour.

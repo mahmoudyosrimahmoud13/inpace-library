@@ -1,0 +1,320 @@
+q1:
+  text: Under shared responsibility, who patches the OS on an EC2 instance?
+  show: 4
+  options:
+    a: You
+    b: AWS
+    c: Nobody, it's automatic
+    d: The hypervisor
+q2:
+  text: What is an Availability Zone?
+  show: 4
+  options:
+    a: One or more separate data centres in a region with their own power and network
+    b: A country
+    c: A CDN cache
+    d: A billing account
+q3:
+  text: Which pricing option suits interruptible batch jobs best?
+  show: 4
+  options:
+    a: Spot
+    b: On-demand
+    c: Dedicated hosts
+    d: Reserved for 3 years
+q4:
+  text: 'Your instances ''vanished'' from the console. First check:'
+  show: 4
+  options:
+    a: Which region the console is showing
+    b: Your credit card
+    c: IAM
+    d: CloudFront
+q5:
+  text: 'A cost people often forget:'
+  show: 4
+  options:
+    a: NAT gateways and data transfer out
+    b: Inbound data
+    c: IAM users
+    d: Security groups
+q6:
+  text: 'By default, an IAM identity with no policies can:'
+  show: 4
+  options:
+    a: Do nothing
+    b: Read everything
+    c: Do everything
+    d: Only use S3
+q7:
+  text: An Allow in an identity policy and an explicit Deny in a bucket policy. Result?
+  show: 4
+  options:
+    a: Denied
+    b: Allowed
+    c: Depends on order
+    d: Allowed for reads only
+q8:
+  text: How should an EC2 app get AWS permissions?
+  show: 4
+  options:
+    a: An IAM role through an instance profile
+    b: Access keys in a config file
+    c: The root user's keys
+    d: Keys baked into the AMI
+q9:
+  text: What should you do first if an access key leaks on GitHub?
+  show: 4
+  options:
+    a: Deactivate it immediately
+    b: Make the repo private and wait
+    c: Change your password
+    d: Delete the IAM user next week
+q10:
+  text: Which tool can generate a least-privilege policy from past activity?
+  show: 4
+  options:
+    a: IAM Access Analyzer
+    b: CloudFront
+    c: Route 53
+    d: EBS
+q11:
+  text: What runs a script on an instance's first boot?
+  show: 4
+  options:
+    a: User data (cloud-init)
+    b: The security group
+    c: The key pair
+    d: IAM
+q12:
+  text: Why require IMDSv2?
+  show: 4
+  options:
+    a: It blocks tricks that make a web app fetch the role's credentials
+    b: It's faster
+    c: It's cheaper
+    d: It enables SSH
+q13:
+  text: 'Data on an instance store volume after a stop:'
+  show: 4
+  options:
+    a: Is lost
+    b: Is kept
+    c: Moves to S3
+    d: Is snapshotted automatically
+q14:
+  text: 'An EBS volume can attach to instances in:'
+  show: 4
+  options:
+    a: The same Availability Zone
+    b: Any region
+    c: Any AZ in the region
+    d: Only the instance that created it
+q15:
+  text: 'The default general-purpose EBS type today:'
+  show: 4
+  options:
+    a: gp3
+    b: st1
+    c: sc1
+    d: magnetic
+q16:
+  text: What makes a subnet public?
+  show: 4
+  options:
+    a: A route to an internet gateway in its route table
+    b: Its name
+    c: A public security group
+    d: Its size
+q17:
+  text: 'Private instances reach the internet for updates through:'
+  show: 4
+  options:
+    a: A NAT gateway in a public subnet
+    b: The internet gateway directly
+    c: A security group
+    d: Route 53
+q18:
+  text: 'Security groups are:'
+  show: 4
+  options:
+    a: Stateful and allow-only
+    b: Stateless with deny rules
+    c: Applied per subnet
+    d: Global
+q19:
+  text: 'Best way to let app servers reach the database:'
+  show: 4
+  options:
+    a: Allow 5432 from the app's security group
+    b: Allow 5432 from 0.0.0.0/0
+    c: Put the database in a public subnet
+    d: Turn off the NACL
+q20:
+  text: 'Reach S3 from private subnets without the NAT gateway using:'
+  show: 4
+  options:
+    a: A VPC gateway endpoint
+    b: An internet gateway
+    c: CloudFront
+    d: A bastion
+q21:
+  text: 'S3 ''folders'' are really:'
+  show: 4
+  options:
+    a: Prefixes in object keys
+    b: Directories on a disk
+    c: Separate buckets
+    d: EBS volumes
+q22:
+  text: Which feature lets you undo an accidental overwrite?
+  show: 4
+  options:
+    a: Versioning
+    b: Lifecycle rules
+    c: Storage classes
+    d: Transfer Acceleration
+q23:
+  text: 'Safest default for public access:'
+  show: 4
+  options:
+    a: Block Public Access on at the account level
+    b: Public-read ACLs
+    c: Bucket policies with Principal *
+    d: Off, for flexibility
+q24:
+  text: 'A temporary download link for one private object:'
+  show: 4
+  options:
+    a: A presigned URL
+    b: Making the object public
+    c: Sharing access keys
+    d: A NACL rule
+q25:
+  text: 'Rarely read data that must still be instant:'
+  show: 4
+  options:
+    a: Standard-IA or Glacier Instant Retrieval
+    b: Deep Archive
+    c: Instance store
+    d: DynamoDB
+q26:
+  text: What does RDS Multi-AZ give you?
+  show: 4
+  options:
+    a: A standby in another AZ with automatic failover
+    b: Faster queries
+    c: Cheaper storage
+    d: A copy in another region by default
+q27:
+  text: 'RDS databases should live in:'
+  show: 4
+  options:
+    a: Private subnets reachable only from the app
+    b: Public subnets
+    c: The default VPC with public access
+    d: S3
+q28:
+  text: 'DynamoDB tables are designed around:'
+  show: 4
+  options:
+    a: The queries you'll run (access patterns)
+    b: Normal forms and joins
+    c: Disk size
+    d: The number of AZs
+q29:
+  text: 'A Route 53 alias record can point the bare domain at:'
+  show: 4
+  options:
+    a: A load balancer or CloudFront distribution
+    b: Only an IP address
+    c: An IAM role
+    d: A security group
+q30:
+  text: 'ACM certificates used by CloudFront must be in:'
+  show: 4
+  options:
+    a: us-east-1
+    b: Any region
+    c: The origin's region
+    d: eu-west-1
+q31:
+  text: Which load balancer routes by URL path?
+  show: 4
+  options:
+    a: Application Load Balancer
+    b: Network Load Balancer
+    c: Gateway Load Balancer
+    d: Route 53
+q32:
+  text: 'Every target shows unhealthy and users get 503. Likely cause:'
+  show: 4
+  options:
+    a: The health check path doesn't return 200
+    b: Too many instances
+    c: IAM
+    d: S3 versioning
+q33:
+  text: 'Target instances'' security group should allow app traffic from:'
+  show: 4
+  options:
+    a: The ALB's security group
+    b: 0.0.0.0/0
+    c: Nobody
+    d: The NAT gateway
+q34:
+  text: 'The simplest scaling policy to start with:'
+  show: 4
+  options:
+    a: Target tracking (e.g. 50% CPU)
+    b: Step scaling with 10 steps
+    c: Manual only
+    d: Predictive only
+q35:
+  text: How does the app see the real client IP behind an ALB?
+  show: 4
+  options:
+    a: The X-Forwarded-For header
+    b: The source IP
+    c: A cookie
+    d: It can't
+q36:
+  text: Which service answers 'who deleted this bucket?'
+  show: 4
+  options:
+    a: CloudTrail
+    b: CloudWatch metrics
+    c: Cost Explorer
+    d: Route 53
+q37:
+  text: 'EC2 memory usage needs:'
+  show: 4
+  options:
+    a: The CloudWatch agent on the instance
+    b: Nothing, it's built in
+    c: CloudTrail
+    d: A bigger instance
+q38:
+  text: 'To know which project costs what:'
+  show: 4
+  options:
+    a: Tag resources and activate cost allocation tags
+    b: Use one account for everything
+    c: Check CloudTrail
+    d: Use spot only
+q39:
+  text: Which is NOT a Well-Architected pillar?
+  show: 4
+  options:
+    a: Marketing
+    b: Reliability
+    c: Security
+    d: Cost optimization
+q40:
+  text: 'If one AZ fails in the capstone design:'
+  show: 4
+  options:
+    a: The ALB and ASG use the other AZ and RDS fails over
+    b: The site is down until it returns
+    c: CloudFront stops
+    d: S3 loses data

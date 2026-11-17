@@ -1,0 +1,9 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g stroke="#3a1408" stroke-width="4" fill="none"><path d="M140 190 L260 300 L380 410"/></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" text-anchor="middle">
+<rect x="40" y="130" width="200" height="110" rx="14" fill="#3a1408"/><text x="140" y="172" fill="#fff1ea" font-size="18">laptop</text><text x="140" y="202" fill="#ffbfa3" font-size="15">~/.ssh/id_ed25519</text>
+<rect x="180" y="265" width="160" height="70" rx="14" fill="#fff1ea" stroke="#3a1408" stroke-width="4"/><text x="260" y="307" fill="#3a1408" font-size="18">bastion</text>
+<rect x="280" y="380" width="200" height="110" rx="14" fill="#3a1408"/><text x="380" y="422" fill="#fff1ea" font-size="18">db01</text><text x="380" y="452" fill="#ffbfa3" font-size="15">private subnet</text></g>
+<g font-family="JBM" font-size="16" font-weight="600" fill="#3a1408"><text x="40" y="80">$ ssh -J bastion db01</text><text x="40" y="530">-L 5433:localhost:5432</text></g>
+</svg>

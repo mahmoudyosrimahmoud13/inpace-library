@@ -23,7 +23,15 @@ steps:
     note: "Put networking to work on servers. nftables, NAT, SSH and TLS, auditing, and a hardening lab."
   - course: git-zero-to-master
     note: "Professional Git, from the first commit to recovering lost work with the reflog."
+  - course: ssh-remote-admin
+    note: "Manage remote machines like a pro. Keys, config, tunnels, bastions and SSH certificates."
   - course: docker-kubernetes-en
     note: "Containers and clusters. After the internals course you'll know which kernel feature does each part. The video is in Egyptian Arabic; the English notes cover everything."
   - course: github-actions-cli
     note: "Pull requests, the GitHub CLI and Actions: your first steps into CI/CD."
+  - course: aws-fundamentals
+    note: "The cloud from the ground up. IAM, EC2, VPC, S3, databases, load balancers and cost."
+  - course: cloud-linux-admin
+    note: "Run Linux on AWS day to day. Session Manager, cloud-init, secrets, patching, golden AMIs."
+  - course: devops-cicd
+    note: "Pipelines that ship safely. Scanning, signed images, OIDC, canary, GitOps and rollback."
