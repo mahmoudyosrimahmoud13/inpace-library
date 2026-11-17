@@ -1372,31 +1372,69 @@ def roadmap_page(r: dict, by_id: dict) -> str:
 
 
 def new_on_site(out: Path, live: dict | None) -> list[tuple[str, dict]]:
-    """Courses and roadmaps in this build that the live library doesn't have yet."""
+    """What this build changes compared with the live library: new courses and roadmaps, and courses whose content
+    changed (a new hash). Returns (kind, item) with kind "course", "roadmap" or "updated"."""
     if not live:
         return []
-    have_c = {c["id"] for c in live.get("courses", [])}
+    old_c = {c["id"]: c for c in live.get("courses", [])}
     have_r = {r["id"] for r in live.get("roadmaps", [])}
     index = json.loads((out / "library.json").read_text(encoding="utf-8"))
-    return [("course", c) for c in index["courses"] if c["id"] not in have_c] + \
-        [("roadmap", r) for r in index["roadmaps"] if r["id"] not in have_r]
+    return [("course", c) for c in index["courses"] if c["id"] not in old_c] + \
+        [("roadmap", r) for r in index["roadmaps"] if r["id"] not in have_r] + \
+        [("updated", c) for c in index["courses"] if c["id"] in old_c and c.get("hash") and old_c[c["id"]].get("hash")
+         and c["hash"] != old_c[c["id"]]["hash"]]
 
 
 def announce_message(kind: str, item: dict) -> dict:
+    """One new course or roadmap, in English and Arabic (the news channels are shared by both)."""
     page = SITE + ("c/" if kind == "course" else "r/") + item["id"] + ".html"
-    facts_line = (f"{item.get('lessons', 0)} lessons" if kind == "course" else f"{item.get('courses', 0)} courses") + \
-        (f" · about {max(1, round((item.get('minutes') or 0) / 60))} h" if item.get("minutes") else "") + \
-        (" · Arabic" if item.get("language") == "ar" else "")
-    embed = {"title": ("📚 New course: " if kind == "course" else "🗺️ New roadmap: ") + item["title"], "url": page,
-             "description": (item.get("description") or "")[:600] + f"\n\n{facts_line}\nOpen it, then add it to inPace with one press.",
+    h = max(1, round((item.get("minutes") or 0) / 60)) if item.get("minutes") else 0
+    if kind == "course":
+        en = f"{item.get('lessons', 0)} lessons" + (f" · about {h} h" if h else "")
+        ar = f"{item.get('lessons', 0)} درس" + (f" · حوالي {h} ساعة" if h else "")
+    else:
+        en = f"{item.get('courses', 0)} courses" + (f" · about {h} h" if h else "")
+        ar = f"{item.get('courses', 0)} دورات" + (f" · حوالي {h} ساعة" if h else "")
+    lang = " · Arabic · بالعربية" if item.get("language") == "ar" else ""
+    head = "📚 New course · دورة جديدة: " if kind == "course" else "🗺️ New roadmap · مسار جديد: "
+    embed = {"title": (head + item["title"])[:256], "url": page,
+             "description": (item.get("description") or "")[:600] + f"\n\n{en}{lang}\n{ar}\n\n"
+                            "Open it, then add it to inPace with one press.\nافتحها، ثم أضفها إلى inPace بضغطة واحدة.",
              "color": 0x1F9D6A if kind == "course" else 0x5DADE2}
     if item.get("cover"):
         embed["thumbnail"] = {"url": item["cover"]}
     return {"username": "inPace library", "embeds": [embed], "allowed_mentions": {"parse": []}}
 
 
+def list_message(title: str, items: list[dict], color: int, note: str) -> dict:
+    """One short post for many things at once (updated courses, or the new ones past the first ten)."""
+    lines = [f"• [{c['title']}]({SITE}{'r/' if 'steps' in c else 'c/'}{c['id']}.html)" for c in items[:25]]
+    more = f"\n…and {len(items) - 25} more · و{len(items) - 25} أخرى" if len(items) > 25 else ""
+    return {"username": "inPace library", "embeds": [{"title": title, "url": SITE, "color": color,
+            "description": "\n".join(lines) + more + "\n\n" + note}], "allowed_mentions": {"parse": []}}
+
+
+def announce_messages(changes: list[tuple[str, dict]]) -> list[dict]:
+    """What to post: each new course or roadmap on its own (up to 10, with its cover), the rest of the new ones in
+    one list, and every updated course in one list. Never more than a dozen posts for one push."""
+    fresh = [(k, i) for k, i in changes if k in ("course", "roadmap")]
+    updated = [i for k, i in changes if k == "updated"]
+    if len(updated) > 20:  # that many at once means the course format changed, not the courses: say nothing
+        updated = []
+    out = [announce_message(k, i) for k, i in fresh[:10]]
+    if len(fresh) > 10:
+        out.append(list_message(f"📚 {len(fresh) - 10} more new in the library · {len(fresh) - 10} جديدة أخرى في المكتبة",
+                                [i for _, i in fresh[10:]], 0x1F9D6A,
+                                "Open any of them, then add it to inPace with one press.\nافتح أيًّا منها، ثم أضفه إلى inPace بضغطة واحدة."))
+    if updated:
+        out.append(list_message(f"🔄 {len(updated)} course{'s' if len(updated) != 1 else ''} updated · تحديث {len(updated)} دورة", updated, 0xFFD43B,
+                                "If you have it, inPace offers the new version (your progress stays).\n"
+                                "إن كانت عندك، يعرض inPace النسخة الجديدة (ويبقى تقدّمك كما هو)."))
+    return out
+
+
 def announce(out: Path) -> int:
-    """Post new courses and roadmaps to the Discord #new-courses channel (before the new site goes live)."""
+    """Post what's new in the library to the Discord #new-courses channel (before the new site goes live)."""
     try:
         hook = json.loads(os.environ.get("DISCORD_WEBHOOKS") or "{}").get("courses")
     except ValueError:
@@ -1410,12 +1448,11 @@ def announce(out: Path) -> int:
     except Exception as e:  # never post everything just because the live list couldn't be read
         print("Couldn't read the live library, so nothing is posted:", e)
         return 0
-    new = new_on_site(out, live)
-    for kind, item in new[:10]:
-        req = urllib.request.Request(hook, data=json.dumps(announce_message(kind, item)).encode(), method="POST",
+    for msg in announce_messages(new_on_site(out, live)):
+        req = urllib.request.Request(hook, data=json.dumps(msg).encode(), method="POST",
                                      headers={"Content-Type": "application/json", "User-Agent": "inPace-library"})
         urllib.request.urlopen(req, timeout=30).read()
-        print("Posted", kind, item["id"])
+        print("Posted:", msg["embeds"][0]["title"])
     return 0
 
 

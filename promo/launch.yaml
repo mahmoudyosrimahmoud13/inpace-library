@@ -1,0 +1,25 @@
+# The launch post for inPace 1.28: posted once to #announcements by the "Discord announcement" workflow
+# (GitHub > Actions > Discord announcement > Run workflow). Each post is a message plus its pictures.
+posts:
+  - text: |
+      🐢 **inPace 1.28 is our biggest update yet!**
+
+      📚 **74 free courses** in the library, including a full **Linux, Cloud and DevOps track**: 15 new courses, from how an operating system really works to AWS, Terraform, CI/CD, monitoring and a final project you can show in interviews.
+      🗺️ **21 free roadmaps**, now with pictures. Pick a goal and follow the courses in the right order.
+      🔎 The library is in sections now, with a smarter search and level and language filters.
+      👓 And meet **Tempo the librarian**.
+
+      Browse the library: https://mahmoudyosrimahmoud13.github.io/inpace-library/
+      Get inPace (free): https://mahmoudyosrimahmoud13.github.io/inPace/
+    files: [inpace-courses-en.jpg, inpace-roadmaps-en.jpg]
+  - text: |
+      🐢 **inPace 1.28 أكبر تحديث لنا حتى الآن!**
+
+      📚 **74 دورة مجانية** في المكتبة، منها مسار كامل لـ **Linux والسحابة وDevOps**: 15 دورة جديدة، من فهم نظام التشغيل من الداخل إلى AWS وTerraform وCI/CD والمراقبة، ومشروع نهائي تعرضه في المقابلات.
+      🗺️ **21 مسار تعلّم مجاني**، والآن بصور. اختر هدفك واتبع الدورات بالترتيب الصحيح.
+      🔎 المكتبة الآن مقسّمة إلى أقسام، مع بحث أذكى وفلاتر للمستوى واللغة.
+      👓 وتعرّف على **تمبو أمين المكتبة**.
+
+      تصفّح المكتبة: https://mahmoudyosrimahmoud13.github.io/inpace-library/
+      حمّل inPace مجانًا: https://mahmoudyosrimahmoud13.github.io/inPace/
+    files: [inpace-courses-ar.jpg, inpace-roadmaps-ar.jpg]

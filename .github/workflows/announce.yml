@@ -1,0 +1,29 @@
+name: Discord announcement
+
+# Posts an announcement with pictures to the Discord #announcements channel, only when you press
+# "Run workflow" (GitHub > Actions > Discord announcement). The text and pictures are in promo/.
+on:
+  workflow_dispatch:
+    inputs:
+      post:
+        description: "Which announcement (a file in promo/)"
+        default: launch.yaml
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            promo
+      - run: pip install -q pyyaml
+      - name: Post to Discord
+        env:
+          DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+        run: python3 scripts/discord_promo.py "promo/${{ inputs.post }}"

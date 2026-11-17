@@ -1,0 +1,23 @@
+name: discord
+
+# Posts every push to main in the Discord #dev-log channel. New and updated courses are posted to #new-courses by
+# the publish workflow. Needs the secret DISCORD_WEBHOOKS (made by community/discord_setup.py in the app repo).
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      - name: Post to Discord
+        env:
+          DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+        run: python3 scripts/discord_devlog.py
