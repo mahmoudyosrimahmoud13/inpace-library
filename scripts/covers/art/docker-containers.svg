@@ -1,0 +1,24 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)" stroke="#0f2a3d" stroke-width="4">
+<rect x="60" y="250" width="190" height="90" rx="8" fill="#ffd166"/>
+<rect x="270" y="250" width="190" height="90" rx="8" fill="#ff8fab"/>
+<rect x="60" y="355" width="190" height="90" rx="8" fill="#eef7fc"/>
+<rect x="270" y="355" width="190" height="90" rx="8" fill="#7fd3ff"/>
+<rect x="165" y="145" width="190" height="90" rx="8" fill="#9ee6b8"/>
+</g>
+<g stroke="#0f2a3d" stroke-width="3" opacity=".55">
+<path d="M95 262v66M125 262v66M155 262v66M185 262v66M215 262v66"/>
+<path d="M305 262v66M335 262v66M365 262v66M395 262v66M425 262v66"/>
+<path d="M95 367v66M125 367v66M155 367v66M185 367v66M215 367v66"/>
+<path d="M305 367v66M335 367v66M365 367v66M395 367v66M425 367v66"/>
+<path d="M200 157v66M230 157v66M260 157v66M290 157v66M320 157v66"/>
+</g>
+<g font-family="JBM" font-weight="700" font-size="17" fill="#0f2a3d" text-anchor="middle">
+<text x="155" y="301" fill="#0f2a3d">api</text><text x="365" y="301">web</text>
+<text x="155" y="406">postgres</text><text x="365" y="406">redis</text><text x="260" y="196">worker</text></g>
+<rect x="40" y="470" width="440" height="56" rx="12" fill="#0f2a3d" filter="url(#s)"/>
+<text x="62" y="505" font-family="JBM" font-weight="700" font-size="18" fill="#7fd3ff">$ docker compose up -d</text>
+<text x="40" y="80" font-family="JBM" font-weight="600" font-size="16" fill="#0f2a3d">FROM python:3.12-slim</text>
+<text x="40" y="106" font-family="JBM" font-weight="600" font-size="16" fill="#0f2a3d">USER app</text>
+</svg>

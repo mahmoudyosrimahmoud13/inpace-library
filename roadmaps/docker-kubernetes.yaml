@@ -1,13 +1,15 @@
 id: docker-kubernetes
 title: DevOps basics with Docker and Kubernetes
-description: Learn containers and clusters, then see where they fit in the design of a real service. A good next step after any developer path.
+description: Learn containers properly, then clusters, then see where they fit in the design of a real service. A good next step after any developer path.
 language: en
 author: inPace
 official: true
 order: 10
 tags: [docker, kubernetes, devops]
 steps:
+  - course: docker-containers
+    note: Containers properly, from what they are to Compose, security and shipping images.
   - course: docker-kubernetes-en
-    note: From one container to a cluster. The video is in Egyptian Arabic; the English notes cover everything.
+    note: Then Kubernetes, from one container to a cluster. The video is in Egyptian Arabic; the English notes cover everything.
   - course: system-design-beginners
     note: Where containers fit in a whole system.

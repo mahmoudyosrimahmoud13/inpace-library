@@ -184,3 +184,11 @@ courses:
     title: Build it<br>all, end<br>to end
     sub: Design, Terraform, pipelines, SLOs, a game day and a portfolio write-up
     tags: [10 lessons, 25 quiz questions]
+
+  docker-containers:
+    theme: sky
+    art: docker-containers.svg
+    chip: Beginner · 7 days
+    title: Containers,<br>properly
+    sub: Images, Dockerfiles, volumes, networks, Compose, security and shipping
+    tags: [14 lessons, 35 quiz questions]

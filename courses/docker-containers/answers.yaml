@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: That's why they start fast and are small.
+q2:
+  right:
+  - a
+  why: Many containers can run from one image.
+q3:
+  right:
+  - a
+  why: Host first, container second.
+q4:
+  right:
+  - a
+  why: Use -it for a shell.
+q5:
+  right:
+  - a
+  why: Use volumes for data.
+q6:
+  right:
+  - a
+  why: Namespaces limit what it sees; cgroups what it uses.
+q7:
+  right:
+  - a
+  why: Check OOMKilled in docker inspect.
+q8:
+  right:
+  - a
+  why: Each adds a thin writable layer.
+q9:
+  right:
+  - a
+  why: It's the content's hash.
+q10:
+  right:
+  - a
+  why: Docker Hub and latest are the defaults.
+q11:
+  right:
+  - a
+  why: CMD runs when the container starts.
+q12:
+  right:
+  - a
+  why: The string form runs through sh -c.
+q13:
+  right:
+  - a
+  why: It's documentation.
+q14:
+  right:
+  - a
+  why: Smaller and safer images.
+q15:
+  right:
+  - a
+  why: Clean up in the same RUN.
+q16:
+  right:
+  - a
+  why: It survives container removal.
+q17:
+  right:
+  - a
+  why: Read twice before running it.
+q18:
+  right:
+  - a
+  why: The default bridge has no DNS.
+q19:
+  right:
+  - a
+  why: Otherwise it listens on every interface.
+q20:
+  right:
+  - a
+  why: Each container has its own network namespace.
+q21:
+  right:
+  - a
+  why: One network per project.
+q22:
+  right:
+  - a
+  why: Others need -f.
+q23:
+  right:
+  - a
+  why: Never commit secrets.
+q24:
+  right:
+  - a
+  why: Great for one-off commands.
+q25:
+  right:
+  - a
+  why: --profile tools.
+q26:
+  right:
+  - a
+  why: Use build secrets or run-time injection.
+q27:
+  right:
+  - a
+  why: Avoid it.
+q28:
+  right:
+  - a
+  why: Check CMD for typos.
+q29:
+  right:
+  - a
+  why: Restarts unless you stopped it.
+q30:
+  right:
+  - a
+  why: Docker collects them.
+q31:
+  right:
+  - a
+  why: Traceable and immutable in practice.
+q32:
+  right:
+  - a
+  why: Useful for Apple Silicon and Graviton.
+q33:
+  right:
+  - a
+  why: Self-healing and rollouts.
+q34:
+  right:
+  - a
+  why: Pods come and go.
+q35:
+  right:
+  - a
+  why: Match the tool to the size.

@@ -17,8 +17,8 @@ steps:
   - course: github-actions-cli
     note: Reviews, the gh command, and Actions that test your app and publish it by themselves.
     optional: true
-  - course: docker-kubernetes-en
-    note: Ship your work in a container, useful when you move to full-stack. The video is in Egyptian Arabic; the English notes cover everything.
+  - course: docker-containers
+    note: Ship your work in a container, useful when you move to full-stack.
     optional: true
   - course: system-design-beginners
     note: How big web services are designed. A common interview topic.

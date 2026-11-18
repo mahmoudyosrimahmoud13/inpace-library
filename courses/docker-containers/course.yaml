@@ -1,0 +1,228 @@
+id: docker-containers
+title: Docker and Containers, Properly
+version: 1
+language: en
+description: 'Everything you need to package and run apps in containers, explained from the ground up: why containers exist
+  and how they differ from VMs, running and managing containers, what really happens inside (namespaces, cgroups, layers),
+  images, tags, digests and registries, writing fast and small Dockerfiles with multi-stage builds, volumes and backups, networking
+  between containers, Docker Compose for whole apps and a comfortable dev workflow, security, debugging, shipping images from
+  CI, and where Kubernetes fits. Ends with containerizing a real app. Optional videos by TechWorld with Nana, Liz Rice and
+  Docker''s creator. Part of the Linux, Cloud and DevOps track. About 7 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: Docker documentation
+  url: https://docs.docker.com/
+- title: Dockerfile reference
+  url: https://docs.docker.com/reference/dockerfile/
+- title: Compose file reference
+  url: https://docs.docker.com/reference/compose-file/
+modules:
+- id: m1
+  title: 'Day 1: What containers are, and your first ones'
+  lessons:
+  - id: m1-l1
+    title: Why containers exist
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Your first containers
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install Docker. Run hello-world, an interactive Ubuntu shell with --rm, and nginx in the background on port 8080.
+      Use ps, logs, exec, stop, start and rm on it. Upload the commands and their output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between an image and a container, and between a container and a virtual machine.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Inside a container, and images'
+  lessons:
+  - id: m2-l1
+    title: 'Under the hood: namespaces, cgroups and layers'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Images, tags, digests and registries
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Run nginx with --memory 256m and --cpus 0.5, find its host PID and list its namespaces under /proc. Show `docker
+      history` of an image. Pull an image by tag and by digest and show both with `docker images --digests`. Upload commands
+      and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why deploying the `latest` tag is a bad idea, and what to use instead.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Dockerfiles'
+  lessons:
+  - id: m3-l1
+    title: Writing a Dockerfile
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: 'Good Dockerfiles: cache, size and multi-stage builds'
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write a Dockerfile for a small app with a .dockerignore, dependency-first caching, a non-root user and JSON-form
+      CMD. Then add a multi-stage build (or a build step) and compare image sizes before and after. Upload the Dockerfile,
+      sizes and `docker history`.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why the order of COPY and RUN lines changes how fast rebuilds are.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Data and networks'
+  lessons:
+  - id: m4-l1
+    title: 'Keeping data: volumes and bind mounts'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Networking between containers
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Run Postgres with a named volume, remove and recreate the container and show the data survived, and back it up
+      with pg_dump. Then make a user-defined network with the database and another container that reaches it by name, with
+      the database port not published. Upload commands and output.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why `localhost:5432` fails from inside an app container, and what to use instead.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Docker Compose'
+  lessons:
+  - id: m5-l1
+    title: 'Docker Compose: a whole app in one file'
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: A comfortable development workflow
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Write a compose.yaml for an app with a database (healthcheck, named volume) and a cache, secrets from .env, and
+      a compose.override.yaml with live reload. Run tests with `docker compose run --rm`. Upload both files and the output
+      of `docker compose ps`.
+  - id: m5-explain
+    type: explain
+    prompt: 'Explain what `depends_on` with `condition: service_healthy` adds over plain depends_on.'
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Security and operations'
+  lessons:
+  - id: m6-l1
+    title: Security that matters
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Debugging and running containers well
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Harden your app''s container: non-root, read-only filesystem with a tmpfs, cap-drop ALL, no-new-privileges, a
+      HEALTHCHECK, log limits and a restart policy. Scan the image with trivy. Then break it on purpose (wrong CMD, too little
+      memory) and read the exit codes. Upload configs, scan results and output.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain why mounting /var/run/docker.sock into an app container is dangerous.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Shipping, and the capstone'
+  lessons:
+  - id: m7-l1
+    title: Shipping images, and what comes after Docker
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'Capstone: containerize a real app'
+    file: lessons/m7-l2.md
+    minutes: 45
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Capstone: containerize a real app with all six requirements, prove a fresh clone runs with one command, data
+      survives restarts and a killed container comes back. Stretch: a CI workflow that builds, scans and pushes the image.
+      Upload the repo link and README.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain when you'd run containers with Compose on one server, a managed service like Cloud Run, or Kubernetes.
+    min_words: 80
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

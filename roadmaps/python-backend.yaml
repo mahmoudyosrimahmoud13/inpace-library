@@ -14,7 +14,7 @@ steps:
     note: "The whole language first: functions, errors, tests, files, classes and the tools a backend developer uses every day."
   - course: fastapi
     note: Your first API, all the way to production.
-  - course: docker-kubernetes-en
-    note: Pack the API in a container and run it on a cluster. The video is in Egyptian Arabic; the English notes cover everything.
+  - course: docker-containers
+    note: Pack the API and its database in containers with Docker Compose, the way teams ship.
   - course: system-design-beginners
     note: "Step back and design a whole service: the questions interviewers ask."

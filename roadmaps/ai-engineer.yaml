@@ -17,8 +17,8 @@ steps:
   - course: fastapi
     note: If building DocAnswer's API felt new, this goes deeper into APIs.
     optional: true
-  - course: docker-kubernetes-en
-    note: Containers and deployment, asked for in many AI engineer posts. The video is in Egyptian Arabic; the English notes cover everything.
+  - course: docker-containers
+    note: Containers and deployment, asked for in many AI engineer posts. Package your model's API and ship it.
     optional: true
   - course: mls-1-supervised
     note: About two in three AI engineer posts also want some classic machine learning. This fills that gap.

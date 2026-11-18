@@ -1,0 +1,280 @@
+q1:
+  text: Containers share what with the host?
+  show: 4
+  options:
+    a: The Linux kernel
+    b: Nothing
+    c: The whole OS install
+    d: The hypervisor's guest kernel
+q2:
+  text: 'An image is to a container like:'
+  show: 4
+  options:
+    a: A class is to an object
+    b: A disk is to a CPU
+    c: A VM is to a host
+    d: A port is to an IP
+q3:
+  text: '`-p 8080:80` means:'
+  show: 4
+  options:
+    a: Host port 8080 goes to container port 80
+    b: Container 8080 to host 80
+    c: Two containers on 8080 and 80
+    d: Expose 80 only inside Docker
+q4:
+  text: '`docker run ubuntu` exits at once because:'
+  show: 4
+  options:
+    a: Its main process (bash) had nothing to run, and a container lives as long as its main process
+    b: Ubuntu is broken
+    c: It needs -p
+    d: Images can't run
+q5:
+  text: 'Data written inside a container without a volume:'
+  show: 4
+  options:
+    a: Disappears when the container is removed
+    b: Is saved in the image
+    c: Goes to the registry
+    d: Is copied to the host automatically
+q6:
+  text: Which kernel feature limits a container's memory?
+  show: 4
+  options:
+    a: cgroups
+    b: Namespaces
+    c: overlayfs
+    d: iptables
+q7:
+  text: 'Exit code 137 usually means:'
+  show: 4
+  options:
+    a: Killed with SIGKILL, often out of memory
+    b: Normal exit
+    c: Command not found
+    d: Port in use
+q8:
+  text: 'Ten containers from one image use the image''s layers:'
+  show: 4
+  options:
+    a: Once, shared read-only
+    b: Ten times
+    c: Not at all
+    d: Only if they're on the same network
+q9:
+  text: Which reference can never point to different content?
+  show: 4
+  options:
+    a: A digest (@sha256:...)
+    b: A tag
+    c: latest
+    d: A repository name
+q10:
+  text: '`nginx` with no registry or tag means:'
+  show: 4
+  options:
+    a: docker.io/library/nginx:latest
+    b: ghcr.io/nginx:stable
+    c: The local build
+    d: nginx:1.0
+q11:
+  text: Which instruction runs at build time and creates a layer?
+  show: 4
+  options:
+    a: RUN
+    b: CMD
+    c: ENTRYPOINT
+    d: EXPOSE
+q12:
+  text: Why use the JSON form of CMD?
+  show: 4
+  options:
+    a: So the app is PID 1 and receives docker stop's signal
+    b: It's shorter
+    c: It's required
+    d: It enables caching
+q13:
+  text: What does EXPOSE do?
+  show: 4
+  options:
+    a: Documents the port; -p actually publishes it
+    b: Publishes the port
+    c: Opens the firewall
+    d: Starts a server
+q14:
+  text: 'Main benefit of a multi-stage build:'
+  show: 4
+  options:
+    a: The final image has only the result, not the build tools
+    b: Faster networking
+    c: More layers
+    d: Root access
+q15:
+  text: 'Deleting files in a later RUN than where they were added:'
+  show: 4
+  options:
+    a: Doesn't shrink the image; they stay in the earlier layer
+    b: Shrinks the image
+    c: Breaks the build
+    d: Deletes the layer
+q16:
+  text: 'Best place for a database''s data:'
+  show: 4
+  options:
+    a: A named volume
+    b: The container's writable layer
+    c: The image
+    d: /tmp
+q17:
+  text: '`docker compose down -v` also:'
+  show: 4
+  options:
+    a: Deletes the volumes and their data
+    b: Keeps volumes
+    c: Pushes images
+    d: Deletes images
+q18:
+  text: 'On a user-defined network, containers find each other by:'
+  show: 4
+  options:
+    a: Container or service name (Docker's DNS)
+    b: Host IP only
+    c: MAC address
+    d: They can't
+q19:
+  text: 'To publish a database only to your own machine:'
+  show: 4
+  options:
+    a: -p 127.0.0.1:5432:5432
+    b: -p 5432:5432
+    c: --network host
+    d: EXPOSE 5432
+q20:
+  text: 'Inside a container, localhost means:'
+  show: 4
+  options:
+    a: That container itself
+    b: The host machine
+    c: The database container
+    d: The internet
+q21:
+  text: 'Compose services reach each other by:'
+  show: 4
+  options:
+    a: Service name
+    b: localhost
+    c: The host's IP
+    d: Container ID only
+q22:
+  text: Which file does Compose merge automatically in development?
+  show: 4
+  options:
+    a: compose.override.yaml
+    b: compose.prod.yaml
+    c: Dockerfile.dev
+    d: .dockerignore
+q23:
+  text: Where should real secrets for Compose live?
+  show: 4
+  options:
+    a: A .env file kept out of Git (with a committed .env.example)
+    b: In compose.yaml in Git
+    c: In the Dockerfile ENV
+    d: In the image
+q24:
+  text: '`docker compose run --rm api pytest` does:'
+  show: 4
+  options:
+    a: Runs tests in a throwaway container from the api service
+    b: Restarts api
+    c: Builds an image only
+    d: Deletes the database
+q25:
+  text: 'Profiles in Compose are for:'
+  show: 4
+  options:
+    a: Optional services that start only when asked
+    b: Users
+    c: Image tags
+    d: Networks
+q26:
+  text: Why never put secrets in ENV or COPY them into an image?
+  show: 4
+  options:
+    a: Anyone who pulls the image can read every layer
+    b: It's slow
+    c: Docker forbids it
+    d: Secrets expire
+q27:
+  text: --privileged does what?
+  show: 4
+  options:
+    a: Turns off nearly all container isolation
+    b: Speeds up builds
+    c: Enables logs
+    d: Adds a non-root user
+q28:
+  text: 'Exit code 127 usually means:'
+  show: 4
+  options:
+    a: The command wasn't found
+    b: Out of memory
+    c: Normal stop
+    d: Healthcheck failed
+q29:
+  text: Which restart policy suits a server?
+  show: 4
+  options:
+    a: unless-stopped
+    b: 'no'
+    c: on-failure:0
+    d: never
+q30:
+  text: Where should a containerized app write logs?
+  show: 4
+  options:
+    a: stdout and stderr
+    b: Files inside the container
+    c: The image
+    d: A volume only
+q31:
+  text: 'Best tag for an image you deploy:'
+  show: 4
+  options:
+    a: The commit SHA (or a version), never latest
+    b: latest
+    c: dev
+    d: No tag
+q32:
+  text: 'docker buildx --platform linux/amd64,linux/arm64 makes:'
+  show: 4
+  options:
+    a: One image that runs on both x86 and ARM
+    b: Two unrelated images
+    c: A VM
+    d: A faster build only
+q33:
+  text: 'Kubernetes Deployments mainly:'
+  show: 4
+  options:
+    a: Keep the number of copies you asked for running and roll out new versions
+    b: Build images
+    c: Store images
+    d: Replace Dockerfiles
+q34:
+  text: 'A Kubernetes Service gives:'
+  show: 4
+  options:
+    a: One stable name and IP in front of changing pods
+    b: A disk
+    c: A build cache
+    d: A registry
+q35:
+  text: 'For a small side project, a good place to run containers is:'
+  show: 4
+  options:
+    a: One server with Compose, or a managed service
+    b: A 50-node Kubernetes cluster
+    c: Nowhere
+    d: Inside a VM inside a VM
