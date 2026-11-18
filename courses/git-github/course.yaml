@@ -1,0 +1,228 @@
+id: git-github
+title: كورس Learn Git & GitHub - Elzero Web School
+version: '2'
+description: دورة للمبتدئين تشرح كيف تتتبع تغييرات مشاريعك بـ Git وتشاركها على GitHub، مبنية على 20 حلقة
+  من قائمة Elzero Web School. تتعلم فيها الأوامر الأساسية والفروع والـ Pull Request والـ Stash والتراجع
+  والـ Tags.
+language: ar
+modules:
+- id: m1
+  title: 'الوحدة 1: البداية مع Git وGitHub'
+  lessons:
+  - id: m1-l1
+    title: تعلم Git + GitHub درس 01# - ما هو ال Git + Github ولماذا يجب أن أتعلمهم الجزء الأول
+    file: lessons/m1-l1.md
+    media: https://www.youtube.com/watch?v=ACOiGZoqC8w
+    minutes: 15
+  - id: m1-l2
+    title: تعلم Git + GitHub درس 02# - ما هو ال Git + Github ولماذا يجب أن أتعلمهم الجزء الثاني
+    file: lessons/m1-l2.md
+    media: https://www.youtube.com/watch?v=hj0AH7HUge8
+    minutes: 15
+  - id: m1-l3
+    title: تعلم Git + GitHub درس 03# - عمل Repository ونسخه إلى منطقة العمل
+    file: lessons/m1-l3.md
+    media: https://www.youtube.com/watch?v=NZ4U9OZdtxk
+    minutes: 20
+  - id: m1-l4
+    title: تعلم Git + GitHub درس 04# - طريقة عمل Add و Reset و Commit وشرح جميل المراحل
+    file: lessons/m1-l4.md
+    media: https://www.youtube.com/watch?v=_ahnJcHuBW4
+    minutes: 20
+  requires:
+  - id: m1-r1
+    type: practical
+    prompt: أنشئ حساباً على GitHub ومستودعاً جديداً باسم my-first-repo مع ملف README. انسخه لجهازك بـ
+      git clone، ثم عدّل README بلغة Markdown وأضف ملفاً نصياً جديداً، وسجّل commitين بـ git add وgit
+      commit. نفّذ git log --oneline وصوّر الشاشة أو احفظ الناتج في ملف نصي وارفعه كدليل.
+  - id: m1-r2
+    type: explain
+    prompt: 'اشرح بكلماتك: ما المشاكل التي يحلها Git؟ وما المناطق الثلاث التي يمر بها الملف قبل أن يُحفظ
+      في commit؟'
+    min_words: 40
+  - id: m1-r3
+    type: quiz
+    prompt: 'Quiz: 5 questions, 70% to pass.'
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: العمل مع المستودع البعيد'
+  lessons:
+  - id: m2-l1
+    title: تعلم Git + GitHub درس 05# - إرسال التعديلات من Local إلى Remote بواسطة Push
+    file: lessons/m2-l1.md
+    media: https://www.youtube.com/watch?v=G_NcIuspY4E
+    minutes: 15
+  - id: m2-l2
+    title: تعلم Git + GitHub درس 06# - جلب التعديلات من Remote إلى Local بواسطة Pull
+    file: lessons/m2-l2.md
+    media: https://www.youtube.com/watch?v=VP3c8ExvOP0
+    minutes: 15
+  - id: m2-l3
+    title: تعلم Git + GitHub درس 07# - التعامل مع ال Git Configuration وتعديلها بكل الطرق
+    file: lessons/m2-l3.md
+    media: https://www.youtube.com/watch?v=NWnWIpoFVyU
+    minutes: 15
+  - id: m2-l4
+    title: تعلم Git + GitHub درس 08# - كيفية إنشاء Github Public Key وتجربة الإتصال بالموقع
+    file: lessons/m2-l4.md
+    media: https://www.youtube.com/watch?v=KhYK0cczeSY
+    minutes: 20
+  requires:
+  - id: m2-r1
+    type: practical
+    prompt: اضبط user.name وuser.email عالمياً ونفّذ git config --list. ثم أنشئ مفتاح SSH وأضف المفتاح
+      العام إلى حسابك على GitHub ونفّذ ssh -T git@github.com. بعدها عدّل ملفاً في مستودعك وسجّل commit
+      وأرسله بـ git push. ارفع لقطة شاشة لرسالة نجاح الاتصال ولنتيجة الـ push. لا تصوّر المفتاح الخاص
+      أبداً.
+  - id: m2-r2
+    type: explain
+    prompt: 'اشرح بكلماتك: ما الفرق بين push وpull؟ ولماذا نضع المفتاح العام في GitHub ونحتفظ بالخاص سراً؟'
+    min_words: 40
+  - id: m2-r3
+    type: quiz
+    prompt: 'Quiz: 5 questions, 70% to pass.'
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: المشاريع والتعاون والفروع'
+  lessons:
+  - id: m3-l1
+    title: تعلم Git + GitHub درس 09# - كيفية عمل Repo من مشروع موجود مسبقا
+    file: lessons/m3-l1.md
+    media: https://www.youtube.com/watch?v=usjh4jj7_nQ
+    minutes: 15
+  - id: m3-l2
+    title: تعلم Git + GitHub درس 10# - تعلم كل شيء عن Pull Request بأمثلة عملية من الواقع
+    file: lessons/m3-l2.md
+    media: https://www.youtube.com/watch?v=n43bagVuJPU
+    minutes: 20
+  - id: m3-l3
+    title: تعلم Git + GitHub درس 11# - تعلم كل شيء عن الأسماء المستعارة Alias لتوفير الوقت
+    file: lessons/m3-l3.md
+    media: https://www.youtube.com/watch?v=O-6YLu_VyHg
+    minutes: 12
+  - id: m3-l4
+    title: تعلم Git + GitHub درس 12# - تعلم كل شيء عن ال Branching وكيفية الدمج
+    file: lessons/m3-l4.md
+    media: https://www.youtube.com/watch?v=IamCt_2SB3A
+    minutes: 25
+  requires:
+  - id: m3-r1
+    type: practical
+    prompt: في مستودعك أنشئ فرعاً باسم feature-test وأضف فيه ملفاً وسجّل commit، ثم ارجع إلى main وادمج
+      الفرع. عرّف alias باسم st للأمر status ونفّذ git st. ارفع لقطة شاشة تظهر نتيجة الدمج ونتيجة git
+      st.
+  - id: m3-r2
+    type: explain
+    prompt: 'اشرح بكلماتك: لماذا يعمل الناس على فروع منفصلة بدل التعديل في الفرع الرئيسي مباشرة؟ وماذا
+      يحدث عند تعارض الدمج وكيف تحله؟'
+    min_words: 40
+  - id: m3-r3
+    type: quiz
+    prompt: 'Quiz: 5 questions, 70% to pass.'
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: التراجع والتنظيف'
+  lessons:
+  - id: m4-l1
+    title: تعلم Git + GitHub درس 13# - تعلم كل شيء عن ال Stash وتخزين الملفات الجزء الأول
+    file: lessons/m4-l1.md
+    media: https://www.youtube.com/watch?v=PL4vYFEiXas
+    minutes: 15
+  - id: m4-l2
+    title: تعلم Git + GitHub درس 14# - تعلم كل شيء عن ال Stash وتخزين الملفات الجزء الثاني
+    file: lessons/m4-l2.md
+    media: https://www.youtube.com/watch?v=FsiF4fpy14I
+    minutes: 15
+  - id: m4-l3
+    title: تعلم Git + GitHub درس 15# - كل شيء عن ال Restore وال Clean
+    file: lessons/m4-l3.md
+    media: https://www.youtube.com/watch?v=sHLiXwmkBik
+    minutes: 15
+  - id: m4-l4
+    title: تعلم Git + GitHub درس 16# - كيفية عمل Reset لل Head
+    file: lessons/m4-l4.md
+    media: https://www.youtube.com/watch?v=jmkY62PLBzc
+    minutes: 20
+  requires:
+  - id: m4-r1
+    type: practical
+    prompt: 'في مستودع تجريبي: عدّل ملفاً ثم جرّب git stash وgit stash list ثم git stash pop. بعدها أنشئ
+      ثلاثة commits ونفّذ git reset --soft HEAD~1 ثم git status وصوّره، ثم سجّل commit جديداً. ارفع لقطات
+      الشاشة مع ناتج git log --oneline.'
+  - id: m4-r2
+    type: explain
+    prompt: 'اشرح بكلماتك: ما الفرق بين git stash apply وgit stash pop؟ وما الفرق بين git reset --soft
+      وgit reset --hard؟'
+    min_words: 40
+  - id: m4-r3
+    type: quiz
+    prompt: 'Quiz: 5 questions, 70% to pass.'
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: تجاهل الملفات والإصدارات والخاتمة'
+  lessons:
+  - id: m5-l1
+    title: تعلم Git + GitHub درس 17# - كيفية تجاهل الملفات بواسطة gitignore
+    file: lessons/m5-l1.md
+    media: https://www.youtube.com/watch?v=L8l89nUFggU
+    minutes: 15
+  - id: m5-l2
+    title: تعلم Git + GitHub درس 18# - التعامل مع ال Tags ال Releases الجزء الأول
+    file: lessons/m5-l2.md
+    media: https://www.youtube.com/watch?v=29z-MTLpg0w
+    minutes: 15
+  - id: m5-l3
+    title: تعلم Git + GitHub درس 19# - التعامل مع ال Tags ال Releases الجزء الثاني
+    file: lessons/m5-l3.md
+    media: https://www.youtube.com/watch?v=hwui2N_DOfc
+    minutes: 15
+  - id: m5-l4
+    title: تعلم Git + GitHub درس 20# - نهاية الدورة التعليمية وبعض النصائح
+    file: lessons/m5-l4.md
+    media: https://www.youtube.com/watch?v=KnDXp2fhVlk
+    minutes: 10
+  requires:
+  - id: m5-r1
+    type: practical
+    prompt: 'في مشروعك التجريبي: أنشئ ملف .gitignore يتجاهل ملفاً باسم secret.txt ومجلداً باسم temp وكل
+      ملفات *.log. أنشئ هذه العناصر وتأكد بـ git status أنها لا تظهر. ثم ضع Tag من نوع Annotated باسم
+      v1.0.0 على آخر commit وارفعه إلى GitHub، وأنشئ منه Release. ارفع لقطة شاشة لـ git status ولصفحة
+      الـ Release.'
+  - id: m5-r2
+    type: explain
+    prompt: 'اشرح بكلماتك: لماذا نضع ملف .env في .gitignore؟ وما الفرق بين الـ Tag والـ Release؟'
+    min_words: 40
+  - id: m5-r3
+    type: quiz
+    prompt: 'Quiz: 5 questions, 70% to pass.'
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
