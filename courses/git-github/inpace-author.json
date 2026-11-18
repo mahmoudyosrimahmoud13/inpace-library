@@ -1,0 +1,10 @@
+{
+ "kind": "library-course",
+ "course": "git-github",
+ "version": "2",
+ "hash": "ff02ac819dd0f7027dd53cae802778159cecab5d6f86906cc0f9dcae3b4e694b",
+ "author": "e2a42087c64272ede145488e57c8eb8c9907392997a9cd5db57529eca12569ac",
+ "name": "Hassan",
+ "at": "2026-11-18T00:16:23Z",
+ "sig": "cb58a851008a7e4dfadeac0b59427b81477afccbc02b8bc4a29567f2bede3e7e3bde1579be0a5c5eeb2d76fa32f9d5a4e8d9d87432a9d7ade9f2d6944838cf06"
+}
