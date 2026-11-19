@@ -7,7 +7,7 @@ q1:
     c: نملأ عشوائيًا
     d: نحسب الإجابة أولًا
 q2:
-  text: 'LIS بمصفوفة tails والبحث الثنائي تعقيده:'
+  text: 'LIS بـ array tails و Binary Search تعقيده:'
   show: 4
   options:
     a: O(n log n)
@@ -75,11 +75,11 @@ q10:
   show: 4
   options:
     a: دمج عناصر متجاورة أو حذف من الطرفين
-    b: جراف كبير
+    b: graph كبير
     c: n حتى 10⁹
     d: أعداد أولية
 q11:
-  text: 'DP بالبتات مناسب عندما يكون n حوالي:'
+  text: 'Bitmask DP مناسب عندما يكون n حوالي:'
   show: 4
   options:
     a: 20 أو أقل
@@ -87,7 +87,7 @@ q11:
     c: 10⁹
     d: أي حجم
 q12:
-  text: 'TSP بالبتات تعقيده:'
+  text: 'TSP بـ Bitmasks تعقيده:'
   show: 4
   options:
     a: O(2ⁿ × n²)
@@ -106,12 +106,12 @@ q14:
   text: 'في التوزيع، الشخص الذي عليه الدور هو:'
   show: 4
   options:
-    a: عدد البتات في mask
+    a: عدد Bitmasks في mask
     b: أكبر بت
     c: أصغر بت
     d: mask نفسه
 q15:
-  text: 'المرور على كل mask وكل مجموعة جزئية منه يكلف:'
+  text: 'المرور على كل mask وكل subset منه يكلف:'
   show: 4
   options:
     a: O(3ⁿ)
@@ -143,7 +143,7 @@ q18:
     c: دائمًا
     d: لا نحتاجها أبدًا
 q19:
-  text: 'البحث الثنائي مع Digit DP يصح لأن countUpTo(X):'
+  text: 'Binary Search مع Digit DP يصح لأن countUpTo(X):'
   show: 4
   options:
     a: غير متناقصة كلما زاد X
@@ -191,7 +191,7 @@ q24:
     c: 26 × n
     d: n²
 q25:
-  text: 'في الشمول والاستبعاد، تقاطعات عدد فردي من المجموعات:'
+  text: 'في Inclusion–Exclusion، تقاطعات عدد فردي من المجموعات:'
   show: 4
   options:
     a: تُجمع، والزوجية تُطرح
@@ -207,13 +207,13 @@ q26:
     c: سالبة فقط
     d: كلها متساوية فقط
 q27:
-  text: 'الطابور في Dijkstra يعطي أولًا:'
+  text: 'الـ queue في Dijkstra يعطي أولًا:'
   show: 4
   options:
-    a: العقدة ذات أصغر مسافة حالية
+    a: الـ node ذات أصغر مسافة حالية
     b: أكبر مسافة
-    c: آخر عقدة أُضيفت
-    d: عقدة عشوائية
+    c: آخر node أُضيفت
+    d: node عشوائية
 q28:
   text: 'تعقيد Dijkstra مع priority_queue:'
   show: 4
@@ -236,15 +236,15 @@ q30:
   options:
     a: نحتاج كل الأزواج و n صغير (حتى ~500)
     b: n حتى 10⁵
-    c: الجراف شجرة
+    c: الـ graph tree
     d: لا توجد أوزان
 q31:
   text: 'ضغط المسار في DSU يعني:'
   show: 4
   options:
-    a: ربط العقد التي مررنا بها بالجذر مباشرة (أو قريبًا منه)
-    b: حذف العقد
-    c: ترتيب العقد
+    a: ربط الـ nodes التي مررنا بها بالـ root مباشرة (أو قريبًا منه)
+    b: حذف الـ nodes
+    c: ترتيب الـ nodes
     d: تكرار البحث
 q32:
   text: 'unite(a, b) يُرجع false عندما:'
@@ -255,31 +255,31 @@ q32:
     c: المجموعة فارغة
     d: دائمًا
 q33:
-  text: 'شجرة الامتداد لجراف فيه n عقدة تحتوي:'
+  text: 'tree الامتداد لـ graph فيه n node تحتوي:'
   show: 4
   options:
-    a: n − 1 حافة
-    b: n حافة
-    c: n² حافة
-    d: m حافة
+    a: n − 1 edge
+    b: n edge
+    c: n² edge
+    d: m edge
 q34:
-  text: 'Kruskal يرتب الحواف:'
+  text: 'Kruskal يرتب الـ edges:'
   show: 4
   options:
     a: حسب الوزن تصاعديًا
     b: تنازليًا
-    c: حسب أرقام العقد
+    c: حسب أرقام الـ nodes
     d: لا يرتبها
 q35:
-  text: 'إذا أخذ Kruskal أقل من n − 1 حافة:'
+  text: 'إذا أخذ Kruskal أقل من n − 1 edge:'
   show: 4
   options:
-    a: الجراف غير متصل ولا توجد شجرة امتداد
+    a: الـ graph غير متصل ولا توجد tree امتداد
     b: الإجابة صفر
     c: هناك خطأ في DSU دائمًا
     d: نعيد الترتيب
 q36:
-  text: 'شجرة المقاطع تجعل التعديل والسؤال عن جزء:'
+  text: 'Segment Tree تجعل التعديل والسؤال عن جزء:'
   show: 4
   options:
     a: O(log n) لكل منهما
@@ -311,7 +311,7 @@ q39:
     c: DSU
     d: Dijkstra
 q40:
-  text: 'حجم مصفوفة الشجرة في الشكل التكراري:'
+  text: 'حجم array الـ tree في الشكل التكراري:'
   show: 4
   options:
     a: 2n
@@ -370,7 +370,7 @@ q47:
   text: 'بعد هذا الكورس، أول موضوع مقترح:'
   show: 4
   options:
-    a: Lazy Propagation في شجرة المقاطع
+    a: Lazy Propagation في Segment Tree
     b: Flow
     c: الأساسيات من جديد
     d: لغة جديدة
@@ -383,7 +383,7 @@ q48:
     c: يوم
     d: شهرين
 q49:
-  text: 'نضيف كودًا لمكتبة الفريق:'
+  text: 'نضيف كودًا لـ Team Notebook:'
   show: 4
   options:
     a: بعد اختباره على مسألة حقيقية

@@ -222,8 +222,8 @@ courses:
     art: icpc-mansoura.svg
     rtl: true
     chip: المستوى 0 و 1 · 16 يومًا
-    title: حل المشكلات<br>بـ <span dir="ltr">C++</span>
-    sub: على خطى تدريب ICPC Mansoura، من أول برنامج حتى البرمجة الديناميكية
+    title: <span dir="ltr">Problem Solving</span><br>بـ <span dir="ltr">C++</span>
+    sub: على خطى تدريب ICPC Mansoura، من أول برنامج حتى Dynamic Programming
     tags: [20 درسًا, 78 سؤالًا]
 
   icpc-mansoura-advanced-ar:
@@ -231,6 +231,6 @@ courses:
     art: icpc-mansoura-advanced.svg
     rtl: true
     chip: المستوى 2 · 10 أيام
-    title: البرمجة<br>التنافسية المتقدمة
-    sub: برمجة ديناميكية متقدمة، أقصر المسارات، شجرة المقاطع، ونظرية الألعاب
+    title: <span dir="ltr">Advanced<br>Competitive<br>Programming</span>
+    sub: <span dir="ltr">Advanced DP, Shortest Paths, Segment Tree, Game Theory</span>
     tags: [10 دروس, 49 سؤالًا]

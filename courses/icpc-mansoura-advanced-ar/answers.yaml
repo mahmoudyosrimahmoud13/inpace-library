@@ -5,7 +5,7 @@ q1:
 q2:
   right:
   - a
-  why: لكل عنصر بحث ثنائي واحد.
+  why: لكل عنصر Binary Search واحد.
 q3:
   right:
   - a
@@ -29,7 +29,7 @@ q7:
 q8:
   right:
   - a
-  why: نحسبها بالمجموع التراكمي في O(1).
+  why: نحسبها بـ Prefix Sum في O(1).
 q9:
   right:
   - a
@@ -65,7 +65,7 @@ q16:
 q17:
   right:
   - a
-  why: مثل المجموع التراكمي.
+  why: مثل Prefix Sum.
 q18:
   right:
   - a
@@ -85,7 +85,7 @@ q21:
 q22:
   right:
   - a
-  why: النجوم والقضبان.
+  why: Stars and Bars.
 q23:
   right:
   - a
@@ -125,15 +125,15 @@ q31:
 q32:
   right:
   - a
-  why: إضافة تلك الحافة تصنع دائرة.
+  why: إضافة تلك الـ edge تصنع cycle.
 q33:
   right:
   - a
-  why: شجرة متصلة بلا دوائر.
+  why: tree متصلة بلا cycles.
 q34:
   right:
   - a
-  why: خوارزمية جشعة.
+  why: Greedy Algorithm.
 q35:
   right:
   - a
@@ -157,7 +157,7 @@ q39:
 q40:
   right:
   - a
-  why: الأوراق من n إلى 2n−1.
+  why: الـ leaves من n إلى 2n−1.
 q41:
   right:
   - a

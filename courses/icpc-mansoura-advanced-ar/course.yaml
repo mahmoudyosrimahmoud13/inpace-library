@@ -1,12 +1,12 @@
 id: icpc-mansoura-advanced-ar
-title: 'البرمجة التنافسية المتقدمة: على خطى معسكرات ICPC Mansoura (المستوى 2)'
+title: 'Advanced Competitive Programming: على خطى معسكرات ICPC Mansoura (المستوى 2)'
 version: 1
 language: ar
-description: 'الخطوة بعد كورس «حل المشكلات والبرمجة التنافسية». يسير بترتيب معسكرات ICPC Mansoura للمستوى 2: البرمجة الديناميكية
-  التكرارية بعمق (توفير الذاكرة، LIS في O(n log n)، عدّ الطرق)، DP على المدى، DP بالبتات (TSP والتوزيع)، DP على الأرقام مع
-  البحث الثنائي، العدّ والتوافيق والشمول والاستبعاد، Dijkstra و Floyd–Warshall، DSU وشجرة الامتداد الصغرى، شجرة المقاطع و
-  Fenwick، ونظرية الألعاب (Nim و Grundy)، ثم خطة تدريب للإقليمية. كل درس كامل ويعمل بدون إنترنت، وكل الأكواد مختبرة، وجلسات
-  المعسكرات الأصلية فيديوهات اختيارية. التدريب على CSES و AtCoder. حوالي 10 أيام، ساعتان يوميًا، ثم تدريب مستمر.'
+description: 'الخطوة بعد كورس «Problem Solving و Competitive Programming». يسير بترتيب معسكرات ICPC Mansoura للمستوى 2: البرمجة
+  الديناميكية التكرارية بعمق (توفير الذاكرة، LIS في O(n log n)، عدّ الطرق)، Range DP، Bitmask DP (TSP والتوزيع)، Digit DP
+  مع Binary Search، Counting and Combinatorics و Inclusion–Exclusion، Dijkstra و Floyd–Warshall، DSU و tree الامتداد الصغرى،
+  Segment Tree و Fenwick، و Game Theory (Nim و Grundy)، ثم خطة تدريب للإقليمية. كل درس كامل ويعمل بدون إنترنت، وكل الأكواد
+  مختبرة، وجلسات المعسكرات الأصلية فيديوهات اختيارية. التدريب على CSES و AtCoder. حوالي 10 أيام، ساعتان يوميًا، ثم تدريب مستمر.'
 image: cover.jpg
 downloads:
 - title: CSES Problem Set
@@ -23,21 +23,21 @@ downloads:
   url: https://codeforces.com/gyms
 modules:
 - id: m1
-  title: 'اليوم 1: البرمجة الديناميكية التكرارية، بعمق'
+  title: 'اليوم 1: Iterative DP، بعمق'
   lessons:
   - id: m1-l1
-    title: البرمجة الديناميكية التكرارية، بعمق
+    title: Iterative DP، بعمق
     file: lessons/m1-l1.md
     minutes: 35
   requires:
   - id: m1-practical
     type: practical
     prompt: 'حل من CSES: Coin Combinations I و Coin Combinations II و Grid Paths و Increasing Subsequence (بحل O(n log n)).
-      اكتب لكل مسألة الحالة والانتقال وترتيب الملء في تعليق، ووضّح في Coin Combinations لماذا يختلف ترتيب اللفتين. ارفع الأكواد
-      وصور Accepted.'
+      اكتب لكل مسألة الـ state والـ transition وترتيب الملء في تعليق، ووضّح في Coin Combinations لماذا يختلف ترتيب اللفتين.
+      ارفع الأكواد وصور Accepted.'
   - id: m1-explain
     type: explain
-    prompt: اشرح لماذا تبقى مصفوفة tails في حل LIS السريع مرتبة دائمًا، ولماذا يسمح هذا بالبحث الثنائي.
+    prompt: اشرح لماذا تبقى array tails في حل LIS السريع مرتبة دائمًا، ولماذا يسمح هذا بـ Binary Search.
     min_words: 70
   - id: m1-quiz
     type: quiz
@@ -49,16 +49,16 @@ modules:
     - q5
     pass: 70
 - id: m2
-  title: 'اليوم 2: DP على المدى'
+  title: 'اليوم 2: Range DP'
   lessons:
   - id: m2-l1
-    title: DP على المدى (Range DP)
+    title: Range DP
     file: lessons/m2-l1.md
     minutes: 35
   requires:
   - id: m2-practical
     type: practical
-    prompt: 'حل AtCoder DP Contest: L (Deque) و N (Slimes)، و CSES: Removal Game. لكل مسألة اكتب معنى dp[l][r] والانتقال،
+    prompt: 'حل AtCoder DP Contest: L (Deque) و N (Slimes)، و CSES: Removal Game. لكل مسألة اكتب معنى dp[l][r] والـ transition،
       ولماذا نملأ حسب الطول. ارفع الأكواد وصور Accepted.'
   - id: m2-explain
     type: explain
@@ -74,10 +74,10 @@ modules:
     - q10
     pass: 70
 - id: m3
-  title: 'اليوم 3: DP بالبتات'
+  title: 'اليوم 3: Bitmask DP'
   lessons:
   - id: m3-l1
-    title: DP بالبتات (Bitmask DP)
+    title: Bitmask DP
     file: lessons/m3-l1.md
     minutes: 35
   requires:
@@ -87,7 +87,7 @@ modules:
       يدويًا. ارفع الأكواد وصور Accepted والمثال اليدوي.'
   - id: m3-explain
     type: explain
-    prompt: اشرح لماذا يكفي في مسألة التوزيع أن نعرف mask فقط، دون أن نحفظ رقم الشخص الحالي في الحالة.
+    prompt: اشرح لماذا يكفي في مسألة التوزيع أن نعرف mask فقط، دون أن نحفظ رقم الشخص الحالي في الـ state.
     min_words: 70
   - id: m3-quiz
     type: quiz
@@ -99,17 +99,17 @@ modules:
     - q15
     pass: 70
 - id: m4
-  title: 'اليوم 4: DP على الأرقام والبحث الثنائي'
+  title: 'اليوم 4: Digit DP و Binary Search'
   lessons:
   - id: m4-l1
-    title: DP على الأرقام (Digit DP)، ومعها البحث الثنائي
+    title: Digit DP، ومعها Binary Search
     file: lessons/m4-l1.md
     minutes: 35
   requires:
   - id: m4-practical
     type: practical
     prompt: 'حل AtCoder DP Contest: S (Digit Sum) (هناك K يصل إلى 10000 خانة: اقرأه كنص، واجعل جدول الحفظ بحجم طوله، وخذ الإجابة
-      mod 10⁹+7) و CSES: Counting Numbers (يحتاج حالة started والرقم السابق). ثم استخدم countUpTo مع البحث الثنائي لإيجاد
+      mod 10⁹+7) و CSES: Counting Numbers (يحتاج حالة started والرقم السابق). ثم استخدم countUpTo مع Binary Search لإيجاد
       أصغر X فيه k رقمًا مجموع أرقامه يقبل القسمة على D، وتحقق من الإجابة بحل بطيء لقيم صغيرة. ارفع الأكواد والتحقق.'
   - id: m4-explain
     type: explain
@@ -125,20 +125,20 @@ modules:
     - q20
     pass: 70
 - id: m5
-  title: 'اليوم 5: العدّ والتوافيق'
+  title: 'اليوم 5: Counting and Combinatorics'
   lessons:
   - id: m5-l1
-    title: العدّ والتوافيق (Counting)
+    title: Counting and Combinatorics (Counting)
     file: lessons/m5-l1.md
     minutes: 35
   requires:
   - id: m5-practical
     type: practical
-    prompt: 'حل من CSES: Binomial Coefficients و Distributing Apples و Creating Strings II. ثم اكتب دالة الشمول والاستبعاد
+    prompt: 'حل من CSES: Binomial Coefficients و Distributing Apples و Creating Strings II. ثم اكتب دالة Inclusion–Exclusion
       وتحقق منها بحل بطيء: عدد الأرقام من 1 إلى 1000 القابلة للقسمة على 2 أو 3 أو 5 (الإجابة 734). ارفع الأكواد وصور Accepted.'
   - id: m5-explain
     type: explain
-    prompt: اشرح فكرة النجوم والقضبان، ولماذا عدد توزيع n كرة متطابقة على k صندوق هو C(n + k − 1, k − 1).
+    prompt: اشرح فكرة Stars and Bars، ولماذا عدد توزيع n كرة متطابقة على k صندوق هو C(n + k − 1, k − 1).
     min_words: 70
   - id: m5-quiz
     type: quiz
@@ -150,10 +150,10 @@ modules:
     - q25
     pass: 70
 - id: m6
-  title: 'اليوم 6: Dijkstra وأقصر المسارات'
+  title: 'اليوم 6: Dijkstra و Shortest Paths'
   lessons:
   - id: m6-l1
-    title: 'أقصر مسار: خوارزمية Dijkstra'
+    title: 'Shortest Path: خوارزمية Dijkstra'
     file: lessons/m6-l1.md
     minutes: 35
   requires:
@@ -175,10 +175,10 @@ modules:
     - q30
     pass: 70
 - id: m7
-  title: 'اليوم 7: DSU وشجرة الامتداد الصغرى'
+  title: 'اليوم 7: DSU و Minimum Spanning Tree (MST)'
   lessons:
   - id: m7-l1
-    title: DSU وشجرة الامتداد الصغرى (MST)
+    title: DSU و Minimum Spanning Tree (MST) (MST)
     file: lessons/m7-l1.md
     minutes: 35
   requires:
@@ -188,7 +188,7 @@ modules:
       Roads. ارفع الأكواد وصور Accepted.'
   - id: m7-explain
     type: explain
-    prompt: اشرح لماذا نتجاهل في Kruskal أي حافة طرفاها في نفس المجموعة، ولماذا أخذ الأخف أولًا صحيح.
+    prompt: اشرح لماذا نتجاهل في Kruskal أي edge طرفاها في نفس المجموعة، ولماذا أخذ الأخف أولًا صحيح.
     min_words: 70
   - id: m7-quiz
     type: quiz
@@ -200,20 +200,20 @@ modules:
     - q35
     pass: 70
 - id: m8
-  title: 'اليوم 8: شجرة المقاطع و Fenwick'
+  title: 'اليوم 8: Segment Tree و Fenwick'
   lessons:
   - id: m8-l1
-    title: شجرة المقاطع (Segment Tree)
+    title: Segment Tree
     file: lessons/m8-l1.md
     minutes: 40
   requires:
   - id: m8-practical
     type: practical
     prompt: 'حل من CSES: Dynamic Range Sum Queries و Dynamic Range Minimum Queries و Range Xor Queries و Hotel Queries. استخدم
-      شجرة المقاطع في واحدة و Fenwick في أخرى على الأقل. ارفع الأكواد وصور Accepted.'
+      Segment Tree في واحدة و Fenwick في أخرى على الأقل. ارفع الأكواد وصور Accepted.'
   - id: m8-explain
     type: explain
-    prompt: اشرح لماذا تحتاج شجرة المقاطع عملية تجميعية (associative)، وما قيمة المحايد لأصغر قيمة وللمجموع.
+    prompt: اشرح لماذا تحتاج Segment Tree عملية تجميعية (associative)، وما قيمة المحايد لأصغر قيمة وللمجموع.
     min_words: 70
   - id: m8-quiz
     type: quiz
@@ -225,10 +225,10 @@ modules:
     - q40
     pass: 70
 - id: m9
-  title: 'اليوم 9: نظرية الألعاب'
+  title: 'اليوم 9: Game Theory'
   lessons:
   - id: m9-l1
-    title: نظرية الألعاب (Game Theory)
+    title: Game Theory
     file: lessons/m9-l1.md
     minutes: 35
   requires:
