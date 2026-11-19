@@ -1,0 +1,173 @@
+id: computer-vision
+title: 'Computer vision: from pixels to modern models'
+version: 1
+language: en
+description: 'A short, practical tour of computer vision with tested Python and OpenCV examples: images as arrays and colour
+  spaces, convolution, blur and edges, thresholds, contours and measuring objects, keypoints, matching and RANSAC, convolutional
+  neural networks and famous architectures, transfer learning, object detection with IoU, NMS and mAP, segmentation and Segment
+  Anything, vision transformers, CLIP and vision-language models, and how to ship a vision project. Optional videos from Stanford
+  CS231n, 3Blue1Brown and Computerphile. About 5 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: OpenCV Python tutorials
+  url: https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
+- title: Stanford CS231n course notes
+  url: https://cs231n.github.io/
+- title: 'Papers with Code: computer vision'
+  url: https://paperswithcode.com/area/computer-vision
+modules:
+- id: m1
+  title: 'Day 1: pixels, colour and filters'
+  lessons:
+  - id: m1-l1
+    title: Images are arrays of numbers
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: 'Filters and convolution: blur, sharpen, edges'
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Take a photo with your phone. In Python, load it with OpenCV, print its shape, convert it to grayscale and HSV,
+      make a mask of one colour, blur it with two kernel sizes and run Canny with two pairs of thresholds. Save the outputs
+      side by side and upload them with your code and one sentence on what changed.
+  - id: m1-explain
+    type: explain
+    prompt: Explain to a friend why we usually blur an image before finding edges, and what we lose by blurring too much.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: classic vision that still earns money'
+  lessons:
+  - id: m2-l1
+    title: 'Thresholds, masks and contours: measuring objects'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'Features and matching: finding the same thing twice'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Photograph 5 to 10 coins or similar objects on a plain background with a ruler in the picture. Count them with
+      thresholding and contours, and estimate each one's diameter in millimetres using the ruler. Then match keypoints between
+      two photos of the same book cover taken from different angles and draw the inliers. Upload code, results and your measurement
+      error.
+  - id: m2-explain
+    type: explain
+    prompt: When would you choose a classic thresholding pipeline over a deep learning model for an inspection task? When
+      not?
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: convolutional neural networks'
+  lessons:
+  - id: m3-l1
+    title: Convolutional neural networks
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Famous architectures and transfer learning
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Fine-tune a small pretrained CNN (for example a ResNet-18 or MobileNet in PyTorch or Keras, on Google Colab if
+      you have no GPU) on a small dataset of 2 to 5 classes you collect or download. Report accuracy, precision and recall
+      on a held-out set, a confusion matrix, and five misclassified images with your guess at why. Upload the notebook and
+      results.
+  - id: m3-explain
+    type: explain
+    prompt: Explain residual connections and why they made very deep networks trainable.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: detection and segmentation'
+  lessons:
+  - id: m4-l1
+    title: 'Object detection: boxes, IoU and NMS'
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: 'Segmentation: labelling every pixel'
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Run a pretrained detector (for example a YOLO model through the Ultralytics package, or a torchvision detector)
+      on 20 photos of your own. Label the true boxes on 10 of them in any free labelling tool and compute precision and recall
+      at IoU 0.5 yourself with this module's `iou` function. Upload code, a few annotated images and the numbers.
+  - id: m4-explain
+    type: explain
+    prompt: Explain IoU, non-maximum suppression and mAP, and how they fit together in evaluating a detector.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: modern vision and shipping'
+  lessons:
+  - id: m5-l1
+    title: Vision transformers and CLIP
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Vision-language models and shipping a vision project
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Use a CLIP model (for example through Hugging Face transformers or open_clip, on Colab) to classify 30 of your
+      own photos into 3 to 5 classes with text prompts only. Try two wordings of the prompts and compare accuracy. Then ask
+      a vision-language model the same question about 5 of the photos and note where it's right and wrong. Upload code and
+      a results table.
+  - id: m5-explain
+    type: explain
+    prompt: A shop wants to detect empty shelves from store cameras. Describe how you'd build and evaluate it, from data to
+      monitoring.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

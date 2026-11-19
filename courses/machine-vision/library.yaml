@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- machine vision
+- computer vision
+- geometry
+- mit
+- python
+- advanced
+credit: Written for the inPace library, following the topics of MIT 6.801 Machine Vision (Fall 2020, Prof. Berthold Horn,
+  MIT OpenCourseWare). All code tested. Optional lecture videos from MIT OpenCourseWare and 3Blue1Brown, linked, not copied.

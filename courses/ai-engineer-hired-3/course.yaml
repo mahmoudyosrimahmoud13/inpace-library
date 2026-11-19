@@ -1,11 +1,11 @@
 id: ai-engineer-hired-3
 title: 'Get hired as an AI engineer 3: AI interviews, system design and a production project'
-version: 1
+version: 2
 language: en
-description: 'Prepare the rounds specific to AI roles: how LLMs work at interview depth, prompting and tools, RAG
-  and its failure modes, agents, evaluation, cost, latency and safety (OWASP''s LLM Top 10), and AI system design
-  with worked examples and estimates. Build TriageBot step by step, a support-ticket agent with tools, guardrails,
-  tracing, evals and human approval, then do a timed take-home, its defence round and a full mock loop.'
+description: 'Prepare the AI-specific rounds: the deep dive on how LLMs, reasoning and multimodal models work, prompting,
+  context engineering, RAG, agents, MCP and frameworks, evals, fine-tuning with LoRA, cost, observability and safety;
+  AI system design with real prompts; the take-home and its defence. Build TriageBot step by step: a support-ticket agent
+  with tools, guardrails, tracing, evaluations and human approval.'
 image: cover.jpg
 modules:
 - id: m1
@@ -19,16 +19,15 @@ modules:
     title: 'The big picture: how an assistant LLM is made'
     file: lessons/m1-l2.md
     minutes: 25
-    media: https://www.youtube.com/watch?v=zjkBMFhNj_g
   requires:
   - id: m1-practical
     type: practical
-    prompt: 'Write a one-page summary in your own words with a diagram: how an assistant LLM is made (pretraining,
-      fine-tuning, human feedback) and the 3 security risks from the big-picture lesson. Upload it.'
+    prompt: 'Write a one-page summary in your own words with a diagram: how an assistant LLM is made (pretraining, fine-tuning,
+      human feedback) and the 3 security risks from the big-picture lesson. Upload it.'
   - id: m1-explain
     type: explain
-    prompt: 'Interview question: "How do LLMs work?" Answer in about 200 words for an engineer who isn''t an ML
-      specialist, using the four beats.'
+    prompt: 'Interview question: "How do LLMs work?" Answer in about 200 words for an engineer who isn''t an ML specialist,
+      using the four beats.'
     min_words: 150
   - id: m1-quiz
     type: quiz
@@ -37,6 +36,7 @@ modules:
     - q2
     - q3
     - q4
+    - q41
     pass: 70
 - id: m2
   title: How LLMs work, at interview depth
@@ -45,7 +45,6 @@ modules:
     title: From tokens to text
     file: lessons/m2-l1.md
     minutes: 30
-    media: https://www.youtube.com/watch?v=eMlx5fFNoYc
   - id: m2-l2
     title: 'Inference: sampling, context and speed'
     file: lessons/m2-l2.md
@@ -54,12 +53,12 @@ modules:
   - id: m2-practical
     type: practical
     prompt: 'Run a small experiment with any model you can reach (an API or Ollama): the same 5 prompts at temperature
-      0, 0.7 and 1.2, three runs each, and count the tokens of one paragraph in English and its Arabic translation.
-      Upload a short report with your table and conclusions.'
+      0, 0.7 and 1.2, three runs each, and count the tokens of one paragraph in English and its Arabic translation. Upload
+      a short report with your table and conclusions.'
   - id: m2-explain
     type: explain
-    prompt: 'Interview question: "Explain the KV cache, and why long contexts are expensive." Then: "Your users
-      complain the bot is slow. Which numbers do you look at first?"'
+    prompt: 'Interview question: "Explain the KV cache, and why long contexts are expensive." Then: "Your users complain
+      the bot is slow. Which numbers do you look at first?"'
     min_words: 150
   - id: m2-quiz
     type: quiz
@@ -68,6 +67,42 @@ modules:
     - q6
     - q7
     - q8
+    - q42
+    pass: 70
+- id: m12
+  title: 'Modern models: reasoning, multimodal and fine-tuning'
+  lessons:
+  - id: m12-l1
+    title: Reasoning models and test-time compute
+    file: lessons/m12-l1.md
+    minutes: 25
+  - id: m12-l2
+    title: 'Multimodal models: images, documents and audio'
+    file: lessons/m12-l2.md
+    minutes: 25
+  - id: m12-l3
+    title: 'Fine-tuning in practice: LoRA, QLoRA and preference tuning'
+    file: lessons/m12-l3.md
+    minutes: 30
+  requires:
+  - id: m12-practical
+    type: practical
+    prompt: Pick one task from DocAnswer or TriageBot (for example ticket categorisation). Run it on your eval set with
+      **a normal model and a reasoning model** (or a small and a large model), and record accuracy, average latency and
+      cost per 1,000 requests in a table. Upload the table and one sentence on which you'd ship and why.
+  - id: m12-explain
+    type: explain
+    prompt: A product manager wants to fine-tune a model on the company's 2,000 help-centre articles so the chatbot "knows"
+      them. Explain what you'd recommend instead or as well, and when fine-tuning would make sense.
+    min_words: 100
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - q56
+    - q57
+    - q58
+    - q59
+    - q60
     pass: 70
 - id: m3
   title: Prompting, tools, and when to fine-tune
@@ -75,6 +110,10 @@ modules:
   - id: m3-l1
     title: Structured output and tool calling
     file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l3
+    title: Context engineering and prompt caching
+    file: lessons/m3-l3.md
     minutes: 25
   - id: m3-l2
     title: Prompting, RAG or fine-tuning?
@@ -84,8 +123,8 @@ modules:
   - id: m3-practical
     type: practical
     prompt: 'Add structured output to DocAnswer: return `{"answer": ..., "citations": [...], "confidence": "high|medium|low"}`,
-      validate it with Pydantic, retry once on failure, and log how often the first try fails over your golden set.
-      Upload the commit and the numbers.'
+      validate it with Pydantic, retry once on failure, and log how often the first try fails over your golden set. Upload
+      the commit and the numbers.'
   - id: m3-explain
     type: explain
     prompt: 'A product manager says: "Let''s fine-tune a model on our 5,000 support articles so it knows our product."
@@ -98,6 +137,7 @@ modules:
     - q10
     - q11
     - q12
+    - q43
     pass: 70
 - id: m4
   title: RAG at interview depth
@@ -113,13 +153,13 @@ modules:
   requires:
   - id: m4-practical
     type: practical
-    prompt: 'Do a real error analysis on DocAnswer: collect 30 wrong or weak answers, classify each (ingestion,
-      search, generation), fix the biggest category, and re-run your evals. Upload the classification table and
-      the before/after numbers.'
+    prompt: 'Do a real error analysis on DocAnswer: collect 30 wrong or weak answers, classify each (ingestion, search,
+      generation), fix the biggest category, and re-run your evals. Upload the classification table and the before/after
+      numbers.'
   - id: m4-explain
     type: explain
-    prompt: 'Interview: "Our RAG chatbot gives confident but wrong answers. You have one week. What do you do?"
-      Answer step by step, with what you''d measure each day.'
+    prompt: 'Interview: "Our RAG chatbot gives confident but wrong answers. You have one week. What do you do?" Answer
+      step by step, with what you''d measure each day.'
     min_words: 150
   - id: m4-quiz
     type: quiz
@@ -128,6 +168,7 @@ modules:
     - q14
     - q15
     - q16
+    - q44
     pass: 70
 - id: m5
   title: Agents, and TriageBot step 1
@@ -143,13 +184,13 @@ modules:
   requires:
   - id: m5-practical
     type: practical
-    prompt: 'Create the TriageBot repository: the design (tools, limits, policies, data) in the README with the
-      diagram, `tools.py`, the SQLite seed script with 20 customers, and 20+ help-center articles ingested with
-      your DocAnswer code. Upload the repository link.'
+    prompt: 'Create the TriageBot repository: the design (tools, limits, policies, data) in the README with the diagram,
+      `tools.py`, the SQLite seed script with 20 customers, and 20+ help-center articles ingested with your DocAnswer
+      code. Upload the repository link.'
   - id: m5-explain
     type: explain
-    prompt: 'Interview: "When is an agent the wrong solution?" Answer with two examples, and explain how TriageBot
-      keeps the agent''s freedom small.'
+    prompt: 'Interview: "When is an agent the wrong solution?" Answer with two examples, and explain how TriageBot keeps
+      the agent''s freedom small.'
     min_words: 120
   - id: m5-quiz
     type: quiz
@@ -158,6 +199,42 @@ modules:
     - q18
     - q19
     - q20
+    - q45
+    pass: 70
+- id: m11
+  title: 'Agent infrastructure: MCP, frameworks and long-running agents'
+  lessons:
+  - id: m11-l1
+    title: 'MCP: one protocol for tools and context'
+    file: lessons/m11-l1.md
+    minutes: 30
+  - id: m11-l2
+    title: 'Agent frameworks: when, and LangChain v1 in 20 lines'
+    file: lessons/m11-l2.md
+    minutes: 30
+  - id: m11-l3
+    title: Multi-agent systems and long-running agents
+    file: lessons/m11-l3.md
+    minutes: 25
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: Turn one TriageBot tool into an **MCP server** (or write a new one, for example `search_kb`), connect it
+      to your agent or to any MCP-capable app, and record a short trace of the model calling it. Upload the server code
+      and a screenshot or log of the call.
+  - id: m11-explain
+    type: explain
+    prompt: 'Your manager asks: "Should we rebuild TriageBot on a framework and split it into three agents?" Answer with
+      what you''d gain, what it would cost, and what you''d measure before deciding.'
+    min_words: 100
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q51
+    - q52
+    - q53
+    - q54
+    - q55
     pass: 70
 - id: m6
   title: Evals, and TriageBot step 2
@@ -173,12 +250,12 @@ modules:
   requires:
   - id: m6-practical
     type: practical
-    prompt: Write the 50-ticket eval set (with 10 injection tickets), the eval runner, and a no-tools baseline.
-      Upload the files and the baseline's scores.
+    prompt: Write the 50-ticket eval set (with 10 injection tickets), the eval runner, and a no-tools baseline. Upload
+      the files and the baseline's scores.
   - id: m6-explain
     type: explain
-    prompt: 'Interview: "How do you evaluate an agent?" Answer with your metrics, why each matters to the business,
-      and how you''d keep the LLM judge honest.'
+    prompt: 'Interview: "How do you evaluate an agent?" Answer with your metrics, why each matters to the business, and
+      how you''d keep the LLM judge honest.'
     min_words: 120
   - id: m6-quiz
     type: quiz
@@ -187,6 +264,7 @@ modules:
     - q22
     - q23
     - q24
+    - q46
     pass: 70
 - id: m7
   title: 'Production: cost, latency, safety, and TriageBot step 3'
@@ -199,6 +277,10 @@ modules:
     title: 'Safety: prompt injection, PII and tools'
     file: lessons/m7-l2.md
     minutes: 30
+  - id: m7-l4
+    title: 'Observability: traces, metrics and alerts'
+    file: lessons/m7-l4.md
+    minutes: 25
   - id: m7-l3
     title: 'TriageBot, step 3: the loop, guardrails and tracing'
     file: lessons/m7-l3.md
@@ -220,6 +302,7 @@ modules:
     - q26
     - q27
     - q28
+    - q47
     pass: 70
 - id: m8
   title: AI system design
@@ -243,12 +326,12 @@ modules:
   requires:
   - id: m8-practical
     type: practical
-    prompt: 'Do two practice prompts, timed, on paper or a whiteboard: one RAG design and one agent design. Upload
-      photos of your diagrams and your notes for each of the five steps, including one cost estimate.'
+    prompt: 'Do two practice prompts, timed, on paper or a whiteboard: one RAG design and one agent design. Upload photos
+      of your diagrams and your notes for each of the five steps, including one cost estimate.'
   - id: m8-explain
     type: explain
-    prompt: Write your answer to "Design ChatGPT's cross-conversation memory feature" following the five steps,
-      with at least three trade-offs and two failure modes.
+    prompt: Write your answer to "Design ChatGPT's cross-conversation memory feature" following the five steps, with
+      at least three trade-offs and two failure modes.
     min_words: 250
   - id: m8-quiz
     type: quiz
@@ -257,6 +340,7 @@ modules:
     - q30
     - q31
     - q32
+    - q48
     pass: 70
 - id: m9
   title: Ship TriageBot, and the take-home
@@ -276,12 +360,12 @@ modules:
   requires:
   - id: m9-practical
     type: practical
-    prompt: Ship TriageBot (live link, README, demo video) and do one 4-hour take-home simulation from the list.
-      Upload both links and your simulation's README, with the time you actually spent.
+    prompt: Ship TriageBot (live link, README, demo video) and do one 4-hour take-home simulation from the list. Upload
+      both links and your simulation's README, with the time you actually spent.
   - id: m9-explain
     type: explain
-    prompt: 'Record or write your defence of the take-home: the 8 questions above, answered for your submission.
-      Upload the answers here.'
+    prompt: 'Record or write your defence of the take-home: the 8 questions above, answered for your submission. Upload
+      the answers here.'
     min_words: 250
   - id: m9-quiz
     type: quiz
@@ -290,6 +374,7 @@ modules:
     - q34
     - q35
     - q36
+    - q49
     pass: 70
 - id: m10
   title: The final stretch
@@ -313,8 +398,8 @@ modules:
     prompt: Run a full mock loop (all five rounds) and upload the five feedback forms, plus your final CV.
   - id: m10-explain
     type: explain
-    prompt: 'Looking back over the three parts: what are your two strongest interview signals now, your weakest
-      one, and your plan for the next 30 days?'
+    prompt: 'Looking back over the three parts: what are your two strongest interview signals now, your weakest one,
+      and your plan for the next 30 days?'
     min_words: 120
   - id: m10-quiz
     type: quiz
@@ -323,4 +408,5 @@ modules:
     - q38
     - q39
     - q40
+    - q50
     pass: 70

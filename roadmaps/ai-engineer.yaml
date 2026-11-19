@@ -23,8 +23,17 @@ steps:
   - course: mls-1-supervised
     note: About two in three AI engineer posts also want some classic machine learning. This fills that gap.
     optional: true
+  - course: llms-essentials
+    note: "A short look inside LLMs: tokens, attention, training stages and sampling. Makes part 3's theory questions much easier."
+    optional: true
+  - course: langchain-agents
+    note: LangChain and LangGraph v1, the agent frameworks named in many posts. Build tools, middleware, memory and RAG with tested code.
+    optional: true
   - course: ai-engineer-hired-3
     note: The AI-specific rounds, AI system design, and your second project, TriageBot.
+  - course: computer-vision
+    note: For roles that work with images and documents. From filters and CNNs to detection, ViT and CLIP.
+    optional: true
   - course: system-design-beginners
     note: General system design, for interview loops that also have a classic design round.
     optional: true

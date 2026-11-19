@@ -1,0 +1,173 @@
+id: langchain-agents
+title: 'LangChain and LangGraph: build agents with v1'
+version: 1
+language: en
+description: 'A short, practical course on the current LangChain 1.x and LangGraph 1.x APIs (not the old chains): models and
+  messages, tools, create_agent, structured output, middleware for PII, budgets and human approval, your own middleware as
+  policies in code, memory with checkpointers, RAG with retrieval as a tool, custom workflows as graphs, and testing, tracing
+  and shipping. All code is tested and runs with free local models through Ollama or any hosted provider. Optional videos
+  at the end of some lessons. About 5 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: LangChain documentation (Python)
+  url: https://docs.langchain.com/oss/python/langchain/overview
+- title: LangGraph documentation
+  url: https://docs.langchain.com/oss/python/langgraph/overview
+- title: 'Ollama: run models locally'
+  url: https://ollama.com/
+- title: Building effective agents (Anthropic)
+  url: https://www.anthropic.com/engineering/building-effective-agents
+modules:
+- id: m1
+  title: 'Day 1: models, messages and tools'
+  lessons:
+  - id: m1-l1
+    title: What LangChain and LangGraph are, and your first model call
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: 'Tools: let the model ask your code to act'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install LangChain and a model provider (Ollama is free). Make one model call with a system message, then write
+      two tools of your own (for example `get_weather(city)` with fake data and `convert_currency(amount, from_code, to_code)`),
+      bind them, and print the tool calls the model asks for on three different questions. Upload your code and its output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain, as to a teammate, why a tool's docstring and type hints matter as much as its code.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: agents and structured output'
+  lessons:
+  - id: m2-l1
+    title: Your first agent with create_agent
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'Structured output: answers your code can use'
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a support agent with `create_agent` and your tools from day 1. Stream one run with `stream_mode="updates"`,
+      then add a Pydantic `response_format` with at least one `Literal` field and print `structured_response` for five different
+      messages. Upload code and output.
+  - id: m2-explain
+    type: explain
+    prompt: When would you use `ToolStrategy` and when `ProviderStrategy`? What does each guarantee?
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: middleware and human approval'
+  lessons:
+  - id: m3-l1
+    title: 'Middleware: control without rewriting the loop'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Write your own middleware
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Add three middleware to your agent: PII redaction for emails, a model-call limit, and human approval before one
+      risky tool. Show one run that pauses, then resume it once with approve and once with reject. Then write one custom `wrap_tool_call`
+      policy and a run where it blocks a call. Upload code and output.'
+  - id: m3-explain
+    type: explain
+    prompt: Why is a policy in `wrap_tool_call` safer than a rule written in the system prompt? Give an attack it stops.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: memory and RAG'
+  lessons:
+  - id: m4-l1
+    title: 'Memory: conversations that continue'
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: 'RAG: an agent that answers from your documents'
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Index at least 10 pages of real documents (a product's help pages, a policy, your notes) and build a RAG agent
+      with retrieval as a tool, citations and an 'I don't know' rule. Give it memory with a checkpointer. Write 10 questions
+      with the source that should answer each, and report how many times that source was retrieved. Upload code and your results
+      table.
+  - id: m4-explain
+    type: explain
+    prompt: Explain the difference between thread memory (checkpointer) and long-term memory (store), with one example where
+      each is the right choice.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: graphs, testing and shipping'
+  lessons:
+  - id: m5-l1
+    title: 'LangGraph: your own workflows as graphs'
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: Test, trace and ship your agent
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Build a LangGraph workflow with at least three nodes and one conditional edge (for example classify, then a fixed
+      reply or an agent). Print its Mermaid diagram. Write two tests with a fake chat model: one for a happy path and one
+      where your policy blocks a tool. Upload code, the diagram and test output.'
+  - id: m5-explain
+    type: explain
+    prompt: Your team wants to turn every feature into an open-ended agent. Argue when a fixed workflow graph is the better
+      choice.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

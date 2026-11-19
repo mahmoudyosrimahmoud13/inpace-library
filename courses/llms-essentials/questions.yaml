@@ -1,0 +1,200 @@
+q1:
+  text: 'An LLM is trained to:'
+  show: 4
+  options:
+    a: Predict the next token
+    b: Look up answers in a database
+    c: Search the web
+    d: Translate only
+q2:
+  text: 'A 300-token answer needs about:'
+  show: 4
+  options:
+    a: 300 runs of the model
+    b: 1 run
+    c: 3 runs
+    d: One run per sentence
+q3:
+  text: 'Byte-pair encoding builds its vocabulary by:'
+  show: 4
+  options:
+    a: Repeatedly merging the most frequent neighbouring pair
+    b: Using a dictionary of words
+    c: Splitting at every vowel
+    d: Random choice
+q4:
+  text: 'Prices and context limits are counted in:'
+  show: 4
+  options:
+    a: Tokens
+    b: Characters
+    c: Sentences
+    d: Pages
+q5:
+  text: 'A model can''t know last week''s news unless:'
+  show: 4
+  options:
+    a: It's given the information in the prompt or through tools
+    b: You raise the temperature
+    c: You ask politely
+    d: It's a bigger model
+q6:
+  text: 'In attention, the weights come from:'
+  show: 4
+  options:
+    a: Softmax of query-key dot products
+    b: The values only
+    c: Random numbers
+    d: Word lengths
+q7:
+  text: 'The causal mask stops a token from:'
+  show: 4
+  options:
+    a: Attending to later tokens
+    b: Attending to itself
+    c: Having an embedding
+    d: Being generated
+q8:
+  text: 'Residual connections:'
+  show: 4
+  options:
+    a: Add each layer's result to the vector instead of replacing it
+    b: Remove layers
+    c: Store the KV cache
+    d: Tokenize text
+q9:
+  text: 'Most of a large transformer''s parameters are in:'
+  show: 4
+  options:
+    a: The attention and MLP layers of its blocks
+    b: The tokenizer
+    c: The sampler
+    d: The system prompt
+q10:
+  text: 'Attention''s work grows with context length:'
+  show: 4
+  options:
+    a: Roughly with its square
+    b: Not at all
+    c: Logarithmically
+    d: Only with output length
+q11:
+  text: 'Cross-entropy loss is low when:'
+  show: 4
+  options:
+    a: The model gives the true next token a high probability
+    b: The answer is long
+    c: The temperature is high
+    d: The vocabulary is small
+q12:
+  text: 'A base model, straight after pretraining:'
+  show: 4
+  options:
+    a: Continues documents rather than following instructions
+    b: Is a polite assistant
+    c: Refuses everything
+    d: Can't produce text
+q13:
+  text: 'DPO learns from:'
+  show: 4
+  options:
+    a: Pairs of better and worse answers, without a separate reward model
+    b: Unlabelled web text
+    c: Images only
+    d: A single correct answer per prompt
+q14:
+  text: 'Reasoning models were trained with reinforcement learning on:'
+  show: 4
+  options:
+    a: Problems whose answers can be checked automatically
+    b: Random chat logs
+    c: Only human essays
+    d: Image captions
+q15:
+  text: 'Chinchilla''s finding was that many models were:'
+  show: 4
+  options:
+    a: Too big for the amount of data they were trained on
+    b: Too small
+    c: Trained on too much data
+    d: Using too few GPUs
+q16:
+  text: 'Lowering the temperature:'
+  show: 4
+  options:
+    a: Makes the most likely tokens dominate
+    b: Adds randomness
+    c: Shortens the prompt
+    d: Changes the model's weights
+q17:
+  text: 'Top-p sampling picks from:'
+  show: 4
+  options:
+    a: The smallest set of tokens whose probabilities add up to p
+    b: Exactly p tokens
+    c: Only the last token
+    d: Tokens below probability p
+q18:
+  text: 'Time to first token mostly depends on:'
+  show: 4
+  options:
+    a: Prefill, so the prompt's length
+    b: The answer's length only
+    c: The temperature
+    d: Top-k
+q19:
+  text: 'The KV cache:'
+  show: 4
+  options:
+    a: Stores earlier tokens' keys and values so decoding doesn't recompute them
+    b: Caches whole answers for users
+    c: Compresses the model
+    d: Stores embeddings for RAG
+q20:
+  text: 'Quantizing weights from 16 to 4 bits:'
+  show: 4
+  options:
+    a: Cuts memory about four times, with some quality loss to measure
+    b: Makes the model smarter
+    c: Has no trade-offs
+    d: Increases memory
+q21:
+  text: 'Chat APIs are stateless, which means:'
+  show: 4
+  options:
+    a: Each request must include the conversation so far
+    b: The provider remembers everything
+    c: You can't send history
+    d: Answers are always the same
+q22:
+  text: 'The best first fix for a wrong answer is usually:'
+  show: 4
+  options:
+    a: Check the model had the information and clear instructions
+    b: Add 'please' to the prompt
+    c: Raise the temperature
+    d: Switch to fine-tuning
+q23:
+  text: 'For knowledge that changes often, use:'
+  show: 4
+  options:
+    a: RAG
+    b: Fine-tuning
+    c: A higher temperature
+    d: A bigger tokenizer
+q24:
+  text: 'Prompt injection is:'
+  show: 4
+  options:
+    a: Instructions hidden in outside text that try to steer the model
+    b: A way to speed up inference
+    c: A tokenizer bug
+    d: A training method
+q25:
+  text: 'To know if an LLM app works, you should:'
+  show: 4
+  options:
+    a: Measure it on a set of real examples after every change
+    b: Try five questions by hand
+    c: Trust the provider's benchmark
+    d: Ask the model if it's correct

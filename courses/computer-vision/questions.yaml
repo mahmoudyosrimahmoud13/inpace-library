@@ -1,0 +1,200 @@
+q1:
+  text: 'In NumPy, a colour image from OpenCV has shape:'
+  show: 4
+  options:
+    a: (height, width, 3) in B, G, R order
+    b: (width, height, 3) in R, G, B order
+    c: (3, width, height)
+    d: (height × width,)
+q2:
+  text: 'np.uint8(250) + 10 gives:'
+  show: 4
+  options:
+    a: 4, because it wraps around
+    b: '260'
+    c: '255'
+    d: An error
+q3:
+  text: 'HSV helps colour detection because:'
+  show: 4
+  options:
+    a: Hue describes colour separately from brightness
+    b: It has more channels
+    c: It's faster to store
+    d: It removes noise
+q4:
+  text: 'A Sobel x kernel responds most to:'
+  show: 4
+  options:
+    a: Brightness changing across columns (vertical edges)
+    b: Flat areas
+    c: Blue pixels
+    d: Image size
+q5:
+  text: 'Canny''s two thresholds:'
+  show: 4
+  options:
+    a: Keep strong edges and weak edges connected to them
+    b: Set the blur size
+    c: Choose the colour space
+    d: Resize the image
+q6:
+  text: 'Otsu''s method:'
+  show: 4
+  options:
+    a: Chooses a threshold automatically from the histogram
+    b: Detects corners
+    c: Matches features
+    d: Trains a CNN
+q7:
+  text: 'Morphological opening (erode then dilate) is used to:'
+  show: 4
+  options:
+    a: Remove small specks from a mask
+    b: Fill large holes
+    c: Sharpen the image
+    d: Find colours
+q8:
+  text: 'ORB descriptors are compared with:'
+  show: 4
+  options:
+    a: Hamming distance
+    b: Euclidean distance on pixels
+    c: IoU
+    d: Cross-entropy
+q9:
+  text: 'RANSAC helps because it:'
+  show: 4
+  options:
+    a: Fits a model while ignoring outlier matches
+    b: Speeds up blurring
+    c: Labels images
+    d: Increases resolution
+q10:
+  text: 'A homography is the right model for:'
+  show: 4
+  options:
+    a: Different views of a flat object, or a rotating camera
+    b: Any 3-D scene from any viewpoint
+    c: Colour changes
+    d: Segmentation masks
+q11:
+  text: 'Weight sharing in a conv layer means:'
+  show: 4
+  options:
+    a: The same kernel is applied at every position
+    b: Every pixel has its own weights
+    c: Layers share one bias
+    d: Images share labels
+q12:
+  text: 'Pooling or stride 2:'
+  show: 4
+  options:
+    a: Shrinks feature maps and grows the receptive field
+    b: Adds colour channels
+    c: Removes the need for training
+    d: Doubles resolution
+q13:
+  text: 'ResNet''s key idea is:'
+  show: 4
+  options:
+    a: Adding the block's input to its output (residual connections)
+    b: Very large kernels
+    c: No activation functions
+    d: Training without data
+q14:
+  text: 'Transfer learning means:'
+  show: 4
+  options:
+    a: Starting from a pretrained network and fine-tuning on your data
+    b: Training from random weights
+    c: Copying another team's labels
+    d: Converting images to text
+q15:
+  text: 'With 1% defective parts, a model that always says ''OK'' has:'
+  show: 4
+  options:
+    a: 99% accuracy and zero recall for defects
+    b: 50% accuracy
+    c: Perfect precision and recall
+    d: Zero accuracy
+q16:
+  text: 'IoU of two identical boxes is:'
+  show: 4
+  options:
+    a: '1'
+    b: '0'
+    c: '0.5'
+    d: '2'
+q17:
+  text: 'Non-maximum suppression:'
+  show: 4
+  options:
+    a: Removes lower-scoring boxes that overlap a better one
+    b: Adds boxes for missed objects
+    c: Trains the backbone
+    d: Segments pixels
+q18:
+  text: 'YOLO is an example of:'
+  show: 4
+  options:
+    a: A one-stage detector
+    b: A segmentation-only model
+    c: A tokenizer
+    d: A two-stage region proposal method
+q19:
+  text: 'Instance segmentation gives:'
+  show: 4
+  options:
+    a: A separate mask for each object
+    b: One label for the whole image
+    c: Only boxes
+    d: Only depth
+q20:
+  text: 'Segment Anything (SAM) is especially useful to:'
+  show: 4
+  options:
+    a: Segment objects from a click or box without training on your classes
+    b: Count tokens
+    c: Replace cameras
+    d: Compress video
+q21:
+  text: 'A ViT treats an image as:'
+  show: 4
+  options:
+    a: A sequence of patch embeddings fed to a transformer
+    b: A single pixel
+    c: A graph of edges
+    d: A text caption
+q22:
+  text: 'CLIP was trained by:'
+  show: 4
+  options:
+    a: Matching images with their captions (contrastive learning)
+    b: Predicting pixels
+    c: Supervised labels only
+    d: Reinforcement learning
+q23:
+  text: 'Zero-shot classification with CLIP:'
+  show: 4
+  options:
+    a: Compares the image embedding with embeddings of class descriptions
+    b: Needs thousands of labels per class
+    c: Uses edge detection
+    d: Requires a GPU cluster
+q24:
+  text: 'Splitting data by camera or site (not randomly) avoids:'
+  show: 4
+  options:
+    a: An inflated test score from near-duplicate images
+    b: Overfitting the learning rate
+    c: Colour errors
+    d: Slow training
+q25:
+  text: 'Most improvement in real vision projects usually comes from:'
+  show: 4
+  options:
+    a: Better and more data on the failure cases
+    b: The newest architecture
+    c: Bigger images always
+    d: Removing validation

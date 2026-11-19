@@ -518,3 +518,133 @@ q52:
     d: To avoid practising
     e: Interviewers get paid
     f: No benefit
+q53:
+  text: Thinking out loud well includes...
+  show: 4
+  options:
+    a: A brute-force baseline with its complexity
+    b: A plan to test on an example before coding
+    c: Silence until the code is done
+    d: Starting with the hardest optimisation
+    e: Skipping clarifying questions
+    f: Declaring done without testing
+q54:
+  text: Two Sum in O(n) uses...
+  show: 4
+  options:
+    a: A hash map from value to index
+    b: A check for target minus x as you go
+    c: Sorting and nested loops
+    d: Recursion only
+    e: A heap
+    f: Binary search on an unsorted array
+q55:
+  text: A monotonic stack answers...
+  show: 4
+  options:
+    a: The next greater or smaller element
+    b: Each index pushed and popped once, so O(n)
+    c: Shortest paths
+    d: Sorting in O(1)
+    e: Counting all subsets
+    f: Binary search
+q56:
+  text: Binary search needs...
+  show: 4
+  options:
+    a: A sorted order or a monotonic yes/no condition
+    b: Careful loop bounds to avoid off-by-one errors
+    c: An unsorted list
+    d: A hash map
+    e: Recursion only
+    f: O(n²) time
+q57:
+  text: A BFS on a tree is useful for...
+  show: 4
+  options:
+    a: Level-order traversal
+    b: The shortest number of edges to a node
+    c: Sorting the tree
+    d: Deleting all nodes
+    e: Hashing
+    f: Binary search on a list
+q58:
+  text: For 'the k largest of n numbers' a good tool is...
+  show: 4
+  options:
+    a: A min-heap of size k
+    b: O(n log k) time
+    c: Sorting twice
+    d: A stack
+    e: Nested loops
+    f: A linked list
+q59:
+  text: Backtracking explores...
+  show: 4
+  options:
+    a: Choices one at a time, undoing each after trying it
+    b: All combinations or arrangements, pruning dead ends
+    c: Only the first solution, without undoing
+    d: Sorted arrays in O(log n)
+    e: Shortest paths with weights
+    f: Hash maps only
+q60:
+  text: Counting islands in a grid uses...
+  show: 4
+  options:
+    a: DFS or BFS from each unvisited land cell
+    b: A visited set or marking cells in place
+    c: Binary search
+    d: A heap
+    e: Sorting the grid
+    f: Dynamic programming only
+q61:
+  text: Dynamic programming fits when...
+  show: 4
+  options:
+    a: Subproblems overlap
+    b: The answer is built from smaller optimal answers
+    c: Every subproblem is unique
+    d: The input is a single number only
+    e: You need random results
+    f: The problem is a plain lookup
+q62:
+  text: x & (x - 1)...
+  show: 4
+  options:
+    a: Clears the lowest set bit of x
+    b: Is 0 exactly when x is a power of two (for x > 0)
+    c: Doubles x
+    d: Sets all bits
+    e: Reverses the bits
+    f: Always returns 1
+q63:
+  text: A numerically stable softmax...
+  show: 4
+  options:
+    a: Subtracts the row maximum before exp
+    b: Gives the same result as the plain formula
+    c: Adds the maximum
+    d: Uses a loop for every element
+    e: Skips the normalisation
+    f: Rounds the inputs first
+q64:
+  text: In a layered build, before a new level you should...
+  show: 4
+  options:
+    a: Refactor if the design fights the new requirement
+    b: Re-run your earlier tests
+    c: Rewrite everything from scratch
+    d: Skip tests to save time
+    e: Stay silent about trade-offs
+    f: Ignore the follow-up
+q65:
+  text: In the last two weeks, you should mostly...
+  show: 4
+  options:
+    a: Redo problems you needed help with
+    b: Practise the company's known question types
+    c: Learn brand-new topics
+    d: Stop sleeping to study
+    e: Skip mocks
+    f: Only read solutions

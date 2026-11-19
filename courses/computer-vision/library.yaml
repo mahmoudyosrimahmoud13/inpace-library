@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- computer vision
+- opencv
+- cnn
+- deep learning
+- python
+- intermediate
+credit: Written for the inPace library; all code tested with OpenCV and NumPy. Optional videos from Stanford CS231n, 3Blue1Brown,
+  Computerphile and Yannic Kilcher, linked, not copied.

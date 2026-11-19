@@ -1,0 +1,170 @@
+id: llms-essentials
+title: 'LLMs: how they work and how to use them'
+version: 1
+language: en
+description: 'A short course that opens the box on large language models, with small runnable Python examples: next-token
+  prediction, tokens and byte-pair encoding, embeddings and attention, the transformer, pretraining and scaling laws, fine-tuning,
+  RLHF, DPO and reasoning models, sampling settings, inference speed, the KV cache and context windows, and how to use LLMs
+  well with prompts, structured output, RAG, tools and evaluation. Optional videos by 3Blue1Brown and Andrej Karpathy. About
+  5 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: '3Blue1Brown: Neural networks series'
+  url: https://www.3blue1brown.com/topics/neural-networks
+- title: 'Andrej Karpathy: Neural Networks: Zero to Hero'
+  url: https://karpathy.ai/zero-to-hero.html
+- title: The Illustrated Transformer (Jay Alammar)
+  url: https://jalammar.github.io/illustrated-transformer/
+modules:
+- id: m1
+  title: 'Day 1: what an LLM is, and tokens'
+  lessons:
+  - id: m1-l1
+    title: 'What an LLM is: a next-token predictor'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: 'Tokens: how text becomes numbers'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Run the BPE example, then add three words of your own to the corpus and run 8 merges. Then paste the same 3-sentence
+      paragraph in English and in Arabic into a tokenizer viewer (for example the OpenAI tokenizer page, or your provider's
+      token counter) and record the token counts. Upload your code output and the counts.
+  - id: m1-explain
+    type: explain
+    prompt: Explain to a friend who isn't technical why a chatbot can write a fluent paragraph that is completely wrong.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: attention and the transformer'
+  lessons:
+  - id: m2-l1
+    title: Embeddings and attention
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: The transformer, end to end
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Run the attention code. Change it to use 2 heads of size 4 (split Wq, Wk, Wv into two parts, run attention on
+      each, concatenate) and check the output shape is still (4, 8). Upload the code and output, with one sentence on what
+      the causal mask does.
+  - id: m2-explain
+    type: explain
+    prompt: Explain query, key and value using an example sentence of your own, in your own words.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: how models are trained'
+  lessons:
+  - id: m3-l1
+    title: 'Pretraining: learning from the internet'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'From base model to assistant: fine-tuning, preferences and reasoning'
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Make a table of the four training stages (pretraining, SFT, preference tuning, reasoning RL) with, for each:
+      the data used, roughly how much, what it changes, and one risk. Then use one assistant model and, if you can, one base
+      model (many open models publish both) on the same three prompts, and note the differences. Upload the table and your
+      notes.'
+  - id: m3-explain
+    type: explain
+    prompt: A company wants its chatbot to 'know' its 500-page product manual. Using this module, explain why fine-tuning
+      is usually not the first answer.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: generating text fast'
+  lessons:
+  - id: m4-l1
+    title: 'Sampling: temperature, top-k and top-p'
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: 'Inference: speed, memory and context windows'
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Run the sampling code with three temperatures and top-p values of 0.5, 0.9 and 1.0. Then ask one model the same
+      creative prompt five times at temperature 0 and five times at 1, and the same extraction prompt the same way. Upload
+      a short table of what changed and which settings you'd use for each task.
+  - id: m4-explain
+    type: explain
+    prompt: Explain prefill, decode and the KV cache, and say which one a very long prompt slows down.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: using LLMs well'
+  lessons:
+  - id: m5-l1
+    title: 'Using LLMs well: APIs and prompts'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: 'Beyond the prompt: RAG, tools, evaluation and limits'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Pick a small real task (classify 20 messages, extract fields from 20 short texts). Write a prompt with role, context,
+      output format and two examples; ask for JSON and validate it in code. Measure accuracy on your 20 items, improve the
+      prompt once, and measure again. Upload the prompt, code and both scores.
+  - id: m5-explain
+    type: explain
+    prompt: Explain when you'd use RAG, when tools, and when fine-tuning, with one example of each.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

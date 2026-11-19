@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- langchain
+- langgraph
+- agents
+- llm
+- python
+- intermediate
+credit: 'Written for the inPace library against LangChain 1.x and LangGraph 1.x; all code tested. Agent patterns: Anthropic''s
+  Building effective agents. Optional videos by NeuralNine, Anthropic, IBM Technology and Lenny''s Podcast, linked, not copied.'

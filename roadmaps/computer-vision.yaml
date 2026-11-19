@@ -1,0 +1,27 @@
+id: computer-vision
+title: Computer vision engineer
+description: "Learn to make cameras useful: classic image processing, deep learning for vision, modern models like ViT and CLIP, and the geometry and physics of precise measurement."
+language: en
+author: inPace
+official: true
+order: 22
+tags: [computer vision, deep learning, machine vision, python]
+steps:
+  - course: python-full
+    note: Every course here uses Python and NumPy. Skip it if you already write Python comfortably.
+    optional: true
+  - course: computer-vision
+    note: "Start here: pixels, filters, contours, features, CNNs, detection, segmentation, ViT and CLIP, in five days."
+  - course: dl-1-neural-networks
+    note: How neural networks learn, built by hand and then with PyTorch and Keras.
+  - course: dl-2-improving-networks
+    note: Make networks train well. Regularization, optimizers and tuning.
+  - course: dl-4-cnns
+    note: Convolutional networks in depth, with hands-on training.
+  - course: dl-3-ml-projects
+    note: Short and practical. How to run a real machine learning project, from data to errors.
+  - course: machine-vision
+    note: The physics side, following MIT 6.801 topics. Camera geometry, motion, calibration, shading and subpixel measurement.
+  - course: llms-essentials
+    note: Transformers and how vision-language models build on LLMs.
+    optional: true

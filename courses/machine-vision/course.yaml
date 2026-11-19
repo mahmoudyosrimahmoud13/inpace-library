@@ -1,0 +1,171 @@
+id: machine-vision
+title: 'Machine vision: geometry, light and measurement'
+version: 1
+language: en
+description: 'A short course on the physics-based side of vision, following the topics of MIT''s 6.801 Machine Vision (Prof.
+  Berthold Horn): perspective projection, the motion field, time to contact and focus of expansion, optical flow and the aperture
+  problem, the optical mouse, vanishing points and camera calibration, absolute orientation and RANSAC, reflectance maps,
+  photometric stereo and shape from shading, subpixel edges, integral images, industrial pattern alignment and binocular stereo.
+  Every idea comes with a small tested Python example. The MIT lecture videos are linked as optional extras. About 5 days,
+  60 to 90 minutes a day; comfortable with vectors and basic calculus.'
+image: cover.jpg
+downloads:
+- title: MIT 6.801 Machine Vision on OpenCourseWare
+  url: https://ocw.mit.edu/courses/6-801-machine-vision-fall-2020/
+- title: OpenCV camera calibration tutorial
+  url: https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html
+modules:
+- id: m1
+  title: 'Day 1: image formation and the motion field'
+  lessons:
+  - id: m1-l1
+    title: 'Image formation: the pinhole camera'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: Motion field, time to contact and focus of expansion
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Measure your phone camera''s focal length in pixels: photograph an object of known width (say an A4 sheet, 210
+      mm) from a measured distance, measure its width in pixels, and compute f = pixels × distance / width. Repeat at two
+      more distances. Then film an approach toward the same object and estimate time to contact from its growing width in
+      a few frames. Upload photos, numbers and your calculations.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain why time to contact can be measured from images without knowing the distance or the speed.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: optical flow'
+  lessons:
+  - id: m2-l1
+    title: 'Optical flow: motion from brightness'
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Fixed flow, the optical mouse, and direct methods
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Record a short video of a textured object moving slowly. For a few patches (one textured, one on a straight edge,
+      one plain), compute the flow and the condition number with this module's least-squares code, and compare with OpenCV's
+      `calcOpticalFlowPyrLK` or `calcOpticalFlowFarneback`. Upload code, numbers and one paragraph on what you saw.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the aperture problem with an example, and how both Lucas-Kanade and Horn-Schunck get around it.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: calibration and orientation'
+  lessons:
+  - id: m3-l1
+    title: Vanishing points and camera calibration
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Absolute orientation and RANSAC
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Calibrate your phone or laptop camera with OpenCV: print a checkerboard, take 15 photos from varied angles, run
+      `findChessboardCorners` and `calibrateCamera`, and report fx, fy, cx, cy, the distortion coefficients and the reprojection
+      error. Compare fx with your estimate from day 1. Upload code and results.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain what RANSAC does, step by step, and why it needs only a minimal sample each time.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: light and shape'
+  lessons:
+  - id: m4-l1
+    title: Reflectance, the reflectance map and photometric stereo
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Shape from shading
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Do photometric stereo at home: in a dark room, photograph a matte object (a clay or paper shape) from a fixed
+      phone on a stand, lit by a torch from three or more known directions (measure the angles). Estimate normals with this
+      module''s code and display them as an RGB image. Upload photos, code and the normal map, with a note on where the assumptions
+      broke.'
+  - id: m4-explain
+    type: explain
+    prompt: Why does one image under one light not determine surface orientation, and what extra information do photometric
+      stereo and shape from shading each use?
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: precise edges, alignment and stereo'
+  lessons:
+  - id: m5-l1
+    title: Edges with subpixel accuracy, and fast filtering
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: 'Finding parts and measuring depth: alignment and stereo'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Measure an object''s width to subpixel accuracy: photograph a dark straight-edged object on white paper, take
+      an intensity profile across it, find both edges with the parabola method, and compare the width with a ruler measurement
+      using your calibration. Then compute depth for three disparities with your own stereo numbers (two photos taken a known
+      distance apart). Upload code and results.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain why stereo depth error grows with the square of distance, and two ways to reduce it.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Size falls as 1/Z.
+q2:
+  right:
+  - a
+  why: Unless they're parallel to the image plane.
+q3:
+  right:
+  - a
+  why: Then 1/Z is nearly constant.
+q4:
+  right:
+  - a
+  why: Flow vectors point away from it.
+q5:
+  right:
+  - a
+  why: T = s / (ds/dt).
+q6:
+  right:
+  - a
+  why: Ex·u + Ey·v + Et = 0.
+q7:
+  right:
+  - a
+  why: Motion along an edge leaves the image unchanged.
+q8:
+  right:
+  - a
+  why: The 2×2 system is nearly singular.
+q9:
+  right:
+  - a
+  why: No brightness pattern, no flow.
+q10:
+  right:
+  - a
+  why: Start on shrunk images, refine at full size.
+q11:
+  right:
+  - a
+  why: Position and rotation are extrinsic.
+q12:
+  right:
+  - a
+  why: v ∼ K R d.
+q13:
+  right:
+  - a
+  why: Distance between detected and predicted corners.
+q14:
+  right:
+  - a
+  why: Horn's closed form, or the SVD method.
+q15:
+  right:
+  - a
+  why: Squared errors give outliers huge weight.
+q16:
+  right:
+  - a
+  why: E = ρ·max(0, n·s).
+q17:
+  right:
+  - a
+  why: For a given light and material.
+q18:
+  right:
+  - a
+  why: Three equations per pixel.
+q19:
+  right:
+  - a
+  why: Their orientations are known.
+q20:
+  right:
+  - a
+  why: A classic shading ambiguity.
+q21:
+  right:
+  - a
+  why: Subpixel peak finding.
+q22:
+  right:
+  - a
+  why: Independent of box size.
+q23:
+  right:
+  - a
+  why: Brightness changes; geometry doesn't.
+q24:
+  right:
+  - a
+  why: Focal length times baseline over disparity.
+q25:
+  right:
+  - a
+  why: Matches lie on the same row.

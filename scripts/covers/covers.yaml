@@ -234,3 +234,35 @@ courses:
     title: <span dir="ltr">Advanced<br>Competitive<br>Programming</span>
     sub: <span dir="ltr">Advanced DP, Shortest Paths, Segment Tree, Game Theory</span>
     tags: [10 دروس, 49 سؤالًا]
+
+  llms-essentials:
+    theme: sky
+    art: llms-essentials.svg
+    chip: AI · 5 days
+    title: How LLMs<br>really work
+    sub: Tokens, attention, training stages, sampling and using them well
+    tags: [10 lessons, 25 quiz questions]
+
+  langchain-agents:
+    theme: forest
+    art: langchain-agents.svg
+    chip: AI · 5 days
+    title: Agents with<br>LangChain v1
+    sub: Tools, middleware, human approval, memory, RAG and LangGraph
+    tags: [10 lessons, 25 quiz questions]
+
+  computer-vision:
+    theme: coral
+    art: computer-vision.svg
+    chip: AI · 5 days
+    title: Computer<br>vision
+    sub: From pixels and filters to CNNs, detection, ViT and CLIP
+    tags: [10 lessons, 25 quiz questions]
+
+  machine-vision:
+    theme: navy
+    art: machine-vision.svg
+    chip: MIT 6.801 topics · 5 days
+    title: Machine<br>vision
+    sub: Geometry, light and measurement, the physics behind cameras
+    tags: [10 lessons, 25 quiz questions]

@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- llm
+- transformers
+- ai
+- python
+- beginner
+credit: Written for the inPace library; all code tested. Optional videos by 3Blue1Brown and Andrej Karpathy, linked, not copied.

@@ -358,3 +358,93 @@ q36:
     d: Did I pass?
     e: What does your company do?
     f: No questions
+q37:
+  text: In the 895-post study, agents appeared in...
+  show: 4
+  options:
+    a: About a third of AI-first roles
+    b: 14.4% of all posts
+    c: 90% of all posts
+    d: No posts at all
+    e: Only research roles
+    f: Only Java roles
+q38:
+  text: In an AI-allowed coding round, you score by...
+  show: 4
+  options:
+    a: Planning first and reading every line the tool writes
+    b: Testing the output and catching its mistakes
+    c: Pasting the full solution quickly
+    d: Staying silent while the tool works
+    e: Using AI in a no-AI round
+    f: Never testing
+q39:
+  text: A good first commit includes...
+  show: 4
+  options:
+    a: A .gitignore that excludes .env and the virtual environment
+    b: A .env.example with fake values
+    c: Your real API key
+    d: The .venv folder
+    e: No README
+    f: Large binary data files
+q40:
+  text: Hybrid search combines...
+  show: 4
+  options:
+    a: Keyword search for exact terms and ids
+    b: Vector search for meaning
+    c: Two copies of the same index
+    d: Only a reranker
+    e: Fine-tuning and prompting
+    f: Two LLMs
+q41:
+  text: Before trusting an LLM judge you should...
+  show: 4
+  options:
+    a: Grade a sample yourself and measure agreement
+    b: Make the judge stricter if agreement is low
+    c: Trust it because it's a big model
+    d: Skip human labels
+    e: Use it only on training data
+    f: Ask it to grade itself
+q42:
+  text: A README that reviewers like has...
+  show: 4
+  options:
+    a: How to run it in one or two commands
+    b: The evaluation results table
+    c: No diagram
+    d: Only the licence
+    e: Your API key for convenience
+    f: A wall of unformatted text
+q43:
+  text: A strong build-in-public post has...
+  show: 4
+  options:
+    a: One lesson learned and one number
+    b: A link to the code or demo
+    c: Only hashtags
+    d: A request for a job in the first line
+    e: No details
+    f: A copy of your CV
+q44:
+  text: When reading a posting, you should...
+  show: 4
+  options:
+    a: Separate the 3 to 5 must-haves from the wish list
+    b: Pick the project and number that fit it best
+    c: Skip it if you miss any listed skill
+    d: Apply without reading
+    e: Send the same CV everywhere
+    f: Ignore the kind of role
+q45:
+  text: On an offer call, a good negotiation...
+  show: 4
+  options:
+    a: Gives a researched number and a reason
+    b: Asks about other items if salary can't move
+    c: Invents a competing offer
+    d: Accepts or rejects instantly
+    e: Is aggressive
+    f: Never asks anything

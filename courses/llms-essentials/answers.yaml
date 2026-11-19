@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Everything else builds on next-token prediction.
+q2:
+  right:
+  - a
+  why: Generation adds one token per step.
+q3:
+  right:
+  - a
+  why: Frequent pieces become single tokens.
+q4:
+  right:
+  - a
+  why: Measure with a token counter.
+q5:
+  right:
+  - a
+  why: Knowledge stops at the training cutoff.
+q6:
+  right:
+  - a
+  why: Scores, then softmax, then a weighted average of values.
+q7:
+  right:
+  - a
+  why: No peeking at the answer during training.
+q8:
+  right:
+  - a
+  why: They keep information flowing through many layers.
+q9:
+  right:
+  - a
+  why: About 12 × layers × d².
+q10:
+  right:
+  - a
+  why: Every token attends to every earlier token.
+q11:
+  right:
+  - a
+  why: It's minus the log of the true token's probability.
+q12:
+  right:
+  - a
+  why: SFT teaches the assistant format.
+q13:
+  right:
+  - a
+  why: Direct preference optimization.
+q14:
+  right:
+  - a
+  why: Maths answers and code tests give verifiable rewards.
+q15:
+  right:
+  - a
+  why: Roughly 20 tokens per parameter for compute-optimal training.
+q16:
+  right:
+  - a
+  why: Logits are divided by the temperature.
+q17:
+  right:
+  - a
+  why: Nucleus sampling adapts to the model's certainty.
+q18:
+  right:
+  - a
+  why: The whole prompt is processed before the first token.
+q19:
+  right:
+  - a
+  why: Fast decoding, at a memory cost.
+q20:
+  right:
+  - a
+  why: That's how big models run on laptops.
+q21:
+  right:
+  - a
+  why: Your app builds memory by resending history.
+q22:
+  right:
+  - a
+  why: Clear beats clever.
+q23:
+  right:
+  - a
+  why: Documents stay editable and citable.
+q24:
+  right:
+  - a
+  why: Treat outside text as data and limit permissions.
+q25:
+  right:
+  - a
+  why: Evaluation turns guesses into numbers.

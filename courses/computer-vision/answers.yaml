@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Rows first, and OpenCV uses BGR.
+q2:
+  right:
+  - a
+  why: Convert to float before arithmetic.
+q3:
+  right:
+  - a
+  why: Lighting mainly changes value, not hue.
+q4:
+  right:
+  - a
+  why: It's a horizontal derivative.
+q5:
+  right:
+  - a
+  why: Hysteresis thresholding.
+q6:
+  right:
+  - a
+  why: Best when there are two clear peaks.
+q7:
+  right:
+  - a
+  why: Specks vanish on erosion and don't come back.
+q8:
+  right:
+  - a
+  why: They're binary strings.
+q9:
+  right:
+  - a
+  why: Random samples, consensus of inliers.
+q10:
+  right:
+  - a
+  why: It maps plane to plane.
+q11:
+  right:
+  - a
+  why: Far fewer parameters, and patterns are found anywhere.
+q12:
+  right:
+  - a
+  why: Later layers see larger areas.
+q13:
+  right:
+  - a
+  why: Shortcuts keep gradients flowing.
+q14:
+  right:
+  - a
+  why: Almost always better with small datasets.
+q15:
+  right:
+  - a
+  why: Use precision and recall for rare classes.
+q16:
+  right:
+  - a
+  why: Intersection equals union.
+q17:
+  right:
+  - a
+  why: One box per object.
+q18:
+  right:
+  - a
+  why: Boxes and classes in one pass.
+q19:
+  right:
+  - a
+  why: Car 1, car 2, car 3.
+q20:
+  right:
+  - a
+  why: Great for labelling and interactive apps.
+q21:
+  right:
+  - a
+  why: Patches are its tokens.
+q22:
+  right:
+  - a
+  why: 400 million image-text pairs.
+q23:
+  right:
+  - a
+  why: Pick the closest text.
+q24:
+  right:
+  - a
+  why: Test like production.
+q25:
+  right:
+  - a
+  why: Data beats architecture.

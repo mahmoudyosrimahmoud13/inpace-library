@@ -1,0 +1,16 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="22" text-anchor="middle">
+<rect x="30" y="70" width="110" height="52" rx="10" fill="#fdf6e9"/><text x="85" y="104" fill="#1f3d36">The</text>
+<rect x="150" y="70" width="140" height="52" rx="10" fill="#fdf6e9"/><text x="220" y="104" fill="#1f3d36">capital</text>
+<rect x="300" y="70" width="80" height="52" rx="10" fill="#fdf6e9"/><text x="340" y="104" fill="#1f3d36">of</text>
+<rect x="390" y="70" width="100" height="52" rx="10" fill="#fdf6e9"/><text x="440" y="104" fill="#1f3d36">Egypt</text></g>
+<g stroke="#2b6cb0" stroke-width="3" fill="none" opacity=".7">
+<path d="M85 122 Q260 230 440 300"/><path d="M220 122 Q330 220 440 300"/><path d="M340 122 Q400 210 440 300"/><path d="M440 122 L440 300"/></g>
+<g filter="url(#s)"><rect x="60" y="300" width="400" height="200" rx="14" fill="#fdf6e9"/></g>
+<g font-family="JBM" font-weight="700" font-size="22" fill="#1f3d36">
+<text x="84" y="350"> is</text><rect x="200" y="333" width="230" height="22" rx="4" fill="#9ee6b8"/>
+<text x="84" y="400"> Cairo</text><rect x="200" y="383" width="140" height="22" rx="4" fill="#7fd3ff"/>
+<text x="84" y="450"> was</text><rect x="200" y="433" width="40" height="22" rx="4" fill="#ff8fab"/></g>
+<text x="260" y="540" font-family="JBM" font-weight="700" font-size="22" fill="#1f3d36" text-anchor="middle">P(next token)</text>
+</svg>

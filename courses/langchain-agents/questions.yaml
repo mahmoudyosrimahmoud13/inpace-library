@@ -1,0 +1,200 @@
+q1:
+  text: 'In LangChain v1, older classes such as LLMChain live in:'
+  show: 4
+  options:
+    a: The separate langchain-classic package
+    b: langchain.agents
+    c: langgraph.prebuilt
+    d: They were renamed create_agent
+q2:
+  text: '`init_chat_model("ollama:qwen3")` means:'
+  show: 4
+  options:
+    a: Provider ollama, model qwen3
+    b: Model ollama, version qwen3
+    c: A cloud-only model
+    d: An embedding model
+q3:
+  text: When a model 'calls a tool', what actually runs the function?
+  show: 4
+  options:
+    a: Your program
+    b: The model's servers
+    c: LangSmith
+    d: The vector store
+q4:
+  text: 'The @tool decorator turns the docstring into:'
+  show: 4
+  options:
+    a: The tool's description the model reads
+    b: A unit test
+    c: A log message
+    d: The return value
+q5:
+  text: 'A good tool usually:'
+  show: 4
+  options:
+    a: Has one clear job and returns short, useful text
+    b: Does many jobs to save calls
+    c: Raises exceptions on bad input so the model stops
+    d: Returns the full database
+q6:
+  text: 'An agent loop stops when:'
+  show: 4
+  options:
+    a: The model answers without asking for a tool (or a limit is hit)
+    b: After exactly one tool call
+    c: When the vector store is empty
+    d: Never
+q7:
+  text: '`agent.invoke(...)` returns:'
+  show: 4
+  options:
+    a: The agent state, with the full messages list
+    b: Only the final string
+    c: A tool object
+    d: A model file
+q8:
+  text: 'To show progress while the agent works you use:'
+  show: 4
+  options:
+    a: agent.stream(...)
+    b: agent.compile()
+    c: time.sleep
+    d: bind_tools
+q9:
+  text: 'With response_format=ToolStrategy(Triage), the parsed object is in:'
+  show: 4
+  options:
+    a: result['structured_response']
+    b: result['messages'][0]
+    c: result['tools']
+    d: the system prompt
+q10:
+  text: 'For a field you route on, the best type is:'
+  show: 4
+  options:
+    a: A Literal with the allowed values
+    b: Free text
+    c: A float
+    d: A nested dict
+q11:
+  text: 'Human approval in LangChain v1 is added with:'
+  show: 4
+  options:
+    a: HumanInTheLoopMiddleware
+    b: SummarizationMiddleware
+    c: PIIMiddleware
+    d: InMemoryVectorStore
+q12:
+  text: 'Pausing for approval needs:'
+  show: 4
+  options:
+    a: A checkpointer and a thread_id
+    b: A GPU
+    c: A vector store
+    d: Streaming
+q13:
+  text: 'You resume a paused run with:'
+  show: 4
+  options:
+    a: Command(resume={...}) and the same thread_id
+    b: A new thread_id
+    c: agent.compile()
+    d: Restarting Python
+q14:
+  text: 'A wrap_tool_call middleware can:'
+  show: 4
+  options:
+    a: Block, change or time a tool call before it runs
+    b: Only log after the run ends
+    c: Train the model
+    d: Change the tokenizer
+q15:
+  text: 'ModelCallLimitMiddleware protects against:'
+  show: 4
+  options:
+    a: Runaway loops that burn money
+    b: Prompt caching
+    c: Slow embeddings
+    d: Typos in docstrings
+q16:
+  text: 'Calls with the same thread_id and a checkpointer:'
+  show: 4
+  options:
+    a: Continue the same conversation
+    b: Start fresh each time
+    c: Share memory with all users
+    d: Disable tools
+q17:
+  text: 'InMemorySaver is best for:'
+  show: 4
+  options:
+    a: Learning and tests
+    b: Production with many servers
+    c: Long-term memory across years
+    d: Storing embeddings
+q18:
+  text: 'Making retrieval a tool lets the agent:'
+  show: 4
+  options:
+    a: Decide when to search and search again with better words
+    b: Skip embeddings
+    c: Avoid citing
+    d: Train on the documents
+q19:
+  text: 'response_format=''content_and_artifact'' on a tool:'
+  show: 4
+  options:
+    a: Sends text to the model and keeps raw documents for your app
+    b: Hides results from the model
+    c: Streams tokens
+    d: Encrypts the tool
+q20:
+  text: 'The first metric to check in a RAG system is:'
+  show: 4
+  options:
+    a: Whether the right source is retrieved (hit rate)
+    b: The answer's length
+    c: The model's temperature
+    d: The number of tools
+q21:
+  text: 'In LangGraph, a node returns:'
+  show: 4
+  options:
+    a: The state fields it changes
+    b: A new graph
+    c: Only a string
+    d: Nothing ever
+q22:
+  text: 'Conditional edges choose the next node using:'
+  show: 4
+  options:
+    a: A function that reads the state
+    b: Random choice
+    c: The model always
+    d: Alphabetical order
+q23:
+  text: 'Compared with open-ended agents, fixed workflows are usually:'
+  show: 4
+  options:
+    a: Cheaper, faster and easier to test
+    b: Always more accurate on everything
+    c: Unable to call models
+    d: Impossible to pause
+q24:
+  text: 'A fake chat model in tests lets you:'
+  show: 4
+  options:
+    a: Test graphs, middleware and policies without a paid API
+    b: Measure real answer quality
+    c: Train the model
+    d: Skip writing tests
+q25:
+  text: 'Before launch, an agent should have:'
+  show: 4
+  options:
+    a: Budgets, approval for risky tools, tracing and an eval set in CI
+    b: Only a demo video
+    c: No limits so it can finish
+    d: InMemorySaver in production

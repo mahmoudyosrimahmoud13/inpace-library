@@ -258,3 +258,68 @@ q52:
   - a
   - b
   why: Watching others makes your own gaps obvious.
+q53:
+  right:
+  - a
+  - b
+  why: It shows communication, problem solving and testing at once.
+q54:
+  right:
+  - a
+  - b
+  why: Each lookup is O(1) on average.
+q55:
+  right:
+  - a
+  - b
+  why: Pop everything the new value beats.
+q56:
+  right:
+  - a
+  - b
+  why: It works on any condition that flips once from false to true.
+q57:
+  right:
+  - a
+  - b
+  why: BFS visits nodes level by level with a queue.
+q58:
+  right:
+  - a
+  - b
+  why: Keep only k items; pop the smallest when it grows past k.
+q59:
+  right:
+  - a
+  - b
+  why: Choose, explore, un-choose.
+q60:
+  right:
+  - a
+  - b
+  why: Each flood fill covers one island.
+q61:
+  right:
+  - a
+  - b
+  why: Memoise or fill a table to avoid repeated work.
+q62:
+  right:
+  - a
+  - b
+  why: A classic trick for counting bits and power-of-two checks.
+q63:
+  right:
+  - a
+  - b
+  why: exp of large numbers overflows; shifting doesn't change the ratios.
+q64:
+  right:
+  - a
+  - b
+  why: Rigid code that breaks on the follow-up is the most common mistake.
+q65:
+  right:
+  - a
+  - b
+  why: Fluency on known patterns adds more than new problems.

@@ -198,3 +198,103 @@ q40:
   - a
   - b
   why: Optional lessons are extras; the required ones complete the module.
+q41:
+  right:
+  - a
+  - b
+  why: Mechanism, trade-off and experience show real understanding.
+q42:
+  right:
+  - a
+  - b
+  why: Prefill processes the prompt before the first token; decode then produces tokens one by one.
+q43:
+  right:
+  - a
+  - b
+  why: Caches match an identical prefix; one early change breaks everything after it.
+q44:
+  right:
+  - a
+  - b
+  why: Reranking reorders candidates; it can't fix missing or broken content.
+q45:
+  right:
+  - a
+  - b
+  why: 'Memory is data: choose what''s kept, retrieve what''s relevant, respect privacy.'
+q46:
+  right:
+  - a
+  - b
+  why: A judge needs its own evaluation before you rely on it.
+q47:
+  right:
+  - a
+  - b
+  why: Remove one leg (often the outbound channel) when the task doesn't need it.
+q48:
+  right:
+  - a
+  - b
+  why: 70 × 10⁹ parameters × 2 bytes ≈ 140 GB, plus cache per token.
+q49:
+  right:
+  - a
+  - b
+  why: Evals, clear decisions and honest limits are what the field guide's reviewers praise.
+q50:
+  right:
+  - a
+  - b
+  why: Interviewers will ask how you measured every number you list.
+q51:
+  right:
+  - a
+  - b
+  why: A server is written once; any MCP client can use it. The model still sees tools as function calls.
+q52:
+  right:
+  - a
+  - b
+  why: Tools are model-controlled actions; resources are app-controlled context; prompts are user-chosen templates.
+q53:
+  right:
+  - a
+  - b
+  why: Frameworks save plumbing work; they don't replace understanding or evaluation.
+q54:
+  right:
+  - a
+  - b
+  why: v1 centres on create_agent with middleware; the old chains moved to langchain-classic.
+q55:
+  right:
+  - a
+  - b
+  why: Durable state, budgets and idempotent tools make long jobs safe to resume.
+q56:
+  right:
+  - a
+  - b
+  why: Reasoning models scale thinking at inference, not only model size in training.
+q57:
+  right:
+  - a
+  - b
+  why: Thinking tokens cost money and time; easy tasks rarely gain.
+q58:
+  right:
+  - a
+  - b
+  why: A ViT-style encoder plus a projector turns patches into tokens; more pixels, more tokens.
+q59:
+  right:
+  - a
+  - b
+  why: Low rank means few parameters; zero init starts training from the original model.
+q60:
+  right:
+  - a
+  - b
+  why: Fine-tuning teaches how, RAG supplies what; measure against a baseline.

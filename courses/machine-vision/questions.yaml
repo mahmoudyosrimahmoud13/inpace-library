@@ -1,0 +1,200 @@
+q1:
+  text: 'Under perspective projection x = f·X/Z, doubling the distance Z:'
+  show: 4
+  options:
+    a: Halves the image size
+    b: Doubles it
+    c: Leaves it unchanged
+    d: Quarters it
+q2:
+  text: 'Parallel lines in the world appear in the image to:'
+  show: 4
+  options:
+    a: Meet at a vanishing point
+    b: Stay parallel always
+    c: Disappear
+    d: Bend into circles
+q3:
+  text: 'Orthographic projection is a good approximation when:'
+  show: 4
+  options:
+    a: Depth variation is small compared with distance
+    b: The object is very close
+    c: The lens is wide-angle
+    d: There's motion
+q4:
+  text: 'The focus of expansion is:'
+  show: 4
+  options:
+    a: The image point the camera is heading towards
+    b: The brightest pixel
+    c: The image centre always
+    d: The principal point
+q5:
+  text: 'Time to contact can be computed as:'
+  show: 4
+  options:
+    a: Image size divided by its rate of growth
+    b: Distance times speed
+    c: Focal length over baseline
+    d: Brightness over gradient
+q6:
+  text: 'The brightness constancy constraint gives at each pixel:'
+  show: 4
+  options:
+    a: One equation in two unknowns
+    b: Two equations in two unknowns
+    c: No equations
+    d: The depth directly
+q7:
+  text: 'The aperture problem means a straight edge only reveals:'
+  show: 4
+  options:
+    a: Motion perpendicular to the edge
+    b: Motion along the edge
+    c: Its colour
+    d: Its depth
+q8:
+  text: 'A huge condition number for a patch means:'
+  show: 4
+  options:
+    a: The flow estimate is unreliable there
+    b: The patch is very textured
+    c: The motion is large
+    d: The image is colour
+q9:
+  text: 'An optical mouse fails on clear glass because:'
+  show: 4
+  options:
+    a: There's no texture, so no gradients to measure flow
+    b: Glass is too cold
+    c: The LED is too bright
+    d: The mouse moves too slowly
+q10:
+  text: 'Coarse-to-fine estimation is used to:'
+  show: 4
+  options:
+    a: Handle motions too large for the small-motion assumption
+    b: Increase colour accuracy
+    c: Calibrate the camera
+    d: Remove shadows
+q11:
+  text: 'Intrinsic camera parameters include:'
+  show: 4
+  options:
+    a: Focal length in pixels and the principal point
+    b: The camera's position in the room
+    c: The scene's lighting
+    d: The object's albedo
+q12:
+  text: 'A vanishing point depends on:'
+  show: 4
+  options:
+    a: The lines' 3-D direction and the camera's intrinsics
+    b: Where the lines are in the scene
+    c: The lines' colour
+    d: The exposure time
+q13:
+  text: 'Calibration quality is usually reported as:'
+  show: 4
+  options:
+    a: Reprojection error in pixels
+    b: Accuracy in percent
+    c: Frames per second
+    d: IoU
+q14:
+  text: 'Absolute orientation finds:'
+  show: 4
+  options:
+    a: The rotation and translation between two sets of matched 3-D points
+    b: The focal length
+    c: Optical flow
+    d: Edge positions
+q15:
+  text: 'Plain least squares fails with outliers because:'
+  show: 4
+  options:
+    a: A few bad points can pull the whole fit away
+    b: It's too slow
+    c: It needs colour images
+    d: It ignores inliers
+q16:
+  text: 'A Lambertian surface''s brightness depends on:'
+  show: 4
+  options:
+    a: The angle between its normal and the light direction
+    b: The viewing direction
+    c: Its distance from the camera only
+    d: Its colour name
+q17:
+  text: 'The reflectance map R(p, q) gives:'
+  show: 4
+  options:
+    a: Brightness as a function of surface orientation
+    b: Depth for every pixel
+    c: The camera's focal length
+    d: Optical flow
+q18:
+  text: 'Photometric stereo needs at least:'
+  show: 4
+  options:
+    a: Three images under known, different light directions
+    b: Two cameras
+    c: One image
+    d: A moving object
+q19:
+  text: 'In shape from shading, starting points can come from:'
+  show: 4
+  options:
+    a: Occluding boundaries and the brightest points
+    b: Random pixels
+    c: The image corners
+    d: The histogram
+q20:
+  text: 'A convex bump lit from above can look like:'
+  show: 4
+  options:
+    a: A concave dent lit from below
+    b: A flat surface always
+    c: A shadow-free sphere
+    d: A vanishing point
+q21:
+  text: 'Fitting a parabola to the gradient peak gives:'
+  show: 4
+  options:
+    a: The edge position to a fraction of a pixel
+    b: The edge's colour
+    c: The camera's focal length
+    d: A blurred image
+q22:
+  text: 'With an integral image, any rectangle''s sum costs:'
+  show: 4
+  options:
+    a: Four lookups
+    b: One addition per pixel in the box
+    c: A full convolution
+    d: A sort
+q23:
+  text: 'Industrial alignment tools compare edges rather than raw pixels because:'
+  show: 4
+  options:
+    a: Edges are robust to lighting and contrast changes
+    b: Edges use less memory always
+    c: Pixels can't be compared
+    d: Edges are coloured
+q24:
+  text: 'Stereo depth is:'
+  show: 4
+  options:
+    a: Z = f·B / d
+    b: Z = d / f
+    c: Z = f + B + d
+    d: Z = B·d
+q25:
+  text: 'Rectification makes stereo matching:'
+  show: 4
+  options:
+    a: A 1-D search along image rows
+    b: Unnecessary
+    c: A 3-D search
+    d: Independent of calibration

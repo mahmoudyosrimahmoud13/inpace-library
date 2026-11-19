@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: v1 moved legacy chains out of the main package.
+q2:
+  right:
+  - a
+  why: The string is provider:model.
+q3:
+  right:
+  - a
+  why: The model only returns a name and arguments.
+q4:
+  right:
+  - a
+  why: So write it like a prompt.
+q5:
+  right:
+  - a
+  why: Clear jobs and readable errors help the model.
+q6:
+  right:
+  - a
+  why: Model, tools, repeat, until a plain answer.
+q7:
+  right:
+  - a
+  why: Look in result['messages'] and other state keys.
+q8:
+  right:
+  - a
+  why: Updates arrive as each step finishes.
+q9:
+  right:
+  - a
+  why: A validated Pydantic object.
+q10:
+  right:
+  - a
+  why: Enums can be routed reliably.
+q11:
+  right:
+  - a
+  why: It pauses before chosen tools.
+q12:
+  right:
+  - a
+  why: The state must be saved to resume later.
+q13:
+  right:
+  - a
+  why: The decision goes back into the saved thread.
+q14:
+  right:
+  - a
+  why: It wraps each tool call.
+q15:
+  right:
+  - a
+  why: Budgets in code, not in prompts.
+q16:
+  right:
+  - a
+  why: The checkpointer adds the saved history.
+q17:
+  right:
+  - a
+  why: Use a database-backed saver in production.
+q18:
+  right:
+  - a
+  why: Agentic retrieval is flexible.
+q19:
+  right:
+  - a
+  why: The documents are on ToolMessage.artifact.
+q20:
+  right:
+  - a
+  why: Generation can't fix missing context.
+q21:
+  right:
+  - a
+  why: LangGraph merges the update into the state.
+q22:
+  right:
+  - a
+  why: add_conditional_edges with a routing function.
+q23:
+  right:
+  - a
+  why: Use agents only where steps can't be predicted.
+q24:
+  right:
+  - a
+  why: Scripted messages make runs repeatable.
+q25:
+  right:
+  - a
+  why: Production needs control and visibility.

@@ -398,3 +398,203 @@ q40:
     d: It will be removed
     e: It's a quiz
     f: It's locked
+q41:
+  text: Strong answers to theory questions also...
+  show: 4
+  options:
+    a: Mention a trade-off or failure mode
+    b: Tie the idea to something you built or measured
+    c: Avoid examples
+    d: Name as many frameworks as possible
+    e: Stay under one sentence
+    f: Repeat the question
+q42:
+  text: Time to first token is mostly set by...
+  show: 4
+  options:
+    a: The prefill phase, which reads the whole prompt
+    b: Prompt length, so long prompts make it slower
+    c: The number of output tokens
+    d: The temperature
+    e: The tokenizer's vocabulary only
+    f: Top-p
+q43:
+  text: To get the most from prompt caching...
+  show: 4
+  options:
+    a: Put stable content like the system prompt and tools first
+    b: Keep changing details like the time out of the prompt start
+    c: Put the user's message first
+    d: Randomise the order of tools
+    e: Add a request id at the top
+    f: Repeat the system prompt at the end only
+q44:
+  text: A reranker helps most when...
+  show: 4
+  options:
+    a: The right chunk is retrieved but ranked too low
+    b: You can afford a little extra latency for better top results
+    c: The answer is in no document
+    d: Text extraction is broken
+    e: The index is empty
+    f: You want to skip evaluation
+q45:
+  text: Long-term agent memory should be...
+  show: 4
+  options:
+    a: Written deliberately and retrievable like RAG
+    b: Visible and deletable by the user, within privacy rules
+    c: Everything the user ever said, in every prompt
+    d: Stored in the system prompt forever
+    e: Hidden from the user
+    f: Never used
+q46:
+  text: To trust an LLM judge for one criterion...
+  show: 4
+  options:
+    a: Measure its agreement with human labels on passes and fails
+    b: Prefer pass/fail verdicts over 1 to 10 scores
+    c: Use the same model that wrote the answers, always
+    d: Trust it because it explains itself
+    e: Average its score over all criteria
+    f: Skip human labels
+q47:
+  text: The lethal trifecta is an agent with...
+  show: 4
+  options:
+    a: Private data, untrusted content and a way to send data out
+    b: A setup where one injected instruction can leak data
+    c: Three models
+    d: Three tools of any kind
+    e: A GPU, a CPU and a cache
+    f: Only read-only tools
+q48:
+  text: Serving a 70B model in 16-bit needs about...
+  show: 4
+  options:
+    a: 140 GB for the weights alone
+    b: More memory again for the KV cache
+    c: 7 GB
+    d: 1 TB for weights
+    e: No GPU memory
+    f: The same as a 7B model
+q49:
+  text: In a take-home, reviewers reward...
+  show: 4
+  options:
+    a: Starting with an eval harness
+    b: Documenting assumptions and trade-offs
+    c: The most complex architecture
+    d: No README to save time
+    e: Hiding failing cases
+    f: Skipping the defence prep
+q50:
+  text: A good CV bullet for a project has...
+  show: 4
+  options:
+    a: What you built and the hard part
+    b: A number you measured and can explain
+    c: A list of every library
+    d: An invented metric
+    e: Only the project name
+    f: A paragraph of buzzwords
+q51:
+  text: MCP mainly solves...
+  show: 4
+  options:
+    a: Reusing one tool integration across many AI apps
+    b: The M×N integration problem between apps and tools
+    c: Training models faster
+    d: Storing embeddings
+    e: Replacing function calling inside the model
+    f: Rate limiting
+q52:
+  text: In MCP, a resource is...
+  show: 4
+  options:
+    a: Read-only context the app can load, like a file or a schema
+    b: Addressed by a URI such as tickets://open
+    c: A tool the model must call
+    d: A GPU
+    e: A prompt the user types
+    f: An API key
+q53:
+  text: A sensible reason to use an agent framework is...
+  show: 4
+  options:
+    a: You need durable state, pause and resume, and human approval
+    b: Many tools and branches that are tedious to hand-write
+    c: Because a job post named it
+    d: To hide the prompts from yourself
+    e: It always makes agents more accurate
+    f: It removes the need for evals
+q54:
+  text: In LangChain v1, `create_agent`...
+  show: 4
+  options:
+    a: Builds a tool-calling agent loop that runs on LangGraph
+    b: Accepts a response_format for structured output
+    c: Is part of langchain-classic
+    d: Only works with one provider
+    e: Trains the model
+    f: Cannot use custom tools
+q55:
+  text: A long-running agent must have...
+  show: 4
+  options:
+    a: Checkpoints so it can resume after a crash
+    b: Budgets for steps, tokens and time
+    c: No human involvement ever
+    d: One very long prompt instead of state
+    e: Tools that are not idempotent
+    f: Unlimited retries
+q56:
+  text: Test-time compute means...
+  show: 4
+  options:
+    a: Letting a model spend more tokens thinking at answer time
+    b: Trading latency and cost for accuracy on hard questions
+    c: Training for longer
+    d: Testing on a smaller GPU
+    e: Caching answers
+    f: Running unit tests on prompts
+q57:
+  text: A reasoning model is a poor choice for...
+  show: 4
+  options:
+    a: High-volume classification with tight latency
+    b: Simple field extraction from a short text
+    c: Multi-step maths
+    d: Planning a complex refactor
+    e: Hard logic puzzles
+    f: Agent planning on difficult tasks
+q58:
+  text: A vision-language model reads an image by...
+  show: 4
+  options:
+    a: Cutting it into patches and encoding them into tokens
+    b: Feeding those image tokens to the LLM next to the text
+    c: Running OCR only
+    d: Converting it to a caption first, always
+    e: Storing it in the KV cache unchanged
+    f: Ignoring its size
+q59:
+  text: In LoRA, the update B·A...
+  show: 4
+  options:
+    a: Uses two thin matrices with a small rank
+    b: Starts at zero because B is initialised to zeros
+    c: Replaces W entirely
+    d: Trains every weight
+    e: Needs more memory than full fine-tuning
+    f: Can't be swapped per task
+q60:
+  text: Before fine-tuning, you should...
+  show: 4
+  options:
+    a: Have an eval set and a prompted baseline
+    b: Check that the gap is a behaviour, not missing knowledge
+    c: Collect as much noisy data as possible
+    d: Skip evaluation to save time
+    e: Always pick the largest model
+    f: Remove the test split
