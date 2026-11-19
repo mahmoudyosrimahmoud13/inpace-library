@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: programming-web
+tags:
+- react
+- typescript
+- frontend
+- web
+- javascript
+- intermediate
+credit: Written for the inPace library. Links to the official React, TypeScript, Vite and Testing Library documentation.

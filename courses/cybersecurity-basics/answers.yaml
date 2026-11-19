@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: The A in CIA.
+q2:
+  right:
+  - a
+  why: Fix the biggest risks first.
+q3:
+  right:
+  - a
+  why: Scanners find anything unpatched.
+q4:
+  right:
+  - a
+  why: Unique passwords stop it.
+q5:
+  right:
+  - a
+  why: That code is the key to your account.
+q6:
+  right:
+  - a
+  why: Length and randomness beat symbols.
+q7:
+  right:
+  - a
+  why: It checks the real site address.
+q8:
+  right:
+  - a
+  why: Precomputed tables stop working.
+q9:
+  right:
+  - a
+  why: Anyone can decode it.
+q10:
+  right:
+  - a
+  why: Phishing sites have padlocks too.
+q11:
+  right:
+  - a
+  why: Smaller attack surface.
+q12:
+  right:
+  - a
+  why: Use a VPN instead.
+q13:
+  right:
+  - a
+  why: Unauthorized scanning can be illegal.
+q14:
+  right:
+  - a
+  why: And test a restore.
+q15:
+  right:
+  - a
+  why: Free can cost a lot.
+q16:
+  right:
+  - a
+  why: Check everything on the server.
+q17:
+  right:
+  - a
+  why: Limits what XSS can steal.
+q18:
+  right:
+  - a
+  why: OWASP's number-one risk.
+q19:
+  right:
+  - a
+  why: Data stays data.
+q20:
+  right:
+  - a
+  why: A strong XSS defence.
+q21:
+  right:
+  - a
+  why: Escape output by default.
+q22:
+  right:
+  - a
+  why: It turns off escaping.
+q23:
+  right:
+  - a
+  why: The cookie isn't sent cross-site.
+q24:
+  right:
+  - a
+  why: Allow-list destinations.
+q25:
+  right:
+  - a
+  why: It may already be copied.
+q26:
+  right:
+  - a
+  why: Written permission or a lab.
+q27:
+  right:
+  - a
+  why: Logs get copied widely.
+q28:
+  right:
+  - a
+  why: The SOC's main tool.
+q29:
+  right:
+  - a
+  why: Before eradication and recovery.
+q30:
+  right:
+  - a
+  why: The infected one may record it.
+q31:
+  right:
+  - a
+  why: Changing data without permission.
+q32:
+  right:
+  - a
+  why: Most problems live there.
+q33:
+  right:
+  - a
+  why: Cheaper and shared.
+q34:
+  right:
+  - a
+  why: Watching and investigating alerts.
+q35:
+  right:
+  - a
+  why: Store uploads safely and never execute them.

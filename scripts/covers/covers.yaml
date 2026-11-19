@@ -192,3 +192,36 @@ courses:
     title: Containers,<br>properly
     sub: Images, Dockerfiles, volumes, networks, Compose, security and shipping
     tags: [14 lessons, 35 quiz questions]
+
+  react-typescript:
+    theme: navy
+    art: react-typescript.svg
+    chip: Intermediate · 7 days
+    title: React and<br>TypeScript
+    sub: Components, state, effects, routing, tests, and a published app
+    tags: [14 lessons, 35 quiz questions]
+
+  dsa-interviews:
+    theme: forest
+    art: dsa-interviews.svg
+    chip: Interviews · 8 days
+    title: Algorithms<br>for interviews
+    sub: Fourteen patterns, from two pointers to dynamic programming, in Python
+    tags: [16 lessons, 40 quiz questions]
+
+  cybersecurity-basics:
+    theme: plum
+    art: cybersecurity-basics.svg
+    chip: Beginner · 7 days
+    title: Think like<br>a defender
+    sub: Passwords and crypto, the OWASP Top 10, detection and threat models
+    tags: [14 lessons, 35 quiz questions]
+
+  icpc-mansoura-problem-solving-ar:
+    theme: sun
+    art: icpc-mansoura.svg
+    rtl: true
+    chip: المستوى 0 و 1 · 13 يومًا
+    title: حل المشكلات<br>بـ <span dir="ltr">C++</span>
+    sub: على خطى تدريب ICPC Mansoura، من أول برنامج حتى البرمجة الديناميكية
+    tags: [15 درسًا, 60 سؤالًا]

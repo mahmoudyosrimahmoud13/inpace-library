@@ -1,0 +1,236 @@
+id: react-typescript
+title: 'React and TypeScript: Build Real Apps'
+version: 1
+language: en
+description: Go from JavaScript to building and publishing real React apps with TypeScript. TypeScript for JavaScript developers
+  (types, unions, narrowing, generics), React's way of thinking, components, props, lists and events, state and forms, effects
+  and loading data properly, custom hooks, pages with React Router, shared state with Context and useReducer, testing with
+  Vitest and Testing Library, performance and accessibility, and publishing to GitHub Pages with a workflow that runs your
+  tests. Ends with a study planner you publish and can show in interviews. Follows inPace's JavaScript course. About 7 days,
+  45 to 60 minutes a day.
+image: cover.jpg
+downloads:
+- title: React documentation (react.dev)
+  url: https://react.dev/learn
+- title: TypeScript handbook
+  url: https://www.typescriptlang.org/docs/handbook/intro.html
+- title: React TypeScript cheatsheet
+  url: https://react-typescript-cheatsheet.netlify.app/
+- title: Vite guide
+  url: https://vite.dev/guide/
+- title: 'Testing Library: queries'
+  url: https://testing-library.com/docs/queries/about
+modules:
+- id: m1
+  title: 'Day 1: TypeScript for JavaScript developers'
+  lessons:
+  - id: m1-l1
+    title: TypeScript for JavaScript developers
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: TypeScript in practice
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: In the TypeScript Playground (or a small project with strict on), write a Task type with an optional due date,
+      a Filter union and a Load union with loading, error and ready cases. Write a function that takes a Load and returns
+      a message, using narrowing, and a generic first<T>() function. Then make three deliberate mistakes and paste the errors
+      TypeScript gives. Upload the code and the errors.
+  - id: m1-explain
+    type: explain
+    prompt: Explain what TypeScript checks for you that JavaScript doesn't, and why `any` and turning off strict mode defeat
+      the purpose.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Components, props, lists and events'
+  lessons:
+  - id: m2-l1
+    title: React's idea, and your first app
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Lists, conditions and events
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Create a Vite react-ts project. Build TaskItem (typed props, shows done tasks differently), TaskList (maps an
+      array of tasks with proper keys, shows a message when empty) and a Card that takes children. Add a button per task that
+      calls an onDelete(id) prop and logs it. Upload a screenshot and your components' code.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why the array index is a poor key for a list that can change, and what goes wrong.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: State and forms'
+  lessons:
+  - id: m3-l1
+    title: 'State: making things change'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Forms the React way
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Make the task list stateful: add tasks with a controlled form (trimmed title, minutes between 5 and 240, clear
+      error messages next to the fields), toggle done, delete, and show done/total calculated from the tasks. Every input
+      has a label. Upload the code and a short screen recording or screenshots.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why `tasks.push(t); setTasks(tasks)` doesn't update the page, and the right way to do it.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Effects, loading data and custom hooks'
+  lessons:
+  - id: m4-l1
+    title: Effects and loading data
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Custom hooks: reuse your logic'
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Load starter tasks from public/starter.json with loading and error states (test the error by renaming the file),
+      cancelling with AbortController. Write useLocalStorage<T> and use it so tasks survive a reload. Update the page title
+      with the number of tasks left. Upload the hook, the component and screenshots of loading, error and ready states.
+  - id: m4-explain
+    type: explain
+    prompt: Explain when something belongs in an event handler and when it belongs in an effect, with one example of each.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Pages and shared state'
+  lessons:
+  - id: m5-l1
+    title: Pages with React Router
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: 'Shared state: Context and useReducer'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Add React Router: a layout with NavLinks, the task list page with the filter in ?filter=, a /tasks/:id page with
+      a not-found message, and a 404 page. Move task logic into a typed reducer with an Action union, provided through Context
+      with a useTasks() hook that throws a clear error outside the provider. Upload the code and screenshots of each page.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain why the current filter belongs in the address (?filter=done) rather than only in state.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Testing, speed and accessibility'
+  lessons:
+  - id: m6-l1
+    title: Testing React apps
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Fast and accessible
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Set up Vitest with Testing Library. Write three reducer tests and two user-journey tests (add a task; complete
+      it and filter to Done) using getByRole and getByLabelText. Then check the app by keyboard only and with Lighthouse,
+      fix at least two issues, and note what you changed. Upload the tests, the test output and Lighthouse scores before and
+      after.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why tests should find elements by role and label instead of by CSS class or test id.
+    min_words: 70
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Publish, and the final project'
+  lessons:
+  - id: m7-l1
+    title: Build, test and publish
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: Final project, and what comes next
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Final project: build Study Tasks with all ten requirements from the lesson and publish it on GitHub Pages with
+      a workflow that runs the tests before building. Upload the repository link, the live link and the README (with a screenshot).'
+  - id: m7-explain
+    type: explain
+    prompt: Explain three decisions you made in your project (for example where state lives, how data is saved, how you tested
+      it) and why.
+    min_words: 100
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

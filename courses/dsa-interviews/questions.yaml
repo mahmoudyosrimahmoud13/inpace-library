@@ -1,0 +1,320 @@
+q1:
+  text: 'A loop inside a loop over the same n items is usually:'
+  show: 4
+  options:
+    a: O(n²)
+    b: O(n)
+    c: O(log n)
+    d: O(2n)
+q2:
+  text: For n = 100,000, which is too slow in a 1-second limit?
+  show: 4
+  options:
+    a: O(n²)
+    b: O(n log n)
+    c: O(n)
+    d: O(log n)
+q3:
+  text: '`x in my_list` in Python costs:'
+  show: 4
+  options:
+    a: O(n)
+    b: O(1)
+    c: O(log n)
+    d: O(n²)
+q4:
+  text: 'Two pointers from both ends works for a pair sum because:'
+  show: 4
+  options:
+    a: The array is sorted, so each move safely discards one candidate
+    b: It checks every pair
+    c: Lists are hashable
+    d: It uses recursion
+q5:
+  text: 'The first thing to do in an interview problem is:'
+  show: 4
+  options:
+    a: Restate it and ask about edge cases and input size
+    b: Start typing the optimal code
+    c: Ask for the answer
+    d: Write tests first
+q6:
+  text: 'Average cost of looking up a key in a Python dict:'
+  show: 4
+  options:
+    a: O(1)
+    b: O(n)
+    c: O(log n)
+    d: O(n log n)
+q7:
+  text: Which can't be a dict key?
+  show: 4
+  options:
+    a: A list
+    b: A tuple
+    c: A string
+    d: A number
+q8:
+  text: 'Grouping anagrams works by choosing a key such as:'
+  show: 4
+  options:
+    a: The word's letters sorted
+    b: The word's length only
+    c: The first letter
+    d: A random number
+q9:
+  text: 'Sliding window fits problems about:'
+  show: 4
+  options:
+    a: Contiguous subarrays or substrings
+    b: Any subset
+    c: Trees
+    d: Sorting
+q10:
+  text: 'In the variable-size window, you shrink from the left when:'
+  show: 4
+  options:
+    a: The window breaks the rule
+    b: Always after each step
+    c: Never
+    d: When right reaches the end
+q11:
+  text: A stack returns items in which order?
+  show: 4
+  options:
+    a: Last in, first out
+    b: First in, first out
+    c: Sorted
+    d: Random
+q12:
+  text: 'For a queue in Python, use:'
+  show: 4
+  options:
+    a: collections.deque
+    b: list.pop(0)
+    c: a set
+    d: a dict
+q13:
+  text: Why use a dummy node in linked list problems?
+  show: 4
+  options:
+    a: So changes at the head need no special case
+    b: It's faster
+    c: Python needs it
+    d: To store the length
+q14:
+  text: 'Floyd''s cycle detection uses:'
+  show: 4
+  options:
+    a: A slow pointer and a fast pointer
+    b: A hash set of nodes
+    c: Recursion
+    d: Sorting
+q15:
+  text: 'Reaching the k-th node of a linked list costs:'
+  show: 4
+  options:
+    a: O(k)
+    b: O(1)
+    c: O(log k)
+    d: O(n²)
+q16:
+  text: 'Binary search on 1,000,000 sorted items needs about:'
+  show: 4
+  options:
+    a: 20 checks
+    b: 1,000 checks
+    c: 500,000 checks
+    d: 1 check
+q17:
+  text: 'Binary search on the answer needs:'
+  show: 4
+  options:
+    a: A yes/no check that flips from no to yes only once
+    b: A sorted input array
+    c: A hash map
+    d: Recursion
+q18:
+  text: 'Merge sort''s time is:'
+  show: 4
+  options:
+    a: O(n log n) always
+    b: O(n²) worst
+    c: O(n)
+    d: O(log n)
+q19:
+  text: 'A stable sort means:'
+  show: 4
+  options:
+    a: Equal items keep their original order
+    b: It never crashes
+    c: It uses no memory
+    d: It's always fastest
+q20:
+  text: 'Merging overlapping intervals starts with:'
+  show: 4
+  options:
+    a: Sorting by start time
+    b: Sorting by length
+    c: A hash map
+    d: Binary search
+q21:
+  text: 'Every recursive function needs:'
+  show: 4
+  options:
+    a: A base case and a step toward it
+    b: A loop
+    c: A global variable
+    d: Two parameters
+q22:
+  text: How many subsets does a set of n items have?
+  show: 4
+  options:
+    a: 2ⁿ
+    b: n²
+    c: n!
+    d: n
+q23:
+  text: Why append cur.copy() instead of cur?
+  show: 4
+  options:
+    a: cur keeps changing; without a copy every saved answer changes too
+    b: copy is faster
+    c: Lists can't be appended
+    d: Python requires it
+q24:
+  text: 'Inorder traversal of a BST gives values:'
+  show: 4
+  options:
+    a: In sorted order
+    b: Reversed
+    c: By level
+    d: Random
+q25:
+  text: 'Questions about levels or the nearest node usually need:'
+  show: 4
+  options:
+    a: BFS with a queue
+    b: DFS only
+    c: A stack only
+    d: Sorting
+q26:
+  text: 'Python''s heapq is a:'
+  show: 4
+  options:
+    a: Min-heap
+    b: Max-heap
+    c: Sorted list
+    d: Binary search tree
+q27:
+  text: 'Keeping the k largest of n numbers with a size-k heap costs:'
+  show: 4
+  options:
+    a: O(n log k)
+    b: O(n²)
+    c: O(k)
+    d: O(log n)
+q28:
+  text: 'To validate a BST you should:'
+  show: 4
+  options:
+    a: Pass down the allowed min and max range
+    b: Compare each node only with its children
+    c: Sort it
+    d: Count the nodes
+q29:
+  text: Why does graph DFS need a 'seen' set but tree DFS doesn't?
+  show: 4
+  options:
+    a: Graphs can have cycles
+    b: Graphs are bigger
+    c: Trees have no children
+    d: Sets are faster
+q30:
+  text: 'Course Schedule (prerequisites) is solved with:'
+  show: 4
+  options:
+    a: Topological sort
+    b: Binary search
+    c: A heap
+    d: Sliding window
+q31:
+  text: 'DP fits when a problem has:'
+  show: 4
+  options:
+    a: Overlapping sub-problems whose answers build the full answer
+    b: Only one possible answer
+    c: Sorted input
+    d: No repeated work
+q32:
+  text: 'The first step of a DP solution is:'
+  show: 4
+  options:
+    a: Saying what dp[i] means in words
+    b: Writing nested loops
+    c: Sorting
+    d: Choosing a heap
+q33:
+  text: 'functools.cache on a recursive function gives:'
+  show: 4
+  options:
+    a: Top-down DP (memoization)
+    b: Bottom-up DP
+    c: Greedy
+    d: Backtracking
+q34:
+  text: '`[[0] * n] * m` in Python creates:'
+  show: 4
+  options:
+    a: m references to the same row
+    b: A proper m × n grid
+    c: An error
+    d: A flat list
+q35:
+  text: 'Edit distance compares two strings using a table of size:'
+  show: 4
+  options:
+    a: (len(a)+1) × (len(b)+1)
+    b: len(a) only
+    c: 26 × 26
+    d: 1 × n
+q36:
+  text: 'To pick the most non-overlapping meetings, greedily choose by:'
+  show: 4
+  options:
+    a: Earliest end time
+    b: Earliest start time
+    c: Shortest length
+    d: Latest start time
+q37:
+  text: 'If you quickly find a counter-example to a greedy rule, you should:'
+  show: 4
+  options:
+    a: Try dynamic programming instead
+    b: Use the greedy anyway
+    c: Sort differently and hope
+    d: Give up
+q38:
+  text: 'Minimum meeting rooms is solved with:'
+  show: 4
+  options:
+    a: Sorting by start and a min-heap of end times
+    b: A stack
+    c: Binary search only
+    d: DP on subsets
+q39:
+  text: 'When stuck in an interview, a good move is:'
+  show: 4
+  options:
+    a: Go back to the brute force and look for repeated work, out loud
+    b: Stay silent until it comes
+    c: Change the problem
+    d: Write random code
+q40:
+  text: 'Before saying ''done'', you should:'
+  show: 4
+  options:
+    a: Trace an example and run edge cases through your code
+    b: Submit immediately
+    c: Delete comments
+    d: Rename variables

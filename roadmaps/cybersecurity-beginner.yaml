@@ -1,0 +1,27 @@
+id: cybersecurity-beginner
+title: Cybersecurity, from zero
+description: The foundations security jobs expect (operating systems, Linux, networking), then thinking like a defender, web security and hardening real servers. Ends with a security report you can show employers.
+language: en
+author: inPace
+official: true
+order: 20
+tags: [security, cybersecurity, linux, networking, career]
+steps:
+  - course: os-fundamentals
+    note: How an operating system really works. Processes, memory, files and permissions are what attackers and defenders both work with.
+  - course: linux-fundamentals
+    note: Most servers, and most security tools, live in the Linux terminal.
+  - course: networking-fundamentals
+    note: Ports, TCP, DNS and TLS from the ground up. You can't defend a network you don't understand.
+  - course: cybersecurity-basics
+    note: The heart of the path. Threats, passwords and crypto, the OWASP Top 10, legal practice, detection and threat modelling.
+  - course: linux-sysadmin
+    note: Run servers properly. Users, logs, SSH, firewalls and backups are everyday security work.
+  - course: linux-network-security
+    note: Harden real servers. nftables, SSH and TLS done right, auditing, and a hardening lab.
+  - course: bash-automation
+    note: Automate log checks and audits with scripts.
+    optional: true
+  - course: python-basics
+    note: Python is the language of security tooling and scripting.
+    optional: true

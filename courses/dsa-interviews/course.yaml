@@ -1,0 +1,260 @@
+id: dsa-interviews
+title: Data Structures and Algorithms for Coding Interviews
+version: 1
+language: en
+description: 'The patterns behind most coding interview questions, explained from scratch in Python: Big-O and a step-by-step
+  method for any problem, arrays and two pointers, hash maps, sliding window, stacks and queues, linked lists, binary search
+  (including on the answer), sorting, recursion and backtracking, trees, BSTs and heaps, graphs (DFS, BFS, topological sort),
+  dynamic programming, greedy and intervals, and an interview playbook with a pattern map. Each lesson ends with LeetCode
+  problems to practise. Optional short videos by NeetCode and freeCodeCamp. About 8 days, 60 minutes a day, then weeks of
+  practice.'
+image: cover.jpg
+downloads:
+- title: NeetCode roadmap (problems by pattern)
+  url: https://neetcode.io/roadmap
+- title: 'VisuAlgo: see algorithms move'
+  url: https://visualgo.net/en
+- title: Python time complexity of built-ins
+  url: https://wiki.python.org/moin/TimeComplexity
+- title: LeetCode problem set
+  url: https://leetcode.com/problemset/
+modules:
+- id: m1
+  title: 'Day 1: Big-O, a method, arrays and two pointers'
+  lessons:
+  - id: m1-l1
+    title: Big-O, and how to solve a problem in an interview
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: Arrays, strings and two pointers
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Solve Valid Palindrome (125), Two Sum II (167) and Container With Most Water (11). For each, write the brute force
+      and its Big-O in a comment, then your two-pointer solution and its Big-O. Upload your code and LeetCode's accepted screenshots.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why the two-pointer solution for a pair sum in a sorted array never misses the answer.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Hash maps and sliding window'
+  lessons:
+  - id: m2-l1
+    title: Hash maps and sets
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Sliding window
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Solve Two Sum (1), Group Anagrams (49), Longest Substring Without Repeating Characters (3) and Minimum Size Subarray
+      Sum (209). Comment the brute force, your approach, and the Big-O of each. Upload code and accepted screenshots.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why the sliding window for 'shortest subarray with sum at least target' needs all numbers to be positive.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Stacks, queues and linked lists'
+  lessons:
+  - id: m3-l1
+    title: Stacks and queues
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: Linked lists
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Solve Valid Parentheses (20), Daily Temperatures (739), Reverse Linked List (206) and Linked List Cycle (141).
+      Draw the pointers for reversing a 3-node list on paper and photograph it. Upload code, accepted screenshots and the
+      drawing.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why the monotonic stack solution for Daily Temperatures is O(n) even though it has a while loop inside
+      a for loop.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Binary search and sorting'
+  lessons:
+  - id: m4-l1
+    title: Binary search
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Sorting
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Solve Binary Search (704), Koko Eating Bananas (875), Merge Intervals (56) and Kth Largest Element (215). Write
+      merge sort yourself and test it on a random list against sorted(). Upload code, test output and accepted screenshots.
+  - id: m4-explain
+    type: explain
+    prompt: 'Explain ''binary search on the answer'' using Koko Eating Bananas: what''s searched, and why the check flips
+      only once.'
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Recursion, backtracking and trees'
+  lessons:
+  - id: m5-l1
+    title: Recursion and backtracking
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Trees
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Solve Subsets (78), Combination Sum (39), Maximum Depth (104), Level Order Traversal (102) and Diameter of Binary
+      Tree (543). For Subsets, draw the decision tree for [1, 2, 3]. Upload code, the drawing and accepted screenshots.
+  - id: m5-explain
+    type: explain
+    prompt: Explain what 'undo' means in backtracking and what goes wrong if you forget it.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: BSTs, heaps and graphs'
+  lessons:
+  - id: m6-l1
+    title: Binary search trees and heaps
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: Graphs
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Solve Validate BST (98), K Closest Points (973), Number of Islands (200), Rotting Oranges (994) and Course Schedule
+      (207). Upload code and accepted screenshots, with the Big-O of each in a comment.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why BFS finds the shortest path in an unweighted graph and DFS doesn't.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Dynamic programming'
+  lessons:
+  - id: m7-l1
+    title: Dynamic programming, part 1
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: 'Dynamic programming, part 2: grids and two strings'
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Solve Climbing Stairs (70), House Robber (198), Coin Change (322), Unique Paths (62) and Longest Common Subsequence
+      (1143). For each, write the state in words, the transition and the base cases in a comment before the code. Upload code
+      and accepted screenshots.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why the greedy 'biggest coin first' fails for coins [1, 3, 4] and amount 6, and how DP gets it right.
+    min_words: 70
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Greedy, intervals and the interview playbook'
+  lessons:
+  - id: m8-l1
+    title: Greedy algorithms and intervals
+    file: lessons/m8-l1.md
+    minutes: 25
+  - id: m8-l2
+    title: Interview playbook and pattern map
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Final project: create a GitHub repository with one solved problem for each of the 14 patterns in the pattern
+      map. Each file says the pattern and why it fits, the brute force and its Big-O, your solution and its Big-O, and one
+      edge case you tested. Then do one 45-minute mock interview with a friend. Upload the repository link and a short note
+      on how the mock went.'
+  - id: m8-explain
+    type: explain
+    prompt: Pick one problem from your repository and explain your thinking from start to finish, the way you would in an
+      interview.
+    min_words: 100
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

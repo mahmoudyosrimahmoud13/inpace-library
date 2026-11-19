@@ -1,11 +1,11 @@
 id: web-developer
 title: Front-end web developer
-description: From your first web page to a JavaScript app you publish online, with tests and a link for your CV.
+description: From your first web page to React and TypeScript apps you publish online, with tests and a link for your CV.
 language: en
 author: inPace
 official: true
 order: 5
-tags: [web, javascript, frontend, career]
+tags: [web, javascript, react, typescript, frontend, career]
 steps:
   - course: html-css-for-inpace
     note: A short start on what every page is made of. The examples come from inPace's own pages.
@@ -14,8 +14,16 @@ steps:
   - course: git-zero-to-master
     note: Version control, asked for in every developer job. Skip it if you already use branches, rebase and pull requests.
     optional: true
+  - course: react-typescript
+    note: What front-end jobs ask for. TypeScript, React, routing, shared state, tests, and Study Tasks rebuilt and published.
   - course: github-actions-cli
     note: Reviews, the gh command, and Actions that test your app and publish it by themselves.
+    optional: true
+  - course: cybersecurity-basics
+    note: XSS, CSRF, cookies and headers, from the defender's side. Every web developer should know them.
+    optional: true
+  - course: dsa-interviews
+    note: Interview problem solving, for when you start applying.
     optional: true
   - course: docker-containers
     note: Ship your work in a container, useful when you move to full-stack.

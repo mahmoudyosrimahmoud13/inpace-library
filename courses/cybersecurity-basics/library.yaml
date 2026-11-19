@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: security
+tags:
+- security
+- cybersecurity
+- owasp
+- web security
+- networking
+- beginner
+credit: Written for the inPace library. Optional videos by Computerphile and The Cyber Mentors, linked, not copied. Follows
+  the OWASP Top 10.

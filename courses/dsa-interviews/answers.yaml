@@ -1,0 +1,160 @@
+q1:
+  right:
+  - a
+  why: n times n.
+q2:
+  right:
+  - a
+  why: 10¹⁰ operations.
+q3:
+  right:
+  - a
+  why: Use a set for O(1) average.
+q4:
+  right:
+  - a
+  why: Sortedness is the key.
+q5:
+  right:
+  - a
+  why: Understand before solving.
+q6:
+  right:
+  - a
+  why: Hashing finds the slot directly.
+q7:
+  right:
+  - a
+  why: Keys must be hashable; use tuple(list).
+q8:
+  right:
+  - a
+  why: Same key for everything that belongs together.
+q9:
+  right:
+  - a
+  why: Contiguous is the signal.
+q10:
+  right:
+  - a
+  why: Grow right, shrink left.
+q11:
+  right:
+  - a
+  why: Like a pile of plates.
+q12:
+  right:
+  - a
+  why: list.pop(0) is O(n).
+q13:
+  right:
+  - a
+  why: Return dummy.next.
+q14:
+  right:
+  - a
+  why: Fast laps slow inside a cycle.
+q15:
+  right:
+  - a
+  why: No random access.
+q16:
+  right:
+  - a
+  why: log₂(10⁶) ≈ 20.
+q17:
+  right:
+  - a
+  why: Monotonic condition.
+q18:
+  right:
+  - a
+  why: Its split is always even.
+q19:
+  right:
+  - a
+  why: Matters when sorting by several keys.
+q20:
+  right:
+  - a
+  why: Then one pass.
+q21:
+  right:
+  - a
+  why: Otherwise it never stops.
+q22:
+  right:
+  - a
+  why: 'Each item: take or skip.'
+q23:
+  right:
+  - a
+  why: Save a snapshot.
+q24:
+  right:
+  - a
+  why: Left, node, right.
+q25:
+  right:
+  - a
+  why: BFS goes level by level.
+q26:
+  right:
+  - a
+  why: Push negatives for a max-heap.
+q27:
+  right:
+  - a
+  why: Each push/pop is log k.
+q28:
+  right:
+  - a
+  why: Grandchildren matter too.
+q29:
+  right:
+  - a
+  why: Otherwise you loop forever.
+q30:
+  right:
+  - a
+  why: If not all can be taken, there's a cycle.
+q31:
+  right:
+  - a
+  why: Compute each sub-problem once.
+q32:
+  right:
+  - a
+  why: An unclear state causes most bugs.
+q33:
+  right:
+  - a
+  why: Answers are saved by arguments.
+q34:
+  right:
+  - a
+  why: Use a list comprehension.
+q35:
+  right:
+  - a
+  why: The extra row and column are 'empty string'.
+q36:
+  right:
+  - a
+  why: Leaves the most room for the rest.
+q37:
+  right:
+  - a
+  why: Greedy must be provably safe.
+q38:
+  right:
+  - a
+  why: The heap size is the rooms in use.
+q39:
+  right:
+  - a
+  why: Interviewers hint when they hear your thinking.
+q40:
+  right:
+  - a
+  why: Catch off-by-one errors.

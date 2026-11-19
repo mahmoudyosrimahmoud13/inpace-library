@@ -3,6 +3,7 @@
 # scripts/organize_library.py fills in sections and tidies tags for all courses.
 - {id: linux-cloud-devops, en: "Linux, Cloud and DevOps", ar: "لينكس والسحابة وDevOps"}
 - {id: programming-web,    en: "Programming and Web",     ar: "البرمجة والويب"}
+- {id: security,           en: "Security",                ar: "الأمن السيبراني"}
 - {id: data-databases,     en: "Data and Databases",      ar: "البيانات وقواعد البيانات"}
 - {id: ai-ml,              en: "AI and Machine Learning", ar: "الذكاء الاصطناعي وتعلّم الآلة"}
 - {id: maths,              en: "Maths",                   ar: "الرياضيات"}

@@ -1,0 +1,240 @@
+q1:
+  right:
+  - a
+  why: فكّر في تعقيد الوقت.
+q2:
+  right:
+  - a
+  why: 10¹⁰ أكبر من حد int.
+q3:
+  right:
+  - a
+  why: مهمان مع المدخلات الكبيرة.
+q4:
+  right:
+  - a
+  why: الفهم قبل الحل.
+q5:
+  right:
+  - a
+  why: endl تفرّغ المخزن كل مرة.
+q6:
+  right:
+  - a
+  why: الترقيم يبدأ من 0.
+q7:
+  right:
+  - a
+  why: الحروف أرقام متتالية.
+q8:
+  right:
+  - a
+  why: للسطر الكامل استخدم getline.
+q9:
+  right:
+  - a
+  why: استخدم cin.ignore().
+q10:
+  right:
+  - a
+  why: عناصر متجاورة في الذاكرة.
+q11:
+  right:
+  - a
+  why: المتداخل يُضرب.
+q12:
+  right:
+  - a
+  why: 4 × 10¹⁰ عملية.
+q13:
+  right:
+  - a
+  why: التضاعف يصل n في log n خطوة.
+q14:
+  right:
+  - a
+  why: استخدم const vector<int>&.
+q15:
+  right:
+  - a
+  why: قاعدة تقريبية مفيدة.
+q16:
+  right:
+  - a
+  why: pre[i] مجموع أول i.
+q17:
+  right:
+  - a
+  why: للقيم الكبيرة استخدم map.
+q18:
+  right:
+  - a
+  why: ثم مجموع تراكمي في النهاية.
+q19:
+  right:
+  - a
+  why: معادلة مباشرة بدون لفّة.
+q20:
+  right:
+  - a
+  why: جرّب حالات صغيرة وابحث عن نمط.
+q21:
+  right:
+  - a
+  why: سريعة جدًا عمليًا.
+q22:
+  right:
+  - a
+  why: unique تعمل على المتجاورين فقط.
+q23:
+  right:
+  - a
+  why: O(log n).
+q24:
+  right:
+  - a
+  why: ترتيب تلقائي.
+q25:
+  right:
+  - a
+  why: نوع القيمة الأولى يحدد نوع الناتج.
+q26:
+  right:
+  - a
+  why: multiset تسمح بالتكرار.
+q27:
+  right:
+  - a
+  why: unordered_map متوسطها O(1).
+q28:
+  right:
+  - a
+  why: آخر قوس فُتح يُغلق أولًا.
+q29:
+  right:
+  - a
+  why: استخدم greater<int> للأصغر.
+q30:
+  right:
+  - a
+  why: erase(x) تحذف كل النسخ.
+q31:
+  right:
+  - a
+  why: الترتيب يجعل كل حركة آمنة.
+q32:
+  right:
+  - a
+  why: نحتاج مجموعًا أكبر.
+q33:
+  right:
+  - a
+  why: متصل هي الكلمة المفتاحية.
+q34:
+  right:
+  - a
+  why: التوسيع قد يقلل المجموع.
+q35:
+  right:
+  - a
+  why: كل عنصر مرة واحدة.
+q36:
+  right:
+  - a
+  why: log₂(10⁶) ≈ 20.
+q37:
+  right:
+  - a
+  why: مهم مع القيم الكبيرة.
+q38:
+  right:
+  - a
+  why: Monotonic.
+q39:
+  right:
+  - a
+  why: T / t[i] قد يكون ضخمًا.
+q40:
+  right:
+  - a
+  why: تجنّب مشاكل الدقة.
+q41:
+  right:
+  - a
+  why: كل قاسم له مقابل.
+q42:
+  right:
+  - a
+  why: سريع جدًا.
+q43:
+  right:
+  - a
+  why: 48→18→12→6.
+q44:
+  right:
+  - a
+  why: نقسم الأس على 2.
+q45:
+  right:
+  - a
+  why: نظرية فيرما الصغرى.
+q46:
+  right:
+  - a
+  why: أهم حيلة في البتات.
+q47:
+  right:
+  - a
+  why: XOR يلغي المتكرر.
+q48:
+  right:
+  - a
+  why: 2²⁰ ≈ مليون.
+q49:
+  right:
+  - a
+  why: مثل pop_back بعد push_back.
+q50:
+  right:
+  - a
+  why: يجعل التراجع سريعًا عمليًا.
+q51:
+  right:
+  - a
+  why: مناسبة للجرافات الكبيرة.
+q52:
+  right:
+  - a
+  why: الشجرة وحدها بلا دوائر.
+q53:
+  right:
+  - a
+  why: نربط المكوّنات ببعضها.
+q54:
+  right:
+  - a
+  why: وإلا تدخل الطابور مرات كثيرة.
+q55:
+  right:
+  - a
+  why: إن لم تُرتب كلها فهناك دائرة.
+q56:
+  right:
+  - a
+  why: احسب كل مسألة مرة.
+q57:
+  right:
+  - a
+  why: أغلب الأخطاء من حالة غير واضحة.
+q58:
+  right:
+  - a
+  why: مع الحفظ تصبح O(n).
+q59:
+  right:
+  - a
+  why: حتى لا يُؤخذ الغرض مرتين.
+q60:
+  right:
+  - a
+  why: الاستمرارية هي السر.

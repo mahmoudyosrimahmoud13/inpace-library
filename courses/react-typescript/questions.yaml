@@ -1,0 +1,280 @@
+q1:
+  text: What happens to TypeScript types when the app runs in the browser?
+  show: 4
+  options:
+    a: They're removed at build time; plain JavaScript runs
+    b: The browser checks them
+    c: They slow the app down
+    d: They're turned into runtime checks
+q2:
+  text: '`type Filter = "all" | "active" | "done"` is a:'
+  show: 4
+  options:
+    a: Union of string literal types
+    b: Generic
+    c: Enum class
+    d: Array type
+q3:
+  text: 'With strict mode, `document.querySelector("#out").textContent = "x"` fails because:'
+  show: 4
+  options:
+    a: The element is possibly null
+    b: textContent is read-only
+    c: Selectors need types
+    d: Strings can't be assigned
+q4:
+  text: Which is the safer type for JSON you haven't checked yet?
+  show: 4
+  options:
+    a: unknown
+    b: any
+    c: object
+    d: never
+q5:
+  text: '`Omit<Task, "id">` gives:'
+  show: 4
+  options:
+    a: Task without the id field
+    b: Only the id field
+    c: Task with id optional
+    d: An error
+q6:
+  text: 'In React, the page is described as:'
+  show: 4
+  options:
+    a: A function of the current state (UI = f(state))
+    b: A list of DOM changes you make by hand
+    c: A template filled once
+    d: HTML loaded from the server each click
+q7:
+  text: 'In JSX, the CSS class attribute is written:'
+  show: 4
+  options:
+    a: className
+    b: class
+    c: cssClass
+    d: styleClass
+q8:
+  text: '`<button onClick={remove(task.id)}>` is wrong because:'
+  show: 4
+  options:
+    a: It calls remove while rendering, not on click
+    b: onClick needs a string
+    c: Buttons can't have handlers
+    d: task.id is private
+q9:
+  text: '`{count && <Badge />}` shows what when count is 0?'
+  show: 4
+  options:
+    a: The number 0 on the page
+    b: Nothing
+    c: The badge
+    d: An error
+q10:
+  text: 'A child component changes the parent''s data by:'
+  show: 4
+  options:
+    a: Calling a function the parent passed as a prop
+    b: Changing its props
+    c: Editing the DOM
+    d: Using a global variable
+q11:
+  text: Why can't a normal `let` variable hold changing data in a component?
+  show: 4
+  options:
+    a: It resets every render and changing it doesn't re-render
+    b: let is not allowed in components
+    c: It's too slow
+    d: TypeScript forbids it
+q12:
+  text: Which correctly marks task 3 as done?
+  show: 4
+  options:
+    a: 'setTasks(ts => ts.map(t => t.id === 3 ? { ...t, done: true } : t))'
+    b: tasks[2].done = true
+    c: tasks.find(t => t.id === 3).done = true; setTasks(tasks)
+    d: setTasks(tasks.push(3))
+q13:
+  text: Where should state shared by two sibling components live?
+  show: 4
+  options:
+    a: In their closest common parent
+    b: In both of them
+    c: In a global variable
+    d: In the first child
+q14:
+  text: An input's value comes back as which type, even with type="number"?
+  show: 4
+  options:
+    a: string
+    b: number
+    c: unknown
+    d: bigint
+q15:
+  text: Why use onSubmit on the form instead of onClick on the button?
+  show: 4
+  options:
+    a: Pressing Enter submits too, and it's one place for the logic
+    b: onClick doesn't work on buttons
+    c: It's faster
+    d: TypeScript requires it
+q16:
+  text: 'An effect with `[]` as dependencies runs:'
+  show: 4
+  options:
+    a: Once, after the first render (twice in development Strict Mode)
+    b: Before every render
+    c: Never
+    d: On every keystroke
+q17:
+  text: What should an effect that starts an interval return?
+  show: 4
+  options:
+    a: A cleanup function that clears the interval
+    b: The interval id
+    c: Nothing
+    d: A promise
+q18:
+  text: Why cancel a fetch when the component goes away or the URL changes?
+  show: 4
+  options:
+    a: So an old, slow answer can't overwrite newer data
+    b: Fetch is expensive
+    c: Browsers require it
+    d: It makes JSON smaller
+q19:
+  text: 'Filtering tasks for display should be done:'
+  show: 4
+  options:
+    a: While rendering, with a plain calculation
+    b: In a useEffect into new state
+    c: In the server only
+    d: With a ref
+q20:
+  text: 'Two components call the same custom hook. They share:'
+  show: 4
+  options:
+    a: The logic, but each has its own state
+    b: The same state
+    c: Nothing at all
+    d: Only the effects
+q21:
+  text: Why use <Link> instead of <a href> for your own pages?
+  show: 4
+  options:
+    a: It changes page without reloading the app and losing state
+    b: It's required for CSS
+    c: a tags don't work in React
+    d: Links are faster to type
+q22:
+  text: '`useParams()` values are:'
+  show: 4
+  options:
+    a: Strings (or undefined), so convert ids with Number()
+    b: Numbers
+    c: Already typed objects
+    d: Always defined
+q23:
+  text: 'A reducer is:'
+  show: 4
+  options:
+    a: A pure function (state, action) => new state
+    b: A component
+    c: An effect
+    d: A context provider
+q24:
+  text: Why give createContext a null default and check it in useTasks()?
+  show: 4
+  options:
+    a: To fail clearly when the provider is missing and let TypeScript know it's defined after
+    b: Context needs null
+    c: It's faster
+    d: It hides errors
+q25:
+  text: 'Refreshing /tasks/3 on GitHub Pages returns 404 because:'
+  show: 4
+  options:
+    a: Pages doesn't know the app's routes; copy index.html to 404.html or use HashRouter
+    b: React Router is broken
+    c: The id is wrong
+    d: TypeScript failed
+q26:
+  text: 'The preferred Testing Library query is:'
+  show: 4
+  options:
+    a: getByRole with an accessible name
+    b: getByTestId
+    c: querySelector('.btn')
+    d: getByClassName
+q27:
+  text: 'To wait for text that appears after a fetch, use:'
+  show: 4
+  options:
+    a: findByText (it waits)
+    b: getByText
+    c: setTimeout
+    d: queryByText only
+q28:
+  text: 'The first step when a React app feels slow is:'
+  show: 4
+  options:
+    a: Measure with the React DevTools Profiler
+    b: Wrap everything in memo
+    c: Rewrite in another framework
+    d: Remove TypeScript
+q29:
+  text: '`<div onClick={...}>` as a button is a problem because:'
+  show: 4
+  options:
+    a: It can't be reached or pressed by keyboard and has no role
+    b: divs are slow
+    c: It breaks TypeScript
+    d: Clicks don't work on divs
+q30:
+  text: 'To announce an error to screen reader users, give it:'
+  show: 4
+  options:
+    a: role="alert"
+    b: A red colour only
+    c: A title attribute
+    d: 'display: none'
+q31:
+  text: What does `npm run build` in the Vite React TS template do first?
+  show: 4
+  options:
+    a: Type-checks the project, so type errors stop the build
+    b: Uploads the site
+    c: Runs the dev server
+    d: Deletes node_modules
+q32:
+  text: Which environment variables reach the browser in Vite?
+  show: 4
+  options:
+    a: Only those starting with VITE_
+    b: All of them
+    c: None
+    d: Only those in .env.local
+q33:
+  text: Where may you put a secret API key in a React app?
+  show: 4
+  options:
+    a: Nowhere in front-end code; keep it on a server
+    b: In .env.production
+    c: In a VITE_ variable
+    d: In a minified file
+q34:
+  text: 'For a project site, Vite''s `base` should be:'
+  show: 4
+  options:
+    a: '"/<repository-name>/"'
+    b: '"/" always'
+    c: The domain name
+    d: '"./dist"'
+q35:
+  text: 'The best next library for server data with caching is:'
+  show: 4
+  options:
+    a: TanStack Query
+    b: jQuery
+    c: Redux for everything
+    d: localStorage

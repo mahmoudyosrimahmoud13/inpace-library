@@ -1,0 +1,237 @@
+id: cybersecurity-basics
+title: 'Cybersecurity Basics: Think Like a Defender'
+version: 1
+language: en
+description: 'A practical start in cybersecurity: the security mindset and how real attacks happen, passwords, MFA and passkeys,
+  cryptography without the maths (hashes, encryption, TLS), network security and securing your own devices, how the web works
+  for security, the OWASP Top 10 with real fixes for access control, injection, XSS, CSRF, SSRF and misconfiguration, legal
+  places to practise, logs and incident response, threat modelling with STRIDE, and careers in security. Ends with a security
+  report on an app you own. Defensive and legal throughout. Optional videos by Computerphile and The Cyber Mentors. About
+  7 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: OWASP Top 10
+  url: https://owasp.org/Top10/
+- title: PortSwigger Web Security Academy (free labs)
+  url: https://portswigger.net/web-security
+- title: OWASP Cheat Sheet Series
+  url: https://cheatsheetseries.owasp.org/
+- title: OWASP Juice Shop
+  url: https://owasp.org/www-project-juice-shop/
+- title: MITRE ATT&CK
+  url: https://attack.mitre.org/
+modules:
+- id: m1
+  title: 'Day 1: The security mindset, and how attacks happen'
+  lessons:
+  - id: m1-l1
+    title: The security mindset
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: How attacks really happen
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Pick a service you use daily (your email or a banking app). List its assets, three threats, three vulnerabilities
+      that could exist, and which CIA goal each would break. Then collect two real phishing messages (from your spam folder;
+      hide personal details) and mark every warning sign. Upload both.
+  - id: m1-explain
+    type: explain
+    prompt: Explain defence in depth and least privilege, with one example of each from your own life or work.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Passwords, MFA and cryptography'
+  lessons:
+  - id: m2-l1
+    title: Passwords, MFA and passkeys
+    file: lessons/m2-l1.md
+    minutes: 25
+  - id: m2-l2
+    title: Cryptography without the maths
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Set up a password manager (Bitwarden or KeePassXC) and move three important accounts to unique generated passwords.
+      Turn on app-based MFA or a passkey on your email and one other account, and store the recovery codes offline. Then hash
+      a password with Argon2 in Python twice and show the two hashes differ. Upload screenshots (hide secrets) and your code
+      output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why websites must store passwords with a salt and a slow hash, and what goes wrong with plain SHA-256.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Networks and your own devices'
+  lessons:
+  - id: m3-l1
+    title: Network security basics
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Securing your own devices
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'On your own computer: list listening services with `ss -tulpn` and explain each, enable a firewall that denies
+      incoming by default, and run `nmap -sV localhost`. Then go through the personal security checklist and fix at least
+      three items (including a tested backup restore). Upload command output and the completed checklist.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why a database port should never be open to the whole internet, and how you'd let only the app server
+      reach it.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Web security, part 1'
+  lessons:
+  - id: m4-l1
+    title: How the web works, for security
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'The OWASP Top 10: access control and injection'
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Run OWASP Juice Shop locally with Docker. Using only the browser''s DevTools, find the session cookie and its
+      flags, and the security headers of the main page. Then complete two PortSwigger Academy apprentice labs: one access
+      control lab and one SQL injection lab. Upload screenshots and, for each lab, the vulnerable pattern and the fix in your
+      own words.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain why a parameterized query stops SQL injection while 'escaping quotes by hand' is fragile.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Web security, part 2'
+  lessons:
+  - id: m5-l1
+    title: XSS and CSRF
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Authentication flaws, SSRF and misconfiguration
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Complete PortSwigger apprentice labs for stored XSS and CSRF. Then review a small web app you wrote (or a sample
+      app): check for output escaping, CSRF protection, cookie flags, login rate limiting, secrets in the repository and debug
+      mode. Upload the lab screenshots and your review with fixes.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain the difference between XSS and CSRF, and the main defence against each.
+    min_words: 70
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Practise legally, detect and respond'
+  lessons:
+  - id: m6-l1
+    title: Practise legally, the right way
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: Logs, detection and incident response
+    file: lessons/m6-l2.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'On a Linux machine or VM you own: install fail2ban, show its sshd jail status, and use journalctl to list failed
+      SSH logins and the top IPs. Then write a one-page incident response plan for a hacked email account or a ransomware
+      infection on a small office PC. Upload command output and the plan.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain what you would do, in order, if you accidentally found a vulnerability on a real company's website.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Threat modelling, careers and the final project'
+  lessons:
+  - id: m7-l1
+    title: Threat modelling and secure development
+    file: lessons/m7-l1.md
+    minutes: 30
+  - id: m7-l2
+    title: Careers in security, and the final project
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Final project: produce the security report from the lesson for an app you own or OWASP Juice Shop: diagram with
+      trust boundaries, STRIDE threat model (8+ threats), 4+ findings with fixes, 3+ applied fixes with evidence, a hardening
+      checklist and a one-page incident plan. Upload the GitHub repository link.'
+  - id: m7-explain
+    type: explain
+    prompt: Choose one threat from your model and explain why you rated it the way you did and what you decided to do about
+      it.
+    min_words: 100
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

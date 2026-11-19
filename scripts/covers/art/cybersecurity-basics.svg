@@ -1,0 +1,10 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<path d="M260 60L420 120V250C420 360 350 430 260 470C170 430 100 360 100 250V120Z" fill="#ff8fab" stroke="#fbf2ff" stroke-width="6" filter="url(#s)"/>
+<rect x="205" y="225" width="110" height="90" rx="12" fill="#2d1b3d"/>
+<path d="M225 225v-30a35 35 0 0 1 70 0v30" fill="none" stroke="#2d1b3d" stroke-width="14"/>
+<circle cx="260" cy="262" r="12" fill="#ff8fab"/><rect x="255" y="268" width="10" height="26" fill="#ff8fab"/>
+<g font-family="JBM" font-weight="700" font-size="17" fill="#fbf2ff" opacity=".85">
+<text x="30" y="515">X-Frame-Options: DENY</text>
+<text x="30" y="542">SameSite=Lax; HttpOnly; Secure</text></g>
+</svg>

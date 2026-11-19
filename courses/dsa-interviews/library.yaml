@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: careers
+tags:
+- algorithms
+- data structures
+- interview
+- python
+- leetcode
+- intermediate
+credit: Written for the inPace library. Optional videos by NeetCode, Michael Sambol and freeCodeCamp.org (William Fiset, Alvin
+  Zablan), linked, not copied.

@@ -1,0 +1,280 @@
+q1:
+  text: 'A website flooded with traffic so users can''t reach it breaks:'
+  show: 4
+  options:
+    a: Availability
+    b: Confidentiality
+    c: Integrity
+    d: Authentication
+q2:
+  text: 'Risk is best described as:'
+  show: 4
+  options:
+    a: How likely something is times how bad it would be
+    b: Any vulnerability
+    c: The number of attackers
+    d: The cost of a firewall
+q3:
+  text: 'Most attacks on small companies and individuals are:'
+  show: 4
+  options:
+    a: Automated and untargeted
+    b: Carefully targeted by nation states
+    c: Done in person
+    d: Rare
+q4:
+  text: 'Credential stuffing works because:'
+  show: 4
+  options:
+    a: People reuse passwords across sites
+    b: Passwords are too long
+    c: MFA is on
+    d: Sites use HTTPS
+q5:
+  text: 'A message says ''send me the code you just received to verify your account''. You:'
+  show: 4
+  options:
+    a: Never share it; real companies don't ask for one-time codes
+    b: Send it quickly
+    c: Reply asking why
+    d: Post it publicly
+q6:
+  text: Which password is strongest?
+  show: 4
+  options:
+    a: correct-horse-battery-staple-river
+    b: P@ssw0rd1!
+    c: Ahmed1999
+    d: qwerty123456
+q7:
+  text: Which MFA method can't be phished?
+  show: 4
+  options:
+    a: A security key or passkey
+    b: SMS codes
+    c: Email codes
+    d: Security questions
+q8:
+  text: 'A salt in password storage:'
+  show: 4
+  options:
+    a: Makes the same password hash differently for each user
+    b: Encrypts the password
+    c: Is kept secret from the server
+    d: Makes passwords shorter
+q9:
+  text: 'Base64 is:'
+  show: 4
+  options:
+    a: An encoding, not encryption
+    b: Strong encryption
+    c: A hash
+    d: A signature
+q10:
+  text: 'The HTTPS padlock means:'
+  show: 4
+  options:
+    a: The connection to that address is private and authenticated
+    b: The site is honest
+    c: The site has no bugs
+    d: The site is government approved
+q11:
+  text: 'A safe default firewall policy is:'
+  show: 4
+  options:
+    a: Deny incoming, then allow only what's needed
+    b: Allow everything
+    c: Deny outgoing only
+    d: No firewall on Linux
+q12:
+  text: 'Port 3389 (Remote Desktop) open to the internet is:'
+  show: 4
+  options:
+    a: A top target for ransomware
+    b: Required for Windows
+    c: Harmless
+    d: Only used by printers
+q13:
+  text: 'You may scan with nmap:'
+  show: 4
+  options:
+    a: Machines you own or have written permission to test
+    b: Any website
+    c: Your university's servers
+    d: Your neighbour's Wi-Fi
+q14:
+  text: 'The 3-2-1 backup rule means:'
+  show: 4
+  options:
+    a: 3 copies, 2 kinds of storage, 1 offsite or offline
+    b: 3 backups a day
+    c: 2 passwords, 1 key
+    d: Backups every 3 weeks
+q15:
+  text: 'The biggest source of password-stealing malware on PCs is:'
+  show: 4
+  options:
+    a: Cracked software and pirated games
+    b: Official app stores
+    c: Operating system updates
+    d: Password managers
+q16:
+  text: Which can a user change before it reaches the server?
+  show: 4
+  options:
+    a: 'Everything: address, form fields, cookies, headers'
+    b: Only the address
+    c: Nothing over HTTPS
+    d: Only hidden fields are safe
+q17:
+  text: 'The HttpOnly cookie flag:'
+  show: 4
+  options:
+    a: Stops JavaScript from reading the cookie
+    b: Sends it only over HTTP
+    c: Encrypts it
+    d: Deletes it on logout
+q18:
+  text: 'Changing /invoices/41 to /invoices/42 shows someone else''s invoice. This is:'
+  show: 4
+  options:
+    a: Broken access control (IDOR)
+    b: SQL injection
+    c: XSS
+    d: A DDoS
+q19:
+  text: 'The real fix for SQL injection is:'
+  show: 4
+  options:
+    a: Parameterized queries
+    b: Hiding error messages
+    c: Removing spaces from input
+    d: Using POST instead of GET
+q20:
+  text: 'A security header that controls which scripts may run is:'
+  show: 4
+  options:
+    a: Content-Security-Policy
+    b: HSTS
+    c: Referrer-Policy
+    d: X-Content-Type-Options
+q21:
+  text: 'Stored XSS is dangerous because:'
+  show: 4
+  options:
+    a: Every visitor who views the page runs the attacker's script
+    b: It deletes the database
+    c: It needs physical access
+    d: It only affects the attacker
+q22:
+  text: Which is risky in a React app?
+  show: 4
+  options:
+    a: dangerouslySetInnerHTML with user content
+    b: Rendering {comment} in JSX
+    c: Using className
+    d: Using useState
+q23:
+  text: 'SameSite cookies mainly defend against:'
+  show: 4
+  options:
+    a: CSRF
+    b: SQL injection
+    c: Brute force
+    d: SSRF
+q24:
+  text: 'SSRF tricks:'
+  show: 4
+  options:
+    a: The server into fetching internal addresses for the attacker
+    b: The user into clicking
+    c: The browser into running scripts
+    d: The DNS into failing
+q25:
+  text: 'A secret API key was pushed to GitHub. The first step is:'
+  show: 4
+  options:
+    a: Rotate (replace) the key immediately
+    b: Delete the commit and hope
+    c: Make the repo private
+    d: Rename the file
+q26:
+  text: Which is a legal place to practise web attacks?
+  show: 4
+  options:
+    a: PortSwigger Web Security Academy
+    b: A random shop's website
+    c: Your university's portal without permission
+    d: A government site 'just to look'
+q27:
+  text: You should never write which into logs?
+  show: 4
+  options:
+    a: Passwords and session tokens
+    b: Login failures
+    c: IP addresses
+    d: Admin actions
+q28:
+  text: 'A SIEM is used to:'
+  show: 4
+  options:
+    a: Collect logs from many systems and raise alerts
+    b: Encrypt disks
+    c: Block all traffic
+    d: Write code
+q29:
+  text: 'In incident response, containment means:'
+  show: 4
+  options:
+    a: Stopping the spread, like isolating a machine or disabling an account
+    b: Writing the final report
+    c: Buying new laptops
+    d: Ignoring it
+q30:
+  text: 'If your account was hacked, change the password from:'
+  show: 4
+  options:
+    a: A clean device
+    b: The infected device
+    c: A public computer
+    d: The attacker's link
+q31:
+  text: 'In STRIDE, ''Tampering'' threatens:'
+  show: 4
+  options:
+    a: Integrity
+    b: Availability
+    c: Confidentiality
+    d: Authentication
+q32:
+  text: 'A trust boundary is:'
+  show: 4
+  options:
+    a: Where data crosses from something you don't control into something you do
+    b: A firewall brand
+    c: A password rule
+    d: The edge of the screen
+q33:
+  text: '''Shift left'' means:'
+  show: 4
+  options:
+    a: 'Building security in earlier: design, coding and CI'
+    b: Moving servers
+    c: Testing only before launch
+    d: Hiring more testers
+q34:
+  text: 'The most common entry-level security job is:'
+  show: 4
+  options:
+    a: SOC analyst
+    b: Chief security officer
+    c: Exploit developer
+    d: Cryptographer
+q35:
+  text: 'An uploaded file named photo.php that the server runs is mainly:'
+  show: 4
+  options:
+    a: Elevation of privilege (and tampering)
+    b: Repudiation
+    c: Denial of service only
+    d: Spoofing

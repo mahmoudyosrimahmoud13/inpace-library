@@ -1,0 +1,337 @@
+id: icpc-mansoura-problem-solving-ar
+title: 'حل المشكلات والبرمجة التنافسية: على خطى ICPC Mansoura'
+version: 1
+language: ar
+description: 'كورس حل مشكلات وبرمجة تنافسية بلغة C++، يسير بنفس ترتيب تدريب ICPC Mansoura للمستويين 0 و 1: مقدمة في حل المشكلات
+  والحَكَم، المصفوفات والنصوص، الدوال وتعقيد الوقت، مسائل Ad-hoc والمجموع التراكمي، مكتبة STL، المؤشران، البحث الثنائي، نظرية
+  الأعداد (الأوليات، GCD، الأس السريع، المعكوس الضربي، nCr)، البتات والبحث الكامل، الاستدعاء الذاتي والتراجع، الجراف مع DFS
+  و BFS، والبرمجة الديناميكية. كل درس كامل ويعمل بدون إنترنت، وجلسات ICPC Mansoura Community الأصلية على يوتيوب فيديوهات اختيارية،
+  مع تدريب على شيتات Codeforces. حوالي 12 يومًا، ساعة إلى ساعتين يوميًا، ثم تدريب مستمر.'
+image: cover.jpg
+downloads:
+- title: مسائل المستوى 0 (مجموعة ICPC Mansoura على Codeforces)
+  url: https://codeforces.com/group/5pUldkahAU/contests
+- title: شيتات المستوى 1 (مجموعة vjudge)
+  url: https://vjudge.net/group/mansoura-level1-roadmap
+- title: صفحة تدريب ICPC Mansoura (كل المستويات والروابط)
+  url: https://msc.acm.org/training
+- title: قناة ICPC Mansoura Community على يوتيوب
+  url: https://www.youtube.com/@icpcmansouracommunity
+- title: 'Codeforces EDU: دروس وتمارين مجانية'
+  url: https://codeforces.com/edu/courses
+- title: AtCoder Educational DP Contest
+  url: https://atcoder.jp/contests/dp
+modules:
+- id: m1
+  title: 'اليوم 1: ما هو حل المشكلات؟ وأول برنامج'
+  lessons:
+  - id: m1-l1
+    title: ما هو حل المشكلات؟ وأول برنامج بـ C++
+    file: lessons/m1-l1.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'أنشئ حسابًا على Codeforces وانضم لمجموعة المستوى 0 (الرابط في التحميلات). حل 5 مسائل على الأقل من أول شيت (أو:
+      Watermelon 4A، Way Too Long Words 71A، Team 231A، Domino piling 50A، Bit++ 282A). ارفع صور Accepted ورابط حسابك.'
+  - id: m1-explain
+    type: explain
+    prompt: اشرح لماذا تخبرك القيود (Constraints) في المسألة بنوع الحل المطلوب، مع مثال.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'اليوم 2: المصفوفات والنصوص'
+  lessons:
+  - id: m2-l1
+    title: المصفوفات والنصوص
+    file: lessons/m2-l1.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'حل 6 مسائل من شيت المصفوفات والنصوص في المستوى 0، أو: Petya and Strings 112A، Word 59A، Boy or Girl 236A، Stones
+      on the Table 266A. ارفع الأكواد وصور Accepted.'
+  - id: m2-explain
+    type: explain
+    prompt: اشرح كيف تستخدم s[i] - 'a' لعد تكرار كل حرف، ولماذا تعمل.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'اليوم 3: الدوال، الـ struct، وتعقيد الوقت'
+  lessons:
+  - id: m3-l1
+    title: الدوال، الـ struct، وتعقيد الوقت
+    file: lessons/m3-l1.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اكتب دالة isPrime في O(√n) ودالة تجمع vector بالمرجع الثابت. رتّب طلابًا (struct فيه اسم ودرجة) بالدرجة تنازليًا
+      ثم بالاسم. وحل 4 مسائل من شيت المستوى 0 لهذا الجزء، واكتب تعقيد كل حل في تعليق أعلى الكود. ارفع الأكواد.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح لماذا يكفي في اختبار الأولية أن نجرّب القسمة حتى √n فقط.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'اليوم 4: مسائل Ad-hoc والمجموع التراكمي'
+  lessons:
+  - id: m4-l1
+    title: 'مسائل Ad-hoc: التكرار والمجموع التراكمي'
+    file: lessons/m4-l1.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: حل 6 مسائل من شيت Ad-Hocs في المستوى 0. ثم اكتب برنامجًا يقرأ مصفوفة و q سؤالًا (l, r) ويجيب كل سؤال في O(1) بالمجموع
+      التراكمي، وجرّبه على n = q = 10⁵. ارفع الأكواد وصور Accepted.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح فكرة المجموع التراكمي ولماذا يجعل كل سؤال عن مجموع مدى في O(1).
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'اليوم 5: STL 1'
+  lessons:
+  - id: m5-l1
+    title: 'STL 1: vector و pair و sort والنصوص'
+    file: lessons/m5-l1.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: حل 6 مسائل من شيت STLs 1 في المستوى 0 مستخدمًا sort و vector و pair ودوال STL (unique، lower_bound، next_permutation).
+      ارفع الأكواد وصور Accepted.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح ما الذي يجب أن تُرجعه دالة المقارنة في sort، ولماذا لا نستخدم <= فيها.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'اليوم 6: STL 2'
+  lessons:
+  - id: m6-l1
+    title: 'STL 2: set و map و stack و queue و priority_queue'
+    file: lessons/m6-l1.md
+    minutes: 30
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: حل 6 مسائل من شيت STLs 2 في المستوى 0 مستخدمًا set و map و stack و queue و priority_queue. ثم شارك في أول مسابقة
+      لك (Div. 4 أو Div. 3 أو مسابقة المستوى 0 الافتراضية). ارفع الأكواد ورابط المسابقة.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح متى تختار map بدل مصفوفة تكرار، ومتى تختار set بدل vector.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'اليوم 7: المؤشران (Two Pointers)'
+  lessons:
+  - id: m7-l1
+    title: Ad-hoc والمؤشران (Two Pointers)
+    file: lessons/m7-l1.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: حل 6 مسائل من شيت Adhocs & Two Pointers في المستوى 1 (vjudge في التحميلات)، منها مسألة نافذة منزلقة على الأقل.
+      اكتب الحل المباشر O(n²) وتعقيده في تعليق، ثم حلك بالمؤشرين. ارفع الأكواد.
+  - id: m7-explain
+    type: explain
+    prompt: اشرح لماذا تعقيد حل المؤشرين O(n) رغم وجود while داخل for.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'اليوم 8: البحث الثنائي'
+  lessons:
+  - id: m8-l1
+    title: البحث الثنائي (Binary Search)
+    file: lessons/m8-l1.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: حل 6 مسائل من شيت Binary Search في المستوى 1، منها مسألتان على الأقل من نوع البحث على الإجابة. لكل مسألة اكتب
+      دالة التحقق ok() ولماذا هي رتيبة. ارفع الأكواد.
+  - id: m8-explain
+    type: explain
+    prompt: اشرح فكرة البحث الثنائي على الإجابة بمثال المصانع (أقل وقت لصنع k منتج).
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m9
+  title: 'اليوم 9 و 10: نظرية الأعداد'
+  lessons:
+  - id: m9-l1
+    title: 'نظرية الأعداد 1: القسمة، الأعداد الأولية، و GCD'
+    file: lessons/m9-l1.md
+    minutes: 30
+  - id: m9-l2
+    title: 'نظرية الأعداد 2: الأسس السريعة والمعكوس الضربي'
+    file: lessons/m9-l2.md
+    minutes: 30
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'اكتب: غربال إراتوستينس حتى 10⁶، دالة تحليل لعوامل أولية، gcd و lcm بدون overflow، power(a, n, mod)، و nCr مع
+      mod بعد تجهيز المضروب. ثم حل 5 مسائل من شيتي Number Theory 1 و 2 في المستوى 1. ارفع الأكواد وصور Accepted.'
+  - id: m9-explain
+    type: explain
+    prompt: اشرح لماذا لا نستطيع القسمة مباشرة تحت mod، وكيف تحل نظرية فيرما المشكلة.
+    min_words: 70
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    pass: 70
+- id: m10
+  title: 'اليوم 11: البتات، البحث الكامل، والتراجع'
+  lessons:
+  - id: m10-l1
+    title: البتات (Bitmasks) والبحث الكامل
+    file: lessons/m10-l1.md
+    minutes: 30
+  - id: m10-l2
+    title: الاستدعاء الذاتي والتراجع (Recursion & Backtracking)
+    file: lessons/m10-l2.md
+    minutes: 30
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: حل 6 مسائل من شيتي Bitmasks and Complete Search و Recursion and Backtracking في المستوى 1. واكتب حل N-Queens لـ
+      n = 8 (الإجابة 92) مع التقليم. ارفع الأكواد وصور Accepted.
+  - id: m10-explain
+    type: explain
+    prompt: اشرح كيف يمثل رقم واحد (mask) مجموعة جزئية، وكيف نمر على كل المجموعات الجزئية.
+    min_words: 70
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q46
+    - q47
+    - q48
+    - q49
+    - q50
+    pass: 70
+- id: m11
+  title: 'اليوم 12: الجراف، DFS و BFS'
+  lessons:
+  - id: m11-l1
+    title: مقدمة في الجراف و DFS
+    file: lessons/m11-l1.md
+    minutes: 30
+  - id: m11-l2
+    title: BFS وتطبيقات الجراف
+    file: lessons/m11-l2.md
+    minutes: 30
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: 'حل 6 مسائل من شيتي Intro To Graph and DFS و BFS في المستوى 1، منها: عدد المكوّنات المتصلة، عدد الغرف في شبكة،
+      وأقصر طريق في متاهة مع طباعة المسار. ارفع الأكواد وصور Accepted.'
+  - id: m11-explain
+    type: explain
+    prompt: اشرح لماذا يجد BFS أقصر مسار في جراف غير موزون بينما DFS لا يضمن ذلك.
+    min_words: 70
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q51
+    - q52
+    - q53
+    - q54
+    - q55
+    pass: 70
+- id: m12
+  title: 'اليوم 13: البرمجة الديناميكية، والخطوة التالية'
+  lessons:
+  - id: m12-l1
+    title: البرمجة الديناميكية (Dynamic Programming)
+    file: lessons/m12-l1.md
+    minutes: 35
+  requires:
+  - id: m12-practical
+    type: practical
+    prompt: حل أول 6 مسائل من AtCoder Educational DP Contest (Frog 1، Frog 2، Vacation، Knapsack 1، Knapsack 2 اختيارية، LCS)،
+      واكتب لكل واحدة الحالة بالكلمات والانتقال وحالات الأساس في تعليق. ثم شارك في مسابقة Codeforces حية. ارفع الأكواد ورابط
+      المسابقة.
+  - id: m12-explain
+    type: explain
+    prompt: اختر مسألة DP حللتها واشرح الحالة والانتقال وحالات الأساس، والفرق بين حلها بـ memoization و tabulation.
+    min_words: 100
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - q56
+    - q57
+    - q58
+    - q59
+    - q60
+    pass: 70

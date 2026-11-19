@@ -1,0 +1,140 @@
+q1:
+  right:
+  - a
+  why: Types exist for your editor and build, not at runtime.
+q2:
+  right:
+  - a
+  why: The value must be exactly one of those strings.
+q3:
+  right:
+  - a
+  why: Check it with if (box) first.
+q4:
+  right:
+  - a
+  why: unknown forces you to narrow before using it.
+q5:
+  right:
+  - a
+  why: Handy for 'a task before it's saved'.
+q6:
+  right:
+  - a
+  why: React works out the changes for you.
+q7:
+  right:
+  - a
+  why: class is a reserved word in JavaScript.
+q8:
+  right:
+  - a
+  why: Write onClick={() => remove(task.id)}.
+q9:
+  right:
+  - a
+  why: Use count > 0 &&.
+q10:
+  right:
+  - a
+  why: Data goes down, requests go up.
+q11:
+  right:
+  - a
+  why: useState keeps the value and triggers a render.
+q12:
+  right:
+  - a
+  why: Always a new array and a new object.
+q13:
+  right:
+  - a
+  why: Lifting state up.
+q14:
+  right:
+  - a
+  why: Convert with Number().
+q15:
+  right:
+  - a
+  why: Remember e.preventDefault().
+q16:
+  right:
+  - a
+  why: Strict Mode double-runs to expose missing cleanups.
+q17:
+  right:
+  - a
+  why: Otherwise timers pile up.
+q18:
+  right:
+  - a
+  why: AbortController does it.
+q19:
+  right:
+  - a
+  why: You might not need an effect.
+q20:
+  right:
+  - a
+  why: Use Context to share data.
+q21:
+  right:
+  - a
+  why: a href reloads everything.
+q22:
+  right:
+  - a
+  why: Check for a missing item too.
+q23:
+  right:
+  - a
+  why: Easy to test without React.
+q24:
+  right:
+  - a
+  why: A clear error beats a mysterious crash.
+q25:
+  right:
+  - a
+  why: A static host serves files, not routes.
+q26:
+  right:
+  - a
+  why: Find things the way users do.
+q27:
+  right:
+  - a
+  why: findBy queries return a promise.
+q28:
+  right:
+  - a
+  why: Optimize what's actually slow.
+q29:
+  right:
+  - a
+  why: Use <button>.
+q30:
+  right:
+  - a
+  why: Colour alone isn't enough.
+q31:
+  right:
+  - a
+  why: Broken code never ships.
+q32:
+  right:
+  - a
+  why: 'And they''re public: no secrets.'
+q33:
+  right:
+  - a
+  why: Anyone can read front-end code.
+q34:
+  right:
+  - a
+  why: GitHub Pages serves it from a subfolder.
+q35:
+  right:
+  - a
+  why: It handles loading, errors and refetching.
