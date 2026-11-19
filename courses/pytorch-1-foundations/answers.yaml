@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: PyTorch's default float is float32.
+q2:
+  right:
+  - a
+  why: torch.tensor(a) copies.
+q3:
+  right:
+  - a
+  why: Use permute(0, 3, 1, 2) from channels-last.
+q4:
+  right:
+  - a
+  why: Use reshape when unsure.
+q5:
+  right:
+  - a
+  why: stack adds a new dimension.
+q6:
+  right:
+  - a
+  why: w.grad, b.grad...
+q7:
+  right:
+  - a
+  why: Gradients accumulate.
+q8:
+  right:
+  - a
+  why: Saves memory and time.
+q9:
+  right:
+  - a
+  why: Clear, compute, update.
+q10:
+  right:
+  - a
+  why: Try 10 times smaller.
+q11:
+  right:
+  - a
+  why: Use ModuleList for variable numbers.
+q12:
+  right:
+  - a
+  why: Train and eval modes differ only for some layers.
+q13:
+  right:
+  - a
+  why: It applies log-softmax itself.
+q14:
+  right:
+  - a
+  why: Avoids a memory leak.
+q15:
+  right:
+  - a
+  why: Weights plus biases of each layer.
+q16:
+  right:
+  - a
+  why: Count and fetch example i.
+q17:
+  right:
+  - a
+  why: Keep validation order fixed.
+q18:
+  right:
+  - a
+  why: Keeps the GPU fed.
+q19:
+  right:
+  - a
+  why: A simple guard against overfitting.
+q20:
+  right:
+  - a
+  why: Tensors only, no code execution on load.
+q21:
+  right:
+  - a
+  why: If it can't memorise one batch, something is broken.
+q22:
+  right:
+  - a
+  why: It guesses about 1/10 per class.
+q23:
+  right:
+  - a
+  why: Same preprocessing in training and production.
+q24:
+  right:
+  - a
+  why: Move the model once and every batch.
+q25:
+  right:
+  - a
+  why: It points at where to improve.

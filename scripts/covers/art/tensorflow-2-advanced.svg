@@ -1,0 +1,11 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f4d35e"/></marker></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="20" text-anchor="middle" fill="#1f3d36">
+<rect x="160" y="60" width="200" height="70" rx="12" fill="#fdf6e9"/><text x="260" y="102">SavedModel</text>
+<rect x="30" y="250" width="140" height="70" rx="12" fill="#7fd3ff"/><text x="100" y="292">Serving</text>
+<rect x="190" y="250" width="140" height="70" rx="12" fill="#9ee6b8"/><text x="260" y="292">LiteRT</text>
+<rect x="350" y="250" width="140" height="70" rx="12" fill="#ff8fab"/><text x="420" y="292">TF.js</text></g>
+<g stroke="#f4d35e" stroke-width="5" fill="none" marker-end="url(#a)"><path d="M220 132 L110 245"/><path d="M260 132 L260 245"/><path d="M300 132 L410 245"/></g>
+<g font-family="JBM" font-weight="700" font-size="22" fill="#fdf6e9"><text x="60" y="420">with GradientTape() as t:</text><text x="90" y="465">loss = ...</text></g>
+</svg>

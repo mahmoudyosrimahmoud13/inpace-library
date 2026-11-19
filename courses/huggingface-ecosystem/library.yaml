@@ -1,0 +1,15 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- hugging face
+- transformers
+- peft
+- lightning
+- jax
+- intermediate
+credit: Written for the inPace library; all code tested with transformers 5.23, datasets 5.2, peft 0.21, Lightning 2.6, Accelerate
+  1.16, JAX 0.12 and ONNX Runtime 1.32. Optional videos from Hugging Face, AssemblyAI, Umar Jamil, Andrej Karpathy and Fireship,
+  linked, not copied.

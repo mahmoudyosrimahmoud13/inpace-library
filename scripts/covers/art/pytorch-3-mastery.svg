@@ -1,0 +1,12 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="20" text-anchor="middle" fill="#1f3d36">
+<rect x="50" y="70" width="190" height="110" rx="10" fill="#9ee6b8"/><text x="145" y="120">GPU 0</text><text x="145" y="150" font-size="16">grads</text>
+<rect x="280" y="70" width="190" height="110" rx="10" fill="#9ee6b8"/><text x="375" y="120">GPU 1</text><text x="375" y="150" font-size="16">grads</text>
+<rect x="150" y="230" width="220" height="60" rx="30" fill="#f4d35e"/><text x="260" y="268">all-reduce</text>
+<rect x="50" y="350" width="130" height="60" rx="10" fill="#7fd3ff"/><text x="115" y="388">compile</text>
+<rect x="195" y="350" width="130" height="60" rx="10" fill="#ff8fab"/><text x="260" y="388">export</text>
+<rect x="340" y="350" width="130" height="60" rx="10" fill="#fdf6e9"/><text x="405" y="388">int8</text></g>
+<path d="M145 182 L220 228 M375 182 L300 228" stroke="#fdf6e9" stroke-width="5"/>
+<text x="260" y="490" font-family="JBM" font-weight="700" font-size="22" fill="#fdf6e9" text-anchor="middle">torchrun --nproc 8</text>
+</svg>

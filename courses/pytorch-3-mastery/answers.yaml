@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Synchronise before reading a timer.
+q2:
+  right:
+  - a
+  why: Later calls reuse the compiled code.
+q3:
+  right:
+  - a
+  why: Activations are recomputed in backward.
+q4:
+  right:
+  - a
+  why: TORCH_LOGS=graph_breaks shows where.
+q5:
+  right:
+  - a
+  why: Use with non_blocking=True.
+q6:
+  right:
+  - a
+  why: Read them back with ctx.saved_tensors.
+q7:
+  right:
+  - a
+  why: Common for rounding and quantisation.
+q8:
+  right:
+  - a
+  why: Per-example gradients, for example.
+q9:
+  right:
+  - a
+  why: Uniform guesses over the vocabulary.
+q10:
+  right:
+  - a
+  why: It catches a leaking mask.
+q11:
+  right:
+  - a
+  why: An all-reduce keeps every copy identical.
+q12:
+  right:
+  - a
+  why: Otherwise every epoch uses the same order.
+q13:
+  right:
+  - a
+  why: Per-process batch times processes.
+q14:
+  right:
+  - a
+  why: Each GPU holds 1/N of them.
+q15:
+  right:
+  - a
+  why: Every rank must call the same collectives in order.
+q16:
+  right:
+  - a
+  why: The base for AOTInductor, ExecuTorch and ONNX.
+q17:
+  right:
+  - a
+  why: Use Dim for batch or sequence length.
+q18:
+  right:
+  - a
+  why: Dropout and BatchNorm must be in inference mode.
+q19:
+  right:
+  - a
+  why: quantize_(model, config).
+q20:
+  right:
+  - a
+  why: w ≈ int8 × scale.
+q21:
+  right:
+  - a
+  why: Loading per request is slow.
+q22:
+  right:
+  - a
+  why: Pure inference needs no graph.
+q23:
+  right:
+  - a
+  why: GPUs are efficient on batches.
+q24:
+  right:
+  - a
+  why: An inflated score is worse than none.
+q25:
+  right:
+  - a
+  why: Reviewers trust measured comparisons.

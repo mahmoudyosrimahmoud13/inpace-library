@@ -18,65 +18,172 @@ The app checks every course against the library's list before adding it. Your pr
 
 ## Courses
 
-| | Course | Pace |
-|---|---|---|
-| <img src="courses/ai-engineer-hired-1/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 1: the market, your first project and your CV](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-1.html) | about 12 weeks, with part 2 |
-| <img src="courses/ai-engineer-hired-2/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 2: the coding interview intensive](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-2.html) | 12 weeks |
-| <img src="courses/ai-engineer-hired-3/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 3: AI interviews, system design and a production project](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-3.html) | 10 weeks |
-| <img src="courses/ai-engineer-hired-1-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 1: السوق ومشروعك الأول وسيرتك الذاتية](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-1-ar.html) | نحو 12 أسبوعًا مع الجزء 2 |
-| <img src="courses/ai-engineer-hired-2-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 2: البرنامج المكثف لمقابلات البرمجة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-2-ar.html) | 12 أسبوعًا |
-| <img src="courses/ai-engineer-hired-3-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 3: مقابلات الذكاء الاصطناعي وتصميم الأنظمة ومشروع إنتاجي](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-3-ar.html) | 10 أسابيع |
-| <img src="courses/python-full/files/cover.jpg" width="160" alt=""> | [Python: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full.html) (on Harvard's CS50P syllabus) | 11 weeks |
-| <img src="courses/python-full-ar/files/cover.jpg" width="160" alt=""> | [بايثون: الدورة الكاملة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full-ar.html) (على منهج CS50P من هارفارد) | 11 أسبوعًا |
-| <img src="courses/csharp-dotnet-beginners/files/cover.jpg" width="160" alt=""> | [C# and .NET for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners.html) (on Microsoft Learn's docs) | 10 weeks |
-| <img src="courses/csharp-dotnet-beginners-ar/files/cover.jpg" width="160" alt=""> | [C# و.NET للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners-ar.html) (على توثيق Microsoft Learn) | 10 أسابيع |
-| <img src="courses/git-zero-to-master/files/cover.jpg" width="160" alt=""> | [Git from zero to master](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-zero-to-master.html) (optional videos from freeCodeCamp) | 6 weeks |
-| <img src="courses/git-zero-to-master-ar/files/cover.jpg" width="160" alt=""> | [احترف Git من الصفر](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-zero-to-master-ar.html) (فيديوهات اختيارية من freeCodeCamp) | 6 أسابيع |
-| <img src="courses/github-actions-cli/files/cover.jpg" width="160" alt=""> | [GitHub: pull requests, the CLI and Actions](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/github-actions-cli.html) | 4 weeks |
-| <img src="courses/github-actions-cli-ar/files/cover.jpg" width="160" alt=""> | [دورة GitHub: طلبات الدمج وسطر الأوامر و Actions](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/github-actions-cli-ar.html) | 4 أسابيع |
-| <img src="courses/javascript-full/files/cover.jpg" width="160" alt=""> | [JavaScript: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full.html) (optional videos from freeCodeCamp) | 10 weeks |
-| <img src="courses/javascript-full-ar/files/cover.jpg" width="160" alt=""> | [الدورة الكاملة في JavaScript](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full-ar.html) (فيديوهات اختيارية من freeCodeCamp) | 10 أسابيع |
-| <img src="courses/inpace-inside/files/cover.jpg" width="160" alt=""> | [inPace from the inside: how the app works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/inpace-inside.html) | 1 week |
-| <img src="courses/html-css-for-inpace/files/cover.jpg" width="160" alt=""> | [HTML & CSS for inPace's pages](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/html-css-for-inpace.html) | 1 week |
-| <img src="courses/javascript-for-inpace/files/cover.jpg" width="160" alt=""> | [JavaScript, the inPace way](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-for-inpace.html) | 1 week |
-| <img src="courses/jinja-for-inpace/files/cover.jpg" width="160" alt=""> | [Jinja templates](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/jinja-for-inpace.html) | 4 days |
-| <img src="courses/fastapi-starlette-for-inpace/files/cover.jpg" width="160" alt=""> | [FastAPI & Starlette: the server behind inPace](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fastapi-starlette-for-inpace.html) | 5 days |
-| <img src="courses/mls-1-supervised/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 1: supervised learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-1-supervised.html) | about 10 days |
-| <img src="courses/mls-2-advanced-algorithms/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 2: neural networks, ML practice, trees](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-2-advanced-algorithms.html) | about 12 days |
-| <img src="courses/mls-3-unsupervised-rl/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 3: unsupervised, recommenders, RL](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-3-unsupervised-rl.html) | about 9 days |
-| <img src="courses/dl-1-neural-networks/files/cover.jpg" width="160" alt=""> | [Deep Learning 1: neural networks, with PyTorch and Keras](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-1-neural-networks.html) | 8 days |
-| <img src="courses/dl-2-improving-networks/files/cover.jpg" width="160" alt=""> | [Deep Learning 2: regularization, optimizers and tuning](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-2-improving-networks.html) | 8 days |
-| <img src="courses/dl-3-ml-projects/files/cover.jpg" width="160" alt=""> | [Deep Learning 3: structuring ML projects](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-3-ml-projects.html) | 6 days |
-| <img src="courses/dl-4-cnns/files/cover.jpg" width="160" alt=""> | [Deep Learning 4: convolutional networks and computer vision](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-4-cnns.html) | 9 days |
-| <img src="courses/dl-5-sequence-models/files/cover.jpg" width="160" alt=""> | [Deep Learning 5: sequence models, attention and transformers](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-5-sequence-models.html) | 9 days |
-| <img src="courses/mml-1-linear-algebra-geometry/files/cover.jpg" width="160" alt=""> | [Maths for ML 1: linear algebra and analytic geometry](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-1-linear-algebra-geometry.html) | 7 days |
-| <img src="courses/mml-2-decompositions-calculus/files/cover.jpg" width="160" alt=""> | [Maths for ML 2: matrix decompositions and vector calculus](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-2-decompositions-calculus.html) | 8 days |
-| <img src="courses/mml-3-probability-optimization/files/cover.jpg" width="160" alt=""> | [Maths for ML 3: probability and optimization](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-3-probability-optimization.html) | 9 days |
-| <img src="courses/mml-4-machine-learning-problems/files/cover.jpg" width="160" alt=""> | [Maths for ML 4: regression, PCA, mixtures and SVMs](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-4-machine-learning-problems.html) | 10 days |
-| <img src="courses/flutter-advanced-interview/files/cover.jpg" width="160" alt=""> | [Advanced Flutter and interview revision](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-advanced-interview.html) | 4 weeks |
-| <img src="courses/docker-kubernetes-ar/files/cover.jpg" width="160" alt=""> | [دورة Docker و Kubernetes بالعربي](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-kubernetes-ar.html) (video by Ahmed Sami, Big Data بالعربي) | 3 weeks |
-| <img src="courses/docker-kubernetes-en/files/cover.jpg" width="160" alt=""> | [Docker and Kubernetes: from a container to a cluster](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-kubernetes-en.html) (same video, in Egyptian Arabic, with English notes) | 3 weeks |
-| <img src="courses/system-design-beginners/files/cover.jpg" width="160" alt=""> | [System design for beginners: design a live streaming service](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/system-design-beginners.html) (video by Gaurav Sen, freeCodeCamp.org) | 1 week |
-| <img src="courses/data-analytics-beginners/files/cover.jpg" width="160" alt=""> | [Data analytics for beginners: spreadsheets, Power BI and Python](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-analytics-beginners.html) | 4 weeks |
-| <img src="courses/spanish-a1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a1-ar.html) | 4 أسابيع |
-| <img src="courses/spanish-a2-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a2-ar.html) | 5 أسابيع |
-| <img src="courses/spanish-b1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-b1-ar.html) | 6 أسابيع |
-| <img src="courses/german-a1-ar/files/cover.jpg" width="160" alt=""> | [الألماني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a1-ar.html) | 4 أسابيع |
-| <img src="courses/german-a2-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a2-ar.html) | 5 أسابيع |
-| <img src="courses/german-b1-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-b1-ar.html) | 6 أسابيع |
-| <img src="courses/english-a1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a1-ar.html) | 4 أسابيع |
-| <img src="courses/english-a2-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a2-ar.html) | 5 أسابيع |
-| <img src="courses/english-b1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-b1-ar.html) | 6 أسابيع |
-| <img src="courses/fastapi/files/cover.jpg" width="160" alt=""> | [FastAPI: from first API to production](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fastapi.html) | about 12 hours |
-| <img src="courses/flutter-tdd-and-clean-architecture/files/cover.jpg" width="160" alt=""> | [Flutter TDD and Clean Architecture](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-tdd-and-clean-architecture.html) | about 8 hours |
-| <img src="courses/python-basics/files/cover.jpg" width="160" alt=""> | [Python Basics](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics.html) | 1 hour |
-| <img src="courses/python-basics-ar/files/cover.jpg" width="160" alt=""> | [أساسيات بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics-ar.html) | ساعة |
+93 courses in 11 sections. Every course works offline; videos, where a course has them, are optional extras at the end of a lesson.
+
+### Linux, Cloud and DevOps · لينكس والسحابة وDevOps
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/aws-fundamentals/files/cover.jpg" width="160" alt=""> | [Cloud Computing and AWS Fundamentals](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/aws-fundamentals.html) | 16 | about 7 h |
+| <img src="courses/bash-automation/files/cover.jpg" width="160" alt=""> | [Bash and Linux Automation](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/bash-automation.html) | 16 | about 8 h |
+| <img src="courses/cloud-linux-admin/files/cover.jpg" width="160" alt=""> | [Cloud Linux Administration](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cloud-linux-admin.html) | 14 | about 7 h |
+| <img src="courses/devops-cicd/files/cover.jpg" width="160" alt=""> | [DevOps and CI/CD Pipelines](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/devops-cicd.html) | 14 | about 7 h |
+| <img src="courses/docker-containers/files/cover.jpg" width="160" alt=""> | [Docker and Containers, Properly](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-containers.html) | 14 | about 7 h |
+| <img src="courses/docker-kubernetes-ar/files/cover.jpg" width="160" alt=""> | [دورة Docker و Kubernetes بالعربي: من الحاوية إلى الـ Cluster](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-kubernetes-ar.html) | 35 | حوالي 11 ساعة |
+| <img src="courses/docker-kubernetes-en/files/cover.jpg" width="160" alt=""> | [Docker and Kubernetes: from a container to a cluster](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/docker-kubernetes-en.html) | 35 | about 11 h |
+| <img src="courses/git-zero-to-master/files/cover.jpg" width="160" alt=""> | [Git from zero to master](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-zero-to-master.html) | 32 | about 15 h |
+| <img src="courses/git-zero-to-master-ar/files/cover.jpg" width="160" alt=""> | [احترف Git من الصفر](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-zero-to-master-ar.html) | 32 | حوالي 15 ساعة |
+| <img src="courses/github-actions-cli/files/cover.jpg" width="160" alt=""> | [GitHub: pull requests, the CLI and Actions](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/github-actions-cli.html) | 19 | about 9 h |
+| <img src="courses/github-actions-cli-ar/files/cover.jpg" width="160" alt=""> | [دورة GitHub: طلبات الدمج وسطر الأوامر و Actions](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/github-actions-cli-ar.html) | 19 | حوالي 9 ساعة |
+| <img src="courses/iac-terraform-ansible/files/cover.jpg" width="160" alt=""> | [Infrastructure as Code with Terraform and Ansible](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/iac-terraform-ansible.html) | 14 | about 7 h |
+| <img src="courses/linux-advanced-internals/files/cover.jpg" width="160" alt=""> | [Advanced Linux and System Internals](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/linux-advanced-internals.html) | 16 | about 8 h |
+| <img src="courses/linux-cloud-capstone/files/cover.jpg" width="160" alt=""> | [Linux, Cloud and DevOps Final Project](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/linux-cloud-capstone.html) | 10 | about 5 h |
+| <img src="courses/linux-fundamentals/files/cover.jpg" width="160" alt=""> | [Linux Fundamentals and the Command Line](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/linux-fundamentals.html) | 16 | about 8 h |
+| <img src="courses/linux-network-security/files/cover.jpg" width="160" alt=""> | [Linux Networking and Security](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/linux-network-security.html) | 16 | about 8 h |
+| <img src="courses/linux-sysadmin/files/cover.jpg" width="160" alt=""> | [Linux System Administration: run real servers](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/linux-sysadmin.html) | 16 | about 8 h |
+| <img src="courses/networking-fundamentals/files/cover.jpg" width="160" alt=""> | [Networking Fundamentals: how data really moves](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/networking-fundamentals.html) | 16 | about 8 h |
+| <img src="courses/observability-sre/files/cover.jpg" width="160" alt=""> | [Observability, Reliability and Production Operations](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/observability-sre.html) | 14 | about 7 h |
+| <img src="courses/os-fundamentals/files/cover.jpg" width="160" alt=""> | [Operating Systems Fundamentals: what the OS really does](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/os-fundamentals.html) | 19 | about 9 h |
+| <img src="courses/ssh-remote-admin/files/cover.jpg" width="160" alt=""> | [SSH and Remote Linux Administration](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ssh-remote-admin.html) | 14 | about 6 h |
+
+### Programming and Web · البرمجة والويب
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/csharp-dotnet-beginners/files/cover.jpg" width="160" alt=""> | [C# and .NET for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners.html) | 20 | about 7 h |
+| <img src="courses/csharp-dotnet-beginners-ar/files/cover.jpg" width="160" alt=""> | [C# و.NET للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners-ar.html) | 20 | حوالي 7 ساعة |
+| <img src="courses/fastapi/files/cover.jpg" width="160" alt=""> | [FastAPI: from first API to production](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fastapi.html) | 35 | about 12 h |
+| <img src="courses/flutter-advanced-interview/files/cover.jpg" width="160" alt=""> | [Advanced Flutter and interview revision: get hired](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-advanced-interview.html) | 27 | about 13 h |
+| <img src="courses/flutter-tdd-and-clean-architecture/files/cover.jpg" width="160" alt=""> | [Flutter TDD and Clean Architecture](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/flutter-tdd-and-clean-architecture.html) | 15 | about 8 h |
+| <img src="courses/javascript-full/files/cover.jpg" width="160" alt=""> | [JavaScript: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full.html) | 29 | about 14 h |
+| <img src="courses/javascript-full-ar/files/cover.jpg" width="160" alt=""> | [الدورة الكاملة في JavaScript](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-full-ar.html) | 29 | حوالي 14 ساعة |
+| <img src="courses/python-basics/files/cover.jpg" width="160" alt=""> | [Python Basics](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics.html) | 4 | about 1 h |
+| <img src="courses/python-basics-ar/files/cover.jpg" width="160" alt=""> | [أساسيات بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-basics-ar.html) | 4 | حوالي 1 ساعة |
+| <img src="courses/python-full/files/cover.jpg" width="160" alt=""> | [Python: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full.html) | 29 | about 10 h |
+| <img src="courses/python-full-ar/files/cover.jpg" width="160" alt=""> | [بايثون: الدورة الكاملة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full-ar.html) | 29 | حوالي 10 ساعة |
+| <img src="courses/react-typescript/files/cover.jpg" width="160" alt=""> | [React and TypeScript: Build Real Apps](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/react-typescript.html) | 14 | about 6 h |
+| <img src="courses/system-design-beginners/files/cover.jpg" width="160" alt=""> | [System design for beginners: design a live streaming service](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/system-design-beginners.html) | 26 | about 7 h |
+
+### Security · الأمن السيبراني
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/cybersecurity-basics/files/cover.jpg" width="160" alt=""> | [Cybersecurity Basics: Think Like a Defender](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cybersecurity-basics.html) | 14 | about 6 h |
+
+### Data and Databases · البيانات وقواعد البيانات
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/data-analytics-beginners/files/cover.jpg" width="160" alt=""> | [Data analytics for beginners: Excel, Power BI and Python](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-analytics-beginners.html) | 27 | about 12 h |
+| <img src="courses/data-engineering-advanced/files/cover.jpg" width="160" alt=""> | [Data engineering: building production pipelines](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-engineering-advanced.html) | 16 | about 9 h |
+| <img src="courses/excel-tutorial-for-data-analysts/files/cover.jpg" width="160" alt=""> | [Excel tutorial for data analysts](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/excel-tutorial-for-data-analysts.html) | 7 | about 1 h |
+| <img src="courses/postgres-advanced/files/cover.jpg" width="160" alt=""> | [Advanced PostgreSQL: how Postgres really works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/postgres-advanced.html) | 12 | about 7 h |
+| <img src="courses/postgres-beginners/files/cover.jpg" width="160" alt=""> | [PostgreSQL for Beginners: from zero to real queries](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/postgres-beginners.html) | 16 | about 7 h |
+
+### AI and Machine Learning · الذكاء الاصطناعي وتعلّم الآلة
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/computer-vision/files/cover.jpg" width="160" alt=""> | [Computer vision: from pixels to modern models](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/computer-vision.html) | 10 | about 5 h |
+| <img src="courses/dl-1-neural-networks/files/cover.jpg" width="160" alt=""> | [Deep Learning 1: neural networks and deep learning, with PyTorch and Keras](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-1-neural-networks.html) | 24 | about 11 h |
+| <img src="courses/dl-2-improving-networks/files/cover.jpg" width="160" alt=""> | [Deep Learning 2: improving deep networks (regularization, optimizers, tuning)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-2-improving-networks.html) | 21 | about 9 h |
+| <img src="courses/dl-3-ml-projects/files/cover.jpg" width="160" alt=""> | [Deep Learning 3: structuring machine learning projects](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-3-ml-projects.html) | 14 | about 6 h |
+| <img src="courses/dl-4-cnns/files/cover.jpg" width="160" alt=""> | [Deep Learning 4: convolutional networks and computer vision](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-4-cnns.html) | 23 | about 10 h |
+| <img src="courses/dl-5-sequence-models/files/cover.jpg" width="160" alt=""> | [Deep Learning 5: sequence models, attention and transformers](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-5-sequence-models.html) | 24 | about 10 h |
+| <img src="courses/huggingface-ecosystem/files/cover.jpg" width="160" alt=""> | [Hugging Face and the deep learning ecosystem](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/huggingface-ecosystem.html) | 10 | about 5 h |
+| <img src="courses/karpathy-zero-to-hero/files/cover.jpg" width="160" alt=""> | [Neural Networks: Zero to Hero, with Andrej Karpathy's lectures](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/karpathy-zero-to-hero.html) | 12 | about 8 h |
+| <img src="courses/langchain-agents/files/cover.jpg" width="160" alt=""> | [LangChain and LangGraph: build agents with v1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/langchain-agents.html) | 10 | about 5 h |
+| <img src="courses/llms-essentials/files/cover.jpg" width="160" alt=""> | [LLMs: how they work and how to use them](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/llms-essentials.html) | 10 | about 5 h |
+| <img src="courses/machine-vision/files/cover.jpg" width="160" alt=""> | [Machine vision: geometry, light and measurement](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/machine-vision.html) | 10 | about 5 h |
+| <img src="courses/mls-1-supervised/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 1: supervised learning (regression and classification)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-1-supervised.html) | 20 | about 9 h |
+| <img src="courses/mls-2-advanced-algorithms/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 2: neural networks, ML practice and decision trees](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-2-advanced-algorithms.html) | 19 | about 9 h |
+| <img src="courses/mls-3-unsupervised-rl/files/cover.jpg" width="160" alt=""> | [Machine Learning refresh 3: unsupervised learning, recommenders and reinforcement learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mls-3-unsupervised-rl.html) | 15 | about 7 h |
+| <img src="courses/numpy-pandas-ml/files/cover.jpg" width="160" alt=""> | [NumPy and pandas for machine learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/numpy-pandas-ml.html) | 10 | about 5 h |
+| <img src="courses/pytorch-1-foundations/files/cover.jpg" width="160" alt=""> | [PyTorch 1: tensors, autograd and your first models](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/pytorch-1-foundations.html) | 10 | about 5 h |
+| <img src="courses/pytorch-2-models-training/files/cover.jpg" width="160" alt=""> | [PyTorch 2: real models and training craft](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/pytorch-2-models-training.html) | 10 | about 6 h |
+| <img src="courses/pytorch-3-mastery/files/cover.jpg" width="160" alt=""> | [PyTorch 3: performance, scale and deployment](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/pytorch-3-mastery.html) | 10 | about 5 h |
+| <img src="courses/tensorflow-1-keras/files/cover.jpg" width="160" alt=""> | [TensorFlow and Keras 1: building and training models](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/tensorflow-1-keras.html) | 10 | about 5 h |
+| <img src="courses/tensorflow-2-advanced/files/cover.jpg" width="160" alt=""> | [TensorFlow and Keras 2: custom training, scale and deployment](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/tensorflow-2-advanced.html) | 8 | about 4 h |
+
+### Maths · الرياضيات
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/mml-1-linear-algebra-geometry/files/cover.jpg" width="160" alt=""> | [Maths for ML 1: linear algebra and analytic geometry](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-1-linear-algebra-geometry.html) | 29 | about 12 h |
+| <img src="courses/mml-2-decompositions-calculus/files/cover.jpg" width="160" alt=""> | [Maths for ML 2: matrix decompositions and vector calculus](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-2-decompositions-calculus.html) | 27 | about 12 h |
+| <img src="courses/mml-3-probability-optimization/files/cover.jpg" width="160" alt=""> | [Maths for ML 3: probability and optimization](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-3-probability-optimization.html) | 26 | about 13 h |
+| <img src="courses/mml-4-machine-learning-problems/files/cover.jpg" width="160" alt=""> | [Maths for ML 4: regression, PCA, mixtures and SVMs](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-4-machine-learning-problems.html) | 28 | about 16 h |
+
+### Careers and Interviews · الوظائف والمقابلات
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/ai-engineer-hired-1/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 1: the market, your first project and your CV](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-1.html) | 22 | about 10 h |
+| <img src="courses/ai-engineer-hired-1-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 1: السوق ومشروعك الأول وسيرتك الذاتية](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-1-ar.html) | 22 | حوالي 10 ساعة |
+| <img src="courses/ai-engineer-hired-2/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 2: the coding interview intensive](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-2.html) | 30 | about 32 h |
+| <img src="courses/ai-engineer-hired-2-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 2: برنامج مقابلات البرمجة المكثف](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-2-ar.html) | 30 | حوالي 32 ساعة |
+| <img src="courses/ai-engineer-hired-3/files/cover.jpg" width="160" alt=""> | [Get hired as an AI engineer 3: AI interviews, system design and a production project](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-3.html) | 33 | about 15 h |
+| <img src="courses/ai-engineer-hired-3-ar/files/cover.jpg" width="160" alt=""> | [التوظيف مهندس ذكاء اصطناعي 3: مقابلات الذكاء الاصطناعي وتصميم الأنظمة ومشروع إنتاجي](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/ai-engineer-hired-3-ar.html) | 33 | حوالي 15 ساعة |
+| <img src="courses/dsa-interviews/files/cover.jpg" width="160" alt=""> | [Data Structures and Algorithms for Coding Interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dsa-interviews.html) | 16 | about 8 h |
+| <img src="courses/icpc-mansoura-advanced-ar/files/cover.jpg" width="160" alt=""> | [Advanced Competitive Programming: على خطى معسكرات ICPC Mansoura (المستوى 2)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/icpc-mansoura-advanced-ar.html) | 10 | حوالي 6 ساعة |
+| <img src="courses/icpc-mansoura-problem-solving-ar/files/cover.jpg" width="160" alt=""> | [Problem Solving و Competitive Programming: على خطى ICPC Mansoura](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/icpc-mansoura-problem-solving-ar.html) | 20 | حوالي 10 ساعة |
+
+### Business and Accounting · الأعمال والمحاسبة
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/cma-part-1-for-complete-beginners-12-weeks-through-sections-/files/cover.jpg" width="160" alt=""> | [CMA Part 1 for Complete Beginners: 12 Weeks Through Sections A–F](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cma-part-1-for-complete-beginners-12-weeks-through-sections-.html) | 36 | about 48 h |
+| <img src="courses/fmaa-prc/files/cover.jpg" width="160" alt=""> | [FMAA Exam Prep: Financial Management and Accounting](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fmaa-prc.html) | 24 | about 8 h |
+| <img src="courses/fmaa-prc-ar/files/cover.jpg" width="160" alt=""> | [التحضير لاختبار FMAA: الإدارة المالية والمحاسبة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fmaa-prc-ar.html) | 24 | حوالي 8 ساعة |
+
+### Languages · اللغات
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/english-a1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a1-ar.html) | 25 | حوالي 10 ساعة |
+| <img src="courses/english-a2-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى A2: تكلم عن الماضي والمستقبل بثقة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a2-ar.html) | 24 | حوالي 10 ساعة |
+| <img src="courses/english-b1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى B1: من الكلام اليومي إلى الطلاقة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-b1-ar.html) | 25 | حوالي 11 ساعة |
+| <img src="courses/english-irregular-verbs/files/cover.jpg" width="160" alt=""> | [English irregular verbs, the easy way](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-irregular-verbs.html) | 10 | about 2 h |
+| <img src="courses/english-irregular-verbs-ar/files/cover.jpg" width="160" alt=""> | [الأفعال الشاذة في الإنجليزية بطريقة سهلة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-irregular-verbs-ar.html) | 10 | حوالي 2 ساعة |
+| <img src="courses/german-a1-ar/files/cover.jpg" width="160" alt=""> | [الألماني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a1-ar.html) | 19 | حوالي 10 ساعة |
+| <img src="courses/german-a2-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a2-ar.html) | 18 | حوالي 10 ساعة |
+| <img src="courses/german-b1-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-b1-ar.html) | 18 | حوالي 10 ساعة |
+| <img src="courses/spanish-a1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a1-ar.html) | 19 | حوالي 10 ساعة |
+| <img src="courses/spanish-a2-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a2-ar.html) | 19 | حوالي 10 ساعة |
+| <img src="courses/spanish-b1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-b1-ar.html) | 18 | حوالي 9 ساعة |
+
+### Build inPace · ابنِ inPace
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/fastapi-starlette-for-inpace/files/cover.jpg" width="160" alt=""> | [FastAPI & Starlette: the server behind inPace](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fastapi-starlette-for-inpace.html) | 15 | about 6 h |
+| <img src="courses/html-css-for-inpace/files/cover.jpg" width="160" alt=""> | [HTML & CSS: enough to read and build inPace's pages](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/html-css-for-inpace.html) | 20 | about 8 h |
+| <img src="courses/inpace-inside/files/cover.jpg" width="160" alt=""> | [inPace from the inside: how the app works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/inpace-inside.html) | 24 | about 9 h |
+| <img src="courses/javascript-for-inpace/files/cover.jpg" width="160" alt=""> | [JavaScript: the language and the browser, the inPace way](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/javascript-for-inpace.html) | 20 | about 8 h |
+| <img src="courses/jinja-for-inpace/files/cover.jpg" width="160" alt=""> | [Jinja templates: how inPace draws every page](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/jinja-for-inpace.html) | 12 | about 4 h |
+
+### More courses · دورات أخرى
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+|  | [كورس Learn Git & GitHub - Elzero Web School](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-github.html) | 20 | حوالي 5 ساعة |
+
+**Deep learning frameworks, from zero to master** (new): *NumPy and pandas for ML*, *PyTorch* in three parts (from tensors
+to distributed training, export and serving), *TensorFlow and Keras* in two parts, *Hugging Face and the deep learning
+ecosystem* (Trainer, LoRA, Lightning, Accelerate, JAX), and *Neural Networks: Zero to Hero*, a guided course on Andrej
+Karpathy's lectures with links to his repositories and datasets. Every code example in these courses was run and checked
+with current library versions before publishing. Follow them in order with the *PyTorch, TensorFlow and Hugging Face*
+roadmap.
+
+**Short AI courses:** *LLMs: how they work*, *LangChain and LangGraph* (the v1 API), *Computer vision* and *Machine vision*
+(on the topics of MIT 6.801).
 
 The *Get hired as an AI engineer* series is built on real data: 895 AI engineer job posts and the interview reports
 collected in Alexey Grigorev's [AI Engineering Field Guide](https://github.com/alexeygrigorev/ai-engineering-field-guide),
 plus the Tech Interview Handbook, NeetCode's problem lists and the OWASP Top 10 for LLM Applications. It builds two
 projects step by step (DocAnswer, a RAG assistant, and TriageBot, an agent with human approval) and turns them into
-your CV. Videos in the new courses are optional: every lesson's text covers what the video does.
+your CV. Version 2 (November 2026) adds reasoning and multimodal models, MCP, context engineering, agent frameworks, LoRA
+fine-tuning and observability. Videos are optional: every lesson's text covers what the video does.
 
 The four Maths for ML courses follow the free book *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong). The book is **not** included: its licence allows personal use only. Each learner downloads it from [mml-book.com](https://mml-book.com), and inPace 1.20 or newer finds it on their computer or phone. The courses add notes, 3Blue1Brown videos, interactive explorers and exercises.
 
@@ -98,22 +205,27 @@ leads into another comes before it, and the English and Arabic versions sit side
 | [احترف Git و GitHub](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/git-github-ar.html) | 3 | Arabic |
 | [Python backend developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend.html) | 5 | English |
 | [مطوّر باك إند بايثون](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/python-backend-ar.html) | 5 | Arabic |
-| [Front-end web developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer.html) | 6 | English |
+| [Front-end web developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer.html) | 9 | English |
 | [مطوّر واجهات ويب](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer-ar.html) | 6 | Arabic |
 | [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
 | [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
 | [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
-| [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 2 | English |
+| [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 3 | English |
 | [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 8 | English |
 | [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 5 | English |
-| [Get hired as an AI engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer.html) | 8 | English |
+| [Get hired as an AI engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer.html) | 12 | English |
 | [التوظيف مهندس ذكاء اصطناعي](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer-ar.html) | 8 | Arabic |
 | [Maths for machine learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/maths-for-machine-learning.html) | 4 | English |
-| [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 9 | English |
+| [Deep learning, with a machine learning refresh](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning.html) | 10 | English |
 | [Machine learning, from the maths up](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/machine-learning-engineer.html) | 13 | English |
-| [الإنجليزي من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/english-a1-to-b1.html) | 3 | Arabic |
+| [الإنجليزي من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/english-a1-to-b1.html) | 4 | Arabic |
+| [Linux, Cloud and DevOps](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/linux-cloud-devops.html) | 18 | English |
 | [الإسباني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/spanish-a1-to-b1.html) | 3 | Arabic |
+| [Cybersecurity, from zero](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/cybersecurity-beginner.html) | 8 | English |
 | [الألماني من الصفر إلى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/german-a1-to-b1.html) | 3 | Arabic |
+| [Problem solving and coding interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/coding-interviews.html) | 7 | English |
+| [Computer vision engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/computer-vision.html) | 8 | English |
+| [PyTorch, TensorFlow and Hugging Face, from zero to master](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning-frameworks.html) | 9 | English |
 
 Roadmaps live in [`roadmaps/`](roadmaps), one small YAML file each:
 
@@ -209,6 +321,10 @@ The site at `mahmoudyosrimahmoud13.github.io/inpace-library/` has:
 - `packs/<id>.zip`, each course, with a SHA-256 checksum in the list,
 - `covers/`, the course pictures,
 - `index.html`, the library page.
+
+When a publish adds something new, `publish.yml` also posts it to the community's Telegram topics and Discord channel:
+each new course with its cover, each new roadmap with its own picture (the covers of its first three required courses,
+fanned out like the roadmap cards in the app), and one list of updated courses.
 
 ## Setup (maintainers, once)
 

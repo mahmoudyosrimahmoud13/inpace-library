@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Padding 1 keeps 32×32 for a 3×3 kernel.
+q2:
+  right:
+  - a
+  why: It halves height and width.
+q3:
+  right:
+  - a
+  why: Then unfreeze the last blocks with a small lr.
+q4:
+  right:
+  - a
+  why: weights.transforms() gives them.
+q5:
+  right:
+  - a
+  why: Validation must stay fixed.
+q6:
+  right:
+  - a
+  why: One vector per id.
+q7:
+  right:
+  - a
+  why: Sequences of different lengths need padding.
+q8:
+  right:
+  - a
+  why: The final state reflects real tokens only.
+q9:
+  right:
+  - a
+  why: softmax(QKᵀ/√d)V with a causal mask.
+q10:
+  right:
+  - a
+  why: Fewer parameters, often better results.
+q11:
+  right:
+  - a
+  why: The default for transformers.
+q12:
+  right:
+  - a
+  why: Use two parameter groups.
+q13:
+  right:
+  - a
+  why: It changes gradients, not weights.
+q14:
+  right:
+  - a
+  why: Range prevents underflow; float16 needs scaling.
+q15:
+  right:
+  - a
+  why: So training continues exactly.
+q16:
+  right:
+  - a
+  why: It weighs every class equally.
+q17:
+  right:
+  - a
+  why: Then reset() for the next epoch.
+q18:
+  right:
+  - a
+  why: Bergstra and Bengio, 2012.
+q19:
+  right:
+  - a
+  why: 1e-4, 3e-4, 1e-3...
+q20:
+  right:
+  - a
+  why: So results can be compared and repeated.
+q21:
+  right:
+  - a
+  why: Running stats in BatchNorm are buffers.
+q22:
+  right:
+  - a
+  why: Remember to remove it.
+q23:
+  right:
+  - a
+  why: It keeps the signal size stable.
+q24:
+  right:
+  - a
+  why: Evidence for each design choice.
+q25:
+  right:
+  - a
+  why: Common in modern LLMs.

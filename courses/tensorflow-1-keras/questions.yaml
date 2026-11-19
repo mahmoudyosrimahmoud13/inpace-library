@@ -1,0 +1,200 @@
+q1:
+  text: 'Since TensorFlow 2.16, tf.keras is:'
+  show: 4
+  options:
+    a: Keras 3
+    b: Keras 2
+    c: A separate library
+    d: Removed
+q2:
+  text: 'Model weights in TensorFlow are stored as:'
+  show: 4
+  options:
+    a: tf.Variable
+    b: tf.constant
+    c: Python lists
+    d: NumPy arrays only
+q3:
+  text: 'tape.gradient(loss, [w, b]) returns:'
+  show: 4
+  options:
+    a: The gradients of the loss with respect to w and b
+    b: New weights
+    c: The loss value
+    d: The learning rate
+q4:
+  text: 'With integer labels and a Dense(10) logits output, the loss is:'
+  show: 4
+  options:
+    a: SparseCategoricalCrossentropy(from_logits=True)
+    b: CategoricalCrossentropy(from_logits=False)
+    c: MeanSquaredError
+    d: BinaryCrossentropy
+q5:
+  text: 'validation_split=0.2 in fit uses:'
+  show: 4
+  options:
+    a: The last 20% of the arrays, before shuffling
+    b: A random 20%
+    c: The first 20%
+    d: The test set
+q6:
+  text: 'The best default way to build a Keras model with branches is:'
+  show: 4
+  options:
+    a: The Functional API
+    b: Sequential
+    c: A Python list of layers
+    d: Subclassing always
+q7:
+  text: 'A subclassed Keras model defines its forward pass in:'
+  show: 4
+  options:
+    a: call()
+    b: forward()
+    c: fit()
+    d: build_graph()
+q8:
+  text: 'layer.adapt(data) is used to:'
+  show: 4
+  options:
+    a: Compute statistics or a vocabulary from training data
+    b: Train the whole model
+    c: Export the model
+    d: Shuffle data
+q9:
+  text: 'StringLookup puts unknown values:'
+  show: 4
+  options:
+    a: In a reserved [UNK] slot
+    b: In the first category
+    c: 'Nowhere: it crashes'
+    d: In a random slot
+q10:
+  text: 'Named inputs and outputs let you:'
+  show: 4
+  options:
+    a: Pass dicts and avoid order mix-ups
+    b: Train faster
+    c: Skip compile
+    d: Use bigger batches
+q11:
+  text: 'prefetch(AUTOTUNE) at the end of a pipeline:'
+  show: 4
+  options:
+    a: Prepares the next batch while the model trains
+    b: Shuffles the data
+    c: Caches to disk
+    d: Augments images
+q12:
+  text: 'cache() should usually come:'
+  show: 4
+  options:
+    a: Before random augmentation
+    b: After batching
+    c: After prefetch
+    d: Never
+q13:
+  text: 'EarlyStopping(restore_best_weights=True):'
+  show: 4
+  options:
+    a: Stops when progress stalls and rolls back to the best epoch
+    b: Restarts training
+    c: Lowers the lr
+    d: Saves every epoch
+q14:
+  text: 'ReduceLROnPlateau:'
+  show: 4
+  options:
+    a: Lowers the learning rate when a metric stops improving
+    b: Raises the batch size
+    c: Stops training
+    d: Changes the loss
+q15:
+  text: 'A learning-rate schedule is passed to Keras as:'
+  show: 4
+  options:
+    a: The optimizer's learning_rate
+    b: A callback only
+    c: A layer
+    d: The loss
+q16:
+  text: 'Keras image tensors are by default:'
+  show: 4
+  options:
+    a: 'Channels-last: (batch, height, width, channels)'
+    b: Channels-first
+    c: (channels, batch, height, width)
+    d: Flattened
+q17:
+  text: 'Augmentation layers like RandomFlip:'
+  show: 4
+  options:
+    a: Only change images during training
+    b: Change images at inference too
+    c: Need a GPU
+    d: Replace the dataset
+q18:
+  text: 'After setting layer.trainable = False you must:'
+  show: 4
+  options:
+    a: Recompile the model
+    b: Restart Python
+    c: Delete the optimizer state manually
+    d: Nothing
+q19:
+  text: 'Embedding(..., mask_zero=True):'
+  show: 4
+  options:
+    a: Tells later layers to ignore padding tokens
+    b: Removes the vocabulary
+    c: Sets all embeddings to zero
+    d: Doubles the sequence length
+q20:
+  text: 'BatchNorm with Keras''s default momentum on a small dataset can:'
+  show: 4
+  options:
+    a: Give near-chance evaluation results because running statistics lag
+    b: Train faster always
+    c: Remove overfitting
+    d: Break saving
+q21:
+  text: 'To deploy with TF Serving or convert to LiteRT, use:'
+  show: 4
+  options:
+    a: model.export(path) to a SavedModel
+    b: model.save('m.keras') only
+    c: save_weights
+    d: pickle
+q22:
+  text: 'Custom layers saved in the .keras format need:'
+  show: 4
+  options:
+    a: Registration and a get_config method
+    b: Nothing
+    c: A GPU
+    d: TensorBoard
+q23:
+  text: 'A tf.function traces again when:'
+  show: 4
+  options:
+    a: It's called with a new input shape, dtype or Python value
+    b: Every call
+    c: Never
+    d: Only after export
+q24:
+  text: 'Python print() inside a tf.function runs:'
+  show: 4
+  options:
+    a: Only while tracing
+    b: Every call
+    c: Never
+    d: On the GPU
+q25:
+  text: 'Putting Rescaling inside the exported model means:'
+  show: 4
+  options:
+    a: It accepts raw input values as they come from the source
+    b: It trains faster
+    c: It can't be exported
+    d: It needs float64

@@ -1,0 +1,120 @@
+q1:
+  right:
+  - a
+  why: Rise over run, as the run shrinks.
+q2:
+  right:
+  - a
+  why: Each node after everything that depends on it.
+q3:
+  right:
+  - a
+  why: Used in tanh's _backward.
+q4:
+  right:
+  - a
+  why: Same rule as opt.zero_grad() in PyTorch.
+q5:
+  right:
+  - a
+  why: PyTorch does the same on whole tensors.
+q6:
+  right:
+  - a
+  why: Very short context.
+q7:
+  right:
+  - a
+  why: −ln(1/27).
+q8:
+  right:
+  - a
+  why: No infinite loss on unseen pairs.
+q9:
+  right:
+  - a
+  why: An embedding lookup.
+q10:
+  right:
+  - a
+  why: Numerically safe in one call.
+q11:
+  right:
+  - a
+  why: An embedding table.
+q12:
+  right:
+  - a
+  why: Regularise or get more data.
+q13:
+  right:
+  - a
+  why: 1 − t² ≈ 0.
+q14:
+  right:
+  - a
+  why: Keeps activations a healthy size.
+q15:
+  right:
+  - a
+  why: Hence model.eval().
+q16:
+  right:
+  - a
+  why: Shapes must match W.
+q17:
+  right:
+  - a
+  why: A famously simple result.
+q18:
+  right:
+  - a
+  why: Every example contributed.
+q19:
+  right:
+  - a
+  why: Hierarchical fusion.
+q20:
+  right:
+  - a
+  why: The subtle bug fixed in the video.
+q21:
+  right:
+  - a
+  why: No information from the future.
+q22:
+  right:
+  - a
+  why: Controls the variance of scores.
+q23:
+  right:
+  - a
+  why: Tokens need to know where they are.
+q24:
+  right:
+  - a
+  why: Attention communicates, the MLP computes.
+q25:
+  right:
+  - a
+  why: Like GPT models.
+q26:
+  right:
+  - a
+  why: Then merges frequent pairs.
+q27:
+  right:
+  - a
+  why: Arabic letters are 2 bytes each.
+q28:
+  right:
+  - a
+  why: Cleaner tokens.
+q29:
+  right:
+  - a
+  why: block_size = 1024.
+q30:
+  right:
+  - a
+  why: Following the GPT-3 paper.

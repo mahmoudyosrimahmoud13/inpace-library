@@ -1,0 +1,12 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f4d35e"/></marker></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="20" text-anchor="middle" fill="#1f3d36">
+<rect x="40" y="420" width="150" height="56" rx="10" fill="#fdf6e9"/><text x="115" y="455">micrograd</text>
+<rect x="150" y="300" width="160" height="56" rx="10" fill="#9ee6b8"/><text x="230" y="335">makemore</text>
+<rect x="260" y="180" width="130" height="56" rx="10" fill="#7fd3ff"/><text x="325" y="215">GPT</text>
+<rect x="330" y="60" width="160" height="56" rx="10" fill="#ff8fab"/><text x="410" y="95">GPT-2</text></g>
+<g stroke="#f4d35e" stroke-width="5" fill="none" marker-end="url(#a)"><path d="M120 415 L180 362"/><path d="M240 296 L300 242"/><path d="M340 176 L390 122"/></g>
+<text x="60" y="150" font-family="JBM" font-weight="700" font-size="22" fill="#1f3d36">zero</text>
+<text x="400" y="530" font-family="JBM" font-weight="700" font-size="22" fill="#1f3d36">hero</text>
+</svg>

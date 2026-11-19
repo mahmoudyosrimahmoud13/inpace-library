@@ -1,0 +1,169 @@
+id: numpy-pandas-ml
+title: NumPy and pandas for machine learning
+version: 1
+language: en
+description: 'The data foundations every PyTorch and TensorFlow course assumes, from zero: NumPy arrays, shapes and dtypes,
+  reshaping and indexing, vectorized maths and axis, broadcasting, a linear model trained with gradient descent by hand, pandas
+  DataFrames, loading and cleaning data, feature engineering, groupby, merge and pivot, time series, plotting, and scikit-learn
+  pipelines and baselines. All code tested with NumPy 2 and pandas 3. Optional videos by Keith Galli and Corey Schafer. About
+  5 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: NumPy user guide
+  url: https://numpy.org/doc/stable/user/index.html
+- title: pandas user guide
+  url: https://pandas.pydata.org/docs/user_guide/index.html
+- title: scikit-learn user guide
+  url: https://scikit-learn.org/stable/user_guide.html
+modules:
+- id: m1
+  title: 'Day 1: arrays, shapes and indexing'
+  lessons:
+  - id: m1-l1
+    title: 'Arrays: the data structure under every ML library'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: Reshape, index and slice
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Create a (10, 28, 28) array of random 'images'. Flatten it to (10, 784), select images 2 to 5, take the centre
+      14×14 crop of every image, and use a boolean mask to set all values below 0 to 0. Print every shape along the way. Upload
+      code and output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between a view and a copy in NumPy, with one example where it would cause a bug.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: vectorized maths and broadcasting'
+  lessons:
+  - id: m2-l1
+    title: Vectorized maths and axis
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Broadcasting, and a model from scratch
+    file: lessons/m2-l2.md
+    minutes: 35
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Extend the NumPy linear regression: add an L2 penalty to the loss and its gradient, plot or print the loss every
+      20 steps, and compare the learned weights with and without the penalty. Then rewrite it as logistic regression on a
+      2-class dataset you generate. Upload code and output.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain broadcasting to a friend using the example of centring each column of a table.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: pandas for real data'
+  lessons:
+  - id: m3-l1
+    title: 'pandas: Series, DataFrames and loading data'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Cleaning data and making features
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Download any public CSV dataset that interests you (Kaggle, data.gov, a government statistics site). Run info,
+      describe, value_counts and isna; fix types, handle missing values with a reason for each choice, add three new feature
+      columns, one-hot encode one category, and export float32 arrays. Upload the notebook or script with its output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why statistics used to fill missing values must come from the training data only.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: groupby, joins and time'
+  lessons:
+  - id: m4-l1
+    title: groupby, merge and pivot
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Time series, speed and a full mini project
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: With your dataset from day 3 (or the generated orders), build a per-entity feature table with groupby/agg (at
+      least 5 features including one transform and one time-based feature), join it to a second table with a validated merge,
+      and split train and test by time. Upload code and the first rows of the final table.
+  - id: m4-explain
+    type: explain
+    prompt: Explain the difference between groupby().agg() and groupby().transform(), with an example of when you'd use each.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: exploring, plotting and baselines'
+  lessons:
+  - id: m5-l1
+    title: Plotting and exploring data
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: 'scikit-learn: the bridge to deep learning'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: On your dataset, make four plots (a histogram, a bar chart of counts, a scatter plot and one over time if there's
+      a date), write three findings, then train two scikit-learn pipelines and the trivial baseline with a proper train/test
+      split and cross-validation. Upload plots, findings and scores.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why you should build a simple baseline before training a neural network, and what you'd conclude if the
+      network didn't beat it.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

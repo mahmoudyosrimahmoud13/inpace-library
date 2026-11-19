@@ -1,0 +1,169 @@
+id: pytorch-2-models-training
+title: 'PyTorch 2: real models and training craft'
+version: 1
+language: en
+description: Part 2 of PyTorch from zero to master. CNNs with BatchNorm, transfer learning with torchvision and transforms
+  v2, embeddings, padding and LSTMs, transformers with scaled_dot_product_attention and a tiny GPT, learning-rate schedules,
+  weight decay, label smoothing and gradient clipping, mixed precision, gradient accumulation and resumable checkpoints, torchmetrics,
+  TensorBoard and hyperparameter search, custom layers, hooks and initialisation, and a complete image classifier with an
+  ablation study. All code tested with PyTorch 2.15. About 5 days, 60 to 90 minutes a day.
+image: cover.jpg
+downloads:
+- title: torchvision models and pretrained weights
+  url: https://docs.pytorch.org/vision/stable/models.html
+- title: torchmetrics documentation
+  url: https://lightning.ai/docs/torchmetrics/stable/
+- title: PyTorch automatic mixed precision
+  url: https://docs.pytorch.org/docs/stable/amp.html
+modules:
+- id: m1
+  title: 'Day 1: CNNs and transfer learning'
+  lessons:
+  - id: m1-l1
+    title: Convolutional networks in PyTorch
+    file: lessons/m1-l1.md
+    minutes: 35
+  - id: m1-l2
+    title: Transfer learning with torchvision
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Collect 30 to 50 photos each of 2 or 3 things (your own photos, or a small public dataset). Fine-tune a pretrained
+      torchvision model in two stages (head only, then the last block with a lower learning rate) with transforms v2 augmentation,
+      and report validation accuracy after each stage. Upload code and results.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why a CNN needs far fewer parameters than an MLP for images, and why transfer learning works with small
+      datasets.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: sequences and transformers'
+  lessons:
+  - id: m2-l1
+    title: Embeddings, sequences and RNNs
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Transformers in PyTorch
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Train the TinyGPT on a text of your choice (a few hundred KB of public-domain text or your own notes), with a
+      train/validation split. Report validation loss for two model sizes, and print 200 generated characters from each. Upload
+      code, losses and samples.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what the causal mask does in a GPT-style model and what would go wrong in training without it.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: training craft'
+  lessons:
+  - id: m3-l1
+    title: 'Training craft: schedules, regularisation and clipping'
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Mixed precision, gradient accumulation and resuming
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Take a model from an earlier lesson and train it four ways: constant lr, warmup + cosine, with label smoothing,
+      and with mixed precision plus gradient accumulation. Log validation accuracy and time per epoch for each, save a resumable
+      checkpoint mid-run, resume from it, and show training continues correctly. Upload code and a results table.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Explain gradient accumulation: why it works, and why you divide the loss by the number of micro-batches.'
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: evaluation and experiments'
+  lessons:
+  - id: m4-l1
+    title: Evaluation with torchmetrics
+    file: lessons/m4-l1.md
+    minutes: 25
+  - id: m4-l2
+    title: Experiment tracking and hyperparameter search
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: On an imbalanced classification problem (real or generated), report accuracy, macro F1, per-class precision and
+      recall and a confusion matrix with torchmetrics. Then run a random search of at least 8 configurations logged to TensorBoard
+      (or MLflow / W&B) and upload a screenshot of the comparison with your conclusion.
+  - id: m4-explain
+    type: explain
+    prompt: Why is averaging a metric over batches wrong, and why must the test set be used only once?
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: inside models, and a full project'
+  lessons:
+  - id: m5-l1
+    title: Hooks, custom layers and initialisation
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: 'Project: a strong image classifier, end to end'
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Run the final project, then an ablation: remove augmentation, label smoothing, the schedule and BatchNorm one
+      at a time and record validation accuracy in a table. Add forward hooks to report the share of zero ReLU outputs per
+      layer before and after training. Upload the notebook, the ablation table and your conclusions.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain the difference between an nn.Parameter and a buffer, with one example of each from a real model.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

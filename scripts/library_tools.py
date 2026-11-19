@@ -1487,6 +1487,57 @@ def announce_messages(changes: list[tuple[str, dict]]) -> list[dict]:
     return out
 
 
+def roadmap_picture(out: Path, road: dict, covers: dict) -> str | None:
+    """A post picture for a new roadmap: the covers of its first three required courses, fanned out on the
+    roadmap's colour (like the app's roadmap card). Optional first steps (say, a Python refresher) are skipped,
+    so the post doesn't look like an announcement for that course. Without Pillow, the first required course's cover."""
+    steps = road.get("steps") or []
+    main = [s["course"] for s in steps if not s.get("optional")] or [s["course"] for s in steps]
+    files = []
+    for cid in main:
+        url = covers.get(cid) or ""
+        if "/covers/" in url:
+            f = out / "covers" / url.split("/covers/", 1)[1].split("?", 1)[0]
+            if f.is_file():
+                files.append(f)
+        if len(files) == 3:
+            break
+    if not files:
+        return None
+    try:
+        from PIL import Image, ImageDraw
+    except ImportError:
+        return covers.get(main[0])
+    W, H = 1200, 675
+    bg = RM_THUMB_COLORS[sum(ord(ch) for ch in road["id"]) % len(RM_THUMB_COLORS)]
+    canvas = Image.new("RGB", (W, H), bg)
+    draw = ImageDraw.Draw(canvas)
+    for x in range(0, W, 28):  # the dotted background of the app's roadmap cards
+        for y in range(0, H, 28):
+            draw.ellipse((x, y, x + 3, y + 3), fill="#1b1b1b")
+    card_w = 560
+    n = len(files)
+    places = {1: [(0, 0)], 2: [(-150, -8), (150, 8)], 3: [(-260, 26), (0, -10), (260, 26)]}[n]
+    angles = {1: [0], 2: [-4, 4], 3: [-7, 0, 7]}[n]
+    order = [0, 2, 1] if n == 3 else list(range(n))  # the middle card goes on top
+    for i in order:
+        img = Image.open(files[i]).convert("RGB")
+        img = img.resize((card_w, round(img.height * card_w / img.width)))
+        framed = Image.new("RGB", (img.width + 12, img.height + 12), "#111111")  # thick dark border
+        framed.paste(img, (6, 6))
+        shadow = Image.new("RGBA", framed.size, (17, 17, 17, 255))
+        layer = Image.new("RGBA", framed.size)
+        layer.paste(framed, (0, 0))
+        rot, rot_shadow = layer.rotate(angles[i], expand=True, resample=Image.BICUBIC), shadow.rotate(angles[i], expand=True)
+        dx, dy = places[i]
+        x0, y0 = (W - rot.width) // 2 + dx, (H - rot.height) // 2 + dy
+        canvas.paste(rot_shadow, (x0 + 12, y0 + 12), rot_shadow)  # hard offset shadow
+        canvas.paste(rot, (x0, y0), rot)
+    name = f"roadmap-{road['id']}.jpg"
+    canvas.save(out / "covers" / name, quality=88)
+    return SITE + "covers/" + name
+
+
 def announce(out: Path) -> int:
     """Post what's new in the library to the Discord #new-courses channel (before the new site goes live)."""
     try:
@@ -1505,9 +1556,9 @@ def announce(out: Path) -> int:
         return 0
     changes = new_on_site(out, live)
     covers = {c["id"]: c.get("cover") for c in json.loads((out / "library.json").read_text(encoding="utf-8"))["courses"]}
-    for kind, item in changes:  # a new roadmap shows the cover of its first course
+    for kind, item in changes:  # a new roadmap gets its own picture, made from its main courses' covers
         if kind == "roadmap" and item.get("steps") and not item.get("cover"):
-            item["cover"] = covers.get(item["steps"][0]["course"])
+            item["cover"] = roadmap_picture(out, item, covers)
     for msg in announce_messages(changes):
         pic = cover_file(out, msg)
         if hook:

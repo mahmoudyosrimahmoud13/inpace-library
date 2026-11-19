@@ -26,7 +26,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q "git+https://github.com/mahmoudyosrimahmoud13/inpace.git" pyyaml
+      - run: pip install -q "git+https://github.com/mahmoudyosrimahmoud13/inpace.git" pyyaml pillow
       - run: python scripts/library_tools.py check
       - run: python scripts/library_tools.py build _site
       - name: Post new courses to Discord (does nothing without the DISCORD_WEBHOOKS secret)

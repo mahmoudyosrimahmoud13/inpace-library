@@ -266,3 +266,67 @@ courses:
     title: Machine<br>vision
     sub: Geometry, light and measurement, the physics behind cameras
     tags: [10 lessons, 25 quiz questions]
+
+  numpy-pandas-ml:
+    theme: sand
+    art: numpy-pandas-ml.svg
+    chip: Data · 5 days
+    title: NumPy and<br>pandas for ML
+    sub: Arrays, broadcasting, DataFrames and baselines, from zero
+    tags: [10 lessons, 25 quiz questions]
+
+  pytorch-1-foundations:
+    theme: coral
+    art: pytorch-1-foundations.svg
+    chip: PyTorch · part 1 of 3
+    title: PyTorch:<br>foundations
+    sub: Tensors, autograd, nn.Module and the training loop
+    tags: [10 lessons, 25 quiz questions]
+
+  pytorch-2-models-training:
+    theme: plum
+    art: pytorch-2-models-training.svg
+    chip: PyTorch · part 2 of 3
+    title: PyTorch:<br>real models
+    sub: CNNs, transformers, transfer learning and training craft
+    tags: [10 lessons, 25 quiz questions]
+
+  pytorch-3-mastery:
+    theme: navy
+    art: pytorch-3-mastery.svg
+    chip: PyTorch · part 3 of 3
+    title: PyTorch:<br>scale and ship
+    sub: torch.compile, DDP and FSDP, export, quantization, serving
+    tags: [10 lessons, 25 quiz questions]
+
+  tensorflow-1-keras:
+    theme: sun
+    art: tensorflow-1-keras.svg
+    chip: TensorFlow · part 1 of 2
+    title: TensorFlow<br>and Keras
+    sub: Models, tf.data, callbacks, images and text with Keras 3
+    tags: [10 lessons, 25 quiz questions]
+
+  tensorflow-2-advanced:
+    theme: forest
+    art: tensorflow-2-advanced.svg
+    chip: TensorFlow · part 2 of 2
+    title: TensorFlow:<br>advanced
+    sub: Custom training, distribution, Serving, LiteRT and backends
+    tags: [8 lessons, 20 quiz questions]
+
+  huggingface-ecosystem:
+    theme: mint
+    art: huggingface-ecosystem.svg
+    chip: AI · 5 days
+    title: Hugging Face<br>and friends
+    sub: Pipelines, fine-tuning, LoRA, Lightning, Accelerate and JAX
+    tags: [10 lessons, 25 quiz questions]
+
+  karpathy-zero-to-hero:
+    theme: sky
+    art: karpathy-zero-to-hero.svg
+    chip: With Andrej Karpathy's lectures
+    title: Zero to<br>Hero
+    sub: Backprop, makemore, GPT and the tokenizer, built from scratch
+    tags: [12 lessons, 30 quiz questions]

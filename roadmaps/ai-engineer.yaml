@@ -26,6 +26,9 @@ steps:
   - course: llms-essentials
     note: "A short look inside LLMs: tokens, attention, training stages and sampling. Makes part 3's theory questions much easier."
     optional: true
+  - course: pytorch-1-foundations
+    note: Many AI engineer posts ask for PyTorch. Tensors, autograd and training loops, so fine-tuning and model code make sense.
+    optional: true
   - course: langchain-agents
     note: LangChain and LangGraph v1, the agent frameworks named in many posts. Build tools, middleware, memory and RAG with tested code.
     optional: true

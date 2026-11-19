@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- numpy
+- pandas
+- scikit-learn
+- python
+- data
+- beginner
+credit: Written for the inPace library; all code tested with NumPy 2.5, pandas 3.1 and scikit-learn 1.9. Optional videos by
+  Keith Galli and Corey Schafer, linked, not copied.

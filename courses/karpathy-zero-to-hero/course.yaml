@@ -1,0 +1,208 @@
+id: karpathy-zero-to-hero
+title: 'Neural Networks: Zero to Hero, with Andrej Karpathy''s lectures'
+version: 1
+language: en
+description: 'A guided course on Andrej Karpathy''s free YouTube series, in the same order: micrograd (backpropagation from
+  scratch), makemore (bigram, MLP, activations and BatchNorm, manual backprop, a WaveNet), Let''s build GPT, the GPT tokenizer,
+  and reproducing GPT-2 (124M). Each lesson explains the ideas in text with tested code, diagrams, and links to his repositories
+  (micrograd, makemore, nn-zero-to-hero, ng-video-lecture, nanoGPT, minbpe, build-nanogpt, llm.c, nanochat) and datasets (names.txt,
+  Tiny Shakespeare, FineWeb-Edu, HellaSwag). His lectures are linked as optional videos. About 6 days of reading and coding,
+  plus the videos if you watch them.'
+image: cover.jpg
+downloads:
+- title: 'Neural Networks: Zero to Hero (series page)'
+  url: https://karpathy.ai/zero-to-hero.html
+- title: 'Lecture notebooks: nn-zero-to-hero'
+  url: https://github.com/karpathy/nn-zero-to-hero
+- title: micrograd
+  url: https://github.com/karpathy/micrograd
+- title: makemore (with names.txt)
+  url: https://github.com/karpathy/makemore
+- title: nanoGPT
+  url: https://github.com/karpathy/nanoGPT
+- title: minbpe
+  url: https://github.com/karpathy/minbpe
+- title: build-nanogpt
+  url: https://github.com/karpathy/build-nanogpt
+modules:
+- id: m1
+  title: 'Day 1: micrograd'
+  lessons:
+  - id: m1-l1
+    title: 'micrograd 1: derivatives and a tiny autograd engine'
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: 'micrograd 2: neurons, an MLP and gradient descent'
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Type the Value class yourself (don't copy), add exp, pow and division with their backward functions, and check
+      every gradient against PyTorch on a small expression. Then train the MLP on a 2-class dataset you make (two moons, for
+      example) and report the final accuracy. Upload your code and output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain, as if to a friend, how backward() uses the chain rule, and why gradients must be accumulated with +=
+      instead of =.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: makemore, the bigram model'
+  lessons:
+  - id: m2-l1
+    title: 'makemore 1: a bigram model by counting'
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'makemore 1: the same model as a neural network'
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a trigram model (two characters of context) both by counting and as a neural network on names.txt. Split
+      train, dev and test, and report each model's average NLL on dev. Did it beat the bigram's 2.45? Upload code and numbers.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why the neural network version learns the same table as counting, and what the regularisation term corresponds
+      to.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: makemore, MLP and training health'
+  lessons:
+  - id: m3-l1
+    title: 'makemore 2: an MLP language model'
+    file: lessons/m3-l1.md
+    minutes: 40
+  - id: m3-l2
+    title: 'makemore 3: activations, initialisation and BatchNorm'
+    file: lessons/m3-l2.md
+    minutes: 40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Train the MLP on names.txt and run three experiments: embedding size 2 vs 10, context 3 vs 5, and with vs without
+      Kaiming scaling plus BatchNorm. Keep a table of train and dev loss, and plot tanh activation histograms for one hidden
+      layer at initialisation. Upload code, the table and the plot.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why a network should start near loss 3.30 on this task, and what saturated tanh units do to learning.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: manual backprop and a WaveNet'
+  lessons:
+  - id: m4-l1
+    title: 'makemore 4: becoming a backprop ninja'
+    file: lessons/m4-l1.md
+    minutes: 40
+  - id: m4-l2
+    title: 'makemore 5: a WaveNet-style hierarchy'
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Add a BatchNorm layer to the manual-backprop MLP and derive its backward pass by hand; check it against autograd
+      with torch.allclose. Then train the WaveNet-style model on names.txt with context 8 and report dev loss compared with
+      the MLP. Upload code and results.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why the gradient of a bias that was broadcast over the batch is a sum over the batch.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: let''s build GPT'
+  lessons:
+  - id: m5-l1
+    title: 'Let''s build GPT 1: from averaging to self-attention'
+    file: lessons/m5-l1.md
+    minutes: 40
+  - id: m5-l2
+    title: 'Let''s build GPT 2: the full transformer'
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Train the GPT on Tiny Shakespeare (or a public-domain text in another language) for as long as your machine allows.
+      Report train and val loss for two settings (for example n_layer 2 vs 4), and include a 300-character sample from your
+      best model. Upload code, losses and the sample.
+  - id: m5-explain
+    type: explain
+    prompt: Explain self-attention using the queries, keys and values analogy, and why the future must be masked in a GPT.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: tokenizer and GPT-2'
+  lessons:
+  - id: m6-l1
+    title: Let's build the GPT tokenizer
+    file: lessons/m6-l1.md
+    minutes: 40
+  - id: m6-l2
+    title: Let's reproduce GPT-2 (124M), and where to go next
+    file: lessons/m6-l2.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Train the BasicTokenizer on 1 MB of text in two languages (for example English and Arabic), with vocabulary sizes
+      300 and 1,000, and report the compression (bytes per token) for each language. Then clone build-nanogpt, read the commit
+      history, and write a short summary of what each of the first ten commits adds. Upload code, numbers and your summary.
+  - id: m6-explain
+    type: explain
+    prompt: Pick two strange LLM behaviours caused by tokenization and explain each in your own words.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

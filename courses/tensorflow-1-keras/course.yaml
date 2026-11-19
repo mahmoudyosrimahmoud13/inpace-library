@@ -1,0 +1,168 @@
+id: tensorflow-1-keras
+title: 'TensorFlow and Keras 1: building and training models'
+version: 1
+language: en
+description: Part 1 of TensorFlow and Keras from zero to master, on Keras 3 with the TensorFlow backend. Tensors, variables
+  and GradientTape, compile, fit and evaluate, the Functional API and subclassed models, preprocessing layers that ship inside
+  the model, tf.data pipelines, callbacks and learning-rate schedules, CNNs and transfer learning with keras.applications,
+  text with TextVectorization, LSTMs and a transformer block, saving, exporting and tf.function, and a complete project. All
+  code tested with TensorFlow 2.21 and Keras 3.15. About 5 days, 60 to 90 minutes a day.
+image: cover.jpg
+downloads:
+- title: Keras developer guides
+  url: https://keras.io/guides/
+- title: TensorFlow tutorials
+  url: https://www.tensorflow.org/tutorials
+- title: tf.data performance guide
+  url: https://www.tensorflow.org/guide/data_performance
+modules:
+- id: m1
+  title: 'Day 1: tensors and your first Keras model'
+  lessons:
+  - id: m1-l1
+    title: 'TensorFlow and Keras today: tensors, variables and gradients'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: 'Your first Keras model: compile, fit, evaluate'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install TensorFlow (or open Colab). Fit a quadratic y = a·x² + b·x + c with tf.Variable and GradientTape, then
+      train a Keras Sequential classifier on the digits with a validation split, plot loss and val_loss from the history,
+      and report test accuracy. Upload code, the plot and output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between a tf.Tensor and a tf.Variable, and how GradientTape finds gradients.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: model APIs and layers'
+  lessons:
+  - id: m2-l1
+    title: The Functional API and subclassed models
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Layers, including preprocessing layers
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a Functional model with two inputs (one numeric, one text or category) and two outputs (a class and a number),
+      using Normalization, StringLookup or TextVectorization inside the model. Train it on a small dataset of your own or
+      generated data, save it, reload it and predict from raw inputs. Upload code and output.
+  - id: m2-explain
+    type: explain
+    prompt: Why is it useful to put preprocessing layers inside a Keras model? Give a bug it prevents.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: data pipelines and callbacks'
+  lessons:
+  - id: m3-l1
+    title: Input pipelines with tf.data
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Callbacks, schedules and TensorBoard
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Load a folder of images (yours or a public set) with keras.utils.image_dataset_from_directory, build a tf.data
+      pipeline with cache, shuffle, augmentation in map and prefetch, and train with EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
+      and TensorBoard. Upload code, a TensorBoard screenshot and the final scores.
+  - id: m3-explain
+    type: explain
+    prompt: Explain the right order of cache, shuffle, map, batch and prefetch in a tf.data pipeline, and why.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: images and text'
+  lessons:
+  - id: m4-l1
+    title: CNNs and transfer learning in Keras
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Text and sequences in Keras
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Fine-tune a keras.applications model on 2 or 3 classes of your own photos in two stages (frozen base, then the
+      top layers unfrozen with lr 1e-5 and a recompile). Separately, train a text classifier on raw strings with TextVectorization
+      inside the model. Upload code and both results.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why you call the frozen base with training=False and why you must recompile after changing trainable.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: saving, graphs and a full project'
+  lessons:
+  - id: m5-l1
+    title: Saving, loading and tf.function
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: 'Project: a complete Keras pipeline'
+    file: lessons/m5-l2.md
+    minutes: 35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Complete the project on your own image dataset: preprocessing inside the model, tf.data, a schedule, callbacks,
+      a confusion matrix, and an exported SavedModel that you reload with tf.saved_model.load and call on raw inputs. Upload
+      the notebook and the exported model''s folder listing.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain when a tf.function retraces and why that can make code slow.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

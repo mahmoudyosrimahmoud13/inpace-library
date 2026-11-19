@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- pytorch
+- deep learning
+- cnn
+- transformers
+- intermediate
+credit: Written for the inPace library; all code tested with PyTorch 2.15, torchvision 0.29 and torchmetrics 1.9. Optional
+  videos by 3Blue1Brown, Computerphile, Stanford CS231n, Andrej Karpathy and freeCodeCamp.org, linked, not copied.

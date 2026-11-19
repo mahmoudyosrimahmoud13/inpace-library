@@ -1,0 +1,13 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f4d35e"/></marker></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="22" text-anchor="middle" fill="#1f3d36">
+<rect x="160" y="60" width="200" height="56" rx="28" fill="#fdf6e9"/><text x="260" y="96">forward</text>
+<rect x="330" y="200" width="160" height="56" rx="28" fill="#ff8fab"/><text x="410" y="236">loss</text>
+<rect x="250" y="350" width="200" height="56" rx="28" fill="#7fd3ff"/><text x="350" y="386">backward</text>
+<rect x="40" y="350" width="170" height="56" rx="28" fill="#9ee6b8"/><text x="125" y="386">step</text>
+<rect x="30" y="200" width="200" height="56" rx="28" fill="#f4d35e"/><text x="130" y="236">zero_grad</text></g>
+<g stroke="#f4d35e" stroke-width="5" fill="none" marker-end="url(#a)">
+<path d="M350 118 Q400 150 405 195"/><path d="M410 260 Q410 310 380 345"/><path d="M248 378 L218 378"/><path d="M110 345 Q90 300 115 262"/><path d="M150 196 Q170 140 200 120"/></g>
+<text x="260" y="490" font-family="JBM" font-weight="700" font-size="24" fill="#1f3d36" text-anchor="middle">loss.backward()</text>
+</svg>

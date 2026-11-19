@@ -1,0 +1,13 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)">
+<rect x="60" y="120" width="60" height="220" rx="6" fill="#7fd3ff"/>
+<rect x="150" y="150" width="56" height="160" rx="6" fill="#9ee6b8"/>
+<rect x="236" y="180" width="52" height="100" rx="6" fill="#f4d35e"/>
+<rect x="318" y="200" width="48" height="60" rx="6" fill="#ff8fab"/>
+<rect x="396" y="215" width="70" height="30" rx="6" fill="#fdf6e9"/></g>
+<g font-family="JBM" font-weight="700" font-size="18" fill="#fdf6e9" text-anchor="middle">
+<text x="90" y="370">conv</text><text x="178" y="340">conv</text><text x="262" y="310">pool</text><text x="342" y="290">attn</text><text x="431" y="280">out</text></g>
+<path d="M60 470 C140 380 200 470 260 420 S380 380 460 440" stroke="#f4d35e" stroke-width="6" fill="none"/>
+<text x="260" y="520" font-family="JBM" font-weight="700" font-size="20" fill="#fdf6e9" text-anchor="middle">warmup + cosine</text>
+</svg>

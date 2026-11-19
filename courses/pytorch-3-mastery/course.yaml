@@ -1,0 +1,172 @@
+id: pytorch-3-mastery
+title: 'PyTorch 3: performance, scale and deployment'
+version: 1
+language: en
+description: Part 3 of PyTorch from zero to master. Profiling and feeding the GPU, torch.compile, efficient attention and
+  activation checkpointing, custom autograd functions, gradcheck and torch.func, writing models like large codebases with
+  configs and tests, distributed training with DDP and torchrun, FSDP and the kinds of parallelism, torch.export and ONNX
+  with ONNX Runtime, quantization with torchao, serving with FastAPI, and a production-quality capstone. All code tested with
+  PyTorch 2.15, including a real two-process DDP run. About 5 days, 60 to 90 minutes a day.
+image: cover.jpg
+downloads:
+- title: torch.compile tutorial
+  url: https://docs.pytorch.org/tutorials/intermediate/torch_compile_tutorial.html
+- title: Distributed data parallel tutorial series
+  url: https://docs.pytorch.org/tutorials/beginner/ddp_series_intro.html
+- title: torch.export documentation
+  url: https://docs.pytorch.org/docs/stable/export.html
+- title: torchao (quantization)
+  url: https://github.com/pytorch/ao
+- title: torchtitan (large-scale training reference)
+  url: https://github.com/pytorch/torchtitan
+modules:
+- id: m1
+  title: 'Day 1: speed'
+  lessons:
+  - id: m1-l1
+    title: 'Measure first: profiling and data loading'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: torch.compile and efficient models
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Take your project from part 2. Profile one training epoch, report the top 5 operations by time, then apply three
+      speed-ups (DataLoader workers and pinned memory, mixed precision, torch.compile) one at a time and record samples per
+      second after each. Upload the profiler table, your results table and code.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why GPU timing needs torch.cuda.synchronize(), and why calling .item() every step can slow training.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: inside autograd and model code'
+  lessons:
+  - id: m2-l1
+    title: Custom autograd functions and gradient checks
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Writing models the way large codebases do
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a custom autograd Function (for example a numerically stable log-sum-exp or a straight-through rounding)
+      and verify it with gradcheck. Then refactor a model from part 2 into a config dataclass plus a model that returns its
+      loss, and write three pytest tests (shapes, loss at init, one invariance). Upload code and test output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what gradcheck does and why it must run in float64.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: distributed training'
+  lessons:
+  - id: m3-l1
+    title: Distributed training with DDP
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: 'When the model doesn''t fit: FSDP and parallelism'
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Run the DDP script with torchrun on 2 processes (two CPU processes are enough), then adapt it to your own model
+      and dataset. Show that each rank sees different data (print the first sample index per rank) and that rank 0 alone saves
+      the checkpoint. Upload code and output, with the effective batch size you used.
+  - id: m3-explain
+    type: explain
+    prompt: A 7-billion-parameter model doesn't fit on your GPUs for training with DDP. Explain why, and what FSDP changes.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: export and compression'
+  lessons:
+  - id: m4-l1
+    title: 'Exporting models: torch.export and ONNX'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Making models smaller: quantization and more'
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Export your best model with torch.export (with a dynamic batch dimension) and to ONNX, run it with ONNX Runtime,
+      and compare outputs with PyTorch on 100 real inputs. Then apply int8 weight-only quantization with torchao and report
+      accuracy, latency and file size before and after. Upload code and a results table.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why you must compare outputs after exporting or quantizing, and which three things you measure.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: serving and the capstone'
+  lessons:
+  - id: m5-l1
+    title: Serving a model behind an API
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: 'Capstone: from notebook to production-quality project'
+    file: lessons/m5-l2.md
+    minutes: 35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Build the capstone repository: config, train, evaluate, export and serve scripts, three test files, a Dockerfile
+      and a README with the results table filled in (baseline, float32, int8). Push it to GitHub and upload the link plus
+      a screenshot of the API answering a request.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain how you'd move from a single FastAPI process to serving real traffic, and what you'd monitor after launch.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

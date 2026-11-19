@@ -1,0 +1,143 @@
+id: tensorflow-2-advanced
+title: 'TensorFlow and Keras 2: custom training, scale and deployment'
+version: 1
+language: en
+description: Part 2 of TensorFlow and Keras from zero to master. Custom training loops with GradientTape (including a GAN
+  step), custom layers, losses and metrics and overriding train_step, avoiding retracing, XLA and mixed precision, tf.distribute
+  strategies, deployment with SavedModel signatures, TensorFlow Serving and LiteRT, Keras 3 on the JAX and PyTorch backends,
+  porting weights between PyTorch and Keras, and a capstone that ships one model to a server and a phone format. All code
+  tested with TensorFlow 2.21, Keras 3.15, JAX and LiteRT. About 4 days, 60 to 90 minutes a day.
+image: cover.jpg
+downloads:
+- title: 'Keras: writing a training loop from scratch'
+  url: https://keras.io/guides/writing_a_custom_training_loop_in_tensorflow/
+- title: TensorFlow distributed training guide
+  url: https://www.tensorflow.org/guide/distributed_training
+- title: LiteRT documentation
+  url: https://ai.google.dev/edge/litert
+- title: TensorFlow Serving with Docker
+  url: https://www.tensorflow.org/tfx/serving/docker
+modules:
+- id: m1
+  title: 'Day 1: custom training'
+  lessons:
+  - id: m1-l1
+    title: Custom training loops with GradientTape
+    file: lessons/m1-l1.md
+    minutes: 35
+  - id: m1-l2
+    title: Custom layers, losses, metrics and train_step
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write a custom training loop with tf.function, gradient clipping and metric objects for a model of your choice,
+      and check it reaches the same validation accuracy as fit. Then add one custom layer (with get_config) and one custom
+      metric, save the model as .keras and reload it. Upload code and output.
+  - id: m1-explain
+    type: explain
+    prompt: When would you override train_step instead of writing a full custom loop? Give an example of each.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: speed and scale'
+  lessons:
+  - id: m2-l1
+    title: 'Performance: graphs, XLA, mixed precision and input speed'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Distributed training with tf.distribute
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Measure a model''s training time per epoch in four settings: eager custom loop, tf.function, tf.function with
+      jit_compile=True, and mixed precision. Then train it with MirroredStrategy (two logical CPU devices if you have no GPUs)
+      and show the replica count and final accuracy. Upload code and a results table.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain three causes of tf.function retracing and how you'd avoid each.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: deployment and backends'
+  lessons:
+  - id: m3-l1
+    title: 'Deploying: SavedModel signatures, serving and LiteRT'
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: 'Keras 3 across backends: TensorFlow, JAX and PyTorch'
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Export a model with an ExportArchive endpoint, serve it with the tensorflow/serving Docker image (or explain each
+      step if you can't run Docker), convert it to a quantized .tflite file and run it with ai-edge-litert. Compare accuracy
+      and size across Keras, SavedModel and LiteRT. Then run the same Keras script on two backends. Upload code, sizes and
+      accuracies.
+  - id: m3-explain
+    type: explain
+    prompt: A mobile team wants your model in their app. Describe the steps from Keras to a quantized LiteRT model, and what
+      you'd check.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: choosing, porting and shipping'
+  lessons:
+  - id: m4-l1
+    title: PyTorch or TensorFlow? Porting between them
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Capstone: train, export and ship a TensorFlow model'
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Port a small PyTorch model (one with at least one Conv2d and one Linear layer) to Keras by copying its weights,
+      and show the outputs match on 20 real inputs. Then finish the capstone repository with train.py, export.py, client.py
+      and a README results table. Upload the link and the comparison output.
+  - id: m4-explain
+    type: explain
+    prompt: A friend asks whether to learn PyTorch or TensorFlow first for a job in AI. Give your advice with reasons from
+      this course.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

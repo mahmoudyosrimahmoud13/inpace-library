@@ -1,0 +1,16 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- karpathy
+- neural networks
+- gpt
+- pytorch
+- from scratch
+- intermediate
+credit: 'A guided course on Andrej Karpathy''s free YouTube series Neural Networks: Zero to Hero; lessons written for the
+  inPace library with short code adapted from his open-source repositories (micrograd, makemore, ng-video-lecture, minbpe,
+  build-nanogpt), all tested. Videos linked, not copied. Datasets: names.txt (makemore), Tiny Shakespeare (char-rnn), FineWeb-Edu
+  (Hugging Face), HellaSwag.'

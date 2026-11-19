@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- pytorch
+- deep learning
+- python
+- autograd
+- beginner
+credit: Written for the inPace library; all code tested with PyTorch 2.15 on CPU. Optional videos by Andrej Karpathy, 3Blue1Brown,
+  Fireship and freeCodeCamp.org (Daniel Bourke), linked, not copied.

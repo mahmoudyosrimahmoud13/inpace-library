@@ -1,0 +1,168 @@
+id: pytorch-1-foundations
+title: 'PyTorch 1: tensors, autograd and your first models'
+version: 1
+language: en
+description: Part 1 of PyTorch from zero to master. Tensors and devices, shapes, views and broadcasting, autograd and the
+  computational graph, gradient descent and optimizers, nn.Module and layers, losses and the standard training loop, Dataset
+  and DataLoader, validation, early stopping and checkpoints, a complete digit classifier project and a field guide to debugging
+  training. Every example is tested with PyTorch 2.15 and runs on a CPU. Optional videos by Andrej Karpathy, 3Blue1Brown,
+  Fireship and freeCodeCamp. About 5 days, 60 to 90 minutes a day.
+image: cover.jpg
+downloads:
+- title: 'PyTorch: get started (install command for your system)'
+  url: https://pytorch.org/get-started/locally/
+- title: PyTorch tutorials
+  url: https://docs.pytorch.org/tutorials/
+- title: PyTorch documentation
+  url: https://docs.pytorch.org/docs/stable/index.html
+modules:
+- id: m1
+  title: 'Day 1: tensors'
+  lessons:
+  - id: m1-l1
+    title: 'Tensors: NumPy arrays that run on GPUs and learn'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: 'Tensor operations: maths, shapes and views'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install PyTorch (or open a free Colab notebook). Create a batch of 16 random 'images' of shape (16, 32, 32, 3),
+      convert it to (N, C, H, W), normalise each channel to mean 0 and standard deviation 1 using broadcasting, flatten it,
+      and move it to the best available device. Print the shape, dtype and device after each step. Upload code and output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between view and reshape, and between cat and stack, with a small example of each.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: autograd and optimizers'
+  lessons:
+  - id: m2-l1
+    title: 'Autograd: gradients for free'
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Gradient descent with autograd and optimizers
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Fit y = a·x² + b·x + c to noisy data you generate, using tensors with requires_grad and torch.optim.Adam. Print
+      the loss every 100 steps, compare the learned a, b, c with the true ones, and show what happens with three learning
+      rates. Check one gradient numerically. Upload code and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why gradients accumulate in PyTorch and what would happen if you forgot opt.zero_grad().
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: nn.Module and the training loop'
+  lessons:
+  - id: m3-l1
+    title: 'nn.Module: building models from layers'
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Losses and the standard training loop
+    file: lessons/m3-l2.md
+    minutes: 30
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write your own nn.Module with two hidden layers and dropout, and train it with your own train_one_epoch and evaluate
+      functions on a 2-class dataset that a straight line can't separate (two moons or circles). Report train loss and validation
+      accuracy every 10 epochs, and show the effect of forgetting model.eval(). Upload code and output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why CrossEntropyLoss must receive raw logits, and what goes wrong if you apply softmax first.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: data pipelines and real training loops'
+  lessons:
+  - id: m4-l1
+    title: Dataset and DataLoader
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Training and validation loops that scale
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write a Dataset for a CSV file of your choice (or the digits data) with a transform, split it with random_split,
+      train with DataLoaders, track train and validation loss and accuracy each epoch, keep the best checkpoint, stop early,
+      and save and reload the model. Upload code, the printed curves and the file size of your checkpoint.
+  - id: m4-explain
+    type: explain
+    prompt: Explain how to tell underfitting from overfitting using train and validation curves, and one fix for each.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: a full project and debugging'
+  lessons:
+  - id: m5-l1
+    title: 'Project: a digit classifier from start to finish'
+    file: lessons/m5-l1.md
+    minutes: 40
+  - id: m5-l2
+    title: 'Debugging training: a field guide'
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Repeat the digits project with your own changes: try two model sizes and two learning rates, keep a small results
+      table, show the confusion matrix and five misclassified images (plot them with matplotlib), and save the best model
+      with its normalisation statistics. Also run the overfit-one-batch test. Upload the notebook and results.'
+  - id: m5-explain
+    type: explain
+    prompt: Your loss stays flat at 2.30 for 10 classes and never moves. List the checks you'd do, in order, and why.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

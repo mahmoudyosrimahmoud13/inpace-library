@@ -1,0 +1,160 @@
+q1:
+  text: 'In a custom loop, metric objects need:'
+  show: 4
+  options:
+    a: update_state each batch and reset_state each epoch
+    b: 'Nothing: they reset themselves'
+    c: A GPU
+    d: A callback
+q2:
+  text: '@tf.function on a train step:'
+  show: 4
+  options:
+    a: Compiles it into a graph for speed
+    b: Disables gradients
+    c: Saves the model
+    d: Shuffles data
+q3:
+  text: 'A GAN needs a custom loop mainly because:'
+  show: 4
+  options:
+    a: Two models are trained against each other with two optimizers
+    b: It has no loss
+    c: Keras can't do Dense layers
+    d: It needs float64
+q4:
+  text: 'Using keras.ops inside a custom layer:'
+  show: 4
+  options:
+    a: Keeps it working on every Keras backend
+    b: Makes it TensorFlow-only
+    c: Disables saving
+    d: Is slower always
+q5:
+  text: 'A custom layer creates its weights in:'
+  show: 4
+  options:
+    a: build(), once the input shape is known
+    b: __del__
+    c: get_config
+    d: compile
+q6:
+  text: 'Passing a changing Python float to a tf.function:'
+  show: 4
+  options:
+    a: Retraces it on every new value
+    b: Is the fastest way
+    c: Raises an error
+    d: Is ignored
+q7:
+  text: 'jit_compile=True enables:'
+  show: 4
+  options:
+    a: XLA compilation and kernel fusion
+    b: Eager mode
+    c: Distribution
+    d: Quantization
+q8:
+  text: 'With mixed_bfloat16, the output layer is often set to:'
+  show: 4
+  options:
+    a: dtype='float32' for a stable softmax and loss
+    b: int8
+    c: float16
+    d: No dtype
+q9:
+  text: 'With MirroredStrategy, the model must be created:'
+  show: 4
+  options:
+    a: Inside strategy.scope()
+    b: Outside any scope
+    c: After fit
+    d: On the CPU only
+q10:
+  text: 'Datasets for a distributed fit should be batched with:'
+  show: 4
+  options:
+    a: The global batch size
+    b: The per-replica size
+    c: Size 1
+    d: No batching
+q11:
+  text: 'TF Serving expects models in:'
+  show: 4
+  options:
+    a: Numbered version folders containing SavedModels
+    b: A single .keras file
+    c: A pickle
+    d: A CSV
+q12:
+  text: 'TensorFlow Lite is now called:'
+  show: 4
+  options:
+    a: LiteRT
+    b: TFX
+    c: XLA
+    d: Keras Lite
+q13:
+  text: 'Optimize.DEFAULT in the LiteRT converter applies:'
+  show: 4
+  options:
+    a: Dynamic-range quantization of weights
+    b: No change
+    c: float64 conversion
+    d: Pruning only
+q14:
+  text: 'The Keras backend is chosen by:'
+  show: 4
+  options:
+    a: The KERAS_BACKEND environment variable, before importing Keras
+    b: A layer argument
+    c: model.compile
+    d: The dataset
+q15:
+  text: 'To run a .tflite model, current TensorFlow recommends:'
+  show: 4
+  options:
+    a: The Interpreter from the ai-edge-litert package
+    b: tf.lite.Interpreter forever
+    c: TF Serving
+    d: keras.models.load_model
+q16:
+  text: 'A PyTorch Linear weight has shape (out, in); a Keras Dense kernel has:'
+  show: 4
+  options:
+    a: (in, out)
+    b: (out, in)
+    c: (in, in)
+    d: (out, out)
+q17:
+  text: 'A PyTorch Conv2d weight (out, in, kh, kw) becomes a Keras Conv2D kernel with:'
+  show: 4
+  options:
+    a: transpose(2, 3, 1, 0)
+    b: No change
+    c: transpose(1, 0)
+    d: reshape(-1)
+q18:
+  text: 'After porting weights you must:'
+  show: 4
+  options:
+    a: Compare outputs on real inputs
+    b: Retrain from scratch
+    c: Delete the original
+    d: Nothing
+q19:
+  text: 'For inference only, a way to avoid porting is:'
+  show: 4
+  options:
+    a: Export to ONNX and use ONNX Runtime
+    b: Rewrite in C
+    c: Use TensorBoard
+    d: Pickle the model
+q20:
+  text: 'In the capstone, accuracy should be measured:'
+  show: 4
+  options:
+    a: For the Keras model and every exported format
+    b: Only for Keras
+    c: Only on training data
+    d: Never after export

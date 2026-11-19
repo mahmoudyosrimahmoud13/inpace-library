@@ -1,0 +1,80 @@
+q1:
+  right:
+  - a
+  why: They accumulate across batches.
+q2:
+  right:
+  - a
+  why: Keep Python logging outside it.
+q3:
+  right:
+  - a
+  why: fit expects one model and one loss.
+q4:
+  right:
+  - a
+  why: Backend-agnostic code.
+q5:
+  right:
+  - a
+  why: Lazy building.
+q6:
+  right:
+  - a
+  why: Pass a tf.constant instead.
+q7:
+  right:
+  - a
+  why: Fewer, faster kernels.
+q8:
+  right:
+  - a
+  why: Keep numerically sensitive parts in 32-bit.
+q9:
+  right:
+  - a
+  why: Variables are mirrored on every replica.
+q10:
+  right:
+  - a
+  why: The strategy splits each global batch.
+q11:
+  right:
+  - a
+  why: It can switch versions without restarting.
+q12:
+  right:
+  - a
+  why: Renamed in 2024.
+q13:
+  right:
+  - a
+  why: Smaller files, little accuracy loss.
+q14:
+  right:
+  - a
+  why: tensorflow, jax or torch.
+q15:
+  right:
+  - a
+  why: tf.lite.Interpreter is deprecated.
+q16:
+  right:
+  - a
+  why: Transpose when porting.
+q17:
+  right:
+  - a
+  why: (kh, kw, in, out).
+q18:
+  right:
+  - a
+  why: Layouts are easy to get wrong.
+q19:
+  right:
+  - a
+  why: One format, many runtimes.
+q20:
+  right:
+  - a
+  why: Export and quantization can change results.

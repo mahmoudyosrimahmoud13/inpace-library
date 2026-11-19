@@ -1,0 +1,172 @@
+id: huggingface-ecosystem
+title: Hugging Face and the deep learning ecosystem
+version: 1
+language: en
+description: 'The libraries around PyTorch that real projects use: the Hugging Face Hub and pipelines, tokenizers and Auto
+  models, the datasets library with map and dynamic padding, fine-tuning with the Trainer, text generation and chat templates,
+  LoRA with PEFT and QLoRA, PyTorch Lightning, Accelerate, a first look at JAX, exporting to ONNX Runtime, and serving options
+  from vLLM to llama.cpp. All code tested with transformers 5, datasets 5, peft 0.21, Lightning 2.6 and JAX. Optional videos
+  from Hugging Face, AssemblyAI, Umar Jamil, Andrej Karpathy and Fireship. About 5 days, 60 to 90 minutes a day.'
+image: cover.jpg
+downloads:
+- title: Hugging Face Transformers documentation
+  url: https://huggingface.co/docs/transformers/index
+- title: Hugging Face LLM Course (free)
+  url: https://huggingface.co/learn/llm-course
+- title: PEFT documentation
+  url: https://huggingface.co/docs/peft/index
+- title: Lightning documentation
+  url: https://lightning.ai/docs/pytorch/stable/
+- title: JAX documentation
+  url: https://docs.jax.dev/
+modules:
+- id: m1
+  title: 'Day 1: the Hub, pipelines, tokenizers and models'
+  lessons:
+  - id: m1-l1
+    title: The Hugging Face Hub and pipelines
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: Tokenizers and models, without the pipeline
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Find two models on the Hub for a task you care about (for example Arabic sentiment or named entities), read their
+      model cards and note licence, languages and size. Run both with a pipeline on 10 examples you write, then reproduce
+      one of them without the pipeline (tokenizer, model, softmax). Upload code, outputs and your comparison.
+  - id: m1-explain
+    type: explain
+    prompt: Explain what the attention mask is and why padding needs it.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: datasets and fine-tuning'
+  lessons:
+  - id: m2-l1
+    title: 'Datasets: load, process, batch'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Fine-tuning with the Trainer
+    file: lessons/m2-l2.md
+    minutes: 35
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Fine-tune a small pretrained model (DistilBERT or a multilingual model for Arabic) on a dataset from the Hub or
+      your own CSV with the Trainer. Report accuracy against a TF-IDF + logistic regression baseline, save the model and use
+      it in a pipeline. Upload code, both scores and three example predictions.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why fine-tuning uses a much smaller learning rate than training from scratch.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: generation and parameter-efficient fine-tuning'
+  lessons:
+  - id: m3-l1
+    title: Text generation and chat models
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Parameter-efficient fine-tuning with PEFT and LoRA
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Run a small instruct model (such as SmolLM2-135M-Instruct) with apply_chat_template on five prompts with two sampling
+      settings each and compare. Then add LoRA to a classifier from day 2 with PEFT, train it, and compare accuracy, training
+      time and saved file size with full fine-tuning. Upload code and a results table.
+  - id: m3-explain
+    type: explain
+    prompt: Explain LoRA in your own words, and why the saved adapter is so small.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Lightning and Accelerate'
+  lessons:
+  - id: m4-l1
+    title: 'PyTorch Lightning: organised training code'
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Accelerate: one loop, any hardware'
+    file: lessons/m4-l2.md
+    minutes: 25
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Rewrite a training script from the PyTorch course twice: once as a LightningModule with EarlyStopping and a logger,
+      once with Accelerate. Run both and show they reach similar accuracy. Upload both scripts and their output, with one
+      paragraph on which you prefer and why.'
+  - id: m4-explain
+    type: explain
+    prompt: 'Compare plain PyTorch, Accelerate, Lightning and the Hugging Face Trainer: when would you pick each?'
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: JAX and deployment'
+  lessons:
+  - id: m5-l1
+    title: 'JAX: NumPy that compiles and differentiates'
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Deploying Hugging Face models, and the ecosystem map
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Write logistic regression in JAX with jit and grad, and compute per-example gradients with vmap. Then export a
+      fine-tuned classifier to ONNX, run it with ONNX Runtime, compare outputs with PyTorch and time both on 200 sentences.
+      Upload code and the timing table.
+  - id: m5-explain
+    type: explain
+    prompt: Explain what a pure function is and why JAX needs it for jit, grad and vmap.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

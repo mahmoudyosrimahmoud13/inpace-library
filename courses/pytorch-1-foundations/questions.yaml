@@ -1,0 +1,200 @@
+q1:
+  text: 'torch.tensor([1.0, 2.0]) has dtype:'
+  show: 4
+  options:
+    a: float32
+    b: float64
+    c: int64
+    d: float16
+q2:
+  text: 'torch.from_numpy(a):'
+  show: 4
+  options:
+    a: Shares memory with the NumPy array
+    b: Always copies
+    c: Moves the data to the GPU
+    d: Changes the dtype to float64
+q3:
+  text: 'PyTorch image layers expect the layout:'
+  show: 4
+  options:
+    a: (N, C, H, W)
+    b: (N, H, W, C)
+    c: (H, W, N, C)
+    d: (C, N, H, W)
+q4:
+  text: 'x.view(...) on a tensor after .t() usually:'
+  show: 4
+  options:
+    a: Fails, because the memory isn't contiguous
+    b: Always works
+    c: Copies silently
+    d: Transposes again
+q5:
+  text: 'torch.stack of three (2, 3) tensors along dim 0 gives:'
+  show: 4
+  options:
+    a: (3, 2, 3)
+    b: (6, 3)
+    c: (2, 9)
+    d: (2, 3)
+q6:
+  text: 'loss.backward() stores gradients in:'
+  show: 4
+  options:
+    a: Each leaf tensor's .grad
+    b: The loss tensor
+    c: A file
+    d: The optimizer's learning rate
+q7:
+  text: 'Calling backward twice without zeroing:'
+  show: 4
+  options:
+    a: Adds the gradients together
+    b: Replaces them
+    c: Raises an error always
+    d: Halves them
+q8:
+  text: 'torch.no_grad() is used for:'
+  show: 4
+  options:
+    a: Weight updates and evaluation, where no graph is needed
+    b: Computing gradients
+    c: Creating tensors on GPU
+    d: Shuffling data
+q9:
+  text: 'The five lines of the training loop, in order, are:'
+  show: 4
+  options:
+    a: forward, loss, zero_grad, backward, step
+    b: step, forward, loss, backward, zero_grad
+    c: backward, forward, step, loss, zero_grad
+    d: zero_grad, step, forward, backward, loss
+q10:
+  text: 'A loss that explodes to huge values or nan usually means:'
+  show: 4
+  options:
+    a: The learning rate is too high
+    b: The learning rate is too low
+    c: Too few parameters
+    d: The data is shuffled
+q11:
+  text: 'Layers assigned as attributes in __init__ of an nn.Module:'
+  show: 4
+  options:
+    a: Are registered, so parameters() finds them
+    b: Are ignored by the optimizer
+    c: Must be in a Python list
+    d: Are frozen
+q12:
+  text: 'model.eval() changes the behaviour of:'
+  show: 4
+  options:
+    a: Dropout and BatchNorm
+    b: Linear layers
+    c: The optimizer
+    d: The loss function
+q13:
+  text: 'For 10-class classification the usual loss is:'
+  show: 4
+  options:
+    a: nn.CrossEntropyLoss on logits
+    b: nn.MSELoss on labels
+    c: nn.BCELoss on softmax
+    d: Accuracy
+q14:
+  text: 'Using loss.item() when logging:'
+  show: 4
+  options:
+    a: Stores a Python number, not the whole graph
+    b: Computes gradients
+    c: Moves the loss to GPU
+    d: Resets the optimizer
+q15:
+  text: An MLP of Linear(4,32), Linear(32,32), Linear(32,3) has how many parameters?
+  show: 4
+  options:
+    a: 1,315
+    b: 1,248
+    c: '160'
+    d: 4,096
+q16:
+  text: 'A Dataset must implement:'
+  show: 4
+  options:
+    a: __len__ and __getitem__
+    b: fit and predict
+    c: forward and backward
+    d: train and eval
+q17:
+  text: 'DataLoader with shuffle=True should be used for:'
+  show: 4
+  options:
+    a: The training set
+    b: The validation set
+    c: The test set
+    d: Saving checkpoints
+q18:
+  text: 'num_workers > 0 in a DataLoader:'
+  show: 4
+  options:
+    a: Loads and augments batches in parallel processes
+    b: Uses more GPUs
+    c: Increases the batch size
+    d: Disables shuffling
+q19:
+  text: 'Early stopping:'
+  show: 4
+  options:
+    a: Stops when validation stops improving and keeps the best weights
+    b: Stops after one epoch always
+    c: Lowers the learning rate
+    d: Removes dropout
+q20:
+  text: 'The safest way to save a model is:'
+  show: 4
+  options:
+    a: torch.save(model.state_dict(), path), loaded with weights_only=True
+    b: Pickling the whole Python object
+    c: Printing the weights
+    d: Saving the optimizer only
+q21:
+  text: 'Overfitting a single batch is a test that:'
+  show: 4
+  options:
+    a: The model and loop can learn at all
+    b: The model generalises
+    c: The data is balanced
+    d: The GPU works
+q22:
+  text: 'With 10 classes, a randomly initialised classifier''s cross-entropy should start near:'
+  show: 4
+  options:
+    a: 2.30 (ln 10)
+    b: '0'
+    c: '10'
+    d: '0.1'
+q23:
+  text: 'Normalisation statistics for inputs should be computed on:'
+  show: 4
+  options:
+    a: The training set only, and saved with the model
+    b: The test set
+    c: All data together
+    d: Each batch separately at test time
+q24:
+  text: '''Expected all tensors to be on the same device'' means:'
+  show: 4
+  options:
+    a: The model or a batch wasn't moved with .to(device)
+    b: The learning rate is wrong
+    c: The dataset is empty
+    d: The loss is nan
+q25:
+  text: 'A confusion matrix shows:'
+  show: 4
+  options:
+    a: Which true classes get predicted as which other classes
+    b: The loss per epoch
+    c: The learning rate schedule
+    d: Model parameters

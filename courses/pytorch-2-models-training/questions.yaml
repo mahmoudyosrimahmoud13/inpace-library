@@ -1,0 +1,200 @@
+q1:
+  text: 'nn.Conv2d(3, 16, 3, padding=1) on a (N, 3, 32, 32) input outputs:'
+  show: 4
+  options:
+    a: (N, 16, 32, 32)
+    b: (N, 3, 30, 30)
+    c: (N, 16, 30, 30)
+    d: (N, 48, 32, 32)
+q2:
+  text: 'MaxPool2d(2) changes a (N, 16, 8, 8) tensor to:'
+  show: 4
+  options:
+    a: (N, 16, 4, 4)
+    b: (N, 8, 8, 8)
+    c: (N, 16, 8, 8)
+    d: (N, 32, 4, 4)
+q3:
+  text: 'In transfer learning you usually first:'
+  show: 4
+  options:
+    a: Freeze the backbone and train a new head
+    b: Train everything with a high lr
+    c: Delete the backbone
+    d: Train from random weights
+q4:
+  text: 'Inputs to a pretrained model should be normalised:'
+  show: 4
+  options:
+    a: With the statistics its weights were trained with
+    b: To 0..255
+    c: Not at all
+    d: With your test set's statistics
+q5:
+  text: 'Data augmentation should be applied to:'
+  show: 4
+  options:
+    a: The training set only
+    b: The test set only
+    c: All sets equally
+    d: The labels
+q6:
+  text: 'nn.Embedding(100, 8) applied to ids of shape (2, 5) returns:'
+  show: 4
+  options:
+    a: (2, 5, 8)
+    b: (2, 8)
+    c: (100, 8)
+    d: (2, 5)
+q7:
+  text: 'A collate_fn is used to:'
+  show: 4
+  options:
+    a: Combine examples into a batch, for example by padding
+    b: Shuffle the dataset
+    c: Compute gradients
+    d: Save checkpoints
+q8:
+  text: 'pack_padded_sequence helps an LSTM by:'
+  show: 4
+  options:
+    a: Skipping the padding positions
+    b: Adding more layers
+    c: Sorting the vocabulary
+    d: Removing gradients
+q9:
+  text: 'F.scaled_dot_product_attention(q, k, v, is_causal=True):'
+  show: 4
+  options:
+    a: Computes masked attention with an efficient kernel
+    b: Trains the model
+    c: Builds the vocabulary
+    d: Only works on CPU
+q10:
+  text: 'Weight tying in a language model means:'
+  show: 4
+  options:
+    a: The output layer shares weights with the input embedding
+    b: All layers have the same weights
+    c: Weights are frozen
+    d: Biases are removed
+q11:
+  text: 'A warmup + cosine schedule:'
+  show: 4
+  options:
+    a: Raises the lr briefly, then lowers it smoothly
+    b: Keeps the lr constant
+    c: Only lowers the lr at the start
+    d: Randomises the lr
+q12:
+  text: 'Weight decay is usually not applied to:'
+  show: 4
+  options:
+    a: Biases and normalisation weights
+    b: Linear weights
+    c: Convolution kernels
+    d: Embedding tables always
+q13:
+  text: 'clip_grad_norm_ should be called:'
+  show: 4
+  options:
+    a: After backward() and before step()
+    b: Before the forward pass
+    c: After step()
+    d: Only at evaluation
+q14:
+  text: 'bfloat16 mixed precision usually doesn''t need a GradScaler because:'
+  show: 4
+  options:
+    a: It has the same range as float32
+    b: It's slower
+    c: It has more precision than float32
+    d: It isn't used for gradients
+q15:
+  text: 'A checkpoint you can resume from includes:'
+  show: 4
+  options:
+    a: Model, optimizer, scheduler state and the step
+    b: Only the model weights
+    c: Only the loss
+    d: The dataset
+q16:
+  text: 'With 90% of examples in one class, a good single summary metric is:'
+  show: 4
+  options:
+    a: Macro F1
+    b: Accuracy
+    c: Training loss
+    d: Number of parameters
+q17:
+  text: 'torchmetrics computes a metric correctly over an epoch by:'
+  show: 4
+  options:
+    a: Accumulating with update() and computing once with compute()
+    b: Averaging batch accuracies
+    c: Using only the last batch
+    d: Running on the test set
+q18:
+  text: 'Random search often beats grid search because:'
+  show: 4
+  options:
+    a: It tries more distinct values of the settings that matter
+    b: It's deterministic
+    c: It needs no validation set
+    d: It always tries every combination
+q19:
+  text: 'Learning rates are best searched:'
+  show: 4
+  options:
+    a: On a log scale
+    b: In steps of 0.1
+    c: Only at 0.01
+    d: Randomly between 0 and 1
+q20:
+  text: 'For each run you should log:'
+  show: 4
+  options:
+    a: Settings, seed, code version, curves and final metrics
+    b: Only the final accuracy
+    c: Nothing until it works
+    d: Only the loss at step 0
+q21:
+  text: 'A buffer registered with register_buffer is:'
+  show: 4
+  options:
+    a: Saved and moved with the model, but not trained
+    b: Trained like a parameter
+    c: Deleted after forward
+    d: Only on the CPU
+q22:
+  text: 'A forward hook can be used to:'
+  show: 4
+  options:
+    a: Record a layer's outputs without changing the model code
+    b: Change the optimizer
+    c: Load data
+    d: Compile the model
+q23:
+  text: 'Kaiming initialisation is designed for:'
+  show: 4
+  options:
+    a: ReLU networks
+    b: Sigmoid outputs only
+    c: Embedding tables
+    d: Biases
+q24:
+  text: 'An ablation study:'
+  show: 4
+  options:
+    a: Removes one part at a time to see what actually helps
+    b: Adds every trick at once
+    c: Deletes the test set
+    d: Trains for longer
+q25:
+  text: 'RMSNorm differs from LayerNorm by:'
+  show: 4
+  options:
+    a: Not subtracting the mean, only scaling by the root-mean-square
+    b: Using batch statistics
+    c: Having no learnable weights ever
+    d: Working only on images

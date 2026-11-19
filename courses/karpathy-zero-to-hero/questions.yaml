@@ -1,0 +1,240 @@
+q1:
+  text: 'A derivative tells you:'
+  show: 4
+  options:
+    a: How much the output changes per tiny change of the input
+    b: The output's value
+    c: The number of parameters
+    d: The learning rate
+q2:
+  text: 'backward() visits the nodes in:'
+  show: 4
+  options:
+    a: Reverse topological order
+    b: Random order
+    c: Alphabetical order
+    d: Forward order
+q3:
+  text: 'd tanh(x)/dx equals:'
+  show: 4
+  options:
+    a: 1 − tanh²(x)
+    b: tanh(x)
+    c: 1 + x²
+    d: e^x
+q4:
+  text: 'If you forget to zero gradients between steps:'
+  show: 4
+  options:
+    a: Gradients from earlier steps pile up
+    b: Training gets faster
+    c: Nothing happens
+    d: Weights reset to zero
+q5:
+  text: 'micrograd differs from PyTorch mainly because it works on:'
+  show: 4
+  options:
+    a: Single numbers instead of tensors
+    b: Strings
+    c: Only GPUs
+    d: Integers only
+q6:
+  text: 'A bigram model predicts the next character from:'
+  show: 4
+  options:
+    a: The current character only
+    b: The whole name
+    c: The last three characters
+    d: Nothing
+q7:
+  text: 'The average negative log likelihood of a uniform guess over 27 characters is about:'
+  show: 4
+  options:
+    a: '3.30'
+    b: '0'
+    c: '1'
+    d: '27'
+q8:
+  text: 'Adding 1 to every count before normalising:'
+  show: 4
+  options:
+    a: Avoids zero probabilities (smoothing)
+    b: Doubles the loss
+    c: Removes the start token
+    d: Sorts the table
+q9:
+  text: 'one_hot(x) @ W is the same as:'
+  show: 4
+  options:
+    a: Selecting row x of W
+    b: Transposing W
+    c: Summing W
+    d: Multiplying W by x
+q10:
+  text: 'F.cross_entropy(logits, y) combines:'
+  show: 4
+  options:
+    a: Softmax, log and averaging the negative log likelihood
+    b: Only softmax
+    c: Only exp
+    d: Sorting and counting
+q11:
+  text: 'In the MLP language model, C[X] does:'
+  show: 4
+  options:
+    a: Look up an embedding vector for each context character
+    b: Count characters
+    c: Compute the loss
+    d: Normalise activations
+q12:
+  text: 'A dev loss much higher than train loss suggests:'
+  show: 4
+  options:
+    a: Overfitting
+    b: Underfitting
+    c: A perfect model
+    d: A bad tokenizer
+q13:
+  text: 'A saturated tanh unit:'
+  show: 4
+  options:
+    a: Has outputs near ±1 and almost zero gradient
+    b: Learns fastest
+    c: Outputs exactly 0
+    d: Has no weights
+q14:
+  text: 'Kaiming initialisation scales weights by:'
+  show: 4
+  options:
+    a: gain / √fan_in
+    b: fan_in²
+    c: A random factor
+    d: 1 always
+q15:
+  text: 'At inference, BatchNorm uses:'
+  show: 4
+  options:
+    a: Running mean and variance collected during training
+    b: The current batch's statistics
+    c: No normalisation
+    d: Test set statistics
+q16:
+  text: 'For y = x @ W, the gradient with respect to W is:'
+  show: 4
+  options:
+    a: x.T @ dy
+    b: dy @ W.T
+    c: W.T @ x
+    d: dy @ x
+q17:
+  text: 'The gradient of softmax + cross-entropy with respect to the logits is:'
+  show: 4
+  options:
+    a: (softmax − one-hot) / batch size
+    b: The softmax itself
+    c: Zero
+    d: The one-hot labels
+q18:
+  text: 'A broadcast bias''s gradient is:'
+  show: 4
+  options:
+    a: The sum of the incoming gradient over the broadcast dimension
+    b: The mean
+    c: Zero
+    d: The same as the weights'
+q19:
+  text: 'WaveNet-style models fuse context:'
+  show: 4
+  options:
+    a: Gradually, two neighbours at a time, in a tree
+    b: All at once
+    c: Randomly
+    d: Only the last character
+q20:
+  text: 'For (B, T, C) inputs, BatchNorm statistics should be computed over:'
+  show: 4
+  options:
+    a: Both batch and time
+    b: Only time
+    c: Only channels
+    d: Nothing
+q21:
+  text: 'A lower-triangular weight matrix lets each token:'
+  show: 4
+  options:
+    a: Combine only itself and earlier tokens
+    b: See future tokens
+    c: Ignore all tokens
+    d: Sort tokens
+q22:
+  text: 'Scaling attention scores by 1/√head_size:'
+  show: 4
+  options:
+    a: Keeps the softmax from becoming one-hot at initialisation
+    b: Speeds up tokenization
+    c: Removes the mask
+    d: Adds positions
+q23:
+  text: 'Attention has no built-in sense of order, so GPT adds:'
+  show: 4
+  options:
+    a: Position embeddings
+    b: More heads
+    c: Dropout
+    d: A bigger vocabulary
+q24:
+  text: 'In a transformer block, the feed-forward layer:'
+  show: 4
+  options:
+    a: Processes each token's gathered information on its own
+    b: Mixes tokens across positions
+    c: Masks the future
+    d: Tokenizes text
+q25:
+  text: 'The GPT built in the video is:'
+  show: 4
+  options:
+    a: A decoder-only transformer
+    b: An encoder-only model like BERT
+    c: A CNN
+    d: An RNN
+q26:
+  text: 'Byte-level BPE starts from:'
+  show: 4
+  options:
+    a: The 256 possible UTF-8 byte values
+    b: English words
+    c: Unicode code points only
+    d: Random tokens
+q27:
+  text: 'A 5-letter Arabic word in UTF-8 takes:'
+  show: 4
+  options:
+    a: 10 bytes, before any merges
+    b: 5 bytes
+    c: 1 byte
+    d: 20 bytes
+q28:
+  text: 'GPT-style regex pre-splitting ensures:'
+  show: 4
+  options:
+    a: Merges don't cross word, number and punctuation boundaries
+    b: Text is lowercased
+    c: Every token is a word
+    d: Numbers are removed
+q29:
+  text: 'GPT-2 124M uses a context length of:'
+  show: 4
+  options:
+    a: 1024 tokens
+    b: '8'
+    c: '50257'
+    d: '124'
+q30:
+  text: 'The GPT-2 reproduction learning rate schedule is:'
+  show: 4
+  options:
+    a: Linear warmup, then cosine decay to 10% of the maximum
+    b: Constant
+    c: Random
+    d: Linear increase only

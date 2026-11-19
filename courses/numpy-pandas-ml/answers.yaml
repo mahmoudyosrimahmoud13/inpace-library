@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Vectorization over one memory block.
+q2:
+  right:
+  - a
+  why: Half the memory of float64, fast on GPUs.
+q3:
+  right:
+  - a
+  why: -1 means 'work it out'.
+q4:
+  right:
+  - a
+  why: Each axis gets its own index.
+q5:
+  right:
+  - a
+  why: Use .copy() for independence.
+q6:
+  right:
+  - a
+  why: axis=0 collapses the rows.
+q7:
+  right:
+  - a
+  why: Inner sizes must match.
+q8:
+  right:
+  - a
+  why: 'Compare from the right: 2 vs 3.'
+q9:
+  right:
+  - a
+  why: (n, 1) divides (n, d) row by row.
+q10:
+  right:
+  - a
+  why: Ratios of exps are unchanged by a shift.
+q11:
+  right:
+  - a
+  why: Mixing them up is a common bug.
+q12:
+  right:
+  - a
+  why: Run it on every new dataset.
+q13:
+  right:
+  - a
+  why: pd.get_dummies does it.
+q14:
+  right:
+  - a
+  why: Assign with df.loc[mask, col] = value.
+q15:
+  right:
+  - a
+  why: Then torch.from_numpy or tf.convert_to_tensor.
+q16:
+  right:
+  - a
+  why: Split, apply, combine.
+q17:
+  right:
+  - a
+  why: Perfect for per-row features.
+q18:
+  right:
+  - a
+  why: Missing matches become NaN.
+q19:
+  right:
+  - a
+  why: Prevents silent row duplication.
+q20:
+  right:
+  - a
+  why: Features must not peek into the future.
+q21:
+  right:
+  - a
+  why: Counts per class show imbalance.
+q22:
+  right:
+  - a
+  why: Every step is fitted on training data only.
+q23:
+  right:
+  - a
+  why: Any real model must beat it.
+q24:
+  right:
+  - a
+  why: Deep learning shines on images, text and audio.
+q25:
+  right:
+  - a
+  why: A more stable estimate than one split.

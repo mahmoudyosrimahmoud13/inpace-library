@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Keras 3 is multi-backend.
+q2:
+  right:
+  - a
+  why: Variables are mutable.
+q3:
+  right:
+  - a
+  why: Then apply them with an optimizer.
+q4:
+  right:
+  - a
+  why: Sparse means integer labels.
+q5:
+  right:
+  - a
+  why: Shuffle ordered data first, or pass validation_data.
+q6:
+  right:
+  - a
+  why: Keras knows the whole graph.
+q7:
+  right:
+  - a
+  why: With a training flag for dropout.
+q8:
+  right:
+  - a
+  why: Like fitting a scaler.
+q9:
+  right:
+  - a
+  why: Unseen values don't break the model.
+q10:
+  right:
+  - a
+  why: Clear and safe.
+q11:
+  right:
+  - a
+  why: Keeps the accelerator busy.
+q12:
+  right:
+  - a
+  why: Cache clean data, augment fresh each epoch.
+q13:
+  right:
+  - a
+  why: A guard against overfitting.
+q14:
+  right:
+  - a
+  why: React to stalls.
+q15:
+  right:
+  - a
+  why: For example CosineDecay with warmup.
+q16:
+  right:
+  - a
+  why: PyTorch uses channels-first.
+q17:
+  right:
+  - a
+  why: They pass through unchanged at inference.
+q18:
+  right:
+  - a
+  why: Otherwise the change is ignored.
+q19:
+  right:
+  - a
+  why: Padding id 0 is masked.
+q20:
+  right:
+  - a
+  why: Use momentum=0.9.
+q21:
+  right:
+  - a
+  why: SavedModel needs no Python model code.
+q22:
+  right:
+  - a
+  why: So Keras can rebuild them.
+q23:
+  right:
+  - a
+  why: Watch for retracing.
+q24:
+  right:
+  - a
+  why: Use tf.print for every run.
+q25:
+  right:
+  - a
+  why: Preprocessing ships with the model.

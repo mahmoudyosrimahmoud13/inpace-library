@@ -1,0 +1,17 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="70" width="440" height="250" rx="12" fill="#fdf6e9"/></g>
+<rect x="40" y="70" width="440" height="50" rx="12" fill="#1f3d36"/>
+<g font-family="JBM" font-weight="700" font-size="22" fill="#fdf6e9"><text x="62" y="103">city</text><text x="210" y="103">price</text><text x="340" y="103">qty</text></g>
+<g font-family="JBM" font-weight="500" font-size="22" fill="#1f3d36">
+<text x="62" y="160">Cairo</text><text x="210" y="160">120</text><text x="340" y="160">2</text>
+<text x="62" y="205">Giza</text><text x="210" y="205">250</text><text x="340" y="205">1</text>
+<text x="62" y="250">Alex</text><text x="210" y="250">90</text><text x="340" y="250">1</text>
+<text x="62" y="295">Cairo</text><text x="210" y="295">400</text><text x="340" y="295">3</text></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="24" fill="#1f3d36" text-anchor="middle">
+<rect x="60" y="370" width="90" height="90" rx="8" fill="#f4d35e"/><text x="105" y="425">1</text>
+<rect x="160" y="370" width="90" height="90" rx="8" fill="#7fd3ff"/><text x="205" y="425">2</text>
+<rect x="260" y="370" width="90" height="90" rx="8" fill="#ff8fab"/><text x="305" y="425">3</text>
+<rect x="360" y="370" width="90" height="90" rx="8" fill="#9ee6b8"/><text x="405" y="425">4</text></g>
+<text x="260" y="520" font-family="JBM" font-weight="700" font-size="22" fill="#1f3d36" text-anchor="middle">X.shape == (4, 3)</text>
+</svg>

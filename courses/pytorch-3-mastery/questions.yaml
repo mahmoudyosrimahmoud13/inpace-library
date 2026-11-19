@@ -1,0 +1,200 @@
+q1:
+  text: 'GPU operations in PyTorch are:'
+  show: 4
+  options:
+    a: 'Asynchronous: Python continues before the GPU finishes'
+    b: Always synchronous
+    c: Run on the CPU first
+    d: Run only at backward
+q2:
+  text: 'The first call of a torch.compile''d model is slow because:'
+  show: 4
+  options:
+    a: It compiles the graph
+    b: It downloads weights
+    c: It trains first
+    d: It runs on CPU
+q3:
+  text: 'Activation checkpointing trades:'
+  show: 4
+  options:
+    a: Extra compute for much less memory
+    b: Accuracy for speed
+    c: Memory for accuracy
+    d: Nothing
+q4:
+  text: 'A graph break in torch.compile means:'
+  show: 4
+  options:
+    a: Part of the code couldn't be captured, so it runs less optimised
+    b: The model crashes
+    c: Gradients are wrong
+    d: The GPU is broken
+q5:
+  text: 'pin_memory=True in a DataLoader helps:'
+  show: 4
+  options:
+    a: Faster copies from CPU to GPU
+    b: Smaller models
+    c: Higher accuracy
+    d: Random shuffling
+q6:
+  text: 'ctx.save_for_backward in a custom Function:'
+  show: 4
+  options:
+    a: Stores tensors the backward pass needs
+    b: Saves the model to disk
+    c: Disables gradients
+    d: Logs the loss
+q7:
+  text: 'A straight-through estimator:'
+  show: 4
+  options:
+    a: Uses a different gradient than the forward function's true one
+    b: Removes the forward pass
+    c: Doubles the gradient
+    d: Is only for CNNs
+q8:
+  text: 'torch.func.vmap is used to:'
+  show: 4
+  options:
+    a: Vectorise a function over a batch dimension without a loop
+    b: Visualise models
+    c: Move tensors to GPU
+    d: Save checkpoints
+q9:
+  text: 'At initialisation, a language model''s loss should be near:'
+  show: 4
+  options:
+    a: ln(vocabulary size)
+    b: '0'
+    c: '1'
+    d: The vocabulary size
+q10:
+  text: 'A causality test for a GPT checks that:'
+  show: 4
+  options:
+    a: Changing a later token doesn't change earlier outputs
+    b: The loss decreases
+    c: Weights are tied
+    d: The vocabulary is sorted
+q11:
+  text: 'In DDP, gradients are synchronised:'
+  show: 4
+  options:
+    a: During backward(), by averaging across processes
+    b: Never
+    c: Only at the end of training
+    d: By rank 0 alone
+q12:
+  text: 'DistributedSampler.set_epoch(epoch) is needed to:'
+  show: 4
+  options:
+    a: Shuffle differently every epoch across ranks
+    b: Speed up training
+    c: Choose the GPU
+    d: Save checkpoints
+q13:
+  text: 'With 4 processes and batch_size=32 each, the effective batch is:'
+  show: 4
+  options:
+    a: '128'
+    b: '32'
+    c: '8'
+    d: '36'
+q14:
+  text: 'FSDP saves memory by:'
+  show: 4
+  options:
+    a: Sharding weights, gradients and optimizer state across GPUs
+    b: Using int8 always
+    c: Removing layers
+    d: Training fewer steps
+q15:
+  text: 'A distributed job that hangs is often caused by:'
+  show: 4
+  options:
+    a: Ranks running different collective operations
+    b: Too much memory
+    c: A small learning rate
+    d: Using AdamW
+q16:
+  text: 'torch.export.export produces:'
+  show: 4
+  options:
+    a: An ExportedProgram graph with known input specifications
+    b: A trained model
+    c: A Docker image
+    d: A dataset
+q17:
+  text: 'Without declaring dynamic dimensions, an exported model:'
+  show: 4
+  options:
+    a: Only accepts inputs with the example's exact shapes
+    b: Accepts any shape
+    c: Can't run
+    d: Is quantized
+q18:
+  text: 'Before exporting you should call:'
+  show: 4
+  options:
+    a: model.eval()
+    b: model.train()
+    c: opt.step()
+    d: torch.manual_seed()
+q19:
+  text: 'The current PyTorch library for quantization is:'
+  show: 4
+  options:
+    a: torchao
+    b: torch.ao.quantization (deprecated)
+    c: TorchScript
+    d: torchvision
+q20:
+  text: 'Per-channel int8 quantization stores:'
+  show: 4
+  options:
+    a: int8 values plus one scale per channel
+    b: Only float32 values
+    c: One global integer
+    d: The gradients
+q21:
+  text: 'In a FastAPI model server, the model should be loaded:'
+  show: 4
+  options:
+    a: Once at startup
+    b: On every request
+    c: Only in tests
+    d: From the client
+q22:
+  text: 'torch.inference_mode() is used in serving because:'
+  show: 4
+  options:
+    a: It disables gradient tracking with extra savings
+    b: It trains faster
+    c: It quantizes the model
+    d: It enables dropout
+q23:
+  text: 'Dynamic batching in an inference server:'
+  show: 4
+  options:
+    a: Groups concurrent requests into batches for efficiency
+    b: Changes the model size
+    c: Shuffles requests
+    d: Retrains the model
+q24:
+  text: 'A test that checks splits are disjoint protects against:'
+  show: 4
+  options:
+    a: Leakage between train, validation and test
+    b: Slow training
+    c: Wrong learning rates
+    d: Docker errors
+q25:
+  text: 'A strong README results table includes:'
+  show: 4
+  options:
+    a: A baseline and honestly measured numbers
+    b: Only the best number
+    c: No latency
+    d: Invented values

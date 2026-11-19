@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- tensorflow
+- keras
+- jax
+- deployment
+- advanced
+credit: Written for the inPace library; all code tested with TensorFlow 2.21, Keras 3.15, JAX, PyTorch 2.15 and ai-edge-litert.
+  Optional video by Daniel Bourke, linked, not copied.

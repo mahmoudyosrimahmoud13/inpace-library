@@ -1,0 +1,29 @@
+id: deep-learning-frameworks
+title: "PyTorch, TensorFlow and Hugging Face, from zero to master"
+description: "Learn the tools deep learning is built with: NumPy and pandas, PyTorch from tensors to distributed training and deployment, TensorFlow and Keras, and the Hugging Face ecosystem. Finish by building GPT from scratch with Andrej Karpathy's lectures."
+language: en
+author: inPace
+official: true
+order: 23
+tags: [pytorch, tensorflow, keras, hugging face, deep learning]
+steps:
+  - course: python-full
+    note: Every course here uses Python. Skip it if you already write Python comfortably.
+    optional: true
+  - course: numpy-pandas-ml
+    note: "Arrays, shapes, broadcasting and DataFrames: the foundations every framework assumes."
+  - course: pytorch-1-foundations
+    note: Tensors, autograd, nn.Module, the training loop and data loading.
+  - course: pytorch-2-models-training
+    note: CNNs, transformers, transfer learning and the training tricks that make models good.
+  - course: pytorch-3-mastery
+    note: Speed, distributed training, export, quantization and serving.
+  - course: huggingface-ecosystem
+    note: Pretrained models, fine-tuning with the Trainer and LoRA, Lightning, Accelerate and JAX.
+  - course: tensorflow-1-keras
+    note: Keras 3 and TensorFlow for teams that use them. The ideas map one to one from PyTorch.
+  - course: tensorflow-2-advanced
+    note: Custom training, distribution, deployment to servers and phones, and Keras on other backends.
+    optional: true
+  - course: karpathy-zero-to-hero
+    note: Build backpropagation, language models and GPT from scratch, following Andrej Karpathy's lectures.

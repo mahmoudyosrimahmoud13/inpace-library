@@ -1,0 +1,200 @@
+q1:
+  text: 'A Hugging Face pipeline bundles:'
+  show: 4
+  options:
+    a: A tokenizer, a model and post-processing for one task
+    b: Only a dataset
+    c: A training loop
+    d: A GPU driver
+q2:
+  text: Why pass model= explicitly to a pipeline?
+  show: 4
+  options:
+    a: The default model for a task can change between versions
+    b: It's required by law
+    c: It makes training faster
+    d: Pipelines can't load defaults
+q3:
+  text: 'The attention mask marks:'
+  show: 4
+  options:
+    a: Real tokens (1) and padding (0)
+    b: Important words
+    c: The labels
+    d: Masked-out layers
+q4:
+  text: 'AutoModelForSequenceClassification adds:'
+  show: 4
+  options:
+    a: A classification head on top of the pretrained body
+    b: A tokenizer
+    c: A dataset
+    d: A generation loop
+q5:
+  text: 'Before using a Hub model you should check its:'
+  show: 4
+  options:
+    a: Licence, training data, languages and size
+    b: Number of downloads only
+    c: Colour scheme
+    d: Author's location
+q6:
+  text: 'dataset.map(tokenize, batched=True):'
+  show: 4
+  options:
+    a: Processes many rows per call and caches the result
+    b: Trains the model
+    c: Downloads a new dataset
+    d: Pads to a fixed length always
+q7:
+  text: 'DataCollatorWithPadding:'
+  show: 4
+  options:
+    a: Pads each batch to its own longest example
+    b: Pads the whole dataset to the max length
+    c: Removes padding
+    d: Shuffles labels
+q8:
+  text: 'Hugging Face models compute the loss when the batch contains:'
+  show: 4
+  options:
+    a: A 'labels' field
+    b: A 'target' field
+    c: Nothing extra
+    d: A 'loss' field
+q9:
+  text: 'A typical full fine-tuning learning rate for BERT-sized models is about:'
+  show: 4
+  options:
+    a: 2e-5 to 5e-5
+    b: 1e-1
+    c: '1.0'
+    d: 1e-9
+q10:
+  text: 'load_best_model_at_end=True:'
+  show: 4
+  options:
+    a: Restores the checkpoint with the best evaluation metric
+    b: Loads the first checkpoint
+    c: Skips evaluation
+    d: Deletes checkpoints
+q11:
+  text: 'apply_chat_template is used to:'
+  show: 4
+  options:
+    a: Format messages exactly as the chat model was trained
+    b: Translate text
+    c: Count tokens
+    d: Train the model
+q12:
+  text: 'do_sample=False in generate means:'
+  show: 4
+  options:
+    a: 'Greedy decoding: the most likely token each step'
+    b: Random sampling
+    c: Beam search with 5 beams
+    d: No output
+q13:
+  text: 'For serving an LLM to many users on GPUs, a common choice is:'
+  show: 4
+  options:
+    a: vLLM
+    b: A pandas DataFrame
+    c: TensorBoard
+    d: The Trainer
+q14:
+  text: 'In LoRA, the trained parameters are:'
+  show: 4
+  options:
+    a: Small low-rank matrices added to chosen layers
+    b: All weights
+    c: Only biases
+    d: The tokenizer
+q15:
+  text: 'QLoRA makes big-model fine-tuning fit on one GPU by:'
+  show: 4
+  options:
+    a: Loading the frozen base in 4-bit and training LoRA adapters
+    b: Removing layers
+    c: Training on CPU
+    d: Using float64
+q16:
+  text: 'In a LightningModule, training_step returns:'
+  show: 4
+  options:
+    a: The loss; Lightning runs backward and the optimizer step
+    b: Nothing
+    c: The optimizer
+    d: A DataLoader
+q17:
+  text: 'Lightning''s precision=''bf16-mixed'' enables:'
+  show: 4
+  options:
+    a: Mixed precision training
+    b: Quantization
+    c: Pruning
+    d: Distributed training
+q18:
+  text: 'With Accelerate you replace loss.backward() with:'
+  show: 4
+  options:
+    a: accelerator.backward(loss)
+    b: loss.step()
+    c: accelerator.prepare(loss)
+    d: Nothing
+q19:
+  text: 'accelerator.prepare(model, opt, dl):'
+  show: 4
+  options:
+    a: Moves them to the right devices and wraps them for distribution
+    b: Trains the model
+    c: Downloads a model
+    d: Saves a checkpoint
+q20:
+  text: 'fast_dev_run=True in Lightning:'
+  show: 4
+  options:
+    a: Runs one batch of training and validation to check the code
+    b: Trains faster forever
+    c: Skips validation
+    d: Uses a smaller model
+q21:
+  text: 'jax.grad(f) returns:'
+  show: 4
+  options:
+    a: A new function that computes the gradient of f
+    b: The gradient values directly
+    c: A trained model
+    d: An optimizer
+q22:
+  text: 'Randomness in JAX uses:'
+  show: 4
+  options:
+    a: Explicit keys that you split and pass
+    b: A hidden global seed
+    c: Python's random module
+    d: No randomness
+q23:
+  text: 'JAX arrays are:'
+  show: 4
+  options:
+    a: 'Immutable: x.at[i].set(v) returns a new array'
+    b: Mutable like NumPy
+    c: Always on CPU
+    d: Python lists
+q24:
+  text: 'Before shipping an ONNX export of a model you should:'
+  show: 4
+  options:
+    a: Compare its outputs with the original on real inputs
+    b: Delete the original
+    c: Retrain it
+    d: Nothing
+q25:
+  text: 'A quick public demo of a model is often built with:'
+  show: 4
+  options:
+    a: Gradio on Hugging Face Spaces
+    b: TFRecord
+    c: torchrun
+    d: Optax

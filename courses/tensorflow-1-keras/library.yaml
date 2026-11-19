@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-19'
+section: ai-ml
+tags:
+- tensorflow
+- keras
+- deep learning
+- python
+- beginner
+credit: Written for the inPace library; all code tested with TensorFlow 2.21 and Keras 3.15. Optional videos by Daniel Bourke,
+  3Blue1Brown and Computerphile, linked, not copied.

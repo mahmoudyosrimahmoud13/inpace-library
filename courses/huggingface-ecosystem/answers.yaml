@@ -1,0 +1,100 @@
+q1:
+  right:
+  - a
+  why: Three lines from text to answer.
+q2:
+  right:
+  - a
+  why: Pin what you use.
+q3:
+  right:
+  - a
+  why: The model ignores padding.
+q4:
+  right:
+  - a
+  why: One label per text.
+q5:
+  right:
+  - a
+  why: The model card tells you.
+q6:
+  right:
+  - a
+  why: Fast and cached.
+q7:
+  right:
+  - a
+  why: Dynamic padding saves compute.
+q8:
+  right:
+  - a
+  why: The collator renames label to labels.
+q9:
+  right:
+  - a
+  why: Higher rates destroy pretrained knowledge.
+q10:
+  right:
+  - a
+  why: Like early stopping's best weights.
+q11:
+  right:
+  - a
+  why: The wrong format quietly hurts quality.
+q12:
+  right:
+  - a
+  why: Repeatable results.
+q13:
+  right:
+  - a
+  why: Continuous batching and paged attention.
+q14:
+  right:
+  - a
+  why: The base model stays frozen.
+q15:
+  right:
+  - a
+  why: Low memory, good quality.
+q16:
+  right:
+  - a
+  why: Engineering is handled by the Trainer.
+q17:
+  right:
+  - a
+  why: One setting instead of autocast code.
+q18:
+  right:
+  - a
+  why: It handles scaling and syncing.
+q19:
+  right:
+  - a
+  why: Your loop stays the same.
+q20:
+  right:
+  - a
+  why: A quick sanity check.
+q21:
+  right:
+  - a
+  why: Transformations return functions.
+q22:
+  right:
+  - a
+  why: Reproducible by design.
+q23:
+  right:
+  - a
+  why: Pure functions need immutable data.
+q24:
+  right:
+  - a
+  why: Exports can change results.
+q25:
+  right:
+  - a
+  why: Shareable in minutes.

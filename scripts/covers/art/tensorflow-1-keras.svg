@@ -1,0 +1,10 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="22" fill="#1f3d36">
+<rect x="60" y="70" width="400" height="60" rx="10" fill="#fdf6e9"/><text x="84" y="108">Input((8, 8, 1))</text>
+<rect x="60" y="145" width="400" height="60" rx="10" fill="#7fd3ff"/><text x="84" y="183">Conv2D(32, 3)</text>
+<rect x="60" y="220" width="400" height="60" rx="10" fill="#9ee6b8"/><text x="84" y="258">GlobalAveragePool</text>
+<rect x="60" y="295" width="400" height="60" rx="10" fill="#ff8fab"/><text x="84" y="333">Dense(10)</text></g>
+<g font-family="JBM" font-weight="700" font-size="24" fill="#1f3d36">
+<text x="60" y="430">model.compile(...)</text><text x="60" y="480">model.fit(ds)</text></g>
+</svg>

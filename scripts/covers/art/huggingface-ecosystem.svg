@@ -1,0 +1,13 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)"><circle cx="260" cy="220" r="80" fill="#f4d35e"/></g>
+<text x="260" y="232" font-family="JBM" font-weight="700" font-size="30" fill="#1f3d36" text-anchor="middle">Hub</text>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="18" text-anchor="middle" fill="#1f3d36">
+<rect x="40" y="70" width="150" height="50" rx="25" fill="#fdf6e9"/><text x="115" y="102">transformers</text>
+<rect x="330" y="70" width="150" height="50" rx="25" fill="#7fd3ff"/><text x="405" y="102">datasets</text>
+<rect x="30" y="320" width="130" height="50" rx="25" fill="#9ee6b8"/><text x="95" y="352">peft</text>
+<rect x="195" y="350" width="130" height="50" rx="25" fill="#ff8fab"/><text x="260" y="382">Lightning</text>
+<rect x="360" y="320" width="130" height="50" rx="25" fill="#fdf6e9"/><text x="425" y="352">JAX</text></g>
+<g stroke="#1f3d36" stroke-width="4"><path d="M150 122 L205 165 M370 122 L315 165 M110 318 L200 270 M260 348 L260 302 M410 318 L320 270"/></g>
+<text x="260" y="480" font-family="JBM" font-weight="700" font-size="22" fill="#1f3d36" text-anchor="middle">pipeline("...")</text>
+</svg>

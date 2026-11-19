@@ -1,0 +1,200 @@
+q1:
+  text: Why are NumPy arrays faster than Python lists for maths?
+  show: 4
+  options:
+    a: Numbers sit side by side in memory and operations run in compiled code
+    b: They use more memory
+    c: They're written in pure Python
+    d: They sort automatically
+q2:
+  text: 'The usual dtype for deep learning weights and inputs is:'
+  show: 4
+  options:
+    a: float32
+    b: float64
+    c: int8
+    d: object
+q3:
+  text: 'x.reshape(4, -1) on an array of 12 elements gives shape:'
+  show: 4
+  options:
+    a: (4, 3)
+    b: (4, 12)
+    c: (3, 4)
+    d: An error
+q4:
+  text: 'm[:, 2] selects:'
+  show: 4
+  options:
+    a: Column 2 of every row
+    b: Row 2
+    c: The first two rows
+    d: Element (2, 2)
+q5:
+  text: 'Changing a slice of an array:'
+  show: 4
+  options:
+    a: Changes the original array, because slices are views
+    b: Never affects the original
+    c: Raises an error
+    d: Copies the whole array
+q6:
+  text: 'm.sum(axis=0) on a (2, 3) array returns shape:'
+  show: 4
+  options:
+    a: (3,)
+    b: (2,)
+    c: (2, 3)
+    d: ()
+q7:
+  text: 'A @ B with A (4, 3) and B (3, 2) gives:'
+  show: 4
+  options:
+    a: (4, 2)
+    b: (3, 3)
+    c: (4, 3)
+    d: An error
+q8:
+  text: 'Shapes (3, 2) and (3,) broadcast to:'
+  show: 4
+  options:
+    a: An error
+    b: (3, 2)
+    c: (3, 3)
+    d: (2, 3)
+q9:
+  text: 'keepdims=True is useful because:'
+  show: 4
+  options:
+    a: The result keeps a size-1 axis and broadcasts back correctly
+    b: It saves memory
+    c: It sorts the result
+    d: It changes the dtype
+q10:
+  text: 'Subtracting the row max before exp in softmax:'
+  show: 4
+  options:
+    a: Prevents overflow without changing the result
+    b: Changes the probabilities
+    c: Makes it slower only
+    d: Removes the need for division
+q11:
+  text: 'df.loc and df.iloc differ because:'
+  show: 4
+  options:
+    a: loc uses labels, iloc uses positions
+    b: loc is faster
+    c: iloc only works on columns
+    d: They're the same
+q12:
+  text: 'df.isna().sum() shows:'
+  show: 4
+  options:
+    a: Missing values per column
+    b: The sum of all values
+    c: Duplicate rows
+    d: Column types
+q13:
+  text: 'One-hot encoding turns a category column into:'
+  show: 4
+  options:
+    a: One 0/1 column per category value
+    b: A single integer column
+    c: Text
+    d: A date
+q14:
+  text: 'In pandas 3, copy-on-write means:'
+  show: 4
+  options:
+    a: Changing a selection never silently changes the original table
+    b: Every operation is slower
+    c: You can't change data
+    d: DataFrames are read-only
+q15:
+  text: 'to_numpy(dtype=np.float32) is typically the step:'
+  show: 4
+  options:
+    a: Where data leaves pandas for a model
+    b: Where data is loaded
+    c: Where missing values are found
+    d: Where plots are made
+q16:
+  text: 'groupby(''city'')[''revenue''].sum() returns:'
+  show: 4
+  options:
+    a: One total per city
+    b: One value per order
+    c: The overall total
+    d: A sorted table of orders
+q17:
+  text: 'transform(''sum'') inside a groupby returns:'
+  show: 4
+  options:
+    a: The group's total repeated on every original row
+    b: One row per group
+    c: A single number
+    d: A new table of groups
+q18:
+  text: 'A left merge keeps:'
+  show: 4
+  options:
+    a: Every row of the left table
+    b: Only matching rows
+    c: Every row of both tables
+    d: Only the right table
+q19:
+  text: 'validate=''many_to_one'' in a merge:'
+  show: 4
+  options:
+    a: Raises an error if the right-hand keys are duplicated
+    b: Speeds it up
+    c: Removes duplicates silently
+    d: Sorts the result
+q20:
+  text: 'A lag feature built with shift(1):'
+  show: 4
+  options:
+    a: Uses yesterday's value, so it only looks at the past
+    b: Uses tomorrow's value
+    c: Removes the time index
+    d: Averages the whole series
+q21:
+  text: 'To see whether a target is balanced, plot:'
+  show: 4
+  options:
+    a: A bar chart of its value counts
+    b: A scatter plot of two features
+    c: A line over time always
+    d: 'Nothing: the mean is enough'
+q22:
+  text: 'A Pipeline in scikit-learn helps prevent:'
+  show: 4
+  options:
+    a: Leakage from fitting preprocessing on test data
+    b: Overflow in softmax
+    c: Slow plotting
+    d: Missing imports
+q23:
+  text: 'The trivial baseline for classification is:'
+  show: 4
+  options:
+    a: Always predicting the most common class
+    b: A random forest
+    c: A neural network
+    d: Perfect accuracy
+q24:
+  text: 'On tabular data with mixed features, strong first models are usually:'
+  show: 4
+  options:
+    a: Gradient-boosted trees or random forests
+    b: Only deep transformers
+    c: CNNs
+    d: Untrained networks
+q25:
+  text: 'cross_val_score with cv=5:'
+  show: 4
+  options:
+    a: Trains and scores the model on 5 different splits of the training data
+    b: Uses the test set 5 times
+    c: Trains 5 different model types
+    d: Makes training 5 times faster
