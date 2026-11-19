@@ -1,0 +1,196 @@
+q1:
+  right:
+  - a
+  why: ترتيب الملء أهم قرار.
+q2:
+  right:
+  - a
+  why: لكل عنصر بحث ثنائي واحد.
+q3:
+  right:
+  - a
+  why: عكسها يعدّ الترتيبات.
+q4:
+  right:
+  - a
+  why: توفير ضخم في الذاكرة.
+q5:
+  right:
+  - a
+  why: الصفر قد يكون إجابة أفضل خطأً.
+q6:
+  right:
+  - a
+  why: كل جزء يعتمد على أجزاء أقصر.
+q7:
+  right:
+  - a
+  why: مناسب حتى n حوالي 400 إلى 500.
+q8:
+  right:
+  - a
+  why: نحسبها بالمجموع التراكمي في O(1).
+q9:
+  right:
+  - a
+  why: الدور يتبدل فنطرح.
+q10:
+  right:
+  - a
+  why: أجزاء متصلة.
+q11:
+  right:
+  - a
+  why: 2ⁿ حالة.
+q12:
+  right:
+  - a
+  why: أسرع كثيرًا من كل الترتيبات.
+q13:
+  right:
+  - a
+  why: كل حالة نقرأها حُسبت.
+q14:
+  right:
+  - a
+  why: __builtin_popcount(mask).
+q15:
+  right:
+  - a
+  why: 'كل عنصر: خارج mask، أو فيه وفي sub، أو فيه فقط.'
+q16:
+  right:
+  - a
+  why: أي رقم أصغر ينهي القيد.
+q17:
+  right:
+  - a
+  why: مثل المجموع التراكمي.
+q18:
+  right:
+  - a
+  why: 007 ليس رقمًا من ثلاث خانات.
+q19:
+  right:
+  - a
+  why: شرط رتيب.
+q20:
+  right:
+  - a
+  why: خانات × tight × المجموع.
+q21:
+  right:
+  - a
+  why: 5 × 4 / 2.
+q22:
+  right:
+  - a
+  why: النجوم والقضبان.
+q23:
+  right:
+  - a
+  why: نختار مواضع خطوات اليمين.
+q24:
+  right:
+  - a
+  why: 'المكمّل: الكل ناقص بلا ''a''.'
+q25:
+  right:
+  - a
+  why: '|A ∪ B| = |A| + |B| − |A ∩ B|.'
+q26:
+  right:
+  - a
+  why: مع السالبة استخدم Bellman–Ford.
+q27:
+  right:
+  - a
+  why: priority_queue مع greater.
+q28:
+  right:
+  - a
+  why: سريع للجرافات الكبيرة.
+q29:
+  right:
+  - a
+  why: O(n + m).
+q30:
+  right:
+  - a
+  why: O(n³).
+q31:
+  right:
+  - a
+  why: يجعل العمليات شبه ثابتة.
+q32:
+  right:
+  - a
+  why: إضافة تلك الحافة تصنع دائرة.
+q33:
+  right:
+  - a
+  why: شجرة متصلة بلا دوائر.
+q34:
+  right:
+  - a
+  why: خوارزمية جشعة.
+q35:
+  right:
+  - a
+  why: اطبع IMPOSSIBLE.
+q36:
+  right:
+  - a
+  why: توازن بين الاثنين.
+q37:
+  right:
+  - a
+  why: لا يغيّر الإجابة.
+q38:
+  right:
+  - a
+  why: للتعيين أضف الفرق.
+q39:
+  right:
+  - a
+  why: تأجيل التعديلات.
+q40:
+  right:
+  - a
+  why: الأوراق من n إلى 2n−1.
+q41:
+  right:
+  - a
+  why: تكفي حركة واحدة.
+q42:
+  right:
+  - a
+  why: نظرية Nim.
+q43:
+  right:
+  - a
+  why: أصغر عدد غير موجود.
+q44:
+  right:
+  - a
+  why: Sprague–Grundy.
+q45:
+  right:
+  - a
+  why: ثم تحقق على قيم أكبر.
+q46:
+  right:
+  - a
+  why: مع CSES و USACO Guide.
+q47:
+  right:
+  - a
+  why: يكمل ما تعلمته.
+q48:
+  right:
+  - a
+  why: ثم جلسة مراجعة.
+q49:
+  right:
+  - a
+  why: الكود غير المختبر خطر.

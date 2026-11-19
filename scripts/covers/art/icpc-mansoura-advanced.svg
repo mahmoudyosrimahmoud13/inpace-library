@@ -1,0 +1,18 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter></defs>
+<g stroke="#3a1408" stroke-width="5">
+<path d="M260 80L140 180M260 80L380 180M140 180L80 290M140 180L200 290M380 180L320 290M380 180L440 290"/></g>
+<g filter="url(#s)" stroke="#3a1408" stroke-width="4">
+<rect x="185" y="50" width="150" height="60" rx="10" fill="#ffd166"/>
+<rect x="65" y="150" width="150" height="60" rx="10" fill="#fff1ea"/><rect x="305" y="150" width="150" height="60" rx="10" fill="#fff1ea"/>
+<rect x="40" y="265" width="80" height="50" rx="8" fill="#7fd3ff"/><rect x="160" y="265" width="80" height="50" rx="8" fill="#7fd3ff"/>
+<rect x="280" y="265" width="80" height="50" rx="8" fill="#9ee6b8"/><rect x="400" y="265" width="80" height="50" rx="8" fill="#9ee6b8"/></g>
+<g font-family="JBM" font-weight="700" font-size="20" fill="#3a1408" text-anchor="middle">
+<text x="260" y="87">[0..7] = 36</text><text x="140" y="187">[0..3] = 10</text><text x="380" y="187">[4..7] = 26</text>
+<text x="80" y="297">3</text><text x="200" y="297">7</text><text x="320" y="297">11</text><text x="440" y="297">15</text></g>
+<g filter="url(#s)"><rect x="40" y="380" width="440" height="110" rx="14" fill="#3a1408"/></g>
+<g font-family="JBM" font-weight="700" font-size="19" fill="#ffd8c7">
+<text x="64" y="420">dp[mask | (1 &lt;&lt; u)][u] =</text>
+<text x="64" y="452">  min(..., dp[mask][v] + d[v][u]);</text>
+<text x="64" y="480" fill="#ffd166">dist, dsu.find(x), grundy ^</text></g>
+</svg>

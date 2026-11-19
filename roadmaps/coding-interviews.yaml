@@ -17,6 +17,9 @@ steps:
   - course: icpc-mansoura-problem-solving-ar
     note: "Optional, in Arabic: competitive programming in C++, following ICPC Mansoura's Level 0 and Level 1 training. Great extra practice."
     optional: true
+  - course: icpc-mansoura-advanced-ar
+    note: "Optional, in Arabic: the next level, following ICPC Mansoura's Level 2 camps (advanced DP, Dijkstra, DSU, segment trees, game theory)."
+    optional: true
   - course: system-design-beginners
     note: How large systems are designed, the second kind of interview at most tech companies.
   - course: git-zero-to-master

@@ -1,0 +1,276 @@
+id: icpc-mansoura-advanced-ar
+title: 'البرمجة التنافسية المتقدمة: على خطى معسكرات ICPC Mansoura (المستوى 2)'
+version: 1
+language: ar
+description: 'الخطوة بعد كورس «حل المشكلات والبرمجة التنافسية». يسير بترتيب معسكرات ICPC Mansoura للمستوى 2: البرمجة الديناميكية
+  التكرارية بعمق (توفير الذاكرة، LIS في O(n log n)، عدّ الطرق)، DP على المدى، DP بالبتات (TSP والتوزيع)، DP على الأرقام مع
+  البحث الثنائي، العدّ والتوافيق والشمول والاستبعاد، Dijkstra و Floyd–Warshall، DSU وشجرة الامتداد الصغرى، شجرة المقاطع و
+  Fenwick، ونظرية الألعاب (Nim و Grundy)، ثم خطة تدريب للإقليمية. كل درس كامل ويعمل بدون إنترنت، وكل الأكواد مختبرة، وجلسات
+  المعسكرات الأصلية فيديوهات اختيارية. التدريب على CSES و AtCoder. حوالي 10 أيام، ساعتان يوميًا، ثم تدريب مستمر.'
+image: cover.jpg
+downloads:
+- title: CSES Problem Set
+  url: https://cses.fi/problemset/
+- title: AtCoder Educational DP Contest
+  url: https://atcoder.jp/contests/dp
+- title: 'cp-algorithms: شرح الخوارزميات'
+  url: https://cp-algorithms.com/
+- title: USACO Guide
+  url: https://usaco.guide/
+- title: صفحة تدريب ICPC Mansoura (كل المستويات والروابط)
+  url: https://msc.acm.org/training
+- title: 'Codeforces Gym: مسابقات إقليمية قديمة'
+  url: https://codeforces.com/gyms
+modules:
+- id: m1
+  title: 'اليوم 1: البرمجة الديناميكية التكرارية، بعمق'
+  lessons:
+  - id: m1-l1
+    title: البرمجة الديناميكية التكرارية، بعمق
+    file: lessons/m1-l1.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'حل من CSES: Coin Combinations I و Coin Combinations II و Grid Paths و Increasing Subsequence (بحل O(n log n)).
+      اكتب لكل مسألة الحالة والانتقال وترتيب الملء في تعليق، ووضّح في Coin Combinations لماذا يختلف ترتيب اللفتين. ارفع الأكواد
+      وصور Accepted.'
+  - id: m1-explain
+    type: explain
+    prompt: اشرح لماذا تبقى مصفوفة tails في حل LIS السريع مرتبة دائمًا، ولماذا يسمح هذا بالبحث الثنائي.
+    min_words: 70
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'اليوم 2: DP على المدى'
+  lessons:
+  - id: m2-l1
+    title: DP على المدى (Range DP)
+    file: lessons/m2-l1.md
+    minutes: 35
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'حل AtCoder DP Contest: L (Deque) و N (Slimes)، و CSES: Removal Game. لكل مسألة اكتب معنى dp[l][r] والانتقال،
+      ولماذا نملأ حسب الطول. ارفع الأكواد وصور Accepted.'
+  - id: m2-explain
+    type: explain
+    prompt: 'اشرح لماذا نطرح dp للخصم في لعبة الطرفين: dp[l][r] = max(a[l] − dp[l+1][r], a[r] − dp[l][r−1]).'
+    min_words: 70
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'اليوم 3: DP بالبتات'
+  lessons:
+  - id: m3-l1
+    title: DP بالبتات (Bitmask DP)
+    file: lessons/m3-l1.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'حل AtCoder DP Contest: O (Matching)، و CSES: Hamiltonian Flights. ثم اكتب TSP كاملًا وجرّبه على 4 مدن تحسب إجابتها
+      يدويًا. ارفع الأكواد وصور Accepted والمثال اليدوي.'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح لماذا يكفي في مسألة التوزيع أن نعرف mask فقط، دون أن نحفظ رقم الشخص الحالي في الحالة.
+    min_words: 70
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'اليوم 4: DP على الأرقام والبحث الثنائي'
+  lessons:
+  - id: m4-l1
+    title: DP على الأرقام (Digit DP)، ومعها البحث الثنائي
+    file: lessons/m4-l1.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'حل AtCoder DP Contest: S (Digit Sum) (هناك K يصل إلى 10000 خانة: اقرأه كنص، واجعل جدول الحفظ بحجم طوله، وخذ الإجابة
+      mod 10⁹+7) و CSES: Counting Numbers (يحتاج حالة started والرقم السابق). ثم استخدم countUpTo مع البحث الثنائي لإيجاد
+      أصغر X فيه k رقمًا مجموع أرقامه يقبل القسمة على D، وتحقق من الإجابة بحل بطيء لقيم صغيرة. ارفع الأكواد والتحقق.'
+  - id: m4-explain
+    type: explain
+    prompt: اشرح معنى tight في Digit DP، ولماذا يحدد أكبر رقم يمكن وضعه في الخانة الحالية.
+    min_words: 70
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'اليوم 5: العدّ والتوافيق'
+  lessons:
+  - id: m5-l1
+    title: العدّ والتوافيق (Counting)
+    file: lessons/m5-l1.md
+    minutes: 35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'حل من CSES: Binomial Coefficients و Distributing Apples و Creating Strings II. ثم اكتب دالة الشمول والاستبعاد
+      وتحقق منها بحل بطيء: عدد الأرقام من 1 إلى 1000 القابلة للقسمة على 2 أو 3 أو 5 (الإجابة 734). ارفع الأكواد وصور Accepted.'
+  - id: m5-explain
+    type: explain
+    prompt: اشرح فكرة النجوم والقضبان، ولماذا عدد توزيع n كرة متطابقة على k صندوق هو C(n + k − 1, k − 1).
+    min_words: 70
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'اليوم 6: Dijkstra وأقصر المسارات'
+  lessons:
+  - id: m6-l1
+    title: 'أقصر مسار: خوارزمية Dijkstra'
+    file: lessons/m6-l1.md
+    minutes: 35
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'حل من CSES: Shortest Routes I (Dijkstra) و Shortest Routes II (Floyd–Warshall) و Flight Discount (حالة إضافية:
+      هل استخدمنا الخصم). ارفع الأكواد وصور Accepted.'
+  - id: m6-explain
+    type: explain
+    prompt: اشرح وظيفة السطر if (d != dist[u]) continue; وما الذي يحدث بدونه.
+    min_words: 70
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'اليوم 7: DSU وشجرة الامتداد الصغرى'
+  lessons:
+  - id: m7-l1
+    title: DSU وشجرة الامتداد الصغرى (MST)
+    file: lessons/m7-l1.md
+    minutes: 35
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'حل من CSES: Road Reparation (Kruskal) و Road Construction (DSU: عدد المكوّنات وأكبرها بعد كل طريق) و Building
+      Roads. ارفع الأكواد وصور Accepted.'
+  - id: m7-explain
+    type: explain
+    prompt: اشرح لماذا نتجاهل في Kruskal أي حافة طرفاها في نفس المجموعة، ولماذا أخذ الأخف أولًا صحيح.
+    min_words: 70
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'اليوم 8: شجرة المقاطع و Fenwick'
+  lessons:
+  - id: m8-l1
+    title: شجرة المقاطع (Segment Tree)
+    file: lessons/m8-l1.md
+    minutes: 40
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'حل من CSES: Dynamic Range Sum Queries و Dynamic Range Minimum Queries و Range Xor Queries و Hotel Queries. استخدم
+      شجرة المقاطع في واحدة و Fenwick في أخرى على الأقل. ارفع الأكواد وصور Accepted.'
+  - id: m8-explain
+    type: explain
+    prompt: اشرح لماذا تحتاج شجرة المقاطع عملية تجميعية (associative)، وما قيمة المحايد لأصغر قيمة وللمجموع.
+    min_words: 70
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m9
+  title: 'اليوم 9: نظرية الألعاب'
+  lessons:
+  - id: m9-l1
+    title: نظرية الألعاب (Game Theory)
+    file: lessons/m9-l1.md
+    minutes: 35
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'حل AtCoder DP Contest: K (Stones) و CSES: Nim Game I و Stair Game. ثم احسب أرقام Grundy للعبة ''خذ 1 أو 3 أو
+      4'' لأول 30 كومة، واطبع النمط. ارفع الأكواد والجدول.'
+  - id: m9-explain
+    type: explain
+    prompt: اشرح لماذا يفوز اللاعب الأول في Nim إذا وفقط إذا كان XOR الأكوام لا يساوي صفرًا.
+    min_words: 70
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    pass: 70
+- id: m10
+  title: 'اليوم 10: خطة التدريب للإقليمية'
+  lessons:
+  - id: m10-l1
+    title: خطة التدريب للإقليمية
+    file: lessons/m10-l1.md
+    minutes: 25
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: 'المشروع الأخير: (1) أضف لمكتبة فريقك كل أكواد هذا الكورس بعد أن تختبر كل واحد على مسألة حقيقية. (2) خُض مع فريقك
+      مسابقة إقليمية قديمة كاملة على Codeforces Gym (ICPC Africa and Arabia أو ECPC إن وُجدت). (3) اكتب خطة تدريب لثلاثة أشهر.
+      ارفع الروابط والخطة.'
+  - id: m10-explain
+    type: explain
+    prompt: اكتب ثلاث نقاط تعلمتها من مسابقتكم الفريقية الكاملة، وكيف ستغيّر خطة تدريبكم بناءً عليها.
+    min_words: 100
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q46
+    - q47
+    - q48
+    - q49
+    pass: 70

@@ -1,12 +1,14 @@
 id: icpc-mansoura-problem-solving-ar
 title: 'حل المشكلات والبرمجة التنافسية: على خطى ICPC Mansoura'
-version: 1
+version: 2
 language: ar
 description: 'كورس حل مشكلات وبرمجة تنافسية بلغة C++، يسير بنفس ترتيب تدريب ICPC Mansoura للمستويين 0 و 1: مقدمة في حل المشكلات
-  والحَكَم، المصفوفات والنصوص، الدوال وتعقيد الوقت، مسائل Ad-hoc والمجموع التراكمي، مكتبة STL، المؤشران، البحث الثنائي، نظرية
-  الأعداد (الأوليات، GCD، الأس السريع، المعكوس الضربي، nCr)، البتات والبحث الكامل، الاستدعاء الذاتي والتراجع، الجراف مع DFS
-  و BFS، والبرمجة الديناميكية. كل درس كامل ويعمل بدون إنترنت، وجلسات ICPC Mansoura Community الأصلية على يوتيوب فيديوهات اختيارية،
-  مع تدريب على شيتات Codeforces. حوالي 12 يومًا، ساعة إلى ساعتين يوميًا، ثم تدريب مستمر.'
+  والحَكَم، المصفوفات والنصوص، الدوال وتعقيد الوقت، مسائل Ad-hoc والمجموع التراكمي، مكتبة STL، المؤشران، البحث الثنائي، الخوارزميات
+  الجشعة، نظرية الأعداد (الأوليات، GCD، الأس السريع، المعكوس الضربي، nCr)، أساسيات الهندسة الحسابية، البتات والبحث الكامل،
+  الاستدعاء الذاتي والتراجع، الجراف مع DFS و BFS، والبرمجة الديناميكية، مع ثلاث محطات مسابقات (كيف تخوض مسابقة، الحل اللاحق
+  والتقييم، ومسابقة ICPC الفريقية). كل درس كامل ويعمل بدون إنترنت، وجلسات ICPC Mansoura Community الأصلية على يوتيوب فيديوهات
+  اختيارية، مع تدريب على شيتات Codeforces و vjudge. حوالي 16 يومًا، ساعة إلى ساعتين يوميًا، ثم تدريب مستمر. بعده: كورس المستوى
+  2.'
 image: cover.jpg
 downloads:
 - title: مسائل المستوى 0 (مجموعة ICPC Mansoura على Codeforces)
@@ -21,6 +23,8 @@ downloads:
   url: https://codeforces.com/edu/courses
 - title: AtCoder Educational DP Contest
   url: https://atcoder.jp/contests/dp
+- title: CSES Problem Set
+  url: https://cses.fi/problemset/
 modules:
 - id: m1
   title: 'اليوم 1: ما هو حل المشكلات؟ وأول برنامج'
@@ -172,6 +176,30 @@ modules:
     - q29
     - q30
     pass: 70
+- id: c1
+  title: 'محطة: أول مسابقة (نهاية المستوى 0)'
+  lessons:
+  - id: c1-l1
+    title: كيف تخوض مسابقة
+    file: lessons/c1-l1.md
+    minutes: 20
+  requires:
+  - id: c1-practical
+    type: practical
+    prompt: 'خُض مسابقة كاملة بوقتها: إحدى مسابقات المستوى 0 في مجموعة ICPC Mansoura على Codeforces كمشاركة افتراضية، أو مسابقة
+      Div. 4 حية. ارفع رابط المسابقة، وعدد المسائل التي حللتها، وصورة لوحة النتائج.'
+  - id: c1-explain
+    type: explain
+    prompt: 'اكتب ما حدث في مسابقتك: بأي مسألة بدأت ولماذا، أين علقت، وما الذي ستفعله بشكل مختلف في المرة القادمة.'
+    min_words: 80
+  - id: c1-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    pass: 70
 - id: m7
   title: 'اليوم 7: المؤشران (Two Pointers)'
   lessons:
@@ -191,39 +219,48 @@ modules:
   - id: m7-quiz
     type: quiz
     questions:
-    - q31
-    - q32
-    - q33
-    - q34
     - q35
+    - q36
+    - q37
+    - q38
+    - q39
     pass: 70
 - id: m8
-  title: 'اليوم 8: البحث الثنائي'
+  title: 'اليوم 8 و 9: البحث الثنائي والخوارزميات الجشعة'
   lessons:
   - id: m8-l1
     title: البحث الثنائي (Binary Search)
     file: lessons/m8-l1.md
     minutes: 30
+  - id: m8-l2
+    title: الخوارزميات الجشعة (Greedy)
+    file: lessons/m8-l2.md
+    minutes: 30
   requires:
   - id: m8-practical
     type: practical
-    prompt: حل 6 مسائل من شيت Binary Search في المستوى 1، منها مسألتان على الأقل من نوع البحث على الإجابة. لكل مسألة اكتب
-      دالة التحقق ok() ولماذا هي رتيبة. ارفع الأكواد.
+    prompt: 'حل 5 مسائل من شيت Binary Search في المستوى 1، منها مسألتان على الأقل من نوع البحث على الإجابة، مع دالة التحقق
+      ok() ولماذا هي رتيبة. ثم حل 3 مسائل جشعة (منها من CSES: Movie Festival و Ferris Wheel)، واكتب لكل واحدة القاعدة الجشعة
+      ولماذا هي صحيحة. ارفع الأكواد.'
   - id: m8-explain
     type: explain
-    prompt: اشرح فكرة البحث الثنائي على الإجابة بمثال المصانع (أقل وقت لصنع k منتج).
-    min_words: 60
+    prompt: اشرح فكرة البحث الثنائي على الإجابة بمثال المصانع، ثم اشرح لماذا يفشل الحل الجشع في الفكة بالعملات {1, 3, 4} والمبلغ
+      6.
+    min_words: 80
   - id: m8-quiz
     type: quiz
     questions:
-    - q36
-    - q37
-    - q38
-    - q39
     - q40
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    - q46
+    - q47
     pass: 70
 - id: m9
-  title: 'اليوم 9 و 10: نظرية الأعداد'
+  title: 'اليوم 10 إلى 12: نظرية الأعداد والهندسة'
   lessons:
   - id: m9-l1
     title: 'نظرية الأعداد 1: القسمة، الأعداد الأولية، و GCD'
@@ -233,11 +270,16 @@ modules:
     title: 'نظرية الأعداد 2: الأسس السريعة والمعكوس الضربي'
     file: lessons/m9-l2.md
     minutes: 30
+  - id: m9-l3
+    title: 'الهندسة الحسابية: الأساسيات'
+    file: lessons/m9-l3.md
+    minutes: 30
   requires:
   - id: m9-practical
     type: practical
     prompt: 'اكتب: غربال إراتوستينس حتى 10⁶، دالة تحليل لعوامل أولية، gcd و lcm بدون overflow، power(a, n, mod)، و nCr مع
-      mod بعد تجهيز المضروب. ثم حل 5 مسائل من شيتي Number Theory 1 و 2 في المستوى 1. ارفع الأكواد وصور Accepted.'
+      mod بعد تجهيز المضروب. ثم حل 5 مسائل من شيتي Number Theory 1 و 2 في المستوى 1، و3 مسائل هندسة من CSES (Point Location
+      Test، Line Segment Intersection، Polygon Area). ارفع الأكواد وصور Accepted.'
   - id: m9-explain
     type: explain
     prompt: اشرح لماذا لا نستطيع القسمة مباشرة تحت mod، وكيف تحل نظرية فيرما المشكلة.
@@ -245,14 +287,17 @@ modules:
   - id: m9-quiz
     type: quiz
     questions:
-    - q41
-    - q42
-    - q43
-    - q44
-    - q45
+    - q48
+    - q49
+    - q50
+    - q51
+    - q52
+    - q53
+    - q54
+    - q55
     pass: 70
 - id: m10
-  title: 'اليوم 11: البتات، البحث الكامل، والتراجع'
+  title: 'اليوم 13: البتات، البحث الكامل، والتراجع'
   lessons:
   - id: m10-l1
     title: البتات (Bitmasks) والبحث الكامل
@@ -274,14 +319,38 @@ modules:
   - id: m10-quiz
     type: quiz
     questions:
-    - q46
-    - q47
-    - q48
-    - q49
-    - q50
+    - q56
+    - q57
+    - q58
+    - q59
+    - q60
+    pass: 70
+- id: c2
+  title: 'محطة: مسابقة منتصف المستوى 1، والحل اللاحق'
+  lessons:
+  - id: c2-l1
+    title: 'بعد المسابقة: الحل اللاحق والتقييم'
+    file: lessons/c2-l1.md
+    minutes: 20
+  requires:
+  - id: c2-practical
+    type: practical
+    prompt: خُض إحدى مسابقات المرحلة الأولى من المستوى 1 كمشاركة افتراضية بوقتها (أو مسابقة Div. 3). ثم حل لاحقًا مسألتين
+      لم تحلهما أثناء المسابقة. ارفع الرابط، ونتيجتك، وكود المسألتين.
+  - id: c2-explain
+    type: explain
+    prompt: 'اختر مسألة حللتها بعد المسابقة: ما الفكرة التي فاتتك أثناءها، وكيف ستتعرف على مثلها في المستقبل؟'
+    min_words: 80
+  - id: c2-quiz
+    type: quiz
+    questions:
+    - q61
+    - q62
+    - q63
+    - q64
     pass: 70
 - id: m11
-  title: 'اليوم 12: الجراف، DFS و BFS'
+  title: 'اليوم 14: الجراف، DFS و BFS'
   lessons:
   - id: m11-l1
     title: مقدمة في الجراف و DFS
@@ -303,14 +372,14 @@ modules:
   - id: m11-quiz
     type: quiz
     questions:
-    - q51
-    - q52
-    - q53
-    - q54
-    - q55
+    - q65
+    - q66
+    - q67
+    - q68
+    - q69
     pass: 70
 - id: m12
-  title: 'اليوم 13: البرمجة الديناميكية، والخطوة التالية'
+  title: 'اليوم 15: البرمجة الديناميكية'
   lessons:
   - id: m12-l1
     title: البرمجة الديناميكية (Dynamic Programming)
@@ -329,9 +398,34 @@ modules:
   - id: m12-quiz
     type: quiz
     questions:
-    - q56
-    - q57
-    - q58
-    - q59
-    - q60
+    - q70
+    - q71
+    - q72
+    - q73
+    - q74
+    pass: 70
+- id: c3
+  title: 'اليوم 16: مسابقة ICPC الفريقية، والخطوة التالية'
+  lessons:
+  - id: c3-l1
+    title: 'مسابقة ICPC: الفريق والمكتبة والخطوة التالية'
+    file: lessons/c3-l1.md
+    minutes: 20
+  requires:
+  - id: c3-practical
+    type: practical
+    prompt: 'المشروع الأخير: (1) ابدأ مكتبة فريقك (team notebook) على GitHub فيها كل الأكواد المختبرة من هذا الكورس، مرتبة
+      حسب الموضوع. (2) خُض مع زميلين مسابقة فريقية افتراضية كاملة (مسابقة ICPC إقليمية قديمة على Codeforces Gym، 5 ساعات،
+      حاسوب واحد). ارفع رابط المكتبة ورابط المسابقة ونتيجتكم.'
+  - id: c3-explain
+    type: explain
+    prompt: اشرح كيف قسّمتم العمل في مسابقتكم الفريقية، وما الذي ستغيرونه في المرة القادمة.
+    min_words: 100
+  - id: c3-quiz
+    type: quiz
+    questions:
+    - q75
+    - q76
+    - q77
+    - q78
     pass: 70
