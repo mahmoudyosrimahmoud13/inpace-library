@@ -14,10 +14,6 @@ book_info:
   title: 'Deep Learning: Foundations and Concepts'
   url: https://www.bishopbook.com
   pages: 656
-downloads:
-- title: All datasets for the module projects (one zip)
-  url: https://github.com/mahmoudyosrimahmoud13/inpace-library/releases/download/bishop-datasets-v1/bishop-datasets.zip
-  size: 239 MB
 modules:
 - id: m1
   title: 'Day 1: Graphical models'
