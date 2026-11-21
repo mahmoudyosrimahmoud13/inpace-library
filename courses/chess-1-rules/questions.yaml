@@ -79,7 +79,7 @@ q10:
     c: King and queen against king
     d: King and rook against king
 q11:
-  text: What does Nbd2 mean?
+  text: What does Nbd2 (knight to d2) mean?
   show: 4
   options:
     a: The knight on the b-file moves to d2
@@ -87,7 +87,7 @@ q11:
     c: A knight captures on d2
     d: Two knights move
 q12:
-  text: What does exd5 mean?
+  text: What does exd5 (pawn takes on d5) mean?
   show: 4
   options:
     a: A piece on e5 moves to d5
@@ -95,21 +95,21 @@ q12:
     c: The king moves to d5
     d: The e-pawn promotes
 q13:
-  text: 'White: Kg1, Rd1, pawns f2 g2 h2. Black: Kg8, pawns f7 g7 h7. White plays:'
+  text: 'White: king on g1, rook on d1, pawns f2 g2 h2. Black: king on g8, pawns f7 g7 h7. White plays:'
   show: 4
   options:
-    a: Rd8#
-    b: Kf1
+    a: Rd8# (rook to d8, checkmate)
+    b: Kf1 (king to f1)
     c: h3
-    d: Rd7
+    d: Rd7 (rook to d7)
 q14:
-  text: 'After 1. e4 e5 2. Bc4 Nc6 3. Qh5, a good move for Black is:'
+  text: 'After 1. e4 e5 2. Bc4 (bishop to c4) Nc6 (knight to c6) 3. Qh5 (queen to h5), a good move for Black is:'
   show: 4
   options:
-    a: 3... Nd4
-    b: 3... Nf6
+    a: 3... Nd4 (knight to d4)
+    b: 3... Nf6 (knight to f6)
     c: 3... g6
-    d: 3... Ke7
+    d: 3... Ke7 (king to e7)
 q15:
   text: 'When mating with king and queen, the biggest danger is:'
   show: 4
@@ -123,7 +123,7 @@ q16:
   show: 4
   options:
     a: 1. e4
-    b: 1. Nh3
+    b: 1. Nh3 (knight to h3)
     c: 1. a3
     d: 1. h4
 q17:

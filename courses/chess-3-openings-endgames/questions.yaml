@@ -7,31 +7,32 @@ q1:
     c: h7
     d: a8
 q2:
-  text: 'After 4. Ng5 d5 5. exd5 in the Two Knights, Black''s best move is:'
+  text: 'After 4. Ng5 (knight to g5) d5 5. exd5 (pawn takes on d5) in the Two Knights, Black''s best move is:'
   show: 4
   options:
-    a: 5... Na5
-    b: 5... Ke7
-    c: 5... Qxd5
-    d: 5... Nxd5
+    a: 5... Na5 (knight to a5)
+    b: 5... Ke7 (king to e7)
+    c: 5... Qxd5 (queen takes on d5)
+    d: 5... Nxd5 (knight takes on d5)
 q3:
   text: Why does White often play h3 in the Italian?
   show: 4
   options:
     a: To open the h-file for a rook
-    b: To stop ...Bg4 pinning the knight
+    b: To stop ...Bg4 (bishop to g4) pinning the knight
     c: To castle queenside
     d: To attack the queen
 q4:
-  text: 'After 1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. Nxe5, Black plays:'
+  text: 'After 1. e4 e5 2. Nf3 (knight to f3) Nc6 (knight to c6) 3. Bb5 (bishop to b5) a6 4. Bxc6 (bishop takes on c6) dxc6
+    (pawn takes on c6) 5. Nxe5 (knight takes on e5), Black plays:'
   show: 4
   options:
-    a: 5... Qe7
-    b: 5... Qd4
-    c: 5... Bd6
+    a: 5... Qe7 (queen to e7)
+    b: 5... Qd4 (queen to d4)
+    c: 5... Bd6 (bishop to d6)
     d: 5... f6
 q5:
-  text: 'In the Elephant Trap, White''s 6. Nxd5? loses because:'
+  text: 'In the Elephant Trap, White''s 6. Nxd5 (knight takes on d5)? loses because:'
   show: 4
   options:
     a: The knight was pinned to the king
@@ -87,7 +88,7 @@ q11:
     c: d6, e6 and f6
     d: e5 and e6
 q12:
-  text: 'White: Ke5, Pe4. Black: Ke7. White to move. The result with best play is:'
+  text: 'White: king on e5, pawn on e4. Black: king on e7. White to move. The result with best play is:'
   show: 4
   options:
     a: A draw
@@ -95,7 +96,7 @@ q12:
     c: White wins
     d: Black wins
 q13:
-  text: 'A king on f5, Black to move, and a white pawn on a4 with White''s king far away. ...Ke5:'
+  text: 'A king on f5, Black to move, and a white pawn on a4 with White''s king far away. ...Ke5 (king to e5):'
   show: 4
   options:
     a: Gives stalemate

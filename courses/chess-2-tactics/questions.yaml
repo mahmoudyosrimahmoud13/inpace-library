@@ -16,13 +16,13 @@ q2:
     c: Loose pieces drop off
     d: Last piece decides outcome
 q3:
-  text: 'White: Nd5. Black: Ke8, Ra8, c7 empty. Which move forks king and rook?'
+  text: 'White: knight on d5. Black: king on e8, rook on a8, c7 empty. Which move forks king and rook?'
   show: 4
   options:
-    a: Nc7+
-    b: Nf6+
-    c: Ne7
-    d: Nb6
+    a: Nc7+ (knight to c7, check)
+    b: Nf6+ (knight to f6, check)
+    c: Ne7 (knight to e7)
+    d: Nb6 (knight to b6)
 q4:
   text: 'A white pawn on e4 moves to e5, attacking black knights on d6 and f6. This is a:'
   show: 4
@@ -56,7 +56,7 @@ q7:
     c: A fork
     d: A skewer
 q8:
-  text: 'White: Ra1, Kg1. Black: Ke4, Qe8. White plays Re1+. This is a:'
+  text: 'White: rook on a1, king on g1. Black: king on e4, queen on e8. White plays Re1+ (rook to e1, check). This is a:'
   show: 4
   options:
     a: Pin
@@ -88,13 +88,14 @@ q11:
     c: Stalemate
     d: A skewer
 q12:
-  text: 'White: Qd4, Rd1, Kg1. Black: Kg8, Rc8, Qb2, pawns f7 g7 h7. White plays Qd8+. After Rxd8, White plays:'
+  text: 'White: queen on d4, rook on d1, king on g1. Black: king on g8, rook on c8, queen on b2, pawns f7 g7 h7. White plays
+    Qd8+ (queen to d8, check). After Rxd8 (rook takes on d8), White plays:'
   show: 4
   options:
-    a: Rd7
-    b: Rxd8#
+    a: Rd7 (rook to d7)
+    b: Rxd8# (rook takes on d8, checkmate)
     c: h3
-    d: Qxd8
+    d: Qxd8 (queen takes on d8)
 q13:
   text: 'A knight mates a king surrounded by its own pieces. This is the:'
   show: 4
@@ -136,21 +137,22 @@ q17:
     c: You see one good move
     d: You reach move 40
 q18:
-  text: 'White: Kg1, Qd1, pawns. Black: Ke8, Bb4 (undefended), pawns, a4–e8 diagonal empty. Which move wins the bishop?'
+  text: 'White: king on g1, queen on d1, pawns. Black: king on e8, bishop on b4 (undefended), pawns, a4–e8 diagonal empty.
+    Which move wins the bishop?'
   show: 4
   options:
-    a: Qa4+
-    b: Qb3
-    c: Qe2+
-    d: Qd8+
+    a: Qa4+ (queen to a4, check)
+    b: Qb3 (queen to b3)
+    c: Qe2+ (queen to e2, check)
+    d: Qd8+ (queen to d8, check)
 q19:
-  text: 'White: Kg1, pawn b7. Black: Kg7, Ra8. White''s best move is:'
+  text: 'White: king on g1, pawn b7. Black: king on g7, rook on a8. White''s best move is:'
   show: 4
   options:
-    a: Kf2
-    b: b8=Q
-    c: bxa8=Q
-    d: Kg2
+    a: Kf2 (king to f2)
+    b: b8=Q (pawn to b8 and becomes a queen)
+    c: bxa8=Q (pawn takes on a8 and becomes a queen)
+    d: Kg2 (king to g2)
 q20:
   text: 'A healthy tactics routine is:'
   show: 4
