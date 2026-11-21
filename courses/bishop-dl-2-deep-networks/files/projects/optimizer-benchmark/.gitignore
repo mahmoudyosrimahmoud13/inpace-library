@@ -1,5 +1,6 @@
 data/
-outputs/
+outputs/*
+!outputs/*.png
 __pycache__/
 *.pt
 *.json

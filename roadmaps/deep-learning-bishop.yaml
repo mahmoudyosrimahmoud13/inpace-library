@@ -27,3 +27,5 @@ steps:
     note: CNNs, transformers and graph networks. Projects - a CIFAR-10 CNN, a Shakespeare GPT, a citation-graph classifier.
   - course: bishop-dl-4-latent-variables
     note: Graphical models, sampling and latent variables. Projects - an HMM tagger, MCMC diagnosis, a K-means image codec.
+  - course: bishop-dl-5-generative
+    note: GANs, normalizing flows, VAEs and diffusion models. Projects - a GAN, real NVP, a VAE, a diffusion model and guided generation.

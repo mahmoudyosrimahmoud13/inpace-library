@@ -1,0 +1,299 @@
+id: bishop-dl-5-generative
+title: 'Deep Learning (Bishop) 5: GANs, normalizing flows, VAEs and diffusion models'
+version: 1
+language: en
+description: 'Part 5 of 5, following Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop (Springer,
+  2024), chapters 17 to 20: the four families of deep generative models. Generative adversarial networks and mode collapse,
+  normalizing flows and coupling layers, autoencoders and variational autoencoders, diffusion models, score matching and classifier-free
+  guidance. Each Read lesson opens the right pages of your own copy of the book (the Springer PDF, or read free online at
+  bishopbook.com). Every module ends with a real PyTorch project for your CV, with a notebook: a GAN that draws clothes, real
+  NVP from scratch, a VAE on digits, a diffusion model that draws digits, and guided generation. Plan: 7 days.'
+image: cover.jpg
+book: bishop.pdf
+book_info:
+  title: 'Deep Learning: Foundations and Concepts'
+  url: https://www.bishopbook.com
+  pages: 656
+modules:
+- id: m1
+  title: 'Day 1: Generative adversarial networks'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: generative adversarial networks (chapter 17)'
+    file: lessons/m1-l2.md
+    minutes: 55
+    media: bishop.pdf#pages=546-558
+  - id: m1-l3
+    title: 'Build: a GAN in one dimension, and mode collapse'
+    file: lessons/m1-l3.md
+    minutes: 35
+  - id: m1-l4
+    title: 'Watch: Generative adversarial networks (Computerphile)'
+    file: lessons/m1-l4.md
+    minutes: 21
+    media: https://www.youtube.com/watch?v=Sw9r8CL98N0
+  - id: m1-l5
+    title: 'Module project: build a GAN that draws clothes'
+    file: lessons/m1-l5.md
+    minutes: 120
+    media: project-1-fashion-gan.ipynb
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m1-explain
+    type: explain
+    prompt: Explain, in your own words, why a GAN can't be trained by maximum likelihood, and what the discriminator gives
+      the generator instead.
+    min_words: 60
+    optional: true
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Normalizing flows'
+  lessons:
+  - id: m2-l1
+    title: 'Read: normalizing flows (chapter 18)'
+    file: lessons/m2-l1.md
+    minutes: 50
+    media: bishop.pdf#pages=559-573
+  - id: m2-l2
+    title: 'Watch: What are normalizing flows? (Ari Seff)'
+    file: lessons/m2-l2.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=i7LjDvsLWCg
+  - id: m2-l3
+    title: 'Build: change of variables, and a coupling layer by hand'
+    file: lessons/m2-l3.md
+    minutes: 30
+  - id: m2-l4
+    title: 'Module project: build real NVP from scratch'
+    file: lessons/m2-l4.md
+    minutes: 90
+    media: project-2-realnvp-from-scratch.ipynb
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m2-explain
+    type: explain
+    prompt: Explain why a coupling layer is invertible whatever networks compute its scale and shift, and why its Jacobian
+      determinant is cheap.
+    min_words: 60
+    optional: true
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Autoencoders and variational autoencoders'
+  lessons:
+  - id: m3-l1
+    title: 'Read: autoencoders and variational autoencoders (chapter 19)'
+    file: lessons/m3-l1.md
+    minutes: 55
+    media: bishop.pdf#pages=574-590
+  - id: m3-l2
+    title: 'Watch: Variational autoencoders (Arxiv Insights)'
+    file: lessons/m3-l2.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=9zKuYvjFFS8
+  - id: m3-l3
+    title: 'Build: an autoencoder that turns out to be PCA, and the VAE''s KL term'
+    file: lessons/m3-l3.md
+    minutes: 30
+  - id: m3-l4
+    title: 'Module project: build a variational autoencoder for digits'
+    file: lessons/m3-l4.md
+    minutes: 90
+    media: project-3-mnist-vae.ipynb
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m3-explain
+    type: explain
+    prompt: Explain the two terms of the VAE's loss, what each one wants, and how their tension shapes the latent space.
+    min_words: 60
+    optional: true
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Diffusion models: noising and denoising'
+  lessons:
+  - id: m4-l1
+    title: 'Read: diffusion models, noising and denoising (20.1–20.2)'
+    file: lessons/m4-l1.md
+    minutes: 55
+    media: bishop.pdf#pages=591-603
+  - id: m4-l2
+    title: 'Watch: What are diffusion models? (Ari Seff)'
+    file: lessons/m4-l2.md
+    minutes: 9
+    media: https://www.youtube.com/watch?v=fbLgFrlTnGU
+  - id: m4-l3
+    title: 'Build: noise in, noise out, with a perfect denoiser'
+    file: lessons/m4-l3.md
+    minutes: 35
+  - id: m4-l4
+    title: 'Module project: build a diffusion model that draws digits'
+    file: lessons/m4-l4.md
+    minutes: 120
+    media: project-4-ddpm-digits.ipynb
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m4-explain
+    type: explain
+    prompt: Explain why training a diffusion model is cheap per example but sampling from it is slow.
+    min_words: 60
+    optional: true
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Score matching and guided diffusion'
+  lessons:
+  - id: m5-l1
+    title: 'Read: score matching and guided diffusion (20.3–20.4)'
+    file: lessons/m5-l1.md
+    minutes: 45
+    media: bishop.pdf#pages=604-613
+  - id: m5-l2
+    title: 'Watch: But how do AI images and videos actually work? (Welch Labs)'
+    file: lessons/m5-l2.md
+    minutes: 37
+    media: https://www.youtube.com/watch?v=iv-5mZ_9CPY
+  - id: m5-l3
+    title: 'Build: scores, and the price of guidance'
+    file: lessons/m5-l3.md
+    minutes: 35
+  - id: m5-l4
+    title: 'Module project: generate the digit you ask for'
+    file: lessons/m5-l4.md
+    minutes: 90
+    media: project-5-guided-digits.ipynb
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m5-explain
+    type: explain
+    prompt: 'Explain classifier-free guidance: what the two scores are, what λ does, and what it costs.'
+    min_words: 60
+    optional: true
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Big project: four ways to make a digit'
+  lessons:
+  - id: m6-l1
+    title: 'Big project: the generators side by side'
+    file: lessons/m6-l1.md
+    minutes: 10
+  - id: m6-l2
+    title: 'Big project: GAN, VAE and diffusion on the same digits'
+    file: lessons/m6-l2.md
+    minutes: 120
+    media: project-6-generators-compared.ipynb
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Build the comparison yourself, add your own results table and samples to a README, and write one paragraph recommending
+      a model for a real use (for example: fast sampling on a phone, or the highest quality for a print). Hand in the link
+      to your repository.'
+    optional: true
+  - id: m6-explain
+    type: explain
+    prompt: 'Compare GANs, VAEs, flows and diffusion models on three things: sample quality, sampling speed, and whether you
+      can compute the likelihood.'
+    min_words: 60
+    optional: true
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Looking back, and your report'
+  lessons:
+  - id: m7-l1
+    title: 'Looking back: the whole series in one page'
+    file: lessons/m7-l1.md
+    minutes: 15
+  - id: m7-l2
+    title: Your report, and where to go next
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Write a one-page report on your favourite project from the whole series: question, data, method, results table,
+      what didn''t work, and what you''d do next. Put it in that project''s README.'
+    optional: true
+  - id: m7-explain
+    type: explain
+    prompt: Pick one idea that came back in several parts of the series (for example the ELBO, Langevin dynamics, or the softmax)
+      and explain where it appeared each time.
+    min_words: 60
+    optional: true
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

@@ -1,0 +1,175 @@
+q1:
+  right:
+  - e
+  - f
+  why: 'Section 17.1: the generator defines p(x) implicitly; there''s no closed form to maximize.'
+q2:
+  right:
+  - c
+  - e
+  why: 'A zero-sum game: equations 17.7 and 17.8 have opposite signs.'
+q3:
+  right:
+  - a
+  - e
+  why: 'Section 17.1.2: e.g. a digit GAN that only makes 3s.'
+q4:
+  right:
+  - d
+  - e
+  why: 'Figure 17.3: −ln d is steep near d = 0, exactly where a losing generator sits.'
+q5:
+  right:
+  - a
+  - d
+  why: 'Section 17.2.1: two conditional generators and two discriminators.'
+q6:
+  right:
+  - a
+  - b
+  why: Equation 18.1.
+q7:
+  right:
+  - b
+  - f
+  why: z has the same dimension as x, and the likelihood is exact.
+q8:
+  right:
+  - b
+  - d
+  why: Equations 18.10, 18.11 and 18.14.
+q9:
+  right:
+  - d
+  - e
+  why: The inverse autoregressive flow (IAF) has the opposite trade-off (section 18.2).
+q10:
+  right:
+  - e
+  - f
+  why: 'Section 18.3.3: a trace costs far less than a determinant.'
+q11:
+  right:
+  - a
+  - b
+  why: Section 19.1.1, and you checked it numerically.
+q12:
+  right:
+  - b
+  - e
+  why: The VAE's prior and KL term fix this.
+q13:
+  right:
+  - b
+  - f
+  why: Section 19.2.1.
+q14:
+  right:
+  - a
+  - f
+  why: Equations 19.17 and 19.18.
+q15:
+  right:
+  - b
+  - d
+  why: The ELBO is a lower bound on ln p(x).
+q16:
+  right:
+  - b
+  - f
+  why: Section 20.1.1.
+q17:
+  right:
+  - b
+  - c
+  why: That's what makes training examples cheap.
+q18:
+  right:
+  - b
+  - f
+  why: Algorithm 20.1 and section 20.2.4.
+q19:
+  right:
+  - a
+  - f
+  why: This is why sampling is slow.
+q20:
+  right:
+  - d
+  - f
+  why: 'Section 20.2.2: the latent variables have the same size as the data.'
+q21:
+  right:
+  - a
+  - c
+  why: Section 20.3.
+q22:
+  right:
+  - d
+  - f
+  why: Section 20.3.2; you checked it with a straight-line fit.
+q23:
+  right:
+  - b
+  - c
+  why: score ≈ −ε / √(1 − α_t).
+q24:
+  right:
+  - b
+  - c
+  why: score = λ ∇ln p(x | c) + (1 − λ) ∇ln p(x).
+q25:
+  right:
+  - c
+  - e
+  why: Section 20.4.2, like dropout for the condition.
+q26:
+  right:
+  - a
+  - c
+  why: Diffusion models need one pass per denoising step.
+q27:
+  right:
+  - b
+  - f
+  why: VAEs and diffusion models give ELBOs; GANs give nothing.
+q28:
+  right:
+  - b
+  - e
+  why: A GAN's loss, a VAE's ELBO and a DDPM's noise loss measure different things.
+q29:
+  right:
+  - a
+  - b
+  why: That's why the comparison also counts which digits come out.
+q30:
+  right:
+  - e
+  - f
+  why: Section 19.2 discusses this limitation.
+q31:
+  right:
+  - c
+  - f
+  why: Chapter 20 relies on chapters 14 and 16.
+q32:
+  right:
+  - a
+  - c
+  why: Chapter 12, and the text encoders that steer image generators.
+q33:
+  right:
+  - e
+  - f
+  why: Chapters 15, 16 and 19.
+q34:
+  right:
+  - a
+  - f
+  why: Every module project in the series did both.
+q35:
+  right:
+  - b
+  - d
+  why: From backpropagation to saliency maps and Langevin samplers.

@@ -1,0 +1,350 @@
+q1:
+  text: Why can't a GAN's generator simply be trained by maximum likelihood?
+  show: 4
+  options:
+    a: the data has no labels at all
+    b: maximum likelihood only works for classifiers
+    c: the discriminator forbids it
+    d: it has too many parameters
+    e: its likelihood p(x) has no formula that can be evaluated
+    f: it only defines a distribution implicitly, through samples
+q2:
+  text: During GAN training, …
+  show: 4
+  options:
+    a: the discriminator is kept after training to make samples
+    b: the generator sees the real images directly
+    c: the generator tries to make the discriminator's error larger
+    d: only the generator is updated
+    e: the discriminator minimizes a cross-entropy error
+    f: both networks minimize the same error
+q3:
+  text: Mode collapse means …
+  show: 4
+  options:
+    a: the generator maps many different z to only a few outputs
+    b: the generator produces pure noise
+    c: the discriminator's loss reaches zero
+    d: the latent vector z collapses to zero
+    e: samples look real but lack variety
+    f: training gets faster
+q4:
+  text: The non-saturating generator loss (maximizing ln d(g(z)) instead of minimizing ln(1 − d(g(z)))) …
+  show: 4
+  options:
+    a: is only used for one-dimensional data
+    b: removes the need for a discriminator
+    c: makes mode collapse impossible
+    d: has the same goal as the original loss
+    e: gives strong gradients when the discriminator easily rejects the fakes
+    f: makes the generator's loss a measure of image quality
+q5:
+  text: CycleGAN …
+  show: 4
+  options:
+    a: 'uses a cycle-consistency loss: there and back should give the original'
+    b: is a normalizing flow
+    c: has no discriminators
+    d: translates between two domains without paired examples
+    e: uses a single generator
+    f: needs pairs of matching photos and paintings
+q6:
+  text: The change-of-variables formula for a flow x = f(z) says p_x(x) equals …
+  show: 4
+  options:
+    a: p_z(f⁻¹(x)) times |det J|, with J the Jacobian of f⁻¹
+    b: the simple density, corrected for how much f⁻¹ stretches space
+    c: the discriminator's output
+    d: the determinant alone
+    e: p_z(x)
+    f: p_z(f(x)) with no correction
+q7:
+  text: Normalizing flows …
+  show: 4
+  options:
+    a: need a discriminator
+    b: can be trained by maximizing the exact likelihood
+    c: need the full D³-cost determinant at every step
+    d: squeeze data into a smaller latent space
+    e: can only make samples, never compute p(x)
+    f: need an invertible network
+q8:
+  text: In a real NVP coupling layer, …
+  show: 4
+  options:
+    a: the determinant costs D³ operations
+    b: the Jacobian is triangular, so log|det J| is a sum of log-scales
+    c: every variable is transformed by the same full network
+    d: half of the variables pass through unchanged
+    e: the scale and shift networks must themselves be invertible
+    f: the inverse needs an iterative solver
+q9:
+  text: A masked autoregressive flow (MAF) …
+  show: 4
+  options:
+    a: evaluates the likelihood slowly
+    b: samples in one parallel pass
+    c: has no Jacobian
+    d: evaluates the likelihood in one parallel pass
+    e: samples slowly, one variable at a time
+    f: is a kind of GAN
+q10:
+  text: Continuous normalizing flows (neural ODEs) …
+  show: 4
+  options:
+    a: can't be inverted
+    b: are trained with a discriminator
+    c: need the determinant of the Jacobian
+    d: have a fixed, small number of layers
+    e: can be trained with the adjoint method or flow matching
+    f: change the density according to the trace of the Jacobian
+q11:
+  text: An autoencoder with linear layers trained with squared error …
+  show: 4
+  options:
+    a: learns the same subspace as PCA
+    b: can't learn curved structure in the data
+    c: needs a KL term
+    d: always beats PCA
+    e: is a normalizing flow
+    f: learns a different subspace from PCA
+q12:
+  text: A plain (deterministic) autoencoder is a poor generator because …
+  show: 4
+  options:
+    a: it can't reconstruct its inputs
+    b: decoding a random code usually gives garbage
+    c: its codes are too large
+    d: it uses a discriminator
+    e: nothing makes its codes fill a known region of latent space
+    f: it has no decoder
+q13:
+  text: Amortized inference in a VAE means …
+  show: 4
+  options:
+    a: the decoder is fixed
+    b: one encoder network outputs q(z | x) for any x
+    c: the latent space has the same size as the data
+    d: the posterior is computed exactly
+    e: each data point gets its own trained q(z)
+    f: no separate optimization per data point is needed
+q14:
+  text: The reparameterization trick …
+  show: 4
+  options:
+    a: writes z = μ + σ ε with ε ~ N(0, I)
+    b: makes the decoder deterministic
+    c: removes the KL term
+    d: samples z from the data
+    e: replaces the ELBO by the exact likelihood
+    f: lets gradients flow back through the sampling step into the encoder
+q15:
+  text: In the VAE's ELBO (equation 19.14), …
+  show: 4
+  options:
+    a: both terms push in the same direction
+    b: the reconstruction term rewards decoding z back to x
+    c: the ELBO is larger than the log likelihood
+    d: the KL term keeps q(z | x) close to the prior p(z)
+    e: there is no prior
+    f: the KL term rewards sharp reconstructions
+q16:
+  text: In the book's notation, α_t is …
+  show: 4
+  options:
+    a: the noise variance at step t alone
+    b: what many papers write as ᾱ_t
+    c: the learning rate
+    d: always equal to β_t
+    e: a learned parameter
+    f: the product of (1 − β_τ) for τ = 1 … t
+q17:
+  text: The diffusion kernel q(z_t | x) …
+  show: 4
+  options:
+    a: needs t sequential steps to compute
+    b: is a Gaussian with mean √α_t x and variance 1 − α_t
+    c: lets you jump straight from x to any step t
+    d: is the reverse process
+    e: is only defined for t = T
+    f: depends on the network's weights
+q18:
+  text: The network in a DDPM is trained to …
+  show: 4
+  options:
+    a: classify real and fake images
+    b: minimize a squared error between predicted and true noise
+    c: maximize the discriminator's error
+    d: compute the Jacobian determinant
+    e: predict the next pixel
+    f: predict the noise that was added to make z_t
+q19:
+  text: Generating a sample with a DDPM (Algorithm 20.2) …
+  show: 4
+  options:
+    a: needs one network pass per step, hundreds in total
+    b: starts from a training image
+    c: needs only one network pass
+    d: needs a discriminator
+    e: adds noise at the last step too
+    f: starts from pure noise
+q20:
+  text: A diffusion model can be seen as …
+  show: 4
+  options:
+    a: a deterministic autoencoder
+    b: a normalizing flow with a triangular Jacobian
+    c: a model with a small latent code
+    d: a very deep VAE whose encoder is fixed noise
+    e: a GAN without a generator
+    f: a model trained by maximizing an ELBO
+q21:
+  text: The score of a distribution is …
+  show: 4
+  options:
+    a: enough to sample with Langevin dynamics, even without the normalized density
+    b: the determinant of its covariance
+    c: the gradient of its log density
+    d: the probability of the most likely point
+    e: its normalizing constant
+    f: a classifier's accuracy
+q22:
+  text: Denoising score matching …
+  show: 4
+  options:
+    a: needs the true score of the data
+    b: trains on clean images only
+    c: needs a discriminator
+    d: gives, on average, the score of the noisy data
+    e: only works without noise
+    f: fits a network to targets built from the added noise
+q23:
+  text: A noise-predicting diffusion network …
+  show: 4
+  options:
+    a: gives the exact log density
+    b: can be used with Langevin-style samplers
+    c: is a score estimator up to a known factor
+    d: has nothing to do with scores
+    e: must be retrained to estimate scores
+    f: is a normalizing flow
+q24:
+  text: In classifier-free guidance (equation 20.60), …
+  show: 4
+  options:
+    a: the unconditional score is never used
+    b: λ > 1 pushes samples away from ones that ignore the label
+    c: λ = 1 gives the plain conditional model
+    d: a separate classifier is required
+    e: λ = 0 gives the conditional model
+    f: λ must stay between 0 and 1
+q25:
+  text: How can one network give both conditional and unconditional predictions?
+  show: 4
+  options:
+    a: remove the label input after training
+    b: train only on unlabelled data
+    c: replace the label with a null token for a random 10–20% of training examples
+    d: use a discriminator
+    e: ask for the null token at sampling time
+    f: train two separate networks
+q26:
+  text: Which models give a sample in a single network pass?
+  show: 4
+  options:
+    a: a VAE decoder
+    b: a diffusion model with 500 steps
+    c: a GAN generator
+    d: an MCMC chain
+    e: annealed Langevin sampling
+    f: a DDPM
+q27:
+  text: Which models let you compute the exact likelihood of a data point?
+  show: 4
+  options:
+    a: a VAE (it gives only a lower bound)
+    b: an autoregressive model
+    c: a GAN
+    d: a discriminator
+    e: a DDPM trained with the noise loss
+    f: a normalizing flow
+q28:
+  text: Why use a separate, independently trained classifier (a 'judge') to evaluate generators?
+  show: 4
+  options:
+    a: it guarantees no mode collapse
+    b: it scores every model the same way
+    c: it computes the exact likelihood
+    d: it replaces the test set
+    e: the generators' own losses aren't comparable measures of quality
+    f: it makes the generators train faster
+q29:
+  text: A generator whose samples the judge is very sure about, but which are mostly the same digit, …
+  show: 4
+  options:
+    a: has high quality but low diversity
+    b: shows mode collapse
+    c: is perfect
+    d: must be a VAE
+    e: has low quality but high diversity
+    f: has an exact likelihood
+q30:
+  text: VAE samples are often blurrier than GAN or diffusion samples because …
+  show: 4
+  options:
+    a: the reparameterization trick adds blur
+    b: VAEs are trained with a discriminator
+    c: VAEs can't be trained on images
+    d: VAEs have no decoder
+    e: the KL term limits how much information the code carries
+    f: the decoder's average over plausible images under a simple pixel model looks blurry
+q31:
+  text: Which ideas from earlier parts are built into diffusion models?
+  show: 4
+  options:
+    a: graph convolutions (part 3)
+    b: the Huffman code (part 1)
+    c: the evidence lower bound (part 4)
+    d: naive Bayes (part 1)
+    e: K-means (part 4)
+    f: Langevin dynamics (part 4)
+q32:
+  text: Which statements about the transformer are true?
+  show: 4
+  options:
+    a: its core operation is attention
+    b: it has no parameters
+    c: it can be used for language and for images
+    d: it was introduced in part 5
+    e: it can only classify
+    f: it needs convolutions
+q33:
+  text: What do the VAE and the EM algorithm share?
+  show: 4
+  options:
+    a: both compute the exact posterior with a network
+    b: both use a discriminator
+    c: both are normalizing flows
+    d: both need labels
+    e: both deal with hidden (latent) variables
+    f: both maximize an evidence lower bound
+q34:
+  text: Good practice when reporting a machine-learning project includes …
+  show: 4
+  options:
+    a: saying what didn't work
+    b: reporting only the best run
+    c: skipping the error analysis
+    d: hiding the data source
+    e: tuning on the test set
+    f: comparing against a simple baseline
+q35:
+  text: Automatic differentiation (part 2) is used …
+  show: 4
+  options:
+    a: instead of a loss function
+    b: to compute scores and gradients with respect to inputs too
+    c: only at test time
+    d: to train every network in this series
+    e: only for convolutional networks
+    f: only in NumPy
