@@ -1,0 +1,350 @@
+q1:
+  text: For the graph B → G ← F, the joint distribution factorizes as …
+  show: 4
+  options:
+    a: p(G) p(B | G) p(F | G) only
+    b: p(B | F) p(F | G) p(G)
+    c: p(B) p(F) p(G | B, F)
+    d: p(B, F, G) with no simplification
+    e: a product of each variable's distribution given its parents
+    f: p(B) + p(F) + p(G)
+q2:
+  text: A fully general joint distribution over M variables with K states each needs …
+  show: 4
+  options:
+    a: a number that grows exponentially with M
+    b: M + K numbers
+    c: exactly K numbers
+    d: M(K − 1) numbers
+    e: a number that grows linearly with M
+    f: K^M − 1 numbers
+q3:
+  text: Ancestral sampling from a directed graph means …
+  show: 4
+  options:
+    a: sampling each variable after its parents
+    b: sampling all variables independently
+    c: drawing from each node's conditional given its sampled parents
+    d: sampling children first
+    e: rejecting samples that look unlikely
+    f: running a Markov chain to convergence
+q4:
+  text: In graphical-model notation, …
+  show: 4
+  options:
+    a: a shaded node is hidden
+    b: a shaded node is observed
+    c: arrows may form directed cycles
+    d: a plate is a deterministic function
+    e: every node must be observed
+    f: a plate means 'repeat for each of N items'
+q5:
+  text: In the car example, after seeing an empty gauge AND a flat battery, the probability of an empty tank …
+  show: 4
+  options:
+    a: becomes 1
+    b: stays exactly at 0.257
+    c: is lower than after seeing the empty gauge alone
+    d: drops back to about 0.11
+    e: becomes 0
+    f: rises to about 0.9
+q6:
+  text: In the head-to-head graph a → c ← b, …
+  show: 4
+  options:
+    a: c is independent of a
+    b: observing c makes a and b dependent
+    c: a and b are always dependent
+    d: the graph has a cycle
+    e: a and b are independent when c is not observed
+    f: observing c makes a and b independent
+q7:
+  text: In the tail-to-tail graph a ← c → b, observing c …
+  show: 4
+  options:
+    a: creates a cycle
+    b: makes a and b dependent
+    c: has no effect
+    d: turns it into a head-to-head graph
+    e: makes a and b conditionally independent
+    f: blocks the path between a and b
+q8:
+  text: Naive Bayes assumes …
+  show: 4
+  options:
+    a: the features are independent of the class
+    b: a product of one simple distribution per feature, for each class
+    c: the classes are equally likely
+    d: the features are independent given the class
+    e: nothing at all
+    f: a full covariance between features
+q9:
+  text: Why was naive Bayes over-confident on digits?
+  show: 4
+  options:
+    a: It was trained on the test set
+    b: It has too many parameters
+    c: It uses a softmax
+    d: Neighbouring pixels are dependent, but it counts their evidence as independent
+    e: Its priors were wrong
+    f: It multiplies many correlated pieces of evidence
+q10:
+  text: A node's Markov blanket consists of …
+  show: 4
+  options:
+    a: every node in the graph
+    b: only its parents
+    c: its children's other parents
+    d: its parents and children
+    e: nodes two steps away
+    f: only its descendants
+q11:
+  text: Rejection sampling …
+  show: 4
+  options:
+    a: has an acceptance rate that falls exponentially with dimension
+    b: works best in high dimensions
+    c: needs no proposal distribution
+    d: gives exact samples of p
+    e: keeps every proposal
+    f: requires the normalized p
+q12:
+  text: The Metropolis algorithm only needs p up to a constant because …
+  show: 4
+  options:
+    a: it computes the constant first
+    b: the normalizing constant cancels in the ratio
+    c: it ignores p
+    d: it samples from q exactly
+    e: it never rejects
+    f: the acceptance probability uses the ratio p̃(z*)/p̃(z)
+q13:
+  text: With a very small Metropolis step size, …
+  show: 4
+  options:
+    a: burn-in is unnecessary
+    b: almost every proposal is accepted
+    c: the samples are independent
+    d: the chain explores slowly and may miss distant peaks
+    e: the chain explores fastest
+    f: the acceptance rate is near zero
+q14:
+  text: Langevin dynamics updates a sample using …
+  show: 4
+  options:
+    a: a fixed proposal distribution
+    b: an accept/reject step
+    c: the normalizing constant Z
+    d: the score ∇ log p(x)
+    e: added Gaussian noise
+    f: the second derivative only
+q15:
+  text: Annealed Langevin sampling …
+  show: 4
+  options:
+    a: is unrelated to diffusion models
+    b: needs the normalized density
+    c: uses no noise
+    d: lets particles cross between separated peaks early on
+    e: starts from a blurred version of p and sharpens it step by step
+    f: only works in one dimension
+q16:
+  text: Each K-means iteration …
+  show: 4
+  options:
+    a: fits a covariance per cluster
+    b: assigns every point to its nearest centre
+    c: uses responsibilities between 0 and 1
+    d: moves each centre to the mean of its points
+    e: changes K
+    f: increases the distortion
+q17:
+  text: K-means can end in a poor solution because …
+  show: 4
+  options:
+    a: it never converges
+    b: it needs labels
+    c: the result depends on the starting centres
+    d: it converges to a local minimum of the distortion
+    e: it always finds the global minimum
+    f: the distortion can increase
+q18:
+  text: A responsibility γ(zₙₖ) is …
+  show: 4
+  options:
+    a: the mixing weight πₖ itself
+    b: a soft assignment between 0 and 1
+    c: the distance to the nearest centre
+    d: the covariance of component k
+    e: the posterior probability that point n came from component k
+    f: always 0 or 1
+q19:
+  text: Maximum likelihood for a Gaussian mixture can break down because …
+  show: 4
+  options:
+    a: there are too few parameters
+    b: the likelihood can then go to infinity
+    c: the log has no maximum for any data
+    d: the responsibilities sum to more than 1
+    e: K-means is used first
+    f: a component can collapse onto one point
+q20:
+  text: Compressing a photo with K-means colours is …
+  show: 4
+  options:
+    a: storing K colours plus a small index per pixel
+    b: a classification method
+    c: lossy compression (vector quantization)
+    d: independent of K
+    e: lossless compression
+    f: a way to add colours
+q21:
+  text: In EM for a Gaussian mixture, the E step …
+  show: 4
+  options:
+    a: keeps the parameters fixed
+    b: chooses K
+    c: computes the gradient of the loss
+    d: computes the responsibilities
+    e: removes outliers
+    f: updates the means
+q22:
+  text: The M step sets each component's mean to …
+  show: 4
+  options:
+    a: the plain average of all points
+    b: the previous mean plus a gradient step
+    c: the responsibility-weighted average of the points
+    d: Σₙ γ(zₙₖ) xₙ / Nₖ
+    e: the point with the largest responsibility
+    f: zero
+q23:
+  text: The evidence lower bound L(q, θ) …
+  show: 4
+  options:
+    a: doesn't depend on q
+    b: is always above the log-likelihood
+    c: only exists for K-means
+    d: equals it when q is the exact posterior
+    e: is the KL divergence itself
+    f: is never above the log-likelihood
+q24:
+  text: Why did the Gaussian mixture recover the groups better than K-means in the project?
+  show: 4
+  options:
+    a: It ignores the data
+    b: It learns a covariance for each group
+    c: It has fewer parameters
+    d: Its boundaries can follow tilted, elongated shapes
+    e: It uses labels
+    f: K-means can't use 3 clusters
+q25:
+  text: K-means is a limit of EM for Gaussian mixtures when …
+  show: 4
+  options:
+    a: all components share a tiny, equal variance
+    b: the data is one-dimensional
+    c: the mixing weights are zero
+    d: K equals the number of points
+    e: responsibilities become hard 0-or-1 assignments
+    f: the variances are infinite
+q26:
+  text: PCA's principal directions are …
+  show: 4
+  options:
+    a: the data points themselves
+    b: the class means
+    c: random directions
+    d: the eigenvectors of the data covariance with the largest eigenvalues
+    e: the directions of smallest variance
+    f: the directions of maximum projected variance
+q27:
+  text: Keeping M principal components, the squared reconstruction error equals …
+  show: 4
+  options:
+    a: the sum of the kept eigenvalues
+    b: zero for any M
+    c: the largest eigenvalue
+    d: the sum of the discarded eigenvalues (per point)
+    e: M times the noise
+    f: the variance left in the dropped directions
+q28:
+  text: Why does PCA reduce noise in the denoising experiment?
+  show: 4
+  options:
+    a: PCA knows which pixels are noisy
+    b: PCA adds noise
+    c: Projecting onto those directions discards most of the noise
+    d: The noise spreads over all directions, but the digits live mostly in the first few
+    e: More components always remove more noise
+    f: The noise is removed by the mean
+q29:
+  text: In probabilistic PCA, the maximum likelihood noise variance σ² is …
+  show: 4
+  options:
+    a: the average of the kept eigenvalues
+    b: the average of the discarded eigenvalues
+    c: chosen by hand
+    d: the variance the model attributes to noise in the dropped directions
+    e: the largest eigenvalue
+    f: always zero
+q30:
+  text: Which of these are among the 'four approaches to generative modelling' in section 16.4.4?
+  show: 4
+  options:
+    a: K-means
+    b: Variational autoencoders
+    c: Naive Bayes
+    d: Logistic regression
+    e: Diffusion models
+    f: Rejection sampling
+q31:
+  text: How were new digits sampled from the mixture?
+  show: 4
+  options:
+    a: By rejection sampling from pixels
+    b: Then the code was mapped back to pixels
+    c: By gradient descent on an image
+    d: By running K-means
+    e: First a component, then a code from that component's Gaussian
+    f: By copying training images
+q32:
+  text: Why did samples from a single Gaussian get a low judge confidence?
+  show: 4
+  options:
+    a: The judge was broken
+    b: PCA was not used
+    c: Its samples look like mixtures of several digits
+    d: The images were too sharp
+    e: The Gaussian had too many components
+    f: One Gaussian blends all ten digits into one cloud
+q33:
+  text: The 10-component mixture was fitted …
+  show: 4
+  options:
+    a: with one component per labelled digit
+    b: without any labels
+    c: on raw pixels only
+    d: by your own EM algorithm
+    e: by gradient descent
+    f: by the judge
+q34:
+  text: A class-conditional model, one Gaussian per digit, …
+  show: 4
+  options:
+    a: can generate a requested digit
+    b: generates only copies of training images
+    c: needs no labels
+    d: is the same as K-means
+    e: can't sample
+    f: produced images the judge recognized about 98% of the time
+q35:
+  text: What will part 5 change in this recipe?
+  show: 4
+  options:
+    a: Images will be copied from the training set
+    b: Deep networks replace the linear PCA decoder
+    c: Richer latent models and training objectives like the ELBO
+    d: Generation will no longer use any latent variables
+    e: Probability will be dropped
+    f: Only K-means will be used

@@ -1,0 +1,17 @@
+official: true
+author: inPace
+license: CC-BY-SA-4.0
+updated: '2026-11-21'
+tags:
+- deep learning
+- transformers
+- cnn
+- graph neural networks
+- bishop
+- attention
+- advanced
+credit: 'Book (not included): Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop, Springer 2024,
+  free to read online at bishopbook.com. Videos: 3Blue1Brown, Petar Veličković and Andrej Karpathy on YouTube. Notes, code,
+  the minigrad library, projects, tasks and questions: inPace. Data: the scikit-learn digits, Zachary''s karate club graph
+  as shipped with networkx, and Python''s Zen of Python.'
+section: ai-ml

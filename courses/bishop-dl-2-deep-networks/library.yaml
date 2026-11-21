@@ -1,0 +1,16 @@
+official: true
+author: inPace
+license: CC-BY-SA-4.0
+updated: '2026-11-21'
+tags:
+- deep learning
+- neural networks
+- backpropagation
+- bishop
+- automatic differentiation
+- numpy
+- intermediate
+credit: 'Book (not included): Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop, Springer 2024,
+  free to read online at bishopbook.com. Videos: StatQuest, 3Blue1Brown and Andrej Karpathy on YouTube. Notes, code, the minigrad
+  library, project, tasks and questions: inPace. Data: the handwritten digits data set shipped with scikit-learn.'
+section: ai-ml

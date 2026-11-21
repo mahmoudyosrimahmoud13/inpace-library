@@ -1,0 +1,16 @@
+official: true
+author: inPace
+license: CC-BY-SA-4.0
+updated: '2026-11-21'
+tags:
+- deep learning
+- machine learning
+- probability
+- bishop
+- logistic regression
+- numpy
+- intermediate
+credit: 'Book (not included): Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop, Springer 2024,
+  free to read online at bishopbook.com. Videos: 3Blue1Brown and StatQuest on YouTube. Notes, code, project, tasks and questions:
+  inPace. Data: the Breast Cancer Wisconsin (Diagnostic) data set, as shipped with scikit-learn.'
+section: ai-ml

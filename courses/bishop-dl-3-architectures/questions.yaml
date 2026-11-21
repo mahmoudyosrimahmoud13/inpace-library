@@ -1,0 +1,350 @@
+q1:
+  text: With an 8 × 8 image, a 3 × 3 filter and no padding, the feature map is …
+  show: 4
+  options:
+    a: 3 × 3
+    b: (8 − 3 + 1) on each side
+    c: 8 × 8
+    d: 6 × 6
+    e: 5 × 5
+    f: 9 × 9
+q2:
+  text: Convolutional layers use parameter sharing, which means …
+  show: 4
+  options:
+    a: the number of weights doesn't grow with the image size
+    b: the network has no biases
+    c: every pixel has its own weights
+    d: filters change from row to row
+    e: all channels share one filter
+    f: the same filter weights are used at every position
+q3:
+  text: If the input image shifts one pixel to the right, a convolution's feature map …
+  show: 4
+  options:
+    a: becomes all zeros
+    b: is rotated
+    c: shifts one pixel to the right too
+    d: changes size
+    e: is otherwise unchanged (away from the edges)
+    f: stays exactly the same
+q4:
+  text: Max pooling …
+  show: 4
+  options:
+    a: makes the output less sensitive to small shifts
+    b: adds learnable weights
+    c: increases the image size
+    d: averages all channels
+    e: keeps the largest value in each small region
+    f: makes the network fully invariant to any shift
+q5:
+  text: In a layer with 3 input channels and 64 output channels using 3 × 3 filters, …
+  show: 4
+  options:
+    a: each filter sees one channel only
+    b: each filter spans all 3 input channels
+    c: the count depends on the image size
+    d: there are 64 × (3·3·3 + 1) = 1,792 parameters
+    e: there are 3 × 64 parameters
+    f: the layer has no biases
+q6:
+  text: The im2col trick computes a convolution by …
+  show: 4
+  options:
+    a: averaging all pixels
+    b: using a Fourier transform
+    c: cutting every patch into a row of a matrix
+    d: looping over filters in Python only
+    e: doing one matrix product with the filters
+    f: rotating the image
+q7:
+  text: In the experiment, which models kept the most accuracy on images shifted by one pixel?
+  show: 4
+  options:
+    a: The fully connected network
+    b: Only the MLP improved
+    c: None changed at all
+    d: All three were unaffected
+    e: The plain CNN did better than the fully connected network
+    f: The CNN trained with shift augmentation
+q8:
+  text: Intersection-over-union scores a predicted bounding box by …
+  show: 4
+  options:
+    a: counting the pixels in the box
+    b: the class probability
+    c: the box's width only
+    d: comparing it with the true box
+    e: the area of overlap divided by the area of the union
+    f: the number of boxes
+q9:
+  text: A U-net for segmentation …
+  show: 4
+  options:
+    a: outputs one label per image
+    b: only works on text
+    c: has no up-sampling
+    d: shrinks the image, then grows it back to full size
+    e: uses skip connections to carry fine detail across
+    f: is a recurrent network
+q10:
+  text: Adversarial attacks show that …
+  show: 4
+  options:
+    a: tiny, invisible pixel changes can change a CNN's answer
+    b: CNNs see exactly like people
+    c: they only work on text
+    d: the changes are found using the gradient with respect to the input
+    e: adversarial images are always obvious
+    f: they need a different network
+q11:
+  text: Scaled dot-product self-attention computes …
+  show: 4
+  options:
+    a: one fixed weight per position
+    b: QKᵀ without any softmax
+    c: Softmax(V) QKᵀ
+    d: Softmax(QKᵀ / √D) V
+    e: a weighted average of value vectors for each token
+    f: a convolution over the tokens
+q12:
+  text: Why divide the scores by √D?
+  show: 4
+  options:
+    a: To speed up the matrix product
+    b: Dot products grow with the dimension D
+    c: To remove the softmax
+    d: Because the values need it
+    e: Large scores make the softmax nearly one-hot, with tiny gradients
+    f: To make scores negative
+q13:
+  text: Self-attention without positional encoding is …
+  show: 4
+  options:
+    a: permutation equivariant
+    b: impossible to train
+    c: the same as an RNN
+    d: sensitive to word order
+    e: translation invariant on images
+    f: unable to tell 'dog bites man' from 'man bites dog' by order alone
+q14:
+  text: A causal mask in a decoder transformer …
+  show: 4
+  options:
+    a: makes attention symmetric
+    b: removes the softmax
+    c: is only used at test time
+    d: stops each token from attending to later tokens
+    e: hides the first token
+    f: sets the scores above the diagonal to a very negative value
+q15:
+  text: A transformer layer contains …
+  show: 4
+  options:
+    a: no normalization at all
+    b: multi-head attention with a residual connection
+    c: a per-token MLP with a residual connection
+    d: one attention head only, always
+    e: convolutions over pixels
+    f: a recurrent hidden state
+q16:
+  text: Byte pair encoding …
+  show: 4
+  options:
+    a: needs no training text
+    b: gives common words one token and splits rare words
+    c: assigns one token per sentence
+    d: uses whole words only
+    e: starts from characters and merges frequent adjacent pairs
+    f: removes punctuation
+q17:
+  text: An autoregressive model of a sequence uses …
+  show: 4
+  options:
+    a: only the last token, always
+    b: 'the product rule: p(x₁…x_N) = Π p(xₙ | x₁…xₙ₋₁)'
+    c: a bag of words
+    d: independent tokens
+    e: the sum rule only
+    f: next-token prediction repeated along the sequence
+q18:
+  text: Raising the sampling temperature above 1 …
+  show: 4
+  options:
+    a: always picks the most likely token
+    b: shortens the vocabulary
+    c: flattens the next-token distribution
+    d: makes the text more surprising and, eventually, nonsense
+    e: makes the model more accurate
+    f: removes randomness
+q19:
+  text: Encoder transformers like BERT …
+  show: 4
+  options:
+    a: use a causal mask
+    b: can't be fine-tuned
+    c: see the whole sentence in both directions
+    d: are trained by hiding tokens and predicting them
+    e: only work on images
+    f: generate text one token at a time
+q20:
+  text: A vision transformer …
+  show: 4
+  options:
+    a: turns an image into a sequence of patch vectors
+    b: uses only convolutions
+    c: has less built-in knowledge about images than a CNN
+    d: can't use position embeddings
+    e: needs less data than a CNN
+    f: works on audio only
+q21:
+  text: Why does the loss only score the sorted half of each sequence?
+  show: 4
+  options:
+    a: The random digits can't be predicted
+    b: Scoring them would only add noise to the training signal
+    c: Because attention is masked there
+    d: The model can't see the first half
+    e: To make training slower
+    f: The separator token has no embedding
+q22:
+  text: The embedding lookup self.tok[idx] …
+  show: 4
+  options:
+    a: sends gradients back only to the rows that were used
+    b: is a convolution
+    c: picks one row of the embedding matrix per token
+    d: multiplies every row by every token
+    e: uses the position as the index
+    f: needs its own backward code
+q23:
+  text: In the model, layer normalization …
+  show: 4
+  options:
+    a: removes the residual connections
+    b: normalizes each token's vector to mean 0 and variance 1
+    c: normalizes across the batch
+    d: is applied to the targets
+    e: needs batch statistics at test time
+    f: has learned scale and shift parameters
+q24:
+  text: Greedy decoding in the project means …
+  show: 4
+  options:
+    a: generating all tokens at once without feedback
+    b: taking the most probable token at each step
+    c: sampling at a high temperature
+    d: beam search with width 10
+    e: choosing tokens at random
+    f: feeding each generated token back in as input
+q25:
+  text: Why couldn't a bigram model sort lists?
+  show: 4
+  options:
+    a: It only sees the previous token
+    b: It uses attention
+    c: It can't output digits
+    d: Sorting needs information from the whole input
+    e: It needs a GPU
+    f: It has too many parameters
+q26:
+  text: Renumbering the nodes of a graph with a permutation matrix P changes …
+  show: 4
+  options:
+    a: the adjacency matrix A into P A Pᵀ
+    b: the labels' meaning
+    c: the node features X into P X
+    d: the graph's structure
+    e: the number of edges
+    f: nothing in the matrices
+q27:
+  text: A graph convolutional layer …
+  show: 4
+  options:
+    a: needs every node to have the same degree
+    b: applies the same weights to every node
+    c: ignores the edges
+    d: uses a fixed order of neighbours
+    e: only works on images
+    f: averages each node with its neighbours using the normalized adjacency matrix
+q28:
+  text: With only two labelled members, the karate club GCN …
+  show: 4
+  options:
+    a: relied on the friendship graph to spread the labels
+    b: needed all 34 labels
+    c: got about 50% right
+    d: used text features
+    e: classified about 97% of the other members correctly
+    f: ignored the adjacency matrix
+q29:
+  text: Over-smoothing means that with many layers …
+  show: 4
+  options:
+    a: every node's representation tends toward the same vector
+    b: the network over-fits each node separately
+    c: nodes become more different
+    d: gradients explode
+    e: the graph gets more edges
+    f: nodes become hard to tell apart
+q30:
+  text: How do transformers relate to graph networks?
+  show: 4
+  options:
+    a: They are unrelated
+    b: Self-attention is message passing on a fully connected graph
+    c: Graph attention networks weight neighbours with learned attention
+    d: Transformers can't handle sets
+    e: Transformers need adjacency matrices of real graphs
+    f: GNNs use causal masks
+q31:
+  text: Which symmetry does each architecture build in?
+  show: 4
+  options:
+    a: 'Transformers with position encoding: complete order invariance'
+    b: 'Graph networks: rotations of images'
+    c: 'CNNs: renumbering the pixels in any order'
+    d: None of them build in any symmetry
+    e: 'CNNs: translations of an image'
+    f: 'Graph networks: renumbering the nodes'
+q32:
+  text: In Karpathy's GPT video, the 'mathematical trick in self-attention' corresponds to …
+  show: 4
+  options:
+    a: a lower-triangular weight matrix
+    b: the causal mask from day 3
+    c: batch normalization
+    d: dropout
+    e: the bigram table
+    f: a convolution
+q33:
+  text: Compared with your NumPy transformer, a real GPT …
+  show: 4
+  options:
+    a: has no residual connections
+    b: uses no layer normalization
+    c: uses a different kind of attention altogether
+    d: has far more parameters and data
+    e: runs on GPUs with a framework like PyTorch
+    f: is trained without next-token prediction
+q34:
+  text: Data augmentation with random shifts …
+  show: 4
+  options:
+    a: is one of the approaches in section 9.1.3
+    b: adds new labels
+    c: always raises accuracy on unshifted images
+    d: teaches a network invariance the architecture doesn't fully provide
+    e: replaces convolutions
+    f: changes the loss function
+q35:
+  text: Why does attention cost grow with the square of the sequence length?
+  show: 4
+  options:
+    a: The attention matrix has N × N entries
+    b: Because of layer norm
+    c: 'It doesn''t: it grows linearly'
+    d: Because of the MLP
+    e: Because embeddings are large
+    f: Every token is compared with every other token

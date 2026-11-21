@@ -1,0 +1,16 @@
+official: true
+author: inPace
+license: CC-BY-SA-4.0
+updated: '2026-11-21'
+tags:
+- machine learning
+- probabilistic models
+- mcmc
+- em algorithm
+- pca
+- bishop
+- advanced
+credit: 'Book (not included): Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop, Springer 2024,
+  free to read online at bishopbook.com. Videos: ritvikmath and StatQuest on YouTube. Notes, code, projects, tasks and questions:
+  inPace. Data: the scikit-learn digits and sample image.'
+section: ai-ml

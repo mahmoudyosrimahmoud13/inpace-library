@@ -1,0 +1,300 @@
+id: bishop-dl-3-architectures
+title: 'Deep Learning (Bishop) 3: convolutional networks, transformers and graph networks'
+version: 1
+language: en
+description: 'Part 3 of 5, following Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop (Springer,
+  2024), chapters 10, 12 and 13. Convolutional networks, attention and transformers, language models and sampling, and graph
+  neural networks. Each Read lesson opens the right pages of your own copy of the book (the Springer PDF, or read free online
+  at bishopbook.com). Big projects on your own NumPy deep learning library: a CNN made robust to shifts, a small GPT-style
+  transformer that learns to sort, and a graph network that predicts the split of a karate club from two labels. Plan: 7 days.'
+image: cover.jpg
+book: bishop.pdf
+book_info:
+  title: 'Deep Learning: Foundations and Concepts'
+  url: https://www.bishopbook.com
+  pages: 656
+downloads:
+- title: All datasets for the module projects (one zip)
+  url: https://github.com/mahmoudyosrimahmoud13/inpace-library/releases/download/bishop-datasets-v1/bishop-datasets.zip
+  size: 239 MB
+modules:
+- id: m1
+  title: 'Day 1: Convolutional filters'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: computer vision and convolutional filters (10.1–10.2)'
+    file: lessons/m1-l2.md
+    minutes: 50
+    media: bishop.pdf#pages=303-318
+  - id: m1-l3
+    title: 'Watch: But what is a convolution?'
+    file: lessons/m1-l3.md
+    minutes: 23
+    media: https://www.youtube.com/watch?v=KuXjwB4LzSA
+  - id: m1-l4
+    title: 'Build: convolution, equivariance and pooling in NumPy'
+    file: lessons/m1-l4.md
+    minutes: 30
+  - id: m1-l5
+    title: 'Module project: build an image classifier for CIFAR-10'
+    file: lessons/m1-l5.md
+    minutes: 120
+    media: project-1-cifar-cnn.ipynb
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between translation equivariance and translation invariance, and which parts of a CNN provide
+      each.
+    min_words: 60
+    optional: true
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: CNNs at work, and a CNN on minigrad'
+  lessons:
+  - id: m2-l1
+    title: 'Read: inside trained CNNs, detection, segmentation and style transfer (10.3–10.6)'
+    file: lessons/m2-l1.md
+    minutes: 50
+    media: bishop.pdf#pages=318-340
+  - id: m2-l2
+    title: 'Build: convolutions in minigrad, and a CNN for digits'
+    file: lessons/m2-l2.md
+    minutes: 60
+  - id: m2-l3
+    title: 'Module project: look inside a CNN, then fool it'
+    file: lessons/m2-l3.md
+    minutes: 90
+    media: project-2-cnn-under-the-hood.ipynb
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m2-explain
+    type: explain
+    prompt: Why did the fully connected network collapse on shifted digits while the CNN held up better, and what did augmentation
+      add?
+    min_words: 60
+    optional: true
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Attention'
+  lessons:
+  - id: m3-l1
+    title: 'Read: attention (12.1)'
+    file: lessons/m3-l1.md
+    minutes: 60
+    media: bishop.pdf#pages=373-390
+  - id: m3-l2
+    title: 'Watch: Transformers, the tech behind LLMs'
+    file: lessons/m3-l2.md
+    minutes: 27
+    media: https://www.youtube.com/watch?v=wjZofJX0v4M
+  - id: m3-l3
+    title: 'Watch: Attention in transformers, step-by-step'
+    file: lessons/m3-l3.md
+    minutes: 26
+    media: https://www.youtube.com/watch?v=eMlx5fFNoYc
+  - id: m3-l4
+    title: 'Build: self-attention step by step'
+    file: lessons/m3-l4.md
+    minutes: 35
+  - id: m3-l5
+    title: 'Module project: build a transformer that reads movie reviews'
+    file: lessons/m3-l5.md
+    minutes: 120
+    media: project-3-imdb-transformer.ipynb
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m3-explain
+    type: explain
+    prompt: Explain queries, keys and values in plain words, and why the scores are divided by √D.
+    min_words: 60
+    optional: true
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Language models'
+  lessons:
+  - id: m4-l1
+    title: 'Read: natural language and transformer language models (12.2–12.3)'
+    file: lessons/m4-l1.md
+    minutes: 55
+    media: bishop.pdf#pages=390-410
+  - id: m4-l2
+    title: 'Read: multimodal transformers (12.4)'
+    file: lessons/m4-l2.md
+    minutes: 30
+    media: bishop.pdf#pages=410-422
+  - id: m4-l3
+    title: 'Build: tokens, next-token models and sampling'
+    file: lessons/m4-l3.md
+    minutes: 30
+  - id: m4-l4
+    title: 'Module project: train a GPT on Shakespeare'
+    file: lessons/m4-l4.md
+    minutes: 120
+    media: project-4-shakespeare-gpt.ipynb
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m4-explain
+    type: explain
+    prompt: 'Compare greedy search, top-K sampling and temperature: what does each do to the generated text, and why?'
+    min_words: 60
+    optional: true
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Big project: a transformer that sorts'
+  lessons:
+  - id: m5-l1
+    title: 'Big project: a transformer that sorts'
+    file: lessons/m5-l1.md
+    minutes: 10
+  - id: m5-l2
+    title: 'Project part 1: a decoder transformer on minigrad'
+    file: lessons/m5-l2.md
+    minutes: 90
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Run one of the 'Try it yourself' experiments (sort 8 digits, reverse instead of sort, or remove the position embeddings).
+      Report the training loss, the share of lists solved, and one attention pattern.
+    optional: true
+  - id: m5-explain
+    type: explain
+    prompt: How can a model trained only to predict the next token end up sorting lists? Use what the attention pattern showed.
+    min_words: 60
+    optional: true
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Graph neural networks'
+  lessons:
+  - id: m6-l1
+    title: 'Read: graph neural networks (chapter 13)'
+    file: lessons/m6-l1.md
+    minutes: 55
+    media: bishop.pdf#pages=423-443
+  - id: m6-l2
+    title: 'Watch: Theoretical foundations of graph neural networks'
+    file: lessons/m6-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=uF53xsT7mjc
+  - id: m6-l3
+    title: 'Project part 2: a graph network on the karate club'
+    file: lessons/m6-l3.md
+    minutes: 40
+  - id: m6-l4
+    title: 'Module project: classify research papers with a graph network'
+    file: lessons/m6-l4.md
+    minutes: 90
+    media: project-5-cora-gcn.ipynb
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m6-explain
+    type: explain
+    prompt: Why must a node-level graph network be permutation equivariant, and how does the GCN formula guarantee it?
+    min_words: 60
+    optional: true
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Going further, and your report'
+  lessons:
+  - id: m7-l1
+    title: 'Watch: Let''s build GPT, from scratch'
+    file: lessons/m7-l1.md
+    minutes: 60
+    media: https://www.youtube.com/watch?v=kCc8FmEb1nY
+  - id: m7-l2
+    title: 'Wrap-up: write your report, and what comes next'
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Write the report from the wrap-up lesson: the CNN shift table, the transformer''s sorting accuracy and attention
+      pattern, and the GCN''s accuracy and over-smoothing numbers.'
+    optional: true
+  - id: m7-explain
+    type: explain
+    prompt: CNNs, transformers and graph networks each respect a symmetry of their data. Name the symmetry for each, and say
+      how the architecture builds it in.
+    min_words: 60
+    optional: true
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

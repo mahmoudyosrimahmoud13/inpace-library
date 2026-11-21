@@ -1,0 +1,29 @@
+id: deep-learning-bishop
+title: Deep learning with Bishop's book, and a portfolio of real projects
+description: Read Deep Learning, Foundations and Concepts by Christopher and Hugh Bishop, chapter by chapter, and build a real PyTorch project in every module, ready for GitHub and your CV. Maths first if you need it.
+language: en
+author: inPace
+official: true
+order: 36
+tags: [deep learning, machine learning, projects, portfolio, pytorch]
+steps:
+  - course: mml-1-linear-algebra-geometry
+    note: The book assumes linear algebra. Skip the maths courses if you're comfortable with vectors, matrices and eigenvectors.
+    optional: true
+  - course: mml-2-decompositions-calculus
+    note: Gradients and the chain rule, which backpropagation is built on.
+    optional: true
+  - course: mml-3-probability-optimization
+    note: Probability and optimization. Part 1 below goes over much of it again, more deeply.
+    optional: true
+  - course: numpy-pandas-ml
+    note: The Build lessons are NumPy code. Skip it if you already use NumPy.
+    optional: true
+  - course: bishop-dl-1-foundations
+    note: Probability, distributions and single-layer models. Projects - a spam filter, a failure detector, a house-price map and more.
+  - course: bishop-dl-2-deep-networks
+    note: Deep networks, optimizers, backpropagation and regularization. You build your own autograd engine and neural network library.
+  - course: bishop-dl-3-architectures
+    note: CNNs, transformers and graph networks. Projects - a CIFAR-10 CNN, a Shakespeare GPT, a citation-graph classifier.
+  - course: bishop-dl-4-latent-variables
+    note: Graphical models, sampling and latent variables. Projects - an HMM tagger, MCMC diagnosis, a K-means image codec.

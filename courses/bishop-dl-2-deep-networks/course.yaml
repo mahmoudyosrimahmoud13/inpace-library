@@ -1,0 +1,331 @@
+id: bishop-dl-2-deep-networks
+title: 'Deep Learning (Bishop) 2: deep networks and how they learn'
+version: 1
+language: en
+description: 'Part 2 of 5, following Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop (Springer,
+  2024), chapters 6 to 9. Deep neural networks and their error functions, mixture density networks, gradient descent with
+  momentum and Adam, normalization, backpropagation, automatic differentiation and regularization. Each Read lesson opens
+  the right pages of your own copy of the book (the Springer PDF, or read free online at bishopbook.com). Big project: write
+  your own automatic-differentiation library in NumPy, then train a handwritten digit recognizer and a mixture density network
+  with it. Plan: 7 days.'
+image: cover.jpg
+book: bishop.pdf
+book_info:
+  title: 'Deep Learning: Foundations and Concepts'
+  url: https://www.bishopbook.com
+  pages: 656
+downloads:
+- title: All datasets for the module projects (one zip)
+  url: https://github.com/mahmoudyosrimahmoud13/inpace-library/releases/download/bishop-datasets-v1/bishop-datasets.zip
+  size: 239 MB
+modules:
+- id: m1
+  title: 'Day 1: Why fixed basis functions aren''t enough'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: limits of fixed basis functions, and multilayer networks (6.1–6.2)'
+    file: lessons/m1-l2.md
+    minutes: 50
+    media: bishop.pdf#pages=189-204
+  - id: m1-l3
+    title: 'Watch: The essential main ideas of neural networks'
+    file: lessons/m1-l3.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=CqOfi41LfDw
+  - id: m1-l4
+    title: 'Build: high dimensions, and a network by hand'
+    file: lessons/m1-l4.md
+    minutes: 30
+  - id: m1-l5
+    title: 'Module project: upgrade the clothes classifier to a neural network'
+    file: lessons/m1-l5.md
+    minutes: 120
+    media: project-1-fashion-mlp.ipynb
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m1-explain
+    type: explain
+    prompt: Why can't a single-layer model solve XOR, and what exactly does the hidden layer do that makes it possible? Use
+      the words basis function and representation.
+    min_words: 60
+    optional: true
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Deep networks and their error functions'
+  lessons:
+  - id: m2-l1
+    title: 'Read: deep networks (6.3)'
+    file: lessons/m2-l1.md
+    minutes: 35
+    media: bishop.pdf#pages=204-212
+  - id: m2-l2
+    title: 'Read: error functions and mixture density networks (6.4–6.5)'
+    file: lessons/m2-l2.md
+    minutes: 45
+    media: bishop.pdf#pages=212-225
+  - id: m2-l3
+    title: 'Build: when the average answer is wrong'
+    file: lessons/m2-l3.md
+    minutes: 30
+  - id: m2-l4
+    title: 'Module project: teach a robot arm where to put its elbow'
+    file: lessons/m2-l4.md
+    minutes: 90
+    media: project-2-robot-arm-mdn.ipynb
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m2-explain
+    type: explain
+    prompt: Explain to a friend why a network trained with squared error can give a useless answer for a robot arm, and what
+      a mixture density network outputs instead.
+    min_words: 60
+    optional: true
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Gradient descent that works'
+  lessons:
+  - id: m3-l1
+    title: 'Read: error surfaces and gradient descent (7.1–7.2)'
+    file: lessons/m3-l1.md
+    minutes: 45
+    media: bishop.pdf#pages=226-235
+  - id: m3-l2
+    title: 'Watch: Gradient descent, how neural networks learn'
+    file: lessons/m3-l2.md
+    minutes: 21
+    media: https://www.youtube.com/watch?v=IHZwWFHWa-w
+  - id: m3-l3
+    title: 'Read: convergence, momentum, Adam and normalization (7.3–7.4)'
+    file: lessons/m3-l3.md
+    minutes: 50
+    media: bishop.pdf#pages=235-249
+  - id: m3-l4
+    title: 'Build: optimizers on a narrow valley'
+    file: lessons/m3-l4.md
+    minutes: 30
+  - id: m3-l5
+    title: 'Module project: benchmark how networks learn'
+    file: lessons/m3-l5.md
+    minutes: 90
+    media: project-3-optimizer-benchmark.ipynb
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m3-explain
+    type: explain
+    prompt: Explain why plain gradient descent struggles in a long, narrow valley, and how momentum and Adam each help.
+    min_words: 60
+    optional: true
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Backpropagation by hand'
+  lessons:
+  - id: m4-l1
+    title: 'Read: evaluating gradients with backpropagation (8.1)'
+    file: lessons/m4-l1.md
+    minutes: 55
+    media: bishop.pdf#pages=250-261
+  - id: m4-l2
+    title: 'Watch: Backpropagation, intuitively'
+    file: lessons/m4-l2.md
+    minutes: 13
+    media: https://www.youtube.com/watch?v=Ilg3gGewQ5U
+  - id: m4-l3
+    title: 'Build: backpropagation by hand'
+    file: lessons/m4-l3.md
+    minutes: 40
+  - id: m4-l4
+    title: 'Module project: write your own neural network library'
+    file: lessons/m4-l4.md
+    minutes: 120
+    media: project-4-numpy-net.ipynb
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m4-explain
+    type: explain
+    prompt: Explain the backpropagation formula δⱼ = h′(aⱼ) Σₖ wₖⱼ δₖ in plain words, and why it costs about the same as a
+      forward pass no matter how many weights the network has.
+    min_words: 60
+    optional: true
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Automatic differentiation: build minigrad'
+  lessons:
+  - id: m5-l1
+    title: 'Read: automatic differentiation (8.2)'
+    file: lessons/m5-l1.md
+    minutes: 45
+    media: bishop.pdf#pages=261-269
+  - id: m5-l2
+    title: 'Watch: building micrograd'
+    file: lessons/m5-l2.md
+    minutes: 30
+    media: https://www.youtube.com/watch?v=VMj-3S1tku0
+  - id: m5-l3
+    title: 'Build: minigrad, part 1: the Tensor and its backward pass'
+    file: lessons/m5-l3.md
+    minutes: 75
+  - id: m5-l4
+    title: 'Module project: build an automatic differentiation engine'
+    file: lessons/m5-l4.md
+    minutes: 120
+    media: project-5-microdiff.ipynb
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m5-explain
+    type: explain
+    prompt: Explain the difference between forward-mode and reverse-mode automatic differentiation, and why deep learning
+      uses reverse mode.
+    min_words: 60
+    optional: true
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Regularization'
+  lessons:
+  - id: m6-l1
+    title: 'Read: inductive bias, weight decay and learning curves (9.1–9.3)'
+    file: lessons/m6-l1.md
+    minutes: 55
+    media: bishop.pdf#pages=270-287
+  - id: m6-l2
+    title: 'Read: parameter sharing, residual connections and model averaging (9.4–9.6)'
+    file: lessons/m6-l2.md
+    minutes: 45
+    media: bishop.pdf#pages=287-302
+  - id: m6-l3
+    title: 'Build: learning curves, early stopping, weight decay and dropout'
+    file: lessons/m6-l3.md
+    minutes: 40
+  - id: m6-l4
+    title: 'Module project: what really helps when data is scarce?'
+    file: lessons/m6-l4.md
+    minutes: 90
+    media: project-6-small-data-regularization.ipynb
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m6-explain
+    type: explain
+    prompt: 'Compare early stopping, weight decay and dropout: how does each one keep a big network from memorizing a small
+      data set?'
+    min_words: 60
+    optional: true
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Big project: a digit recognizer on your own library'
+  lessons:
+  - id: m7-l1
+    title: 'Big project: a digit recognizer on your own library'
+    file: lessons/m7-l1.md
+    minutes: 10
+  - id: m7-l2
+    title: 'Project part 1: finish minigrad'
+    file: lessons/m7-l2.md
+    minutes: 60
+  - id: m7-l3
+    title: 'Project part 2: train a digit recognizer'
+    file: lessons/m7-l3.md
+    minutes: 45
+  - id: m7-l4
+    title: 'Project part 3: a mixture density network'
+    file: lessons/m7-l4.md
+    minutes: 35
+  - id: m7-l5
+    title: 'Wrap-up: what you built, and what comes next'
+    file: lessons/m7-l5.md
+    minutes: 20
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Write the short report from the wrap-up lesson: what minigrad supports and how you checked it, your two digit
+      models with validation and test accuracy, the most confused digit pairs, and what the MDN predicts at t = 0.35 compared
+      with least squares.'
+    optional: true
+  - id: m7-explain
+    type: explain
+    prompt: Explain how the log-softmax and log-sum-exp tricks avoid numerical overflow, and why they don't change the result.
+    min_words: 60
+    optional: true
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

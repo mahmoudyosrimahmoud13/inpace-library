@@ -1,0 +1,364 @@
+id: bishop-dl-1-foundations
+title: 'Deep Learning (Bishop) 1: probability and single-layer networks'
+version: 1
+language: en
+description: 'Part 1 of 5, following Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop (Springer,
+  2024), chapters 1 to 5. Over-fitting and regularization, the rules of probability, the Gaussian, information theory and
+  Bayesian thinking, the standard distributions, and single-layer networks for regression and classification. Each Read lesson
+  opens the right pages of your own copy of the book (the Springer PDF, or read free online at bishopbook.com), with notes,
+  videos, NumPy code you run yourself, and a big project: a tumour classifier built two ways, with a doctor''s decision rule.
+  Plan: 7 days.'
+image: cover.jpg
+book: bishop.pdf
+book_info:
+  title: 'Deep Learning: Foundations and Concepts'
+  url: https://www.bishopbook.com
+  pages: 656
+downloads:
+- title: All datasets for the module projects (one zip)
+  url: https://github.com/mahmoudyosrimahmoud13/inpace-library/releases/download/bishop-datasets-v1/bishop-datasets.zip
+  size: 239 MB
+modules:
+- id: m1
+  title: 'Day 1: What deep learning is, and a first model'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: 'Read: the deep learning revolution (chapter 1)'
+    file: lessons/m1-l2.md
+    minutes: 50
+    media: bishop.pdf#pages=21-42
+  - id: m1-l3
+    title: 'Watch: But what is a neural network?'
+    file: lessons/m1-l3.md
+    minutes: 19
+    media: https://www.youtube.com/watch?v=aircAruvnKk
+  - id: m1-l4
+    title: 'Build: the curve-fitting example in NumPy'
+    file: lessons/m1-l4.md
+    minutes: 40
+  - id: m1-l5
+    title: 'Module project: build a fuel-use predictor'
+    file: lessons/m1-l5.md
+    minutes: 90
+    media: project-1-mpg-predictor.ipynb
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m1-explain
+    type: explain
+    prompt: 'In your own words: why does the M = 9 polynomial have zero training error but a large test error? Name the two
+      cures from section 1.2 and say why each one works.'
+    min_words: 60
+    optional: true
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: The rules of probability and the Gaussian'
+  lessons:
+  - id: m2-l1
+    title: 'Read: the rules of probability (2.1)'
+    file: lessons/m2-l1.md
+    minutes: 40
+    media: bishop.pdf#pages=43-52
+  - id: m2-l2
+    title: 'Watch: Bayes theorem, the geometry of changing beliefs'
+    file: lessons/m2-l2.md
+    minutes: 15
+    media: https://www.youtube.com/watch?v=HZGCoVF3YvM
+  - id: m2-l3
+    title: 'Read: probability densities and the Gaussian (2.2–2.3)'
+    file: lessons/m2-l3.md
+    minutes: 45
+    media: bishop.pdf#pages=52-62
+  - id: m2-l4
+    title: 'Watch: Maximum likelihood, clearly explained'
+    file: lessons/m2-l4.md
+    minutes: 7
+    media: https://www.youtube.com/watch?v=XepXtl9YKwc
+  - id: m2-l5
+    title: 'Build: the screening test and the biased variance'
+    file: lessons/m2-l5.md
+    minutes: 30
+  - id: m2-l6
+    title: 'Module project: build an SMS spam filter'
+    file: lessons/m2-l6.md
+    minutes: 90
+    media: project-2-sms-spam-filter.ipynb
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m2-explain
+    type: explain
+    prompt: Explain to a friend why a positive result from a test that is right 90 to 97% of the time can still mean only
+      a 23% chance of having the disease. Use the words prior and posterior.
+    min_words: 60
+    optional: true
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Information theory and Bayesian thinking'
+  lessons:
+  - id: m3-l1
+    title: 'Read: changing variables, and information theory (2.4–2.5)'
+    file: lessons/m3-l1.md
+    minutes: 50
+    media: bishop.pdf#pages=62-74
+  - id: m3-l2
+    title: 'Watch: Entropy, clearly explained'
+    file: lessons/m3-l2.md
+    minutes: 16
+    media: https://www.youtube.com/watch?v=YtebGVx-Fxw
+  - id: m3-l3
+    title: 'Read: Bayesian probabilities (2.6)'
+    file: lessons/m3-l3.md
+    minutes: 40
+    media: bishop.pdf#pages=74-83
+  - id: m3-l4
+    title: 'Build: entropy, KL divergence and a Bayesian coin'
+    file: lessons/m3-l4.md
+    minutes: 30
+  - id: m3-l5
+    title: 'Module project: build a text compressor'
+    file: lessons/m3-l5.md
+    minutes: 90
+    media: project-3-text-compressor.ipynb
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m3-explain
+    type: explain
+    prompt: 'In your own words: how does adding (λ/2)‖w‖² to the error come out of Bayes'' theorem? Use the words prior, likelihood,
+      posterior and MAP.'
+    min_words: 60
+    optional: true
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: The standard distributions'
+  lessons:
+  - id: m4-l1
+    title: 'Read: discrete variables and the multivariate Gaussian (3.1–3.2)'
+    file: lessons/m4-l1.md
+    minutes: 70
+    media: bishop.pdf#pages=84-108
+  - id: m4-l2
+    title: 'Watch: The normal distribution, clearly explained'
+    file: lessons/m4-l2.md
+    minutes: 6
+    media: https://www.youtube.com/watch?v=rzFX5NWojp0
+  - id: m4-l3
+    title: 'Read: periodic variables, the exponential family, and nonparametric methods (3.3–3.5)'
+    file: lessons/m4-l3.md
+    minutes: 45
+    media: bishop.pdf#pages=108-129
+  - id: m4-l4
+    title: 'Build: Gaussian ellipses, conditionals, and a kernel density'
+    file: lessons/m4-l4.md
+    minutes: 35
+  - id: m4-l5
+    title: 'Module project: build a machine-failure detector'
+    file: lessons/m4-l5.md
+    minutes: 90
+    media: project-4-failure-detector.ipynb
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m4-explain
+    type: explain
+    prompt: Explain what the eigenvectors and eigenvalues of a covariance matrix tell you about the shape of a 2-D Gaussian,
+      and why the conditional of a Gaussian has a smaller variance than its marginal.
+    min_words: 60
+    optional: true
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Regression with a single layer'
+  lessons:
+  - id: m5-l1
+    title: 'Read: linear regression (4.1)'
+    file: lessons/m5-l1.md
+    minutes: 45
+    media: bishop.pdf#pages=130-139
+  - id: m5-l2
+    title: 'Watch: Ridge (L2) regression'
+    file: lessons/m5-l2.md
+    minutes: 20
+    media: https://www.youtube.com/watch?v=Q81RR3yKn30
+  - id: m5-l3
+    title: 'Read: decision theory and the bias–variance trade-off (4.2–4.3)'
+    file: lessons/m5-l3.md
+    minutes: 35
+    media: bishop.pdf#pages=139-149
+  - id: m5-l4
+    title: 'Watch: Bias and variance'
+    file: lessons/m5-l4.md
+    minutes: 6
+    media: https://www.youtube.com/watch?v=EuBBz3bI-aA
+  - id: m5-l5
+    title: 'Build: basis functions, LMS and the bias–variance experiment'
+    file: lessons/m5-l5.md
+    minutes: 35
+  - id: m5-l6
+    title: 'Module project: build a house-price model with a learned map'
+    file: lessons/m5-l6.md
+    minutes: 120
+    media: project-5-house-prices.ipynb
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m5-explain
+    type: explain
+    prompt: Explain the bias–variance trade-off without formulas, using the picture of 100 models trained on 100 different
+      data sets.
+    min_words: 60
+    optional: true
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Classification with a single layer'
+  lessons:
+  - id: m6-l1
+    title: 'Read: discriminant functions and decision theory (5.1–5.2)'
+    file: lessons/m6-l1.md
+    minutes: 60
+    media: bishop.pdf#pages=150-169
+  - id: m6-l2
+    title: 'Watch: ROC and AUC, clearly explained'
+    file: lessons/m6-l2.md
+    minutes: 16
+    media: https://www.youtube.com/watch?v=4jRBRDbJemM
+  - id: m6-l3
+    title: 'Read: generative and discriminative classifiers (5.3–5.4)'
+    file: lessons/m6-l3.md
+    minutes: 55
+    media: bishop.pdf#pages=169-188
+  - id: m6-l4
+    title: 'Watch: Logistic regression'
+    file: lessons/m6-l4.md
+    minutes: 9
+    media: https://www.youtube.com/watch?v=yIYKR4sgzI8
+  - id: m6-l5
+    title: 'Build: logistic regression by gradient descent'
+    file: lessons/m6-l5.md
+    minutes: 35
+  - id: m6-l6
+    title: 'Module project: build a clothes classifier you can trust'
+    file: lessons/m6-l6.md
+    minutes: 120
+    media: project-6-clothes-classifier.ipynb
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m6-explain
+    type: explain
+    prompt: 'Compare a generative and a discriminative classifier: what does each model, how many numbers does each need with
+      M features, and when would you prefer each?'
+    min_words: 60
+    optional: true
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Big project: a tumour classifier'
+  lessons:
+  - id: m7-l1
+    title: 'Big project: a tumour classifier, two ways'
+    file: lessons/m7-l1.md
+    minutes: 10
+  - id: m7-l2
+    title: 'Project part 1: two classifiers and an honest comparison'
+    file: lessons/m7-l2.md
+    minutes: 60
+  - id: m7-l3
+    title: 'Project part 2: from probabilities to decisions'
+    file: lessons/m7-l3.md
+    minutes: 50
+  - id: m7-l4
+    title: 'Wrap-up: write your report, and what comes next'
+    file: lessons/m7-l4.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Write the one-page report described in the wrap-up lesson: question, data, two models, results, decision rule
+      and limits. Include your test accuracy, cross-entropy and AUC for both models, the threshold you used, and the share
+      of cases referred.'
+    optional: true
+  - id: m7-explain
+    type: explain
+    prompt: Why did the project choose the decision threshold from the loss matrix instead of the one that did best on the
+      validation set? What would make you change your mind?
+    min_words: 60
+    optional: true
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

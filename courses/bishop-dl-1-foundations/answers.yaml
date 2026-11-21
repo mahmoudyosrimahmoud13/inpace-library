@@ -1,0 +1,176 @@
+q1:
+  right:
+  - a
+  - d
+  why: Ten weights can fit ten points exactly, noise and all. Generalization has to be measured on data the model didn't see.
+q2:
+  right:
+  - a
+  - b
+  why: More data and regularization are the two cures in section 1.2. Choosing λ by training error would always pick λ = 0.
+q3:
+  right:
+  - a
+  - c
+  why: Hyperparameters chosen on the training set over-fit; choosing them on the test set makes the test unfair.
+q4:
+  right:
+  - c
+  - d
+  why: An over-fitted model has learned the accidents of its training set instead of the underlying pattern.
+q5:
+  right:
+  - a
+  - c
+  why: Learning from data and representation learning are the two big ideas of chapter 1.
+q6:
+  right:
+  - d
+  - f
+  why: The sum rule (marginalization) and the product rule. Independence makes the joint a product only in special cases.
+q7:
+  right:
+  - c
+  - e
+  why: 'About 9 true positives against about 30 false ones per 1000 people: 9 / 39 ≈ 0.23.'
+q8:
+  right:
+  - a
+  - f
+  why: Only the total area must equal 1; the height can exceed 1 when the density is narrow.
+q9:
+  right:
+  - d
+  - f
+  why: 'The ML variance is biased by the factor (N − 1)/N: it is measured around the sample mean, which sits close to the
+    data.'
+q10:
+  right:
+  - e
+  - f
+  why: The negative log-likelihood is the squared error scaled and shifted, so both have the same minimum (section 2.3.4).
+q11:
+  right:
+  - a
+  - f
+  why: h(x) = −log p(x) grows for rare events; uniform maximizes entropy; nats and bits differ by a factor ln 2.
+q12:
+  right:
+  - b
+  - f
+  why: KL ≥ 0 with equality only for p = q, but in general KL(p‖q) ≠ KL(q‖p).
+q13:
+  right:
+  - b
+  - f
+  why: The entropy of p doesn't depend on q, so minimizing KL leaves the expected negative log-likelihood (cross-entropy).
+q14:
+  right:
+  - a
+  - d
+  why: −ln(prior) adds a term proportional to ‖w‖², exactly the weight-decay regularizer (section 2.6.2).
+q15:
+  right:
+  - a
+  - f
+  why: With little data, maximum likelihood over-fits; the prior pulls the estimate toward reasonable values.
+q16:
+  right:
+  - d
+  - f
+  why: The Mahalanobis distance is constant on ellipsoids aligned with Σ's eigenvectors, with sizes set by the eigenvalues.
+q17:
+  right:
+  - d
+  - f
+  why: Conditionals and marginals of a Gaussian are Gaussian; the conditional mean is linear in the observed part.
+q18:
+  right:
+  - a
+  - b
+  why: Turning the natural parameter back gives the sigmoid (Bernoulli) and the softmax (multinomial).
+q19:
+  right:
+  - a
+  - e
+  why: Small h follows each point (over-fitting), large h blurs real structure (under-fitting).
+q20:
+  right:
+  - c
+  - e
+  why: Nonparametric methods store the data and suffer from the curse of dimensionality, motivating compact neural networks.
+q21:
+  right:
+  - e
+  - f
+  why: Linearity in w is what gives the normal equations; the non-linearity lives in the fixed basis functions.
+q22:
+  right:
+  - c
+  - e
+  why: Setting the gradient of the squared error to zero gives the normal equations ΦᵀΦw = Φᵀt.
+q23:
+  right:
+  - b
+  - c
+  why: 'Section 4.2: squared loss is minimized by the conditional mean, also called the regression function.'
+q24:
+  right:
+  - c
+  - e
+  why: 'Heavy regularization makes every fit flat and similar: consistent (low variance) but wrong on average (high bias).'
+q25:
+  right:
+  - a
+  - d
+  why: w ← w + η(tₙ − wᵀφₙ)φₙ is the ancestor of how deep networks are trained.
+q26:
+  right:
+  - a
+  - b
+  why: 'Section 5.1.4: least squares corresponds to a Gaussian model, a bad match for binary targets.'
+q27:
+  right:
+  - a
+  - c
+  why: 'Predict cancer when 20p > 1 − p, so p > 1/21: the threshold drops, and no retraining is needed.'
+q28:
+  right:
+  - d
+  - e
+  why: The quadratic terms cancel when the covariances are shared, leaving a = wᵀx + w₀.
+q29:
+  right:
+  - a
+  - f
+  why: The sigmoid's derivative cancels, leaving 'prediction minus target times input', the canonical-link result.
+q30:
+  right:
+  - c
+  - d
+  why: The likelihood keeps increasing as the sigmoid gets steeper, so ‖w‖ → ∞ unless regularized (section 5.4.3).
+q31:
+  right:
+  - b
+  - c
+  why: Any statistic computed on the test set lets it influence the model, and the reported score becomes optimistic.
+q32:
+  right:
+  - a
+  - f
+  why: Accuracy only checks which side of 0.5 a case falls on; cross-entropy checks the probability itself.
+q33:
+  right:
+  - d
+  - f
+  why: 'Many parameters from little data: the classic argument for discriminative models in section 5.4.'
+q34:
+  right:
+  - c
+  - e
+  why: Raising θ removed the last error but referred almost a third of the cases.
+q35:
+  right:
+  - c
+  - e
+  why: Thresholds only move the boundary; a case with p ≈ 0 falls on the benign side of any reasonable threshold.

@@ -1,0 +1,175 @@
+q1:
+  right:
+  - c
+  - e
+  why: Each node contributes p(node | parents); B and F have no parents.
+q2:
+  right:
+  - a
+  - f
+  why: Independent variables need only M(K − 1), but can't model relationships.
+q3:
+  right:
+  - a
+  - c
+  why: 'Follow the arrows: parents first, then children.'
+q4:
+  right:
+  - b
+  - f
+  why: Section 11.1.6 introduces observed nodes, parameters and plates.
+q5:
+  right:
+  - c
+  - d
+  why: 'The flat battery explains away the empty reading: 0.257 → 0.111.'
+q6:
+  right:
+  - b
+  - e
+  why: 'That''s explaining away: seeing the common effect couples the causes.'
+q7:
+  right:
+  - e
+  - f
+  why: The common cause explains all their dependence; once it's known, nothing is left.
+q8:
+  right:
+  - b
+  - d
+  why: A strong, usually wrong assumption that makes the model tiny and fast.
+q9:
+  right:
+  - d
+  - f
+  why: Correlated evidence gets counted many times, pushing probabilities to extremes.
+q10:
+  right:
+  - c
+  - d
+  why: 'Given its blanket, a node is independent of everything else: what Gibbs sampling uses.'
+q11:
+  right:
+  - a
+  - d
+  why: Accept with probability p̃(z)/(k q(z)); with a 1% width mismatch in 1,000 dimensions, about 1 in 20,000 survive.
+q12:
+  right:
+  - b
+  - f
+  why: That's what makes MCMC usable for posteriors with unknown normalization.
+q13:
+  right:
+  - b
+  - d
+  why: In the lesson, step 0.1 accepted 95% but gave a badly wrong mean.
+q14:
+  right:
+  - d
+  - e
+  why: x ← x + η∇log p(x) + √(2η) ε.
+q15:
+  right:
+  - d
+  - e
+  why: It's the sampling procedure of score-based diffusion models.
+q16:
+  right:
+  - b
+  - d
+  why: Both steps can only lower the distortion J.
+q17:
+  right:
+  - c
+  - d
+  why: Two of ten random starts got stuck in the lesson; run several starts and keep the best.
+q18:
+  right:
+  - b
+  - e
+  why: Computed with Bayes' theorem from πₖ and the component densities.
+q19:
+  right:
+  - b
+  - f
+  why: 'Singularities: guard against them with a small variance floor or by resetting the component.'
+q20:
+  right:
+  - a
+  - c
+  why: 'With 8 colours, 3 bits per pixel instead of 24: about 8 times smaller.'
+q21:
+  right:
+  - a
+  - d
+  why: Responsibilities from the current parameters; the M step then updates the parameters.
+q22:
+  right:
+  - c
+  - d
+  why: Nₖ = Σₙ γ(zₙₖ) is the effective number of points in component k.
+q23:
+  right:
+  - d
+  - f
+  why: ln p(X|θ) = L(q, θ) + KL(q ‖ p(Z|X, θ)) and KL ≥ 0.
+q24:
+  right:
+  - b
+  - d
+  why: Agreement rose from about 0.75 (K-means) to about 0.93 (EM).
+q25:
+  right:
+  - a
+  - e
+  why: Section 15.3.2.
+q26:
+  right:
+  - d
+  - f
+  why: Maximum variance and minimum reconstruction error give the same answer.
+q27:
+  right:
+  - d
+  - f
+  why: 'Section 16.1.2: what you drop is exactly what you lose.'
+q28:
+  right:
+  - c
+  - d
+  why: The best M balanced keeping digit detail against keeping noise.
+q29:
+  right:
+  - b
+  - d
+  why: Section 16.2.3's closed-form solution.
+q30:
+  right:
+  - b
+  - e
+  why: 'GANs, normalizing flows, VAEs and diffusion models: the map of part 5.'
+q31:
+  right:
+  - b
+  - e
+  why: Ancestral sampling in the latent space, then the PCA decoder.
+q32:
+  right:
+  - c
+  - f
+  why: Average confidence 0.60 for one Gaussian, against 0.84 for ten components.
+q33:
+  right:
+  - b
+  - d
+  why: EM discovered the groups by itself; the judge saw every digit among its samples.
+q34:
+  right:
+  - a
+  - f
+  why: The generative classifier of section 5.3, used in reverse to draw.
+q35:
+  right:
+  - b
+  - c
+  why: VAEs, flows, GANs and diffusion models make each part deep.

@@ -1,0 +1,299 @@
+id: bishop-dl-4-latent-variables
+title: 'Deep Learning (Bishop) 4: graphical models, sampling and latent variables'
+version: 1
+language: en
+description: 'Part 4 of 5, following Deep Learning: Foundations and Concepts by Christopher M. Bishop and Hugh Bishop (Springer,
+  2024), chapters 11, 14, 15 and 16. Directed graphical models and conditional independence, rejection and importance sampling,
+  Markov chain Monte Carlo and Langevin dynamics, K-means, Gaussian mixtures, the EM algorithm and the evidence lower bound,
+  PCA and probabilistic PCA. Each Read lesson opens the right pages of your own copy of the book (the Springer PDF, or read
+  free online at bishopbook.com). Big projects in NumPy: four samplers including annealed Langevin, EM from scratch, PCA denoising,
+  and a model that generates new handwritten digits. Plan: 7 days.'
+image: cover.jpg
+book: bishop.pdf
+book_info:
+  title: 'Deep Learning: Foundations and Concepts'
+  url: https://www.bishopbook.com
+  pages: 656
+downloads:
+- title: All datasets for the module projects (one zip)
+  url: https://github.com/mahmoudyosrimahmoud13/inpace-library/releases/download/bishop-datasets-v1/bishop-datasets.zip
+  size: 239 MB
+modules:
+- id: m1
+  title: 'Day 1: Graphical models'
+  lessons:
+  - id: m1-l1
+    title: Start here
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: graphical models (11.1)'
+    file: lessons/m1-l2.md
+    minutes: 50
+    media: bishop.pdf#pages=341-353
+  - id: m1-l3
+    title: 'Build: a graphical model you can sample and query'
+    file: lessons/m1-l3.md
+    minutes: 30
+  - id: m1-l4
+    title: 'Module project: a Bayesian network for the Titanic'
+    file: lessons/m1-l4.md
+    minutes: 90
+    media: project-1-titanic-bayesnet.ipynb
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m1-explain
+    type: explain
+    prompt: Explain how a directed graph defines a factorization of a joint distribution, and why removing links can save
+      so many parameters.
+    min_words: 60
+    optional: true
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Conditional independence and sequences'
+  lessons:
+  - id: m2-l1
+    title: 'Read: conditional independence and sequence models (11.2–11.3)'
+    file: lessons/m2-l1.md
+    minutes: 55
+    media: bishop.pdf#pages=353-372
+  - id: m2-l2
+    title: 'Build: three graphs, and naive Bayes on digits'
+    file: lessons/m2-l2.md
+    minutes: 35
+  - id: m2-l3
+    title: 'Module project: build a part-of-speech tagger'
+    file: lessons/m2-l3.md
+    minutes: 90
+    media: project-2-hmm-tagger.ipynb
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m2-explain
+    type: explain
+    prompt: Explain 'explaining away' with an everyday example of your own, and say which of the three basic graphs it belongs
+      to.
+    min_words: 60
+    optional: true
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Sampling'
+  lessons:
+  - id: m3-l1
+    title: 'Read: basic sampling algorithms (14.1)'
+    file: lessons/m3-l1.md
+    minutes: 45
+    media: bishop.pdf#pages=444-455
+  - id: m3-l2
+    title: 'Read: Markov chain Monte Carlo and Langevin sampling (14.2–14.3)'
+    file: lessons/m3-l2.md
+    minutes: 55
+    media: bishop.pdf#pages=455-473
+  - id: m3-l3
+    title: 'Watch: Markov chain Monte Carlo'
+    file: lessons/m3-l3.md
+    minutes: 12
+    media: https://www.youtube.com/watch?v=yApmR-c_hKU
+  - id: m3-l4
+    title: 'Build: four samplers for one awkward distribution'
+    file: lessons/m3-l4.md
+    minutes: 45
+  - id: m3-l5
+    title: 'Module project: diagnosis with uncertainty, by MCMC'
+    file: lessons/m3-l5.md
+    minutes: 90
+    media: project-3-bayesian-logreg-mcmc.ipynb
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m3-explain
+    type: explain
+    prompt: Why does plain Langevin dynamics get the proportions of two separated peaks wrong in a short run, and how does
+      annealing fix it?
+    min_words: 60
+    optional: true
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: K-means and Gaussian mixtures'
+  lessons:
+  - id: m4-l1
+    title: 'Read: K-means and mixtures of Gaussians (15.1–15.2)'
+    file: lessons/m4-l1.md
+    minutes: 45
+    media: bishop.pdf#pages=474-489
+  - id: m4-l2
+    title: 'Watch: K-means clustering'
+    file: lessons/m4-l2.md
+    minutes: 9
+    media: https://www.youtube.com/watch?v=4b5d3muPQmA
+  - id: m4-l3
+    title: 'Build: K-means from scratch, and an image with 8 colours'
+    file: lessons/m4-l3.md
+    minutes: 35
+  - id: m4-l4
+    title: 'Module project: build an image codec with K-means'
+    file: lessons/m4-l4.md
+    minutes: 90
+    media: project-4-vq-image-codec.ipynb
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Build the module project yourself and push it to your own GitHub repository, with a README that has a results
+      table. Then do at least one idea from Make it yours and add its result to the README. Hand in the link to your repository.
+    optional: true
+  - id: m4-explain
+    type: explain
+    prompt: 'Compare K-means and a Gaussian mixture: what does each assume about clusters, and what is a responsibility?'
+    min_words: 60
+    optional: true
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: The EM algorithm'
+  lessons:
+  - id: m5-l1
+    title: 'Read: the EM algorithm and the evidence lower bound (15.3–15.4)'
+    file: lessons/m5-l1.md
+    minutes: 60
+    media: bishop.pdf#pages=489-508
+  - id: m5-l2
+    title: 'Project part 1: EM for a Gaussian mixture, from scratch'
+    file: lessons/m5-l2.md
+    minutes: 45
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Run your EM with K = 2, 3, 4 and 5 on the lesson's data. Report the final log-likelihood for each, and explain
+      why it can't be used alone to choose K.
+    optional: true
+  - id: m5-explain
+    type: explain
+    prompt: Explain the evidence lower bound decomposition ln p(X) = L(q) + KL(q‖p(Z|X)), and how the E and M steps use it
+      to guarantee the likelihood never decreases.
+    min_words: 60
+    optional: true
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: PCA and probabilistic PCA'
+  lessons:
+  - id: m6-l1
+    title: 'Read: principal component analysis (16.1)'
+    file: lessons/m6-l1.md
+    minutes: 40
+    media: bishop.pdf#pages=509-520
+  - id: m6-l2
+    title: 'Watch: Principal component analysis, step by step'
+    file: lessons/m6-l2.md
+    minutes: 22
+    media: https://www.youtube.com/watch?v=FgakZw6K1QQ
+  - id: m6-l3
+    title: 'Read: probabilistic PCA and nonlinear latent variable models (16.2–16.4)'
+    file: lessons/m6-l3.md
+    minutes: 55
+    media: bishop.pdf#pages=520-545
+  - id: m6-l4
+    title: 'Project part 2: PCA and probabilistic PCA on digits'
+    file: lessons/m6-l4.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Whiten the digit data (rotate onto the eigenvectors and divide by the square roots of the eigenvalues, keeping
+      40 components). Check numerically that the whitened data has an identity covariance.
+    optional: true
+  - id: m6-explain
+    type: explain
+    prompt: Explain the difference between PCA and probabilistic PCA, and what the probabilistic version lets you do that
+      PCA can't.
+    min_words: 60
+    optional: true
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Big project: generate new digits'
+  lessons:
+  - id: m7-l1
+    title: 'Project part 3: generate new digits'
+    file: lessons/m7-l1.md
+    minutes: 50
+  - id: m7-l2
+    title: 'Wrap-up: write your report, and what comes next'
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Write the report from the wrap-up lesson, including the judge's confidence for the three generators and one imagined
+      digit printed as numbers.
+    optional: true
+  - id: m7-explain
+    type: explain
+    prompt: 'Your digit generator has three parts: an encoder (PCA), a latent model (a Gaussian mixture) and a decoder. Explain
+      what each does, and why one Gaussian gave blurry blends while the mixture didn''t.'
+    min_words: 60
+    optional: true
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

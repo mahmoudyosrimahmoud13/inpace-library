@@ -1,0 +1,350 @@
+q1:
+  text: A polynomial with M = 9 fitted to 10 points gets zero training error. What does that tell you?
+  show: 4
+  options:
+    a: It can pass through every training point
+    b: M = 9 is too small for this data
+    c: It's the best model for new data
+    d: Nothing reliable about how well it predicts new points
+    e: The noise in the data must be zero
+    f: Its test error must also be zero
+q2:
+  text: Which of these reduce over-fitting in the book's curve-fitting example?
+  show: 4
+  options:
+    a: Adding a penalty (λ/2)‖w‖² to the error
+    b: Training on more data points
+    c: Removing the bias weight w₀
+    d: Raising the polynomial order M
+    e: Measuring error on the training set only
+    f: Choosing λ to make the training error smallest
+q3:
+  text: Why do we keep a separate validation set?
+  show: 4
+  options:
+    a: Because training error always favours the most complex model
+    b: Because the test set is too large
+    c: To choose hyperparameters like M or λ fairly
+    d: So the model can memorize it
+    e: To train the weights on more data
+    f: To make training faster
+q4:
+  text: Over-fitting means …
+  show: 4
+  options:
+    a: a model with too few parameters
+    b: the test error being lower than the training error
+    c: fitting the noise in the training data
+    d: doing well on training data but worse on new data
+    e: training for too few steps
+    f: using too little computing power
+q5:
+  text: Which statements about deep learning match chapter 1?
+  show: 4
+  options:
+    a: Hidden layers can learn useful features by themselves
+    b: Every feature must be designed by an expert
+    c: A model's parameters are tuned from examples instead of written by hand
+    d: Deep networks need no data
+    e: Over-fitting cannot happen in deep networks
+    f: Backpropagation was the first single-layer method
+q6:
+  text: Which equations are the two basic rules of probability?
+  show: 4
+  options:
+    a: p(X) = p(X | Y)
+    b: p(Y | X) = p(X | Y)
+    c: p(X, Y) = p(X) p(Y) always
+    d: p(X) = Σ_Y p(X, Y)
+    e: p(X, Y) = p(X) + p(Y)
+    f: p(X, Y) = p(Y | X) p(X)
+q7:
+  text: In the screening example (1% have cancer, 3% false positives, 10% false negatives), after a positive test …
+  show: 4
+  options:
+    a: the prior probability rises to 50%
+    b: the test result carries no information
+    c: the probability of cancer is about 23%
+    d: the probability of cancer is 97%
+    e: most positive results are false alarms
+    f: the probability of cancer is about 90%
+q8:
+  text: For a probability density p(x) of a continuous variable …
+  show: 4
+  options:
+    a: probabilities of ranges are areas under the curve
+    b: the probability of an exact value is p(x)
+    c: densities cannot be multiplied
+    d: the sum rule no longer holds
+    e: p(x) must stay below 1
+    f: p(x) itself can be larger than 1
+q9:
+  text: Maximum likelihood for a Gaussian gives …
+  show: 4
+  options:
+    a: the same result as setting σ² = 1
+    b: an unbiased variance for any N
+    c: a variance that is too large on average
+    d: a variance estimate that is too small on average
+    e: μ equal to the median
+    f: the sample mean as the estimate of μ
+q10:
+  text: If targets are a function plus Gaussian noise, maximizing the likelihood of the weights …
+  show: 4
+  options:
+    a: always prevents over-fitting
+    b: requires a prior on the weights
+    c: is impossible without the test set
+    d: gives different weights from least squares
+    e: gives the same weights as minimizing the sum-of-squares error
+    f: also gives an estimate of the noise variance
+q11:
+  text: Which statements about entropy are true?
+  show: 4
+  options:
+    a: It is the average information (surprise) of a random variable
+    b: A skewed distribution has more entropy than a uniform one
+    c: It is always negative
+    d: Rare events carry less information
+    e: Entropy measured in nats is the same number as in bits
+    f: A uniform distribution over 8 states has 3 bits
+q12:
+  text: The KL divergence KL(p‖q) …
+  show: 4
+  options:
+    a: is symmetric in p and q
+    b: is never negative
+    c: is a true distance between distributions
+    d: can be made negative by a good model
+    e: measures entropy of p alone
+    f: is zero only when p and q are equal
+q13:
+  text: Fitting a model q by minimizing KL(p‖q), where p is the data distribution, is the same as …
+  show: 4
+  options:
+    a: maximizing the entropy of q
+    b: minimizing the cross-entropy between the data and q
+    c: choosing q = uniform
+    d: minimizing the variance of q
+    e: maximizing KL(q‖p)
+    f: maximizing the likelihood of the data under q
+q14:
+  text: A Gaussian prior on the weights, centred on zero, …
+  show: 4
+  options:
+    a: plays the role of the (λ/2)‖w‖² penalty
+    b: makes the posterior equal to the likelihood
+    c: forces all weights to be exactly zero
+    d: turns maximum a posteriori (MAP) estimation into regularized least squares
+    e: has no effect when data is scarce
+    f: replaces the likelihood
+q15:
+  text: Three tosses give three heads. What does section 2.6 say?
+  show: 4
+  options:
+    a: Maximum likelihood would say tails is impossible
+    b: The prior has no effect with three tosses
+    c: Three tosses prove the coin is biased
+    d: Maximum likelihood gives p(heads) = 0.75
+    e: Bayesian methods ignore the data
+    f: A Bayesian answer with a sensible prior is less extreme
+q16:
+  text: For a multivariate Gaussian N(x | μ, Σ) …
+  show: 4
+  options:
+    a: Σ must be diagonal
+    b: the mean sits on the edge of the ellipse
+    c: the contours are always circles
+    d: the contours of equal density are ellipses (ellipsoids)
+    e: the eigenvalues can be negative
+    f: the axes of the ellipses point along the eigenvectors of Σ
+q17:
+  text: If x = (xa, xb) is jointly Gaussian, then …
+  show: 4
+  options:
+    a: the conditional mean is a quadratic in xb
+    b: the conditional variance grows with xb
+    c: p(xa) is never Gaussian
+    d: p(xa | xb) is Gaussian
+    e: p(xa | xb) does not depend on xb
+    f: the mean of p(xa | xb) is a linear function of xb
+q18:
+  text: Which statements about the exponential family are right?
+  show: 4
+  options:
+    a: The Bernoulli's natural parameter is the log-odds
+    b: Maximum likelihood depends on the data only through sufficient statistics
+    c: It only contains discrete distributions
+    d: The softmax has nothing to do with it
+    e: The Gaussian is not in the family
+    f: Its members cannot be fitted by maximum likelihood
+q19:
+  text: In kernel density estimation, the width h of the kernel …
+  show: 4
+  options:
+    a: gives a spiky, over-fitted estimate when too small
+    b: must equal the number of data points
+    c: should be chosen on the training data alone
+    d: gives over-fitting when very large
+    e: acts as a smoothing parameter
+    f: has no effect on the result
+q20:
+  text: Why does the book move on from histograms and nearest neighbours?
+  show: 4
+  options:
+    a: They always under-fit
+    b: They require a GPU
+    c: They scale badly to high-dimensional inputs
+    d: They cannot model any density
+    e: They need to keep all the training data
+    f: They have too few hyperparameters
+q21:
+  text: A model y(x, w) = wᵀφ(x) with fixed non-linear basis functions φ is …
+  show: 4
+  options:
+    a: impossible to regularize
+    b: solvable only by trial and error
+    c: linear in the input x
+    d: a deep network with learned features
+    e: solvable by least squares in closed form
+    f: linear in the weights w
+q22:
+  text: The maximum likelihood weights for linear regression with Gaussian noise …
+  show: 4
+  options:
+    a: depend on the test set
+    b: are always zero
+    c: use the Moore–Penrose pseudo-inverse of the design matrix
+    d: require a softmax
+    e: are w = (ΦᵀΦ)⁻¹Φᵀt
+    f: are w = Φt
+q23:
+  text: With squared loss, the best single prediction for t given x is …
+  show: 4
+  options:
+    a: the most common target
+    b: the conditional mean E[t | x]
+    c: the regression function
+    d: the conditional median
+    e: always zero
+    f: the largest observed target
+q24:
+  text: In the bias–variance decomposition, a very large λ gives …
+  show: 4
+  options:
+    a: high variance
+    b: low bias
+    c: high bias
+    d: zero noise
+    e: low variance
+    f: a model that fits every data set's noise
+q25:
+  text: Which statements about sequential (LMS) learning are right?
+  show: 4
+  options:
+    a: It is stochastic gradient descent on the squared error
+    b: It always reaches the exact solution in one pass
+    c: It inverts ΦᵀΦ at every step
+    d: It updates the weights one data point at a time
+    e: It cannot use regularization
+    f: It needs the whole data set at once
+q26:
+  text: Why is least squares a poor way to train a classifier?
+  show: 4
+  options:
+    a: It is very sensitive to points far from the boundary, even correct ones
+    b: It assumes Gaussian noise, which class labels don't have
+    c: It always over-fits less than logistic regression
+    d: It cannot draw straight boundaries
+    e: It needs a GPU
+    f: It has no closed-form solution
+q27:
+  text: A loss matrix that makes missing a cancer 20 times worse than a false alarm …
+  show: 4
+  options:
+    a: moves the decision threshold below 0.5
+    b: makes the reject option impossible
+    c: minimizes expected loss rather than the number of mistakes
+    d: raises the threshold above 0.5
+    e: has no effect if the posteriors are known
+    f: requires retraining the model
+q28:
+  text: For two Gaussian classes with the same covariance matrix, the posterior p(C₁ | x) …
+  show: 4
+  options:
+    a: is always 0.5
+    b: is a softmax over the features
+    c: needs a separate covariance per class
+    d: is a logistic sigmoid of a linear function of x
+    e: gives a straight-line (hyperplane) decision boundary
+    f: is a quadratic function of x
+q29:
+  text: The gradient of the cross-entropy error for logistic regression …
+  show: 4
+  options:
+    a: has the same form as for linear regression with squared error
+    b: requires the covariance of each class
+    c: has a closed-form zero
+    d: involves the derivative of the sigmoid that doesn't cancel
+    e: is always zero for separable data
+    f: has the form Σ (yₙ − tₙ) φₙ
+q30:
+  text: If the training data is linearly separable, maximum likelihood logistic regression …
+  show: 4
+  options:
+    a: converges to small weights
+    b: needs a larger learning rate to converge
+    c: lets the weights grow without limit
+    d: can be fixed by adding a regularization term
+    e: underfits badly
+    f: gives a closed-form answer
+q31:
+  text: Why does the project standardize features with training-set statistics only?
+  show: 4
+  options:
+    a: To make training slower
+    b: So the test set stays a fair, untouched check
+    c: So no information leaks from validation or test data
+    d: To make the model generative
+    e: Because the test set has no features
+    f: Because standardizing changes the labels
+q32:
+  text: Why was λ chosen by validation cross-entropy rather than validation accuracy?
+  show: 4
+  options:
+    a: The decision steps in part 2 depend on good probabilities
+    b: Accuracy rewards calibration more
+    c: Cross-entropy is always higher than accuracy
+    d: It makes the model generative
+    e: Accuracy can't be computed on validation data
+    f: Cross-entropy also rewards confident, correct probabilities
+q33:
+  text: The generative model needed a ridge on its covariance because …
+  show: 4
+  options:
+    a: the labels were flipped
+    b: the AUC would exceed 1 without it
+    c: Gaussian classes can't be fitted
+    d: a 30 × 30 covariance has about 465 numbers to estimate from a few hundred cases
+    e: logistic regression needs it too
+    f: the estimated covariance can be unstable or hard to invert
+q34:
+  text: What does the reject option trade?
+  show: 4
+  options:
+    a: Recall for the number of features
+    b: Accuracy for training speed
+    c: Fewer automatic mistakes for more cases sent to people
+    d: 'Nothing: it is free'
+    e: Coverage for reliability on the cases it decides
+    f: Validation data for test data
+q35:
+  text: A threshold sweep showed one malignant case missed even at a threshold of 0.005. What does that mean?
+  show: 4
+  options:
+    a: Lower thresholds always remove all misses
+    b: The threshold should be negative
+    c: No threshold can fix a confident mistake
+    d: The loss matrix was wrong
+    e: The model gave that case a very confident, wrong probability
+    f: The validation set was leaked

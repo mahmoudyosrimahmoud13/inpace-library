@@ -1,0 +1,175 @@
+q1:
+  right:
+  - d
+  - f
+  why: The curse of dimensionality, and the fact that the basis is fixed instead of adapted to where the data lies.
+q2:
+  right:
+  - c
+  - f
+  why: The volume near the centre is tiny in high dimensions, so even though the density peaks there, few samples fall there.
+q3:
+  right:
+  - a
+  - d
+  why: A composition of linear maps is linear; the non-linearity is what gives depth its power.
+q4:
+  right:
+  - c
+  - d
+  why: 'It''s an existence result: it says nothing about the number of units needed or how to train them.'
+q5:
+  right:
+  - e
+  - f
+  why: With M hidden units there are M! orderings (and sign flips for tanh) that compute the same function.
+q6:
+  right:
+  - c
+  - d
+  why: 'Each pairing comes from maximum likelihood with the matching distribution: Gaussian, Bernoulli or categorical.'
+q7:
+  right:
+  - a
+  - b
+  why: Minimizing squared error gives E[t | x], which can fall between several valid answers.
+q8:
+  right:
+  - c
+  - e
+  why: The softmax makes them a valid set of probabilities, one per mixture component.
+q9:
+  right:
+  - e
+  - f
+  why: 'Section 6.3.4: e.g. features from millions of everyday photos help classify a small set of skin lesion images.'
+q10:
+  right:
+  - b
+  - d
+  why: Positive pairs (e.g. an image and its crop) move closer, negative pairs move apart; CLIP uses this for text and images.
+q11:
+  right:
+  - d
+  - f
+  why: If all weights start equal, every hidden unit computes and learns the same thing.
+q12:
+  right:
+  - b
+  - d
+  why: Mini-batches balance the cost and the noise of the gradient estimate.
+q13:
+  right:
+  - a
+  - e
+  why: Above 2/λmax the steepest direction diverges, while progress along flat directions depends on λmin.
+q14:
+  right:
+  - e
+  - f
+  why: RMSProp-style per-weight scaling plus momentum and a bias correction for the first steps.
+q15:
+  right:
+  - a
+  - e
+  why: Batch norm uses mini-batch statistics; layer norm uses per-example statistics, which is why transformers use it.
+q16:
+  right:
+  - b
+  - d
+  why: '∂Eₙ/∂wⱼᵢ = δⱼ zᵢ: the same shape as the single-layer result.'
+q17:
+  right:
+  - a
+  - e
+  why: Sigmoid with cross-entropy, softmax with multiclass cross-entropy and identity with squared error all give yₖ − tₖ.
+q18:
+  right:
+  - b
+  - c
+  why: Central differences are accurate enough to test, but far too slow when there are millions of weights.
+q19:
+  right:
+  - b
+  - d
+  why: Symmetric differences cancel the first-order error term.
+q20:
+  right:
+  - c
+  - f
+  why: That efficiency, independent of the number of weights, is what makes training large networks possible.
+q21:
+  right:
+  - c
+  - f
+  why: 'That''s exactly the deep learning case: one error, millions of weights. The cost is memory for the stored values.'
+q22:
+  right:
+  - a
+  - d
+  why: Each forward sweep gives the derivatives with respect to one chosen input.
+q23:
+  right:
+  - a
+  - b
+  why: Overwriting instead of adding is the classic bug when a value is used twice.
+q24:
+  right:
+  - a
+  - b
+  why: Processing a node too early would pass on a partial gradient.
+q25:
+  right:
+  - b
+  - f
+  why: Accumulation is what makes shared values correct, so stale gradients must be removed between steps.
+q26:
+  right:
+  - b
+  - e
+  why: Inductive bias is unavoidable; good biases match the structure of the problems we care about.
+q27:
+  right:
+  - a
+  - d
+  why: Section 9.1.3 lists augmentation, regularization, invariant features and architecture.
+q28:
+  right:
+  - e
+  - f
+  why: Stopping early keeps the weights near their small starting values, a similar effect to a weight penalty.
+q29:
+  right:
+  - c
+  - e
+  why: The identity path gives gradients a direct route, so networks with hundreds of layers can be trained.
+q30:
+  right:
+  - b
+  - d
+  why: All thinned networks share weights, so dropout approximates an ensemble for the price of one network.
+q31:
+  right:
+  - a
+  - d
+  why: exp of large numbers overflows; the shift is a constant that cancels in the normalization.
+q32:
+  right:
+  - b
+  - c
+  why: In the project, confidence averaged about 0.96 when right and about 0.63 when wrong.
+q33:
+  right:
+  - e
+  - f
+  why: Keep the best validation weights; never use the test set to make training decisions.
+q34:
+  right:
+  - a
+  - c
+  why: Least squares predicted 0.455, where no data lies; the MDN put its components near 0.13 and 0.65.
+q35:
+  right:
+  - c
+  - f
+  why: Learned features (data-dependent basis functions) are the whole point of chapter 6.

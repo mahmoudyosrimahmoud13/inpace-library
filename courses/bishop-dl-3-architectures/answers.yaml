@@ -1,0 +1,175 @@
+q1:
+  right:
+  - b
+  - d
+  why: Size J − M + 1; with padding P it becomes J + 2P − M + 1.
+q2:
+  right:
+  - a
+  - f
+  why: 'One small filter slides over the whole image: far fewer parameters and built-in translation equivariance.'
+q3:
+  right:
+  - c
+  - e
+  why: That's translation equivariance (section 10.2.2).
+q4:
+  right:
+  - a
+  - e
+  why: Pooling shrinks feature maps and adds approximate local invariance.
+q5:
+  right:
+  - b
+  - d
+  why: Each of the 64 filters has 3 × 3 × 3 weights plus a bias.
+q6:
+  right:
+  - c
+  - e
+  why: Rearranging patches turns convolution into a single fast matrix product, forward and backward.
+q7:
+  right:
+  - e
+  - f
+  why: Fully connected ≈ 0.49, plain CNN ≈ 0.61, augmented CNN ≈ 0.93.
+q8:
+  right:
+  - d
+  - e
+  why: IoU = overlap ÷ union, 1 for a perfect box and 0 for no overlap.
+q9:
+  right:
+  - d
+  - e
+  why: Section 10.5.4; the same architecture appears inside diffusion models.
+q10:
+  right:
+  - a
+  - d
+  why: A perturbation along the input gradient can flip the classification while looking unchanged to us.
+q11:
+  right:
+  - d
+  - e
+  why: Each output is a softmax-weighted combination of values, weighted by query–key similarity.
+q12:
+  right:
+  - b
+  - e
+  why: Without scaling, at D = 1024 the softmax put almost all weight on one token.
+q13:
+  right:
+  - a
+  - f
+  why: Shuffle the inputs and the outputs shuffle the same way; positions must be added explicitly.
+q14:
+  right:
+  - d
+  - f
+  why: With −∞ above the diagonal, the softmax gives zero weight to future positions.
+q15:
+  right:
+  - b
+  - c
+  why: Plus layer normalization (Figure 12.9).
+q16:
+  right:
+  - b
+  - e
+  why: It's the standard way real language models build their vocabulary.
+q17:
+  right:
+  - b
+  - f
+  why: 'Section 12.2.4: predicting each token from all earlier ones defines the full distribution.'
+q18:
+  right:
+  - c
+  - d
+  why: Low temperature is near-greedy and repetitive; high temperature is close to random.
+q19:
+  right:
+  - c
+  - d
+  why: No mask; masked-token training; then fine-tuning for tasks such as classification.
+q20:
+  right:
+  - a
+  - c
+  why: Less inductive bias than a CNN, so it typically needs more data to match it.
+q21:
+  right:
+  - a
+  - b
+  why: The first six tokens are random; only the sorted half is a learnable function of the past.
+q22:
+  right:
+  - a
+  - c
+  why: 'Indexing is differentiable in minigrad: np.add.at puts each gradient back in its row.'
+q23:
+  right:
+  - b
+  - f
+  why: LayerNorm works per token, so it behaves identically in training and testing.
+q24:
+  right:
+  - b
+  - f
+  why: The sorted half is generated one token at a time, each conditioned on everything before it.
+q25:
+  right:
+  - a
+  - d
+  why: Each output depends on all the input digits; attention gives every position access to them.
+q26:
+  right:
+  - a
+  - c
+  why: 'Same graph, new numbering: a node-level network must give renumbered but identical predictions.'
+q27:
+  right:
+  - b
+  - f
+  why: H_new = h(Â H W) with Â = D^(−½)(A + I)D^(−½).
+q28:
+  right:
+  - a
+  - e
+  why: The loss saw two nodes; message passing carried the information through the graph.
+q29:
+  right:
+  - a
+  - f
+  why: Repeated averaging forgets which node is which; few layers or residual connections help.
+q30:
+  right:
+  - b
+  - c
+  why: 'Section 13.3.1: attention over all tokens is a GNN where every node is connected to every other.'
+q31:
+  right:
+  - e
+  - f
+  why: The geometric deep learning view (section 13.3.6).
+q32:
+  right:
+  - a
+  - b
+  why: Averaging only over earlier positions is exactly causal attention.
+q33:
+  right:
+  - d
+  - e
+  why: Same architecture; the difference is scale and speed.
+q34:
+  right:
+  - a
+  - d
+  why: In the project it raised shifted-test accuracy from about 0.61 to 0.93, at a small cost on normal images.
+q35:
+  right:
+  - a
+  - f
+  why: 'Section 12.1.8: N² pairs of query–key scores.'

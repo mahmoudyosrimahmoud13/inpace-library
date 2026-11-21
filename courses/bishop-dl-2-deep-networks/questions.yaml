@@ -1,0 +1,350 @@
+q1:
+  text: Which problems of fixed basis functions does section 6.1 describe?
+  show: 4
+  options:
+    a: They need more labels than learned features
+    b: They make training impossible with gradient descent
+    c: They only work for classification
+    d: They are chosen before seeing the data
+    e: They can't be combined linearly
+    f: The number of basis functions needed grows exponentially with the input dimension
+q2:
+  text: In a high-dimensional Gaussian, most samples …
+  show: 4
+  options:
+    a: have distance zero from the mean
+    b: lie near the peak of the density
+    c: lie far from the centre, in a thin shell
+    d: are spread evenly through the volume
+    e: lie exactly at the centre
+    f: have a distance from the centre close to √D times the standard deviation
+q3:
+  text: Why do networks need a non-linear activation function?
+  show: 4
+  options:
+    a: It lets hidden units act as learned non-linear basis functions
+    b: It removes the need for biases
+    c: It turns the network into a probability model
+    d: Without it, stacked layers collapse into a single linear layer
+    e: It makes training faster but changes nothing else
+    f: It keeps the weights positive
+q4:
+  text: The universal approximation theorem says that a two-layer network …
+  show: 4
+  options:
+    a: needs only one hidden unit
+    b: always trains to the global minimum
+    c: exists for the function, not how to find its weights
+    d: can approximate a wide class of functions as closely as you like, given enough hidden units
+    e: guarantees good generalization
+    f: makes deeper networks pointless
+q5:
+  text: Weight-space symmetries mean that …
+  show: 4
+  options:
+    a: the network has a unique best solution
+    b: training always finds the same weights
+    c: every weight must be different
+    d: ReLU networks have no symmetries
+    e: swapping two hidden units leaves the network's function unchanged
+    f: the error surface has many equivalent minima
+q6:
+  text: Which output activation and error function go together?
+  show: 4
+  options:
+    a: Sigmoid with sum-of-squares for many classes
+    b: Softmax with sum-of-squares for regression
+    c: Softmax with multiclass cross-entropy
+    d: Identity (no activation) with sum-of-squares
+    e: Identity with binary cross-entropy
+    f: ReLU with cross-entropy for regression
+q7:
+  text: A network trained with squared error learns …
+  show: 4
+  options:
+    a: the conditional mean of the target
+    b: a single answer per input, even when several are right
+    c: every possible answer
+    d: a mixture of Gaussians
+    e: the most common target value
+    f: the conditional median
+q8:
+  text: In a mixture density network, the outputs that set the mixing coefficients …
+  show: 4
+  options:
+    a: are fixed before training
+    b: go through a ReLU
+    c: must be positive and add up to 1
+    d: can be negative
+    e: go through a softmax
+    f: are the means of the components
+q9:
+  text: What is transfer learning?
+  show: 4
+  options:
+    a: Moving a model to another computer
+    b: Training from scratch on every task
+    c: Copying a model's predictions as labels
+    d: A way to compute gradients
+    e: Reusing features learned on one task for a related task
+    f: Retraining mostly the last layers on a smaller data set
+q10:
+  text: Contrastive learning trains a network to …
+  show: 4
+  options:
+    a: predict labels for every input
+    b: push apart embeddings of non-matching pairs
+    c: make all embeddings identical
+    d: pull together embeddings of matching pairs
+    e: minimize squared error on pixels
+    f: remove the hidden layers
+q11:
+  text: Why are network weights initialized randomly instead of at zero?
+  show: 4
+  options:
+    a: To make training deterministic
+    b: So the network starts at the global minimum
+    c: Because zero weights are not allowed in NumPy
+    d: To break the symmetry between hidden units
+    e: To increase the learning rate
+    f: Because identical units would receive identical updates forever
+q12:
+  text: Mini-batch gradient descent …
+  show: 4
+  options:
+    a: can't be combined with momentum
+    b: is cheaper per step than using the whole data set
+    c: always uses the entire data set
+    d: averages the gradient over a small random subset of examples
+    e: needs no learning rate
+    f: gives an exact gradient
+q13:
+  text: With plain gradient descent on a quadratic error, the largest usable learning rate is limited by …
+  show: 4
+  options:
+    a: the largest eigenvalue of the Hessian
+    b: the number of layers
+    c: the smallest eigenvalue
+    d: the number of data points
+    e: the steepest direction of the error surface
+    f: the size of the bias
+q14:
+  text: What does Adam do?
+  show: 4
+  options:
+    a: Normalizes the input data
+    b: Removes the need for gradients
+    c: Computes the exact Hessian
+    d: Uses one learning rate for all weights, unscaled
+    e: Combines that scaling with momentum
+    f: Scales each weight's step by a running average of its squared gradients
+q15:
+  text: Layer normalization differs from batch normalization because it …
+  show: 4
+  options:
+    a: normalizes across the units of one layer for each example
+    b: uses statistics of the whole data set
+    c: removes the learnable scale
+    d: can only be used with ReLU
+    e: doesn't depend on the batch, so it behaves the same in training and testing
+    f: normalizes the inputs only
+q16:
+  text: The derivative of the error with respect to a weight wⱼᵢ is …
+  show: 4
+  options:
+    a: always equal to the output error
+    b: the error signal at the weight's output end times the activation at its input end
+    c: δⱼ · δᵢ
+    d: δⱼ · zᵢ
+    e: zⱼ · zᵢ
+    f: h′(aᵢ) alone
+q17:
+  text: For output units with a matching (canonical) error function, the output δ is …
+  show: 4
+  options:
+    a: yₖ − tₖ
+    b: the derivative of the activation only
+    c: tₖ / yₖ
+    d: zero
+    e: prediction minus target
+    f: the hidden activation
+q18:
+  text: Why is numerical differentiation used to check backpropagation but not to train?
+  show: 4
+  options:
+    a: It needs no forward pass
+    b: It needs one or two forward passes per weight
+    c: It's simple and reliable for spotting bugs
+    d: It is faster than backpropagation
+    e: It gives exact derivatives
+    f: It only works for one layer
+q19:
+  text: The central difference (E(w+ε) − E(w−ε)) / 2ε is preferred over (E(w+ε) − E(w)) / ε because …
+  show: 4
+  options:
+    a: it needs fewer forward passes
+    b: it's more accurate for the same ε
+    c: it computes the Hessian
+    d: its error shrinks like ε² instead of ε
+    e: it doesn't need ε
+    f: it gives the exact derivative
+q20:
+  text: Backpropagation computes all the gradients for roughly the cost of …
+  show: 4
+  options:
+    a: the number of training examples squared
+    b: the square of the number of weights
+    c: one forward pass plus one backward pass
+    d: one forward pass per weight
+    e: a matrix inversion
+    f: two forward passes
+q21:
+  text: Reverse-mode automatic differentiation …
+  show: 4
+  options:
+    a: needs one sweep per input
+    b: doesn't need a forward pass
+    c: needs the intermediate values from the forward pass
+    d: gives approximate derivatives
+    e: is the same as numerical differentiation
+    f: gives the derivatives of one output with respect to all inputs in one backward sweep
+q22:
+  text: Forward-mode automatic differentiation is efficient when …
+  show: 4
+  options:
+    a: there are few inputs and many outputs
+    b: there are millions of weights and one loss
+    c: the function has no inputs
+    d: you need derivatives with respect to one input
+    e: you need the Hessian of a network
+    f: you train a classifier
+q23:
+  text: Why are gradients added (+=) during the backward pass?
+  show: 4
+  options:
+    a: A value used in several places receives a contribution from each use
+    b: The total derivative is the sum over all paths
+    c: To avoid storing the forward pass
+    d: To normalize them
+    e: Because NumPy requires it
+    f: To make the gradients larger
+q24:
+  text: Why must the backward pass visit nodes in reverse topological order?
+  show: 4
+  options:
+    a: Each node then sends a finished gradient to its parents
+    b: A node's gradient is complete only after every node that uses it has been processed
+    c: To visit the inputs first
+    d: To save memory
+    e: Because the order doesn't matter
+    f: To compute the forward pass again
+q25:
+  text: Why does the training loop clear the gradients (zero_grad) before every backward pass?
+  show: 4
+  options:
+    a: To change the learning rate
+    b: Gradients accumulate across backward passes
+    c: To reset the weights
+    d: Because Adam needs zero gradients
+    e: To restart the forward pass
+    f: Otherwise each step would add up old gradients
+q26:
+  text: The no free lunch theorem says that …
+  show: 4
+  options:
+    a: deep networks always win
+    b: a method works well only because its assumptions match real problems
+    c: regularization is never needed
+    d: every model generalizes equally on real data
+    e: averaged over all possible problems, no learning algorithm beats another
+    f: more data never helps
+q27:
+  text: Which are ways to build invariance to transformations into a model?
+  show: 4
+  options:
+    a: Build the invariance into the architecture
+    b: Remove the validation set
+    c: Train for fewer steps only
+    d: Augment the training data with transformed copies
+    e: Delete the hidden layers
+    f: Use a larger learning rate
+q28:
+  text: During training, the validation error often first falls, then rises. Early stopping …
+  show: 4
+  options:
+    a: keeps the final weights
+    b: stops when the training error reaches zero
+    c: always gives worse models
+    d: uses the test set to choose the stopping point
+    e: acts somewhat like weight decay
+    f: keeps the weights from the point of lowest validation error
+q29:
+  text: Residual connections z_out = z_in + F(z_in) …
+  show: 4
+  options:
+    a: replace backpropagation
+    b: double the number of parameters
+    c: help with the shattered gradient problem
+    d: only work in shallow networks
+    e: let gradients flow through very deep networks
+    f: remove the need for activation functions
+q30:
+  text: Dropout …
+  show: 4
+  options:
+    a: switches off units at test time too
+    b: behaves like an average over many thinned networks
+    c: is the same as weight decay
+    d: randomly switches off hidden units during training
+    e: removes units permanently
+    f: trains many separate networks with separate weights
+q31:
+  text: Why does log_softmax subtract the largest logit before exponentiating?
+  show: 4
+  options:
+    a: It doesn't change the result, because the shift cancels
+    b: To make the probabilities sum to 2
+    c: Because negative logits are not allowed
+    d: To avoid overflow in exp
+    e: To speed up backpropagation by half
+    f: To pick the right class
+q32:
+  text: When the network's softmax output is wrong on a test digit, …
+  show: 4
+  options:
+    a: the loss is zero
+    b: the right answer is often its second choice
+    c: its confidence is usually lower than on correct answers
+    d: the image must be mislabelled
+    e: the probabilities stop adding up to 1
+    f: it is always 100% confident
+q33:
+  text: In the training loop, early stopping was implemented by …
+  show: 4
+  options:
+    a: using the test set after every epoch
+    b: lowering the learning rate to zero
+    c: deleting the last layer
+    d: stopping when training accuracy reached 100%
+    e: saving a copy of the weights whenever validation accuracy improved
+    f: restoring the best copy at the end
+q34:
+  text: Why did the mixture density network give a more useful answer than least squares at t = 0.35?
+  show: 4
+  options:
+    a: It outputs several components, one for each group of answers
+    b: It uses squared error
+    c: It doesn't force a single average answer between the groups
+    d: It ignores the training data
+    e: It always predicts 0.5
+    f: It has more layers
+q35:
+  text: Why does the hidden-layer network beat softmax regression on raw pixels?
+  show: 4
+  options:
+    a: It has no non-linearity
+    b: It skips the softmax
+    c: It learns its own features from the pixels
+    d: It trains for more epochs only
+    e: It uses the test set
+    f: A linear model on raw pixels can't represent the needed boundaries as well
