@@ -1,0 +1,168 @@
+id: microcontroller-pcb-ar
+title: 'تصميم PCB لـ Microcontroller: الـ ATmega328P board الخاص بك'
+version: 1
+language: ar
+description: صمم وابنِ وبرمج board ‏microcontroller خاصًا بك حول ATmega328P ‏(الـ chip الموجود في Arduino Uno). الـ pins والـ
+  ports والـ datasheet، والدائرة الأساسية (الكهرباء والـ decoupling والـ crystal والـ reset)، وكهرباء USB-C والحماية، والـ
+  ISP والـ bootloaders والـ USB-serial مع auto-reset، والبرمجة بـ Arduino وبالـ registers، و schematic كامل في blocks، وقواعد
+  الـ layout لـ boards الـ microcontroller، والتشغيل الأول والـ debugging على مراحل. وينتهي بالـ sensor board الخاص بك والـ
+  firmware الخاص به. الكورس الثالث في مسار الإلكترونيات والـ PCB. حوالي 3 أسابيع، ساعة يوميًا.
+image: cover.jpg
+downloads:
+- title: الـ datasheet الخاص بـ ATmega328P ‏(Microchip)
+  url: https://www.microchip.com/en-us/product/ATmega328P
+- title: Arduino IDE
+  url: https://www.arduino.cc/en/software
+- title: تصميم Arduino Uno Rev3 المرجعي (الـ schematic والملفات)
+  url: https://docs.arduino.cc/hardware/uno-rev3/
+modules:
+- id: m1
+  title: 'الوحدة 1: الـ Microcontroller'
+  lessons:
+  - id: m1-l1
+    title: ما هو الـ microcontroller
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: الـ Pins والـ Ports والـ Datasheet
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'نزّل الـ datasheet الخاص بـ ATmega328P. اعثر على وخذ لقطة لـ: الـ pinout لنسخة DIP ذات 28 pin، وجدول الـ absolute
+      maximum ratings، ورسم أقصى تردد مقابل جهد المصدر. ثم خطط أي الـ pins ستستخدم لـ LED تريد تعتيمه، وزر، وsensor ضوء، وsensor
+      ‏I²C.'
+  - id: m1-explain
+    type: explain
+    prompt: اشرح ماذا يضيف Arduino Uno حول الـ ATmega328P، ولماذا قد يكون تصميم board خاص بك أفضل.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: الدائرة الأساسية والكهرباء'
+  lessons:
+  - id: m2-l1
+    title: الدائرة الأساسية (minimal circuit)
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: تغذية الـ board بالكهرباء
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: ابنِ الدائرة الأساسية على breadboard ‏(ATmega328P مع bootloader، وcrystal ‏16 MHz، وcapacitors ‏22 pF، وpull-up
+      وزر للـ reset، وdecoupling، وLED على الـ pin ‏19) تعمل من موديول USB ‏5 V. ارفع صورة وجدول ميزانية الكهرباء.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح وظيفة كل جزء في الدائرة الأساسية، وماذا تفعل resistors ‏CC1/CC2 في USB-C.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: البرمجة'
+  lessons:
+  - id: m3-l1
+    title: تحميل البرامج على الـ chip
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: أول برامجك
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'برمج الـ ATmega على الـ breadboard: ارفع Blink عبر adapter ‏USB-serial ‏(مع capacitor الـ auto-reset على DTR)،
+      ثم sketch يقرأ زرًا وLDR ويطبع القيم في الـ Serial Monitor. واختياريًا ابنِ وارفع الوميض بالـ registers بـ avr-gcc.
+      ارفع الكود واللقطات.'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح الفرق بين البرمجة بالـ ISP وبالـ bootloader، ولماذا يجب أن يكون لكل board ‏ISP header.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: تصميم الـ board'
+  lessons:
+  - id: m4-l1
+    title: الـ schematic الكامل للـ board
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: قواعد الـ layout لـ boards الـ microcontrollers
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'ارسم schematic الـ sensor board الكامل في blocks ‏(الكهرباء، وUSB-serial، والـ MCU، والـ ISP، والـ I/O)، ونجّحه
+      في القائمة والـ ERC، وعيّن الـ footprints، ثم اعمل الـ layout متبعًا القواعد: الـ decoupling والـ crystal قريبان، وground
+      متصل، وزوج الـ USB قصير، وheaders مسمّاة وtest points. ارفع PDF الـ schematic ولقطات الـ layout والـ 3D.'
+  - id: m4-explain
+    type: explain
+    prompt: اشرح لماذا يجب وضع الـ crystal والـ decoupling capacitors قرب الـ pins الخاصة بها، وما الخطأ الذي يحدث لو لم تكن
+      كذلك.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: التشغيل الأول ومشروع'
+  lessons:
+  - id: m5-l1
+    title: التشغيل الأول والـ debugging
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'مشروع: الـ sensor board الخاص بك'
+    file: lessons/m5-l2.md
+    minutes: 90
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: ابنِ الـ sensor board الخاص بك (مطلوبًا، أو على perfboard/breadboard لو لم تستطع الطلب بعد)، وشغّله على مراحل،
+      واحرق الـ bootloader، وشغّل firmware المشروع. ارفع الصور، ومخرجات signature الخاصة بـ avrdude، ومخرجات الـ Serial Monitor،
+      وقائمة v1.1.
+  - id: m5-explain
+    type: explain
+    prompt: صِف خطوة بخطوة كيف تجد السبب لو فشل رفع البرنامج للـ board برسالة 'not in sync'.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

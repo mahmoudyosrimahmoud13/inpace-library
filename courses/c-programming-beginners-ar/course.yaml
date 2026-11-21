@@ -1,0 +1,189 @@
+id: c-programming-beginners-ar
+title: البرمجة بلغة C من الصفر
+version: 1
+language: ar
+description: 'تعلّم لغة C من البداية، اللغة التي يقوم عليها Linux وبايثون وأغلب البرامج التي تستخدمها: الترجمة والتشغيل، والـ
+  variables والأنواع، والقرارات والـ loops، والـ functions، والـ arrays والنصوص، والـ pointers (بشرح بطيء وبالصور)، والذاكرة
+  الديناميكية بـ malloc وfree، والـ structs، والملفات، والبرامج متعددة الملفات وmake، وتصحيح الأخطاء بالـ sanitizers وgdb.
+  وينتهي بمشروع مدير مهام. كل أمثلة الكود تمت ترجمتها وتشغيلها. الكورس الأول في مسار برمجة الأنظمة. حوالي 3 أسابيع، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: 'Compiler Explorer: اكتب كود C وشغّله في المتصفح'
+  url: https://godbolt.org/
+- title: 'مسار C في Exercism: تمارين مجانية (بالإنجليزية)'
+  url: https://exercism.org/tracks/c
+modules:
+- id: m1
+  title: 'الوحدة 1: أول البرامج'
+  lessons:
+  - id: m1-l1
+    title: أول برنامج لك بلغة C
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: الـ variables والأنواع والإدخال
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: ثبّت compiler C (أو استخدم compiler على الإنترنت)، ثم اكتب برنامجًا يسأل عن اسمك وسنة ميلادك ويطبع عمرك هذه السنة.
+      ارفع ملف .c ولقطة شاشة وهو يعمل.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح بكلماتك ماذا يفعل الـ compiler، ولماذا 7 / 2 تعطي 3 في C.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: القرارات والـ loops'
+  lessons:
+  - id: m2-l1
+    title: 'اتخاذ القرارات: if وelse وswitch'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: 'الـ loops التكرارية: while وfor'
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'اكتب لعبة تخمين رقم: البرنامج عنده رقم سري بين 1 و100 ويظل يسأل حتى تخمّنه، ويقول ''too high'' أو ''too low''
+      كل مرة ويعدّ محاولاتك. ارفع الكود ولقطة شاشة.'
+  - id: m2-explain
+    type: explain
+    prompt: اشرح الفرق بين = و== في C والخطأ الذي يسببه الخلط بينهما.
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: الـ functions والـ arrays والنصوص'
+  lessons:
+  - id: m3-l1
+    title: الـ functions
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: الـ arrays والنصوص
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اكتب برنامجًا فيه ثلاث functions على الأقل يقرأ 5 درجات في array ويطبع المتوسط وأعلى درجة وأقل درجة. ارفع الكود
+      ولقطة شاشة.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح لماذا تغيير المعامل داخل الـ function لا يغيّر الـ variable الذي مررته، وكيف يعرف نص C أين ينتهي.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الـ pointers'
+  lessons:
+  - id: m4-l1
+    title: 'الـ pointers: الـ addresses في الذاكرة'
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: الـ pointers والـ arrays
+    file: lessons/m4-l2.md
+    minutes: 50
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اكتب function void sortThree(int *a, int *b, int *c) ترتب ثلاثة variables من الأصغر للأكبر، وfunction تعدّ حروف
+      العلة في نص بالمرور عليه بpointer. ارفع الكود ولقطة شاشة.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح &x وint *p و*p بكلماتك، مع مثال صغير.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: الذاكرة والـ structs'
+  lessons:
+  - id: m5-l1
+    title: 'الذاكرة الديناميكية: malloc وfree'
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: 'الـ structs: أنواع بياناتك الخاصة'
+    file: lessons/m5-l2.md
+    minutes: 50
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: اكتب برنامجًا يقرأ عدد المنتجات عند المستخدم، ويحجز array structs (الاسم، السعر، الكمية) بـ malloc، ويقرأها، ويطبع
+      قيمة المخزون الكلية، ثم يحرر الذاكرة. شغّله مع -fsanitize=address وارفع الكود ولقطة شاشة لا تظهر فيها أخطاء.
+  - id: m5-explain
+    type: explain
+    prompt: سمِّ أخطاء الذاكرة الأربعة الكلاسيكية واشرح كيف يساعد AddressSanitizer.
+    min_words: 50
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'الوحدة 6: الملفات والبرامج الأكبر ومشروع'
+  lessons:
+  - id: m6-l1
+    title: الملفات والبرامج الأكبر
+    file: lessons/m6-l1.md
+    minutes: 50
+  - id: m6-l2
+    title: 'مشروع وتصحيح أخطاء: مدير مهام صغير'
+    file: lessons/m6-l2.md
+    minutes: 70
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: وسّع مدير المهام بقائمة تفاعلية (add وdone وlist وquit) تحمّل المهام عند البدء وتحفظها عند الخروج. قسّمه إلى main.c
+      وtasks.c وtasks.h، وأضف Makefile. ارفع الملفات ولقطة شاشة.
+  - id: m6-explain
+    type: explain
+    prompt: صِف خطوة بخطوة كيف تتبّع سبب توقف برنامج C، بأدوات هذه الوحدة.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

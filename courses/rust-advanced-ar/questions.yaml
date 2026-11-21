@@ -1,0 +1,226 @@
+q1:
+  text: ماذا يفعل تعليق lifetime؟
+  show: 4
+  options:
+    a: يصف مدة صلاحية الـ references
+    b: يجعل القيمة تعيش أطول
+    c: يحرر الذاكرة مبكرًا
+    d: يسمح للـ compiler بالتحقق من الـ references مقابل بعضها
+    e: ينسخ البيانات
+q2:
+  text: متى يجب أن تكتب lifetimes على function؟
+  show: 4
+  options:
+    a: أبدًا
+    b: عندما لا تستطيع قواعد الحذف الحسم
+    c: في main فقط
+    d: عندما قد تستعير النتيجة من أكثر من مدخل
+    e: دائمًا
+q3:
+  text: أيها 'static؟
+  show: 4
+  options:
+    a: البيانات التي تعيش طوال عمر البرنامج
+    b: الـ references إلى عناصر Vec
+    c: أي شيء داخل Box
+    d: النصوص الحرفية مثل "hi"
+    e: كل variable محلي
+q4:
+  text: ماذا تحصل عليه بتنفيذ `next` لنوعك؟
+  show: 4
+  options:
+    a: Display تلقائيًا
+    b: أمان الـ threads
+    c: لا شيء إضافي
+    d: القدرة على استخدامه في loop for
+    e: كل functions الـ iterator مثل map وfilter
+q5:
+  text: 'تنفيذ From<A> لـ B يعطيك:'
+  show: 4
+  options:
+    a: a.into() تنتج B
+    b: لا شيء إضافي
+    c: Deref من A إلى B
+    d: نسخة من A
+    e: تحويل أخطاء A تلقائيًا بـ ?
+q6:
+  text: 'الـ closure التي تغيّر variable ملتقطًا تنفّذ:'
+  show: 4
+  options:
+    a: Copy
+    b: FnMut
+    c: FnOnce
+    d: Send فقط
+    e: لا شيء
+    f: Fn فقط
+q7:
+  text: لماذا تستخدم `move` مع closure؟
+  show: 4
+  options:
+    a: لتكون عامة
+    b: لتكون أسرع
+    c: لكي تملك ما تلتقطه
+    d: لنسخ الـ function
+    e: لكي تعيش أطول من الـ function الحالية، مثل داخل thread
+q8:
+  text: لماذا يحتاج enum تكراري إلى Box؟
+  show: 4
+  options:
+    a: وإلا سيكون حجمه لا نهائيًا
+    b: Box تجعله أسرع
+    c: Box تعطي pointer بحجم ثابت
+    d: الـ enums لا يمكن أن تكون تكرارية
+    e: لجعله آمنًا للـ threads
+q9:
+  text: ماذا تغيّر RefCell؟
+  show: 4
+  options:
+    a: تلغي القواعد
+    b: كسرها يسبب panic بدل فشل الترجمة
+    c: تنسخ عند الكتابة
+    d: تجعل البيانات آمنة للـ threads
+    e: قواعد الـ borrowing يُتحقق منها runtime
+q10:
+  text: 'الـ references Weak تُستخدم لـ:'
+  show: 4
+  options:
+    a: المشاركة بين الـ threads
+    b: جعل البيانات أسرع
+    c: كسر دوائر references Rc
+    d: الإشارة إلى الأب بدون إبقائه حيًا
+    e: استبدال Box
+q11:
+  text: لماذا تحتاج thread::spawn إلى closure بـ `move`؟
+  show: 4
+  options:
+    a: لكي يملك الـ thread ما يستخدمه
+    b: لا تحتاج
+    c: لأن الـ threads لا تقرأ الذاكرة
+    d: لتعمل أسرع
+    e: قد يعيش الـ thread أطول من الـ function الحالية
+q12:
+  text: كيف تشارك بيانات قابلة للتغيير بين الـ threads؟
+  show: 4
+  options:
+    a: '&mut T عادي'
+    b: Rc<RefCell<T>>
+    c: variable عام mut
+    d: Arc<Mutex<T>>
+    e: نوع atomic للعدادات المفردة
+q13:
+  text: متى تنتهي `for x in rx` (مستقبِل channel)؟
+  show: 4
+  options:
+    a: عندما يُسقط كل المرسلين
+    b: بعد 10 عناصر
+    c: عندما تُغلق الـ channel
+    d: عندما يرسل أول مرسل
+    e: أبدًا
+q14:
+  text: ماذا تفعل .await؟
+  show: 4
+  options:
+    a: تلغي الـ future
+    b: تحجز الـ thread كله
+    c: توقف المهمة حتى يجهز الـ future
+    d: تبدأ thread نظام جديدًا
+    e: تسمح لـ runtime بتشغيل مهام أخرى في هذه الأثناء
+q15:
+  text: ماذا يجب أن تتجنب داخل الـ async code؟
+  show: 4
+  options:
+    a: الـ loops الطويلة التي تستهلك المعالج
+    b: tokio::spawn
+    c: .await
+    d: tokio::time::sleep
+    e: std::thread::sleep
+q16:
+  text: كيف تحوّل ? نوع خطأ إلى آخر؟
+  show: 4
+  options:
+    a: لا تستطيع
+    b: تستدعي From::from على الخطأ
+    c: 'عبر #[from] في thiserror'
+    d: بـ unwrap
+    e: بـ panic
+q17:
+  text: '‏anyhow أنسب لـ:'
+  show: 4
+  options:
+    a: استبدال كل الـ enums
+    b: الكود غير الآمن
+    c: كود المستوى الأعلى في التطبيقات
+    d: إضافة سياق بلغة البشر للأخطاء
+    e: واجهات المكتبات التي يطابقها المستدعون
+q18:
+  text: 'في macro_rules!، معنى `$x:expr`:'
+  show: 4
+  options:
+    a: نص حرفي
+    b: التقط تعبيرًا اسمه $x
+    c: نوع
+    d: loop
+    e: النمط يطابق أي تعبير
+q19:
+  text: ماذا تسمح unsafe؟
+  show: 4
+  options:
+    a: استدعاء functions unsafe وfunctions C
+    b: data races
+    c: إطفاء borrow checker
+    d: فك الإشارة عن الـ pointers الخام
+    e: تجاهل الأنواع
+q20:
+  text: 'ممارسة جيدة مع unsafe:'
+  show: 4
+  options:
+    a: تجنب الاختبارات
+    b: أخفها في ماكرو
+    c: اكتب تعليق SAFETY يشرح لماذا هي صحيحة
+    d: استخدمها للسرعة في كل مكان
+    e: اجعل الكتل صغيرة جدًا خلف واجهة آمنة
+q21:
+  text: أين توضع integration tests؟
+  show: 4
+  options:
+    a: في المجلد tests/
+    b: في التعليقات فقط
+    c: في Cargo.lock
+    d: داخل main.rs
+    e: تستخدم الواجهة pub فقط للـ crate
+q22:
+  text: ما هو doc test؟
+  show: 4
+  options:
+    a: اختبار إملائي
+    b: قاعدة clippy
+    c: كود يشغّله cargo test
+    d: قياس أداء
+    e: كود أمثلة في تعليقات ///
+q23:
+  text: ماذا يفعل cargo clippy؟
+  show: 4
+  options:
+    a: يشرح السبب مع روابط
+    b: يجد الأخطاء والكود غير المألوف في Rust
+    c: ينسّق الكود فقط
+    d: يبني نسخ الإصدار
+    e: يرفع الـ crates
+q24:
+  text: في منفّذ المهام، لماذا نفك الـ lock قبل تشغيل المهمة؟
+  show: 4
+  options:
+    a: إمساكه سيجعل الشغل يعمل واحدًا تلو الآخر
+    b: لأن المهام تحتاج الـ lock
+    c: لتجنب compile errors
+    d: بلا سبب
+    e: لكي يأخذ العمال الآخرون مهامًا في نفس الوقت
+q25:
+  text: ماذا يضمن `Send + 'static` على نوع المهمة؟
+  show: 4
+  options:
+    a: لا تفشل أبدًا
+    b: يمكن نقل المهمة إلى thread آخر
+    c: تُنسخ
+    d: لا تستعير بيانات قصيرة العمر
+    e: تعمل أسرع

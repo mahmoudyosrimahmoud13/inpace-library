@@ -1,0 +1,226 @@
+q1:
+  text: What does a lifetime annotation do?
+  show: 4
+  options:
+    a: Frees memory early
+    b: Lets the compiler check references against each other
+    c: Copies the data
+    d: Describes how long references are valid
+    e: Makes a value live longer
+q2:
+  text: When must you write lifetimes on a function?
+  show: 4
+  options:
+    a: Only in main
+    b: Always
+    c: Never
+    d: When the elision rules can't decide
+    e: When the result could borrow from more than one input
+q3:
+  text: Which are 'static?
+  show: 4
+  options:
+    a: Data that lives for the whole program
+    b: References to Vec items
+    c: Anything inside a Box
+    d: Every local variable
+    e: String literals like "hi"
+q4:
+  text: What do you get by implementing `next` for your type?
+  show: 4
+  options:
+    a: Nothing more
+    b: Thread safety
+    c: The ability to use it in a for loop
+    d: All iterator methods like map and filter
+    e: Automatic Display
+q5:
+  text: 'Implementing From<A> for B gives you:'
+  show: 4
+  options:
+    a: a.into() producing a B
+    b: A copy of A
+    c: Automatic conversion of A errors by ?
+    d: Nothing extra
+    e: Deref from A to B
+q6:
+  text: 'A closure that changes a captured variable implements:'
+  show: 4
+  options:
+    a: FnOnce
+    b: FnMut
+    c: Only Fn
+    d: Send only
+    e: Copy
+    f: Nothing
+q7:
+  text: Why use `move` on a closure?
+  show: 4
+  options:
+    a: To make it public
+    b: So it can outlive the current function, e.g. in a thread
+    c: To copy the function
+    d: To make it faster
+    e: So it owns its captures
+q8:
+  text: Why does a recursive enum need Box?
+  show: 4
+  options:
+    a: Enums can't be recursive
+    b: Otherwise its size would be infinite
+    c: To make it thread-safe
+    d: Box gives a fixed-size pointer
+    e: Box makes it faster
+q9:
+  text: What does RefCell change?
+  show: 4
+  options:
+    a: Breaking them panics instead of failing to compile
+    b: Borrow rules are checked at run time
+    c: It makes data thread-safe
+    d: It copies on write
+    e: It removes the rules
+q10:
+  text: 'Weak references are used to:'
+  show: 4
+  options:
+    a: Break Rc reference cycles
+    b: Make data faster
+    c: Point back to a parent without keeping it alive
+    d: Share across threads
+    e: Replace Box
+q11:
+  text: Why does thread::spawn need a `move` closure?
+  show: 4
+  options:
+    a: The thread may outlive the current function
+    b: Because threads can't read memory
+    c: So the thread owns what it uses
+    d: It doesn't
+    e: To run faster
+q12:
+  text: How do you share changeable data between threads?
+  show: 4
+  options:
+    a: Rc<RefCell<T>>
+    b: A plain &mut T
+    c: Arc<Mutex<T>>
+    d: An atomic type for single counters
+    e: A global mut variable
+q13:
+  text: When does `for x in rx` (a channel receiver) end?
+  show: 4
+  options:
+    a: After 10 items
+    b: When every sender has been dropped
+    c: When the channel is closed
+    d: When the first sender sends
+    e: Never
+q14:
+  text: What does .await do?
+  show: 4
+  options:
+    a: Cancels the future
+    b: Pauses the task until the future is ready
+    c: Starts a new OS thread
+    d: Lets the runtime run other tasks meanwhile
+    e: Blocks the whole thread
+q15:
+  text: What should you avoid inside async code?
+  show: 4
+  options:
+    a: std::thread::sleep
+    b: Long CPU-heavy loops
+    c: .await
+    d: tokio::time::sleep
+    e: tokio::spawn
+q16:
+  text: How does ? convert one error type into another?
+  show: 4
+  options:
+    a: With unwrap
+    b: It calls From::from on the error
+    c: By panicking
+    d: 'Through #[from] in thiserror'
+    e: It can't
+q17:
+  text: 'anyhow is best for:'
+  show: 4
+  options:
+    a: Library APIs callers match on
+    b: Replacing all enums
+    c: Applications' top-level code
+    d: Adding human context to errors
+    e: Unsafe code
+q18:
+  text: 'In macro_rules!, `$x:expr` means:'
+  show: 4
+  options:
+    a: Capture an expression named $x
+    b: The pattern matches any expression
+    c: A loop
+    d: A string literal
+    e: A type
+q19:
+  text: What does unsafe allow?
+  show: 4
+  options:
+    a: Calling unsafe and C functions
+    b: Dereferencing raw pointers
+    c: Turning off the borrow checker
+    d: Data races
+    e: Ignoring types
+q20:
+  text: 'Good practice with unsafe:'
+  show: 4
+  options:
+    a: Write a SAFETY comment explaining why it's correct
+    b: Hide it in macros
+    c: Avoid tests
+    d: Keep blocks tiny behind a safe API
+    e: Use it for speed everywhere
+q21:
+  text: Where do integration tests go?
+  show: 4
+  options:
+    a: In Cargo.lock
+    b: In comments only
+    c: Inside main.rs
+    d: In the tests/ folder
+    e: They use only the crate's pub API
+q22:
+  text: What is a doc test?
+  show: 4
+  options:
+    a: A test of spelling
+    b: A benchmark
+    c: Example code in /// comments
+    d: Code that cargo test runs
+    e: A clippy rule
+q23:
+  text: What does cargo clippy do?
+  show: 4
+  options:
+    a: Builds release binaries
+    b: Formats code only
+    c: Explains why with links
+    d: Finds bugs and non-idiomatic code
+    e: Uploads crates
+q24:
+  text: In the job runner, why release the lock before running the job?
+  show: 4
+  options:
+    a: Holding it would make work run one by one
+    b: Because jobs need the lock
+    c: So other workers can take jobs at the same time
+    d: To avoid compile errors
+    e: No reason
+q25:
+  text: What does `Send + 'static` on the job type guarantee?
+  show: 4
+  options:
+    a: It doesn't borrow short-lived data
+    b: The job can move to another thread
+    c: It runs faster
+    d: It can't fail
+    e: It's copied

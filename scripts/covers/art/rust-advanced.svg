@@ -1,0 +1,21 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g font-family="JBM" font-size="17" font-weight="700" fill="#fbf2ff">
+<text x="30" y="70">thread 1</text><text x="30" y="150">thread 2</text><text x="30" y="230">thread 3</text>
+</g>
+<g stroke="#ff8fab" stroke-width="4"><path d="M130 64 H360"/><path d="M130 144 H360"/><path d="M130 224 H360"/></g>
+<g fill="#ff8fab"><circle cx="190" cy="64" r="9"/><circle cx="260" cy="144" r="9"/><circle cx="220" cy="224" r="9"/></g>
+<g stroke="#ffd166" stroke-width="3" fill="none"><path d="M360 64 C420 64 420 144 450 144"/><path d="M360 144 H450"/><path d="M360 224 C420 224 420 144 450 144"/></g>
+<g filter="url(#s)"><rect x="440" y="110" width="60" height="70" rx="14" fill="#ffd166"/></g>
+<text x="470" y="210" text-anchor="middle" font-family="JBM" font-size="15" fill="#ffd166">rx</text>
+<g filter="url(#s)"><rect x="30" y="280" width="460" height="130" rx="20" fill="#1d1028" stroke="#ff8fab" stroke-width="2"/></g>
+<g font-family="JBM" font-size="20" fill="#fbf2ff">
+<text x="55" y="325">let total = <tspan fill="#ff8fab">Arc::new(Mutex::new(0))</tspan>;</text>
+<text x="55" y="370">fn longest&lt;<tspan fill="#ffd166">'a</tspan>&gt;(a: &amp;<tspan fill="#ffd166">'a</tspan> str, ...)</text>
+</g>
+<g font-family="JBM" font-size="17" font-weight="700" text-anchor="middle">
+<rect x="30" y="450" width="140" height="50" rx="25" fill="#ff8fab"/><text x="100" y="481" fill="#2d1b3d">tokio</text>
+<rect x="190" y="450" width="140" height="50" rx="25" fill="#fff"/><text x="260" y="481" fill="#2d1b3d">macro_rules!</text>
+<rect x="350" y="450" width="140" height="50" rx="25" fill="#fff"/><text x="420" y="481" fill="#2d1b3d">unsafe</text>
+</g>
+</svg>

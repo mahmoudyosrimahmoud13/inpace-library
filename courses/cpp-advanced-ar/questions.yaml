@@ -1,0 +1,250 @@
+q1:
+  text: ماذا تفعل `std::move(x)` بنفسها؟
+  show: 4
+  options:
+    a: تحوّل x إلى rvalue؛ ولا يُنقل شيء بعد
+    b: يحرر ذاكرة x
+    c: تحذف x
+    d: تنقل x إلى الـ heap
+    e: تنسخ x
+    f: فقط يعلّم x كشيء يمكن الـ move منه
+q2:
+  text: 'بعد `auto b = std::move(a);` مع vector اسمه a، يكون a:'
+  show: 4
+  options:
+    a: بدون تغيير
+    b: destructor
+    c: صالحًا لكن غير محدد (فارغ عمليًا في vector)
+    d: مضمون أن يحتفظ بعناصره القديمة
+    e: آمن أن تعطيه قيمة جديدة
+    f: reference معلّقًا
+q3:
+  text: لماذا تعلّم constructor النقل بـ noexcept؟
+  show: 4
+  options:
+    a: لتعطيل النسخ
+    b: لأنه مطلوب للترجمة
+    c: لأن std::vector لا تستخدمه عند الكبر إلا لو كان لا يرمي
+    d: حتى تنقل إعادة الحجز العناصر بالـ move بدل النسخ
+    e: حتى يصبح الـ class constexpr
+    f: لتسريع الترجمة
+q4:
+  text: 'قاعدة الصفر تقول:'
+  show: 4
+  options:
+    a: لا تستخدم الـ destructors أبدًا
+    b: استخدم الـ pointers الخام
+    c: دع الأعضاء تدير الموارد ولا تكتب أيًا من الخمس
+    d: اكتب destructor في كل class
+    e: استخدم members مثل string وvector وunique_ptr
+    f: اكتب الخمس دائمًا
+q5:
+  text: هل `return std::move(local);` فكرة جيدة؟
+  show: 4
+  options:
+    a: لا تُترجم
+    b: 'نعم: أسرع دائمًا'
+    c: 'لا: الـ return العادي يعمل move أو elision أصلًا'
+    d: 'لا: قد تمنع copy elision'
+    e: فقط مع int
+    f: 'نعم: ضرورية للـ vectors'
+q6:
+  text: ماذا تفعل `static_assert(cond)`؟
+  show: 4
+  options:
+    a: تتخطى السطر
+    b: توقف البناء لو كان cond خطأ
+    c: تطبع تحذيرًا
+    d: يعطّل السطر في نسخة release
+    e: ترمي exception runtime
+    f: فحص وقت الـ compile
+q7:
+  text: ما المميز في `if constexpr`؟
+  show: 4
+  options:
+    a: لا يمكن أن يكون لها else
+    b: الفرع غير المختار لا يُترجم لهذا النوع
+    c: أسرع runtime
+    d: تعمل في main فقط
+    e: يعمل فقط مع bool وقت التشغيل
+    f: يُحسم وقت الـ compile
+q8:
+  text: '`(args + ... + 0)` هي:'
+  show: 4
+  options:
+    a: loop
+    b: خطأ صياغة
+    c: سلسلة ternary
+    d: lambda
+    e: تعبير طي (fold expression)
+    f: جمع parameter pack بـ + بدءًا من 0
+q9:
+  text: '`template <std::integral T>` معناها:'
+  show: 4
+  options:
+    a: T class
+    b: T variable int
+    c: يجب أن يكون T نوع أعداد صحيحة
+    d: T يجب أن يكون class
+    e: T اختياري
+    f: T يجب أن يحقق الـ concept integral
+q10:
+  text: 'ميزة كبيرة للـ concepts:'
+  show: 4
+  options:
+    a: تلغي الحاجة إلى الـ templates
+    b: تحقق من الأنواع runtime
+    c: أخطاء قصيرة وواضحة تسمّي القاعدة المكسورة
+    d: لا حاجة لـ header files
+    e: متطلبات الـ template مكتوبة في الـ signature
+    f: برامج أسرع دائمًا
+q11:
+  text: '`[x]` في lambda تلتقط x:'
+  show: 4
+  options:
+    a: بالنسخ، عند إنشاء lambda
+    b: عند استدعاء lambda
+    c: بالـ reference
+    d: نسخة تُصنع عند إنشاء الـ lambda
+    e: لا تلتقطها
+    f: pointer إلى x
+q12:
+  text: ماذا تسمح `mutable`؟
+  show: 4
+  options:
+    a: الـ capture بالـ reference تلقائيًا
+    b: الاستدعاء الذاتي
+    c: رمي الـ exceptions
+    d: أن تغيّر lambda نسخها الخاصة
+    e: تغيير variables المستدعي
+    f: استدعاء عمليات غير const على النسخ الملتقطة
+q13:
+  text: متى تكون std::function الأداة الصحيحة؟
+  show: 4
+  options:
+    a: دائمًا، فهي الأسرع
+    b: لكود وقت الـ compile فقط
+    c: لـ callbacks تُختار وقت التشغيل
+    d: أبدًا
+    e: للـ templates
+    f: عند تخزين أشياء مختلفة قابلة للاستدعاء بنفس الشكل
+q14:
+  text: ما هي الـ view؟
+  show: 4
+  options:
+    a: نافذة واجهة رسومية
+    b: نسخة من حاوية
+    c: vector مرتب
+    d: لا تعمل إلا عندما تمر عليها
+    e: نافذة كسولة ورخيصة على مدى
+    f: container يملك العناصر
+q15:
+  text: '`std::ranges::sort(v, {}, &Student::score)` ترتب حسب:'
+  show: 4
+  options:
+    a: الـ member score عبر projection
+    b: العنوان في الذاكرة
+    c: name
+    d: score
+    e: أول member مُعرّف
+    f: لا شيء؛ إنها خطأ
+q16:
+  text: متى يكون std::optional نوع الإرجاع الصحيح؟
+  show: 4
+  options:
+    a: عندما يجب أن يتوقف البرنامج
+    b: للأخطاء القاتلة
+    c: عندما يحتاج المستدعي السبب
+    d: أبدًا في C++ الحديثة
+    e: عندما يكون 'لا نتيجة' أمرًا عاديًا لا يحتاج سببًا
+    f: عندما يكون الغياب متوقعًا، مثل key غير موجود
+q17:
+  text: كيف تلتقط الـ exceptions؟
+  show: 4
+  options:
+    a: const std::exception& في الآخر كأعمّ catch
+    b: std::exception فقط
+    c: بreference const، والأكثر تحديدًا أولًا
+    d: بpointer
+    e: بالقيمة
+    f: catch (...) أولًا
+q18:
+  text: ماذا يفعل std::jthread في مدمّره؟
+  show: 4
+  options:
+    a: يطلب التوقف (request_stop) ثم يعمل join
+    b: يقتل الـ thread
+    c: لا شيء
+    d: يرمي exception
+    e: يفصله
+    f: ينتظر (join) الـ thread
+q19:
+  text: 'خيطان ينفذان ++counter على int عادي. هذا:'
+  show: 4
+  options:
+    a: صحيح دائمًا على x86
+    b: deadlock
+    c: 'data race: سلوك غير محدد'
+    d: compile error
+    e: لا مشكلة
+    f: undefined behavior من كتابات غير متزامنة
+q20:
+  text: ماذا تفعل future.get()؟
+  show: 4
+  options:
+    a: تلغيها
+    b: تنتظر المهمة وترجع نتيجتها
+    c: ينتظر حتى تصبح النتيجة جاهزة
+    d: يتحقق مرة ويرجع
+    e: ترجع فورًا بـ 0
+    f: تبدأ المهمة
+q21:
+  text: أي رمز خروج يخبر CI أن برنامج الاختبار فشل؟
+  show: 4
+  options:
+    a: -1 فقط
+    b: 255 فقط
+    c: '0'
+    d: لا توجد طريقة
+    e: قيمة مثل 1 من return 1
+    f: أي رمز غير الصفر
+q22:
+  text: لماذا تضع المنطق في هدف مكتبة؟
+  show: 4
+  options:
+    a: لكي يستخدمه البرنامج والاختبارات معًا
+    b: حتى لا يحتاج التطبيق main
+    c: لإخفاء الكود
+    d: تترجم أسرع دائمًا
+    e: حتى تختبر الـ tests نفس الكود الذي يشغّله التطبيق
+    f: CMake يتطلب ذلك
+q23:
+  text: أي أمر يشغّل الاختبارات المسجلة في CMake؟
+  show: 4
+  options:
+    a: cmake --test
+    b: ctest --test-dir build
+    c: make check
+    d: ctest
+    e: gtest
+    f: cmake --run-tests
+q24:
+  text: ما هو std::span؟
+  show: 4
+  options:
+    a: thread
+    b: pointer مع حجم، لا يملك شيئًا
+    c: نافذة لا تملك عناصر متجاورة في الذاكرة
+    d: array يتغير حجمها
+    e: حاوية تملك الذاكرة
+    f: مدة زمنية
+q25:
+  text: أي sanitizer يجد data races؟
+  show: 4
+  options:
+    a: AddressSanitizer
+    b: TSan
+    c: -Wall
+    d: UBSan
+    e: ThreadSanitizer (-fsanitize=thread)
+    f: clang-format

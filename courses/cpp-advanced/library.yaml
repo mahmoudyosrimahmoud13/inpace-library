@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- c++
+- cpp
+- modern c++
+- concurrency
+- templates
+- advanced
+credit: Written for the inPace library. Every example was compiled with g++ (C++20, or C++23 for std::expected) with -Wall
+  -Wextra -Werror and run with sanitizers.
+section: programming-web

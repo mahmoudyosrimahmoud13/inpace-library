@@ -1,0 +1,21 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".4"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="50" width="440" height="400" rx="20" fill="#1b5e3a" stroke="#f4d35e" stroke-width="3"/></g>
+<g fill="none" stroke="#e9b949" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M120 140 H220 L260 180 V260"/><path d="M120 200 H180 L200 220 V320 H300"/><path d="M380 140 V230 L340 270 H300"/>
+<path d="M260 330 V390 H400"/></g>
+<g fill="#e9b949">
+<circle cx="120" cy="140" r="14"/><circle cx="120" cy="200" r="14"/><circle cx="380" cy="140" r="14"/><circle cx="400" cy="390" r="14"/>
+<rect x="240" y="250" width="40" height="22" rx="4"/><rect x="290" y="310" width="22" height="40" rx="4"/>
+</g>
+<g fill="#1b5e3a"><circle cx="120" cy="140" r="6"/><circle cx="120" cy="200" r="6"/><circle cx="380" cy="140" r="6"/><circle cx="400" cy="390" r="6"/></g>
+<circle cx="260" cy="330" r="10" fill="#c0c0c0" stroke="#e9b949" stroke-width="4"/>
+<rect x="140" y="360" width="80" height="44" rx="6" fill="#111" /><g fill="#c0c0c0"><rect x="148" y="352" width="8" height="8"/><rect x="166" y="352" width="8" height="8"/><rect x="184" y="352" width="8" height="8"/><rect x="202" y="352" width="8" height="8"/></g>
+<text x="180" y="388" text-anchor="middle" font-family="JBM" font-size="14" fill="#fff">U1</text>
+<text x="70" y="95" font-family="JBM" font-size="18" fill="#fdf6e9" font-weight="700">F.Cu</text>
+<g font-family="JBM" font-size="17" font-weight="700" text-anchor="middle">
+<rect x="40" y="480" width="130" height="50" rx="25" fill="#f4d35e"/><text x="105" y="511" fill="#1f3d36">DRC ✓</text>
+<rect x="190" y="480" width="140" height="50" rx="25" fill="#fdf6e9"/><text x="260" y="511" fill="#1f3d36">Gerbers</text>
+<rect x="350" y="480" width="130" height="50" rx="25" fill="#fdf6e9"/><text x="415" y="511" fill="#1f3d36">BOM</text>
+</g>
+</svg>

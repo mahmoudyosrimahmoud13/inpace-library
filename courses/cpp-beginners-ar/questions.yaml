@@ -1,0 +1,300 @@
+q1:
+  text: أي خيار يشغّل إصدار C++20 من اللغة؟
+  show: 4
+  options:
+    a: -O2
+    b: -c20
+    c: -std=gnu++20 (مع إضافات GNU)
+    d: -Wall
+    e: -c++20
+    f: -std=c++20
+q2:
+  text: ماذا تفعل `int b{3.9};`؟
+  show: 4
+  options:
+    a: خطأ compile لأن الأقواس {} تمنع الـ narrowing
+    b: تقرّب b بصمت
+    c: تجعل b تساوي 3
+    d: 'لا تُترجَم: تضييق (narrowing)'
+    e: تجعل b تساوي 3.9
+    f: تجعل b تساوي 4
+q3:
+  text: '`std::cin >> name;` مع المدخل ''Nour Hassan'' تعطي:'
+  show: 4
+  options:
+    a: Nour ومعها مسافة
+    b: Hassan
+    c: Hassan يبقى منتظرًا في الـ input
+    d: Nour Hassan
+    e: Nour
+    f: نصًا فارغًا
+q4:
+  text: ماذا ترجع `find` عندما لا يوجد النص؟
+  show: 4
+  options:
+    a: قيمة تساوي static_cast<size_t>(-1)
+    b: exception
+    c: -1 كـ int
+    d: nullptr
+    e: '0'
+    f: std::string::npos
+q5:
+  text: ما طريقة C++ للتحويل عن قصد؟
+  show: 4
+  options:
+    a: double x!
+    b: static_cast، وهي سهلة البحث عنها
+    c: reinterpret_cast<double>(x)
+    d: convert(x)
+    e: static_cast<double>(x)
+    f: (double)x فقط
+q6:
+  text: ما هو `int& r = x;`؟
+  show: 4
+  options:
+    a: خطأ
+    b: alias مرتبط بـ x طوال حياته
+    c: اسم آخر لـ x
+    d: int جديد بقيمة x
+    e: pointer إلى x قد يكون فارغًا
+    f: نسخة من x
+q7:
+  text: كيف تأخذ الـ function نصًا كبيرًا تقرؤه فقط؟
+  show: 4
+  options:
+    a: const reference لتجنب النسخ
+    b: std::string*
+    c: std::string&&
+    d: std::string&
+    e: const std::string&
+    f: std::string
+q8:
+  text: 'functions اسمهما area بمعاملات مختلفة اسم ذلك:'
+  show: 4
+  options:
+    a: الـ templates
+    b: الـ overloading
+    c: name hiding
+    d: خطأ
+    e: الاستبدال (overriding)
+    f: مسموح عندما تختلف قوائم المعاملات
+q9:
+  text: أي سطر خطأ؟
+  show: 4
+  options:
+    a: int& r = 5;
+    b: int x = 5;
+    c: int& r;
+    d: const int y = 2;
+    e: int z{};
+    f: int& r = x;
+q10:
+  text: لماذا لا ترجع reference إلى variable محلي؟
+  show: 4
+  options:
+    a: الـ reference سيصبح dangling
+    b: الـ compiler ينسخه مرتين
+    c: لأنه أبطأ
+    d: ينسخ كثيرًا
+    e: الـ variable يُدمَّر عند انتهاء الـ function
+    f: الـ references لا يمكن إرجاعها
+q11:
+  text: أي function تضيف عنصرًا في آخر vector؟
+  show: 4
+  options:
+    a: push_back
+    b: append
+    c: add
+    d: emplace_back
+    e: push_front
+    f: insert_end
+q12:
+  text: 'لتغيير العناصر داخل loop range-for اكتب:'
+  show: 4
+  options:
+    a: for (x in v)
+    b: 'for (int x : v)'
+    c: 'for (auto& x : v)'
+    d: 'for (int& x : v)'
+    e: 'for (const int x : v)'
+    f: 'for (auto x : v)'
+q13:
+  text: ماذا تفعل `m["cake"]` لو لم يكن المفتاح موجودًا؟
+  show: 4
+  options:
+    a: لا شيء
+    b: ترجع -1
+    c: ترجع end()
+    d: تُنشئه بقيمة افتراضية
+    e: مع قيم int تبدأ بـ 0
+    f: ترمي خطأ
+q14:
+  text: ماذا ترجع `std::find` عندما لا يوجد تطابق؟
+  show: 4
+  options:
+    a: الـ past-the-end iterator
+    b: v.begin()
+    c: v.end()
+    d: آخر عنصر
+    e: nullptr
+    f: '-1'
+q15:
+  text: أيها يحافظ على ترتيب العناصر المتساوية؟
+  show: 4
+  options:
+    a: std::stable_sort
+    b: std::ranges::stable_sort
+    c: std::ranges::sort
+    d: std::find
+    e: std::count
+    f: std::sort
+q16:
+  text: من يستطيع استخدام عضو private؟
+  show: 4
+  options:
+    a: functions الـ class نفسه فقط
+    b: أي أحد
+    c: الـ classes المشتقة فقط
+    d: main فقط
+    e: أي function في نفس الملف
+    f: الـ friends الخاصة بالـ class
+q17:
+  text: ماذا تعني `const` بعد member function؟
+  show: 4
+  options:
+    a: يمكن استدعاؤها على const object
+    b: أنها لا تغيّر الـ object
+    c: أنها لا يمكن استدعاؤها
+    d: أنها static
+    e: أنها ترجع ثابتًا
+    f: تُستدعى مرة واحدة فقط
+q18:
+  text: 'الفرق بين struct وclass هو:'
+  show: 4
+  options:
+    a: 'الـ inheritance الافتراضي: public مقابل private'
+    b: class أسرع
+    c: struct لا يمكن أن يكون لها constructor
+    d: struct لا يمكن أن تحتوي functions
+    e: 'الوصول الافتراضي: public مقابل private'
+    f: لا فرق إطلاقًا
+q19:
+  text: ماذا تفعل `#pragma once`؟
+  show: 4
+  options:
+    a: تشغّل كودًا مرة واحدة
+    b: 'تؤدي عمل include guards بـ #ifndef'
+    c: تمنع تضمين header file مرتين
+    d: تصنع singleton
+    e: تضمّن الـ header في كل ملف
+    f: تسرّع الترجمة دائمًا
+q20:
+  text: 'عضو البيانات static هو:'
+  show: 4
+  options:
+    a: ثابت
+    b: يُنشأ لكل object في الـ heap
+    c: private دائمًا
+    d: نسخة واحدة للـ class كله
+    e: مشترك بين كل objects الـ class
+    f: منسوخ في كل object
+q21:
+  text: متى يعمل destructor الـ object المحلي؟
+  show: 4
+  options:
+    a: عندما تنتهي كتلته
+    b: عندما يعمل الـ garbage collector
+    c: عندما تنتهي main فقط
+    d: لا يعمل تلقائيًا أبدًا
+    e: عندما يخرج من الـ scope
+    f: عندما تستدعي delete
+q22:
+  text: أيها يُنشئ object في الـ heap بمالك واحد؟
+  show: 4
+  options:
+    a: std::make_unique<T>()
+    b: std::unique_ptr<T>(new T)
+    c: new T
+    d: malloc
+    e: std::make_shared<T>()
+    f: std::shared_ptr<T>
+q23:
+  text: لماذا يجب أن يكون للـ class الأساسي destructor virtual؟
+  show: 4
+  options:
+    a: لكي يدمّر الحذف عبر pointer الأساسي الـ object كله
+    b: للسرعة
+    c: حتى لا يمكن نسخ الـ class
+    d: لا يحتاج
+    e: لجعله مجردًا
+    f: وإلا فالحذف عبر base pointer هو undefined behavior
+q24:
+  text: ماذا تفعل `override`؟
+  show: 4
+  options:
+    a: تجعل الـ function virtual
+    b: تجعل function الـ base خاصة
+    c: عدم تطابق الـ signature يصبح خطأ compile
+    d: لا شيء
+    e: تطلب من الـ compiler التحقق من أنك تستبدل function في الأساسي
+    f: تخفي الـ class الأساسي
+q25:
+  text: 'تمرير object مشتق بالقيمة لـ function تأخذ النوع الأساسي يسبب:'
+  show: 4
+  options:
+    a: polymorphism
+    b: التقطيع (slicing)
+    c: compile error
+    d: فقدان الجزء المشتق من الـ object
+    e: memory leak
+    f: deep copy
+q26:
+  text: '`template <typename T>` معناها:'
+  show: 4
+  options:
+    a: T دائمًا int
+    b: T variable
+    c: نوع placeholder يُعطى أو يُستنتج عند الاستخدام
+    d: T هو macro
+    e: الـ function virtual
+    f: T نوع يُملأ عند استخدام الكود
+q27:
+  text: أين توضع الـ templates عادة؟
+  show: 4
+  options:
+    a: في ملفات .o المترجمة فقط
+    b: في الـ headers حتى يرى الـ compiler الكود كاملًا
+    c: في CMakeLists.txt
+    d: في ملفات .cpp فقط
+    e: في أي مكان مقسّمة مثل الـ classes
+    f: كاملة في header files
+q28:
+  text: أي أمر يجهّز مجلد بناء CMake؟
+  show: 4
+  options:
+    a: cmake -B build (من مجلد المشروع)
+    b: cmake --run
+    c: g++ CMakeLists.txt
+    d: make build
+    e: cmake build/run
+    f: cmake -S . -B build
+q29:
+  text: أي خيار يكتشف أخطاء الذاكرة runtime؟
+  show: 4
+  options:
+    a: -std=c++20
+    b: -O3
+    c: -g فقط
+    d: AddressSanitizer
+    e: -fsanitize=address
+    f: -Wextra
+q30:
+  text: لماذا قد يصبح Book* محفوظ غير صالح بعد push_back؟
+  show: 4
+  options:
+    a: قد ينقل الـ vector عناصره إلى ذاكرة جديدة
+    b: Book* ثابت const
+    c: push_back تحذف كل الكتب
+    d: الـ pointers تنتهي بعد ثانية
+    e: لا يمكن
+    f: النمو بعد الـ capacity يعيد حجز الذاكرة

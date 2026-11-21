@@ -1,0 +1,150 @@
+q1:
+  right:
+  - a
+  - c
+  why: -Wall turns on warnings.
+q2:
+  right:
+  - d
+  - e
+  why: Brace initialization refuses to lose data.
+q3:
+  right:
+  - e
+  - f
+  why: '>> stops at a space.'
+q4:
+  right:
+  - b
+  - c
+  why: Compare with npos.
+q5:
+  right:
+  - c
+  - d
+  why: Easy to search, hard to misuse.
+q6:
+  right:
+  - c
+  - d
+  why: Changes to r change x.
+q7:
+  right:
+  - d
+  - f
+  why: No copy, no changes.
+q8:
+  right:
+  - b
+  - d
+  why: The compiler picks by the arguments.
+q9:
+  right:
+  - b
+  - e
+  why: A reference must be set when created.
+q10:
+  right:
+  - b
+  - d
+  why: That's a dangling reference.
+q11:
+  right:
+  - b
+  - f
+  why: v.push_back(x).
+q12:
+  right:
+  - a
+  - f
+  why: A reference reaches the real item.
+q13:
+  right:
+  - a
+  - d
+  why: Use contains() to check.
+q14:
+  right:
+  - b
+  - e
+  why: end() means not found.
+q15:
+  right:
+  - b
+  - d
+  why: sort may reorder equal items.
+q16:
+  right:
+  - c
+  - d
+  why: That's how classes protect their rules.
+q17:
+  right:
+  - c
+  - f
+  why: It can be called on const objects.
+q18:
+  right:
+  - a
+  - c
+  why: Otherwise they're the same.
+q19:
+  right:
+  - e
+  - f
+  why: Like include guards.
+q20:
+  right:
+  - b
+  - d
+  why: One per class.
+q21:
+  right:
+  - b
+  - c
+  why: Even on early return or exception.
+q22:
+  right:
+  - a
+  - d
+  why: make_unique is the modern way.
+q23:
+  right:
+  - a
+  - e
+  why: Otherwise only the base part is destroyed.
+q24:
+  right:
+  - b
+  - e
+  why: A typo becomes an error.
+q25:
+  right:
+  - a
+  - b
+  why: Use references or pointers.
+q26:
+  right:
+  - d
+  - f
+  why: The compiler writes a version per type.
+q27:
+  right:
+  - d
+  - f
+  why: The compiler needs the full code.
+q28:
+  right:
+  - a
+  - e
+  why: Then cmake --build build.
+q29:
+  right:
+  - e
+  - f
+  why: AddressSanitizer reports the line.
+q30:
+  right:
+  - b
+  - d
+  why: Don't keep such pointers across changes.

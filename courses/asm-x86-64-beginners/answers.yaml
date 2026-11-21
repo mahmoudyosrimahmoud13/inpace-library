@@ -1,0 +1,125 @@
+q1:
+  right:
+  - d
+  - e
+  why: A byte is 8 bits, written as two hex digits.
+q2:
+  right:
+  - d
+  - e
+  why: 1*16 + 15 = 31.
+q3:
+  right:
+  - e
+  - f
+  why: Inputs go in rdi, rsi, rdx.
+q4:
+  right:
+  - b
+  - f
+  why: 0 is read, 60 is exit.
+q5:
+  right:
+  - e
+  - f
+  why: Here minus the start gives the length.
+q6:
+  right:
+  - a
+  - f
+  why: Brackets mean memory.
+q7:
+  right:
+  - b
+  - c
+  why: Quotient in rax, remainder in rdx.
+q8:
+  right:
+  - d
+  - e
+  why: No memory-to-memory moves.
+q9:
+  right:
+  - a
+  - e
+  why: 32-bit writes clear the top half.
+q10:
+  right:
+  - d
+  - f
+  why: movzx fills with zeros.
+q11:
+  right:
+  - b
+  - d
+  why: Only the flags change.
+q12:
+  right:
+  - c
+  - d
+  why: ja is the unsigned version.
+q13:
+  right:
+  - a
+  - c
+  why: Scale by the item size.
+q14:
+  right:
+  - a
+  - d
+  why: Walk until the 0 byte.
+q15:
+  right:
+  - a
+  - b
+  why: test sets ZF for a zero result.
+q16:
+  right:
+  - c
+  - e
+  why: ret pops it later.
+q17:
+  right:
+  - b
+  - f
+  why: Then rcx, r8, r9.
+q18:
+  right:
+  - b
+  - e
+  why: rbx, rbp, r12 to r15 are callee-saved.
+q19:
+  right:
+  - d
+  - f
+  why: That's why main starts with a push.
+q20:
+  right:
+  - b
+  - e
+  why: ret pops whatever is on top.
+q21:
+  right:
+  - b
+  - f
+  why: Without it you get AT&T syntax.
+q22:
+  right:
+  - a
+  - c
+  why: si for short.
+q23:
+  right:
+  - a
+  - d
+  why: g = 8 bytes, x = hex.
+q24:
+  right:
+  - b
+  - f
+  why: 4071 gives 1, 7, 0, 4.
+q25:
+  right:
+  - e
+  - f
+  why: '''0'' is 48.'

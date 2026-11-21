@@ -1,0 +1,270 @@
+q1:
+  text: Which steps belong to the data science workflow?
+  show: 4
+  options:
+    a: Cleaning the data
+    b: Exploring with tables and charts
+    c: Skipping to the model
+    d: Deleting the original data
+    e: Hiding unclear results
+q2:
+  text: In Colab, how do you run a cell?
+  show: 4
+  options:
+    a: Close the tab
+    b: Double-click the title
+    c: Shift+Enter
+    d: Ctrl+S
+    e: The run button next to the cell
+q3:
+  text: What is pandas for?
+  show: 4
+  options:
+    a: Running websites
+    b: Loading, cleaning and grouping data
+    c: Sending email
+    d: Tables of data
+    e: Drawing only
+q4:
+  text: What does `[t for t in temps if t >= 30]` give?
+  show: 4
+  options:
+    a: True or False
+    b: An error
+    c: The number of hot days
+    d: The hot days from temps
+    e: A list of the temperatures 30 and above
+q5:
+  text: 'Good notebook habits include:'
+  show: 4
+  options:
+    a: Running everything top to bottom before sharing
+    b: One-letter variable names
+    c: Editing the raw file by hand
+    d: Never writing notes
+    e: Keeping the original data untouched
+q6:
+  text: What does `df.shape` show?
+  show: 4
+  options:
+    a: The first rows
+    b: The column types
+    c: (rows, columns)
+    d: How big the table is
+    e: The mean of each column
+q7:
+  text: Which keep only rows where quantity is 3 or more?
+  show: 4
+  options:
+    a: df[df['quantity'] >= 3]
+    b: df.head(3)
+    c: df.quantity(3)
+    d: df.loc[df['quantity'] >= 3]
+    e: df['quantity'] >= 3 alone
+q8:
+  text: How do you find exact duplicate rows?
+  show: 4
+  options:
+    a: df.describe()
+    b: df.duplicated().sum()
+    c: df.isna()
+    d: df.unique()
+    e: Compare len(df) before and after drop_duplicates()
+q9:
+  text: What fixes 'MAADI' and 'Maadi ' into one value?
+  show: 4
+  options:
+    a: Stripping spaces and using the same capitals
+    b: Sorting the column
+    c: df['branch'].str.strip().str.title()
+    d: Deleting the column
+    e: df.dropna()
+q10:
+  text: Why use describe() early?
+  show: 4
+  options:
+    a: It cleans the data
+    b: It shows missing values through the counts
+    c: It draws charts
+    d: It reveals impossible values like typo prices
+    e: It trains a model
+q11:
+  text: Which give total revenue per branch?
+  show: 4
+  options:
+    a: df.sort_values('branch')
+    b: df.merge('branch')
+    c: df.groupby('branch')['revenue'].sum()
+    d: df['branch'].sum()
+    e: pd.pivot_table(df, index='branch', values='revenue', aggfunc='sum')
+q12:
+  text: What does merge(other, on='branch') do?
+  show: 4
+  options:
+    a: Works like VLOOKUP or a SQL JOIN
+    b: Matches rows of two tables by branch
+    c: Draws a chart
+    d: Sorts by branch
+    e: Deletes branches
+q13:
+  text: Which chart shows change over time?
+  show: 4
+  options:
+    a: A pie chart of months
+    b: A histogram of branches
+    c: A line chart
+    d: A line with markers per month
+    e: A box plot of items
+q14:
+  text: Which charts compare categories or spreads well?
+  show: 4
+  options:
+    a: A line chart of item names
+    b: A box plot for comparing groups' spreads
+    c: A 3D pie chart
+    d: A scatter of text labels
+    e: A sorted bar chart for categories
+q15:
+  text: 'Rules for honest charts include:'
+  show: 4
+  options:
+    a: Cut the axis to exaggerate
+    b: Axes labelled with units
+    c: No title
+    d: Many bright colours
+    e: Bars start at zero
+q16:
+  text: When is the median a better 'typical' value than the mean?
+  show: 4
+  options:
+    a: Never
+    b: When a few extreme values pull the mean
+    c: When the data has a long tail, like incomes
+    d: Only for text data
+    e: Always for every dataset
+q17:
+  text: For normal data, about how much falls within 2 standard deviations of the mean?
+  show: 4
+  options:
+    a: Exactly 100%
+    b: About 95%
+    c: About 68%
+    d: About 50%
+    e: Roughly 19 values in 20
+q18:
+  text: 'A correlation of -0.6 means:'
+  show: 4
+  options:
+    a: One causes the other
+    b: A fairly strong negative relationship
+    c: A perfect positive relationship
+    d: No relationship
+    e: When one goes up, the other tends to go down
+q19:
+  text: What does the bootstrap show?
+  show: 4
+  options:
+    a: A range such as a 95% confidence interval
+    b: Whether the data is clean
+    c: How much a result could change with a different sample
+    d: The exact true value
+    e: The best chart
+q20:
+  text: Why can an A/B test show cause?
+  show: 4
+  options:
+    a: The only systematic difference is the change tested
+    b: It uses correlation
+    c: Customers are assigned to groups at random
+    d: It uses more data
+    e: It has a small p-value
+q21:
+  text: Why split data into training and test sets?
+  show: 4
+  options:
+    a: To delete bad rows
+    b: To judge the model on data it didn't learn from
+    c: To make training faster
+    d: To check it works on new examples
+    e: Because scikit-learn requires two files
+q22:
+  text: What is a baseline?
+  show: 4
+  options:
+    a: A simple guess the model must beat
+    b: A chart
+    c: The best model
+    d: The test set
+    e: For example, always predicting the average
+q23:
+  text: What does MAE measure?
+  show: 4
+  options:
+    a: The share of variation explained
+    b: Error in the target's own units
+    c: The number of features
+    d: The average size of prediction errors
+    e: The training time
+q24:
+  text: With 18% iced orders, why is 82% accuracy unimpressive?
+  show: 4
+  options:
+    a: 82% is perfect
+    b: Accuracy hides that no iced orders are caught
+    c: Always saying 'not iced' scores about the same
+    d: It's measured on training data
+    e: Accuracy can't go above 50%
+q25:
+  text: 'Lowering the classification threshold usually:'
+  show: 4
+  options:
+    a: Lowers precision
+    b: Deletes the model
+    c: Raises recall
+    d: Changes nothing
+    e: Raises both
+q26:
+  text: What does a Pipeline guarantee?
+  show: 4
+  options:
+    a: Faster internet
+    b: Preparation is learned from training data only
+    c: The model is always accurate
+    d: No need for test data
+    e: The same steps run on new data
+q27:
+  text: Why use cross-validation?
+  show: 4
+  options:
+    a: One split can be lucky or unlucky
+    b: It cleans the data
+    c: It speeds up training
+    d: It gives an average score and its spread
+    e: It removes the need for a baseline
+q28:
+  text: Which are signs of leakage?
+  show: 4
+  options:
+    a: A feature only known after the outcome
+    b: A small test set only
+    c: A suspiciously good score
+    d: Using a baseline
+    e: Using temperature
+q29:
+  text: For a forecast, how should you split time-based data?
+  show: 4
+  options:
+    a: Test on the future, as the model will be used
+    b: Test on the training days
+    c: Shuffle all days randomly
+    d: Train on earlier dates, test on later ones
+    e: Use only weekends
+q30:
+  text: 'A good final report:'
+  show: 4
+  options:
+    a: Hides uncertainty
+    b: Uses plain sentences and rounded numbers
+    c: Uses as much jargon as possible
+    d: Ends with actions the owner can take
+    e: Shows every line of code

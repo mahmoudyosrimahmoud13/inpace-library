@@ -595,3 +595,173 @@ courses:
     title: الإنجليزي<br>مستوى B1
     sub: الرأي وfor/since والشرط والمجهول ومقابلات العمل والكلام المنقول
     tags: [14 درسًا, تسجيلات صوتية]
+
+  c-programming-beginners:
+    theme: navy
+    art: c-programming.svg
+    chip: Beginner · 6 days
+    title: C from<br>zero
+    sub: Variables, pointers, memory and files, ending with a small to-do manager you debug yourself
+    tags: [12 lessons, 30 quiz questions]
+
+  c-programming-beginners-ar:
+    theme: navy
+    art: c-programming.svg
+    rtl: true
+    chip: للمبتدئين · 6 أيام
+    title: لغة C<br>من الصفر
+    sub: الـ variables والـ pointers والذاكرة والملفات، وتنتهي بمدير مهام صغير تعمل له debug بنفسك
+    tags: [12 درسًا, 30 سؤالًا]
+
+  asm-x86-64-beginners:
+    theme: plum
+    art: asm-x86-64.svg
+    chip: Beginner · 5 days
+    title: x86-64<br>assembly
+    sub: Registers, system calls, the stack and calling C, with NASM on Linux
+    tags: [10 lessons, 25 quiz questions]
+
+  asm-x86-64-beginners-ar:
+    theme: plum
+    art: asm-x86-64.svg
+    rtl: true
+    chip: للمبتدئين · 5 أيام
+    title: Assembly<br>x86-64
+    sub: الـ registers والـ system calls والـ stack واستدعاء C، باستخدام NASM على Linux
+    tags: [10 دروس, 25 سؤالًا]
+
+  cpp-beginners:
+    theme: forest
+    art: cpp.svg
+    chip: Beginner · 6 days
+    title: Modern<br>C++
+    sub: Strings, vectors, classes, RAII and smart pointers, ending with a small library manager
+    tags: [12 lessons, 30 quiz questions]
+
+  cpp-beginners-ar:
+    theme: forest
+    art: cpp.svg
+    rtl: true
+    chip: للمبتدئين · 6 أيام
+    title: <span dir="ltr">C++</span><br>الحديثة
+    sub: الـ strings والـ vectors والـ classes والـ RAII والـ smart pointers، وتنتهي بمدير مكتبة صغير
+    tags: [12 درسًا, 30 سؤالًا]
+
+  cpp-advanced:
+    theme: navy
+    art: cpp-advanced.svg
+    chip: Advanced · 5 days
+    title: Advanced<br>C++
+    sub: Move semantics, concepts, ranges, errors, threads and testing, ending with a parallel log analyzer
+    tags: [10 lessons, 25 quiz questions]
+
+  cpp-advanced-ar:
+    theme: navy
+    art: cpp-advanced.svg
+    rtl: true
+    chip: متقدم · 5 أيام
+    title: <span dir="ltr">C++</span><br>المتقدمة
+    sub: الـ move semantics والـ concepts والـ ranges والأخطاء والـ threads والـ testing، وتنتهي بمحلل logs متوازٍ
+    tags: [10 دروس, 25 سؤالًا]
+
+  rust-beginners:
+    theme: coral
+    art: rust.svg
+    chip: Beginner · 6 days
+    title: Rust from<br>zero
+    sub: Ownership, borrowing, enums, errors and traits, ending with an expense tracker
+    tags: [12 lessons, 30 quiz questions]
+
+  rust-beginners-ar:
+    theme: coral
+    art: rust.svg
+    rtl: true
+    chip: للمبتدئين · 6 أيام
+    title: Rust<br>من الصفر
+    sub: الـ ownership والـ borrowing والـ enums والأخطاء والـ traits، وتنتهي بمتتبع مصروفات
+    tags: [12 درسًا, 30 سؤالًا]
+
+  rust-advanced:
+    theme: plum
+    art: rust-advanced.svg
+    chip: Advanced · 5 days
+    title: Advanced<br>Rust
+    sub: Lifetimes, smart pointers, threads, async with tokio, macros and unsafe, ending with a job runner
+    tags: [10 lessons, 25 quiz questions]
+
+  rust-advanced-ar:
+    theme: plum
+    art: rust-advanced.svg
+    rtl: true
+    chip: متقدم · 5 أيام
+    title: Rust<br>المتقدمة
+    sub: الـ lifetimes والـ smart pointers والـ threads والـ async مع tokio والـ macros، وتنتهي بمشغّل jobs
+    tags: [10 دروس, 25 سؤالًا]
+
+  data-science-beginners:
+    theme: sky
+    art: data-science.svg
+    chip: Beginner · 6 days
+    title: Data science<br>from zero
+    sub: pandas, cleaning, charts, statistics and first models, ending with a report for a café owner
+    tags: [12 lessons, 30 quiz questions]
+
+  data-science-beginners-ar:
+    theme: sky
+    art: data-science.svg
+    rtl: true
+    chip: للمبتدئين · 6 أيام
+    title: علم البيانات<br>من الصفر
+    sub: pandas والتنظيف والرسوم والإحصاء وأول النماذج، وتنتهي بتقرير لصاحب مقهى
+    tags: [12 درسًا, 30 سؤالًا]
+
+  electronics-basics:
+    theme: sun
+    art: electronics-basics.svg
+    chip: Beginner · 5 days
+    title: Electronics<br>basics
+    sub: Voltage, current, LEDs, capacitors and transistors, ending with an automatic night light
+    tags: [10 lessons, 25 quiz questions]
+
+  electronics-basics-ar:
+    theme: sun
+    art: electronics-basics.svg
+    rtl: true
+    chip: للمبتدئين · 5 أيام
+    title: أساسيات<br>الإلكترونيات
+    sub: الجهد والتيار والـ LEDs والمكثفات والـ transistors، وتنتهي بإضاءة ليلية تلقائية
+    tags: [10 دروس, 25 سؤالًا]
+
+  pcb-design-kicad:
+    theme: forest
+    art: pcb-kicad.svg
+    chip: Beginner · 5 days
+    title: PCB design<br>in KiCad
+    sub: Schematic, footprints, layout, design rules and ordering, ending with your own LED flasher board
+    tags: [10 lessons, 25 quiz questions]
+
+  pcb-design-kicad-ar:
+    theme: forest
+    art: pcb-kicad.svg
+    rtl: true
+    chip: للمبتدئين · 5 أيام
+    title: تصميم PCB<br>في KiCad
+    sub: الـ schematic والـ footprints والـ layout وقواعد التصميم والطلب، وتنتهي بلوحة LED وامضة من تصميمك
+    tags: [10 دروس, 25 سؤالًا]
+
+  microcontroller-pcb:
+    theme: mint
+    art: microcontroller.svg
+    chip: Intermediate · 5 days
+    title: Your own<br>MCU board
+    sub: An ATmega328P board from the minimal circuit to programming and bring-up, ending with a sensor board
+    tags: [10 lessons, 25 quiz questions]
+
+  microcontroller-pcb-ar:
+    theme: mint
+    art: microcontroller.svg
+    rtl: true
+    chip: متوسط · 5 أيام
+    title: لوحة<br>MCU خاصة بك
+    sub: لوحة ATmega328P من الدائرة الأساسية حتى البرمجة والتشغيل، وتنتهي بلوحة sensor
+    tags: [10 دروس, 25 سؤالًا]

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" font-size="22">
+<rect x="30" y="40" width="220" height="62" rx="14" fill="#ff8fab"/><text x="50" y="80" fill="#2d1b3d">rax</text><text x="230" y="80" fill="#2d1b3d" text-anchor="end">1</text>
+<rect x="30" y="116" width="220" height="62" rx="14" fill="#fff"/><text x="50" y="156" fill="#2d1b3d">rdi</text><text x="230" y="156" fill="#2d1b3d" text-anchor="end">1</text>
+<rect x="30" y="192" width="220" height="62" rx="14" fill="#fff"/><text x="50" y="232" fill="#2d1b3d">rsi</text><text x="230" y="232" fill="#2d1b3d" text-anchor="end">msg</text>
+<rect x="30" y="268" width="220" height="62" rx="14" fill="#fff"/><text x="50" y="308" fill="#2d1b3d">rdx</text><text x="230" y="308" fill="#2d1b3d" text-anchor="end">14</text>
+</g>
+<g filter="url(#s)"><rect x="275" y="40" width="220" height="290" rx="18" fill="#1d1028" stroke="#ff8fab" stroke-width="2"/></g>
+<g font-family="JBM" font-size="19" fill="#fbf2ff">
+<text x="295" y="85" fill="#ff8fab">_start:</text>
+<text x="305" y="125">mov rax, 1</text><text x="305" y="160">mov rdi, 1</text><text x="305" y="195">lea rsi, [msg]</text>
+<text x="305" y="230">mov rdx, 14</text><text x="305" y="265" fill="#ffd166">syscall</text><text x="305" y="300" fill="#b9a3c9">; write</text>
+</g>
+<g font-family="JBM" font-size="17" text-anchor="middle" fill="#fbf2ff">
+<rect x="70" y="390" width="380" height="40" rx="8" fill="#4b2d66" stroke="#ff8fab" stroke-width="2"/><text x="260" y="416">return address</text>
+<rect x="70" y="430" width="380" height="40" rx="8" fill="#4b2d66" stroke="#ff8fab" stroke-width="2"/><text x="260" y="456">saved rbp</text>
+<rect x="70" y="470" width="380" height="40" rx="8" fill="#ff8fab"/><text x="260" y="496" fill="#2d1b3d" font-weight="700">rsp</text>
+</g>
+</svg>

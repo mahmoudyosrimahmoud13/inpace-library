@@ -1,0 +1,150 @@
+q1:
+  right:
+  - a
+  - f
+  why: Cargo manages projects.
+q2:
+  right:
+  - b
+  - d
+  why: Macros take a varying number of arguments.
+q3:
+  right:
+  - b
+  - c
+  why: Use let mut.
+q4:
+  right:
+  - a
+  - b
+  why: Rust converts only when you say so.
+q5:
+  right:
+  - a
+  - d
+  why: read_line keeps the Enter.
+q6:
+  right:
+  - b
+  - f
+  why: Both branches give an i32.
+q7:
+  right:
+  - d
+  - f
+  why: ..= includes the end.
+q8:
+  right:
+  - d
+  - f
+  why: It makes the match complete.
+q9:
+  right:
+  - a
+  - c
+  why: Or a return statement.
+q10:
+  right:
+  - b
+  - f
+  why: Use different names or Option.
+q11:
+  right:
+  - e
+  - f
+  why: Ownership moved.
+q12:
+  right:
+  - b
+  - d
+  why: They implement Copy.
+q13:
+  right:
+  - b
+  - c
+  why: The borrowing rule.
+q14:
+  right:
+  - d
+  - f
+  why: Take &str for read-only text.
+q15:
+  right:
+  - c
+  - d
+  why: Rust refuses to compile it.
+q16:
+  right:
+  - d
+  - f
+  why: '&self only reads.'
+q17:
+  right:
+  - a
+  - c
+  why: Derive writes standard traits.
+q18:
+  right:
+  - a
+  - d
+  why: Some(x) or None.
+q19:
+  right:
+  - c
+  - e
+  why: Matches must be complete.
+q20:
+  right:
+  - b
+  - f
+  why: Use unwrap_or or if let.
+q21:
+  right:
+  - d
+  - f
+  why: Use &scores to borrow.
+q22:
+  right:
+  - c
+  - e
+  why: They're lazy.
+q23:
+  right:
+  - b
+  - d
+  why: Use chars().count() for letters.
+q24:
+  right:
+  - d
+  - e
+  why: On Ok it gives the value.
+q25:
+  right:
+  - d
+  - e
+  why: Sort or use BTreeMap.
+q26:
+  right:
+  - b
+  - c
+  why: Like an interface.
+q27:
+  right:
+  - c
+  - e
+  why: Those are trait bounds.
+q28:
+  right:
+  - b
+  - d
+  why: A trait object.
+q29:
+  right:
+  - b
+  - e
+  why: Use pub to expose them.
+q30:
+  right:
+  - a
+  - f
+  why: Tests live next to the code.

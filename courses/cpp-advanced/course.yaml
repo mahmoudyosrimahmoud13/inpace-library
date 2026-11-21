@@ -1,0 +1,170 @@
+id: cpp-advanced
+title: 'Advanced C++: modern techniques'
+version: 1
+language: en
+description: The sequel to C++ for beginners. Move semantics and the rule of zero and five, constexpr, if constexpr and variadic
+  templates, C++20 concepts, lambdas in depth and std::function, ranges and views, error handling with exceptions, optional,
+  variant and expected, concurrency with jthread, mutex, atomic and async, then testing, CMake projects, sanitizers and tooling.
+  Ends with a parallel log analyzer. Every example was compiled with -Werror and run with sanitizers. Optional step in the
+  systems programming path. About 2 to 3 weeks, an hour a day.
+image: cover.jpg
+downloads:
+- title: cppreference
+  url: https://en.cppreference.com/
+- title: C++ Core Guidelines
+  url: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+- title: Catch2 test framework
+  url: https://github.com/catchorg/Catch2
+modules:
+- id: m1
+  title: 'Module 1: Moving and owning'
+  lessons:
+  - id: m1-l1
+    title: Move semantics
+    file: lessons/m1-l1.md
+    minutes: 55
+  - id: m1-l2
+    title: The rule of zero, three and five
+    file: lessons/m1-l2.md
+    minutes: 55
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write a class `Matrix` holding its numbers in a std::vector<double> (rule of zero), plus a version `RawMatrix`
+      that holds a raw `double*` and implements all five operations. Print messages from RawMatrix's copy and move operations
+      and show which run when you push matrices into a vector. Upload the code and output.
+  - id: m1-explain
+    type: explain
+    prompt: Explain what std::move really does, and why move operations should be noexcept.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Templates and concepts'
+  lessons:
+  - id: m2-l1
+    title: 'Templates in depth: constexpr, if constexpr and variadic templates'
+    file: lessons/m2-l1.md
+    minutes: 55
+  - id: m2-l2
+    title: 'Concepts: templates with clear rules'
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a variadic `log(args...)` that prints all arguments separated by spaces with a fold, a constexpr function
+      `is_prime(n)` checked with static_assert, and a concept `Container` (has begin(), end() and size()) used by a function
+      `print_all(const Container auto&)`. Upload the code and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between compile-time polymorphism with concepts and run-time polymorphism with virtual
+      functions, and when you'd pick each.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Functions and ranges'
+  lessons:
+  - id: m3-l1
+    title: Lambdas and functions as values
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: Ranges and views
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Given a vector of products (name, price, category), use ranges and views to print the 3 cheapest products in one
+      category, and build a std::map<std::string, std::function<bool(const Product&)>> of named filters ('cheap', 'food',
+      'in stock') chosen by the user. Upload the code and output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain the difference between capturing by value and by reference, with an example where capturing by reference
+      would be a bug.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Errors and concurrency'
+  lessons:
+  - id: m4-l1
+    title: 'Handling errors: exceptions, optional, variant and expected'
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: 'Concurrency: threads, mutexes, atomics and async'
+    file: lessons/m4-l2.md
+    minutes: 60
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write a function that parses 'HH:MM' times returning std::expected<int, std::string> (minutes since midnight or
+      an error message). Then count the valid times in a big vector using 4 std::async tasks, each with its own counter. Build
+      once with -fsanitize=thread. Upload the code and output.
+  - id: m4-explain
+    type: explain
+    prompt: Explain what a data race is, and three different ways from this module to avoid one.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Testing, tooling and a project'
+  lessons:
+  - id: m5-l1
+    title: Testing, tooling and a real project layout
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'Project: a parallel log analyzer'
+    file: lessons/m5-l2.md
+    minutes: 75
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Do at least three of the project's 'Your turn' tasks, including tests for parse_line and the timing comparison.
+      Upload your files (with CMakeLists.txt), test output and your timing table with a short explanation.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why the log analyzer needs no mutex, and what you'd have to change if all threads wrote into one shared
+      Stats object.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

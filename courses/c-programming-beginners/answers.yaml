@@ -1,0 +1,150 @@
+q1:
+  right:
+  - c
+  - d
+  why: main is the entry point.
+q2:
+  right:
+  - a
+  - f
+  why: It's the newline character.
+q3:
+  right:
+  - a
+  - e
+  why: Integer division drops the decimal part.
+q4:
+  right:
+  - c
+  - f
+  why: scanf needs %lf for double.
+q5:
+  right:
+  - a
+  - f
+  why: '& gives the variable''s address.'
+q6:
+  right:
+  - a
+  - e
+  why: A single = stores a value.
+q7:
+  right:
+  - a
+  - b
+  why: That's called falling through.
+q8:
+  right:
+  - a
+  - d
+  why: 0 is false, anything else is true.
+q9:
+  right:
+  - b
+  - d
+  why: i takes 0, 1, 2, 3, 4.
+q10:
+  right:
+  - b
+  - d
+  why: break leaves; continue skips.
+q11:
+  right:
+  - a
+  - e
+  why: Arguments are copied.
+q12:
+  right:
+  - a
+  - f
+  why: Indexes start at 0.
+q13:
+  right:
+  - a
+  - e
+  why: C has no bounds checking.
+q14:
+  right:
+  - d
+  - e
+  why: == compares addresses.
+q15:
+  right:
+  - a
+  - e
+  why: Strings are null-terminated.
+q16:
+  right:
+  - b
+  - c
+  why: '*p reads the value at the address.'
+q17:
+  right:
+  - b
+  - f
+  why: Writing through p changes x.
+q18:
+  right:
+  - a
+  - c
+  why: Pointer arithmetic moves by whole elements.
+q19:
+  right:
+  - d
+  - f
+  why: Arrays decay to pointers when passed.
+q20:
+  right:
+  - c
+  - e
+  why: Check pointers before using them.
+q21:
+  right:
+  - b
+  - e
+  why: malloc takes bytes.
+q22:
+  right:
+  - a
+  - b
+  why: malloc returns NULL when it fails.
+q23:
+  right:
+  - a
+  - c
+  why: Memory stays used.
+q24:
+  right:
+  - b
+  - f
+  why: p->x means (*p).x.
+q25:
+  right:
+  - a
+  - e
+  why: typedef struct {...} Student;
+q26:
+  right:
+  - c
+  - f
+  why: w erases; a appends.
+q27:
+  right:
+  - a
+  - c
+  why: '#ifndef / #define / #endif.'
+q28:
+  right:
+  - c
+  - f
+  why: List all .c files.
+q29:
+  right:
+  - d
+  - e
+  why: Arguments start at argv[1].
+q30:
+  right:
+  - c
+  - f
+  why: bt shows the call stack.

@@ -1,0 +1,225 @@
+q1:
+  text: ماذا يحتاج الـ current ليسري؟
+  show: 4
+  options:
+    a: switch مفتوحًا
+    b: سلكًا مقطوعًا
+    c: دائرة مغلقة
+    d: مسارًا كاملًا من + راجعًا إلى −
+    e: بطارية فقط
+q2:
+  text: 'بقانون أوم، ‏5 V على 1 kΩ تعطي:'
+  show: 4
+  options:
+    a: 5 mA
+    b: 5 A
+    c: 200 mA
+    d: 0.005 A
+    e: 0.5 mA
+q3:
+  text: كيف تقيس الـ current بالـ multimeter؟
+  show: 4
+  options:
+    a: ضع الـ meter داخل الدائرة
+    b: على وضع Ω
+    c: على طرفي البطارية
+    d: اضبطه على mA وانقل السلك الأحمر إلى فتحة mA
+    e: والكهرباء مفصولة
+q4:
+  text: أي resistor يناسب 5 V و0.025 W؟
+  show: 4
+  options:
+    a: أي resistor قياسي 0.25 W
+    b: 'لا شيء: سيحترق'
+    c: capacitor بدلًا منه
+    d: resistor ‏5 W فقط
+    e: resistor ‏1/4 W
+q5:
+  text: 'أصفر، بنفسجي، أحمر، ذهبي معناها:'
+  show: 4
+  options:
+    a: 4.7 MΩ
+    b: 472 Ω
+    c: 4700 Ω ±5%
+    d: 4.7 kΩ
+    e: 47 Ω
+q6:
+  text: 'في دائرة series:'
+  show: 4
+  options:
+    a: الـ resistances تُجمع
+    b: يمر نفس الـ current في كل جزء
+    c: الـ resistance تقل
+    d: الـ current ينقسم
+    e: كل جزء يأخذ الجهد كاملًا
+q7:
+  text: 'في دائرة parallel:'
+  show: 4
+  options:
+    a: الـ current متساوٍ في كل فرع
+    b: الـ resistances تُجمع ببساطة
+    c: كل فرع يأخذ نفس الـ voltage
+    d: الـ voltage يُقسم
+    e: الـ resistance المجمعة أقل من الأصغر
+q8:
+  text: '‏divider فيه R1 = R2 ودخل 10 V يعطي:'
+  show: 4
+  options:
+    a: 0 V
+    b: نصف الدخل
+    c: 5 V
+    d: 10 V
+    e: 2.5 V
+q9:
+  text: لماذا يحتاج الـ LED إلى resistor على التوالي؟
+  show: 4
+  options:
+    a: ليغيّر لونه
+    b: بدونه يرتفع الـ current حتى يتلف شيء
+    c: الـ LEDs لا تحتاجه
+    d: ليصبح أسطع
+    e: ليحدّ من الـ current الخاص به
+q10:
+  text: أي رِجل في الـ LED هي +؟
+  show: 4
+  options:
+    a: الـ cathode
+    b: الجانب المقابل للحافة المسطحة
+    c: أي واحدة
+    d: الرِجل القصيرة
+    e: الرِجل الطويلة (anode)
+q11:
+  text: 'الـ RC time constant ‏τ = R × C يخبرك:'
+  show: 4
+  options:
+    a: بسرعة شحن الـ capacitor عبر resistor
+    b: حوالي 63% مشحون بعد τ واحد
+    c: بالـ voltage rating للـ capacitor
+    d: بسعره
+    e: بأقصى current
+q12:
+  text: أي الـ capacitors لها polarity؟
+  show: 4
+  options:
+    a: لا شيء
+    b: كل الـ capacitors
+    c: الـ ceramic ‏100 nF
+    d: التي عليها شريط −
+    e: الـ electrolytic capacitors
+q13:
+  text: أين يوضع الـ decoupling capacitor ‏100 nF؟
+  show: 4
+  options:
+    a: على التوالي مع المصدر
+    b: في الطرف البعيد من الـ board
+    c: بجوار pin الكهرباء للـ chip مباشرة
+    d: على البطارية فقط
+    e: بين VCC وGND لكل chip
+q14:
+  text: '‏linear regulator من 12 V إلى 5 V عند 0.5 A يصنع حوالي:'
+  show: 4
+  options:
+    a: لا شيء
+    b: (12 − 5) × 0.5 W
+    c: 3.5 W حرارة
+    d: 0.5 W
+    e: 6 W
+q15:
+  text: متى يكون الـ switching ‏(buck) regulator أفضل؟
+  show: 4
+  options:
+    a: أبدًا
+    b: للـ AC فقط
+    c: للأحمال الصغيرة جدًا 1 mA فقط
+    d: عندما يجعل فرق الجهد الكبير الـ linear يسخن
+    e: لكفاءة الأجهزة التي تعمل بالبطارية
+q16:
+  text: لماذا نستخدم transistor لتشغيل motor من pin ‏microcontroller؟
+  show: 4
+  options:
+    a: الـ pin يعطي حوالي 20 mA فقط
+    b: الـ pins تعمل بـ AC
+    c: الـ transistors تخزّن الطاقة
+    d: ليصبح الـ motor أبطأ
+    e: إشارة صغيرة تستطيع تشغيل current كبير
+q17:
+  text: ماذا يجب أن يكون على طرفي coil الـ motor أو الـ relay؟
+  show: 4
+  options:
+    a: motor ثانٍ
+    b: diode متجه نحو +
+    c: flyback diode
+    d: capacitor على التوالي
+    e: لا شيء
+q18:
+  text: لماذا يأخذ gate الـ MOSFET ‏pull-down resistor؟
+  show: 4
+  options:
+    a: ليكون أسرع
+    b: ليبقيه مطفأ بينما يطفو الـ pin عند البدء
+    c: ليحدّ من current الـ motor
+    d: ليغيّر لونه
+    e: لكي لا يرتعش الحمل
+q19:
+  text: 'مع pull-up وزر إلى الـ ground، القراءة وهو مضغوط:'
+  show: 4
+  options:
+    a: 5 V
+    b: حوالي 0 V
+    c: LOW
+    d: قيمة عشوائية
+    e: HIGH
+q20:
+  text: كيف تصلح ارتداد الزر (bounce)؟
+  show: 4
+  options:
+    a: ‏RC filter على طرفي الزر
+    b: لا يمكن إصلاحه
+    c: زر أكبر
+    d: جهد أعلى
+    e: تجاهل التغييرات لحوالي 20 إلى 50 ms بالـ software
+q21:
+  text: أين الـ pin رقم 1 في chip ‏DIP؟
+  show: 4
+  options:
+    a: دائمًا على اليمين
+    b: في المنتصف
+    c: أعلى اليسار والشق لأعلى
+    d: أي pin
+    e: بجوار الشق أو النقطة
+q22:
+  text: 'كل IC يحتاج:'
+  show: 4
+  options:
+    a: heatsink
+    b: توصيل الكهرباء والـ ground
+    c: capacitor ‏100 nF بين VCC وGND قريبًا منه
+    d: crystal
+    e: لا شيء إضافي
+q23:
+  text: ما الذي يحدد معدل وميض الـ 555 في وضع astable؟
+  show: 4
+  options:
+    a: f ≈ 1.44 / ((R1 + 2·R2) · C)
+    b: لون الـ LED
+    c: R1 وR2 وC
+    d: الـ pin رقم 1
+    e: جهد المصدر فقط
+q24:
+  text: 'الـ AND gate يُخرج 1 عندما:'
+  show: 4
+  options:
+    a: يكون أي دخل 1
+    b: A = 1 وB = 1
+    c: يختلف الدخلان
+    d: يكون الاثنان 0
+    e: يكون الدخلان 1
+q25:
+  text: في اللمبة الليلية، لماذا فشل 47 kΩ؟
+  show: 4
+  options:
+    a: احترقت الـ LEDs
+    b: البطارية كانت ضعيفة
+    c: نقطة المنتصف كانت فوق 0.7 V في ضوء النهار
+    d: بقيت اللمبة مضاءة حتى في غرفة مضيئة
+    e: عمل بشكل جيد

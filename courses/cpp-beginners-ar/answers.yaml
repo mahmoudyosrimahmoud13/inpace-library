@@ -1,0 +1,150 @@
+q1:
+  right:
+  - c
+  - f
+  why: -Wall تشغّل التحذيرات.
+q2:
+  right:
+  - a
+  - d
+  why: التهيئة بالأقواس ترفض فقد البيانات.
+q3:
+  right:
+  - c
+  - e
+  why: '>> تتوقف عند المسافة.'
+q4:
+  right:
+  - a
+  - f
+  why: قارن بـ npos.
+q5:
+  right:
+  - b
+  - e
+  why: سهلة البحث وصعبة سوء الاستخدام.
+q6:
+  right:
+  - b
+  - c
+  why: تغيير r يغيّر x.
+q7:
+  right:
+  - a
+  - e
+  why: بدون نسخ وبدون تغيير.
+q8:
+  right:
+  - b
+  - f
+  why: الـ compiler يختار حسب المعاملات.
+q9:
+  right:
+  - a
+  - c
+  why: الـ reference يجب ضبطه عند إنشائه.
+q10:
+  right:
+  - a
+  - e
+  why: هذا reference معلّق.
+q11:
+  right:
+  - a
+  - d
+  why: v.push_back(x).
+q12:
+  right:
+  - c
+  - d
+  why: الـ reference يصل إلى العنصر الحقيقي.
+q13:
+  right:
+  - d
+  - e
+  why: استخدم contains() للتحقق.
+q14:
+  right:
+  - a
+  - c
+  why: end() معناها غير موجود.
+q15:
+  right:
+  - a
+  - b
+  why: sort قد تعيد ترتيب المتساوية.
+q16:
+  right:
+  - a
+  - f
+  why: هكذا تحمي الـ classes قواعدها.
+q17:
+  right:
+  - a
+  - b
+  why: يمكن استدعاؤها على objects const.
+q18:
+  right:
+  - a
+  - e
+  why: وفيما عدا ذلك هما متماثلان.
+q19:
+  right:
+  - b
+  - c
+  why: مثل include guards.
+q20:
+  right:
+  - d
+  - e
+  why: واحد لكل class.
+q21:
+  right:
+  - a
+  - e
+  why: حتى مع return مبكر أو exception.
+q22:
+  right:
+  - a
+  - b
+  why: make_unique هي الطريقة الحديثة.
+q23:
+  right:
+  - a
+  - f
+  why: وإلا يُدمَّر جزء الأساسي فقط.
+q24:
+  right:
+  - c
+  - e
+  why: الخطأ الإملائي يصبح compile error.
+q25:
+  right:
+  - b
+  - d
+  why: استخدم الـ references أو الـ pointers.
+q26:
+  right:
+  - c
+  - f
+  why: الـ compiler يكتب نسخة لكل نوع.
+q27:
+  right:
+  - b
+  - f
+  why: الـ compiler يحتاج الكود كاملًا.
+q28:
+  right:
+  - a
+  - f
+  why: ثم cmake --build build.
+q29:
+  right:
+  - d
+  - e
+  why: AddressSanitizer يذكر السطر.
+q30:
+  right:
+  - a
+  - f
+  why: لا تحتفظ بمثل هذه الـ pointers عبر التغييرات.

@@ -1,0 +1,24 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0d3324" flood-opacity=".3"/></filter></defs>
+<g fill="#9aa5a0">
+<rect x="118" y="70" width="22" height="16"/><rect x="118" y="110" width="22" height="16"/><rect x="118" y="150" width="22" height="16"/><rect x="118" y="190" width="22" height="16"/><rect x="118" y="230" width="22" height="16"/><rect x="118" y="270" width="22" height="16"/><rect x="118" y="310" width="22" height="16"/>
+<rect x="300" y="70" width="22" height="16"/><rect x="300" y="110" width="22" height="16"/><rect x="300" y="150" width="22" height="16"/><rect x="300" y="190" width="22" height="16"/><rect x="300" y="230" width="22" height="16"/><rect x="300" y="270" width="22" height="16"/><rect x="300" y="310" width="22" height="16"/>
+</g>
+<g filter="url(#s)"><rect x="138" y="50" width="164" height="300" rx="10" fill="#1d1d1d"/></g>
+<circle cx="220" cy="72" r="10" fill="#333"/>
+<text x="220" y="210" text-anchor="middle" font-family="JBM" font-size="20" font-weight="700" fill="#ecf9f2" transform="rotate(-90 220 200)">ATmega328P</text>
+<g font-family="JBM" font-size="15" fill="#0d3324" font-weight="700">
+<text x="110" y="83" text-anchor="end">RESET</text><text x="110" y="123" text-anchor="end">RX</text><text x="110" y="163" text-anchor="end">TX</text><text x="110" y="283" text-anchor="end">VCC</text><text x="110" y="323" text-anchor="end">GND</text>
+<text x="330" y="83">SCK</text><text x="330" y="123">MISO</text><text x="330" y="163">MOSI</text><text x="330" y="283">AVCC</text><text x="330" y="323">PB5</text>
+</g>
+<g filter="url(#s)"><rect x="380" y="200" width="100" height="44" rx="22" fill="#ecf9f2" stroke="#0d3324" stroke-width="3"/></g>
+<text x="430" y="228" text-anchor="middle" font-family="JBM" font-size="15" font-weight="700" fill="#0d3324">16 MHz</text>
+<g stroke="#0d3324" stroke-width="4"><path d="M60 290 V250"/><path d="M40 250 H80"/><path d="M40 262 H80"/><path d="M60 262 V300"/></g>
+<text x="60" y="235" text-anchor="middle" font-family="JBM" font-size="14" fill="#0d3324" font-weight="700">100 nF</text>
+<g filter="url(#s)"><circle cx="430" cy="318" r="18" fill="#2ecc71" stroke="#0d3324" stroke-width="3"/></g>
+<g font-family="JBM" font-size="17" font-weight="700" text-anchor="middle">
+<rect x="40" y="430" width="130" height="50" rx="25" fill="#0d3324"/><text x="105" y="461" fill="#ecf9f2">ISP</text>
+<rect x="190" y="430" width="140" height="50" rx="25" fill="#ecf9f2"/><text x="260" y="461" fill="#0d3324">USB 5 V</text>
+<rect x="350" y="430" width="130" height="50" rx="25" fill="#ecf9f2"/><text x="415" y="461" fill="#0d3324">blink</text>
+</g>
+</svg>

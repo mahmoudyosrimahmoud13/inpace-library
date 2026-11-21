@@ -1,0 +1,161 @@
+id: pcb-design-kicad-ar
+title: 'تصميم الـ PCB بـ KiCad: من الـ breadboard إلى المصنع'
+version: 1
+language: ar
+description: حوّل دوائر الـ breadboard إلى circuit boards حقيقية مصنّعة بـ KiCad 10، المجاني والاحترافي. طبقات الـ PCB ومصطلحاته،
+  وخطوات العمل في KiCad، والـ schematics والـ ERC، والـ footprints والـ BOM، وحدود الـ board ووضع الأجزاء، والـ routing، وعرض
+  الـ tracks والـ ground pours، والـ design rules والـ DRC، وملفات Gerber والطلب، ثم اللحام والتشغيل الأول الآمن. وينتهي بالـ
+  LED flasher board الخاص بك، مصممًا ومطلوبًا ومبنيًا. الكورس الثاني في مسار الإلكترونيات والـ PCB. حوالي 2 إلى 3 أسابيع،
+  ساعة يوميًا.
+image: cover.jpg
+downloads:
+- title: KiCad ‏(تحميل مجاني)
+  url: https://www.kicad.org/download/
+- title: توثيق KiCad ‏(بالإنجليزية)
+  url: https://docs.kicad.org/
+modules:
+- id: m1
+  title: 'الوحدة 1: الـ PCBs وKiCad'
+  lessons:
+  - id: m1-l1
+    title: ما هو الـ PCB
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: البداية مع KiCad
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: ثبّت KiCad، وأنشئ project اسمه led-flasher، وافتح كل محرر، وخذ لقطة شاشة لنافذة الـ project والـ 3D viewer لأي
+      board مثال. واذكر الملفات التي أنشأها KiCad.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح الفرق بين الـ symbol والـ footprint، مع مثال.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: الـ Schematic والأجزاء'
+  lessons:
+  - id: m2-l1
+    title: رسم الـ schematic
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: الـ Footprints والأجزاء والـ BOM
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: ارسم schematic الـ 555 flasher في KiCad مع power symbols وnet labels وPWR_FLAGs وdecoupling capacitor، واجعل الـ
+      ERC نظيفًا، وعيّن الـ footprints، وصدّر BOM. ارفع PDF الـ schematic والـ BOM.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح ماذا يفحص الـ ERC ولماذا يلزم الـ PWR_FLAG.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: الـ Layout'
+  lessons:
+  - id: m3-l1
+    title: 'الـ Board layout: الحدود ووضع الأجزاء'
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: 'التوصيل (Routing): الـ tracks والـ vias والـ ground'
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'اعمل layout لـ board الـ flasher: الحدود على Edge.Cuts، والـ connectors والـ LEDs في أماكنها، وC3 بجوار الـ pin
+      ‏8، وtracks الكهرباء 0.5 mm، وGND pour على الطبقة السفلى، وsilkscreen مفيد. ارفع لقطات للـ layout والـ 3D view.'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح لماذا وضع الأجزاء أهم من التوصيل، وماذا يعطيك الـ ground pour.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الفحوص والتصنيع'
+  lessons:
+  - id: m4-l1
+    title: الـ Design rules والـ DRC
+    file: lessons/m4-l1.md
+    minutes: 45
+  - id: m4-l2
+    title: ملفات التصنيع والطلب
+    file: lessons/m4-l2.md
+    minutes: 50
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اضبط الـ design rules من صفحة capabilities لمصنع حقيقي، واجعل الـ DRC نظيفًا، وصدّر Gerbers وdrill files، وافحصها
+      في الـ Gerber viewer، واحصل على سعر لـ 5 boards (لا يلزم أن تطلب الآن). ارفع الـ zip ولقطة لصفحة السعر.
+  - id: m4-explain
+    type: explain
+    prompt: اذكر الفحوص البشرية التي ستعملها قبل الطلب، ولماذا الـ DRC وحده لا يكفي.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: البناء ومشروع'
+  lessons:
+  - id: m5-l1
+    title: اللحام وتشغيل الـ board لأول مرة
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'مشروع: الـ LED flasher board الخاص بك من البداية للنهاية'
+    file: lessons/m5-l2.md
+    minutes: 80
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'أكمل قائمة المشروع: اطلب (أو، لو لم تستطع الطلب بعد، أنهِ كل شيء حتى الـ Gerbers)، والحم، وشغّل وقِس الـ board.
+      ارفع الصور، وجدول القياسات، وقائمة v1.1.'
+  - id: m5-explain
+    type: explain
+    prompt: صِف روتين التشغيل الأول خطوة بخطوة، ولماذا يهم حد الـ current عند أول تشغيل.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

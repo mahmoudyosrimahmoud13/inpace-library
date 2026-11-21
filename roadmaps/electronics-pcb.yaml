@@ -1,0 +1,15 @@
+id: electronics-pcb
+title: Electronics and PCB design
+description: From your first LED to a microcontroller board you designed yourself. Learn the basic parts and circuits, then design boards in KiCad, then build a full ATmega328P board.
+language: en
+author: inPace
+official: true
+order: 34
+tags: [electronics, pcb, kicad, microcontroller, hardware, beginner]
+steps:
+  - course: electronics-basics
+    note: Start here. Voltage, current, resistors, LEDs, capacitors, transistors and a night light project.
+  - course: pcb-design-kicad
+    note: Turn a circuit into a real board. Schematic, footprints, layout, design rules and ordering.
+  - course: microcontroller-pcb
+    note: Put a microcontroller on your own board, program it, and bring it to life.

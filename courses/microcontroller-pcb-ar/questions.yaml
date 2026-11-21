@@ -1,0 +1,225 @@
+q1:
+  text: ماذا يوجد داخل الـ microcontroller؟
+  show: 4
+  options:
+    a: processor مع ذاكرة flash وRAM
+    b: شاشة
+    c: بطارية
+    d: pins كثيرة للدخل والخرج
+    e: hard disk
+q2:
+  text: '‏PB5 معناها:'
+  show: 4
+  options:
+    a: الـ digital pin ‏13 في Arduino
+    b: Port B، ‏bit 5
+    c: الـ pin ‏5 في الـ chip
+    d: Power bus 5
+    e: Port 5، ‏bit B
+q3:
+  text: أي الـ pins يجب توصيلها دائمًا؟
+  show: 4
+  options:
+    a: الـ crystal فقط
+    b: pull-up ‏10 kΩ على RESET
+    c: VCC فقط
+    d: لا شيء
+    e: VCC والـ GNDان وAVCC
+q4:
+  text: 'أقصى current تصمم عليه في I/O pin واحد:'
+  show: 4
+  options:
+    a: 200 mA
+    b: أقل بكثير من الـ absolute maximum ‏40 mA
+    c: حوالي 20 mA
+    d: 1 A
+    e: بلا حد
+q5:
+  text: أي الـ pins تحمل I²C؟
+  show: 4
+  options:
+    a: 27 SDA و28 SCL
+    b: 9 و10
+    c: 17 و18
+    d: A4 وA5
+    e: 2 و3
+q6:
+  text: ماذا يحتاج الـ crystal؟
+  show: 4
+  options:
+    a: resistor ‏10 kΩ على التوالي
+    b: capacitorين صغيرين (حوالي 22 pF) إلى الـ ground
+    c: لا شيء
+    d: أن يوضع قريبًا جدًا من الـ pins ‏9 و10
+    e: heatsink
+q7:
+  text: أي خيار clock لا يحتاج أجزاء إضافية؟
+  show: 4
+  options:
+    a: الـ oscillator الداخلي 8 MHz
+    b: '555'
+    c: الـ RC oscillator الداخلي، المضبوط بالـ fuses
+    d: crystal ‏16 MHz
+    e: resonator
+q8:
+  text: لماذا polyfuse على كهرباء الـ USB؟
+  show: 4
+  options:
+    a: يحمي port الـ USB في الكمبيوتر
+    b: لبرمجة الـ chip
+    c: لتنقية الضوضاء فقط
+    d: يحدّ من الـ current عند الـ short ويعيد ضبط نفسه
+    e: لرفع الجهد
+q9:
+  text: لماذا تحتاج boards الـ USB-C إلى 5.1 kΩ على CC1 وCC2؟
+  show: 4
+  options:
+    a: لكي يوافق شاحن USB-C على إعطاء 5 V
+    b: زينة اختيارية
+    c: بدونهما يعمل الـ board على USB-A لا على شواحن USB-C
+    d: لضبط الـ clock
+    e: للـ LED
+q10:
+  text: أيها يحمي مدخل DC jack من عكس الأقطاب؟
+  show: 4
+  options:
+    a: crystal
+    b: capacitor أكبر
+    c: pull-up resistor
+    d: Schottky diode على التوالي
+    e: P-channel MOSFET ‏'ideal diode'
+q11:
+  text: أي الإشارات يحملها الـ ISP header؟
+  show: 4
+  options:
+    a: RESET وVCC وGND
+    b: MOSI وMISO وSCK
+    c: TX وRX فقط
+    d: SDA وSCL
+    e: D+ وD−
+q12:
+  text: ماذا يفعل الـ bootloader؟
+  show: 4
+  options:
+    a: يولّد الـ clock
+    b: يستمع على الـ serial بعد الـ reset لبرنامج جديد
+    c: يحمي من الـ shorts
+    d: يسمح بالرفع عبر USB بدون programmer
+    e: يغذي الـ board بالكهرباء
+q13:
+  text: كيف يتصل TX وRX بين الـ CH340 والـ ATmega؟
+  show: 4
+  options:
+    a: عبر crystal
+    b: الاثنان إلى GND
+    c: RX إلى TX ‏(متقاطعان)
+    d: TX إلى TX
+    e: TX إلى RX
+q14:
+  text: ما الذي يعطي auto-reset عند الرفع؟
+  show: 4
+  options:
+    a: نبضة منخفضة قصيرة على RESET عند فتح الـ port
+    b: الـ polyfuse
+    c: pull-down على TX
+    d: capacitor ‏100 nF من DTR إلى RESET
+    e: crystal أكبر
+q15:
+  text: ‏chip جديد يومض أبطأ 16 مرة. لماذا؟
+  show: 4
+  options:
+    a: الـ USB بطيء جدًا
+    b: الـ fuses لم تُضبط بحرق الـ bootloader
+    c: الـ LED تالف
+    d: الـ fuse المسمى CKDIV8 ما زال مضبوطًا
+    e: الـ crystal سريع جدًا
+q16:
+  text: لماذا ترسم الـ schematic في blocks؟
+  show: 4
+  options:
+    a: يلغي الـ ERC
+    b: أسهل في القراءة والمراجعة
+    c: يجعل الـ boards أصغر
+    d: الـ blocks تربطها net labels واضحة
+    e: KiCad يتطلب ذلك
+q17:
+  text: ماذا يحتاج SDA وSCL على الـ board؟
+  show: 4
+  options:
+    a: pull-up resistors ‏(غالبًا 4.7 kΩ)
+    b: crystal
+    c: لا شيء
+    d: capacitors على التوالي
+    e: مجموعة pull-ups واحدة فقط على الـ bus
+q18:
+  text: أين يجب أن يوضع الـ crystal؟
+  show: 4
+  options:
+    a: بدون إشارات أخرى تمر تحته
+    b: قرب connector الـ USB
+    c: في حدود بضعة mm من الـ pins ‏9 و10
+    d: في أي مكان
+    e: على الحافة البعيدة
+q19:
+  text: كيف يجب توصيل D+ وD− في الـ USB؟
+  show: 4
+  options:
+    a: على جانبين متقابلين من الـ board
+    b: بعيدًا عن الـ crystal
+    c: مع test points على كل واحد
+    d: معًا كزوج قصير
+    e: بأطول ما يمكن
+q20:
+  text: لماذا تضيف test points؟
+  show: 4
+  options:
+    a: للزينة
+    b: لعمل debugging للـ board
+    c: لقياس +5V وGND وRESET وTX وRX بسهولة
+    d: المصانع تتطلبها
+    e: لبرمجة الـ chip
+q21:
+  text: ماذا تثبت signature الـ ISP الصحيحة؟
+  show: 4
+  options:
+    a: أن الـ firmware صحيح
+    b: أن الـ chip حي ويمكن الوصول إليه
+    c: أن الـ LED يعمل
+    d: أن الـ USB يعمل
+    e: أن الكهرباء والـ ground والـ reset وتوصيل الـ ISP تعمل
+q22:
+  text: ماذا يختبر حرق الـ bootloader أيضًا؟
+  show: 4
+  options:
+    a: أن الـ chip يعمل على 16 MHz بعدها
+    b: resistors الـ CC في USB-C
+    c: الـ clock، بضبط fuses الـ crystal
+    d: الـ sensor ‏I²C
+    e: الـ LDR
+q23:
+  text: الرفع يفشل 'not in sync'. أسباب محتملة؟
+  show: 4
+  options:
+    a: TX وRX مبدّلان
+    b: لون LED خطأ
+    c: الـ crystal ‏16 MHz
+    d: capacitor الـ auto-reset على DTR ناقص
+    e: flux كثير
+q24:
+  text: 'الـ scanner لا يجد sensor ‏I²C. افحص:'
+  show: 4
+  options:
+    a: الـ PWM pin
+    b: الـ silkscreen
+    c: ‏delay() في الـ firmware
+    d: التوصيل والـ pull-ups
+    e: الكهرباء الواصلة للـ sensor
+q25:
+  text: لماذا يتجنب firmware المشروع ‏delay()؟
+  show: 4
+  options:
+    a: لكي يبقى الزر سريع الاستجابة
+    b: يوقّت الأشياء بـ millis()
+    c: ‏delay() معطلة
+    d: لتوفير الـ flash فقط
+    e: يحتاج interrupts

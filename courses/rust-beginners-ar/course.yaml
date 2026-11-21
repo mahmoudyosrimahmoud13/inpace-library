@@ -1,0 +1,194 @@
+id: rust-beginners-ar
+title: ‏Rust للمبتدئين
+version: 1
+language: ar
+description: 'تعلّم Rust من الصفر: cargo ورسائل أخطاء الـ compiler المفيدة، والـ variables والأنواع والإدخال، وif والـ loops
+  وmatch، والـ functions والتعبيرات، والـ ownership والـ borrowing والـ slices (بشرح بطيء)، والـ structs والـ functions المرتبطة
+  بها، والـ enums وOption، و Vec وString و HashMap مع الـ iterators، ومعالجة الأخطاء بـ Result و?، والـ traits والـ generics
+  والوحدات والاختبارات المدمجة. وينتهي بمشروع متتبّع مصروفات. كل مثال تُرجم مع اعتبار التحذيرات أخطاء وشُغّل. الكورس الرابع
+  في مسار برمجة الأنظمة. حوالي 3 أسابيع، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: كتاب The Rust Programming Language الرسمي المجاني (بالإنجليزية)
+  url: https://doc.rust-lang.org/book/
+- title: 'Rust Playground: شغّل Rust في المتصفح'
+  url: https://play.rust-lang.org/
+- title: 'Rustlings: تمارين صغيرة'
+  url: https://github.com/rust-lang/rustlings
+modules:
+- id: m1
+  title: 'الوحدة 1: أول البرامج'
+  lessons:
+  - id: m1-l1
+    title: أول برنامج لك بلغة Rust
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: الـ variables والأنواع والإدخال
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: أنشئ مشروعًا بـ cargo يسأل عن درجة حرارة بالسيليزيوس، ويحوّلها إلى فهرنهايت (F = C * 9/5 + 32) ويطبعها بمنزلة
+      عشرية واحدة. ارفع src/main.rs ولقطة شاشة لـ `cargo run`.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح لماذا لا تتغير variables Rust إلا لو عُلّمت بـ mut، ولماذا `items / people` مع قيمتي i32 تعطي عددًا صحيحًا.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: التحكم والـ functions'
+  lessons:
+  - id: m2-l1
+    title: القرارات والـ loops
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: الـ functions والتعبيرات
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'اكتب `fn fizzbuzz(n: u32) -> String` باستخدام match على (n % 3, n % 5)، وfunction ترجع tuple ‏(أصغر، أكبر، متوسط)
+      لـ slice f64. استدعِ الاثنتين من main. ارفع الكود ولقطة شاشة.'
+  - id: m2-explain
+    type: explain
+    prompt: اشرح الفرق بين التعبير والجملة في Rust، ولماذا قد تسبب إضافة فاصلة منقوطة لآخر سطر في الـ function خطأ.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: الـ ownership والـ borrowing'
+  lessons:
+  - id: m3-l1
+    title: 'الـ ownership: الفكرة الكبرى في Rust'
+    file: lessons/m3-l1.md
+    minutes: 55
+  - id: m3-l2
+    title: الـ borrowing والـ references والـ slices
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'اكتب `fn longest_word(text: &str) -> &str` و`fn capitalize_all(words: &mut Vec<String>)`. وفي main بيّن أن النص
+      الأصلي ما زال قابلًا للاستخدام بعد استدعاء longest_word. ثم اكتب سطرًا لا يُترجم بسبب النقل، وضعه في تعليق، والصق رسالة
+      خطأ الـ compiler تحته. ارفع الكود.'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح قواعد الـ ownership الثلاث وقاعدة الـ borrowing بكلماتك، ولماذا `let s2 = s1;` تجعل s1 غير قابلة للاستخدام
+      مع String لكن ليس مع i32.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الـ Structs والـ Enums'
+  lessons:
+  - id: m4-l1
+    title: الـ Structs والـ functions المرتبطة بها (methods)
+    file: lessons/m4-l1.md
+    minutes: 50
+  - id: m4-l2
+    title: الـ Enums وmatch وOption
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'صمّم جراج سيارات: struct ‏`Car` ‏(اللوحة، الساعات)، وenum ‏`Spot { Empty, Taken(Car), Reserved(String) }`، وfunctions
+      للركن والمغادرة (ترجع Option<Car>) وحساب الرسوم. اطبع حالة 5 أماكن بـ match. ارفع الكود ولقطة شاشة.'
+  - id: m4-explain
+    type: explain
+    prompt: اشرح كيف يحل Option محل null، ولماذا يجبرك الـ compiler على التعامل مع None.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: المجموعات والأخطاء'
+  lessons:
+  - id: m5-l1
+    title: ‏Vec وString وHashMap
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: 'الأخطاء: Result و? وpanic'
+    file: lessons/m5-l2.md
+    minutes: 50
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: اقرأ نصًا قصيرًا من ملف (fs::read_to_string، مع ? وmain ترجع Result)، وعدّ تكرار الكلمات بـ HashMap، واطبع أكثر
+      5 كلمات تكرارًا مرتبة. تعامل مع الملف غير الموجود برسالة ودودة. ارفع الكود ولقطة شاشة.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح ماذا تفعل العملية ?، ومتى يكون panic هو الاختيار الصحيح بدل إرجاع Result.
+    min_words: 50
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'الوحدة 6: الـ Traits والوحدات ومشروع'
+  lessons:
+  - id: m6-l1
+    title: الـ Traits والـ Generics والوحدات والاختبارات
+    file: lessons/m6-l1.md
+    minutes: 55
+  - id: m6-l2
+    title: 'مشروع: متتبّع مصروفات'
+    file: lessons/m6-l2.md
+    minutes: 70
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: نفّذ اثنتين على الأقل من مهام 'دورك' في المشروع، منها اختبارات parse_command. ارفع ملفات src ولقطة شاشة لـ `cargo
+      test` ناجحة والبرنامج يعمل.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح الفرق بين function عامة بقيد trait وبين Vec<Box<dyn Trait>>، ومتى تستخدم كلًا منهما.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

@@ -1,0 +1,125 @@
+q1:
+  right:
+  - c
+  - d
+  why: الـ vias تربط الطبقات.
+q2:
+  right:
+  - a
+  - e
+  why: الـ symbols للـ schematics.
+q3:
+  right:
+  - d
+  - e
+  why: إنه الطبقة الملونة.
+q4:
+  right:
+  - a
+  - c
+  why: ‏Schematic، ‏footprints، ‏layout، فحوص، ملفات.
+q5:
+  right:
+  - b
+  - c
+  why: ‏Gerber لكل طبقة، زائد drill.
+q6:
+  right:
+  - c
+  - d
+  why: التقاطعات بدون نقطة غير متصلة.
+q7:
+  right:
+  - a
+  - e
+  why: الـ labels تحل محل الأسلاك الطويلة.
+q8:
+  right:
+  - c
+  - d
+  why: KiCad لا يرى البطارية.
+q9:
+  right:
+  - a
+  - e
+  why: قارن برسم الـ datasheet.
+q10:
+  right:
+  - a
+  - c
+  why: ‏0805 مريح مع الملقاط.
+q11:
+  right:
+  - a
+  - b
+  why: ثم الـ chip الرئيسي ومساعدوه.
+q12:
+  right:
+  - a
+  - d
+  why: حلقة قصيرة.
+q13:
+  right:
+  - b
+  - c
+  why: مثلًا Power ‏0.5 mm، والافتراضي 0.25 mm.
+q14:
+  right:
+  - b
+  - c
+  why: اتركها مفعّلة.
+q15:
+  right:
+  - a
+  - e
+  why: مشاكل التوصيل مشاكل وضع.
+q16:
+  right:
+  - b
+  - d
+  why: اترك هامشًا.
+q17:
+  right:
+  - a
+  - d
+  why: الـ pours القديمة تخفي أخطاء.
+q18:
+  right:
+  - c
+  - d
+  why: عشر دقائق توفر أسبوعين.
+q19:
+  right:
+  - c
+  - e
+  why: زائد الـ Gerbers.
+q20:
+  right:
+  - c
+  - e
+  why: رخيص وسريع.
+q21:
+  right:
+  - c
+  - d
+  why: يبقى الـ board مسطحًا.
+q22:
+  right:
+  - b
+  - e
+  why: الوصلات الجيدة ناعمة ولامعة.
+q23:
+  right:
+  - b
+  - e
+  why: انظر، ثم قِس.
+q24:
+  right:
+  - b
+  - e
+  why: من 50 إلى 100 mA معتاد.
+q25:
+  right:
+  - b
+  - e
+  why: تقريبًا كل board له إصدار ثانٍ.

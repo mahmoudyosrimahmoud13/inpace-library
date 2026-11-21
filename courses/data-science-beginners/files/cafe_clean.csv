@@ -1,0 +1,1453 @@
+order_id,date,time,branch,item,category,size,quantity,unit_price,payment,customer_type,rating,temp_c,month,weekday,hour,revenue
+10001,2025-01-01,12:47,Zamalek,tea,drink,medium,2,34,cash,returning,4.0,10.5,1,Wednesday,12,68
+10002,2025-01-01,15:26,Maadi,hot chocolate,drink,large,2,72,cash,new,3.0,10.5,1,Wednesday,15,144
+10003,2025-01-01,16:00,Maadi,hot chocolate,drink,medium,2,60,cash,new,,10.5,1,Wednesday,16,120
+10004,2025-01-01,18:12,Maadi,hot chocolate,drink,medium,3,60,cash,returning,3.0,10.5,1,Wednesday,18,180
+10006,2025-01-02,16:29,Heliopolis,tea,drink,medium,2,27,card,returning,4.0,11.0,1,Thursday,16,54
+10005,2025-01-02,19:13,Maadi,tea,drink,medium,1,30,card,new,5.0,11.0,1,Thursday,19,30
+10007,2025-01-03,10:54,Zamalek,hot chocolate,drink,small,1,59,cash,returning,3.0,12.0,1,Friday,10,59
+10009,2025-01-03,11:40,Heliopolis,tea,drink,medium,1,27,cash,new,5.0,12.0,1,Friday,11,27
+10008,2025-01-03,14:24,Zamalek,tea,drink,medium,2,34,wallet,returning,3.0,12.0,1,Friday,14,68
+10011,2025-01-04,07:13,Zamalek,hot chocolate,drink,large,3,83,wallet,new,5.0,10.6,1,Saturday,7,249
+10010,2025-01-04,09:11,Zamalek,basbousa,dessert,regular,1,46,card,returning,3.0,10.6,1,Saturday,9,46
+10013,2025-01-04,11:05,Heliopolis,tea,drink,small,1,23,cash,returning,4.0,10.6,1,Saturday,11,23
+10012,2025-01-04,13:51,Maadi,espresso,drink,medium,2,45,cash,returning,,10.6,1,Saturday,13,90
+10015,2025-01-06,07:43,Zamalek,cheese sandwich,food,regular,2,98,cash,returning,,13.9,1,Monday,7,196
+10014,2025-01-06,16:57,Zamalek,croissant,food,regular,1,57,card,returning,5.0,13.9,1,Monday,16,57
+10017,2025-01-07,13:25,Heliopolis,brownie,dessert,regular,1,50,unknown,returning,5.0,13.7,1,Tuesday,13,50
+10016,2025-01-07,14:06,Zamalek,cappuccino,drink,medium,2,75,unknown,new,5.0,13.7,1,Tuesday,14,150
+10021,2025-01-08,11:19,Maadi,cheese sandwich,food,regular,1,85,card,returning,5.0,9.1,1,Wednesday,11,85
+10022,2025-01-08,12:10,Heliopolis,basbousa,dessert,regular,2,36,cash,returning,4.0,9.1,1,Wednesday,12,72
+10020,2025-01-08,12:58,Maadi,brownie,dessert,regular,1,55,card,returning,5.0,9.1,1,Wednesday,12,55
+10019,2025-01-08,15:10,Maadi,basbousa,dessert,regular,1,40,cash,returning,3.0,9.1,1,Wednesday,15,40
+10018,2025-01-08,23:01,Zamalek,espresso,drink,large,2,62,card,new,,9.1,1,Wednesday,23,124
+10025,2025-01-09,10:18,Zamalek,hot chocolate,drink,medium,1,69,wallet,returning,4.0,11.3,1,Thursday,10,69
+10024,2025-01-09,12:35,Zamalek,tea,drink,large,1,41,cash,returning,4.0,11.3,1,Thursday,12,41
+10023,2025-01-09,14:52,Zamalek,latte,drink,large,1,97,unknown,returning,4.0,11.3,1,Thursday,14,97
+10026,2025-01-10,12:40,Zamalek,tea,drink,medium,2,34,cash,returning,,10.8,1,Friday,12,68
+10029,2025-01-10,17:38,Heliopolis,hot chocolate,drink,large,1,65,card,new,4.0,10.8,1,Friday,17,65
+10027,2025-01-10,19:04,Maadi,espresso,drink,medium,1,45,cash,returning,5.0,10.8,1,Friday,19,45
+10030,2025-01-10,21:56,Heliopolis,hot chocolate,drink,small,1,46,cash,returning,,10.8,1,Friday,21,46
+10028,2025-01-10,22:37,Maadi,cappuccino,drink,large,1,78,cash,returning,3.0,10.8,1,Friday,22,78
+10031,2025-01-11,07:10,Zamalek,falafel wrap,food,regular,3,69,card,returning,4.0,8.5,1,Saturday,7,207
+10036,2025-01-11,07:31,Heliopolis,tea,drink,medium,2,27,cash,returning,4.0,8.5,1,Saturday,7,54
+10034,2025-01-11,10:23,Maadi,tea,drink,medium,2,30,cash,new,4.0,8.5,1,Saturday,10,60
+10035,2025-01-11,11:31,Heliopolis,latte,drink,medium,2,63,cash,returning,5.0,8.5,1,Saturday,11,126
+10032,2025-01-11,17:54,Maadi,mint lemonade,drink,medium,1,55,card,returning,5.0,8.5,1,Saturday,17,55
+10033,2025-01-11,22:42,Maadi,cappuccino,drink,medium,2,65,cash,new,4.0,8.5,1,Saturday,22,130
+10040,2025-01-12,07:17,Heliopolis,cheese sandwich,food,regular,2,76,cash,returning,,13.3,1,Sunday,7,152
+10039,2025-01-12,10:08,Heliopolis,brownie,dessert,regular,2,50,cash,returning,5.0,13.3,1,Sunday,10,100
+10038,2025-01-12,13:44,Heliopolis,cheese sandwich,food,regular,1,76,card,new,3.0,13.3,1,Sunday,13,76
+10037,2025-01-12,14:42,Maadi,cheese sandwich,food,regular,2,85,wallet,returning,3.0,13.3,1,Sunday,14,170
+10041,2025-01-13,10:05,Zamalek,basbousa,dessert,regular,1,46,cash,returning,5.0,12.9,1,Monday,10,46
+10042,2025-01-13,10:29,Zamalek,brownie,dessert,regular,1,63,cash,returning,3.0,12.9,1,Monday,10,63
+10043,2025-01-13,14:01,Zamalek,iced latte,drink,medium,1,86,unknown,new,3.0,12.9,1,Monday,14,86
+10045,2025-01-14,13:13,Heliopolis,croissant,food,regular,3,45,cash,new,,10.5,1,Tuesday,13,135
+10044,2025-01-14,17:22,Zamalek,falafel wrap,food,regular,1,69,cash,returning,5.0,10.5,1,Tuesday,17,69
+10046,2025-01-15,19:12,Maadi,falafel wrap,food,regular,3,60,wallet,returning,4.0,11.6,1,Wednesday,19,180
+10047,2025-01-16,16:00,Zamalek,croissant,food,regular,1,57,card,returning,4.0,12.5,1,Thursday,16,57
+10051,2025-01-17,11:43,Heliopolis,cappuccino,drink,large,3,70,cash,returning,4.0,10.2,1,Friday,11,210
+10048,2025-01-17,13:07,Zamalek,cappuccino,drink,large,1,90,card,new,4.0,10.2,1,Friday,13,90
+10050,2025-01-17,16:13,Zamalek,falafel wrap,food,regular,2,69,card,returning,5.0,10.2,1,Friday,16,138
+10049,2025-01-17,17:28,Zamalek,mint lemonade,drink,medium,2,63,card,new,3.0,10.2,1,Friday,17,126
+10053,2025-01-18,13:49,Heliopolis,brownie,dessert,regular,1,50,cash,returning,5.0,13.6,1,Saturday,13,50
+10052,2025-01-18,14:41,Zamalek,cappuccino,drink,medium,1,75,cash,returning,3.0,13.6,1,Saturday,14,75
+10054,2025-01-20,14:31,Maadi,cappuccino,drink,medium,2,65,card,returning,4.0,15.1,1,Monday,14,130
+10055,2025-01-20,14:52,Heliopolis,cappuccino,drink,small,1,50,wallet,new,3.0,15.1,1,Monday,14,50
+10056,2025-01-22,10:29,Maadi,hot chocolate,drink,large,2,72,card,new,5.0,10.0,1,Wednesday,10,144
+10057,2025-01-22,10:55,Maadi,basbousa,dessert,regular,2,40,cash,returning,5.0,10.0,1,Wednesday,10,80
+10058,2025-01-22,23:43,Heliopolis,cheesecake,dessert,regular,1,81,wallet,returning,,10.0,1,Wednesday,23,81
+10059,2025-01-23,12:50,Maadi,croissant,food,regular,1,50,cash,returning,,11.2,1,Thursday,12,50
+10064,2025-01-24,07:24,Maadi,croissant,food,regular,1,50,cash,returning,4.0,9.6,1,Friday,7,50
+10061,2025-01-24,09:21,Zamalek,hot chocolate,drink,large,2,83,card,returning,5.0,9.6,1,Friday,9,166
+10060,2025-01-24,10:36,Zamalek,hot chocolate,drink,large,1,83,card,new,4.0,9.6,1,Friday,10,83
+10063,2025-01-24,15:03,Maadi,iced latte,drink,medium,2,75,card,returning,4.0,9.6,1,Friday,15,150
+10062,2025-01-24,16:40,Zamalek,cheesecake,dessert,regular,3,103,wallet,returning,3.0,9.6,1,Friday,16,309
+10066,2025-01-25,12:30,Zamalek,falafel wrap,food,regular,2,69,wallet,returning,4.0,11.6,1,Saturday,12,138
+10065,2025-01-25,14:46,Zamalek,latte,drink,small,1,68,wallet,new,3.0,11.6,1,Saturday,14,68
+10067,2025-01-25,17:05,Heliopolis,basbousa,dessert,regular,3,36,card,returning,5.0,11.6,1,Saturday,17,108
+10068,2025-01-26,16:48,Zamalek,espresso,drink,medium,2,52,cash,returning,5.0,14.8,1,Sunday,16,104
+10069,2025-01-26,21:52,Heliopolis,tea,drink,medium,3,27,wallet,returning,3.0,14.8,1,Sunday,21,81
+10070,2025-01-26,22:10,Heliopolis,falafel wrap,food,regular,2,54,wallet,returning,5.0,14.8,1,Sunday,22,108
+10071,2025-01-27,09:07,Maadi,brownie,dessert,regular,1,55,wallet,returning,4.0,13.8,1,Monday,9,55
+10073,2025-01-27,13:59,Heliopolis,hot chocolate,drink,medium,1,54,cash,returning,3.0,13.8,1,Monday,13,54
+10072,2025-01-27,14:13,Maadi,basbousa,dessert,regular,1,40,wallet,returning,4.0,13.8,1,Monday,14,40
+10076,2025-01-28,10:04,Zamalek,basbousa,dessert,regular,1,46,card,returning,4.0,12.2,1,Tuesday,10,46
+10074,2025-01-28,11:21,Zamalek,mint lemonade,drink,small,1,54,cash,returning,4.0,12.2,1,Tuesday,11,54
+10075,2025-01-28,11:32,Zamalek,croissant,food,regular,2,57,wallet,returning,3.0,12.2,1,Tuesday,11,114
+10077,2025-01-28,13:23,Maadi,falafel wrap,food,regular,1,60,wallet,returning,4.0,12.2,1,Tuesday,13,60
+10081,2025-01-29,12:17,Heliopolis,latte,drink,medium,1,63,wallet,new,,12.0,1,Wednesday,12,63
+10078,2025-01-29,13:58,Zamalek,tea,drink,small,3,29,wallet,new,4.0,12.0,1,Wednesday,13,87
+10079,2025-01-29,15:38,Maadi,cappuccino,drink,large,2,78,wallet,returning,3.0,12.0,1,Wednesday,15,156
+10080,2025-01-29,18:43,Maadi,cheesecake,dessert,regular,1,90,card,returning,4.0,12.0,1,Wednesday,18,90
+10082,2025-01-30,11:31,Zamalek,croissant,food,regular,2,57,cash,returning,5.0,17.1,1,Thursday,11,114
+10084,2025-01-30,12:57,Heliopolis,cheese sandwich,food,regular,2,76,cash,returning,5.0,17.1,1,Thursday,12,152
+10087,2025-01-30,15:50,Heliopolis,falafel wrap,food,regular,1,54,cash,returning,3.0,17.1,1,Thursday,15,54
+10083,2025-01-30,17:13,Maadi,basbousa,dessert,regular,3,40,cash,returning,5.0,17.1,1,Thursday,17,120
+10086,2025-01-30,17:44,Heliopolis,croissant,food,regular,3,45,card,returning,4.0,17.1,1,Thursday,17,135
+10085,2025-01-30,18:55,Heliopolis,croissant,food,regular,1,45,card,returning,4.0,17.1,1,Thursday,18,45
+10088,2025-01-31,13:13,Maadi,hot chocolate,drink,medium,2,60,card,new,4.0,15.8,1,Friday,13,120
+10090,2025-01-31,15:59,Heliopolis,brownie,dessert,regular,1,50,cash,new,4.0,15.8,1,Friday,15,50
+10091,2025-01-31,17:15,Heliopolis,brownie,dessert,regular,1,50,cash,returning,4.0,15.8,1,Friday,17,50
+10089,2025-01-31,18:44,Heliopolis,latte,drink,medium,2,63,wallet,returning,5.0,15.8,1,Friday,18,126
+10092,2025-02-01,17:53,Maadi,cheese sandwich,food,regular,3,85,wallet,returning,4.0,12.5,2,Saturday,17,255
+10095,2025-02-02,07:52,Heliopolis,tea,drink,medium,2,27,unknown,returning,4.0,12.1,2,Sunday,7,54
+10094,2025-02-02,08:02,Heliopolis,mint lemonade,drink,large,1,59,wallet,returning,4.0,12.1,2,Sunday,8,59
+10093,2025-02-02,16:36,Maadi,cheese sandwich,food,regular,2,85,card,new,4.0,12.1,2,Sunday,16,170
+10096,2025-02-03,13:08,Maadi,cappuccino,drink,large,3,78,card,returning,2.0,12.8,2,Monday,13,234
+10097,2025-02-03,13:30,Heliopolis,croissant,food,regular,3,45,card,new,5.0,12.8,2,Monday,13,135
+10100,2025-02-04,17:37,Zamalek,falafel wrap,food,regular,1,69,cash,returning,3.0,14.3,2,Tuesday,17,69
+10099,2025-02-04,17:44,Zamalek,tea,drink,large,3,41,wallet,returning,4.0,14.3,2,Tuesday,17,123
+10098,2025-02-04,20:21,Zamalek,iced latte,drink,medium,2,86,card,returning,4.0,14.3,2,Tuesday,20,172
+10101,2025-02-04,22:21,Maadi,basbousa,dessert,regular,2,40,cash,new,3.0,14.3,2,Tuesday,22,80
+10102,2025-02-05,07:21,Heliopolis,brownie,dessert,regular,1,50,wallet,returning,5.0,14.3,2,Wednesday,7,50
+10103,2025-02-06,14:14,Heliopolis,tea,drink,medium,1,27,cash,returning,5.0,15.4,2,Thursday,14,27
+10104,2025-02-07,17:57,Zamalek,cheese sandwich,food,regular,1,98,cash,new,5.0,9.3,2,Friday,17,98
+10105,2025-02-08,16:25,Maadi,tea,drink,medium,2,30,card,returning,5.0,15.1,2,Saturday,16,60
+10108,2025-02-09,07:33,Heliopolis,cheese sandwich,food,regular,3,76,cash,returning,4.0,13.2,2,Sunday,7,228
+10107,2025-02-09,11:58,Heliopolis,hot chocolate,drink,medium,2,54,cash,returning,4.0,13.2,2,Sunday,11,108
+10106,2025-02-09,14:43,Zamalek,espresso,drink,large,1,62,cash,returning,,13.2,2,Sunday,14,62
+10109,2025-02-10,16:47,Zamalek,basbousa,dessert,regular,3,46,cash,returning,4.0,12.0,2,Monday,16,138
+10111,2025-02-10,18:00,Heliopolis,brownie,dessert,regular,1,50,cash,returning,4.0,12.0,2,Monday,18,50
+10110,2025-02-10,19:48,Zamalek,tea,drink,medium,2,34,card,returning,,12.0,2,Monday,19,68
+10112,2025-02-11,13:56,Zamalek,espresso,drink,medium,2,52,wallet,new,3.0,14.0,2,Tuesday,13,104
+10115,2025-02-12,09:04,Heliopolis,croissant,food,regular,3,45,wallet,new,2.0,13.9,2,Wednesday,9,135
+10113,2025-02-12,16:03,Maadi,croissant,food,regular,2,50,wallet,returning,4.0,13.9,2,Wednesday,16,100
+10114,2025-02-12,16:17,Maadi,cappuccino,drink,medium,1,65,card,returning,4.0,13.9,2,Wednesday,16,65
+10116,2025-02-13,12:41,Zamalek,tea,drink,medium,2,34,cash,returning,5.0,14.3,2,Thursday,12,68
+10118,2025-02-13,17:11,Maadi,brownie,dessert,regular,1,55,cash,new,3.0,14.3,2,Thursday,17,55
+10117,2025-02-13,18:21,Maadi,brownie,dessert,regular,3,55,cash,returning,4.0,14.3,2,Thursday,18,165
+10119,2025-02-14,09:36,Maadi,espresso,drink,small,2,38,cash,new,4.0,15.6,2,Friday,9,76
+10121,2025-02-14,11:03,Heliopolis,brownie,dessert,regular,2,50,card,new,4.0,15.6,2,Friday,11,100
+10120,2025-02-14,14:22,Maadi,cheesecake,dessert,regular,1,90,cash,new,4.0,15.6,2,Friday,14,90
+10122,2025-02-15,13:12,Zamalek,cappuccino,drink,medium,2,75,wallet,returning,5.0,14.4,2,Saturday,13,150
+10123,2025-02-15,16:30,Maadi,latte,drink,medium,1,70,card,new,,14.4,2,Saturday,16,70
+10124,2025-02-16,15:29,Maadi,cheese sandwich,food,regular,2,85,wallet,returning,4.0,11.2,2,Sunday,15,170
+10125,2025-02-16,15:41,Heliopolis,croissant,food,regular,2,45,cash,new,4.0,11.2,2,Sunday,15,90
+10127,2025-02-17,11:04,Maadi,cheese sandwich,food,regular,2,85,card,new,5.0,14.0,2,Monday,11,170
+10126,2025-02-17,17:43,Maadi,mint lemonade,drink,medium,2,55,card,returning,2.0,14.0,2,Monday,17,110
+10128,2025-02-19,13:31,Maadi,croissant,food,regular,2,50,wallet,returning,5.0,15.8,2,Wednesday,13,100
+10129,2025-02-20,11:44,Zamalek,tea,drink,small,2,29,card,returning,4.0,13.2,2,Thursday,11,58
+10130,2025-02-20,17:42,Maadi,tea,drink,medium,2,30,cash,returning,4.0,13.2,2,Thursday,17,60
+10131,2025-02-21,15:39,Maadi,cheesecake,dessert,regular,3,90,card,new,2.0,9.5,2,Friday,15,270
+10134,2025-02-22,09:05,Zamalek,cappuccino,drink,large,3,90,wallet,new,3.0,13.5,2,Saturday,9,270
+10138,2025-02-22,11:16,Heliopolis,cheese sandwich,food,regular,1,76,cash,returning,5.0,13.5,2,Saturday,11,76
+10132,2025-02-22,15:05,Zamalek,espresso,drink,medium,1,52,wallet,new,3.0,13.5,2,Saturday,15,52
+10133,2025-02-22,15:45,Zamalek,brownie,dessert,regular,3,63,card,returning,4.0,13.5,2,Saturday,15,189
+10136,2025-02-22,16:44,Heliopolis,cappuccino,drink,medium,2,58,cash,returning,4.0,13.5,2,Saturday,16,116
+10137,2025-02-22,18:30,Heliopolis,cappuccino,drink,large,3,70,card,returning,5.0,13.5,2,Saturday,18,210
+10135,2025-02-22,22:26,Maadi,hot chocolate,drink,small,2,51,card,returning,4.0,13.5,2,Saturday,22,102
+10139,2025-02-23,13:04,Zamalek,croissant,food,regular,1,57,cash,returning,4.0,15.8,2,Sunday,13,57
+10141,2025-02-24,07:14,Zamalek,falafel wrap,food,regular,1,69,cash,returning,4.0,14.0,2,Monday,7,69
+10145,2025-02-24,09:11,Heliopolis,tea,drink,large,3,32,wallet,returning,4.0,14.0,2,Monday,9,96
+10143,2025-02-24,11:18,Heliopolis,cappuccino,drink,large,2,70,wallet,returning,4.0,14.0,2,Monday,11,140
+10142,2025-02-24,11:39,Maadi,iced latte,drink,large,3,90,wallet,returning,5.0,14.0,2,Monday,11,270
+10144,2025-02-24,11:50,Heliopolis,cheese sandwich,food,regular,3,76,wallet,returning,3.0,14.0,2,Monday,11,228
+10140,2025-02-24,15:22,Zamalek,falafel wrap,food,regular,3,69,card,returning,4.0,14.0,2,Monday,15,207
+10146,2025-02-25,11:49,Zamalek,basbousa,dessert,regular,1,46,card,new,3.0,16.9,2,Tuesday,11,46
+10148,2025-02-25,15:19,Heliopolis,cappuccino,drink,small,3,50,cash,returning,4.0,16.9,2,Tuesday,15,150
+10147,2025-02-25,19:16,Maadi,espresso,drink,medium,1,45,cash,returning,4.0,16.9,2,Tuesday,19,45
+10151,2025-02-26,07:38,Maadi,tea,drink,large,1,36,cash,new,4.0,15.3,2,Wednesday,7,36
+10153,2025-02-26,07:42,Heliopolis,tea,drink,large,2,32,card,returning,4.0,15.3,2,Wednesday,7,64
+10152,2025-02-26,13:15,Heliopolis,hot chocolate,drink,large,1,65,cash,returning,4.0,15.3,2,Wednesday,13,65
+10149,2025-02-26,17:46,Zamalek,tea,drink,large,1,41,card,new,3.0,15.3,2,Wednesday,17,41
+10150,2025-02-26,18:18,Maadi,cappuccino,drink,large,1,78,card,new,4.0,15.3,2,Wednesday,18,78
+10156,2025-02-27,11:42,Heliopolis,espresso,drink,medium,1,40,wallet,returning,3.0,16.7,2,Thursday,11,40
+10154,2025-02-27,12:17,Zamalek,hot chocolate,drink,small,3,59,card,new,2.0,16.7,2,Thursday,12,177
+10155,2025-02-27,16:03,Zamalek,basbousa,dessert,regular,2,46,card,new,5.0,16.7,2,Thursday,16,92
+10158,2025-02-28,13:05,Heliopolis,espresso,drink,small,1,34,card,returning,3.0,17.0,2,Friday,13,34
+10157,2025-02-28,13:39,Zamalek,basbousa,dessert,regular,1,46,cash,new,5.0,17.0,2,Friday,13,46
+10162,2025-03-01,09:49,Heliopolis,cheesecake,dessert,regular,3,81,cash,returning,4.0,13.8,3,Saturday,9,243
+10159,2025-03-01,16:03,Zamalek,hot chocolate,drink,small,1,59,cash,returning,,13.8,3,Saturday,16,59
+10161,2025-03-01,16:56,Zamalek,espresso,drink,small,2,44,card,returning,5.0,13.8,3,Saturday,16,88
+10160,2025-03-01,18:05,Zamalek,espresso,drink,medium,2,52,cash,returning,,13.8,3,Saturday,18,104
+10163,2025-03-03,07:29,Zamalek,brownie,dessert,regular,1,63,wallet,new,4.0,14.4,3,Monday,7,63
+10165,2025-03-03,12:08,Maadi,brownie,dessert,regular,2,55,cash,new,4.0,14.4,3,Monday,12,110
+10164,2025-03-03,15:22,Zamalek,espresso,drink,medium,2,52,cash,returning,5.0,14.4,3,Monday,15,104
+10166,2025-03-03,20:27,Maadi,basbousa,dessert,regular,1,40,cash,new,3.0,14.4,3,Monday,20,40
+10167,2025-03-04,12:18,Heliopolis,cheese sandwich,food,regular,3,76,wallet,returning,5.0,17.8,3,Tuesday,12,228
+10168,2025-03-04,12:44,Heliopolis,basbousa,dessert,regular,1,36,card,new,3.0,17.8,3,Tuesday,12,36
+10169,2025-03-05,09:13,Zamalek,tea,drink,medium,2,34,cash,returning,5.0,12.8,3,Wednesday,9,68
+10170,2025-03-05,13:20,Maadi,iced latte,drink,medium,3,75,card,returning,4.0,12.8,3,Wednesday,13,225
+10171,2025-03-06,14:10,Maadi,falafel wrap,food,regular,3,60,cash,new,2.0,16.2,3,Thursday,14,180
+10173,2025-03-07,11:56,Maadi,basbousa,dessert,regular,2,40,card,new,5.0,16.4,3,Friday,11,80
+10176,2025-03-07,14:24,Heliopolis,falafel wrap,food,regular,2,54,cash,returning,5.0,16.4,3,Friday,14,108
+10172,2025-03-07,15:18,Zamalek,hot chocolate,drink,medium,2,69,cash,new,3.0,16.4,3,Friday,15,138
+10174,2025-03-07,17:31,Maadi,brownie,dessert,regular,1,55,cash,returning,5.0,16.4,3,Friday,17,55
+10175,2025-03-07,17:46,Heliopolis,tea,drink,medium,1,27,cash,returning,4.0,16.4,3,Friday,17,27
+10179,2025-03-08,10:16,Zamalek,tea,drink,small,1,29,cash,new,3.0,14.8,3,Saturday,10,29
+10181,2025-03-08,11:26,Heliopolis,croissant,food,regular,2,45,cash,returning,3.0,14.8,3,Saturday,11,90
+10177,2025-03-08,14:54,Zamalek,tea,drink,large,1,41,cash,returning,3.0,14.8,3,Saturday,14,41
+10180,2025-03-08,16:26,Maadi,brownie,dessert,regular,2,55,card,new,3.0,14.8,3,Saturday,16,110
+10178,2025-03-08,17:37,Zamalek,tea,drink,large,1,41,card,returning,,14.8,3,Saturday,17,41
+10183,2025-03-10,11:51,Heliopolis,espresso,drink,medium,1,40,card,returning,4.0,15.0,3,Monday,11,40
+10182,2025-03-10,17:37,Heliopolis,espresso,drink,medium,1,40,cash,new,3.0,15.0,3,Monday,17,40
+10184,2025-03-11,11:16,Heliopolis,cheesecake,dessert,regular,1,81,card,returning,4.0,17.5,3,Tuesday,11,81
+10185,2025-03-13,17:32,Maadi,cheesecake,dessert,regular,1,90,card,new,3.0,19.3,3,Thursday,17,90
+10191,2025-03-14,10:24,Heliopolis,cappuccino,drink,large,1,70,card,returning,4.0,17.0,3,Friday,10,70
+10192,2025-03-14,10:25,Heliopolis,hot chocolate,drink,small,2,46,wallet,returning,4.0,17.0,3,Friday,10,92
+10188,2025-03-14,11:30,Maadi,espresso,drink,medium,1,45,cash,returning,4.0,17.0,3,Friday,11,45
+10186,2025-03-14,11:51,Zamalek,tea,drink,medium,1,34,cash,returning,4.0,17.0,3,Friday,11,34
+10193,2025-03-14,13:01,Heliopolis,tea,drink,large,2,32,cash,returning,3.0,17.0,3,Friday,13,64
+10189,2025-03-14,14:44,Maadi,tea,drink,small,2,26,card,returning,5.0,17.0,3,Friday,14,52
+10190,2025-03-14,14:59,Maadi,cappuccino,drink,medium,1,65,card,returning,5.0,17.0,3,Friday,14,65
+10194,2025-03-14,15:08,Heliopolis,latte,drink,small,2,54,cash,returning,2.0,17.0,3,Friday,15,108
+10187,2025-03-14,17:59,Zamalek,croissant,food,regular,3,57,card,new,5.0,17.0,3,Friday,17,171
+10195,2025-03-16,20:23,Heliopolis,falafel wrap,food,regular,3,54,card,returning,4.0,14.5,3,Sunday,20,162
+10200,2025-03-17,12:18,Maadi,tea,drink,small,2,26,card,new,4.0,14.2,3,Monday,12,52
+10201,2025-03-17,13:20,Heliopolis,hot chocolate,drink,medium,3,54,cash,returning,4.0,14.2,3,Monday,13,162
+10197,2025-03-17,13:30,Zamalek,hot chocolate,drink,medium,2,69,cash,returning,,14.2,3,Monday,13,138
+10196,2025-03-17,14:43,Zamalek,brownie,dessert,regular,2,63,wallet,returning,5.0,14.2,3,Monday,14,126
+10199,2025-03-17,19:18,Zamalek,cheese sandwich,food,regular,1,98,cash,new,3.0,14.2,3,Monday,19,98
+10198,2025-03-17,20:41,Zamalek,cheesecake,dessert,regular,1,103,wallet,new,3.0,14.2,3,Monday,20,103
+10203,2025-03-18,12:21,Heliopolis,brownie,dessert,regular,2,50,cash,returning,5.0,14.8,3,Tuesday,12,100
+10202,2025-03-18,13:38,Zamalek,espresso,drink,medium,2,52,cash,returning,4.0,14.8,3,Tuesday,13,104
+10208,2025-03-19,11:57,Heliopolis,falafel wrap,food,regular,1,54,card,returning,4.0,16.6,3,Wednesday,11,54
+10206,2025-03-19,13:16,Zamalek,croissant,food,regular,1,57,card,returning,3.0,16.6,3,Wednesday,13,57
+10204,2025-03-19,13:59,Zamalek,tea,drink,medium,2,34,cash,returning,3.0,16.6,3,Wednesday,13,68
+10207,2025-03-19,16:23,Heliopolis,brownie,dessert,regular,2,50,wallet,new,5.0,16.6,3,Wednesday,16,100
+10205,2025-03-19,18:54,Zamalek,espresso,drink,medium,3,52,card,returning,4.0,16.6,3,Wednesday,18,156
+10209,2025-03-20,11:26,Zamalek,croissant,food,regular,2,57,cash,new,2.0,15.8,3,Thursday,11,114
+10211,2025-03-20,12:29,Heliopolis,latte,drink,medium,2,63,cash,returning,3.0,15.8,3,Thursday,12,126
+10210,2025-03-20,15:14,Maadi,basbousa,dessert,regular,2,40,cash,returning,,15.8,3,Thursday,15,80
+10212,2025-03-21,12:18,Zamalek,croissant,food,regular,1,57,cash,returning,4.0,16.3,3,Friday,12,57
+10213,2025-03-21,15:17,Maadi,iced latte,drink,large,3,90,cash,new,3.0,16.3,3,Friday,15,270
+10214,2025-03-21,16:08,Maadi,cheese sandwich,food,regular,1,85,wallet,returning,5.0,16.3,3,Friday,16,85
+10219,2025-03-22,09:26,Heliopolis,croissant,food,regular,2,45,card,returning,5.0,21.1,3,Saturday,9,90
+10216,2025-03-22,09:38,Maadi,tea,drink,small,2,26,card,new,3.0,21.1,3,Saturday,9,52
+10215,2025-03-22,09:58,Zamalek,falafel wrap,food,regular,1,69,cash,new,3.0,21.1,3,Saturday,9,69
+10217,2025-03-22,14:13,Heliopolis,cheesecake,dessert,regular,1,81,wallet,returning,5.0,21.1,3,Saturday,14,81
+10218,2025-03-22,16:09,Heliopolis,cheesecake,dessert,regular,1,81,cash,returning,5.0,21.1,3,Saturday,16,81
+10221,2025-03-22,16:25,Heliopolis,basbousa,dessert,regular,2,36,card,returning,4.0,21.1,3,Saturday,16,72
+10220,2025-03-22,17:38,Heliopolis,latte,drink,large,1,76,cash,returning,,21.1,3,Saturday,17,76
+10222,2025-03-24,10:09,Maadi,tea,drink,medium,2,30,cash,new,4.0,18.3,3,Monday,10,60
+10224,2025-03-24,12:21,Maadi,latte,drink,medium,3,70,cash,returning,4.0,18.3,3,Monday,12,210
+10223,2025-03-24,18:17,Maadi,falafel wrap,food,regular,1,60,cash,returning,,18.3,3,Monday,18,60
+10226,2025-03-25,14:45,Heliopolis,tea,drink,small,2,23,card,returning,3.0,17.9,3,Tuesday,14,46
+10225,2025-03-25,20:32,Maadi,cheese sandwich,food,regular,3,85,wallet,new,3.0,17.9,3,Tuesday,20,255
+10227,2025-03-26,09:40,Zamalek,cheesecake,dessert,regular,2,103,cash,new,4.0,18.4,3,Wednesday,9,206
+10229,2025-03-26,12:10,Zamalek,mint lemonade,drink,medium,1,63,cash,returning,3.0,18.4,3,Wednesday,12,63
+10230,2025-03-26,16:56,Maadi,cappuccino,drink,medium,1,65,card,returning,5.0,18.4,3,Wednesday,16,65
+10231,2025-03-26,17:07,Heliopolis,latte,drink,medium,1,63,card,new,4.0,18.4,3,Wednesday,17,63
+10228,2025-03-26,20:52,Zamalek,espresso,drink,small,1,44,cash,returning,5.0,18.4,3,Wednesday,20,44
+10235,2025-03-27,09:24,Maadi,hot chocolate,drink,large,1,72,cash,returning,4.0,23.4,3,Thursday,9,72
+10233,2025-03-27,11:19,Zamalek,basbousa,dessert,regular,3,46,cash,new,3.0,23.4,3,Thursday,11,138
+10232,2025-03-27,13:46,Zamalek,basbousa,dessert,regular,1,46,card,returning,5.0,23.4,3,Thursday,13,46
+10234,2025-03-27,16:04,Maadi,falafel wrap,food,regular,3,60,wallet,returning,4.0,23.4,3,Thursday,16,180
+10239,2025-03-28,07:09,Zamalek,cappuccino,drink,medium,1,75,card,new,3.0,21.4,3,Friday,7,75
+10236,2025-03-28,08:51,Zamalek,cheesecake,dessert,regular,1,103,card,new,4.0,21.4,3,Friday,8,103
+10243,2025-03-28,09:24,Heliopolis,croissant,food,regular,3,45,card,returning,5.0,21.4,3,Friday,9,135
+10244,2025-03-28,10:48,Heliopolis,tea,drink,medium,3,27,cash,returning,4.0,21.4,3,Friday,10,81
+10242,2025-03-28,14:28,Maadi,cheesecake,dessert,regular,3,90,wallet,new,2.0,21.4,3,Friday,14,270
+10238,2025-03-28,14:32,Zamalek,hot chocolate,drink,small,1,59,card,returning,4.0,21.4,3,Friday,14,59
+10241,2025-03-28,15:55,Maadi,cheese sandwich,food,regular,1,85,card,returning,5.0,21.4,3,Friday,15,85
+10240,2025-03-28,17:14,Maadi,cheese sandwich,food,regular,2,85,cash,new,3.0,21.4,3,Friday,17,170
+10237,2025-03-28,18:05,Zamalek,tea,drink,medium,2,34,wallet,returning,,21.4,3,Friday,18,68
+10251,2025-03-29,07:20,Heliopolis,mint lemonade,drink,large,3,59,card,returning,,16.4,3,Saturday,7,177
+10245,2025-03-29,11:54,Maadi,espresso,drink,small,1,38,cash,returning,3.0,16.4,3,Saturday,11,38
+10249,2025-03-29,13:27,Heliopolis,falafel wrap,food,regular,2,54,cash,new,3.0,16.4,3,Saturday,13,108
+10247,2025-03-29,14:04,Maadi,espresso,drink,small,1,38,cash,returning,3.0,16.4,3,Saturday,14,38
+10248,2025-03-29,15:38,Heliopolis,croissant,food,regular,1,45,card,returning,3.0,16.4,3,Saturday,15,45
+10246,2025-03-29,17:13,Maadi,hot chocolate,drink,medium,1,60,cash,new,3.0,16.4,3,Saturday,17,60
+10250,2025-03-29,23:08,Heliopolis,iced latte,drink,small,2,57,card,returning,4.0,16.4,3,Saturday,23,114
+10254,2025-03-30,09:14,Maadi,croissant,food,regular,2,50,cash,returning,2.0,24.7,3,Sunday,9,100
+10253,2025-03-30,12:49,Zamalek,mint lemonade,drink,medium,1,63,cash,returning,3.0,24.7,3,Sunday,12,63
+10252,2025-03-30,14:54,Zamalek,cheesecake,dessert,regular,1,103,cash,returning,5.0,24.7,3,Sunday,14,103
+10255,2025-03-30,16:35,Heliopolis,latte,drink,large,1,76,cash,new,4.0,24.7,3,Sunday,16,76
+10256,2025-03-31,19:29,Maadi,hot chocolate,drink,medium,2,60,wallet,returning,4.0,17.8,3,Monday,19,120
+10260,2025-04-01,13:06,Heliopolis,espresso,drink,medium,3,40,cash,returning,4.0,20.8,4,Tuesday,13,120
+10259,2025-04-01,14:02,Heliopolis,espresso,drink,medium,2,40,wallet,returning,4.0,20.8,4,Tuesday,14,80
+10257,2025-04-01,15:25,Zamalek,cappuccino,drink,small,2,64,cash,returning,4.0,20.8,4,Tuesday,15,128
+10258,2025-04-01,16:36,Heliopolis,cheesecake,dessert,regular,1,81,cash,returning,4.0,20.8,4,Tuesday,16,81
+10263,2025-04-02,09:17,Zamalek,brownie,dessert,regular,3,63,card,returning,5.0,18.4,4,Wednesday,9,189
+10265,2025-04-02,09:35,Heliopolis,tea,drink,large,1,32,cash,returning,4.0,18.4,4,Wednesday,9,32
+10264,2025-04-02,10:50,Zamalek,basbousa,dessert,regular,2,46,card,new,3.0,18.4,4,Wednesday,10,92
+10262,2025-04-02,13:19,Zamalek,espresso,drink,medium,1,52,cash,new,,18.4,4,Wednesday,13,52
+10261,2025-04-02,15:36,Zamalek,espresso,drink,large,3,62,cash,returning,4.0,18.4,4,Wednesday,15,186
+10268,2025-04-03,07:18,Heliopolis,mint lemonade,drink,medium,1,50,cash,returning,5.0,19.8,4,Thursday,7,50
+10269,2025-04-03,07:42,Heliopolis,cappuccino,drink,medium,2,58,cash,returning,4.0,19.8,4,Thursday,7,116
+10267,2025-04-03,13:58,Zamalek,tea,drink,large,1,41,cash,returning,4.0,19.8,4,Thursday,13,41
+10266,2025-04-03,20:57,Zamalek,croissant,food,regular,1,57,wallet,returning,4.0,19.8,4,Thursday,20,57
+10270,2025-04-04,08:11,Maadi,cappuccino,drink,medium,1,65,card,returning,4.0,19.8,4,Friday,8,65
+10271,2025-04-04,12:10,Maadi,hot chocolate,drink,medium,1,60,cash,returning,4.0,19.8,4,Friday,12,60
+10274,2025-04-04,17:16,Heliopolis,tea,drink,medium,2,27,cash,returning,,19.8,4,Friday,17,54
+10272,2025-04-04,19:20,Maadi,hot chocolate,drink,medium,1,60,cash,new,3.0,19.8,4,Friday,19,60
+10273,2025-04-04,20:01,Maadi,latte,drink,medium,3,70,card,new,4.0,19.8,4,Friday,20,210
+10280,2025-04-05,10:09,Heliopolis,cappuccino,drink,medium,1,58,wallet,returning,5.0,19.1,4,Saturday,10,58
+10275,2025-04-05,11:07,Zamalek,tea,drink,medium,1,34,cash,new,4.0,19.1,4,Saturday,11,34
+10278,2025-04-05,11:33,Maadi,iced latte,drink,medium,2,75,cash,new,5.0,19.1,4,Saturday,11,150
+10279,2025-04-05,12:45,Maadi,cappuccino,drink,large,3,78,cash,returning,5.0,19.1,4,Saturday,12,234
+10276,2025-04-05,15:01,Zamalek,cappuccino,drink,small,1,64,wallet,new,4.0,19.1,4,Saturday,15,64
+10277,2025-04-05,15:26,Maadi,cheesecake,dessert,regular,1,90,cash,new,3.0,19.1,4,Saturday,15,90
+10281,2025-04-05,16:07,Heliopolis,cappuccino,drink,medium,3,58,cash,returning,3.0,19.1,4,Saturday,16,174
+10285,2025-04-06,12:35,Heliopolis,cheese sandwich,food,regular,1,76,cash,returning,3.0,19.9,4,Sunday,12,76
+10283,2025-04-06,13:04,Maadi,mint lemonade,drink,medium,3,55,card,new,3.0,19.9,4,Sunday,13,165
+10284,2025-04-06,13:04,Maadi,falafel wrap,food,regular,1,60,wallet,returning,5.0,19.9,4,Sunday,13,60
+10282,2025-04-06,19:31,Zamalek,basbousa,dessert,regular,1,46,card,returning,4.0,19.9,4,Sunday,19,46
+10290,2025-04-07,10:34,Heliopolis,falafel wrap,food,regular,3,54,card,returning,5.0,17.6,4,Monday,10,162
+10288,2025-04-07,11:24,Zamalek,cheesecake,dessert,regular,1,103,cash,new,4.0,17.6,4,Monday,11,103
+10287,2025-04-07,13:02,Zamalek,falafel wrap,food,regular,3,69,cash,new,3.0,17.6,4,Monday,13,207
+10289,2025-04-07,14:13,Heliopolis,hot chocolate,drink,small,1,46,card,returning,5.0,17.6,4,Monday,14,46
+10286,2025-04-07,15:14,Zamalek,espresso,drink,medium,1,52,card,new,2.0,17.6,4,Monday,15,52
+10291,2025-04-08,13:23,Maadi,espresso,drink,small,2,38,cash,returning,3.0,19.5,4,Tuesday,13,76
+10292,2025-04-09,11:20,Zamalek,tea,drink,medium,1,34,cash,returning,5.0,22.7,4,Wednesday,11,34
+10294,2025-04-09,14:21,Heliopolis,espresso,drink,medium,2,40,cash,returning,5.0,22.7,4,Wednesday,14,80
+10293,2025-04-09,15:53,Maadi,tea,drink,medium,2,30,card,returning,,22.7,4,Wednesday,15,60
+10295,2025-04-10,11:26,Maadi,mint lemonade,drink,medium,1,55,wallet,returning,4.0,20.2,4,Thursday,11,55
+10297,2025-04-11,11:19,Heliopolis,cheesecake,dessert,regular,3,81,card,returning,3.0,19.6,4,Friday,11,243
+10296,2025-04-11,14:20,Maadi,latte,drink,large,1,84,cash,returning,4.0,19.6,4,Friday,14,84
+10302,2025-04-12,11:35,Maadi,espresso,drink,small,2,38,wallet,new,3.0,21.6,4,Saturday,11,76
+10299,2025-04-12,11:37,Maadi,croissant,food,regular,1,50,cash,returning,4.0,21.6,4,Saturday,11,50
+10300,2025-04-12,13:07,Maadi,espresso,drink,medium,3,45,wallet,returning,5.0,21.6,4,Saturday,13,135
+10304,2025-04-12,16:05,Heliopolis,cappuccino,drink,small,3,50,card,returning,4.0,21.6,4,Saturday,16,150
+10303,2025-04-12,16:09,Heliopolis,latte,drink,medium,1,63,wallet,new,3.0,21.6,4,Saturday,16,63
+10301,2025-04-12,16:13,Maadi,tea,drink,large,1,36,wallet,returning,4.0,21.6,4,Saturday,16,36
+10298,2025-04-12,16:18,Maadi,tea,drink,small,2,26,wallet,returning,4.0,21.6,4,Saturday,16,52
+10308,2025-04-13,08:04,Heliopolis,cheesecake,dessert,regular,1,81,unknown,returning,4.0,22.7,4,Sunday,8,81
+10306,2025-04-13,08:25,Maadi,tea,drink,medium,1,30,cash,returning,3.0,22.7,4,Sunday,8,30
+10305,2025-04-13,13:31,Zamalek,latte,drink,medium,1,80,cash,returning,4.0,22.7,4,Sunday,13,80
+10307,2025-04-13,15:14,Heliopolis,hot chocolate,drink,large,1,65,cash,returning,4.0,22.7,4,Sunday,15,65
+10309,2025-04-14,10:20,Zamalek,tea,drink,large,2,41,cash,new,5.0,22.4,4,Monday,10,82
+10310,2025-04-14,12:44,Zamalek,falafel wrap,food,regular,2,69,cash,returning,5.0,22.4,4,Monday,12,138
+10312,2025-04-14,12:46,Zamalek,latte,drink,medium,1,80,wallet,new,5.0,22.4,4,Monday,12,80
+10311,2025-04-14,20:43,Zamalek,tea,drink,large,1,41,card,new,3.0,22.4,4,Monday,20,41
+10313,2025-04-15,12:56,Maadi,iced latte,drink,medium,2,75,wallet,returning,3.0,24.7,4,Tuesday,12,150
+10314,2025-04-15,17:21,Heliopolis,cheese sandwich,food,regular,1,76,cash,new,,24.7,4,Tuesday,17,76
+10316,2025-04-16,12:56,Maadi,brownie,dessert,regular,1,55,cash,returning,,24.1,4,Wednesday,12,55
+10315,2025-04-16,14:15,Zamalek,croissant,food,regular,1,57,cash,returning,3.0,24.1,4,Wednesday,14,57
+10317,2025-04-17,07:01,Zamalek,latte,drink,large,2,97,cash,returning,5.0,23.0,4,Thursday,7,194
+10318,2025-04-17,14:20,Maadi,espresso,drink,small,1,38,cash,returning,,23.0,4,Thursday,14,38
+10319,2025-04-17,16:59,Maadi,tea,drink,medium,2,30,cash,new,4.0,23.0,4,Thursday,16,60
+10325,2025-04-18,07:05,Heliopolis,cheese sandwich,food,regular,1,76,wallet,returning,3.0,24.9,4,Friday,7,76
+10324,2025-04-18,13:25,Heliopolis,basbousa,dessert,regular,3,36,cash,new,2.0,24.9,4,Friday,13,108
+10322,2025-04-18,14:03,Maadi,brownie,dessert,regular,2,55,cash,new,5.0,24.9,4,Friday,14,110
+10321,2025-04-18,14:28,Zamalek,cheesecake,dessert,regular,2,103,cash,returning,3.0,24.9,4,Friday,14,206
+10323,2025-04-18,15:21,Maadi,cheese sandwich,food,regular,2,85,card,returning,3.0,24.9,4,Friday,15,170
+10320,2025-04-18,17:15,Zamalek,cheesecake,dessert,regular,2,103,card,new,5.0,24.9,4,Friday,17,206
+10326,2025-04-19,16:20,Zamalek,basbousa,dessert,regular,3,46,wallet,returning,3.0,20.9,4,Saturday,16,138
+10327,2025-04-19,21:49,Maadi,croissant,food,regular,2,50,cash,returning,5.0,20.9,4,Saturday,21,100
+10331,2025-04-20,09:41,Heliopolis,croissant,food,regular,1,45,cash,returning,,20.9,4,Sunday,9,45
+10329,2025-04-20,13:51,Zamalek,hot chocolate,drink,large,2,83,cash,returning,3.0,20.9,4,Sunday,13,166
+10328,2025-04-20,14:07,Zamalek,brownie,dessert,regular,3,63,cash,returning,4.0,20.9,4,Sunday,14,189
+10330,2025-04-20,14:45,Zamalek,basbousa,dessert,regular,3,46,card,returning,5.0,20.9,4,Sunday,14,138
+10332,2025-04-21,13:10,Zamalek,mint lemonade,drink,medium,3,63,cash,returning,4.0,24.2,4,Monday,13,189
+10336,2025-04-22,10:17,Maadi,mint lemonade,drink,medium,1,55,cash,returning,5.0,24.4,4,Tuesday,10,55
+10334,2025-04-22,11:07,Zamalek,iced latte,drink,medium,1,86,cash,new,3.0,24.4,4,Tuesday,11,86
+10335,2025-04-22,16:00,Zamalek,tea,drink,medium,2,34,card,new,5.0,24.4,4,Tuesday,16,68
+10337,2025-04-22,18:56,Maadi,brownie,dessert,regular,1,55,wallet,returning,4.0,24.4,4,Tuesday,18,55
+10333,2025-04-22,19:30,Zamalek,brownie,dessert,regular,1,63,cash,returning,4.0,24.4,4,Tuesday,19,63
+10343,2025-04-23,09:05,Heliopolis,espresso,drink,medium,1,40,card,returning,4.0,26.1,4,Wednesday,9,40
+10342,2025-04-23,10:26,Maadi,cheesecake,dessert,regular,2,90,cash,new,4.0,26.1,4,Wednesday,10,180
+10344,2025-04-23,12:37,Heliopolis,mint lemonade,drink,medium,1,50,cash,returning,4.0,26.1,4,Wednesday,12,50
+10339,2025-04-23,14:26,Zamalek,tea,drink,small,2,29,card,new,4.0,26.1,4,Wednesday,14,58
+10341,2025-04-23,18:13,Maadi,falafel wrap,food,regular,3,60,card,new,4.0,26.1,4,Wednesday,18,180
+10340,2025-04-23,18:43,Maadi,tea,drink,small,1,26,wallet,returning,4.0,26.1,4,Wednesday,18,26
+10338,2025-04-23,18:46,Zamalek,falafel wrap,food,regular,2,69,wallet,returning,4.0,26.1,4,Wednesday,18,138
+10350,2025-04-24,09:00,Heliopolis,mint lemonade,drink,medium,3,50,cash,returning,5.0,26.8,4,Thursday,9,150
+10345,2025-04-24,10:23,Zamalek,mint lemonade,drink,medium,2,63,cash,new,4.0,26.8,4,Thursday,10,126
+10346,2025-04-24,16:25,Maadi,brownie,dessert,regular,1,55,card,new,4.0,26.8,4,Thursday,16,55
+10348,2025-04-24,16:31,Heliopolis,tea,drink,large,1,32,wallet,returning,3.0,26.8,4,Thursday,16,32
+10349,2025-04-24,17:48,Heliopolis,cheese sandwich,food,regular,1,76,card,new,3.0,26.8,4,Thursday,17,76
+10347,2025-04-24,19:34,Maadi,brownie,dessert,regular,1,55,card,returning,,26.8,4,Thursday,19,55
+10351,2025-04-25,08:35,Zamalek,falafel wrap,food,regular,1,69,card,new,3.0,20.6,4,Friday,8,69
+10352,2025-04-25,11:14,Zamalek,basbousa,dessert,regular,1,46,cash,returning,3.0,20.6,4,Friday,11,46
+10355,2025-04-25,12:37,Heliopolis,cheesecake,dessert,regular,2,81,cash,returning,,20.6,4,Friday,12,162
+10354,2025-04-25,14:11,Maadi,tea,drink,medium,1,30,card,new,,20.6,4,Friday,14,30
+10353,2025-04-25,14:22,Maadi,cheesecake,dessert,regular,2,90,card,returning,3.0,20.6,4,Friday,14,180
+10356,2025-04-25,15:17,Heliopolis,latte,drink,small,3,54,card,returning,,20.6,4,Friday,15,162
+10357,2025-04-26,11:56,Zamalek,brownie,dessert,regular,2,63,card,new,4.0,23.1,4,Saturday,11,126
+10361,2025-04-26,12:41,Heliopolis,croissant,food,regular,3,45,cash,returning,4.0,23.1,4,Saturday,12,135
+10359,2025-04-26,15:09,Zamalek,tea,drink,small,1,29,card,returning,4.0,23.1,4,Saturday,15,29
+10360,2025-04-26,17:10,Maadi,brownie,dessert,regular,2,55,cash,returning,4.0,23.1,4,Saturday,17,110
+10358,2025-04-26,17:49,Zamalek,espresso,drink,small,1,44,card,returning,5.0,23.1,4,Saturday,17,44
+10363,2025-04-27,08:23,Zamalek,tea,drink,small,2,29,cash,new,3.0,21.3,4,Sunday,8,58
+10362,2025-04-27,13:53,Zamalek,latte,drink,large,1,97,cash,returning,5.0,21.3,4,Sunday,13,97
+10364,2025-04-27,14:10,Maadi,cheese sandwich,food,regular,2,85,cash,new,3.0,21.3,4,Sunday,14,170
+10365,2025-04-27,18:59,Heliopolis,hot chocolate,drink,large,3,65,card,new,4.0,21.3,4,Sunday,18,195
+10366,2025-04-28,10:35,Maadi,falafel wrap,food,regular,1,60,cash,new,,24.1,4,Monday,10,60
+10367,2025-04-28,17:37,Maadi,croissant,food,regular,1,50,cash,returning,4.0,24.1,4,Monday,17,50
+10368,2025-04-29,09:07,Zamalek,falafel wrap,food,regular,1,69,card,returning,4.0,23.4,4,Tuesday,9,69
+10373,2025-04-29,11:15,Maadi,tea,drink,medium,2,30,cash,new,4.0,23.4,4,Tuesday,11,60
+10371,2025-04-29,12:06,Zamalek,tea,drink,large,1,41,wallet,returning,5.0,23.4,4,Tuesday,12,41
+10374,2025-04-29,13:41,Heliopolis,cappuccino,drink,medium,1,58,cash,returning,4.0,23.4,4,Tuesday,13,58
+10370,2025-04-29,14:08,Zamalek,tea,drink,small,3,29,cash,new,,23.4,4,Tuesday,14,87
+10369,2025-04-29,14:59,Zamalek,hot chocolate,drink,medium,1,69,card,new,4.0,23.4,4,Tuesday,14,69
+10372,2025-04-29,15:22,Maadi,cheesecake,dessert,regular,3,90,wallet,new,5.0,23.4,4,Tuesday,15,270
+10377,2025-04-30,09:04,Maadi,hot chocolate,drink,medium,3,60,wallet,returning,4.0,26.4,4,Wednesday,9,180
+10376,2025-04-30,09:51,Maadi,falafel wrap,food,regular,3,60,wallet,new,3.0,26.4,4,Wednesday,9,180
+10375,2025-04-30,14:37,Zamalek,mint lemonade,drink,medium,1,63,card,returning,5.0,26.4,4,Wednesday,14,63
+10378,2025-05-01,13:08,Zamalek,latte,drink,medium,2,80,cash,new,4.0,26.6,5,Thursday,13,160
+10382,2025-05-01,14:08,Heliopolis,mint lemonade,drink,medium,2,50,card,new,5.0,26.6,5,Thursday,14,100
+10380,2025-05-01,15:18,Maadi,falafel wrap,food,regular,1,60,cash,returning,5.0,26.6,5,Thursday,15,60
+10381,2025-05-01,16:47,Maadi,brownie,dessert,regular,1,55,wallet,returning,4.0,26.6,5,Thursday,16,55
+10379,2025-05-01,20:21,Zamalek,hot chocolate,drink,medium,1,69,cash,returning,3.0,26.6,5,Thursday,20,69
+10385,2025-05-02,14:20,Maadi,croissant,food,regular,2,50,cash,new,,27.3,5,Friday,14,100
+10384,2025-05-02,16:15,Zamalek,falafel wrap,food,regular,1,69,card,returning,3.0,27.3,5,Friday,16,69
+10383,2025-05-02,20:56,Zamalek,brownie,dessert,regular,3,63,cash,new,3.0,27.3,5,Friday,20,189
+10386,2025-05-03,13:57,Zamalek,hot chocolate,drink,medium,1,69,cash,new,5.0,23.8,5,Saturday,13,69
+10388,2025-05-04,14:12,Maadi,espresso,drink,medium,2,45,cash,returning,4.0,25.6,5,Sunday,14,90
+10387,2025-05-04,14:45,Zamalek,brownie,dessert,regular,2,63,cash,returning,5.0,25.6,5,Sunday,14,126
+10391,2025-05-05,12:40,Heliopolis,falafel wrap,food,regular,1,54,cash,returning,4.0,24.6,5,Monday,12,54
+10389,2025-05-05,14:42,Maadi,cappuccino,drink,large,3,78,cash,returning,5.0,24.6,5,Monday,14,234
+10390,2025-05-05,17:07,Heliopolis,iced latte,drink,medium,1,68,wallet,returning,4.0,24.6,5,Monday,17,68
+10394,2025-05-06,12:20,Heliopolis,cheesecake,dessert,regular,1,81,cash,returning,4.0,25.6,5,Tuesday,12,81
+10392,2025-05-06,12:33,Maadi,cheesecake,dessert,regular,2,90,card,new,,25.6,5,Tuesday,12,180
+10393,2025-05-06,14:12,Heliopolis,latte,drink,medium,2,63,cash,returning,4.0,25.6,5,Tuesday,14,126
+10400,2025-05-07,10:22,Heliopolis,iced latte,drink,small,1,57,card,returning,3.0,29.3,5,Wednesday,10,57
+10395,2025-05-07,11:13,Zamalek,hot chocolate,drink,large,3,83,card,returning,4.0,29.3,5,Wednesday,11,249
+10398,2025-05-07,14:34,Maadi,croissant,food,regular,1,50,card,new,3.0,29.3,5,Wednesday,14,50
+10396,2025-05-07,14:39,Maadi,croissant,food,regular,1,50,cash,new,3.0,29.3,5,Wednesday,14,50
+10399,2025-05-07,16:47,Heliopolis,cheesecake,dessert,regular,1,81,card,new,3.0,29.3,5,Wednesday,16,81
+10397,2025-05-07,19:33,Maadi,espresso,drink,medium,2,45,wallet,returning,4.0,29.3,5,Wednesday,19,90
+10402,2025-05-08,09:26,Zamalek,iced latte,drink,medium,1,86,card,returning,5.0,29.1,5,Thursday,9,86
+10404,2025-05-08,09:57,Heliopolis,tea,drink,medium,2,27,cash,returning,5.0,29.1,5,Thursday,9,54
+10401,2025-05-08,15:03,Zamalek,cheesecake,dessert,regular,3,103,cash,new,4.0,29.1,5,Thursday,15,309
+10403,2025-05-08,15:27,Heliopolis,mint lemonade,drink,medium,3,50,card,new,3.0,29.1,5,Thursday,15,150
+10406,2025-05-09,10:08,Zamalek,basbousa,dessert,regular,2,46,cash,returning,,25.5,5,Friday,10,92
+10405,2025-05-09,10:15,Zamalek,mint lemonade,drink,small,1,54,card,returning,4.0,25.5,5,Friday,10,54
+10408,2025-05-09,12:10,Heliopolis,mint lemonade,drink,small,1,42,card,returning,5.0,25.5,5,Friday,12,42
+10411,2025-05-09,13:16,Heliopolis,cappuccino,drink,medium,3,58,card,returning,5.0,25.5,5,Friday,13,174
+10409,2025-05-09,14:04,Heliopolis,cappuccino,drink,medium,3,58,wallet,returning,5.0,25.5,5,Friday,14,174
+10410,2025-05-09,17:56,Heliopolis,basbousa,dessert,regular,1,36,card,new,4.0,25.5,5,Friday,17,36
+10412,2025-05-09,18:21,Heliopolis,mint lemonade,drink,small,3,42,cash,returning,5.0,25.5,5,Friday,18,126
+10407,2025-05-09,19:43,Heliopolis,iced latte,drink,small,3,57,card,new,4.0,25.5,5,Friday,19,171
+10419,2025-05-10,09:05,Heliopolis,brownie,dessert,regular,2,50,wallet,new,3.0,25.2,5,Saturday,9,100
+10413,2025-05-10,09:56,Zamalek,cappuccino,drink,medium,1,75,cash,returning,5.0,25.2,5,Saturday,9,75
+10415,2025-05-10,11:47,Maadi,mint lemonade,drink,small,1,47,cash,returning,5.0,25.2,5,Saturday,11,47
+10418,2025-05-10,13:31,Heliopolis,mint lemonade,drink,medium,2,50,card,returning,4.0,25.2,5,Saturday,13,100
+10417,2025-05-10,14:59,Heliopolis,mint lemonade,drink,medium,1,50,unknown,returning,4.0,25.2,5,Saturday,14,50
+10416,2025-05-10,15:55,Heliopolis,iced latte,drink,medium,1,68,cash,returning,5.0,25.2,5,Saturday,15,68
+10414,2025-05-10,16:43,Maadi,mint lemonade,drink,medium,1,55,card,returning,2.0,25.2,5,Saturday,16,55
+10420,2025-05-10,17:23,Heliopolis,mint lemonade,drink,medium,2,50,card,returning,3.0,25.2,5,Saturday,17,100
+10423,2025-05-11,07:03,Heliopolis,mint lemonade,drink,small,2,42,wallet,returning,4.0,28.8,5,Sunday,7,84
+10421,2025-05-11,09:51,Maadi,tea,drink,medium,2,30,card,new,5.0,28.8,5,Sunday,9,60
+10424,2025-05-11,12:16,Heliopolis,latte,drink,medium,1,63,wallet,returning,3.0,28.8,5,Sunday,12,63
+10422,2025-05-11,13:27,Maadi,basbousa,dessert,regular,1,40,card,returning,4.0,28.8,5,Sunday,13,40
+10427,2025-05-12,12:29,Zamalek,mint lemonade,drink,medium,1,63,cash,new,5.0,29.1,5,Monday,12,63
+10426,2025-05-12,13:04,Zamalek,mint lemonade,drink,medium,2,63,cash,new,3.0,29.1,5,Monday,13,126
+10429,2025-05-12,13:23,Heliopolis,basbousa,dessert,regular,2,36,wallet,new,4.0,29.1,5,Monday,13,72
+10428,2025-05-12,15:02,Maadi,hot chocolate,drink,large,1,72,cash,returning,3.0,29.1,5,Monday,15,72
+10425,2025-05-12,19:47,Zamalek,croissant,food,regular,3,57,cash,new,5.0,29.1,5,Monday,19,171
+10433,2025-05-13,15:15,Maadi,latte,drink,small,3,60,cash,returning,4.0,25.9,5,Tuesday,15,180
+10430,2025-05-13,17:17,Zamalek,mint lemonade,drink,large,1,76,cash,returning,4.0,25.9,5,Tuesday,17,76
+10431,2025-05-13,17:35,Zamalek,latte,drink,medium,1,80,cash,returning,,25.9,5,Tuesday,17,80
+10432,2025-05-13,20:44,Zamalek,croissant,food,regular,1,57,card,new,4.0,25.9,5,Tuesday,20,57
+10440,2025-05-14,13:03,Heliopolis,mint lemonade,drink,medium,1,50,wallet,new,3.0,29.6,5,Wednesday,13,50
+10436,2025-05-14,14:32,Maadi,brownie,dessert,regular,1,55,card,new,4.0,29.6,5,Wednesday,14,55
+10439,2025-05-14,14:43,Heliopolis,cheese sandwich,food,regular,1,76,wallet,returning,4.0,29.6,5,Wednesday,14,76
+10437,2025-05-14,14:45,Maadi,tea,drink,medium,2,30,cash,returning,3.0,29.6,5,Wednesday,14,60
+10435,2025-05-14,17:10,Maadi,mint lemonade,drink,medium,3,55,cash,returning,4.0,29.6,5,Wednesday,17,165
+10441,2025-05-14,17:25,Heliopolis,cheesecake,dessert,regular,2,81,cash,returning,4.0,29.6,5,Wednesday,17,162
+10434,2025-05-14,21:08,Zamalek,croissant,food,regular,2,57,wallet,returning,3.0,29.6,5,Wednesday,21,114
+10438,2025-05-14,23:52,Maadi,iced latte,drink,medium,1,75,card,returning,,29.6,5,Wednesday,23,75
+10443,2025-05-15,09:11,Heliopolis,croissant,food,regular,1,45,cash,new,4.0,28.7,5,Thursday,9,45
+10442,2025-05-15,14:15,Maadi,brownie,dessert,regular,1,55,cash,returning,3.0,28.7,5,Thursday,14,55
+10450,2025-05-16,09:19,Heliopolis,cheese sandwich,food,regular,1,76,card,new,3.0,28.5,5,Friday,9,76
+10445,2025-05-16,12:23,Zamalek,mint lemonade,drink,large,1,76,card,returning,5.0,28.5,5,Friday,12,76
+10448,2025-05-16,14:05,Maadi,cheesecake,dessert,regular,3,90,card,returning,3.0,28.5,5,Friday,14,270
+10444,2025-05-16,14:35,Zamalek,latte,drink,medium,1,80,cash,new,3.0,28.5,5,Friday,14,80
+10446,2025-05-16,15:17,Zamalek,iced latte,drink,large,2,104,card,returning,5.0,28.5,5,Friday,15,208
+10447,2025-05-16,15:43,Maadi,tea,drink,small,3,26,cash,returning,5.0,28.5,5,Friday,15,78
+10449,2025-05-16,15:57,Maadi,cheese sandwich,food,regular,2,85,cash,new,3.0,28.5,5,Friday,15,170
+10451,2025-05-16,18:06,Heliopolis,mint lemonade,drink,small,1,42,card,new,4.0,28.5,5,Friday,18,42
+10453,2025-05-17,07:36,Zamalek,mint lemonade,drink,medium,1,63,card,returning,4.0,29.3,5,Saturday,7,63
+10454,2025-05-17,08:39,Maadi,cappuccino,drink,medium,2,65,card,returning,2.0,29.3,5,Saturday,8,130
+10455,2025-05-17,14:58,Heliopolis,basbousa,dessert,regular,2,36,cash,new,5.0,29.3,5,Saturday,14,72
+10457,2025-05-17,16:30,Heliopolis,mint lemonade,drink,medium,1,50,card,returning,5.0,29.3,5,Saturday,16,50
+10456,2025-05-17,18:31,Heliopolis,croissant,food,regular,1,45,cash,new,3.0,29.3,5,Saturday,18,45
+10452,2025-05-17,19:19,Zamalek,brownie,dessert,regular,2,63,cash,returning,5.0,29.3,5,Saturday,19,126
+10462,2025-05-18,07:46,Heliopolis,cheesecake,dessert,regular,1,81,card,returning,4.0,24.8,5,Sunday,7,81
+10459,2025-05-18,07:52,Zamalek,mint lemonade,drink,small,2,54,card,returning,,24.8,5,Sunday,7,108
+10458,2025-05-18,12:06,Zamalek,iced latte,drink,small,1,73,wallet,new,3.0,24.8,5,Sunday,12,73
+10461,2025-05-18,15:06,Maadi,hot chocolate,drink,large,2,72,cash,returning,4.0,24.8,5,Sunday,15,144
+10460,2025-05-18,16:57,Zamalek,cheese sandwich,food,regular,2,98,card,returning,4.0,24.8,5,Sunday,16,196
+10466,2025-05-19,11:17,Maadi,cheese sandwich,food,regular,2,85,wallet,new,5.0,30.8,5,Monday,11,170
+10464,2025-05-19,12:51,Maadi,hot chocolate,drink,large,1,72,cash,returning,5.0,30.8,5,Monday,12,72
+10463,2025-05-19,13:22,Zamalek,latte,drink,large,2,97,cash,returning,,30.8,5,Monday,13,194
+10465,2025-05-19,15:27,Maadi,latte,drink,medium,1,70,cash,returning,4.0,30.8,5,Monday,15,70
+10468,2025-05-20,14:01,Maadi,mint lemonade,drink,small,1,47,wallet,returning,4.0,29.5,5,Tuesday,14,47
+10469,2025-05-20,15:22,Heliopolis,croissant,food,regular,2,45,cash,returning,4.0,29.5,5,Tuesday,15,90
+10467,2025-05-20,16:39,Zamalek,cheese sandwich,food,regular,2,98,cash,returning,5.0,29.5,5,Tuesday,16,196
+10471,2025-05-21,08:31,Maadi,brownie,dessert,regular,1,55,card,returning,3.0,32.4,5,Wednesday,8,55
+10472,2025-05-21,10:52,Maadi,falafel wrap,food,regular,2,60,card,returning,5.0,32.4,5,Wednesday,10,120
+10470,2025-05-21,13:28,Zamalek,mint lemonade,drink,small,1,54,cash,returning,4.0,32.4,5,Wednesday,13,54
+10473,2025-05-21,18:09,Heliopolis,cappuccino,drink,small,1,50,cash,new,4.0,32.4,5,Wednesday,18,50
+10474,2025-05-22,09:02,Zamalek,espresso,drink,medium,2,52,card,new,3.0,26.8,5,Thursday,9,104
+10476,2025-05-22,14:38,Heliopolis,cheesecake,dessert,regular,1,81,card,returning,5.0,26.8,5,Thursday,14,81
+10477,2025-05-22,14:55,Heliopolis,basbousa,dessert,regular,1,36,card,returning,5.0,26.8,5,Thursday,14,36
+10475,2025-05-22,23:31,Zamalek,falafel wrap,food,regular,1,69,cash,returning,4.0,26.8,5,Thursday,23,69
+10479,2025-05-23,11:28,Maadi,iced latte,drink,small,1,64,cash,new,4.0,27.1,5,Friday,11,64
+10480,2025-05-23,13:48,Heliopolis,cheese sandwich,food,regular,2,76,card,returning,4.0,27.1,5,Friday,13,152
+10478,2025-05-23,20:09,Zamalek,falafel wrap,food,regular,3,69,card,returning,4.0,27.1,5,Friday,20,207
+10481,2025-05-23,21:59,Heliopolis,brownie,dessert,regular,1,50,wallet,new,4.0,27.1,5,Friday,21,50
+10482,2025-05-24,08:07,Zamalek,cheesecake,dessert,regular,2,103,card,returning,4.0,30.6,5,Saturday,8,206
+10485,2025-05-24,12:21,Maadi,brownie,dessert,regular,3,55,card,returning,5.0,30.6,5,Saturday,12,165
+10483,2025-05-24,14:29,Maadi,cheese sandwich,food,regular,2,85,card,new,5.0,30.6,5,Saturday,14,170
+10486,2025-05-24,15:26,Heliopolis,mint lemonade,drink,medium,3,50,cash,returning,4.0,30.6,5,Saturday,15,150
+10484,2025-05-24,17:05,Maadi,cheesecake,dessert,regular,1,90,cash,returning,5.0,30.6,5,Saturday,17,90
+10489,2025-05-25,09:17,Heliopolis,iced latte,drink,large,2,81,cash,returning,5.0,29.2,5,Sunday,9,162
+10487,2025-05-25,12:39,Zamalek,falafel wrap,food,regular,2,69,card,returning,4.0,29.2,5,Sunday,12,138
+10488,2025-05-25,14:40,Maadi,falafel wrap,food,regular,2,60,card,returning,5.0,29.2,5,Sunday,14,120
+10491,2025-05-26,08:07,Maadi,cheesecake,dessert,regular,1,90,card,returning,4.0,33.9,5,Monday,8,90
+10490,2025-05-26,14:26,Zamalek,cappuccino,drink,large,2,90,card,returning,4.0,33.9,5,Monday,14,180
+10492,2025-05-26,15:10,Heliopolis,falafel wrap,food,regular,2,54,cash,returning,4.0,33.9,5,Monday,15,108
+10495,2025-05-27,13:35,Heliopolis,tea,drink,medium,1,27,cash,returning,5.0,30.4,5,Tuesday,13,27
+10493,2025-05-27,13:58,Zamalek,latte,drink,medium,1,80,card,new,,30.4,5,Tuesday,13,80
+10494,2025-05-27,17:17,Zamalek,mint lemonade,drink,medium,1,63,wallet,new,4.0,30.4,5,Tuesday,17,63
+10498,2025-05-28,11:16,Maadi,iced latte,drink,medium,1,75,cash,returning,,31.2,5,Wednesday,11,75
+10500,2025-05-28,11:21,Heliopolis,espresso,drink,small,3,34,card,returning,3.0,31.2,5,Wednesday,11,102
+10497,2025-05-28,14:10,Zamalek,cheese sandwich,food,regular,1,98,cash,returning,5.0,31.2,5,Wednesday,14,98
+10501,2025-05-28,14:47,Heliopolis,cheesecake,dessert,regular,2,81,wallet,returning,,31.2,5,Wednesday,14,162
+10499,2025-05-28,15:44,Heliopolis,cheesecake,dessert,regular,2,81,card,new,5.0,31.2,5,Wednesday,15,162
+10502,2025-05-28,16:38,Heliopolis,latte,drink,small,3,54,card,returning,4.0,31.2,5,Wednesday,16,162
+10496,2025-05-28,17:12,Zamalek,latte,drink,medium,1,80,cash,returning,4.0,31.2,5,Wednesday,17,80
+10510,2025-05-29,13:13,Heliopolis,mint lemonade,drink,medium,1,50,card,returning,5.0,29.8,5,Thursday,13,50
+10509,2025-05-29,14:38,Maadi,basbousa,dessert,regular,1,40,wallet,returning,,29.8,5,Thursday,14,40
+10506,2025-05-29,14:43,Zamalek,tea,drink,medium,1,34,card,returning,4.0,29.8,5,Thursday,14,34
+10504,2025-05-29,15:34,Zamalek,falafel wrap,food,regular,2,69,card,returning,4.0,29.8,5,Thursday,15,138
+10507,2025-05-29,15:51,Zamalek,cappuccino,drink,large,3,90,cash,returning,4.0,29.8,5,Thursday,15,270
+10503,2025-05-29,16:30,Zamalek,cheesecake,dessert,regular,2,103,card,returning,5.0,29.8,5,Thursday,16,206
+10508,2025-05-29,17:13,Maadi,cheese sandwich,food,regular,2,85,wallet,returning,4.0,29.8,5,Thursday,17,170
+10511,2025-05-29,17:20,Heliopolis,falafel wrap,food,regular,1,54,cash,new,3.0,29.8,5,Thursday,17,54
+10505,2025-05-29,17:54,Zamalek,iced latte,drink,large,3,104,card,returning,3.0,29.8,5,Thursday,17,312
+10516,2025-05-30,07:08,Maadi,cheese sandwich,food,regular,2,85,cash,new,4.0,28.4,5,Friday,7,170
+10512,2025-05-30,11:21,Zamalek,basbousa,dessert,regular,3,46,card,returning,5.0,28.4,5,Friday,11,138
+10517,2025-05-30,15:25,Heliopolis,cheesecake,dessert,regular,2,81,wallet,new,4.0,28.4,5,Friday,15,162
+10513,2025-05-30,16:05,Maadi,tea,drink,medium,1,30,cash,returning,5.0,28.4,5,Friday,16,30
+10514,2025-05-30,18:19,Maadi,basbousa,dessert,regular,2,40,cash,returning,5.0,28.4,5,Friday,18,80
+10515,2025-05-30,20:55,Maadi,brownie,dessert,regular,1,55,card,returning,4.0,28.4,5,Friday,20,55
+10518,2025-05-30,23:38,Heliopolis,iced latte,drink,large,2,81,card,returning,4.0,28.4,5,Friday,23,162
+10520,2025-05-31,07:11,Zamalek,espresso,drink,large,1,62,wallet,returning,5.0,29.2,5,Saturday,7,62
+10521,2025-05-31,14:10,Heliopolis,basbousa,dessert,regular,1,36,cash,returning,5.0,29.2,5,Saturday,14,36
+10522,2025-05-31,16:39,Heliopolis,iced latte,drink,medium,1,68,card,returning,5.0,29.2,5,Saturday,16,68
+10519,2025-05-31,17:28,Zamalek,cheese sandwich,food,regular,1,98,cash,new,3.0,29.2,5,Saturday,17,98
+10525,2025-06-01,13:21,Heliopolis,croissant,food,regular,2,45,wallet,returning,4.0,28.8,6,Sunday,13,90
+10524,2025-06-01,15:54,Heliopolis,falafel wrap,food,regular,2,54,cash,returning,4.0,28.8,6,Sunday,15,108
+10523,2025-06-01,18:09,Heliopolis,mint lemonade,drink,large,3,59,cash,returning,4.0,28.8,6,Sunday,18,177
+10527,2025-06-02,14:06,Maadi,espresso,drink,small,3,38,cash,returning,3.0,29.0,6,Monday,14,114
+10526,2025-06-02,16:01,Zamalek,mint lemonade,drink,medium,1,63,card,returning,3.0,29.0,6,Monday,16,63
+10529,2025-06-04,10:48,Maadi,iced latte,drink,medium,1,75,card,returning,5.0,28.9,6,Wednesday,10,75
+10528,2025-06-04,12:39,Zamalek,cheese sandwich,food,regular,3,98,cash,new,5.0,28.9,6,Wednesday,12,294
+10530,2025-06-04,17:04,Maadi,cheesecake,dessert,regular,1,90,card,returning,5.0,28.9,6,Wednesday,17,90
+10531,2025-06-05,11:16,Zamalek,cappuccino,drink,medium,2,75,cash,new,4.0,27.2,6,Thursday,11,150
+10533,2025-06-05,12:01,Heliopolis,brownie,dessert,regular,1,50,cash,new,4.0,27.2,6,Thursday,12,50
+10532,2025-06-05,13:13,Maadi,mint lemonade,drink,medium,1,55,wallet,returning,4.0,27.2,6,Thursday,13,55
+10540,2025-06-06,10:26,Heliopolis,brownie,dessert,regular,2,50,card,new,4.0,34.1,6,Friday,10,100
+10538,2025-06-06,12:13,Maadi,iced latte,drink,medium,1,75,card,returning,4.0,34.1,6,Friday,12,75
+10537,2025-06-06,12:17,Zamalek,espresso,drink,large,2,62,card,returning,4.0,34.1,6,Friday,12,124
+10539,2025-06-06,14:00,Maadi,mint lemonade,drink,small,2,47,cash,new,4.0,34.1,6,Friday,14,94
+10535,2025-06-06,15:40,Zamalek,espresso,drink,medium,3,52,cash,new,4.0,34.1,6,Friday,15,156
+10534,2025-06-06,16:46,Zamalek,falafel wrap,food,regular,1,69,cash,returning,5.0,34.1,6,Friday,16,69
+10536,2025-06-06,18:59,Zamalek,mint lemonade,drink,medium,1,63,cash,new,5.0,34.1,6,Friday,18,63
+10541,2025-06-07,11:31,Zamalek,mint lemonade,drink,large,2,76,cash,returning,,34.0,6,Saturday,11,152
+10544,2025-06-07,11:52,Maadi,basbousa,dessert,regular,1,40,wallet,returning,4.0,34.0,6,Saturday,11,40
+10543,2025-06-07,16:40,Zamalek,falafel wrap,food,regular,1,69,card,returning,4.0,34.0,6,Saturday,16,69
+10545,2025-06-07,17:08,Maadi,latte,drink,medium,1,70,wallet,new,3.0,34.0,6,Saturday,17,70
+10542,2025-06-07,17:19,Zamalek,mint lemonade,drink,medium,3,63,cash,new,1.0,34.0,6,Saturday,17,189
+10546,2025-06-07,18:11,Heliopolis,brownie,dessert,regular,3,50,wallet,returning,4.0,34.0,6,Saturday,18,150
+10548,2025-06-08,14:41,Zamalek,cappuccino,drink,large,1,90,cash,returning,,31.8,6,Sunday,14,90
+10547,2025-06-08,14:45,Zamalek,mint lemonade,drink,medium,1,63,card,returning,4.0,31.8,6,Sunday,14,63
+10549,2025-06-08,15:17,Maadi,iced latte,drink,medium,2,75,card,new,3.0,31.8,6,Sunday,15,150
+10550,2025-06-08,17:02,Maadi,cheesecake,dessert,regular,1,90,card,returning,5.0,31.8,6,Sunday,17,90
+10552,2025-06-09,12:53,Maadi,croissant,food,regular,1,50,wallet,returning,3.0,28.8,6,Monday,12,50
+10551,2025-06-09,18:53,Zamalek,iced latte,drink,medium,3,86,cash,returning,5.0,28.8,6,Monday,18,258
+10556,2025-06-10,11:18,Maadi,basbousa,dessert,regular,1,40,cash,returning,,30.8,6,Tuesday,11,40
+10555,2025-06-10,12:25,Zamalek,espresso,drink,large,2,62,cash,returning,4.0,30.8,6,Tuesday,12,124
+10557,2025-06-10,14:16,Heliopolis,mint lemonade,drink,large,1,59,card,new,4.0,30.8,6,Tuesday,14,59
+10553,2025-06-10,18:04,Zamalek,hot chocolate,drink,medium,2,69,card,returning,5.0,30.8,6,Tuesday,18,138
+10554,2025-06-10,20:42,Zamalek,mint lemonade,drink,medium,3,63,wallet,returning,4.0,30.8,6,Tuesday,20,189
+10559,2025-06-11,11:32,Zamalek,cheese sandwich,food,regular,2,98,card,returning,4.0,31.9,6,Wednesday,11,196
+10560,2025-06-11,14:40,Maadi,croissant,food,regular,1,50,cash,returning,,31.9,6,Wednesday,14,50
+10561,2025-06-11,15:18,Heliopolis,cheesecake,dessert,regular,2,81,cash,new,4.0,31.9,6,Wednesday,15,162
+10558,2025-06-11,21:58,Zamalek,brownie,dessert,regular,1,63,cash,returning,4.0,31.9,6,Wednesday,21,63
+10564,2025-06-12,11:54,Maadi,mint lemonade,drink,large,1,66,cash,returning,3.0,31.4,6,Thursday,11,66
+10565,2025-06-12,13:24,Maadi,cheesecake,dessert,regular,3,90,cash,returning,4.0,31.4,6,Thursday,13,270
+10567,2025-06-12,13:25,Heliopolis,espresso,drink,small,3,34,card,returning,5.0,31.4,6,Thursday,13,102
+10562,2025-06-12,13:47,Zamalek,mint lemonade,drink,small,3,54,cash,returning,5.0,31.4,6,Thursday,13,162
+10563,2025-06-12,15:20,Zamalek,cappuccino,drink,medium,1,75,cash,returning,4.0,31.4,6,Thursday,15,75
+10566,2025-06-12,17:37,Maadi,brownie,dessert,regular,2,55,card,returning,3.0,31.4,6,Thursday,17,110
+10569,2025-06-13,11:09,Zamalek,falafel wrap,food,regular,2,69,cash,returning,3.0,32.0,6,Friday,11,138
+10573,2025-06-13,14:10,Heliopolis,mint lemonade,drink,small,1,42,card,new,4.0,32.0,6,Friday,14,42
+10570,2025-06-13,14:39,Zamalek,mint lemonade,drink,large,2,76,wallet,returning,3.0,32.0,6,Friday,14,152
+10568,2025-06-13,15:44,Zamalek,hot chocolate,drink,large,3,83,card,returning,4.0,32.0,6,Friday,15,249
+10571,2025-06-13,16:27,Zamalek,falafel wrap,food,regular,1,69,card,new,3.0,32.0,6,Friday,16,69
+10574,2025-06-13,17:40,Heliopolis,tea,drink,medium,1,27,card,new,2.0,32.0,6,Friday,17,27
+10572,2025-06-13,18:05,Heliopolis,tea,drink,small,1,23,cash,new,3.0,32.0,6,Friday,18,23
+10579,2025-06-14,12:17,Maadi,croissant,food,regular,1,50,cash,new,3.0,30.1,6,Saturday,12,50
+10575,2025-06-14,12:50,Zamalek,iced latte,drink,large,2,104,card,returning,3.0,30.1,6,Saturday,12,208
+10576,2025-06-14,15:33,Zamalek,mint lemonade,drink,large,1,76,cash,returning,5.0,30.1,6,Saturday,15,76
+10580,2025-06-14,15:53,Heliopolis,basbousa,dessert,regular,3,36,card,returning,5.0,30.1,6,Saturday,15,108
+10577,2025-06-14,16:20,Zamalek,cheese sandwich,food,regular,2,98,cash,new,3.0,30.1,6,Saturday,16,196
+10578,2025-06-14,16:52,Maadi,mint lemonade,drink,medium,3,55,card,returning,4.0,30.1,6,Saturday,16,165
+10581,2025-06-15,15:48,Heliopolis,brownie,dessert,regular,1,50,card,returning,5.0,32.2,6,Sunday,15,50
+10583,2025-06-16,07:10,Maadi,iced latte,drink,small,2,64,wallet,new,4.0,34.0,6,Monday,7,128
+10584,2025-06-16,08:54,Maadi,cheesecake,dessert,regular,3,90,card,returning,4.0,34.0,6,Monday,8,270
+10582,2025-06-16,11:43,Zamalek,mint lemonade,drink,small,3,54,cash,returning,3.0,34.0,6,Monday,11,162
+10585,2025-06-16,14:45,Maadi,iced latte,drink,medium,2,75,cash,new,5.0,34.0,6,Monday,14,150
+10588,2025-06-17,10:18,Zamalek,cheesecake,dessert,regular,3,103,cash,new,3.0,31.7,6,Tuesday,10,309
+10587,2025-06-17,10:48,Zamalek,mint lemonade,drink,medium,1,63,card,new,4.0,31.7,6,Tuesday,10,63
+10592,2025-06-17,10:53,Heliopolis,cheese sandwich,food,regular,3,76,card,returning,5.0,31.7,6,Tuesday,10,228
+10589,2025-06-17,11:46,Maadi,cheesecake,dessert,regular,1,90,card,returning,4.0,31.7,6,Tuesday,11,90
+10586,2025-06-17,14:43,Zamalek,espresso,drink,small,1,44,card,returning,4.0,31.7,6,Tuesday,14,44
+10591,2025-06-17,16:46,Heliopolis,falafel wrap,food,regular,2,54,cash,returning,5.0,31.7,6,Tuesday,16,108
+10590,2025-06-17,18:34,Maadi,iced latte,drink,medium,2,75,card,new,4.0,31.7,6,Tuesday,18,150
+10599,2025-06-18,08:48,Heliopolis,hot chocolate,drink,medium,3,54,card,returning,5.0,26.7,6,Wednesday,8,162
+10594,2025-06-18,10:19,Zamalek,espresso,drink,medium,1,52,cash,returning,4.0,26.7,6,Wednesday,10,52
+10600,2025-06-18,11:27,Heliopolis,cheesecake,dessert,regular,2,81,card,returning,5.0,26.7,6,Wednesday,11,162
+10597,2025-06-18,12:21,Maadi,basbousa,dessert,regular,1,40,card,returning,5.0,26.7,6,Wednesday,12,40
+10596,2025-06-18,12:37,Maadi,mint lemonade,drink,medium,3,55,card,returning,,26.7,6,Wednesday,12,165
+10598,2025-06-18,13:25,Maadi,cappuccino,drink,large,2,78,card,returning,5.0,26.7,6,Wednesday,13,156
+10601,2025-06-18,14:26,Heliopolis,cheese sandwich,food,regular,3,76,cash,returning,,26.7,6,Wednesday,14,228
+10595,2025-06-18,15:15,Maadi,espresso,drink,large,1,54,wallet,new,3.0,26.7,6,Wednesday,15,54
+10602,2025-06-18,16:52,Heliopolis,cheese sandwich,food,regular,3,76,wallet,new,5.0,26.7,6,Wednesday,16,228
+10593,2025-06-18,18:19,Zamalek,iced latte,drink,large,1,104,wallet,returning,,26.7,6,Wednesday,18,104
+10604,2025-06-19,13:16,Zamalek,cappuccino,drink,medium,1,75,cash,returning,4.0,30.8,6,Thursday,13,75
+10607,2025-06-19,13:54,Maadi,iced latte,drink,large,1,90,cash,returning,4.0,30.8,6,Thursday,13,90
+10606,2025-06-19,14:57,Maadi,cheese sandwich,food,regular,2,85,card,new,3.0,30.8,6,Thursday,14,170
+10605,2025-06-19,18:33,Maadi,brownie,dessert,regular,2,55,card,returning,3.0,30.8,6,Thursday,18,110
+10603,2025-06-19,22:07,Zamalek,falafel wrap,food,regular,2,69,cash,new,3.0,30.8,6,Thursday,22,138
+10616,2025-06-20,09:05,Heliopolis,basbousa,dessert,regular,1,36,card,returning,3.0,30.5,6,Friday,9,36
+10609,2025-06-20,12:49,Zamalek,falafel wrap,food,regular,1,69,wallet,new,4.0,30.5,6,Friday,12,69
+10613,2025-06-20,13:10,Maadi,cheesecake,dessert,regular,3,90,card,returning,4.0,30.5,6,Friday,13,270
+10611,2025-06-20,14:26,Maadi,latte,drink,large,1,84,card,returning,5.0,30.5,6,Friday,14,84
+10614,2025-06-20,14:27,Heliopolis,cheesecake,dessert,regular,1,81,wallet,returning,4.0,30.5,6,Friday,14,81
+10610,2025-06-20,16:13,Maadi,iced latte,drink,medium,2,75,card,returning,4.0,30.5,6,Friday,16,150
+10612,2025-06-20,16:26,Maadi,brownie,dessert,regular,1,55,card,returning,4.0,30.5,6,Friday,16,55
+10608,2025-06-20,18:11,Zamalek,brownie,dessert,regular,1,63,card,returning,4.0,30.5,6,Friday,18,63
+10615,2025-06-20,18:15,Heliopolis,tea,drink,medium,1,27,card,returning,5.0,30.5,6,Friday,18,27
+10617,2025-06-21,09:39,Zamalek,croissant,food,regular,2,57,wallet,new,4.0,32.3,6,Saturday,9,114
+10620,2025-06-21,09:57,Maadi,croissant,food,regular,3,50,cash,returning,5.0,32.3,6,Saturday,9,150
+10623,2025-06-21,10:07,Heliopolis,basbousa,dessert,regular,1,36,cash,new,4.0,32.3,6,Saturday,10,36
+10622,2025-06-21,13:56,Heliopolis,iced latte,drink,medium,2,68,cash,new,4.0,32.3,6,Saturday,13,136
+10619,2025-06-21,13:57,Maadi,espresso,drink,medium,1,45,cash,new,3.0,32.3,6,Saturday,13,45
+10618,2025-06-21,14:47,Maadi,mint lemonade,drink,large,2,66,cash,new,5.0,32.3,6,Saturday,14,132
+10621,2025-06-21,18:57,Maadi,iced latte,drink,medium,1,75,wallet,new,4.0,32.3,6,Saturday,18,75
+10629,2025-06-22,09:08,Maadi,tea,drink,small,1,26,wallet,new,4.0,31.1,6,Sunday,9,26
+10624,2025-06-22,10:33,Zamalek,latte,drink,large,1,97,card,returning,4.0,31.1,6,Sunday,10,97
+10628,2025-06-22,12:42,Maadi,cheese sandwich,food,regular,3,85,cash,new,4.0,31.1,6,Sunday,12,255
+10630,2025-06-22,12:48,Heliopolis,cappuccino,drink,medium,2,58,card,returning,,31.1,6,Sunday,12,116
+10627,2025-06-22,13:55,Maadi,tea,drink,small,1,26,cash,returning,3.0,31.1,6,Sunday,13,26
+10625,2025-06-22,14:55,Zamalek,iced latte,drink,small,1,73,wallet,returning,5.0,31.1,6,Sunday,14,73
+10632,2025-06-22,16:56,Heliopolis,mint lemonade,drink,medium,3,50,wallet,returning,5.0,31.1,6,Sunday,16,150
+10631,2025-06-22,17:35,Heliopolis,cappuccino,drink,medium,2,58,cash,returning,4.0,31.1,6,Sunday,17,116
+10626,2025-06-22,22:54,Zamalek,basbousa,dessert,regular,1,46,cash,returning,4.0,31.1,6,Sunday,22,46
+10635,2025-06-23,10:20,Heliopolis,iced latte,drink,large,2,81,cash,returning,3.0,36.8,6,Monday,10,162
+10633,2025-06-23,15:56,Zamalek,hot chocolate,drink,small,3,59,wallet,returning,3.0,36.8,6,Monday,15,177
+10634,2025-06-23,18:37,Maadi,cheese sandwich,food,regular,1,85,card,returning,5.0,36.8,6,Monday,18,85
+10641,2025-06-24,10:26,Heliopolis,falafel wrap,food,regular,2,54,card,new,3.0,30.5,6,Tuesday,10,108
+10642,2025-06-24,10:50,Heliopolis,cappuccino,drink,large,3,70,cash,returning,5.0,30.5,6,Tuesday,10,210
+10636,2025-06-24,15:17,Zamalek,iced latte,drink,small,1,73,card,new,3.0,30.5,6,Tuesday,15,73
+10640,2025-06-24,15:42,Heliopolis,latte,drink,medium,3,63,cash,new,3.0,30.5,6,Tuesday,15,189
+10639,2025-06-24,18:49,Heliopolis,tea,drink,large,3,32,cash,new,5.0,30.5,6,Tuesday,18,96
+10638,2025-06-24,23:18,Maadi,basbousa,dessert,regular,3,40,card,new,4.0,30.5,6,Tuesday,23,120
+10637,2025-06-24,23:57,Zamalek,mint lemonade,drink,large,1,76,card,new,5.0,30.5,6,Tuesday,23,76
+10647,2025-06-25,13:08,Heliopolis,iced latte,drink,large,3,81,wallet,new,,31.9,6,Wednesday,13,243
+10644,2025-06-25,13:59,Zamalek,mint lemonade,drink,medium,2,63,card,returning,3.0,31.9,6,Wednesday,13,126
+10646,2025-06-25,14:28,Maadi,mint lemonade,drink,medium,1,55,wallet,new,4.0,31.9,6,Wednesday,14,55
+10645,2025-06-25,16:37,Maadi,iced latte,drink,medium,1,75,cash,returning,5.0,31.9,6,Wednesday,16,75
+10643,2025-06-25,17:54,Zamalek,iced latte,drink,medium,1,86,card,new,3.0,31.9,6,Wednesday,17,86
+10648,2025-06-26,14:55,Heliopolis,cheesecake,dessert,regular,1,81,cash,new,3.0,31.2,6,Thursday,14,81
+10652,2025-06-27,08:58,Heliopolis,mint lemonade,drink,large,3,59,wallet,new,4.0,32.9,6,Friday,8,177
+10651,2025-06-27,09:58,Maadi,cheesecake,dessert,regular,3,90,cash,new,,32.9,6,Friday,9,270
+10655,2025-06-27,12:28,Heliopolis,basbousa,dessert,regular,1,36,cash,returning,4.0,32.9,6,Friday,12,36
+10649,2025-06-27,13:50,Zamalek,latte,drink,medium,1,80,card,returning,5.0,32.9,6,Friday,13,80
+10650,2025-06-27,13:57,Zamalek,cheesecake,dessert,regular,1,103,cash,returning,4.0,32.9,6,Friday,13,103
+10654,2025-06-27,15:34,Heliopolis,basbousa,dessert,regular,1,36,cash,returning,4.0,32.9,6,Friday,15,36
+10653,2025-06-27,21:43,Heliopolis,iced latte,drink,medium,2,68,cash,returning,4.0,32.9,6,Friday,21,136
+10656,2025-06-28,11:14,Zamalek,cappuccino,drink,medium,1,75,card,new,3.0,32.4,6,Saturday,11,75
+10657,2025-06-28,11:24,Zamalek,brownie,dessert,regular,1,63,card,returning,4.0,32.4,6,Saturday,11,63
+10658,2025-06-28,12:08,Maadi,brownie,dessert,regular,1,55,wallet,returning,4.0,32.4,6,Saturday,12,55
+10660,2025-06-28,12:39,Heliopolis,espresso,drink,medium,1,40,cash,new,3.0,32.4,6,Saturday,12,40
+10659,2025-06-28,17:17,Heliopolis,mint lemonade,drink,large,3,59,wallet,returning,5.0,32.4,6,Saturday,17,177
+10661,2025-06-28,18:16,Heliopolis,cappuccino,drink,small,1,50,cash,returning,4.0,32.4,6,Saturday,18,50
+10663,2025-06-29,09:05,Zamalek,iced latte,drink,small,1,73,cash,new,5.0,29.8,6,Sunday,9,73
+10665,2025-06-29,09:59,Maadi,cheese sandwich,food,regular,1,85,card,returning,4.0,29.8,6,Sunday,9,85
+10669,2025-06-29,12:09,Heliopolis,espresso,drink,medium,3,40,wallet,new,4.0,29.8,6,Sunday,12,120
+10662,2025-06-29,12:17,Zamalek,latte,drink,small,3,68,wallet,new,4.0,29.8,6,Sunday,12,204
+10667,2025-06-29,12:23,Maadi,iced latte,drink,large,1,90,card,new,4.0,29.8,6,Sunday,12,90
+10664,2025-06-29,16:31,Maadi,mint lemonade,drink,medium,2,55,cash,new,5.0,29.8,6,Sunday,16,110
+10668,2025-06-29,17:58,Heliopolis,mint lemonade,drink,small,2,42,cash,returning,2.0,29.8,6,Sunday,17,84
+10666,2025-06-29,21:01,Maadi,croissant,food,regular,1,50,cash,returning,4.0,29.8,6,Sunday,21,50
+10671,2025-06-30,09:50,Maadi,cheesecake,dessert,regular,1,90,card,returning,4.0,31.9,6,Monday,9,90
+10670,2025-06-30,16:50,Maadi,cappuccino,drink,medium,1,65,cash,returning,5.0,31.9,6,Monday,16,65
+10673,2025-07-01,12:40,Maadi,cheesecake,dessert,regular,1,90,card,new,4.0,31.8,7,Tuesday,12,90
+10672,2025-07-01,18:13,Maadi,tea,drink,medium,1,30,cash,new,3.0,31.8,7,Tuesday,18,30
+10674,2025-07-01,20:59,Heliopolis,mint lemonade,drink,medium,1,50,cash,new,2.0,31.8,7,Tuesday,20,50
+10676,2025-07-02,10:20,Zamalek,croissant,food,regular,1,57,card,new,4.0,31.6,7,Wednesday,10,57
+10677,2025-07-02,12:44,Zamalek,mint lemonade,drink,large,1,76,cash,returning,3.0,31.6,7,Wednesday,12,76
+10675,2025-07-02,12:52,Zamalek,croissant,food,regular,1,57,wallet,returning,5.0,31.6,7,Wednesday,12,57
+10678,2025-07-02,15:47,Maadi,brownie,dessert,regular,3,55,wallet,returning,4.0,31.6,7,Wednesday,15,165
+10679,2025-07-02,16:24,Maadi,latte,drink,small,1,60,cash,returning,3.0,31.6,7,Wednesday,16,60
+10681,2025-07-03,07:00,Maadi,croissant,food,regular,1,50,cash,returning,,34.7,7,Thursday,7,50
+10682,2025-07-03,16:28,Heliopolis,mint lemonade,drink,small,2,42,cash,new,4.0,34.7,7,Thursday,16,84
+10680,2025-07-03,22:06,Zamalek,brownie,dessert,regular,3,63,wallet,returning,4.0,34.7,7,Thursday,22,189
+10685,2025-07-04,07:09,Zamalek,tea,drink,small,1,29,unknown,new,4.0,31.2,7,Friday,7,29
+10690,2025-07-04,10:36,Heliopolis,cheese sandwich,food,regular,1,76,card,returning,3.0,31.2,7,Friday,10,76
+10689,2025-07-04,10:48,Maadi,cappuccino,drink,large,2,78,card,new,4.0,31.2,7,Friday,10,156
+10684,2025-07-04,11:40,Zamalek,basbousa,dessert,regular,1,46,cash,returning,3.0,31.2,7,Friday,11,46
+10688,2025-07-04,12:23,Zamalek,cheese sandwich,food,regular,1,98,cash,returning,4.0,31.2,7,Friday,12,98
+10683,2025-07-04,13:19,Zamalek,hot chocolate,drink,medium,1,69,wallet,returning,5.0,31.2,7,Friday,13,69
+10687,2025-07-04,13:31,Zamalek,hot chocolate,drink,medium,2,69,card,new,5.0,31.2,7,Friday,13,138
+10691,2025-07-04,13:37,Heliopolis,espresso,drink,medium,1,40,card,returning,5.0,31.2,7,Friday,13,40
+10686,2025-07-04,17:34,Zamalek,cheesecake,dessert,regular,2,103,cash,returning,4.0,31.2,7,Friday,17,206
+10695,2025-07-05,07:00,Zamalek,cheesecake,dessert,regular,1,103,card,returning,5.0,32.1,7,Saturday,7,103
+10698,2025-07-05,08:06,Maadi,falafel wrap,food,regular,1,60,wallet,returning,4.0,32.1,7,Saturday,8,60
+10700,2025-07-05,08:36,Maadi,croissant,food,regular,2,50,cash,new,5.0,32.1,7,Saturday,8,100
+10693,2025-07-05,10:11,Zamalek,espresso,drink,small,3,44,cash,new,5.0,32.1,7,Saturday,10,132
+10696,2025-07-05,10:53,Zamalek,falafel wrap,food,regular,2,69,cash,returning,4.0,32.1,7,Saturday,10,138
+10697,2025-07-05,12:08,Maadi,basbousa,dessert,regular,3,40,card,new,3.0,32.1,7,Saturday,12,120
+10692,2025-07-05,16:04,Zamalek,iced latte,drink,medium,1,86,wallet,returning,5.0,32.1,7,Saturday,16,86
+10694,2025-07-05,18:51,Zamalek,brownie,dessert,regular,2,63,card,returning,4.0,32.1,7,Saturday,18,126
+10699,2025-07-05,19:47,Maadi,cheese sandwich,food,regular,1,85,card,returning,3.0,32.1,7,Saturday,19,85
+10701,2025-07-05,20:26,Heliopolis,iced latte,drink,small,1,57,card,new,3.0,32.1,7,Saturday,20,57
+10705,2025-07-06,09:48,Heliopolis,brownie,dessert,regular,1,50,card,new,4.0,33.6,7,Sunday,9,50
+10704,2025-07-06,14:25,Heliopolis,falafel wrap,food,regular,2,54,cash,returning,4.0,33.6,7,Sunday,14,108
+10702,2025-07-06,16:42,Zamalek,falafel wrap,food,regular,2,69,card,new,3.0,33.6,7,Sunday,16,138
+10703,2025-07-06,17:14,Maadi,mint lemonade,drink,medium,1,55,card,returning,3.0,33.6,7,Sunday,17,55
+10707,2025-07-07,12:45,Zamalek,falafel wrap,food,regular,1,69,card,new,4.0,33.8,7,Monday,12,69
+10708,2025-07-07,14:56,Maadi,basbousa,dessert,regular,1,40,card,new,,33.8,7,Monday,14,40
+10706,2025-07-07,15:11,Zamalek,iced latte,drink,medium,2,86,card,returning,4.0,33.8,7,Monday,15,172
+10711,2025-07-08,10:09,Maadi,iced latte,drink,medium,1,75,cash,new,2.0,33.7,7,Tuesday,10,75
+10710,2025-07-08,14:21,Maadi,hot chocolate,drink,small,3,51,cash,new,3.0,33.7,7,Tuesday,14,153
+10709,2025-07-08,15:48,Zamalek,iced latte,drink,large,2,104,cash,new,4.0,33.7,7,Tuesday,15,208
+10714,2025-07-09,07:19,Zamalek,espresso,drink,medium,1,52,cash,new,,28.7,7,Wednesday,7,52
+10715,2025-07-09,14:11,Maadi,iced latte,drink,large,1,90,wallet,returning,3.0,28.7,7,Wednesday,14,90
+10712,2025-07-09,14:59,Zamalek,hot chocolate,drink,small,1,59,wallet,returning,4.0,28.7,7,Wednesday,14,59
+10713,2025-07-09,17:42,Zamalek,cheese sandwich,food,regular,2,98,cash,returning,3.0,28.7,7,Wednesday,17,196
+10719,2025-07-10,09:11,Maadi,brownie,dessert,regular,3,55,card,returning,5.0,31.1,7,Thursday,9,165
+10716,2025-07-10,12:27,Zamalek,espresso,drink,medium,3,52,cash,returning,4.0,31.1,7,Thursday,12,156
+10717,2025-07-10,14:59,Zamalek,mint lemonade,drink,large,2,76,card,returning,5.0,31.1,7,Thursday,14,152
+10721,2025-07-10,16:30,Maadi,cheese sandwich,food,regular,1,85,card,returning,3.0,31.1,7,Thursday,16,85
+10720,2025-07-10,16:51,Maadi,cappuccino,drink,medium,2,65,cash,new,4.0,31.1,7,Thursday,16,130
+10718,2025-07-10,20:36,Zamalek,hot chocolate,drink,large,1,83,card,returning,5.0,31.1,7,Thursday,20,83
+10722,2025-07-11,08:13,Zamalek,cappuccino,drink,small,3,64,cash,new,4.0,32.4,7,Friday,8,192
+10725,2025-07-11,09:07,Maadi,cheese sandwich,food,regular,1,85,cash,new,4.0,32.4,7,Friday,9,85
+10727,2025-07-11,12:32,Heliopolis,iced latte,drink,medium,2,68,card,returning,4.0,32.4,7,Friday,12,136
+10726,2025-07-11,14:10,Heliopolis,iced latte,drink,large,1,81,cash,returning,5.0,32.4,7,Friday,14,81
+10723,2025-07-11,15:24,Zamalek,mint lemonade,drink,medium,1,63,cash,returning,5.0,32.4,7,Friday,15,63
+10724,2025-07-11,17:07,Maadi,cheese sandwich,food,regular,1,85,cash,returning,5.0,32.4,7,Friday,17,85
+10729,2025-07-12,08:18,Maadi,mint lemonade,drink,large,1,66,cash,returning,3.0,34.4,7,Saturday,8,66
+10730,2025-07-12,10:01,Maadi,mint lemonade,drink,medium,1,55,card,new,5.0,34.4,7,Saturday,10,55
+10728,2025-07-12,12:50,Zamalek,cheese sandwich,food,regular,1,98,card,new,,34.4,7,Saturday,12,98
+10731,2025-07-12,12:53,Maadi,croissant,food,regular,2,50,cash,returning,,34.4,7,Saturday,12,100
+10732,2025-07-12,14:42,Heliopolis,hot chocolate,drink,large,2,65,cash,returning,,34.4,7,Saturday,14,130
+10733,2025-07-12,14:48,Heliopolis,cappuccino,drink,medium,1,58,cash,returning,4.0,34.4,7,Saturday,14,58
+10734,2025-07-13,11:08,Zamalek,iced latte,drink,medium,3,86,wallet,returning,3.0,29.1,7,Sunday,11,258
+10735,2025-07-13,11:29,Zamalek,falafel wrap,food,regular,1,69,card,new,4.0,29.1,7,Sunday,11,69
+10736,2025-07-13,12:07,Maadi,basbousa,dessert,regular,1,40,card,returning,3.0,29.1,7,Sunday,12,40
+10737,2025-07-13,16:56,Maadi,iced latte,drink,medium,1,75,cash,new,4.0,29.1,7,Sunday,16,75
+10738,2025-07-14,13:12,Zamalek,iced latte,drink,medium,1,86,card,returning,3.0,31.5,7,Monday,13,86
+10739,2025-07-14,20:44,Zamalek,hot chocolate,drink,medium,1,69,cash,returning,,31.5,7,Monday,20,69
+10741,2025-07-15,07:53,Maadi,hot chocolate,drink,small,3,51,card,returning,4.0,33.8,7,Tuesday,7,153
+10742,2025-07-15,09:50,Maadi,tea,drink,medium,3,30,cash,returning,3.0,33.8,7,Tuesday,9,90
+10743,2025-07-15,10:56,Heliopolis,mint lemonade,drink,medium,3,50,cash,returning,4.0,33.8,7,Tuesday,10,150
+10740,2025-07-15,12:16,Zamalek,hot chocolate,drink,medium,3,69,card,new,4.0,33.8,7,Tuesday,12,207
+10745,2025-07-16,13:00,Maadi,basbousa,dessert,regular,1,40,cash,returning,5.0,31.7,7,Wednesday,13,40
+10744,2025-07-16,14:33,Maadi,basbousa,dessert,regular,2,40,wallet,new,5.0,31.7,7,Wednesday,14,80
+10748,2025-07-17,09:32,Heliopolis,cheesecake,dessert,regular,1,81,card,new,3.0,30.0,7,Thursday,9,81
+10749,2025-07-17,11:08,Heliopolis,cheese sandwich,food,regular,3,76,wallet,new,4.0,30.0,7,Thursday,11,228
+10746,2025-07-17,11:10,Zamalek,iced latte,drink,small,1,73,wallet,returning,5.0,30.0,7,Thursday,11,73
+10747,2025-07-17,17:04,Heliopolis,latte,drink,medium,3,63,cash,returning,3.0,30.0,7,Thursday,17,189
+10750,2025-07-18,09:06,Zamalek,mint lemonade,drink,large,1,76,card,returning,5.0,30.1,7,Friday,9,76
+10754,2025-07-18,11:21,Maadi,falafel wrap,food,regular,2,60,cash,returning,5.0,30.1,7,Friday,11,120
+10755,2025-07-18,12:17,Maadi,cappuccino,drink,large,1,78,card,returning,4.0,30.1,7,Friday,12,78
+10751,2025-07-18,12:31,Zamalek,falafel wrap,food,regular,3,69,card,returning,5.0,30.1,7,Friday,12,207
+10752,2025-07-18,16:56,Maadi,latte,drink,medium,3,70,card,returning,3.0,30.1,7,Friday,16,210
+10753,2025-07-18,17:04,Maadi,latte,drink,medium,1,70,card,returning,3.0,30.1,7,Friday,17,70
+10758,2025-07-19,12:08,Heliopolis,iced latte,drink,medium,1,68,cash,new,5.0,29.4,7,Saturday,12,68
+10756,2025-07-19,12:40,Zamalek,mint lemonade,drink,small,2,54,cash,new,4.0,29.4,7,Saturday,12,108
+10757,2025-07-19,14:50,Maadi,basbousa,dessert,regular,2,40,wallet,returning,3.0,29.4,7,Saturday,14,80
+10759,2025-07-19,19:34,Heliopolis,latte,drink,large,1,76,card,returning,4.0,29.4,7,Saturday,19,76
+10762,2025-07-20,11:35,Zamalek,mint lemonade,drink,small,1,54,wallet,new,4.0,34.6,7,Sunday,11,54
+10763,2025-07-20,13:54,Zamalek,iced latte,drink,medium,1,86,wallet,returning,3.0,34.6,7,Sunday,13,86
+10760,2025-07-20,14:03,Zamalek,iced latte,drink,medium,1,86,cash,returning,3.0,34.6,7,Sunday,14,86
+10765,2025-07-20,16:14,Heliopolis,tea,drink,small,1,23,cash,new,5.0,34.6,7,Sunday,16,23
+10761,2025-07-20,17:31,Zamalek,mint lemonade,drink,medium,2,63,wallet,returning,5.0,34.6,7,Sunday,17,126
+10764,2025-07-20,18:44,Heliopolis,cheesecake,dessert,regular,1,81,cash,returning,3.0,34.6,7,Sunday,18,81
+10767,2025-07-22,07:09,Zamalek,mint lemonade,drink,medium,2,63,cash,new,2.0,32.9,7,Tuesday,7,126
+10772,2025-07-22,09:08,Heliopolis,cheesecake,dessert,regular,2,81,card,returning,,32.9,7,Tuesday,9,162
+10769,2025-07-22,14:33,Maadi,latte,drink,medium,1,70,cash,returning,4.0,32.9,7,Tuesday,14,70
+10771,2025-07-22,15:47,Heliopolis,latte,drink,medium,2,63,cash,new,3.0,32.9,7,Tuesday,15,126
+10770,2025-07-22,16:39,Heliopolis,cheesecake,dessert,regular,2,81,wallet,returning,4.0,32.9,7,Tuesday,16,162
+10773,2025-07-22,16:56,Heliopolis,cheesecake,dessert,regular,1,81,cash,returning,3.0,32.9,7,Tuesday,16,81
+10766,2025-07-22,18:02,Zamalek,mint lemonade,drink,medium,3,63,wallet,new,5.0,32.9,7,Tuesday,18,189
+10768,2025-07-22,20:50,Maadi,iced latte,drink,small,2,64,cash,new,5.0,32.9,7,Tuesday,20,128
+10774,2025-07-23,11:14,Maadi,mint lemonade,drink,small,2,47,card,returning,5.0,29.8,7,Wednesday,11,94
+10777,2025-07-23,13:35,Heliopolis,iced latte,drink,large,3,81,card,new,3.0,29.8,7,Wednesday,13,243
+10776,2025-07-23,13:51,Heliopolis,mint lemonade,drink,medium,2,50,wallet,returning,5.0,29.8,7,Wednesday,13,100
+10778,2025-07-23,16:49,Heliopolis,mint lemonade,drink,small,2,42,cash,new,2.0,29.8,7,Wednesday,16,84
+10779,2025-07-23,18:07,Heliopolis,iced latte,drink,medium,2,68,wallet,returning,4.0,29.8,7,Wednesday,18,136
+10775,2025-07-23,18:16,Maadi,mint lemonade,drink,medium,2,55,wallet,returning,3.0,29.8,7,Wednesday,18,110
+10781,2025-07-24,17:39,Maadi,mint lemonade,drink,large,2,66,cash,returning,,29.2,7,Thursday,17,132
+10782,2025-07-24,17:44,Maadi,iced latte,drink,medium,1,75,wallet,returning,3.0,29.2,7,Thursday,17,75
+10780,2025-07-24,19:26,Zamalek,hot chocolate,drink,medium,2,69,wallet,returning,3.0,29.2,7,Thursday,19,138
+10784,2025-07-25,10:36,Zamalek,mint lemonade,drink,medium,2,63,card,new,3.0,32.4,7,Friday,10,126
+10783,2025-07-25,10:47,Zamalek,mint lemonade,drink,medium,1,63,card,new,2.0,32.4,7,Friday,10,63
+10785,2025-07-25,12:06,Maadi,falafel wrap,food,regular,1,60,cash,new,,32.4,7,Friday,12,60
+10786,2025-07-25,13:27,Heliopolis,brownie,dessert,regular,2,50,card,returning,4.0,32.4,7,Friday,13,100
+10787,2025-07-25,14:35,Heliopolis,espresso,drink,medium,2,40,card,returning,3.0,32.4,7,Friday,14,80
+10793,2025-07-26,10:06,Zamalek,mint lemonade,drink,small,3,54,card,returning,4.0,33.4,7,Saturday,10,162
+10788,2025-07-26,10:44,Zamalek,iced latte,drink,medium,2,86,card,new,4.0,33.4,7,Saturday,10,172
+10796,2025-07-26,11:31,Heliopolis,iced latte,drink,large,3,81,wallet,returning,5.0,33.4,7,Saturday,11,243
+10794,2025-07-26,11:49,Zamalek,croissant,food,regular,1,57,wallet,returning,4.0,33.4,7,Saturday,11,57
+10790,2025-07-26,12:53,Zamalek,espresso,drink,medium,2,52,cash,returning,3.0,33.4,7,Saturday,12,104
+10789,2025-07-26,14:58,Zamalek,latte,drink,medium,1,80,card,returning,3.0,33.4,7,Saturday,14,80
+10792,2025-07-26,15:49,Zamalek,iced latte,drink,large,1,104,card,returning,5.0,33.4,7,Saturday,15,104
+10795,2025-07-26,15:52,Heliopolis,latte,drink,medium,2,63,wallet,new,3.0,33.4,7,Saturday,15,126
+10791,2025-07-26,18:01,Zamalek,iced latte,drink,small,3,73,cash,new,5.0,33.4,7,Saturday,18,219
+10797,2025-07-27,11:46,Maadi,latte,drink,small,2,60,wallet,returning,4.0,31.5,7,Sunday,11,120
+10801,2025-07-28,11:18,Maadi,iced latte,drink,medium,2,75,card,new,4.0,31.7,7,Monday,11,150
+10800,2025-07-28,15:20,Maadi,mint lemonade,drink,large,1,66,card,new,4.0,31.7,7,Monday,15,66
+10798,2025-07-28,16:04,Zamalek,latte,drink,medium,1,80,cash,returning,4.0,31.7,7,Monday,16,80
+10799,2025-07-28,17:50,Zamalek,cheesecake,dessert,regular,1,103,card,returning,4.0,31.7,7,Monday,17,103
+10802,2025-07-29,11:05,Maadi,mint lemonade,drink,medium,2,55,card,new,5.0,30.6,7,Tuesday,11,110
+10803,2025-07-29,13:27,Heliopolis,mint lemonade,drink,small,2,42,cash,returning,4.0,30.6,7,Tuesday,13,84
+10804,2025-07-30,12:20,Zamalek,basbousa,dessert,regular,1,46,cash,returning,5.0,32.7,7,Wednesday,12,46
+10807,2025-07-30,13:33,Zamalek,mint lemonade,drink,large,1,76,wallet,new,4.0,32.7,7,Wednesday,13,76
+10806,2025-07-30,13:38,Zamalek,mint lemonade,drink,large,1,76,card,new,4.0,32.7,7,Wednesday,13,76
+10808,2025-07-30,15:11,Zamalek,latte,drink,large,1,97,cash,returning,,32.7,7,Wednesday,15,97
+10805,2025-07-30,18:54,Zamalek,brownie,dessert,regular,2,63,card,new,4.0,32.7,7,Wednesday,18,126
+10810,2025-07-31,13:47,Zamalek,iced latte,drink,medium,2,86,card,returning,4.0,30.6,7,Thursday,13,172
+10809,2025-07-31,14:57,Zamalek,latte,drink,medium,2,80,cash,returning,5.0,30.6,7,Thursday,14,160
+10815,2025-08-01,09:45,Zamalek,tea,drink,medium,3,34,wallet,new,4.0,27.3,8,Friday,9,102
+10811,2025-08-01,13:52,Zamalek,cappuccino,drink,small,1,64,cash,new,4.0,27.3,8,Friday,13,64
+10813,2025-08-01,16:13,Zamalek,iced latte,drink,large,1,104,card,new,2.0,27.3,8,Friday,16,104
+10814,2025-08-01,16:18,Zamalek,tea,drink,medium,1,34,card,returning,5.0,27.3,8,Friday,16,34
+10816,2025-08-01,17:26,Heliopolis,tea,drink,medium,1,27,cash,returning,3.0,27.3,8,Friday,17,27
+10812,2025-08-01,20:29,Zamalek,iced latte,drink,small,3,73,wallet,new,4.0,27.3,8,Friday,20,219
+10819,2025-08-02,10:00,Maadi,cheesecake,dessert,regular,2,90,card,returning,4.0,28.9,8,Saturday,10,180
+10821,2025-08-02,10:26,Heliopolis,espresso,drink,medium,2,40,unknown,returning,5.0,28.9,8,Saturday,10,80
+10820,2025-08-02,11:11,Heliopolis,cappuccino,drink,small,3,50,card,returning,,28.9,8,Saturday,11,150
+10818,2025-08-02,11:20,Maadi,croissant,food,regular,1,50,wallet,new,4.0,28.9,8,Saturday,11,50
+10817,2025-08-02,11:47,Zamalek,mint lemonade,drink,small,3,54,card,new,3.0,28.9,8,Saturday,11,162
+10822,2025-08-02,12:06,Heliopolis,iced latte,drink,medium,3,68,card,returning,5.0,28.9,8,Saturday,12,204
+10826,2025-08-04,11:13,Maadi,basbousa,dessert,regular,2,40,cash,returning,5.0,32.6,8,Monday,11,80
+10825,2025-08-04,11:16,Zamalek,latte,drink,large,3,97,card,returning,3.0,32.6,8,Monday,11,291
+10829,2025-08-04,12:36,Heliopolis,basbousa,dessert,regular,2,36,card,returning,5.0,32.6,8,Monday,12,72
+10828,2025-08-04,13:12,Heliopolis,brownie,dessert,regular,2,50,cash,returning,4.0,32.6,8,Monday,13,100
+10827,2025-08-04,14:03,Maadi,croissant,food,regular,1,50,card,new,5.0,32.6,8,Monday,14,50
+10823,2025-08-04,17:11,Zamalek,basbousa,dessert,regular,2,46,wallet,new,3.0,32.6,8,Monday,17,92
+10824,2025-08-04,19:43,Zamalek,iced latte,drink,medium,2,86,cash,returning,4.0,32.6,8,Monday,19,172
+10830,2025-08-05,20:34,Zamalek,hot chocolate,drink,medium,1,69,cash,returning,5.0,27.7,8,Tuesday,20,69
+10835,2025-08-06,07:27,Heliopolis,brownie,dessert,regular,1,50,cash,new,3.0,28.5,8,Wednesday,7,50
+10834,2025-08-06,11:24,Maadi,latte,drink,medium,1,70,wallet,returning,3.0,28.5,8,Wednesday,11,70
+10831,2025-08-06,11:41,Zamalek,cheesecake,dessert,regular,2,103,wallet,returning,5.0,28.5,8,Wednesday,11,206
+10833,2025-08-06,13:17,Maadi,falafel wrap,food,regular,2,60,cash,returning,4.0,28.5,8,Wednesday,13,120
+10832,2025-08-06,17:14,Maadi,brownie,dessert,regular,1,55,wallet,new,3.0,28.5,8,Wednesday,17,55
+10840,2025-08-07,10:01,Maadi,cheesecake,dessert,regular,1,90,cash,new,4.0,28.3,8,Thursday,10,90
+10839,2025-08-07,10:09,Zamalek,basbousa,dessert,regular,2,46,cash,returning,4.0,28.3,8,Thursday,10,92
+10842,2025-08-07,10:35,Maadi,iced latte,drink,medium,1,75,card,returning,,28.3,8,Thursday,10,75
+10841,2025-08-07,11:51,Maadi,latte,drink,small,2,60,cash,returning,4.0,28.3,8,Thursday,11,120
+10838,2025-08-07,12:16,Zamalek,cheesecake,dessert,regular,1,103,card,new,4.0,28.3,8,Thursday,12,103
+10836,2025-08-07,17:47,Zamalek,hot chocolate,drink,medium,2,69,unknown,returning,4.0,28.3,8,Thursday,17,138
+10843,2025-08-07,18:29,Heliopolis,mint lemonade,drink,small,2,42,cash,returning,4.0,28.3,8,Thursday,18,84
+10837,2025-08-07,21:12,Zamalek,falafel wrap,food,regular,1,69,cash,returning,4.0,28.3,8,Thursday,21,69
+10845,2025-08-08,12:41,Maadi,basbousa,dessert,regular,1,40,cash,new,,27.7,8,Friday,12,40
+10847,2025-08-08,13:19,Heliopolis,cappuccino,drink,large,2,70,card,new,5.0,27.7,8,Friday,13,140
+10846,2025-08-08,16:39,Maadi,mint lemonade,drink,large,1,66,wallet,new,,27.7,8,Friday,16,66
+10844,2025-08-08,17:11,Maadi,hot chocolate,drink,large,1,72,card,returning,5.0,27.7,8,Friday,17,72
+10852,2025-08-09,07:42,Heliopolis,brownie,dessert,regular,2,50,card,new,2.0,29.3,8,Saturday,7,100
+10849,2025-08-09,07:56,Zamalek,mint lemonade,drink,small,1,54,cash,new,4.0,29.3,8,Saturday,7,54
+10851,2025-08-09,13:20,Maadi,brownie,dessert,regular,3,55,cash,new,4.0,29.3,8,Saturday,13,165
+10848,2025-08-09,14:17,Zamalek,latte,drink,small,3,68,card,returning,5.0,29.3,8,Saturday,14,204
+10850,2025-08-09,18:07,Maadi,iced latte,drink,large,2,90,wallet,new,3.0,29.3,8,Saturday,18,180
+10853,2025-08-10,08:35,Zamalek,brownie,dessert,regular,3,63,cash,returning,,29.3,8,Sunday,8,189
+10855,2025-08-10,14:04,Maadi,espresso,drink,small,1,38,cash,returning,5.0,29.3,8,Sunday,14,38
+10854,2025-08-10,14:58,Zamalek,mint lemonade,drink,medium,2,63,cash,returning,5.0,29.3,8,Sunday,14,126
+10856,2025-08-11,14:44,Zamalek,croissant,food,regular,2,57,cash,returning,5.0,35.2,8,Monday,14,114
+10857,2025-08-11,17:26,Zamalek,cheese sandwich,food,regular,1,98,card,new,,35.2,8,Monday,17,98
+10859,2025-08-11,18:53,Heliopolis,iced latte,drink,small,1,57,cash,returning,3.0,35.2,8,Monday,18,57
+10858,2025-08-11,21:52,Zamalek,espresso,drink,small,1,44,cash,new,2.0,35.2,8,Monday,21,44
+10862,2025-08-12,07:42,Maadi,iced latte,drink,small,1,64,cash,returning,5.0,30.8,8,Tuesday,7,64
+10860,2025-08-12,09:44,Zamalek,latte,drink,medium,2,80,wallet,returning,5.0,30.8,8,Tuesday,9,160
+10865,2025-08-12,12:12,Heliopolis,mint lemonade,drink,medium,2,50,card,returning,5.0,30.8,8,Tuesday,12,100
+10861,2025-08-12,15:13,Maadi,brownie,dessert,regular,2,55,card,new,4.0,30.8,8,Tuesday,15,110
+10864,2025-08-12,16:10,Heliopolis,mint lemonade,drink,medium,3,50,cash,new,3.0,30.8,8,Tuesday,16,150
+10863,2025-08-12,16:17,Heliopolis,cappuccino,drink,large,2,70,cash,returning,4.0,30.8,8,Tuesday,16,140
+10867,2025-08-13,14:12,Zamalek,iced latte,drink,small,2,73,wallet,returning,5.0,33.5,8,Wednesday,14,146
+10868,2025-08-13,16:28,Maadi,latte,drink,medium,1,70,cash,returning,5.0,33.5,8,Wednesday,16,70
+10866,2025-08-13,19:03,Zamalek,basbousa,dessert,regular,1,46,card,new,4.0,33.5,8,Wednesday,19,46
+10869,2025-08-14,07:46,Zamalek,mint lemonade,drink,large,1,76,wallet,new,3.0,32.2,8,Thursday,7,76
+10873,2025-08-14,10:21,Heliopolis,iced latte,drink,large,1,81,cash,returning,2.0,32.2,8,Thursday,10,81
+10871,2025-08-14,12:33,Maadi,mint lemonade,drink,small,3,47,cash,returning,4.0,32.2,8,Thursday,12,141
+10872,2025-08-14,14:15,Maadi,brownie,dessert,regular,3,55,cash,returning,5.0,32.2,8,Thursday,14,165
+10874,2025-08-14,15:38,Heliopolis,hot chocolate,drink,large,1,65,wallet,returning,4.0,32.2,8,Thursday,15,65
+10870,2025-08-14,18:56,Maadi,mint lemonade,drink,medium,1,55,wallet,new,3.0,32.2,8,Thursday,18,55
+10875,2025-08-15,07:27,Zamalek,latte,drink,small,1,68,card,new,4.0,28.6,8,Friday,7,68
+10886,2025-08-15,07:49,Heliopolis,croissant,food,regular,2,45,card,new,3.0,28.6,8,Friday,7,90
+10883,2025-08-15,08:14,Maadi,iced latte,drink,medium,1,75,cash,returning,3.0,28.6,8,Friday,8,75
+10884,2025-08-15,09:13,Maadi,falafel wrap,food,regular,3,60,card,new,3.0,28.6,8,Friday,9,180
+10879,2025-08-15,10:23,Zamalek,latte,drink,medium,1,80,card,returning,4.0,28.6,8,Friday,10,80
+10878,2025-08-15,12:12,Zamalek,hot chocolate,drink,medium,1,69,card,returning,5.0,28.6,8,Friday,12,69
+10885,2025-08-15,13:04,Maadi,basbousa,dessert,regular,3,40,cash,new,4.0,28.6,8,Friday,13,120
+10877,2025-08-15,13:47,Zamalek,croissant,food,regular,2,57,card,returning,3.0,28.6,8,Friday,13,114
+10882,2025-08-15,14:44,Zamalek,mint lemonade,drink,small,1,54,wallet,returning,5.0,28.6,8,Friday,14,54
+10876,2025-08-15,15:03,Zamalek,mint lemonade,drink,medium,1,63,cash,new,,28.6,8,Friday,15,63
+10880,2025-08-15,15:47,Zamalek,iced latte,drink,large,1,104,cash,returning,4.0,28.6,8,Friday,15,104
+10881,2025-08-15,17:40,Zamalek,espresso,drink,medium,3,52,card,returning,5.0,28.6,8,Friday,17,156
+10889,2025-08-16,12:47,Zamalek,cheese sandwich,food,regular,1,98,cash,returning,3.0,30.2,8,Saturday,12,98
+10891,2025-08-16,12:48,Heliopolis,cappuccino,drink,small,1,50,cash,new,4.0,30.2,8,Saturday,12,50
+10888,2025-08-16,14:07,Zamalek,espresso,drink,large,3,62,cash,returning,4.0,30.2,8,Saturday,14,186
+10890,2025-08-16,15:23,Maadi,mint lemonade,drink,large,1,66,wallet,returning,4.0,30.2,8,Saturday,15,66
+10887,2025-08-16,18:44,Zamalek,cheese sandwich,food,regular,1,98,wallet,new,4.0,30.2,8,Saturday,18,98
+10893,2025-08-17,14:26,Heliopolis,mint lemonade,drink,medium,1,50,cash,returning,5.0,30.5,8,Sunday,14,50
+10892,2025-08-17,20:11,Zamalek,cheesecake,dessert,regular,1,103,card,new,4.0,30.5,8,Sunday,20,103
+10895,2025-08-18,07:49,Zamalek,cheesecake,dessert,regular,2,103,card,new,3.0,32.0,8,Monday,7,206
+10894,2025-08-18,08:49,Zamalek,iced latte,drink,medium,1,86,wallet,returning,4.0,32.0,8,Monday,8,86
+10896,2025-08-18,09:35,Zamalek,iced latte,drink,large,1,104,card,new,5.0,32.0,8,Monday,9,104
+10898,2025-08-18,12:07,Heliopolis,croissant,food,regular,2,45,cash,returning,4.0,32.0,8,Monday,12,90
+10897,2025-08-18,16:47,Zamalek,iced latte,drink,medium,1,86,card,returning,,32.0,8,Monday,16,86
+10900,2025-08-19,12:55,Maadi,iced latte,drink,small,1,64,card,returning,,28.2,8,Tuesday,12,64
+10902,2025-08-19,18:24,Heliopolis,latte,drink,large,1,76,wallet,new,,28.2,8,Tuesday,18,76
+10899,2025-08-19,19:56,Zamalek,latte,drink,medium,3,80,cash,returning,3.0,28.2,8,Tuesday,19,240
+10901,2025-08-19,22:07,Heliopolis,croissant,food,regular,1,45,wallet,returning,4.0,28.2,8,Tuesday,22,45
+10904,2025-08-20,10:17,Maadi,mint lemonade,drink,medium,1,55,card,new,2.0,31.3,8,Wednesday,10,55
+10905,2025-08-20,13:39,Maadi,iced latte,drink,medium,2,75,wallet,returning,3.0,31.3,8,Wednesday,13,150
+10903,2025-08-20,14:22,Zamalek,hot chocolate,drink,medium,1,69,cash,returning,5.0,31.3,8,Wednesday,14,69
+10907,2025-08-21,11:20,Maadi,iced latte,drink,small,1,64,cash,new,5.0,30.6,8,Thursday,11,64
+10906,2025-08-21,17:56,Zamalek,basbousa,dessert,regular,1,46,card,new,4.0,30.6,8,Thursday,17,46
+10909,2025-08-22,07:11,Zamalek,cheese sandwich,food,regular,2,98,card,returning,5.0,25.2,8,Friday,7,196
+10915,2025-08-22,11:36,Maadi,cheesecake,dessert,regular,1,90,cash,returning,5.0,25.2,8,Friday,11,90
+10913,2025-08-22,12:08,Maadi,cheese sandwich,food,regular,2,85,cash,new,4.0,25.2,8,Friday,12,170
+10910,2025-08-22,12:26,Zamalek,iced latte,drink,large,3,104,card,returning,,25.2,8,Friday,12,312
+10908,2025-08-22,12:44,Zamalek,croissant,food,regular,1,57,card,returning,4.0,25.2,8,Friday,12,57
+10916,2025-08-22,15:22,Heliopolis,tea,drink,medium,3,27,card,returning,4.0,25.2,8,Friday,15,81
+10912,2025-08-22,16:32,Maadi,cappuccino,drink,medium,1,65,cash,returning,4.0,25.2,8,Friday,16,65
+10911,2025-08-22,16:40,Zamalek,iced latte,drink,large,2,104,card,returning,5.0,25.2,8,Friday,16,208
+10914,2025-08-22,18:59,Maadi,croissant,food,regular,2,50,cash,returning,4.0,25.2,8,Friday,18,100
+10918,2025-08-23,11:57,Zamalek,espresso,drink,small,2,44,cash,new,4.0,30.6,8,Saturday,11,88
+10917,2025-08-23,12:25,Zamalek,mint lemonade,drink,medium,1,63,cash,new,4.0,30.6,8,Saturday,12,63
+10919,2025-08-23,15:15,Zamalek,mint lemonade,drink,medium,1,63,card,new,4.0,30.6,8,Saturday,15,63
+10920,2025-08-23,15:48,Heliopolis,cheesecake,dessert,regular,2,81,card,new,3.0,30.6,8,Saturday,15,162
+10924,2025-08-24,09:58,Heliopolis,cappuccino,drink,medium,1,58,cash,returning,3.0,30.1,8,Sunday,9,58
+10923,2025-08-24,12:04,Heliopolis,cappuccino,drink,small,3,50,wallet,returning,5.0,30.1,8,Sunday,12,150
+10921,2025-08-24,12:25,Zamalek,cappuccino,drink,medium,2,75,wallet,new,,30.1,8,Sunday,12,150
+10922,2025-08-24,12:44,Maadi,mint lemonade,drink,small,1,47,cash,new,2.0,30.1,8,Sunday,12,47
+10926,2025-08-25,13:17,Zamalek,basbousa,dessert,regular,1,46,wallet,new,4.0,29.4,8,Monday,13,46
+10925,2025-08-25,14:23,Zamalek,cheesecake,dessert,regular,2,103,card,returning,4.0,29.4,8,Monday,14,206
+10928,2025-08-25,14:46,Maadi,mint lemonade,drink,small,1,47,card,new,3.0,29.4,8,Monday,14,47
+10927,2025-08-25,16:33,Maadi,brownie,dessert,regular,1,55,cash,new,3.0,29.4,8,Monday,16,55
+10929,2025-08-25,17:13,Heliopolis,cheesecake,dessert,regular,2,81,cash,returning,4.0,29.4,8,Monday,17,162
+10930,2025-08-26,13:23,Maadi,croissant,food,regular,1,50,card,returning,3.0,31.8,8,Tuesday,13,50
+10931,2025-08-26,15:56,Heliopolis,basbousa,dessert,regular,1,36,wallet,new,2.0,31.8,8,Tuesday,15,36
+10932,2025-08-27,08:34,Maadi,cheesecake,dessert,regular,2,90,wallet,returning,4.0,30.2,8,Wednesday,8,180
+10933,2025-08-27,13:21,Maadi,hot chocolate,drink,large,1,72,cash,new,3.0,30.2,8,Wednesday,13,72
+10938,2025-08-28,07:57,Maadi,mint lemonade,drink,medium,2,55,cash,new,3.0,28.6,8,Thursday,7,110
+10934,2025-08-28,12:09,Zamalek,falafel wrap,food,regular,3,69,cash,returning,4.0,28.6,8,Thursday,12,207
+10935,2025-08-28,14:22,Zamalek,iced latte,drink,medium,1,86,card,returning,5.0,28.6,8,Thursday,14,86
+10937,2025-08-28,15:39,Maadi,falafel wrap,food,regular,1,60,cash,returning,3.0,28.6,8,Thursday,15,60
+10936,2025-08-28,17:07,Maadi,brownie,dessert,regular,2,55,cash,returning,4.0,28.6,8,Thursday,17,110
+10940,2025-08-29,08:23,Zamalek,iced latte,drink,small,1,73,cash,new,4.0,29.3,8,Friday,8,73
+10943,2025-08-29,11:44,Heliopolis,basbousa,dessert,regular,1,36,card,returning,4.0,29.3,8,Friday,11,36
+10939,2025-08-29,12:26,Zamalek,mint lemonade,drink,large,3,76,unknown,new,4.0,29.3,8,Friday,12,228
+10944,2025-08-29,13:03,Heliopolis,hot chocolate,drink,large,2,65,card,new,4.0,29.3,8,Friday,13,130
+10942,2025-08-29,14:39,Maadi,cheesecake,dessert,regular,2,90,cash,returning,3.0,29.3,8,Friday,14,180
+10941,2025-08-29,15:06,Maadi,basbousa,dessert,regular,1,40,cash,returning,3.0,29.3,8,Friday,15,40
+10953,2025-08-30,09:53,Heliopolis,iced latte,drink,small,1,57,card,returning,3.0,31.2,8,Saturday,9,57
+10954,2025-08-30,09:54,Heliopolis,cappuccino,drink,large,2,70,cash,returning,,31.2,8,Saturday,9,140
+10952,2025-08-30,10:43,Heliopolis,latte,drink,small,1,54,cash,returning,5.0,31.2,8,Saturday,10,54
+10951,2025-08-30,12:35,Heliopolis,croissant,food,regular,1,45,cash,returning,4.0,31.2,8,Saturday,12,45
+10945,2025-08-30,13:00,Zamalek,brownie,dessert,regular,1,63,cash,returning,5.0,31.2,8,Saturday,13,63
+10947,2025-08-30,13:40,Zamalek,basbousa,dessert,regular,1,46,cash,new,3.0,31.2,8,Saturday,13,46
+10946,2025-08-30,14:19,Zamalek,cheesecake,dessert,regular,1,103,cash,returning,5.0,31.2,8,Saturday,14,103
+10950,2025-08-30,15:13,Zamalek,croissant,food,regular,2,57,card,returning,4.0,31.2,8,Saturday,15,114
+10949,2025-08-30,16:17,Zamalek,croissant,food,regular,1,57,wallet,returning,4.0,31.2,8,Saturday,16,57
+10948,2025-08-30,23:45,Zamalek,iced latte,drink,medium,1,86,wallet,returning,4.0,31.2,8,Saturday,23,86
+10956,2025-08-31,11:46,Maadi,mint lemonade,drink,small,1,47,wallet,returning,3.0,29.6,8,Sunday,11,47
+10955,2025-08-31,15:34,Zamalek,brownie,dessert,regular,1,63,card,returning,4.0,29.6,8,Sunday,15,63
+10957,2025-08-31,17:33,Heliopolis,mint lemonade,drink,medium,2,50,card,returning,4.0,29.6,8,Sunday,17,100
+10958,2025-09-01,15:32,Heliopolis,basbousa,dessert,regular,3,36,cash,new,4.0,28.6,9,Monday,15,108
+10965,2025-09-02,08:16,Heliopolis,hot chocolate,drink,large,2,65,wallet,returning,5.0,26.2,9,Tuesday,8,130
+10959,2025-09-02,09:41,Zamalek,iced latte,drink,medium,2,86,wallet,new,4.0,26.2,9,Tuesday,9,172
+10964,2025-09-02,13:35,Heliopolis,mint lemonade,drink,medium,1,50,cash,returning,4.0,26.2,9,Tuesday,13,50
+10960,2025-09-02,16:04,Zamalek,hot chocolate,drink,large,1,83,wallet,returning,3.0,26.2,9,Tuesday,16,83
+10962,2025-09-02,19:38,Maadi,hot chocolate,drink,small,3,51,cash,returning,4.0,26.2,9,Tuesday,19,153
+10961,2025-09-02,19:57,Maadi,falafel wrap,food,regular,2,60,card,returning,4.0,26.2,9,Tuesday,19,120
+10963,2025-09-02,20:12,Heliopolis,basbousa,dessert,regular,1,36,cash,new,3.0,26.2,9,Tuesday,20,36
+10966,2025-09-03,11:05,Zamalek,espresso,drink,small,2,44,cash,returning,4.0,25.8,9,Wednesday,11,88
+10969,2025-09-03,12:00,Maadi,mint lemonade,drink,small,2,47,card,returning,5.0,25.8,9,Wednesday,12,94
+10967,2025-09-03,12:47,Maadi,espresso,drink,medium,3,45,card,returning,4.0,25.8,9,Wednesday,12,135
+10968,2025-09-03,13:27,Maadi,brownie,dessert,regular,2,55,cash,returning,3.0,25.8,9,Wednesday,13,110
+10971,2025-09-03,14:07,Heliopolis,cappuccino,drink,medium,1,58,card,returning,4.0,25.8,9,Wednesday,14,58
+10970,2025-09-03,17:41,Heliopolis,espresso,drink,medium,1,40,card,returning,3.0,25.8,9,Wednesday,17,40
+10972,2025-09-03,18:59,Heliopolis,falafel wrap,food,regular,1,54,card,returning,4.0,25.8,9,Wednesday,18,54
+10973,2025-09-04,12:07,Zamalek,brownie,dessert,regular,3,63,card,returning,5.0,28.1,9,Thursday,12,189
+10975,2025-09-04,13:40,Zamalek,basbousa,dessert,regular,1,46,wallet,returning,5.0,28.1,9,Thursday,13,46
+10977,2025-09-04,14:22,Maadi,hot chocolate,drink,medium,1,60,wallet,returning,5.0,28.1,9,Thursday,14,60
+10978,2025-09-04,15:24,Heliopolis,cappuccino,drink,medium,1,58,card,new,2.0,28.1,9,Thursday,15,58
+10974,2025-09-04,16:23,Zamalek,cheese sandwich,food,regular,2,98,cash,new,5.0,28.1,9,Thursday,16,196
+10976,2025-09-04,17:35,Maadi,mint lemonade,drink,large,2,66,wallet,new,3.0,28.1,9,Thursday,17,132
+10979,2025-09-05,07:51,Zamalek,iced latte,drink,medium,1,86,card,returning,5.0,27.0,9,Friday,7,86
+10980,2025-09-05,11:41,Maadi,mint lemonade,drink,small,1,47,cash,returning,3.0,27.0,9,Friday,11,47
+10981,2025-09-06,07:53,Zamalek,croissant,food,regular,1,57,cash,new,,29.8,9,Saturday,7,57
+10983,2025-09-06,12:03,Maadi,espresso,drink,small,1,38,card,new,4.0,29.8,9,Saturday,12,38
+10984,2025-09-06,13:11,Maadi,cheese sandwich,food,regular,1,85,wallet,new,3.0,29.8,9,Saturday,13,85
+10985,2025-09-06,16:19,Heliopolis,croissant,food,regular,2,45,card,new,4.0,29.8,9,Saturday,16,90
+10982,2025-09-06,17:47,Zamalek,cheesecake,dessert,regular,1,103,cash,new,4.0,29.8,9,Saturday,17,103
+10988,2025-09-07,08:28,Maadi,latte,drink,medium,1,70,wallet,returning,4.0,24.9,9,Sunday,8,70
+10989,2025-09-07,10:21,Maadi,tea,drink,medium,2,30,cash,new,,24.9,9,Sunday,10,60
+10986,2025-09-07,12:59,Zamalek,croissant,food,regular,2,57,cash,new,4.0,24.9,9,Sunday,12,114
+10990,2025-09-07,13:08,Heliopolis,croissant,food,regular,1,45,cash,returning,4.0,24.9,9,Sunday,13,45
+10987,2025-09-07,16:08,Zamalek,espresso,drink,small,1,44,card,returning,4.0,24.9,9,Sunday,16,44
+10992,2025-09-08,10:05,Zamalek,falafel wrap,food,regular,1,69,card,returning,3.0,27.2,9,Monday,10,69
+10994,2025-09-08,10:37,Maadi,espresso,drink,medium,3,45,cash,returning,,27.2,9,Monday,10,135
+10991,2025-09-08,13:59,Zamalek,basbousa,dessert,regular,3,46,cash,new,3.0,27.2,9,Monday,13,138
+10993,2025-09-08,14:41,Maadi,cappuccino,drink,medium,2,65,wallet,returning,5.0,27.2,9,Monday,14,130
+10995,2025-09-09,17:06,Zamalek,mint lemonade,drink,small,1,54,card,returning,5.0,29.1,9,Tuesday,17,54
+10997,2025-09-10,09:00,Zamalek,mint lemonade,drink,medium,1,63,cash,new,2.0,26.7,9,Wednesday,9,63
+10996,2025-09-10,09:34,Zamalek,hot chocolate,drink,small,1,59,card,new,3.0,26.7,9,Wednesday,9,59
+10999,2025-09-10,12:06,Heliopolis,falafel wrap,food,regular,1,54,wallet,returning,5.0,26.7,9,Wednesday,12,54
+10998,2025-09-10,12:44,Maadi,tea,drink,large,2,36,cash,returning,4.0,26.7,9,Wednesday,12,72
+11000,2025-09-10,13:10,Heliopolis,cheese sandwich,food,regular,1,76,card,new,3.0,26.7,9,Wednesday,13,76
+11003,2025-09-11,13:07,Heliopolis,cappuccino,drink,small,2,50,card,new,4.0,27.0,9,Thursday,13,100
+11001,2025-09-11,14:06,Zamalek,iced latte,drink,small,1,73,cash,returning,4.0,27.0,9,Thursday,14,73
+11002,2025-09-11,19:58,Maadi,basbousa,dessert,regular,1,40,wallet,returning,3.0,27.0,9,Thursday,19,40
+11004,2025-09-12,07:50,Zamalek,latte,drink,large,2,97,card,new,4.0,23.7,9,Friday,7,194
+11006,2025-09-12,08:15,Maadi,croissant,food,regular,2,50,card,returning,5.0,23.7,9,Friday,8,100
+11010,2025-09-12,12:26,Heliopolis,cheesecake,dessert,regular,1,81,card,returning,5.0,23.7,9,Friday,12,81
+11008,2025-09-12,16:17,Maadi,espresso,drink,medium,2,45,wallet,returning,5.0,23.7,9,Friday,16,90
+11007,2025-09-12,16:19,Maadi,basbousa,dessert,regular,1,40,cash,new,4.0,23.7,9,Friday,16,40
+11005,2025-09-12,16:21,Zamalek,cappuccino,drink,small,1,64,cash,returning,4.0,23.7,9,Friday,16,64
+11009,2025-09-12,18:22,Heliopolis,brownie,dessert,regular,1,50,cash,new,4.0,23.7,9,Friday,18,50
+11016,2025-09-13,10:10,Heliopolis,cheese sandwich,food,regular,2,76,unknown,returning,4.0,32.7,9,Saturday,10,152
+11014,2025-09-13,10:56,Zamalek,croissant,food,regular,2,57,cash,returning,5.0,32.7,9,Saturday,10,114
+11012,2025-09-13,10:58,Zamalek,cheesecake,dessert,regular,3,103,cash,new,4.0,32.7,9,Saturday,10,309
+11015,2025-09-13,11:47,Heliopolis,cheese sandwich,food,regular,3,76,wallet,returning,5.0,32.7,9,Saturday,11,228
+11011,2025-09-13,12:40,Zamalek,brownie,dessert,regular,1,63,card,returning,4.0,32.7,9,Saturday,12,63
+11013,2025-09-13,17:07,Zamalek,iced latte,drink,medium,3,86,wallet,returning,4.0,32.7,9,Saturday,17,258
+11017,2025-09-14,09:16,Zamalek,espresso,drink,large,1,62,card,returning,5.0,27.6,9,Sunday,9,62
+11018,2025-09-14,14:48,Zamalek,latte,drink,large,2,97,card,returning,5.0,27.6,9,Sunday,14,194
+11019,2025-09-14,22:11,Maadi,brownie,dessert,regular,1,55,card,returning,4.0,27.6,9,Sunday,22,55
+11020,2025-09-15,14:16,Zamalek,mint lemonade,drink,medium,1,63,card,new,4.0,24.5,9,Monday,14,63
+11023,2025-09-16,11:45,Maadi,iced latte,drink,medium,1,75,cash,returning,,24.5,9,Tuesday,11,75
+11024,2025-09-16,12:31,Maadi,hot chocolate,drink,medium,1,60,cash,returning,4.0,24.5,9,Tuesday,12,60
+11025,2025-09-16,14:11,Maadi,cheesecake,dessert,regular,1,90,card,returning,3.0,24.5,9,Tuesday,14,90
+11022,2025-09-16,14:21,Zamalek,croissant,food,regular,1,57,cash,returning,2.0,24.5,9,Tuesday,14,57
+11021,2025-09-16,16:43,Zamalek,iced latte,drink,medium,1,86,card,returning,3.0,24.5,9,Tuesday,16,86
+11029,2025-09-17,12:24,Heliopolis,falafel wrap,food,regular,2,54,wallet,new,4.0,27.4,9,Wednesday,12,108
+11028,2025-09-17,15:55,Heliopolis,cheese sandwich,food,regular,2,76,cash,returning,3.0,27.4,9,Wednesday,15,152
+11027,2025-09-17,16:45,Maadi,brownie,dessert,regular,1,55,cash,returning,4.0,27.4,9,Wednesday,16,55
+11026,2025-09-17,17:45,Maadi,cappuccino,drink,medium,3,65,card,new,5.0,27.4,9,Wednesday,17,195
+11030,2025-09-18,10:39,Zamalek,latte,drink,large,2,97,cash,returning,5.0,23.6,9,Thursday,10,194
+11032,2025-09-18,10:50,Zamalek,falafel wrap,food,regular,2,69,card,new,3.0,23.6,9,Thursday,10,138
+11035,2025-09-18,11:34,Maadi,tea,drink,small,1,26,card,new,4.0,23.6,9,Thursday,11,26
+11033,2025-09-18,12:05,Zamalek,mint lemonade,drink,small,1,54,cash,returning,5.0,23.6,9,Thursday,12,54
+11031,2025-09-18,13:13,Zamalek,tea,drink,large,1,41,cash,new,4.0,23.6,9,Thursday,13,41
+11034,2025-09-18,17:53,Zamalek,hot chocolate,drink,medium,1,69,wallet,returning,5.0,23.6,9,Thursday,17,69
+11038,2025-09-19,07:48,Zamalek,basbousa,dessert,regular,3,46,wallet,returning,4.0,27.4,9,Friday,7,138
+11039,2025-09-19,10:43,Maadi,tea,drink,medium,1,30,card,returning,3.0,27.4,9,Friday,10,30
+11040,2025-09-19,14:11,Heliopolis,iced latte,drink,medium,2,68,cash,returning,5.0,27.4,9,Friday,14,136
+11036,2025-09-19,14:14,Zamalek,mint lemonade,drink,medium,1,63,wallet,returning,3.0,27.4,9,Friday,14,63
+11037,2025-09-19,14:45,Zamalek,iced latte,drink,large,1,104,cash,returning,4.0,27.4,9,Friday,14,104
+11041,2025-09-19,17:42,Heliopolis,espresso,drink,small,1,34,cash,new,3.0,27.4,9,Friday,17,34
+11042,2025-09-19,20:56,Heliopolis,hot chocolate,drink,large,3,65,wallet,new,4.0,27.4,9,Friday,20,195
+11046,2025-09-20,07:13,Maadi,espresso,drink,small,3,38,cash,returning,4.0,24.5,9,Saturday,7,114
+11049,2025-09-20,10:12,Heliopolis,latte,drink,small,1,54,card,returning,5.0,24.5,9,Saturday,10,54
+11050,2025-09-20,10:36,Heliopolis,brownie,dessert,regular,1,50,cash,returning,5.0,24.5,9,Saturday,10,50
+11048,2025-09-20,12:37,Heliopolis,latte,drink,medium,3,63,cash,new,2.0,24.5,9,Saturday,12,189
+11047,2025-09-20,12:54,Heliopolis,basbousa,dessert,regular,1,36,card,new,4.0,24.5,9,Saturday,12,36
+11043,2025-09-20,12:55,Zamalek,croissant,food,regular,2,57,card,returning,2.0,24.5,9,Saturday,12,114
+11045,2025-09-20,14:40,Maadi,tea,drink,medium,3,30,cash,returning,4.0,24.5,9,Saturday,14,90
+11044,2025-09-20,15:19,Maadi,croissant,food,regular,2,50,cash,new,5.0,24.5,9,Saturday,15,100
+11054,2025-09-21,08:41,Maadi,latte,drink,medium,2,70,cash,new,3.0,25.6,9,Sunday,8,140
+11058,2025-09-21,09:11,Heliopolis,mint lemonade,drink,large,2,59,cash,returning,,25.6,9,Sunday,9,118
+11057,2025-09-21,11:04,Heliopolis,latte,drink,medium,1,63,cash,new,4.0,25.6,9,Sunday,11,63
+11051,2025-09-21,13:35,Maadi,latte,drink,medium,2,70,wallet,returning,4.0,25.6,9,Sunday,13,140
+11056,2025-09-21,15:16,Heliopolis,cappuccino,drink,medium,3,58,cash,returning,3.0,25.6,9,Sunday,15,174
+11052,2025-09-21,18:34,Maadi,iced latte,drink,large,1,90,cash,returning,4.0,25.6,9,Sunday,18,90
+11053,2025-09-21,19:39,Maadi,espresso,drink,large,2,54,cash,returning,3.0,25.6,9,Sunday,19,108
+11055,2025-09-21,20:28,Heliopolis,cheese sandwich,food,regular,3,76,cash,returning,4.0,25.6,9,Sunday,20,228
+11062,2025-09-22,11:49,Heliopolis,falafel wrap,food,regular,1,54,cash,returning,3.0,24.3,9,Monday,11,54
+11060,2025-09-22,15:12,Maadi,espresso,drink,medium,1,45,card,returning,3.0,24.3,9,Monday,15,45
+11061,2025-09-22,16:33,Heliopolis,cappuccino,drink,small,1,50,card,returning,4.0,24.3,9,Monday,16,50
+11059,2025-09-22,17:33,Zamalek,latte,drink,medium,3,80,card,returning,5.0,24.3,9,Monday,17,240
+11063,2025-09-23,10:47,Zamalek,cheese sandwich,food,regular,1,98,card,returning,5.0,25.3,9,Tuesday,10,98
+11064,2025-09-23,11:17,Zamalek,cheese sandwich,food,regular,1,98,cash,new,5.0,25.3,9,Tuesday,11,98
+11065,2025-09-23,13:27,Maadi,mint lemonade,drink,medium,2,55,card,new,4.0,25.3,9,Tuesday,13,110
+11066,2025-09-23,18:12,Maadi,brownie,dessert,regular,1,55,card,returning,3.0,25.3,9,Tuesday,18,55
+11068,2025-09-24,11:50,Maadi,basbousa,dessert,regular,1,40,card,returning,5.0,22.6,9,Wednesday,11,40
+11067,2025-09-24,18:46,Zamalek,hot chocolate,drink,medium,2,69,cash,new,4.0,22.6,9,Wednesday,18,138
+11069,2025-09-25,13:56,Zamalek,brownie,dessert,regular,2,63,card,returning,5.0,23.1,9,Thursday,13,126
+11072,2025-09-25,15:14,Maadi,cheese sandwich,food,regular,1,85,cash,returning,5.0,23.1,9,Thursday,15,85
+11071,2025-09-25,17:11,Maadi,croissant,food,regular,1,50,wallet,new,3.0,23.1,9,Thursday,17,50
+11070,2025-09-25,17:19,Maadi,brownie,dessert,regular,3,55,wallet,returning,3.0,23.1,9,Thursday,17,165
+11073,2025-09-25,18:59,Heliopolis,croissant,food,regular,2,45,card,new,4.0,23.1,9,Thursday,18,90
+11080,2025-09-26,07:09,Heliopolis,cheese sandwich,food,regular,1,76,cash,new,3.0,27.0,9,Friday,7,76
+11074,2025-09-26,10:57,Zamalek,cheesecake,dessert,regular,2,103,card,returning,3.0,27.0,9,Friday,10,206
+11078,2025-09-26,11:20,Zamalek,iced latte,drink,medium,1,86,card,new,4.0,27.0,9,Friday,11,86
+11077,2025-09-26,13:34,Zamalek,cheese sandwich,food,regular,1,98,card,new,3.0,27.0,9,Friday,13,98
+11076,2025-09-26,14:06,Zamalek,iced latte,drink,large,2,104,card,new,5.0,27.0,9,Friday,14,208
+11075,2025-09-26,16:31,Zamalek,latte,drink,small,1,68,cash,new,5.0,27.0,9,Friday,16,68
+11079,2025-09-26,16:50,Heliopolis,iced latte,drink,medium,2,68,cash,returning,4.0,27.0,9,Friday,16,136
+11084,2025-09-27,10:40,Maadi,tea,drink,medium,1,30,card,returning,,19.3,9,Saturday,10,30
+11087,2025-09-27,12:46,Heliopolis,latte,drink,medium,2,63,cash,returning,4.0,19.3,9,Saturday,12,126
+11081,2025-09-27,13:50,Zamalek,espresso,drink,small,3,44,card,returning,4.0,19.3,9,Saturday,13,132
+11082,2025-09-27,14:49,Zamalek,croissant,food,regular,2,57,card,returning,5.0,19.3,9,Saturday,14,114
+11085,2025-09-27,16:03,Heliopolis,tea,drink,medium,1,27,wallet,new,5.0,19.3,9,Saturday,16,27
+11086,2025-09-27,16:27,Heliopolis,basbousa,dessert,regular,2,36,wallet,returning,,19.3,9,Saturday,16,72
+11083,2025-09-27,17:16,Zamalek,tea,drink,small,1,29,wallet,new,4.0,19.3,9,Saturday,17,29
+11089,2025-09-28,13:14,Maadi,falafel wrap,food,regular,2,60,cash,returning,5.0,24.0,9,Sunday,13,120
+11088,2025-09-28,17:22,Maadi,mint lemonade,drink,small,3,47,card,returning,3.0,24.0,9,Sunday,17,141
+11091,2025-09-29,10:10,Zamalek,mint lemonade,drink,medium,2,63,cash,returning,4.0,24.8,9,Monday,10,126
+11092,2025-09-29,14:28,Zamalek,cheese sandwich,food,regular,2,98,card,returning,4.0,24.8,9,Monday,14,196
+11090,2025-09-29,16:37,Zamalek,basbousa,dessert,regular,1,46,cash,returning,4.0,24.8,9,Monday,16,46
+11093,2025-09-30,07:59,Zamalek,espresso,drink,medium,1,52,cash,new,,22.1,9,Tuesday,7,52
+11097,2025-09-30,12:19,Maadi,espresso,drink,large,1,54,card,returning,2.0,22.1,9,Tuesday,12,54
+11098,2025-09-30,13:44,Maadi,cheesecake,dessert,regular,1,90,card,new,3.0,22.1,9,Tuesday,13,90
+11095,2025-09-30,14:45,Maadi,hot chocolate,drink,medium,1,60,card,returning,4.0,22.1,9,Tuesday,14,60
+11096,2025-09-30,15:48,Maadi,tea,drink,small,3,26,card,returning,5.0,22.1,9,Tuesday,15,78
+11094,2025-09-30,16:18,Zamalek,cappuccino,drink,small,1,64,wallet,returning,5.0,22.1,9,Tuesday,16,64
+11099,2025-09-30,17:22,Heliopolis,cheese sandwich,food,regular,1,76,wallet,new,5.0,22.1,9,Tuesday,17,76
+11100,2025-10-01,08:32,Zamalek,espresso,drink,small,1,44,card,returning,4.0,27.0,10,Wednesday,8,44
+11105,2025-10-01,10:48,Heliopolis,cheesecake,dessert,regular,1,81,card,new,3.0,27.0,10,Wednesday,10,81
+11102,2025-10-01,12:19,Maadi,cheese sandwich,food,regular,1,85,cash,returning,4.0,27.0,10,Wednesday,12,85
+11103,2025-10-01,13:18,Maadi,iced latte,drink,medium,1,75,wallet,new,2.0,27.0,10,Wednesday,13,75
+11101,2025-10-01,16:08,Zamalek,iced latte,drink,medium,2,86,unknown,returning,4.0,27.0,10,Wednesday,16,172
+11104,2025-10-01,18:39,Maadi,iced latte,drink,medium,1,75,wallet,returning,5.0,27.0,10,Wednesday,18,75
+11110,2025-10-02,09:07,Maadi,mint lemonade,drink,medium,1,55,wallet,returning,4.0,25.7,10,Thursday,9,55
+11109,2025-10-02,12:22,Zamalek,basbousa,dessert,regular,1,46,cash,returning,3.0,25.7,10,Thursday,12,46
+11106,2025-10-02,13:12,Zamalek,basbousa,dessert,regular,2,46,card,returning,4.0,25.7,10,Thursday,13,92
+11111,2025-10-02,13:25,Maadi,latte,drink,medium,1,70,card,returning,4.0,25.7,10,Thursday,13,70
+11107,2025-10-02,14:00,Zamalek,basbousa,dessert,regular,1,46,card,new,5.0,25.7,10,Thursday,14,46
+11108,2025-10-02,14:48,Zamalek,espresso,drink,medium,3,52,cash,returning,5.0,25.7,10,Thursday,14,156
+11114,2025-10-03,12:13,Heliopolis,cheese sandwich,food,regular,2,76,card,new,4.0,21.3,10,Friday,12,152
+11112,2025-10-03,13:30,Maadi,cheesecake,dessert,regular,1,90,card,new,5.0,21.3,10,Friday,13,90
+11113,2025-10-03,19:46,Maadi,iced latte,drink,large,1,90,card,returning,4.0,21.3,10,Friday,19,90
+11116,2025-10-04,15:06,Maadi,falafel wrap,food,regular,3,60,wallet,new,4.0,22.3,10,Saturday,15,180
+11115,2025-10-04,16:29,Zamalek,cheese sandwich,food,regular,1,98,card,returning,3.0,22.3,10,Saturday,16,98
+11117,2025-10-04,19:00,Heliopolis,tea,drink,medium,1,27,wallet,returning,4.0,22.3,10,Saturday,19,27
+11120,2025-10-05,07:53,Heliopolis,cheese sandwich,food,regular,1,76,wallet,returning,4.0,26.7,10,Sunday,7,76
+11119,2025-10-05,11:03,Maadi,latte,drink,medium,2,70,wallet,new,4.0,26.7,10,Sunday,11,140
+11121,2025-10-05,14:44,Heliopolis,basbousa,dessert,regular,1,36,cash,returning,4.0,26.7,10,Sunday,14,36
+11118,2025-10-05,16:17,Zamalek,brownie,dessert,regular,3,63,wallet,new,,26.7,10,Sunday,16,189
+11124,2025-10-06,09:23,Zamalek,cappuccino,drink,small,2,64,card,returning,3.0,20.4,10,Monday,9,128
+11126,2025-10-06,09:23,Maadi,hot chocolate,drink,medium,3,60,cash,new,5.0,20.4,10,Monday,9,180
+11122,2025-10-06,11:36,Zamalek,cheesecake,dessert,regular,2,103,cash,new,4.0,20.4,10,Monday,11,206
+11123,2025-10-06,13:26,Zamalek,cheese sandwich,food,regular,1,98,card,returning,4.0,20.4,10,Monday,13,98
+11127,2025-10-06,14:02,Maadi,mint lemonade,drink,large,3,66,card,returning,5.0,20.4,10,Monday,14,198
+11125,2025-10-06,16:32,Zamalek,espresso,drink,medium,1,52,cash,returning,3.0,20.4,10,Monday,16,52
+11129,2025-10-07,13:33,Maadi,basbousa,dessert,regular,3,40,cash,new,4.0,21.2,10,Tuesday,13,120
+11130,2025-10-07,14:08,Heliopolis,hot chocolate,drink,medium,2,54,cash,new,4.0,21.2,10,Tuesday,14,108
+11128,2025-10-07,17:59,Zamalek,cheese sandwich,food,regular,1,98,cash,new,3.0,21.2,10,Tuesday,17,98
+11131,2025-10-08,14:06,Maadi,cappuccino,drink,medium,2,65,wallet,returning,4.0,20.0,10,Wednesday,14,130
+11134,2025-10-09,12:06,Maadi,basbousa,dessert,regular,1,40,cash,new,,23.6,10,Thursday,12,40
+11132,2025-10-09,18:48,Zamalek,tea,drink,medium,3,34,cash,returning,4.0,23.6,10,Thursday,18,102
+11133,2025-10-09,18:58,Zamalek,basbousa,dessert,regular,2,46,card,new,3.0,23.6,10,Thursday,18,92
+11136,2025-10-10,10:39,Maadi,cheese sandwich,food,regular,3,85,cash,returning,3.0,25.0,10,Friday,10,255
+11135,2025-10-10,18:51,Zamalek,falafel wrap,food,regular,3,69,card,returning,3.0,25.0,10,Friday,18,207
+11137,2025-10-10,23:10,Maadi,latte,drink,medium,1,70,cash,new,4.0,25.0,10,Friday,23,70
+11138,2025-10-11,13:20,Zamalek,cheesecake,dessert,regular,1,103,card,returning,5.0,20.9,10,Saturday,13,103
+11142,2025-10-11,13:33,Maadi,espresso,drink,medium,2,45,cash,returning,4.0,20.9,10,Saturday,13,90
+11140,2025-10-11,14:58,Zamalek,tea,drink,small,3,29,cash,new,3.0,20.9,10,Saturday,14,87
+11139,2025-10-11,15:10,Zamalek,espresso,drink,large,1,62,card,returning,4.0,20.9,10,Saturday,15,62
+11141,2025-10-11,15:52,Maadi,tea,drink,large,2,36,cash,returning,5.0,20.9,10,Saturday,15,72
+11143,2025-10-11,16:58,Heliopolis,hot chocolate,drink,large,2,65,wallet,returning,5.0,20.9,10,Saturday,16,130
+11146,2025-10-12,11:12,Heliopolis,cheesecake,dessert,regular,1,81,cash,returning,,22.7,10,Sunday,11,81
+11147,2025-10-12,11:25,Heliopolis,cheesecake,dessert,regular,2,81,cash,returning,4.0,22.7,10,Sunday,11,162
+11148,2025-10-12,11:43,Heliopolis,brownie,dessert,regular,1,50,cash,new,4.0,22.7,10,Sunday,11,50
+11144,2025-10-12,11:57,Maadi,tea,drink,large,3,36,wallet,returning,2.0,22.7,10,Sunday,11,108
+11145,2025-10-12,14:19,Heliopolis,tea,drink,medium,2,27,card,returning,4.0,22.7,10,Sunday,14,54
+11149,2025-10-12,14:57,Heliopolis,croissant,food,regular,2,45,cash,new,4.0,22.7,10,Sunday,14,90
+11150,2025-10-12,15:54,Heliopolis,croissant,food,regular,2,45,wallet,new,4.0,22.7,10,Sunday,15,90
+11153,2025-10-13,07:06,Maadi,brownie,dessert,regular,3,55,cash,new,4.0,18.6,10,Monday,7,165
+11157,2025-10-13,12:26,Heliopolis,basbousa,dessert,regular,1,36,wallet,returning,4.0,18.6,10,Monday,12,36
+11158,2025-10-13,13:05,Heliopolis,tea,drink,medium,2,27,cash,returning,2.0,18.6,10,Monday,13,54
+11155,2025-10-13,14:24,Heliopolis,cheesecake,dessert,regular,1,81,wallet,new,4.0,18.6,10,Monday,14,81
+11156,2025-10-13,14:40,Heliopolis,basbousa,dessert,regular,2,36,cash,returning,3.0,18.6,10,Monday,14,72
+11151,2025-10-13,15:48,Maadi,hot chocolate,drink,small,1,51,card,returning,4.0,18.6,10,Monday,15,51
+11152,2025-10-13,16:29,Maadi,cheese sandwich,food,regular,2,85,card,returning,4.0,18.6,10,Monday,16,170
+11154,2025-10-13,18:14,Maadi,mint lemonade,drink,small,1,47,cash,new,,18.6,10,Monday,18,47
+11160,2025-10-14,11:22,Maadi,brownie,dessert,regular,1,55,cash,new,2.0,17.1,10,Tuesday,11,55
+11161,2025-10-14,13:48,Heliopolis,latte,drink,large,1,76,card,new,3.0,17.1,10,Tuesday,13,76
+11159,2025-10-14,14:49,Zamalek,cheesecake,dessert,regular,1,103,cash,returning,5.0,17.1,10,Tuesday,14,103
+11162,2025-10-14,18:07,Heliopolis,falafel wrap,food,regular,1,54,wallet,returning,4.0,17.1,10,Tuesday,18,54
+11166,2025-10-15,07:36,Zamalek,croissant,food,regular,3,57,cash,returning,4.0,18.2,10,Wednesday,7,171
+11171,2025-10-15,09:18,Heliopolis,latte,drink,medium,2,63,card,returning,5.0,18.2,10,Wednesday,9,126
+11168,2025-10-15,09:48,Maadi,cappuccino,drink,medium,2,65,card,new,5.0,18.2,10,Wednesday,9,130
+11167,2025-10-15,10:52,Zamalek,basbousa,dessert,regular,2,46,cash,returning,3.0,18.2,10,Wednesday,10,92
+11165,2025-10-15,11:24,Zamalek,hot chocolate,drink,medium,2,69,card,returning,,18.2,10,Wednesday,11,138
+11164,2025-10-15,13:08,Zamalek,hot chocolate,drink,small,1,59,card,new,3.0,18.2,10,Wednesday,13,59
+11169,2025-10-15,16:05,Maadi,falafel wrap,food,regular,2,60,cash,returning,5.0,18.2,10,Wednesday,16,120
+11163,2025-10-15,16:14,Zamalek,espresso,drink,medium,1,52,cash,returning,5.0,18.2,10,Wednesday,16,52
+11170,2025-10-15,17:49,Maadi,iced latte,drink,large,2,90,wallet,new,4.0,18.2,10,Wednesday,17,180
+11174,2025-10-16,11:50,Maadi,brownie,dessert,regular,3,55,cash,returning,5.0,18.9,10,Thursday,11,165
+11176,2025-10-16,15:03,Heliopolis,basbousa,dessert,regular,1,36,card,new,4.0,18.9,10,Thursday,15,36
+11173,2025-10-16,15:07,Zamalek,tea,drink,medium,2,34,card,new,4.0,18.9,10,Thursday,15,68
+11175,2025-10-16,16:38,Heliopolis,cheese sandwich,food,regular,3,76,cash,returning,2.0,18.9,10,Thursday,16,228
+11172,2025-10-16,18:29,Zamalek,tea,drink,medium,2,34,card,new,3.0,18.9,10,Thursday,18,68
+11180,2025-10-17,08:37,Heliopolis,latte,drink,medium,1,63,card,new,3.0,19.2,10,Friday,8,63
+11177,2025-10-17,11:57,Zamalek,espresso,drink,medium,2,52,cash,new,4.0,19.2,10,Friday,11,104
+11179,2025-10-17,15:17,Maadi,tea,drink,small,2,26,cash,new,2.0,19.2,10,Friday,15,52
+11178,2025-10-17,15:46,Zamalek,cheesecake,dessert,regular,3,103,cash,new,3.0,19.2,10,Friday,15,309
+11184,2025-10-18,08:38,Heliopolis,brownie,dessert,regular,2,50,card,returning,2.0,14.7,10,Saturday,8,100
+11185,2025-10-18,09:52,Heliopolis,espresso,drink,small,1,34,cash,returning,5.0,14.7,10,Saturday,9,34
+11183,2025-10-18,11:25,Maadi,latte,drink,medium,2,70,cash,returning,3.0,14.7,10,Saturday,11,140
+11181,2025-10-18,16:01,Zamalek,tea,drink,medium,1,34,card,returning,4.0,14.7,10,Saturday,16,34
+11182,2025-10-18,23:31,Zamalek,mint lemonade,drink,small,1,54,cash,new,3.0,14.7,10,Saturday,23,54
+11187,2025-10-19,12:06,Maadi,latte,drink,medium,1,70,cash,returning,4.0,22.8,10,Sunday,12,70
+11186,2025-10-19,15:15,Maadi,tea,drink,medium,1,30,cash,returning,,22.8,10,Sunday,15,30
+11188,2025-10-19,15:19,Heliopolis,hot chocolate,drink,medium,2,54,card,returning,3.0,22.8,10,Sunday,15,108
+11190,2025-10-20,13:38,Zamalek,cappuccino,drink,large,3,90,cash,returning,4.0,19.9,10,Monday,13,270
+11193,2025-10-20,14:15,Heliopolis,brownie,dessert,regular,3,50,cash,returning,4.0,19.9,10,Monday,14,150
+11192,2025-10-20,14:34,Zamalek,cheesecake,dessert,regular,3,103,cash,new,4.0,19.9,10,Monday,14,309
+11191,2025-10-20,15:34,Zamalek,cheesecake,dessert,regular,1,103,card,returning,5.0,19.9,10,Monday,15,103
+11189,2025-10-20,16:11,Zamalek,hot chocolate,drink,small,2,59,cash,new,2.0,19.9,10,Monday,16,118
+11198,2025-10-21,09:43,Zamalek,falafel wrap,food,regular,1,69,wallet,returning,3.0,19.8,10,Tuesday,9,69
+11196,2025-10-21,09:52,Zamalek,falafel wrap,food,regular,3,69,cash,returning,4.0,19.8,10,Tuesday,9,207
+11200,2025-10-21,13:47,Heliopolis,tea,drink,medium,1,27,cash,returning,5.0,19.8,10,Tuesday,13,27
+11197,2025-10-21,14:02,Zamalek,cheesecake,dessert,regular,1,103,cash,new,4.0,19.8,10,Tuesday,14,103
+11199,2025-10-21,15:30,Maadi,brownie,dessert,regular,2,55,cash,new,4.0,19.8,10,Tuesday,15,110
+11195,2025-10-21,15:39,Zamalek,latte,drink,large,1,97,card,returning,4.0,19.8,10,Tuesday,15,97
+11194,2025-10-21,22:55,Zamalek,tea,drink,medium,1,34,card,returning,4.0,19.8,10,Tuesday,22,34
+11206,2025-10-22,07:00,Heliopolis,latte,drink,large,2,76,cash,returning,2.0,19.9,10,Wednesday,7,152
+11201,2025-10-22,12:49,Zamalek,hot chocolate,drink,large,1,83,card,new,4.0,19.9,10,Wednesday,12,83
+11202,2025-10-22,15:52,Zamalek,cheesecake,dessert,regular,1,103,card,returning,3.0,19.9,10,Wednesday,15,103
+11203,2025-10-22,15:57,Zamalek,espresso,drink,small,3,44,cash,new,5.0,19.9,10,Wednesday,15,132
+11204,2025-10-22,16:54,Maadi,brownie,dessert,regular,1,55,wallet,returning,5.0,19.9,10,Wednesday,16,55
+11205,2025-10-22,19:29,Maadi,hot chocolate,drink,medium,1,60,card,new,4.0,19.9,10,Wednesday,19,60
+11207,2025-10-23,07:29,Zamalek,brownie,dessert,regular,2,63,card,new,3.0,23.3,10,Thursday,7,126
+11208,2025-10-23,09:48,Maadi,croissant,food,regular,1,50,cash,returning,3.0,23.3,10,Thursday,9,50
+11209,2025-10-24,12:08,Zamalek,falafel wrap,food,regular,1,69,card,new,3.0,20.6,10,Friday,12,69
+11211,2025-10-24,13:07,Zamalek,cheesecake,dessert,regular,2,103,cash,returning,4.0,20.6,10,Friday,13,206
+11210,2025-10-24,15:13,Zamalek,cheesecake,dessert,regular,3,103,card,returning,4.0,20.6,10,Friday,15,309
+11212,2025-10-24,15:41,Zamalek,hot chocolate,drink,small,2,59,wallet,returning,,20.6,10,Friday,15,118
+11213,2025-10-24,16:22,Maadi,hot chocolate,drink,medium,1,60,cash,new,4.0,20.6,10,Friday,16,60
+11217,2025-10-25,09:41,Maadi,tea,drink,large,2,36,cash,returning,4.0,18.4,10,Saturday,9,72
+11218,2025-10-25,10:35,Maadi,tea,drink,medium,2,30,cash,new,,18.4,10,Saturday,10,60
+11215,2025-10-25,13:01,Zamalek,croissant,food,regular,2,57,card,returning,4.0,18.4,10,Saturday,13,114
+11216,2025-10-25,17:03,Maadi,hot chocolate,drink,small,2,51,cash,returning,4.0,18.4,10,Saturday,17,102
+11219,2025-10-25,17:54,Heliopolis,croissant,food,regular,3,45,wallet,returning,5.0,18.4,10,Saturday,17,135
+11214,2025-10-25,20:28,Zamalek,cheesecake,dessert,regular,3,103,card,new,3.0,18.4,10,Saturday,20,309
+11222,2025-10-26,11:17,Heliopolis,basbousa,dessert,regular,2,36,wallet,new,3.0,18.7,10,Sunday,11,72
+11221,2025-10-26,13:08,Heliopolis,falafel wrap,food,regular,1,54,cash,returning,,18.7,10,Sunday,13,54
+11220,2025-10-26,13:46,Zamalek,basbousa,dessert,regular,1,46,card,returning,5.0,18.7,10,Sunday,13,46
+11224,2025-10-27,12:48,Maadi,latte,drink,large,1,84,wallet,new,3.0,23.9,10,Monday,12,84
+11225,2025-10-27,17:42,Maadi,iced latte,drink,medium,1,75,card,returning,4.0,23.9,10,Monday,17,75
+11223,2025-10-27,19:51,Maadi,croissant,food,regular,1,50,card,returning,5.0,23.9,10,Monday,19,50
+11226,2025-10-28,20:25,Maadi,cheesecake,dessert,regular,1,90,wallet,returning,3.0,19.2,10,Tuesday,20,90
+11227,2025-10-29,09:36,Zamalek,latte,drink,large,1,97,cash,new,5.0,19.6,10,Wednesday,9,97
+11228,2025-10-29,13:07,Zamalek,espresso,drink,large,2,62,cash,new,3.0,19.6,10,Wednesday,13,124
+11229,2025-10-29,13:45,Maadi,latte,drink,large,3,84,cash,new,4.0,19.6,10,Wednesday,13,252
+11230,2025-10-29,17:18,Maadi,espresso,drink,medium,2,45,cash,new,4.0,19.6,10,Wednesday,17,90
+11234,2025-10-30,07:54,Maadi,cheesecake,dessert,regular,2,90,cash,new,3.0,18.7,10,Thursday,7,180
+11232,2025-10-30,15:09,Zamalek,cheese sandwich,food,regular,2,98,card,returning,3.0,18.7,10,Thursday,15,196
+11233,2025-10-30,15:55,Maadi,tea,drink,medium,3,30,card,returning,4.0,18.7,10,Thursday,15,90
+11231,2025-10-30,18:03,Zamalek,falafel wrap,food,regular,2,69,card,returning,3.0,18.7,10,Thursday,18,138
+11238,2025-10-31,07:07,Zamalek,hot chocolate,drink,large,1,83,wallet,returning,5.0,17.5,10,Friday,7,83
+11236,2025-10-31,10:33,Zamalek,brownie,dessert,regular,2,63,cash,returning,5.0,17.5,10,Friday,10,126
+11237,2025-10-31,11:54,Zamalek,espresso,drink,small,3,44,cash,returning,4.0,17.5,10,Friday,11,132
+11235,2025-10-31,12:38,Zamalek,tea,drink,medium,1,34,wallet,returning,4.0,17.5,10,Friday,12,34
+11239,2025-10-31,16:14,Heliopolis,brownie,dessert,regular,3,50,cash,new,3.0,17.5,10,Friday,16,150
+11242,2025-11-01,07:00,Maadi,croissant,food,regular,1,50,cash,returning,3.0,19.8,11,Saturday,7,50
+11243,2025-11-01,11:07,Maadi,tea,drink,medium,3,30,wallet,returning,4.0,19.8,11,Saturday,11,90
+11241,2025-11-01,11:20,Zamalek,tea,drink,medium,1,34,cash,returning,4.0,19.8,11,Saturday,11,34
+11245,2025-11-01,13:51,Maadi,tea,drink,small,2,26,wallet,new,3.0,19.8,11,Saturday,13,52
+11240,2025-11-01,14:35,Zamalek,cappuccino,drink,medium,1,75,cash,new,5.0,19.8,11,Saturday,14,75
+11244,2025-11-01,18:24,Maadi,cappuccino,drink,medium,1,65,cash,returning,4.0,19.8,11,Saturday,18,65
+11249,2025-11-02,08:56,Heliopolis,cappuccino,drink,medium,1,58,cash,new,4.0,16.7,11,Sunday,8,58
+11248,2025-11-02,10:16,Maadi,croissant,food,regular,1,50,cash,returning,4.0,16.7,11,Sunday,10,50
+11247,2025-11-02,13:12,Zamalek,croissant,food,regular,1,57,card,returning,3.0,16.7,11,Sunday,13,57
+11246,2025-11-02,16:50,Zamalek,croissant,food,regular,1,57,cash,returning,3.0,16.7,11,Sunday,16,57
+11250,2025-11-03,13:42,Zamalek,cheese sandwich,food,regular,2,98,wallet,new,5.0,19.9,11,Monday,13,196
+11255,2025-11-03,14:01,Heliopolis,cappuccino,drink,medium,1,58,card,new,,19.9,11,Monday,14,58
+11251,2025-11-03,14:12,Zamalek,latte,drink,medium,2,80,cash,returning,4.0,19.9,11,Monday,14,160
+11253,2025-11-03,14:47,Zamalek,espresso,drink,medium,1,52,cash,new,4.0,19.9,11,Monday,14,52
+11254,2025-11-03,17:27,Maadi,espresso,drink,small,2,38,card,returning,,19.9,11,Monday,17,76
+11252,2025-11-03,18:49,Zamalek,hot chocolate,drink,medium,1,69,cash,returning,3.0,19.9,11,Monday,18,69
+11259,2025-11-04,11:02,Zamalek,cheese sandwich,food,regular,1,98,cash,returning,5.0,18.6,11,Tuesday,11,98
+11260,2025-11-04,13:09,Maadi,mint lemonade,drink,small,1,47,cash,new,3.0,18.6,11,Tuesday,13,47
+11256,2025-11-04,15:44,Zamalek,basbousa,dessert,regular,3,46,card,returning,5.0,18.6,11,Tuesday,15,138
+11258,2025-11-04,18:20,Zamalek,cheesecake,dessert,regular,3,103,wallet,returning,4.0,18.6,11,Tuesday,18,309
+11257,2025-11-04,19:11,Zamalek,tea,drink,large,2,41,card,returning,3.0,18.6,11,Tuesday,19,82
+11262,2025-11-05,08:56,Zamalek,latte,drink,large,1,97,cash,returning,3.0,17.3,11,Wednesday,8,97
+11261,2025-11-05,14:50,Zamalek,falafel wrap,food,regular,3,69,card,returning,5.0,17.3,11,Wednesday,14,207
+11263,2025-11-05,18:53,Maadi,cappuccino,drink,medium,3,65,wallet,new,4.0,17.3,11,Wednesday,18,195
+11265,2025-11-06,11:18,Maadi,tea,drink,small,1,26,cash,returning,5.0,15.0,11,Thursday,11,26
+11264,2025-11-06,11:57,Zamalek,cheese sandwich,food,regular,1,98,wallet,new,,15.0,11,Thursday,11,98
+11266,2025-11-06,13:47,Maadi,cheese sandwich,food,regular,3,85,card,returning,3.0,15.0,11,Thursday,13,255
+11267,2025-11-06,15:34,Heliopolis,basbousa,dessert,regular,2,36,cash,returning,,15.0,11,Thursday,15,72
+11270,2025-11-07,10:06,Maadi,mint lemonade,drink,small,3,47,cash,returning,4.0,17.0,11,Friday,10,141
+11269,2025-11-07,12:34,Zamalek,hot chocolate,drink,medium,1,69,wallet,new,4.0,17.0,11,Friday,12,69
+11272,2025-11-07,13:30,Heliopolis,cappuccino,drink,small,1,50,wallet,new,2.0,17.0,11,Friday,13,50
+11268,2025-11-07,15:08,Zamalek,cheese sandwich,food,regular,2,98,cash,returning,5.0,17.0,11,Friday,15,196
+11271,2025-11-07,15:14,Heliopolis,hot chocolate,drink,medium,1,54,cash,new,5.0,17.0,11,Friday,15,54
+11273,2025-11-08,13:28,Zamalek,croissant,food,regular,1,57,cash,new,3.0,16.1,11,Saturday,13,57
+11274,2025-11-08,18:42,Zamalek,tea,drink,medium,1,34,card,new,5.0,16.1,11,Saturday,18,34
+11275,2025-11-09,08:02,Zamalek,cappuccino,drink,medium,3,75,card,returning,4.0,14.0,11,Sunday,8,225
+11276,2025-11-09,15:42,Heliopolis,tea,drink,large,1,32,unknown,returning,4.0,14.0,11,Sunday,15,32
+11280,2025-11-10,07:50,Maadi,hot chocolate,drink,medium,1,60,unknown,new,4.0,14.9,11,Monday,7,60
+11279,2025-11-10,11:47,Maadi,espresso,drink,medium,3,45,card,returning,3.0,14.9,11,Monday,11,135
+11278,2025-11-10,15:17,Zamalek,croissant,food,regular,2,57,wallet,returning,4.0,14.9,11,Monday,15,114
+11277,2025-11-10,15:44,Zamalek,brownie,dessert,regular,2,63,cash,returning,4.0,14.9,11,Monday,15,126
+11281,2025-11-11,15:06,Maadi,tea,drink,medium,1,30,cash,returning,5.0,17.0,11,Tuesday,15,30
+11282,2025-11-11,19:38,Maadi,mint lemonade,drink,medium,3,55,wallet,new,,17.0,11,Tuesday,19,165
+11283,2025-11-12,16:12,Heliopolis,cappuccino,drink,medium,2,58,wallet,returning,3.0,14.9,11,Wednesday,16,116
+11284,2025-11-13,17:33,Maadi,falafel wrap,food,regular,3,60,wallet,returning,4.0,14.0,11,Thursday,17,180
+11285,2025-11-14,12:03,Zamalek,cheesecake,dessert,regular,1,103,cash,returning,4.0,16.8,11,Friday,12,103
+11292,2025-11-14,12:08,Heliopolis,tea,drink,small,1,23,wallet,new,2.0,16.8,11,Friday,12,23
+11288,2025-11-14,12:44,Maadi,cheese sandwich,food,regular,2,85,cash,new,5.0,16.8,11,Friday,12,170
+11289,2025-11-14,14:53,Maadi,basbousa,dessert,regular,1,40,card,new,5.0,16.8,11,Friday,14,40
+11286,2025-11-14,15:22,Zamalek,hot chocolate,drink,medium,2,69,cash,returning,,16.8,11,Friday,15,138
+11287,2025-11-14,17:12,Maadi,espresso,drink,medium,1,45,card,new,3.0,16.8,11,Friday,17,45
+11290,2025-11-14,17:43,Heliopolis,tea,drink,small,3,23,cash,new,,16.8,11,Friday,17,69
+11291,2025-11-14,18:38,Heliopolis,iced latte,drink,medium,1,68,cash,new,4.0,16.8,11,Friday,18,68
+11293,2025-11-15,09:06,Zamalek,hot chocolate,drink,medium,1,69,card,new,2.0,15.3,11,Saturday,9,69
+11296,2025-11-15,12:25,Maadi,cheesecake,dessert,regular,2,90,cash,new,4.0,15.3,11,Saturday,12,180
+11295,2025-11-15,17:02,Zamalek,croissant,food,regular,1,57,wallet,returning,5.0,15.3,11,Saturday,17,57
+11297,2025-11-15,17:36,Heliopolis,basbousa,dessert,regular,1,36,cash,returning,2.0,15.3,11,Saturday,17,36
+11294,2025-11-15,18:46,Zamalek,hot chocolate,drink,large,1,83,card,returning,4.0,15.3,11,Saturday,18,83
+11299,2025-11-16,10:20,Zamalek,cheesecake,dessert,regular,3,103,cash,new,4.0,17.0,11,Sunday,10,309
+11301,2025-11-16,10:22,Heliopolis,cappuccino,drink,medium,2,58,cash,new,4.0,17.0,11,Sunday,10,116
+11300,2025-11-16,14:34,Heliopolis,tea,drink,medium,2,27,card,new,5.0,17.0,11,Sunday,14,54
+11298,2025-11-16,14:39,Zamalek,cheesecake,dessert,regular,2,103,card,returning,3.0,17.0,11,Sunday,14,206
+11308,2025-11-17,08:13,Heliopolis,latte,drink,medium,1,63,cash,new,4.0,14.5,11,Monday,8,63
+11303,2025-11-17,09:51,Zamalek,cheese sandwich,food,regular,2,98,wallet,returning,4.0,14.5,11,Monday,9,196
+11305,2025-11-17,10:04,Maadi,latte,drink,small,2,60,card,returning,3.0,14.5,11,Monday,10,120
+11306,2025-11-17,10:53,Maadi,cheesecake,dessert,regular,2,90,cash,new,3.0,14.5,11,Monday,10,180
+11302,2025-11-17,12:54,Zamalek,brownie,dessert,regular,1,63,card,new,4.0,14.5,11,Monday,12,63
+11307,2025-11-17,15:59,Heliopolis,cheesecake,dessert,regular,2,81,card,returning,5.0,14.5,11,Monday,15,162
+11304,2025-11-17,20:24,Maadi,hot chocolate,drink,small,1,51,cash,new,,14.5,11,Monday,20,51
+11309,2025-11-18,15:23,Zamalek,falafel wrap,food,regular,1,69,cash,returning,3.0,17.8,11,Tuesday,15,69
+11310,2025-11-19,10:52,Zamalek,basbousa,dessert,regular,1,46,wallet,new,4.0,16.1,11,Wednesday,10,46
+11312,2025-11-19,11:17,Maadi,cheesecake,dessert,regular,2,90,card,new,3.0,16.1,11,Wednesday,11,180
+11311,2025-11-19,13:37,Zamalek,cappuccino,drink,small,2,64,card,new,4.0,16.1,11,Wednesday,13,128
+11313,2025-11-19,16:04,Maadi,tea,drink,small,1,26,wallet,new,4.0,16.1,11,Wednesday,16,26
+11315,2025-11-20,11:31,Maadi,brownie,dessert,regular,1,55,card,returning,4.0,20.6,11,Thursday,11,55
+11316,2025-11-20,12:15,Heliopolis,brownie,dessert,regular,2,50,card,returning,5.0,20.6,11,Thursday,12,100
+11314,2025-11-20,21:52,Zamalek,espresso,drink,medium,3,52,card,returning,4.0,20.6,11,Thursday,21,156
+11321,2025-11-21,11:08,Heliopolis,falafel wrap,food,regular,1,54,cash,returning,5.0,18.4,11,Friday,11,54
+11317,2025-11-21,11:20,Zamalek,basbousa,dessert,regular,2,46,card,returning,3.0,18.4,11,Friday,11,92
+11320,2025-11-21,15:07,Heliopolis,latte,drink,large,1,76,cash,returning,4.0,18.4,11,Friday,15,76
+11318,2025-11-21,16:53,Maadi,hot chocolate,drink,large,1,72,cash,returning,3.0,18.4,11,Friday,16,72
+11319,2025-11-21,16:54,Maadi,cheesecake,dessert,regular,2,90,card,returning,4.0,18.4,11,Friday,16,180
+11324,2025-11-22,07:16,Zamalek,croissant,food,regular,3,57,wallet,new,4.0,15.6,11,Saturday,7,171
+11325,2025-11-22,10:44,Maadi,hot chocolate,drink,large,1,72,cash,new,5.0,15.6,11,Saturday,10,72
+11327,2025-11-22,11:29,Heliopolis,tea,drink,medium,1,27,cash,new,3.0,15.6,11,Saturday,11,27
+11323,2025-11-22,13:30,Zamalek,croissant,food,regular,2,57,cash,returning,5.0,15.6,11,Saturday,13,114
+11328,2025-11-22,14:08,Heliopolis,cappuccino,drink,medium,1,58,cash,returning,4.0,15.6,11,Saturday,14,58
+11322,2025-11-22,15:48,Zamalek,falafel wrap,food,regular,1,69,card,returning,4.0,15.6,11,Saturday,15,69
+11326,2025-11-22,16:02,Heliopolis,cheesecake,dessert,regular,3,81,wallet,returning,5.0,15.6,11,Saturday,16,243
+11329,2025-11-23,16:14,Zamalek,hot chocolate,drink,small,1,59,wallet,returning,,13.0,11,Sunday,16,59
+11330,2025-11-23,16:32,Maadi,brownie,dessert,regular,1,55,cash,returning,,13.0,11,Sunday,16,55
+11333,2025-11-24,16:47,Heliopolis,tea,drink,large,2,32,cash,returning,4.0,15.8,11,Monday,16,64
+11332,2025-11-24,17:08,Heliopolis,hot chocolate,drink,medium,1,54,cash,returning,5.0,15.8,11,Monday,17,54
+11331,2025-11-24,18:06,Zamalek,latte,drink,large,1,97,cash,returning,4.0,15.8,11,Monday,18,97
+11334,2025-11-25,11:25,Zamalek,cheese sandwich,food,regular,2,98,card,returning,4.0,15.2,11,Tuesday,11,196
+11337,2025-11-25,14:29,Maadi,mint lemonade,drink,large,2,66,cash,returning,5.0,15.2,11,Tuesday,14,132
+11335,2025-11-25,15:09,Zamalek,espresso,drink,medium,2,52,card,new,,15.2,11,Tuesday,15,104
+11336,2025-11-25,16:19,Maadi,cheesecake,dessert,regular,1,90,cash,new,4.0,15.2,11,Tuesday,16,90
+11338,2025-11-26,07:49,Zamalek,tea,drink,small,2,29,wallet,returning,5.0,16.8,11,Wednesday,7,58
+11340,2025-11-26,12:15,Maadi,mint lemonade,drink,large,2,66,cash,returning,4.0,16.8,11,Wednesday,12,132
+11339,2025-11-26,12:43,Maadi,cappuccino,drink,small,2,55,card,returning,5.0,16.8,11,Wednesday,12,110
+11342,2025-11-27,10:57,Zamalek,hot chocolate,drink,medium,2,69,card,returning,4.0,16.9,11,Thursday,10,138
+11341,2025-11-27,11:11,Zamalek,espresso,drink,medium,1,52,cash,returning,4.0,16.9,11,Thursday,11,52
+11343,2025-11-27,14:38,Maadi,cheesecake,dessert,regular,3,90,cash,new,3.0,16.9,11,Thursday,14,270
+11345,2025-11-28,10:39,Maadi,cheesecake,dessert,regular,2,90,cash,returning,3.0,11.8,11,Friday,10,180
+11348,2025-11-28,11:29,Heliopolis,cheesecake,dessert,regular,1,81,card,returning,5.0,11.8,11,Friday,11,81
+11344,2025-11-28,16:58,Zamalek,espresso,drink,large,1,62,cash,returning,,11.8,11,Friday,16,62
+11347,2025-11-28,18:39,Maadi,cheesecake,dessert,regular,1,90,wallet,returning,4.0,11.8,11,Friday,18,90
+11346,2025-11-28,19:28,Maadi,tea,drink,large,2,36,card,new,4.0,11.8,11,Friday,19,72
+11349,2025-11-29,10:52,Zamalek,basbousa,dessert,regular,3,46,cash,returning,3.0,14.8,11,Saturday,10,138
+11351,2025-11-29,11:25,Heliopolis,hot chocolate,drink,medium,3,54,card,returning,3.0,14.8,11,Saturday,11,162
+11350,2025-11-29,18:34,Zamalek,iced latte,drink,large,1,104,card,new,3.0,14.8,11,Saturday,18,104
+11355,2025-11-30,07:07,Heliopolis,cheesecake,dessert,regular,1,81,card,new,3.0,9.7,11,Sunday,7,81
+11352,2025-11-30,12:44,Zamalek,croissant,food,regular,1,57,card,returning,5.0,9.7,11,Sunday,12,57
+11354,2025-11-30,13:30,Heliopolis,tea,drink,medium,2,27,wallet,returning,,9.7,11,Sunday,13,54
+11353,2025-11-30,14:27,Maadi,cappuccino,drink,small,2,55,wallet,new,5.0,9.7,11,Sunday,14,110
+11360,2025-12-01,10:48,Heliopolis,brownie,dessert,regular,1,50,cash,returning,4.0,15.7,12,Monday,10,50
+11356,2025-12-01,12:50,Zamalek,hot chocolate,drink,medium,3,69,wallet,new,5.0,15.7,12,Monday,12,207
+11358,2025-12-01,14:42,Maadi,croissant,food,regular,3,50,card,new,3.0,15.7,12,Monday,14,150
+11359,2025-12-01,21:21,Maadi,brownie,dessert,regular,1,55,card,returning,4.0,15.7,12,Monday,21,55
+11357,2025-12-01,22:25,Maadi,falafel wrap,food,regular,2,60,cash,returning,4.0,15.7,12,Monday,22,120
+11361,2025-12-02,14:53,Maadi,croissant,food,regular,2,50,card,returning,,17.9,12,Tuesday,14,100
+11362,2025-12-03,10:38,Maadi,tea,drink,medium,2,30,wallet,returning,4.0,13.2,12,Wednesday,10,60
+11365,2025-12-03,17:28,Heliopolis,tea,drink,large,1,32,wallet,returning,4.0,13.2,12,Wednesday,17,32
+11364,2025-12-03,18:52,Heliopolis,falafel wrap,food,regular,1,54,card,returning,4.0,13.2,12,Wednesday,18,54
+11363,2025-12-03,20:45,Maadi,tea,drink,medium,1,30,wallet,returning,3.0,13.2,12,Wednesday,20,30
+11367,2025-12-04,10:18,Zamalek,basbousa,dessert,regular,2,46,card,new,3.0,15.1,12,Thursday,10,92
+11368,2025-12-04,13:10,Zamalek,cheesecake,dessert,regular,2,103,cash,returning,4.0,15.1,12,Thursday,13,206
+11370,2025-12-04,14:34,Heliopolis,falafel wrap,food,regular,1,54,wallet,returning,4.0,15.1,12,Thursday,14,54
+11369,2025-12-04,14:49,Maadi,hot chocolate,drink,large,3,72,wallet,returning,4.0,15.1,12,Thursday,14,216
+11366,2025-12-04,18:16,Zamalek,falafel wrap,food,regular,2,69,wallet,returning,5.0,15.1,12,Thursday,18,138
+11371,2025-12-05,10:21,Zamalek,cappuccino,drink,large,1,90,cash,new,3.0,10.0,12,Friday,10,90
+11373,2025-12-05,12:38,Maadi,basbousa,dessert,regular,1,40,cash,new,2.0,10.0,12,Friday,12,40
+11374,2025-12-05,14:20,Heliopolis,tea,drink,medium,1,27,cash,returning,4.0,10.0,12,Friday,14,27
+11372,2025-12-05,16:00,Zamalek,cheese sandwich,food,regular,1,98,card,new,4.0,10.0,12,Friday,16,98
+11375,2025-12-05,17:25,Heliopolis,cheesecake,dessert,regular,1,81,cash,returning,4.0,10.0,12,Friday,17,81
+11380,2025-12-06,10:02,Heliopolis,basbousa,dessert,regular,1,36,cash,returning,4.0,14.4,12,Saturday,10,36
+11376,2025-12-06,10:18,Zamalek,basbousa,dessert,regular,2,46,cash,returning,4.0,14.4,12,Saturday,10,92
+11379,2025-12-06,11:31,Maadi,tea,drink,small,3,26,cash,returning,4.0,14.4,12,Saturday,11,78
+11378,2025-12-06,12:15,Zamalek,cheesecake,dessert,regular,3,103,card,new,3.0,14.4,12,Saturday,12,309
+11377,2025-12-06,21:59,Zamalek,falafel wrap,food,regular,2,69,cash,new,4.0,14.4,12,Saturday,21,138
+11381,2025-12-07,11:28,Maadi,cheesecake,dessert,regular,3,90,wallet,returning,5.0,13.3,12,Sunday,11,270
+11383,2025-12-08,09:25,Zamalek,basbousa,dessert,regular,2,46,cash,returning,4.0,9.7,12,Monday,9,92
+11382,2025-12-08,17:03,Zamalek,latte,drink,medium,3,80,cash,returning,3.0,9.7,12,Monday,17,240
+11384,2025-12-09,15:03,Zamalek,hot chocolate,drink,large,3,83,card,returning,3.0,16.2,12,Tuesday,15,249
+11385,2025-12-09,16:32,Maadi,hot chocolate,drink,medium,2,60,card,returning,5.0,16.2,12,Tuesday,16,120
+11387,2025-12-10,09:31,Maadi,latte,drink,medium,2,70,wallet,returning,4.0,12.1,12,Wednesday,9,140
+11388,2025-12-10,15:17,Heliopolis,cheesecake,dessert,regular,1,81,card,new,3.0,12.1,12,Wednesday,15,81
+11389,2025-12-10,15:58,Heliopolis,brownie,dessert,regular,1,50,cash,returning,3.0,12.1,12,Wednesday,15,50
+11386,2025-12-10,17:46,Zamalek,hot chocolate,drink,small,3,59,cash,returning,5.0,12.1,12,Wednesday,17,177
+11391,2025-12-11,13:13,Maadi,croissant,food,regular,1,50,cash,returning,4.0,13.2,12,Thursday,13,50
+11393,2025-12-11,14:41,Heliopolis,basbousa,dessert,regular,1,36,cash,returning,4.0,13.2,12,Thursday,14,36
+11390,2025-12-11,15:10,Zamalek,tea,drink,medium,2,34,card,returning,2.0,13.2,12,Thursday,15,68
+11392,2025-12-11,21:46,Heliopolis,latte,drink,medium,2,63,card,new,3.0,13.2,12,Thursday,21,126
+11395,2025-12-12,07:28,Zamalek,cappuccino,drink,large,1,90,cash,returning,3.0,14.0,12,Friday,7,90
+11396,2025-12-12,11:17,Zamalek,cheese sandwich,food,regular,2,98,card,returning,3.0,14.0,12,Friday,11,196
+11398,2025-12-12,13:59,Zamalek,croissant,food,regular,3,57,card,returning,4.0,14.0,12,Friday,13,171
+11394,2025-12-12,15:26,Zamalek,espresso,drink,medium,1,52,wallet,returning,5.0,14.0,12,Friday,15,52
+11397,2025-12-12,18:10,Zamalek,basbousa,dessert,regular,2,46,wallet,returning,4.0,14.0,12,Friday,18,92
+11400,2025-12-13,09:08,Zamalek,cappuccino,drink,large,3,90,cash,returning,3.0,13.8,12,Saturday,9,270
+11403,2025-12-13,11:06,Maadi,cappuccino,drink,medium,3,65,card,returning,5.0,13.8,12,Saturday,11,195
+11407,2025-12-13,13:03,Heliopolis,espresso,drink,medium,3,40,card,returning,,13.8,12,Saturday,13,120
+11405,2025-12-13,13:04,Maadi,croissant,food,regular,2,50,cash,returning,5.0,13.8,12,Saturday,13,100
+11408,2025-12-13,13:08,Heliopolis,cappuccino,drink,small,1,50,cash,returning,4.0,13.8,12,Saturday,13,50
+11399,2025-12-13,13:33,Zamalek,cheesecake,dessert,regular,1,103,card,returning,4.0,13.8,12,Saturday,13,103
+11402,2025-12-13,13:48,Maadi,hot chocolate,drink,large,2,72,card,returning,4.0,13.8,12,Saturday,13,144
+11404,2025-12-13,14:59,Maadi,mint lemonade,drink,medium,2,55,card,new,3.0,13.8,12,Saturday,14,110
+11401,2025-12-13,17:42,Zamalek,falafel wrap,food,regular,2,69,cash,new,,13.8,12,Saturday,17,138
+11406,2025-12-13,22:54,Heliopolis,falafel wrap,food,regular,1,54,card,new,3.0,13.8,12,Saturday,22,54
+11410,2025-12-14,09:19,Maadi,hot chocolate,drink,medium,1,60,cash,returning,4.0,14.8,12,Sunday,9,60
+11409,2025-12-14,17:17,Zamalek,cappuccino,drink,large,2,90,card,returning,4.0,14.8,12,Sunday,17,180
+11412,2025-12-15,16:44,Maadi,basbousa,dessert,regular,1,40,card,returning,4.0,13.3,12,Monday,16,40
+11411,2025-12-15,17:26,Zamalek,brownie,dessert,regular,2,63,wallet,returning,4.0,13.3,12,Monday,17,126
+11416,2025-12-16,12:57,Maadi,cheese sandwich,food,regular,1,85,card,returning,,13.9,12,Tuesday,12,85
+11415,2025-12-16,13:23,Zamalek,latte,drink,medium,2,80,wallet,new,3.0,13.9,12,Tuesday,13,160
+11417,2025-12-16,18:11,Maadi,latte,drink,medium,1,70,cash,returning,5.0,13.9,12,Tuesday,18,70
+11414,2025-12-16,19:40,Zamalek,hot chocolate,drink,small,1,59,card,returning,4.0,13.9,12,Tuesday,19,59
+11413,2025-12-16,20:15,Zamalek,basbousa,dessert,regular,2,46,wallet,returning,3.0,13.9,12,Tuesday,20,92
+11418,2025-12-17,10:08,Zamalek,espresso,drink,medium,2,52,cash,returning,5.0,12.1,12,Wednesday,10,104
+11419,2025-12-17,17:15,Maadi,brownie,dessert,regular,3,55,wallet,returning,4.0,12.1,12,Wednesday,17,165
+11420,2025-12-17,19:47,Heliopolis,brownie,dessert,regular,3,50,wallet,new,4.0,12.1,12,Wednesday,19,150
+11421,2025-12-18,13:29,Maadi,brownie,dessert,regular,1,55,cash,returning,5.0,13.6,12,Thursday,13,55
+11423,2025-12-18,16:33,Heliopolis,cheese sandwich,food,regular,2,76,cash,new,3.0,13.6,12,Thursday,16,152
+11422,2025-12-18,18:16,Maadi,cheesecake,dessert,regular,1,90,cash,new,4.0,13.6,12,Thursday,18,90
+11424,2025-12-19,11:00,Zamalek,cappuccino,drink,medium,1,75,wallet,returning,4.0,13.6,12,Friday,11,75
+11425,2025-12-19,15:28,Maadi,tea,drink,medium,2,30,wallet,returning,5.0,13.6,12,Friday,15,60
+11426,2025-12-20,11:01,Heliopolis,cheese sandwich,food,regular,2,76,cash,new,4.0,14.7,12,Saturday,11,152
+11428,2025-12-21,12:21,Zamalek,tea,drink,medium,1,34,cash,returning,4.0,9.8,12,Sunday,12,34
+11429,2025-12-21,12:58,Heliopolis,cheese sandwich,food,regular,2,76,cash,new,3.0,9.8,12,Sunday,12,152
+11427,2025-12-21,17:52,Zamalek,croissant,food,regular,2,57,cash,returning,5.0,9.8,12,Sunday,17,114
+11430,2025-12-23,14:45,Heliopolis,falafel wrap,food,regular,1,54,card,returning,4.0,9.1,12,Tuesday,14,54
+11431,2025-12-24,15:09,Zamalek,hot chocolate,drink,medium,3,69,cash,returning,4.0,14.8,12,Wednesday,15,207
+11432,2025-12-24,18:54,Maadi,hot chocolate,drink,large,1,72,card,returning,4.0,14.8,12,Wednesday,18,72
+11433,2025-12-25,10:28,Zamalek,cappuccino,drink,small,3,64,card,returning,,14.6,12,Thursday,10,192
+11435,2025-12-25,14:14,Heliopolis,latte,drink,small,2,54,card,returning,4.0,14.6,12,Thursday,14,108
+11434,2025-12-25,19:15,Maadi,cheese sandwich,food,regular,2,85,card,returning,4.0,14.6,12,Thursday,19,170
+11438,2025-12-26,11:28,Heliopolis,cheesecake,dessert,regular,1,81,wallet,new,3.0,13.0,12,Friday,11,81
+11437,2025-12-26,11:40,Zamalek,cappuccino,drink,large,1,90,card,returning,4.0,13.0,12,Friday,11,90
+11439,2025-12-26,13:58,Heliopolis,falafel wrap,food,regular,3,54,card,returning,5.0,13.0,12,Friday,13,162
+11436,2025-12-26,14:18,Zamalek,espresso,drink,medium,2,52,wallet,returning,4.0,13.0,12,Friday,14,104
+11440,2025-12-26,16:27,Heliopolis,tea,drink,small,2,23,wallet,returning,3.0,13.0,12,Friday,16,46
+11442,2025-12-27,07:34,Maadi,brownie,dessert,regular,1,55,card,returning,5.0,11.9,12,Saturday,7,55
+11441,2025-12-27,19:17,Zamalek,cheesecake,dessert,regular,1,103,card,returning,4.0,11.9,12,Saturday,19,103
+11445,2025-12-28,11:27,Zamalek,hot chocolate,drink,medium,1,69,card,new,4.0,15.1,12,Sunday,11,69
+11443,2025-12-28,14:50,Zamalek,cheesecake,dessert,regular,3,103,card,new,3.0,15.1,12,Sunday,14,309
+11444,2025-12-28,15:10,Zamalek,espresso,drink,medium,2,52,cash,returning,5.0,15.1,12,Sunday,15,104
+11446,2025-12-28,22:35,Maadi,cappuccino,drink,medium,3,65,cash,new,3.0,15.1,12,Sunday,22,195
+11450,2025-12-29,10:04,Heliopolis,latte,drink,small,1,54,cash,returning,5.0,11.6,12,Monday,10,54
+11448,2025-12-29,13:03,Zamalek,cappuccino,drink,medium,1,75,card,new,4.0,11.6,12,Monday,13,75
+11449,2025-12-29,13:40,Maadi,iced latte,drink,medium,2,75,cash,returning,3.0,11.6,12,Monday,13,150
+11447,2025-12-29,14:38,Zamalek,brownie,dessert,regular,2,63,card,returning,3.0,11.6,12,Monday,14,126
+11451,2025-12-30,11:07,Maadi,cheese sandwich,food,regular,1,85,card,new,4.0,12.0,12,Tuesday,11,85
+11452,2025-12-31,18:41,Heliopolis,espresso,drink,large,2,49,cash,returning,4.0,11.4,12,Wednesday,18,98

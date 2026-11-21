@@ -1,0 +1,125 @@
+q1:
+  right:
+  - a
+  - b
+  why: البايت 8 بتات، ويُكتب كخانتين hex.
+q2:
+  right:
+  - a
+  - b
+  why: 1*16 + 15 = 31.
+q3:
+  right:
+  - c
+  - f
+  why: المدخلات في rdi وrsi وrdx.
+q4:
+  right:
+  - b
+  - e
+  why: 0 هو read و60 هو exit.
+q5:
+  right:
+  - a
+  - d
+  why: الـ address الحالي ناقص البداية يساوي الطول.
+q6:
+  right:
+  - c
+  - f
+  why: الأقواس معناها ذاكرة.
+q7:
+  right:
+  - a
+  - f
+  why: الخارج في rax والباقي في rdx.
+q8:
+  right:
+  - a
+  - d
+  why: لا نقل من ذاكرة إلى ذاكرة.
+q9:
+  right:
+  - a
+  - b
+  why: الكتابة في 32 بت تمسح النصف الأعلى.
+q10:
+  right:
+  - b
+  - d
+  why: movzx تملأ بأصفار.
+q11:
+  right:
+  - b
+  - d
+  why: الـ flags وحدها تتغير.
+q12:
+  right:
+  - c
+  - d
+  why: ja هي النسخة بدون إشارة.
+q13:
+  right:
+  - b
+  - e
+  why: اضرب في حجم العنصر.
+q14:
+  right:
+  - b
+  - d
+  why: امشِ حتى البايت 0.
+q15:
+  right:
+  - c
+  - f
+  why: test تضبط ZF لو كانت النتيجة صفرًا.
+q16:
+  right:
+  - c
+  - d
+  why: ret تسحبه لاحقًا.
+q17:
+  right:
+  - a
+  - e
+  why: ثم rcx وr8 وr9.
+q18:
+  right:
+  - a
+  - e
+  why: rbx وrbp وr12 إلى r15 تحفظها الـ function المستدعاة.
+q19:
+  right:
+  - c
+  - e
+  why: لهذا تبدأ main بـ push.
+q20:
+  right:
+  - b
+  - e
+  why: ret تسحب ما في القمة أيًا كان.
+q21:
+  right:
+  - a
+  - e
+  why: بدونه تحصل على صياغة AT&T.
+q22:
+  right:
+  - a
+  - f
+  why: واختصاره si.
+q23:
+  right:
+  - b
+  - c
+  why: g = 8 بايت، وx = hex.
+q24:
+  right:
+  - b
+  - c
+  why: 4071 تعطي 1 ثم 7 ثم 0 ثم 4.
+q25:
+  right:
+  - d
+  - e
+  why: '''0'' قيمته 48.'

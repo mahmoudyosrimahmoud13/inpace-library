@@ -1,0 +1,13 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- c
+- programming
+- beginner
+- systems programming
+- pointers
+- برمجة
+credit: كُتب لمكتبة inPace. كل أمثلة الكود تُرجمت بـ gcc (-Wall -Wextra -Werror) وشُغّلت مع AddressSanitizer.
+section: programming-web

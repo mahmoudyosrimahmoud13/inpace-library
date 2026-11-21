@@ -1,0 +1,17 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f2a3d" flood-opacity=".22"/></filter></defs>
+<g filter="url(#s)"><rect x="30" y="30" width="460" height="250" rx="22" fill="#eef7fc"/></g>
+<g fill="#0f2a3d">
+<rect x="70" y="190" width="38" height="60"/><rect x="122" y="160" width="38" height="90"/><rect x="174" y="130" width="38" height="120"/>
+<rect x="226" y="95" width="38" height="155" fill="#e07a3f"/><rect x="278" y="120" width="38" height="130"/><rect x="330" y="150" width="38" height="100"/><rect x="382" y="175" width="38" height="75"/>
+</g>
+<path d="M60 250 H450" stroke="#0f2a3d" stroke-width="2"/>
+<text x="245" y="80" text-anchor="middle" font-family="JBM" font-size="16" fill="#e07a3f" font-weight="700">June</text>
+<g filter="url(#s)"><rect x="30" y="310" width="460" height="220" rx="22" fill="#eef7fc"/></g>
+<g fill="#0f2a3d" opacity=".75">
+<circle cx="80" cy="490" r="7"/><circle cx="115" cy="470" r="7"/><circle cx="140" cy="480" r="7"/><circle cx="175" cy="450" r="7"/><circle cx="210" cy="440" r="7"/>
+<circle cx="240" cy="420" r="7"/><circle cx="275" cy="425" r="7"/><circle cx="300" cy="395" r="7"/><circle cx="335" cy="385" r="7"/><circle cx="365" cy="370" r="7"/><circle cx="400" cy="360" r="7"/><circle cx="440" cy="345" r="7"/>
+</g>
+<path d="M60 495 L460 340" stroke="#e07a3f" stroke-width="4"/>
+<text x="460" y="510" text-anchor="end" font-family="JBM" font-size="16" fill="#0f2a3d">df.groupby("item").sum()</text>
+</svg>

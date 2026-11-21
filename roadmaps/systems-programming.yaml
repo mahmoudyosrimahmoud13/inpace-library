@@ -1,0 +1,23 @@
+id: systems-programming
+title: Systems programming, from C to Rust
+description: Learn how programs really run, close to the machine. C first, then a look at assembly, then modern C++ and Rust. The two advanced courses are optional; take them when you want to go deeper.
+language: en
+author: inPace
+official: true
+order: 30
+tags: [systems, c, cpp, rust, assembly, programming, career]
+steps:
+  - course: c-programming-beginners
+    note: Start here. Variables, pointers, memory and files, with a small project at the end.
+  - course: asm-x86-64-beginners
+    note: See what your C code turns into. Registers, the stack and calling C from assembly.
+  - course: cpp-beginners
+    note: Modern C++. Classes, the standard library, RAII and smart pointers.
+  - course: cpp-advanced
+    note: Move semantics, templates and concepts, ranges, errors, threads and testing.
+    optional: true
+  - course: rust-beginners
+    note: Ownership and borrowing, the ideas that make Rust safe without a garbage collector.
+  - course: rust-advanced
+    note: Lifetimes, smart pointers, threads, async with tokio, macros and calling C.
+    optional: true

@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- c++
+- cpp
+- programming
+- beginner
+- oop
+- systems programming
+- برمجة
+credit: كُتب لمكتبة inPace. كل مثال تُرجم بـ g++ -std=c++20 -Wall -Wextra -Werror وشُغّل مع AddressSanitizer.
+section: programming-web

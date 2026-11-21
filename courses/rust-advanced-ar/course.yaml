@@ -1,0 +1,164 @@
+id: rust-advanced-ar
+title: ‏Rust المتقدمة
+version: 1
+language: ar
+description: الجزء الثاني بعد Rust للمبتدئين. lifetimes، والـ traits بعمق (الـ associated types والعمليات وFrom والـ blanket
+  implementations)، والـ closures والـ iterators، والـ smart pointers (Box وRc وRefCell وWeak)، والـ threads والـ channels
+  وArc<Mutex>، والـ async programming بـ tokio، ومعالجة الأخطاء بـ thiserror وanyhow، والماكرو، والكود غير الآمن واستدعاء
+  C، ثم الاختبار والتوثيق وclippy ومساحات العمل وCI. وينتهي بمنفّذ مهام متعدد الـ threads. كل مثال تُرجم وشُغّل، ومنها أمثلة
+  tokio والـ crates. خطوة اختيارية في مسار برمجة الأنظمة. حوالي 2 إلى 3 أسابيع، ساعة يوميًا.
+image: cover.jpg
+downloads:
+- title: كتاب The Rust Programming Language (بالإنجليزية)
+  url: https://doc.rust-lang.org/book/
+- title: Rust Atomics and Locks لـ Mara Bos (مجاني، بالإنجليزية)
+  url: https://marabos.nl/atomics/
+- title: دليل tokio (بالإنجليزية)
+  url: https://tokio.rs/tokio/tutorial
+modules:
+- id: m1
+  title: 'الوحدة 1: lifetimes والـ traits'
+  lessons:
+  - id: m1-l1
+    title: lifetimes
+    file: lessons/m1-l1.md
+    minutes: 55
+  - id: m1-l2
+    title: الـ Traits بعمق
+    file: lessons/m1-l2.md
+    minutes: 55
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: اكتب struct محللًا `Tokens<'a>` يحمل &'a str وينفّذ Iterator<Item = &'a str>، يُخرج الكلمات والأرقام بدون نسخ.
+      وأضف نوع `Money` مع Add وDisplay وFrom<u64>. ارفع الكود والمخرجات.
+  - id: m1-explain
+    type: explain
+    prompt: 'اشرح ماذا يعد ''a في `fn longest<''a>(a: &''a str, b: &''a str) -> &''a str`، ولماذا لا تغيّر lifetimes أبدًا
+      مدة حياة القيمة.'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: الـ Closures والـ iterators والـ smart pointers'
+  lessons:
+  - id: m2-l1
+    title: الـ Closures والـ iterators بعمق
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: 'الـ smart pointers: Box وRc وRefCell وWeak'
+    file: lessons/m2-l2.md
+    minutes: 55
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: ابنِ شجرة عائلة صغيرة بـ Rc<Node> وأبناء في RefCell وآباء Weak؛ واطبع كل شخص مع أبيه وأبنائه. ثم اكتب `fn make_counter()
+      -> impl FnMut() -> u32`. ارفع الكود والمخرجات.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح الفرق بين Fn وFnMut وFnOnce، ومتى تحتاج Rc<RefCell<T>> بدل الـ ownership العادية.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: الـ concurrency والـ async programming'
+  lessons:
+  - id: m3-l1
+    title: الـ threads والـ channels والحالة المشتركة
+    file: lessons/m3-l1.md
+    minutes: 55
+  - id: m3-l2
+    title: الـ async programming في Rust مع tokio
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'عدّ الكلمات في عدة ملفات نصية بالتوازي: thread لكل ملف يرسل خرائط (كلمة، عدد) عبر channel، وتُدمج في main. ثم
+      اكتب نفس الشيء بمهام tokio تقرأ الملفات بـ tokio::fs. ارفع الاثنين واشرح أيهما تختار.'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح كيف يسمح Send وSync للـ compiler بمنع data races، باستخدام Rc مقابل Arc كمثال.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الأخطاء والماكرو والكود غير الآمن'
+  lessons:
+  - id: m4-l1
+    title: معالجة الأخطاء في البرامج الحقيقية
+    file: lessons/m4-l1.md
+    minutes: 50
+  - id: m4-l2
+    title: الماكرو والكود غير الآمن واستدعاء C
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'اكتب محمّل إعدادات صغيرًا: وحدة مكتبة فيها enum بـ thiserror ‏(Io وParse وMissing) وmain تستخدم anyhow مع .context().
+      وأضف ماكرو `require!(map, "key")` يرجع الخطأ Missing. ارفع الكود وتقرير الخطأ لمفتاح ناقص.'
+  - id: m4-explain
+    type: explain
+    prompt: اشرح متى تستخدم thiserror ومتى تستخدم anyhow، وما الذي يجعل كتلة unsafe مقبولة.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: الأدوات ومشروع'
+  lessons:
+  - id: m5-l1
+    title: الاختبار والتوثيق وصندوق أدوات Cargo
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'مشروع: منفّذ مهام متعدد الـ threads'
+    file: lessons/m5-l2.md
+    minutes: 75
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: نفّذ ثلاثًا على الأقل من مهام 'دورك' في المشروع، منها الاختبارات ومقارنة rayon. ارفع كودك ومخرجات `cargo test`
+      و`cargo clippy` ومقارنة أزمنة قصيرة.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح خطوة بخطوة كيف يتوقف منفّذ المهام بنظافة عندما يُسقط المجمّع.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

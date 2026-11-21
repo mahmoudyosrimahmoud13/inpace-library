@@ -1,0 +1,15 @@
+id: electronics-pcb-ar
+title: الإلكترونيات وتصميم الـ PCB
+description: من أول LED حتى لوحة microcontroller صممتها بنفسك. تعلّم القطع والدوائر الأساسية، ثم صمّم اللوحات في KiCad، ثم ابنِ لوحة ATmega328P كاملة.
+language: ar
+author: inPace
+official: true
+order: 35
+tags: [electronics, pcb, kicad, microcontroller, hardware, beginner, arabic]
+steps:
+  - course: electronics-basics-ar
+    note: ابدأ هنا. الجهد والتيار والمقاومات والـ LEDs والمكثفات والـ transistors ومشروع إضاءة ليلية.
+  - course: pcb-design-kicad-ar
+    note: حوّل الدائرة إلى لوحة حقيقية. الـ schematic والـ footprints والـ layout وقواعد التصميم والطلب.
+  - course: microcontroller-pcb-ar
+    note: ضع microcontroller على لوحتك، وبرمجه، وشغّله.

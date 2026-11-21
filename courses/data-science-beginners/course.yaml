@@ -1,0 +1,200 @@
+id: data-science-beginners
+title: Data science for beginners
+version: 1
+language: en
+description: 'Your first complete path into data science, with Python in Google Colab. You work on one realistic dataset all
+  the way (a year of orders at a made-up Cairo coffee chain): Python for data, pandas to load, explore and clean, grouping
+  and merging, charts with matplotlib, statistics (centre, spread, distributions, correlation, bootstrap, A/B tests), your
+  first machine learning models (regression and classification) with scikit-learn, a reliable workflow (pipelines, cross-validation,
+  leakage), and a final report project. Every code example was run and its output is shown. The practice data is invented
+  for learning. Course 1 of the data scientist path. About 3 weeks, an hour a day.'
+image: cover.jpg
+downloads:
+- title: 'Google Colab: run Python notebooks in the browser'
+  url: https://colab.research.google.com/
+- title: 'The practice data: cafe_sales.csv'
+  url: https://raw.githubusercontent.com/mahmoudyosrimahmoud13/inpace-library/main/courses/data-science-beginners/files/cafe_sales.csv
+- title: pandas getting started guide
+  url: https://pandas.pydata.org/docs/getting_started/index.html
+- title: scikit-learn user guide
+  url: https://scikit-learn.org/stable/user_guide.html
+modules:
+- id: m1
+  title: 'Module 1: Getting started'
+  lessons:
+  - id: m1-l1
+    title: What data science is, and your first notebook
+    file: lessons/m1-l1.md
+    minutes: 35
+  - id: m1-l2
+    title: The Python you need for data
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Make a Colab notebook with a list of 7 daily temperatures, a function that labels each as cool, warm or hot, a
+      list comprehension of the hot days, and a dictionary counting each label. Share a link or upload a screenshot.
+  - id: m1-explain
+    type: explain
+    prompt: Describe the data science workflow in your own words, using a question you'd like to answer with data.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: pandas basics and cleaning'
+  lessons:
+  - id: m2-l1
+    title: 'pandas: loading and exploring data'
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: Cleaning data
+    file: lessons/m2-l2.md
+    minutes: 55
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Load cafe_sales.csv, find and fix every problem from the lesson (duplicates, branch spelling, item spaces, typo
+      prices, missing payment), and write down each decision in a text cell. Save cafe_clean.csv and report the row count
+      and total revenue.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why you shouldn't fill missing ratings with the average, but it's fine to fill missing payment methods
+      with 'unknown'.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Summaries and charts'
+  lessons:
+  - id: m3-l1
+    title: Grouping, summarizing and combining tables
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: Charts that tell the story
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Answer two questions with groupby and one chart each: which item earns most in each branch, and how orders change
+      by weekday. Give every chart a title, labelled axes and a one-sentence takeaway.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Explain which chart type you''d use for: sales over 12 months, comparing 13 items, and checking if temperature
+      relates to iced drink sales, and why.'
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Statistics'
+  lessons:
+  - id: m4-l1
+    title: 'Statistics 1: centre, spread and distributions'
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: 'Statistics 2: relationships, samples and A/B tests'
+    file: lessons/m4-l2.md
+    minutes: 60
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'For the cafe data: report the mean and median order value and explain the gap; compute a bootstrap 95% range
+      for the average rating of new customers; and find the correlation between daily temperature and hot drink orders. Write
+      each result in one plain sentence.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain why correlation doesn't prove causation, and what a randomized A/B test adds, with an example.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Machine learning'
+  lessons:
+  - id: m5-l1
+    title: 'Machine learning 1: predicting a number'
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: 'Machine learning 2: predicting a category'
+    file: lessons/m5-l2.md
+    minutes: 55
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Predict daily revenue (instead of orders) with linear regression using temperature and weekend; report MAE against
+      a baseline. Then build a classifier for 'large order' (revenue above 150) and report the confusion matrix, precision
+      and recall at two thresholds.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why accuracy can be misleading for rare classes, using the iced drink example.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Module 6: Workflow and a project'
+  lessons:
+  - id: m6-l1
+    title: A reliable ML workflow
+    file: lessons/m6-l1.md
+    minutes: 50
+  - id: m6-l2
+    title: 'Project: a report for the café owner'
+    file: lessons/m6-l2.md
+    minutes: 80
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build the full report notebook from the project lesson, plus at least two 'Your turn' tasks. Upload the notebook
+      (or a link) and your two-minute 'Recommendations' section.
+  - id: m6-explain
+    type: explain
+    prompt: Explain what data leakage is, give the cup-size example, and describe how you'd check a new feature for leakage.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

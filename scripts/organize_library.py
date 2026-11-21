@@ -25,6 +25,8 @@ SECTIONS = [s["id"] for s in yaml.safe_load((ROOT / "sections.yaml").read_text(e
 BY_ID = [
     (r"^(os-fundamentals|linux-|bash-|networking-|docker-|kubernetes|git-|github-|aws-|cloud-|devops|terraform|ansible|ssh-|observability)", "linux-cloud-devops"),
     (r"^(inpace-inside|.*-for-inpace)$", "build-inpace"),
+    (r"^data-science", "ai-ml"),
+    (r"^(electronics|pcb-|microcontroller|arduino|embedded)", "electronics"),
     (r"^(postgres|sql|data-|excel|power-bi|pandas)", "data-databases"),
     (r"^(dl-|mls-|ml-|deep-learning|llm|nlp)", "ai-ml"),
     (r"^(mml-|math|maths|statistics|calculus|linear-algebra)", "maths"),
@@ -32,7 +34,7 @@ BY_ID = [
     (r"^(cma|fmaa|accounting|finance)", "business-finance"),
     (r"^chess", "chess"),
     (r"^(english|german|spanish|french|arabic-language)", "languages"),
-    (r"^(python|javascript|csharp|java|fastapi|flutter|html|css|react|system-design|web)", "programming-web"),
+    (r"^(python|javascript|csharp|java|fastapi|flutter|html|css|react|system-design|web|c-programming|cpp-|rust-|asm-)", "programming-web"),
 ]
 BY_TAG = [
     ({"linux", "devops", "docker", "kubernetes", "git", "github", "aws", "cloud", "networking", "bash", "security"}, "linux-cloud-devops"),
@@ -42,6 +44,7 @@ BY_TAG = [
     ({"career", "interview"}, "careers"),
     ({"accounting", "finance", "business", "marketing"}, "business-finance"),
     ({"chess"}, "chess"),
+    ({"electronics", "pcb", "microcontroller", "embedded", "hardware"}, "electronics"),
     ({"english", "german", "spanish", "french", "language", "grammar"}, "languages"),
     ({"python", "javascript", "web", "programming", "backend", "frontend", "mobile", "flutter"}, "programming-web"),
 ]

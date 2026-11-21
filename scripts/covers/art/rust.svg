@@ -1,0 +1,21 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#3a1408" flood-opacity=".25"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" text-anchor="middle">
+<rect x="30" y="60" width="180" height="100" rx="18" fill="#fff1ea" stroke="#3a1408" stroke-width="2" stroke-dasharray="7 6"/><text x="120" y="105" font-size="24" fill="#3a1408" opacity=".5">s1</text><text x="120" y="137" font-size="15" fill="#3a1408" opacity=".6">moved</text>
+<rect x="310" y="60" width="180" height="100" rx="18" fill="#3a1408"/><text x="400" y="105" font-size="24" fill="#fff1ea">s2</text><text x="400" y="137" font-size="15" fill="#ffd8c7">owner</text>
+</g>
+<path d="M212 110 H300" stroke="#3a1408" stroke-width="4"/><path d="M306 110 l-14 -9 v18 z" fill="#3a1408"/>
+<text x="260" y="200" text-anchor="middle" font-family="JBM" font-size="20" fill="#3a1408">let s2 = s1;</text>
+<g filter="url(#s)"><rect x="30" y="240" width="460" height="170" rx="20" fill="#3a1408"/></g>
+<g font-family="JBM" font-size="20" fill="#fff1ea">
+<text x="55" y="285">fn total(v: <tspan fill="#ffbfa3">&amp;[f64]</tspan>) -&gt; f64 {</text>
+<text x="80" y="325">v.iter().sum()</text>
+<text x="55" y="365">}</text>
+<text x="55" y="395" fill="#ffbfa3" font-size="16">// borrows, doesn't take</text>
+</g>
+<g font-family="JBM" font-size="17" font-weight="700" text-anchor="middle">
+<rect x="30" y="450" width="140" height="50" rx="25" fill="#3a1408"/><text x="100" y="481" fill="#fff1ea">Option</text>
+<rect x="190" y="450" width="140" height="50" rx="25" fill="#fff1ea"/><text x="260" y="481" fill="#3a1408">Result</text>
+<rect x="350" y="450" width="140" height="50" rx="25" fill="#fff1ea"/><text x="420" y="481" fill="#3a1408">match</text>
+</g>
+</svg>

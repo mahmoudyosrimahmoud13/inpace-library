@@ -1,0 +1,125 @@
+q1:
+  right:
+  - d
+  - e
+  why: Open the loop and everything stops.
+q2:
+  right:
+  - a
+  - c
+  why: I = V / R; volts ÷ kΩ = mA.
+q3:
+  right:
+  - a
+  - d
+  why: Voltage across, current in the loop.
+q4:
+  right:
+  - a
+  - b
+  why: 0.025 W is well under 0.25 W.
+q5:
+  right:
+  - b
+  - d
+  why: 4, 7, ×100.
+q6:
+  right:
+  - a
+  - c
+  why: One path only.
+q7:
+  right:
+  - b
+  - e
+  why: Several paths.
+q8:
+  right:
+  - b
+  - d
+  why: Vout = Vin × R2/(R1+R2).
+q9:
+  right:
+  - c
+  - d
+  why: R = (Vs − V_LED) / I.
+q10:
+  right:
+  - c
+  - e
+  why: The flat side marks the cathode.
+q11:
+  right:
+  - a
+  - c
+  why: Practically full after 5 τ.
+q12:
+  right:
+  - c
+  - d
+  why: Backwards they can burst.
+q13:
+  right:
+  - b
+  - e
+  why: Short loop, close to the pin.
+q14:
+  right:
+  - a
+  - b
+  why: Heat = (Vin − Vout) × I.
+q15:
+  right:
+  - c
+  - d
+  why: 80 to 95% efficient.
+q16:
+  right:
+  - b
+  - d
+  why: Low-side switch.
+q17:
+  right:
+  - a
+  - d
+  why: It absorbs the switch-off spike.
+q18:
+  right:
+  - c
+  - d
+  why: 100 kΩ is typical.
+q19:
+  right:
+  - c
+  - e
+  why: The logic is inverted.
+q20:
+  right:
+  - c
+  - d
+  why: Debounce.
+q21:
+  right:
+  - a
+  - e
+  why: Numbers go down one side and back up.
+q22:
+  right:
+  - c
+  - d
+  why: Missing power is the classic fault.
+q23:
+  right:
+  - a
+  - e
+  why: A bigger C blinks slower.
+q24:
+  right:
+  - a
+  - d
+  why: OR needs just one.
+q25:
+  right:
+  - a
+  - e
+  why: A bigger top resistor pulls the middle down.

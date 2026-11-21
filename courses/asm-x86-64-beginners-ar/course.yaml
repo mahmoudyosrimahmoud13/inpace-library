@@ -1,0 +1,163 @@
+id: asm-x86-64-beginners-ar
+title: Assembly x86-64 للمبتدئين (Linux وNASM)
+version: 1
+language: ar
+description: 'اعرف ما هي برامجك في الحقيقة. اكتب كود تجميع x86-64 على Linux بـ NASM: البتات والـ hex والـ registers، وsystem
+  calls، وmov والحساب، وأحجام البيانات، والـ flags والـ jumps والـ loops، والـ arrays والنصوص في الذاكرة، والـ stack وcall
+  وret، واتفاقية استدعاء System V، واستدعاء C من التجميع والتجميع من C، وقراءة ناتج gcc وCompiler Explorer، وتتبّع الكود بـ
+  gdb. وينتهي بطابعة أرقام لا تحتاج مكتبة C. كل مثال تم تجميعه وتشغيله. الكورس الثاني في مسار برمجة الأنظمة؛ وكورس C قبله
+  يساعد. حوالي 2 إلى 3 أسابيع، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: 'Compiler Explorer: شاهد كود التجميع لـ C وC++ وRust'
+  url: https://godbolt.org/
+- title: دليل NASM (بالإنجليزية)
+  url: https://www.nasm.us/doc/
+- title: جدول system calls Linux x86-64
+  url: https://filippo.io/linux-syscall-table/
+modules:
+- id: m1
+  title: 'الوحدة 1: الآلة وأول البرامج'
+  lessons:
+  - id: m1-l1
+    title: كيف ينفّذ المعالج برنامجك
+    file: lessons/m1-l1.md
+    minutes: 45
+  - id: m1-l2
+    title: 'أهلًا يا عالم: البيانات وsystem calls'
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: اكتب برنامجًا يطبع اسمك ومدينتك في سطرين باستدعاءات write، ثم ينتهي برمز خروج 3. ارفع ملف .asm ولقطة شاشة فيها
+      الناتج و`echo $?`.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح ماذا يفعل الـ assembler وماذا يفعل الـ linker، ولماذا يتوقف البرنامج بعطل لو لم يكن فيه استدعاء exit.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: البيانات والحساب'
+  lessons:
+  - id: m2-l1
+    title: نقل البيانات والحساب
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: أحجام البيانات والـ registers داخل الـ registers
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: اكتب برنامجًا يخزّن سعرًا (dq) وكمية، ويحسب الإجمالي مع ضريبة 14% باستخدام imul وidiv (الإجمالي * 114 / 100)،
+      ويطبعه بـ printf. ارفع ملف .asm ولقطة شاشة.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح لماذا يجب استخدام `cqo` قبل `idiv`، وماذا تفعل `mov eax, 1` بالنصف الأعلى من rax.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: التحكم في التدفق والذاكرة'
+  lessons:
+  - id: m3-l1
+    title: 'القرارات والـ loops: الـ flags والـ jumps'
+    file: lessons/m3-l1.md
+    minutes: 55
+  - id: m3-l2
+    title: الذاكرة والـ arrays والنصوص
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اكتب برنامجًا يعدّ كم رقمًا زوجيًا وكم رقمًا فرديًا في array dq، ويطبع العددين. ثم اجعله يعدّ أيضًا المسافات في
+      نص. ارفع ملف .asm ولقطة شاشة.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح كيف تتحول if/else من C إلى cmp وjumps، ولماذا نقارن الحروف بـ jb وja.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الـ functions والـ stack'
+  lessons:
+  - id: m4-l1
+    title: الـ stack وcall وret
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: 'calling convention: التحدث مع C'
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اكتب function `power(base, exp)` في ملف .asm خاص بها تتبع calling convention، واستدعها من برنامج C صغير يطبع 2^10
+      و3^5. ارفع الملفين ولقطة شاشة.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح ماذا تفعل `call` و`ret` بالـ stack، وأي الـ registers يجب أن ترجعها الـ function بدون تغيير.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: أدوات حقيقية ومشروع'
+  lessons:
+  - id: m5-l1
+    title: قراءة ناتج الـ compiler واستخدام أداة التصحيح
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'مشروع: طباعة الأرقام بدون مكتبة C'
+    file: lessons/m5-l2.md
+    minutes: 70
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: نفّذ اثنتين على الأقل من مهام 'دورك' في المشروع (جدول الضرب، أو قراءة المدخلات، أو print_hex) بsystem calls فقط.
+      ارفع ملفات .asm ولقطة شاشة وهي تعمل.
+  - id: m5-explain
+    type: explain
+    prompt: صِف كيف تجد الـ instruction التي تجعل برنامج تجميع يتوقف بعطل، باستخدام gdb.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

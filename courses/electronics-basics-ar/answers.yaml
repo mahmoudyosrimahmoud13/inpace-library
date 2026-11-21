@@ -1,0 +1,125 @@
+q1:
+  right:
+  - c
+  - d
+  why: افتح الدائرة فيتوقف كل شيء.
+q2:
+  right:
+  - a
+  - d
+  why: I = V / R؛ و volts ÷ kΩ = mA.
+q3:
+  right:
+  - a
+  - d
+  why: الـ voltage على الطرفين، والـ current داخل الدائرة.
+q4:
+  right:
+  - a
+  - e
+  why: ‏0.025 W أقل بكثير من 0.25 W.
+q5:
+  right:
+  - c
+  - d
+  why: ‏4، و7، و×100.
+q6:
+  right:
+  - a
+  - b
+  why: مسار واحد فقط.
+q7:
+  right:
+  - c
+  - e
+  why: عدة مسارات.
+q8:
+  right:
+  - b
+  - c
+  why: Vout = Vin × R2/(R1+R2).
+q9:
+  right:
+  - b
+  - e
+  why: R = (Vs − V_LED) / I.
+q10:
+  right:
+  - b
+  - e
+  why: الجانب المسطح يعلّم الـ cathode.
+q11:
+  right:
+  - a
+  - b
+  why: ممتلئ عمليًا بعد 5 τ.
+q12:
+  right:
+  - d
+  - e
+  why: بالعكس قد تنفجر.
+q13:
+  right:
+  - c
+  - e
+  why: حلقة قصيرة، قرب الـ pin.
+q14:
+  right:
+  - b
+  - c
+  why: الحرارة = (Vin − Vout) × I.
+q15:
+  right:
+  - d
+  - e
+  why: كفاءة من 80 إلى 95%.
+q16:
+  right:
+  - a
+  - e
+  why: low-side switch.
+q17:
+  right:
+  - b
+  - c
+  why: يمتص الـ spike عند الإطفاء.
+q18:
+  right:
+  - b
+  - e
+  why: ‏100 kΩ معتادة.
+q19:
+  right:
+  - b
+  - c
+  why: المنطق معكوس.
+q20:
+  right:
+  - a
+  - e
+  why: الـ Debounce.
+q21:
+  right:
+  - c
+  - e
+  why: الأرقام تنزل على جانب وترجع على الآخر.
+q22:
+  right:
+  - b
+  - c
+  why: غياب الكهرباء هو العطل الكلاسيكي.
+q23:
+  right:
+  - a
+  - c
+  why: C أكبر يومض أبطأ.
+q24:
+  right:
+  - b
+  - e
+  why: الـ OR يحتاج واحدًا فقط.
+q25:
+  right:
+  - c
+  - d
+  why: الـ resistor العلوي الأكبر يسحب المنتصف لأسفل.

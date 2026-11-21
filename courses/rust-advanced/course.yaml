@@ -1,0 +1,166 @@
+id: rust-advanced
+title: Advanced Rust
+version: 1
+language: en
+description: The sequel to Rust for beginners. Lifetimes, traits in depth (associated types, operators, From, blanket impls),
+  closures and iterators, smart pointers (Box, Rc, RefCell, Weak), threads, channels and Arc<Mutex>, async with tokio, error
+  handling with thiserror and anyhow, macros, unsafe code and calling C, then testing, docs, clippy, workspaces and CI. Ends
+  with a multi-threaded job runner. Every example was compiled and run, including the tokio and crate examples. Optional step
+  in the systems programming path. About 2 to 3 weeks, an hour a day.
+image: cover.jpg
+downloads:
+- title: The Rust Programming Language (the book)
+  url: https://doc.rust-lang.org/book/
+- title: Rust Atomics and Locks by Mara Bos (free online)
+  url: https://marabos.nl/atomics/
+- title: The tokio tutorial
+  url: https://tokio.rs/tokio/tutorial
+modules:
+- id: m1
+  title: 'Module 1: Lifetimes and traits'
+  lessons:
+  - id: m1-l1
+    title: Lifetimes
+    file: lessons/m1-l1.md
+    minutes: 55
+  - id: m1-l2
+    title: Traits in depth
+    file: lessons/m1-l2.md
+    minutes: 55
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write a tokenizer struct `Tokens<'a>` that holds a &'a str and implements Iterator<Item = &'a str>, yielding words
+      and numbers without copying. Add a `Money` type with Add and Display, and From<u64>. Upload the code and output.
+  - id: m1-explain
+    type: explain
+    prompt: 'Explain what the ''a in `fn longest<''a>(a: &''a str, b: &''a str) -> &''a str` promises, and why lifetimes never
+      change how long a value lives.'
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Closures, iterators and smart pointers'
+  lessons:
+  - id: m2-l1
+    title: Closures and iterators in depth
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: 'Smart pointers: Box, Rc, RefCell and Weak'
+    file: lessons/m2-l2.md
+    minutes: 55
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a tiny family tree with Rc<Node>, RefCell children and Weak parents; print each person with their parent
+      and children. Then write `fn make_counter() -> impl FnMut() -> u32`. Upload the code and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between Fn, FnMut and FnOnce, and when you'd need Rc<RefCell<T>> instead of plain ownership.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Concurrency and async'
+  lessons:
+  - id: m3-l1
+    title: Threads, channels and shared state
+    file: lessons/m3-l1.md
+    minutes: 55
+  - id: m3-l2
+    title: Async Rust with tokio
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Count words in several text files in parallel: one thread per file sending (word, count) maps through a channel,
+      merged in main. Then write the same with tokio tasks reading files with tokio::fs. Upload both and explain which you''d
+      choose.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain how Send and Sync let the compiler prevent data races, using Rc vs Arc as the example.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Errors, macros and unsafe'
+  lessons:
+  - id: m4-l1
+    title: Error handling in real programs
+    file: lessons/m4-l1.md
+    minutes: 50
+  - id: m4-l2
+    title: Macros, unsafe code and calling C
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Write a small config loader: a library module with a thiserror enum (Io, Parse, Missing) and a main using anyhow
+      with .context(). Add a macro `require!(map, "key")` that returns the Missing error. Upload the code and the error report
+      for a missing key.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain when to use thiserror and when to use anyhow, and what makes an unsafe block acceptable.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Tooling and a project'
+  lessons:
+  - id: m5-l1
+    title: Testing, docs and the Cargo toolbox
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'Project: a multi-threaded job runner'
+    file: lessons/m5-l2.md
+    minutes: 75
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Do at least three of the project's 'Your turn' tasks, including tests and the rayon comparison. Upload your code,
+      `cargo test` and `cargo clippy` output, and a short timing comparison.
+  - id: m5-explain
+    type: explain
+    prompt: Explain how the job runner shuts down cleanly when the pool is dropped, step by step.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

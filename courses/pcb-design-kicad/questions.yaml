@@ -1,0 +1,225 @@
+q1:
+  text: What connects one copper layer to another?
+  show: 4
+  options:
+    a: A via
+    b: A plated hole
+    c: A pad
+    d: Silkscreen
+    e: Solder mask
+q2:
+  text: What is a footprint?
+  show: 4
+  options:
+    a: The pad pattern for a part on the board
+    b: The schematic drawing
+    c: The physical copper layout matching the real pins
+    d: The part's price
+    e: A 3D model only
+q3:
+  text: What does the solder mask do?
+  show: 4
+  options:
+    a: Prints labels
+    b: Stops solder spreading where it shouldn't
+    c: Cuts the board
+    d: Insulates copper
+    e: Conducts current
+q4:
+  text: Which comes first in the workflow?
+  show: 4
+  options:
+    a: The schematic
+    b: Ordering
+    c: Defining what connects to what
+    d: Routing tracks
+    e: Gerber files
+q5:
+  text: Which file types describe a board for the factory?
+  show: 4
+  options:
+    a: The .kicad_pro file only
+    b: Drill files
+    c: A PDF of the schematic
+    d: A BOM alone
+    e: Gerber files
+q6:
+  text: When are two crossing wires connected in KiCad?
+  show: 4
+  options:
+    a: When they meet at a pin end or junction
+    b: Only with a junction dot
+    c: Never
+    d: Always
+    e: When they're the same colour
+q7:
+  text: What do two net labels with the same name mean?
+  show: 4
+  options:
+    a: Two different nets
+    b: Nothing
+    c: A naming error
+    d: The same net
+    e: They are connected
+q8:
+  text: Why add a PWR_FLAG?
+  show: 4
+  options:
+    a: To tell the ERC where power enters
+    b: To make the board faster
+    c: It's decoration
+    d: To add a fuse
+    e: To fix 'power input pin not driven'
+q9:
+  text: Which footprint checks matter most?
+  show: 4
+  options:
+    a: Pin 1 position and numbering
+    b: Pad pitch and hole size
+    c: The symbol's font
+    d: Footprint colour
+    e: File name length
+q10:
+  text: 'A good hand-solderable SMD resistor size is:'
+  show: 4
+  options:
+    a: '01005'
+    b: '1206'
+    c: '0201'
+    d: '0402'
+    e: 0805
+q11:
+  text: What should you place first?
+  show: 4
+  options:
+    a: Parts whose position the case decides
+    b: Resistors
+    c: Vias
+    d: Silkscreen text
+    e: Fixed parts like connectors and mounting holes
+q12:
+  text: Where does a decoupling capacitor go?
+  show: 4
+  options:
+    a: Anywhere on the board
+    b: At the connector only
+    c: With a tiny loop to VCC and GND
+    d: Under the silkscreen
+    e: As close as possible to its chip's power pin
+q13:
+  text: Why use net classes?
+  show: 4
+  options:
+    a: To colour the board
+    b: To route power wider than signals automatically
+    c: To set track width per type of net
+    d: To skip the DRC
+    e: To order parts
+q14:
+  text: What do thermal reliefs do?
+  show: 4
+  options:
+    a: Cool the chip
+    b: Connect pads with spokes instead of solid copper
+    c: Let pads on a pour heat up for soldering
+    d: Remove copper
+    e: Block current
+q15:
+  text: Routing is stuck everywhere. Best fix?
+  show: 4
+  options:
+    a: Turn off the DRC
+    b: Delete the ground pour
+    c: Rotate and move parts
+    d: Make tracks thinner
+    e: Go back and improve placement
+q16:
+  text: 'A safe beginner track width and clearance:'
+  show: 4
+  options:
+    a: 0.05 mm
+    b: 0.2 to 0.25 mm
+    c: 5 mm
+    d: Above the factory's minimum
+    e: Exactly the factory minimum always
+q17:
+  text: What should you do before every DRC?
+  show: 4
+  options:
+    a: Refill zones (B)
+    b: Export Gerbers
+    c: Update the PCB from the schematic if it changed
+    d: Change the units
+    e: Delete the pour
+q18:
+  text: Why print the board 1:1 on paper?
+  show: 4
+  options:
+    a: To press real parts onto it and check footprints
+    b: To catch wrong sizes before ordering
+    c: It's required by KiCad
+    d: For the silkscreen colour
+    e: For the factory
+q19:
+  text: What do you upload for factory assembly?
+  show: 4
+  options:
+    a: The position (pick-and-place) file
+    b: The 3D model
+    c: A photo
+    d: Only the schematic
+    e: The BOM with part numbers
+q20:
+  text: 'A common first order is:'
+  show: 4
+  options:
+    a: 2 layers, 1.6 mm, 1 oz, HASL
+    b: 5 or 10 boards
+    c: 1000 boards
+    d: 0.4 mm thickness
+    e: 8 layers
+q21:
+  text: Which parts do you solder first?
+  show: 4
+  options:
+    a: Tall connectors
+    b: The lowest ones, like SMD resistors
+    c: Small flat parts before tall ones
+    d: Random order
+    e: The electrolytic capacitor
+q22:
+  text: 'A dull, grainy joint usually means:'
+  show: 4
+  options:
+    a: Add flux and reheat
+    b: The part is broken
+    c: Perfect joint
+    d: Not enough heat
+    e: Too much solder only
+q23:
+  text: 'Before first power, check:'
+  show: 4
+  options:
+    a: Polarity of LEDs, diodes and electrolytics
+    b: The box
+    c: Resistance between supply pins isn't near 0 Ω
+    d: The silkscreen colour
+    e: Nothing
+q24:
+  text: Why limit current on first power-up?
+  show: 4
+  options:
+    a: It's never useful
+    b: To make LEDs brighter
+    c: A fault gets warm instead of burning
+    d: To program the chip
+    e: To protect parts if something is shorted
+q25:
+  text: 'After testing, you should:'
+  show: 4
+  options:
+    a: Write notes and a v1.1 list
+    b: Never revise
+    c: Change all values
+    d: Record measurements
+    e: Delete the project

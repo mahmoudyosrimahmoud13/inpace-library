@@ -1,0 +1,164 @@
+id: electronics-basics
+title: 'Electronics basics: from zero to working circuits'
+version: 1
+language: en
+description: A hands-on start in electronics, all at safe low voltage. Voltage, current and resistance, Ohm's law and power,
+  series and parallel circuits and the voltage divider, LEDs, diodes and datasheets, capacitors and RC timing, power supplies
+  and regulators, transistors and MOSFETs as switches, buttons, pull-ups and sensors, the 555 timer and logic gates. Clear
+  colour-coded diagrams, real-part drawings, and every calculation checked in code. Ends with an automatic night light you
+  design and build. Course 1 of the electronics and PCB path. About 2 to 3 weeks, an hour a day.
+image: cover.jpg
+downloads:
+- title: Falstad circuit simulator (free, in the browser)
+  url: https://www.falstad.com/circuit/
+- title: 'Tinkercad Circuits: build and simulate breadboard circuits'
+  url: https://www.tinkercad.com/circuits
+modules:
+- id: m1
+  title: 'Module 1: The basics'
+  lessons:
+  - id: m1-l1
+    title: Voltage, current and resistance
+    file: lessons/m1-l1.md
+    minutes: 45
+  - id: m1-l2
+    title: Ohm's law and power
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build a 9 V battery + 1 kΩ resistor loop on a breadboard. Predict the current, then measure the current and the
+      battery voltage with a multimeter. Upload a photo and your predicted vs measured numbers.
+  - id: m1-explain
+    type: explain
+    prompt: Explain voltage, current and resistance with the water-pipe picture, and why a short circuit is dangerous even
+      at 9 V.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Circuits and LEDs'
+  lessons:
+  - id: m2-l1
+    title: Series, parallel and the voltage divider
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: LEDs, diodes and reading datasheets
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a divider from two resistors that turns 9 V into about 3 V and measure it. Then light two LEDs of different
+      colours in parallel from 5 V, each with its own calculated resistor. Upload photos, calculations and measurements.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why each LED in parallel needs its own resistor, and what 'absolute maximum' means in a datasheet.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Capacitors and power'
+  lessons:
+  - id: m3-l1
+    title: Capacitors and timing
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: 'Power supplies: from AC to steady DC'
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Charge a 100 µF capacitor through 10 kΩ from 5 V and record its voltage every second for 6 seconds. Plot your
+      numbers next to the calculated curve. Upload the table and plot.
+  - id: m3-explain
+    type: explain
+    prompt: Explain what a decoupling capacitor does and where it must be placed, and why a 7805 gets hot from 12 V.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Switching and sensing'
+  lessons:
+  - id: m4-l1
+    title: Transistors as switches
+    file: lessons/m4-l1.md
+    minutes: 50
+  - id: m4-l2
+    title: 'Inputs: buttons, pull-ups and sensors'
+    file: lessons/m4-l2.md
+    minutes: 50
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Switch a small 5 V motor or a group of LEDs from a 'control' wire using an NPN transistor or logic-level MOSFET
+      (with a flyback diode for the motor). Then wire a button with a pull-up and measure the voltage pressed and released.
+      Upload photos and readings.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why an input pin must never float, and how a pull-up resistor fixes it.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Chips and a project'
+  lessons:
+  - id: m5-l1
+    title: 'Integrated circuits: the 555 timer and logic gates'
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'Project: an automatic night light'
+    file: lessons/m5-l2.md
+    minutes: 70
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build the night light from the project lesson, tune the threshold with a potentiometer, and record the base voltage
+      in light and dark. Upload a photo, a short video of it switching, your schematic and measurements.
+  - id: m5-explain
+    type: explain
+    prompt: Describe how the numbers in the project lesson caught a wrong resistor value before building, and what you'd check
+      if the lamp never turns on.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

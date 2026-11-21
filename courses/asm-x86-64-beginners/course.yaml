@@ -1,0 +1,163 @@
+id: asm-x86-64-beginners
+title: x86-64 assembly for beginners (Linux, NASM)
+version: 1
+language: en
+description: 'See what your programs really are. Write x86-64 assembly on Linux with NASM: bits, hex and registers, system
+  calls, mov and arithmetic, data sizes, flags, jumps and loops, arrays and strings in memory, the stack, call and ret, the
+  System V calling convention, calling C from assembly and assembly from C, reading gcc output and Compiler Explorer, and
+  stepping through code with gdb. Ends with a number printer that needs no C library. Every example was assembled and run.
+  Course 2 of the systems programming path; the C course first helps. About 2 to 3 weeks, an hour a day.'
+image: cover.jpg
+downloads:
+- title: 'Compiler Explorer: see the assembly for C, C++ and Rust'
+  url: https://godbolt.org/
+- title: NASM manual
+  url: https://www.nasm.us/doc/
+- title: Linux x86-64 system call table
+  url: https://filippo.io/linux-syscall-table/
+modules:
+- id: m1
+  title: 'Module 1: The machine and your first programs'
+  lessons:
+  - id: m1-l1
+    title: How a CPU runs your program
+    file: lessons/m1-l1.md
+    minutes: 45
+  - id: m1-l2
+    title: 'Hello, world: data and system calls'
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write a program that prints your name and your city on two lines using write system calls, then exits with code
+      3. Upload the .asm file and a screenshot showing the output and `echo $?`.
+  - id: m1-explain
+    type: explain
+    prompt: Explain what the assembler and the linker each do, and why a program without the exit call crashes.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Data and arithmetic'
+  lessons:
+  - id: m2-l1
+    title: Moving data and doing math
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: Data sizes and registers inside registers
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a program that stores a price (dq) and a quantity, computes the total with a 14% tax using imul and idiv
+      (total * 114 / 100), and prints it with printf. Upload the .asm file and a screenshot.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why you must use `cqo` before `idiv`, and what `mov eax, 1` does to the top half of rax.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Control flow and memory'
+  lessons:
+  - id: m3-l1
+    title: 'Decisions and loops: flags and jumps'
+    file: lessons/m3-l1.md
+    minutes: 55
+  - id: m3-l2
+    title: Memory, arrays and strings
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write a program that counts how many numbers in a dq array are even and how many are odd, and prints both. Then
+      make it also count the spaces in a string. Upload the .asm file and a screenshot.
+  - id: m3-explain
+    type: explain
+    prompt: Explain how an if/else from C turns into cmp and jumps, and why characters are compared with jb/ja.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Functions and the stack'
+  lessons:
+  - id: m4-l1
+    title: The stack, call and ret
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: 'The calling convention: talking to C'
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write a function `power(base, exp)` in its own .asm file following the calling convention, and call it from a
+      small C program that prints 2^10 and 3^5. Upload both files and a screenshot.
+  - id: m4-explain
+    type: explain
+    prompt: Explain what `call` and `ret` do with the stack, and which registers a function must give back unchanged.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Real tools and a project'
+  lessons:
+  - id: m5-l1
+    title: Reading compiler output and using a debugger
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'Project: printing numbers with no C library'
+    file: lessons/m5-l2.md
+    minutes: 70
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Do at least two of the project's 'Your turn' tasks (times table, read input, or print_hex) using only system calls.
+      Upload the .asm file(s) and a screenshot of them running.
+  - id: m5-explain
+    type: explain
+    prompt: Describe how you'd find the instruction that makes an assembly program crash, using gdb.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

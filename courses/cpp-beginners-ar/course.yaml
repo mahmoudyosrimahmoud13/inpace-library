@@ -1,0 +1,193 @@
+id: cpp-beginners-ar
+title: ‏C++ للمبتدئين (C++20 الحديثة)
+version: 1
+language: ar
+description: 'تعلّم C++ الحديثة من البداية: الترجمة مع التحذيرات، والنصوص والإدخال، والقرارات والـ loops والـ functions، والـ
+  references وconst، و std::vector و std::map، ومكتبة الخوارزميات وlambdas، والـ classes والـ encapsulation، والـ operator
+  overloading، والـ destructors وRAII، و unique_ptr و shared_ptr، والـ inheritance وpolymorphism، والـ templates، والبناء
+  بـ CMake. وينتهي بمشروع مدير مكتبة. كل مثال تُرجم بـ -Wall -Wextra -Werror وشُغّل مع الـ sanitizers. الكورس الثالث في مسار
+  برمجة الأنظمة. حوالي 3 أسابيع، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: 'cppreference: reference C++ الذي يستخدمه الجميع (بالإنجليزية)'
+  url: https://en.cppreference.com/
+- title: 'Compiler Explorer: شغّل C++ في المتصفح'
+  url: https://godbolt.org/
+- title: إرشادات C++ الأساسية (بالإنجليزية)
+  url: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+modules:
+- id: m1
+  title: 'الوحدة 1: أول البرامج'
+  lessons:
+  - id: m1-l1
+    title: أول برنامج لك بلغة C++
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: الـ variables والنصوص والإدخال
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: اكتب برنامجًا يسأل عن اسم منتج (سطر كامل) وسعره وكميته، ثم يطبع سطر فاتورة فيه الإجمالي مع ضريبة 14%. ارفع ملف
+      .cpp ولقطة شاشة.
+  - id: m1-explain
+    type: explain
+    prompt: 'اشرح لماذا يكتب هذا الكورس std:: بدل using namespace std، والفرق بين cin >> وgetline.'
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: التحكم والـ functions والـ references'
+  lessons:
+  - id: m2-l1
+    title: القرارات والـ loops والـ functions
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: الـ references وconst
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: اكتب function `void apply_discount(std::vector<double>& prices, double percent)` تغيّر الأسعار في مكانها، وfunction
+      ترجع متوسط `const std::vector<double>&`. اختبر الاثنتين من main. ارفع الكود ولقطة شاشة.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح متى تمرر بالقيمة، ومتى بالـ reference، ومتى بreference const، مع مثال لكل واحدة.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: الـ standard library'
+  lessons:
+  - id: m3-l1
+    title: '‏std::vector: قوائم تكبر'
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: الخرائط (maps) ومكتبة الخوارزميات
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اقرأ الكلمات من سطر نص، وعدّ مرات ظهور كل كلمة بـ std::map، ثم اطبع أكثر 3 كلمات تكرارًا باستخدام vector من الأزواج
+      وstd::sort مع lambda. ارفع الكود ولقطة شاشة.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح ماذا تفعل قائمة [capture] في lambda، مع مثال يستخدم variable خارجيًا.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الـ classes'
+  lessons:
+  - id: m4-l1
+    title: 'الـ classes: أنواعك الخاصة'
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: 'المزيد عن الـ classes: العمليات وstatic وتقسيم الملفات'
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اكتب class `Rational` (كسر) فيه constructor يختصره، وعمليتا `+` و`*`، و`operator<<` تطبع مثل 3/4، و`operator<=>`.
+      قسّمه إلى rational.h وrational.cpp وmain.cpp. ارفع الملفات ولقطة شاشة.
+  - id: m4-explain
+    type: explain
+    prompt: 'اشرح الـ encapsulation باستخدام class Account: ماذا تحمي private، ولماذا member functions const مهمة.'
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: الموارد وpolymorphism'
+  lessons:
+  - id: m5-l1
+    title: الـ destructors وRAII والـ smart pointers
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: الـ inheritance وpolymorphism
+    file: lessons/m5-l2.md
+    minutes: 55
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: اصنع class مجردًا `Payment` فيه `virtual double fee() const = 0` و`virtual std::string name() const = 0`، ثم classes
+      Cash وCard (رسوم 2%) وWallet (رسوم 1.5 جنيه). خزّنها في std::vector<std::unique_ptr<Payment>> واطبع رسوم كل واحدة لمشتريات
+      بـ 500 جنيه. ارفع الكود ولقطة شاشة.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح RAII بكلماتك، ولماذا يمكن نقل std::unique_ptr لكن لا يمكن نسخه.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'الوحدة 6: الـ templates وCMake ومشروع'
+  lessons:
+  - id: m6-l1
+    title: الـ templates والبناء بـ CMake
+    file: lessons/m6-l1.md
+    minutes: 50
+  - id: m6-l2
+    title: 'مشروع: مدير مكتبة صغير'
+    file: lessons/m6-l2.md
+    minutes: 70
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: نفّذ اثنتين على الأقل من مهام 'دورك' في المشروع، منها تقسيمه إلى ملفات مع CMakeLists.txt. ارفع ملفاتك ولقطة شاشة
+      لـ `cmake --build build` والبرنامج يعمل.
+  - id: m6-explain
+    type: explain
+    prompt: صِف الطرق الثلاث في درس المشروع لتتبّع خطأ، ومتى تستخدم كل واحدة.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- data science
+- python
+- pandas
+- machine learning
+- statistics
+- beginner
+credit: Written for the inPace library. Every code example was run with pandas, matplotlib and scikit-learn; cafe_sales.csv
+  is made-up practice data.
+section: ai-ml

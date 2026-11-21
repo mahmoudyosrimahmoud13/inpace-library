@@ -1,0 +1,125 @@
+q1:
+  right:
+  - a
+  - f
+  why: النقل يحدث عندما يأخذها شيء.
+q2:
+  right:
+  - c
+  - e
+  why: تستطيع إعادة إسناده أو تدميره.
+q3:
+  right:
+  - c
+  - d
+  why: وإلا تنسخ vector لتبقى آمنة.
+q4:
+  right:
+  - c
+  - e
+  why: النصوص والـ vectors والـ smart pointers تقوم بالشغل.
+q5:
+  right:
+  - c
+  - d
+  why: أرجع local فقط.
+q6:
+  right:
+  - b
+  - f
+  why: يُتحقق منها أثناء الترجمة.
+q7:
+  right:
+  - b
+  - f
+  why: يُختار compile time.
+q8:
+  right:
+  - e
+  - f
+  why: تطبّق + على كل المعاملات.
+q9:
+  right:
+  - c
+  - f
+  why: الـ concept يذكر القاعدة.
+q10:
+  right:
+  - c
+  - e
+  why: لا مزيد من صفحات أخطاء الـ templates.
+q11:
+  right:
+  - a
+  - d
+  why: التغييرات اللاحقة لا تؤثر.
+q12:
+  right:
+  - d
+  - f
+  why: النسخ const في غير ذلك.
+q13:
+  right:
+  - c
+  - f
+  why: مثل جدول الأوامر.
+q14:
+  right:
+  - d
+  - e
+  why: لا تعمل إلا عند المرور عليها.
+q15:
+  right:
+  - a
+  - d
+  why: هذا projection.
+q16:
+  right:
+  - e
+  - f
+  why: استخدم expected عندما يهم السبب.
+q17:
+  right:
+  - a
+  - c
+  why: catch (const std::out_of_range& e).
+q18:
+  right:
+  - a
+  - f
+  why: std::thread يجب انتظاره يدويًا.
+q19:
+  right:
+  - c
+  - f
+  why: استخدم mutex أو std::atomic.
+q20:
+  right:
+  - b
+  - c
+  why: وتعيد رمي exceptions المهمة أيضًا.
+q21:
+  right:
+  - e
+  - f
+  why: 0 معناه نجاح.
+q22:
+  right:
+  - a
+  - e
+  why: اربط الاثنين بالمكتبة.
+q23:
+  right:
+  - b
+  - d
+  why: ctest --test-dir build.
+q24:
+  right:
+  - b
+  - c
+  why: pointer وطول.
+q25:
+  right:
+  - b
+  - e
+  why: استخدمه في بناء منفصل.

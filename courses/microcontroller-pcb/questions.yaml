@@ -1,0 +1,225 @@
+q1:
+  text: What is inside a microcontroller?
+  show: 4
+  options:
+    a: A hard disk
+    b: Many input/output pins
+    c: A screen
+    d: A processor with flash memory and RAM
+    e: A battery
+q2:
+  text: 'PB5 means:'
+  show: 4
+  options:
+    a: Port B, bit 5
+    b: Pin 5 of the chip
+    c: Power bus 5
+    d: Port 5, bit B
+    e: Arduino digital pin 13
+q3:
+  text: Which pins must always be connected?
+  show: 4
+  options:
+    a: None
+    b: VCC, both GNDs and AVCC
+    c: Only VCC
+    d: A 10 kΩ pull-up on RESET
+    e: Only the crystal
+q4:
+  text: 'Max current to design for on one I/O pin:'
+  show: 4
+  options:
+    a: About 20 mA
+    b: Unlimited
+    c: 200 mA
+    d: Well under the 40 mA absolute maximum
+    e: 1 A
+q5:
+  text: Which pins carry I²C?
+  show: 4
+  options:
+    a: 17 and 18
+    b: 2 and 3
+    c: 9 and 10
+    d: A4 and A5
+    e: 27 SDA and 28 SCL
+q6:
+  text: What does the crystal need?
+  show: 4
+  options:
+    a: A heatsink
+    b: To be placed very close to pins 9 and 10
+    c: A 10 kΩ resistor in series
+    d: Nothing
+    e: Two small capacitors (about 22 pF) to ground
+q7:
+  text: Which clock option needs no extra parts?
+  show: 4
+  options:
+    a: The internal 8 MHz oscillator
+    b: The internal RC oscillator, set by fuses
+    c: A 555
+    d: A 16 MHz crystal
+    e: A resonator
+q8:
+  text: Why a polyfuse on USB power?
+  show: 4
+  options:
+    a: To program the chip
+    b: It protects the computer's USB port
+    c: It limits current on a short and resets itself
+    d: To boost voltage
+    e: To filter noise only
+q9:
+  text: Why do USB-C boards need 5.1 kΩ on CC1 and CC2?
+  show: 4
+  options:
+    a: So a USB-C charger agrees to supply 5 V
+    b: They're optional decoration
+    c: Without them the board works on USB-A but not USB-C chargers
+    d: To set the clock
+    e: For the LED
+q10:
+  text: Which protects a DC jack input from reverse polarity?
+  show: 4
+  options:
+    a: A pull-up resistor
+    b: A P-channel MOSFET 'ideal diode'
+    c: A series Schottky diode
+    d: A crystal
+    e: A bigger capacitor
+q11:
+  text: Which signals does the ISP header carry?
+  show: 4
+  options:
+    a: RESET, VCC and GND
+    b: SDA and SCL
+    c: MOSI, MISO and SCK
+    d: TX and RX only
+    e: D+ and D−
+q12:
+  text: What does the bootloader do?
+  show: 4
+  options:
+    a: Lets you upload over USB without a programmer
+    b: Listens on serial after reset for a new program
+    c: Protects against shorts
+    d: Generates the clock
+    e: Powers the board
+q13:
+  text: How do TX and RX connect between the CH340 and the ATmega?
+  show: 4
+  options:
+    a: TX to TX
+    b: Both to GND
+    c: Through a crystal
+    d: TX to RX
+    e: RX to TX (crossed)
+q14:
+  text: What gives auto-reset when uploading?
+  show: 4
+  options:
+    a: The polyfuse
+    b: A 100 nF capacitor from DTR to RESET
+    c: A short low pulse on RESET when the port opens
+    d: A bigger crystal
+    e: A pull-down on TX
+q15:
+  text: A new chip blinks 16 times too slowly. Why?
+  show: 4
+  options:
+    a: The LED is broken
+    b: Fuses weren't set by burning the bootloader
+    c: USB is too slow
+    d: The CKDIV8 fuse is still set
+    e: The crystal is too fast
+q16:
+  text: Why draw the schematic in blocks?
+  show: 4
+  options:
+    a: Easier to read and check
+    b: It removes the ERC
+    c: KiCad requires it
+    d: It makes boards smaller
+    e: Blocks join with clear net labels
+q17:
+  text: What do SDA and SCL need on the board?
+  show: 4
+  options:
+    a: A crystal
+    b: Series capacitors
+    c: Nothing
+    d: Only one set of pull-ups on the bus
+    e: Pull-up resistors (often 4.7 kΩ)
+q18:
+  text: Where must the crystal go?
+  show: 4
+  options:
+    a: Within a few mm of pins 9 and 10
+    b: With no other signals running under it
+    c: Anywhere
+    d: Near the USB connector
+    e: On the far edge
+q19:
+  text: How should USB D+ and D− be routed?
+  show: 4
+  options:
+    a: With test points on each
+    b: Together as a short pair
+    c: Away from the crystal
+    d: As long as possible
+    e: On opposite sides of the board
+q20:
+  text: Why add test points?
+  show: 4
+  options:
+    a: To measure +5V, GND, RESET, TX and RX easily
+    b: To program the chip
+    c: To debug the board
+    d: Factories require them
+    e: For decoration
+q21:
+  text: What does a correct ISP signature prove?
+  show: 4
+  options:
+    a: Power, ground, reset and ISP wiring work
+    b: The LED works
+    c: The chip is alive and reachable
+    d: USB works
+    e: The firmware is correct
+q22:
+  text: What does burning the bootloader also test?
+  show: 4
+  options:
+    a: That the chip runs at 16 MHz afterwards
+    b: The clock, by setting crystal fuses
+    c: The I²C sensor
+    d: The LDR
+    e: The USB-C CC resistors
+q23:
+  text: Upload fails 'not in sync'. Likely causes?
+  show: 4
+  options:
+    a: Wrong LED colour
+    b: Missing DTR auto-reset capacitor
+    c: TX and RX swapped
+    d: Too much flux
+    e: The crystal is 16 MHz
+q24:
+  text: 'An I²C sensor isn''t found by the scanner. Check:'
+  show: 4
+  options:
+    a: Power to the sensor
+    b: The firmware's delay()
+    c: Wiring and pull-ups
+    d: The PWM pin
+    e: The silkscreen
+q25:
+  text: Why does the project firmware avoid delay()?
+  show: 4
+  options:
+    a: It needs interrupts
+    b: It times things with millis()
+    c: delay() is broken
+    d: So the button stays responsive
+    e: To save flash only

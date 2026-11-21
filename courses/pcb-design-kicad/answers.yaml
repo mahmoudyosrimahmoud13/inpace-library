@@ -1,0 +1,125 @@
+q1:
+  right:
+  - a
+  - b
+  why: Vias join layers.
+q2:
+  right:
+  - a
+  - c
+  why: Symbols are for schematics.
+q3:
+  right:
+  - b
+  - d
+  why: It's the coloured coating.
+q4:
+  right:
+  - a
+  - c
+  why: Schematic, footprints, layout, checks, files.
+q5:
+  right:
+  - b
+  - e
+  why: One Gerber per layer, plus drill.
+q6:
+  right:
+  - a
+  - b
+  why: Crossings without a dot aren't connected.
+q7:
+  right:
+  - d
+  - e
+  why: Labels replace long wires.
+q8:
+  right:
+  - a
+  - e
+  why: KiCad can't see the battery.
+q9:
+  right:
+  - a
+  - b
+  why: Compare with the datasheet drawing.
+q10:
+  right:
+  - b
+  - e
+  why: 0805 is comfortable with tweezers.
+q11:
+  right:
+  - a
+  - e
+  why: Then the main chip and its helpers.
+q12:
+  right:
+  - c
+  - e
+  why: Short loop.
+q13:
+  right:
+  - b
+  - c
+  why: e.g. 0.5 mm Power, 0.25 mm default.
+q14:
+  right:
+  - b
+  - c
+  why: Keep them on.
+q15:
+  right:
+  - c
+  - e
+  why: Routing problems are placement problems.
+q16:
+  right:
+  - b
+  - d
+  why: Leave margin.
+q17:
+  right:
+  - a
+  - c
+  why: Old pours hide errors.
+q18:
+  right:
+  - a
+  - b
+  why: Ten minutes saves two weeks.
+q19:
+  right:
+  - a
+  - e
+  why: Plus the Gerbers.
+q20:
+  right:
+  - a
+  - b
+  why: Cheap and fast.
+q21:
+  right:
+  - b
+  - c
+  why: The board stays flat.
+q22:
+  right:
+  - a
+  - d
+  why: Good joints are smooth and shiny.
+q23:
+  right:
+  - a
+  - c
+  why: Look, then measure.
+q24:
+  right:
+  - c
+  - e
+  why: 50 to 100 mA is typical.
+q25:
+  right:
+  - a
+  - d
+  why: Almost every board has a v2.

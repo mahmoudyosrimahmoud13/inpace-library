@@ -1,0 +1,125 @@
+q1:
+  right:
+  - d
+  - e
+  why: The move happens when something takes it.
+q2:
+  right:
+  - a
+  - c
+  why: You may reassign or destroy it.
+q3:
+  right:
+  - a
+  - d
+  why: Otherwise vector copies to stay safe.
+q4:
+  right:
+  - a
+  - e
+  why: Strings, vectors, smart pointers do the work.
+q5:
+  right:
+  - b
+  - d
+  why: Just return local.
+q6:
+  right:
+  - b
+  - d
+  why: Checked while compiling.
+q7:
+  right:
+  - b
+  - e
+  why: Picked at compile time.
+q8:
+  right:
+  - a
+  - e
+  why: It applies + across all arguments.
+q9:
+  right:
+  - c
+  - f
+  why: The concept states the rule.
+q10:
+  right:
+  - c
+  - d
+  why: No more pages of template errors.
+q11:
+  right:
+  - a
+  - c
+  why: Later changes don't affect it.
+q12:
+  right:
+  - c
+  - d
+  why: Copies are const otherwise.
+q13:
+  right:
+  - c
+  - f
+  why: e.g. a table of commands.
+q14:
+  right:
+  - b
+  - d
+  why: It does work only when iterated.
+q15:
+  right:
+  - d
+  - e
+  why: That's a projection.
+q16:
+  right:
+  - a
+  - f
+  why: Use expected when the reason matters.
+q17:
+  right:
+  - b
+  - e
+  why: catch (const std::out_of_range& e).
+q18:
+  right:
+  - d
+  - e
+  why: std::thread must be joined by hand.
+q19:
+  right:
+  - b
+  - e
+  why: Use a mutex or std::atomic.
+q20:
+  right:
+  - a
+  - b
+  why: It also rethrows the task's exceptions.
+q21:
+  right:
+  - b
+  - d
+  why: 0 means success.
+q22:
+  right:
+  - b
+  - d
+  why: Link both to the library.
+q23:
+  right:
+  - b
+  - c
+  why: ctest --test-dir build.
+q24:
+  right:
+  - a
+  - f
+  why: A pointer and a length.
+q25:
+  right:
+  - a
+  - b
+  why: Use it in a separate build.

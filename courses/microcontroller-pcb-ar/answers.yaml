@@ -1,0 +1,125 @@
+q1:
+  right:
+  - a
+  - d
+  why: كمبيوتر على chip واحد.
+q2:
+  right:
+  - a
+  - b
+  why: الـ Ports ‏B وC وD.
+q3:
+  right:
+  - b
+  - e
+  why: ‏AVCC أيضًا، حتى بدون analog.
+q4:
+  right:
+  - b
+  - c
+  why: استخدم transistor للأحمال الكبيرة.
+q5:
+  right:
+  - a
+  - d
+  why: ‏2/3 هما الـ UART.
+q6:
+  right:
+  - b
+  - d
+  why: الـ load capacitance من الـ datasheet الخاص به.
+q7:
+  right:
+  - a
+  - c
+  why: أقل دقة، وصفر أجزاء.
+q8:
+  right:
+  - a
+  - d
+  why: ‏PTC resettable fuse.
+q9:
+  right:
+  - a
+  - c
+  why: أشهر خطأ في USB-C.
+q10:
+  right:
+  - d
+  - e
+  why: الـ USB لا يمكن عكسه كهربائيًا.
+q11:
+  right:
+  - a
+  - b
+  why: الـ header القياسي 2×3.
+q12:
+  right:
+  - b
+  - d
+  why: يُحرق مرة بالـ ISP.
+q13:
+  right:
+  - c
+  - e
+  why: سمِّ الـ nets من وجهة نظر الـ MCU.
+q14:
+  right:
+  - a
+  - d
+  why: بدونه تضغط reset باليد.
+q15:
+  right:
+  - b
+  - d
+  why: احرق الـ bootloader لإصلاحه.
+q16:
+  right:
+  - b
+  - d
+  why: الكهرباء، وUSB-serial، والـ MCU، والـ ISP، والـ I/O.
+q17:
+  right:
+  - a
+  - e
+  why: خطوط الـ I²C من نوع open-drain.
+q18:
+  right:
+  - a
+  - c
+  why: أكثر جزء حساس.
+q19:
+  right:
+  - b
+  - d
+  why: الـ full speed متسامح، لكن حافظ على العادات الجيدة.
+q20:
+  right:
+  - b
+  - c
+  why: ستريد مكانًا للـ probe.
+q21:
+  right:
+  - b
+  - e
+  why: ‏0x1e950f للـ ATmega328P.
+q22:
+  right:
+  - a
+  - c
+  why: ثم ارفع Blink عبر USB.
+q23:
+  right:
+  - a
+  - d
+  why: وأيضًا board أو port خطأ.
+q24:
+  right:
+  - d
+  - e
+  why: الـ scanner يستبعد مشاكل الكود.
+q25:
+  right:
+  - a
+  - b
+  why: الأسلوب الطبيعي للبرامج الحقيقية.

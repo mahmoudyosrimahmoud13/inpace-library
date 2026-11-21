@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- rust
+- concurrency
+- async
+- tokio
+- systems programming
+- برمجة
+- advanced
+credit: كُتب لمكتبة inPace. كل مثال تُرجم بـ rustc أو cargo ‏(إصدار 2021) وشُغّل.
+section: programming-web

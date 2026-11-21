@@ -1,0 +1,194 @@
+id: cpp-beginners
+title: C++ for beginners (modern C++20)
+version: 1
+language: en
+description: 'Learn modern C++ from the start: compiling with warnings, strings and input, decisions, loops and functions,
+  references and const, std::vector and std::map, the algorithms library and lambdas, classes and encapsulation, operator
+  overloading, destructors and RAII, unique_ptr and shared_ptr, inheritance and polymorphism, templates, and building with
+  CMake. Ends with a library manager project. Every example was compiled with -Wall -Wextra -Werror and run with sanitizers.
+  Course 3 of the systems programming path. About 3 weeks, an hour a day.'
+image: cover.jpg
+downloads:
+- title: 'cppreference: the C++ reference everyone uses'
+  url: https://en.cppreference.com/
+- title: 'Compiler Explorer: run C++ in the browser'
+  url: https://godbolt.org/
+- title: C++ Core Guidelines
+  url: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+modules:
+- id: m1
+  title: 'Module 1: First programs'
+  lessons:
+  - id: m1-l1
+    title: Your first C++ program
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: Variables, strings and input
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Write a program that asks for a product name (a whole line), its price and a quantity, then prints a receipt line
+      with the total including 14% tax. Upload the .cpp file and a screenshot.
+  - id: m1-explain
+    type: explain
+    prompt: 'Explain why this course writes std:: instead of using namespace std, and the difference between cin >> and getline.'
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Control flow, functions and references'
+  lessons:
+  - id: m2-l1
+    title: Decisions, loops and functions
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: References and const
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Write a function `void apply_discount(std::vector<double>& prices, double percent)` that changes the prices in
+      place, and a function that returns the average of a `const std::vector<double>&`. Test both from main. Upload the code
+      and a screenshot.
+  - id: m2-explain
+    type: explain
+    prompt: Explain when to pass by value, by reference and by const reference, with one example each.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: The standard library'
+  lessons:
+  - id: m3-l1
+    title: 'std::vector: lists that grow'
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: Maps and the algorithms library
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Read words from a line of text, count how often each appears with a std::map, then print the 3 most common words
+      using a vector of pairs and std::sort with a lambda. Upload the code and a screenshot.
+  - id: m3-explain
+    type: explain
+    prompt: Explain what a lambda's [capture] list does, with an example that uses an outside variable.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Classes'
+  lessons:
+  - id: m4-l1
+    title: 'Classes: your own types'
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: 'More on classes: operators, static and splitting files'
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write a class `Rational` (a fraction) with a constructor that reduces it, `+` and `*` operators, `operator<<`
+      printing like 3/4, and `operator<=>`. Split it into rational.h, rational.cpp and main.cpp. Upload the files and a screenshot.
+  - id: m4-explain
+    type: explain
+    prompt: 'Explain encapsulation using the Account class: what private protects and why const member functions matter.'
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Resources and polymorphism'
+  lessons:
+  - id: m5-l1
+    title: Destructors, RAII and smart pointers
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: Inheritance and polymorphism
+    file: lessons/m5-l2.md
+    minutes: 55
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Make an abstract class `Payment` with `virtual double fee() const = 0` and `virtual std::string name() const =
+      0`, then Cash, Card (2% fee) and Wallet (1.5 EGP fee) classes. Store them in a std::vector<std::unique_ptr<Payment>>
+      and print each fee for a 500 EGP purchase. Upload the code and a screenshot.
+  - id: m5-explain
+    type: explain
+    prompt: Explain RAII in your own words, and why std::unique_ptr can be moved but not copied.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Module 6: Templates, CMake and a project'
+  lessons:
+  - id: m6-l1
+    title: Templates and building with CMake
+    file: lessons/m6-l1.md
+    minutes: 50
+  - id: m6-l2
+    title: 'Project: a small library manager'
+    file: lessons/m6-l2.md
+    minutes: 70
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Do at least two of the project's 'Your turn' tasks, including splitting it into files with a CMakeLists.txt. Upload
+      your files and a screenshot of `cmake --build build` and the program running.
+  - id: m6-explain
+    type: explain
+    prompt: Describe the three ways from the project lesson to track down a bug, and when you'd use each.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

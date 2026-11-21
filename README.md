@@ -18,7 +18,7 @@ The app checks every course against the library's list before adding it. Your pr
 
 ## Courses
 
-93 courses in 11 sections. Every course works offline; videos, where a course has them, are optional extras at the end of a lesson.
+135 courses in 12 sections. Every course works offline; videos, where a course has them, are optional extras at the end of a lesson.
 
 ### Linux, Cloud and DevOps · لينكس والسحابة وDevOps
 
@@ -50,6 +50,14 @@ The app checks every course against the library's list before adding it. Your pr
 
 | | Course | Lessons | Reading time |
 |---|---|---|---|
+| <img src="courses/asm-x86-64-beginners/files/cover.jpg" width="160" alt=""> | [x86-64 assembly for beginners (Linux, NASM)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/asm-x86-64-beginners.html) | 10 | about 9 h |
+| <img src="courses/asm-x86-64-beginners-ar/files/cover.jpg" width="160" alt=""> | [Assembly x86-64 للمبتدئين (Linux وNASM)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/asm-x86-64-beginners-ar.html) | 10 | حوالي 9 ساعة |
+| <img src="courses/c-programming-beginners/files/cover.jpg" width="160" alt=""> | [C programming from zero](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/c-programming-beginners.html) | 12 | about 10 h |
+| <img src="courses/c-programming-beginners-ar/files/cover.jpg" width="160" alt=""> | [البرمجة بلغة C من الصفر](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/c-programming-beginners-ar.html) | 12 | حوالي 10 ساعة |
+| <img src="courses/cpp-advanced/files/cover.jpg" width="160" alt=""> | [Advanced C++: modern techniques](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cpp-advanced.html) | 10 | about 9 h |
+| <img src="courses/cpp-advanced-ar/files/cover.jpg" width="160" alt=""> | [‏C++ المتقدمة: تقنيات حديثة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cpp-advanced-ar.html) | 10 | حوالي 9 ساعة |
+| <img src="courses/cpp-beginners/files/cover.jpg" width="160" alt=""> | [C++ for beginners (modern C++20)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cpp-beginners.html) | 12 | about 10 h |
+| <img src="courses/cpp-beginners-ar/files/cover.jpg" width="160" alt=""> | [‏C++ للمبتدئين (C++20 الحديثة)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cpp-beginners-ar.html) | 12 | حوالي 10 ساعة |
 | <img src="courses/csharp-dotnet-beginners/files/cover.jpg" width="160" alt=""> | [C# and .NET for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners.html) | 20 | about 7 h |
 | <img src="courses/csharp-dotnet-beginners-ar/files/cover.jpg" width="160" alt=""> | [C# و.NET للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/csharp-dotnet-beginners-ar.html) | 20 | حوالي 7 ساعة |
 | <img src="courses/fastapi/files/cover.jpg" width="160" alt=""> | [FastAPI: from first API to production](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fastapi.html) | 35 | about 12 h |
@@ -62,6 +70,10 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/python-full/files/cover.jpg" width="160" alt=""> | [Python: the full course](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full.html) | 29 | about 10 h |
 | <img src="courses/python-full-ar/files/cover.jpg" width="160" alt=""> | [بايثون: الدورة الكاملة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/python-full-ar.html) | 29 | حوالي 10 ساعة |
 | <img src="courses/react-typescript/files/cover.jpg" width="160" alt=""> | [React and TypeScript: Build Real Apps](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/react-typescript.html) | 14 | about 6 h |
+| <img src="courses/rust-advanced/files/cover.jpg" width="160" alt=""> | [Advanced Rust](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/rust-advanced.html) | 10 | about 9 h |
+| <img src="courses/rust-advanced-ar/files/cover.jpg" width="160" alt=""> | [‏Rust المتقدمة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/rust-advanced-ar.html) | 10 | حوالي 9 ساعة |
+| <img src="courses/rust-beginners/files/cover.jpg" width="160" alt=""> | [Rust for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/rust-beginners.html) | 12 | about 10 h |
+| <img src="courses/rust-beginners-ar/files/cover.jpg" width="160" alt=""> | [‏Rust للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/rust-beginners-ar.html) | 12 | حوالي 10 ساعة |
 | <img src="courses/system-design-beginners/files/cover.jpg" width="160" alt=""> | [System design for beginners: design a live streaming service](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/system-design-beginners.html) | 26 | about 7 h |
 
 ### Security · الأمن السيبراني
@@ -85,6 +97,8 @@ The app checks every course against the library's list before adding it. Your pr
 | | Course | Lessons | Reading time |
 |---|---|---|---|
 | <img src="courses/computer-vision/files/cover.jpg" width="160" alt=""> | [Computer vision: from pixels to modern models](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/computer-vision.html) | 10 | about 5 h |
+| <img src="courses/data-science-beginners/files/cover.jpg" width="160" alt=""> | [Data science for beginners](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-science-beginners.html) | 12 | about 11 h |
+| <img src="courses/data-science-beginners-ar/files/cover.jpg" width="160" alt=""> | [‏Data Science للمبتدئين](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-science-beginners-ar.html) | 12 | حوالي 11 ساعة |
 | <img src="courses/dl-1-neural-networks/files/cover.jpg" width="160" alt=""> | [Deep Learning 1: neural networks and deep learning, with PyTorch and Keras](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-1-neural-networks.html) | 24 | about 11 h |
 | <img src="courses/dl-2-improving-networks/files/cover.jpg" width="160" alt=""> | [Deep Learning 2: improving deep networks (regularization, optimizers, tuning)](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-2-improving-networks.html) | 21 | about 9 h |
 | <img src="courses/dl-3-ml-projects/files/cover.jpg" width="160" alt=""> | [Deep Learning 3: structuring machine learning projects](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/dl-3-ml-projects.html) | 14 | about 6 h |
@@ -113,6 +127,17 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/mml-2-decompositions-calculus/files/cover.jpg" width="160" alt=""> | [Maths for ML 2: matrix decompositions and vector calculus](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-2-decompositions-calculus.html) | 27 | about 12 h |
 | <img src="courses/mml-3-probability-optimization/files/cover.jpg" width="160" alt=""> | [Maths for ML 3: probability and optimization](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-3-probability-optimization.html) | 26 | about 13 h |
 | <img src="courses/mml-4-machine-learning-problems/files/cover.jpg" width="160" alt=""> | [Maths for ML 4: regression, PCA, mixtures and SVMs](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/mml-4-machine-learning-problems.html) | 28 | about 16 h |
+
+### Electronics and Hardware · الإلكترونيات والعتاد
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/electronics-basics/files/cover.jpg" width="160" alt=""> | [Electronics basics: from zero to working circuits](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/electronics-basics.html) | 10 | about 8 h |
+| <img src="courses/electronics-basics-ar/files/cover.jpg" width="160" alt=""> | [أساسيات الإلكترونيات: من الصفر إلى دوائر تعمل](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/electronics-basics-ar.html) | 10 | حوالي 8 ساعة |
+| <img src="courses/pcb-design-kicad/files/cover.jpg" width="160" alt=""> | [PCB design with KiCad: from breadboard to factory](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/pcb-design-kicad.html) | 10 | about 9 h |
+| <img src="courses/pcb-design-kicad-ar/files/cover.jpg" width="160" alt=""> | [تصميم الـ PCB بـ KiCad: من الـ breadboard إلى المصنع](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/pcb-design-kicad-ar.html) | 10 | حوالي 9 ساعة |
+| <img src="courses/microcontroller-pcb/files/cover.jpg" width="160" alt=""> | [Microcontroller PCB design: your own ATmega328P board](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/microcontroller-pcb.html) | 10 | about 9 h |
+| <img src="courses/microcontroller-pcb-ar/files/cover.jpg" width="160" alt=""> | [تصميم PCB لـ Microcontroller: الـ ATmega328P board الخاص بك](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/microcontroller-pcb-ar.html) | 10 | حوالي 9 ساعة |
 
 ### Careers and Interviews · الوظائف والمقابلات
 
@@ -195,7 +220,13 @@ The app checks every course against the library's list before adding it. Your pr
 |---|---|---|---|
 |  | [كورس Learn Git & GitHub - Elzero Web School](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/git-github.html) | 20 | حوالي 5 ساعة |
 
-**Deep learning frameworks, from zero to master** (new): *NumPy and pandas for ML*, *PyTorch* in three parts (from tensors
+**Systems programming, data science and electronics** (new, in English and Arabic): *C from zero*, *x86-64 assembly*,
+*C++* and *Advanced C++*, *Rust* and *Advanced Rust*, *Data science for beginners*, and an electronics path from
+*Electronics basics* through *PCB design in KiCad* to *your own microcontroller board*. Every code example was compiled
+and run before publishing, and the Arabic courses keep the English technical terms. Follow them with the new
+*Systems programming*, *Data scientist* and *Electronics and PCB* roadmaps.
+
+**Deep learning frameworks, from zero to master**: *NumPy and pandas for ML*, *PyTorch* in three parts (from tensors
 to distributed training, export and serving), *TensorFlow and Keras* in two parts, *Hugging Face and the deep learning
 ecosystem* (Trainer, LoRA, Lightning, Accelerate, JAX), and *Neural Networks: Zero to Hero*, a guided course on Andrej
 Karpathy's lectures with links to his repositories and datasets. Every code example in these courses was run and checked
@@ -236,10 +267,16 @@ leads into another comes before it, and the English and Arabic versions sit side
 | [مطوّر واجهات ويب](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/web-developer-ar.html) | 6 | Arabic |
 | [.NET developer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer.html) | 3 | English |
 | [مطوّر .NET](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/dotnet-developer-ar.html) | 3 | Arabic |
+| [Systems programming, from C to Rust](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/systems-programming.html) | 6 | English |
+| [برمجة الأنظمة، من C إلى Rust](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/systems-programming-ar.html) | 6 | Arabic |
 | [Flutter developer, ready for interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/flutter-developer.html) | 2 | English |
 | [DevOps basics with Docker and Kubernetes](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/docker-kubernetes.html) | 3 | English |
 | [Build inPace yourself](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/build-inpace.html) | 8 | English |
+| [Electronics and PCB design](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/electronics-pcb.html) | 3 | English |
+| [الإلكترونيات وتصميم الـ PCB](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/electronics-pcb-ar.html) | 3 | Arabic |
 | [Become a data analyst](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-analyst.html) | 5 | English |
+| [Become a data scientist](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-scientist.html) | 10 | English |
+| [كن عالم بيانات](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/data-scientist-ar.html) | 10 | Arabic |
 | [Get hired as an AI engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer.html) | 12 | English |
 | [التوظيف مهندس ذكاء اصطناعي](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/ai-engineer-ar.html) | 8 | Arabic |
 | [Maths for machine learning](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/maths-for-machine-learning.html) | 4 | English |

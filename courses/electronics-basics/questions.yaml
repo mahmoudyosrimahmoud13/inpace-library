@@ -1,0 +1,225 @@
+q1:
+  text: What does current need in order to flow?
+  show: 4
+  options:
+    a: Only a battery
+    b: A broken wire
+    c: A switch that is open
+    d: A complete path from + back to −
+    e: A closed loop
+q2:
+  text: 'Using Ohm''s law, 5 V across 1 kΩ gives:'
+  show: 4
+  options:
+    a: 0.005 A
+    b: 5 A
+    c: 5 mA
+    d: 0.5 mA
+    e: 200 mA
+q3:
+  text: How do you measure current with a multimeter?
+  show: 4
+  options:
+    a: Put the meter in the loop
+    b: Across the battery
+    c: With the power off
+    d: Set it to mA and move the red lead to the mA socket
+    e: On the Ω setting
+q4:
+  text: Which resistor is fine for 5 V and 0.025 W?
+  show: 4
+  options:
+    a: Any standard 0.25 W resistor
+    b: A 1/4 W resistor
+    c: 'None: it will burn'
+    d: A capacitor instead
+    e: Only a 5 W resistor
+q5:
+  text: 'Yellow, violet, red, gold means:'
+  show: 4
+  options:
+    a: 472 Ω
+    b: 4.7 kΩ
+    c: 4.7 MΩ
+    d: 4700 Ω ±5%
+    e: 47 Ω
+q6:
+  text: 'In a series circuit:'
+  show: 4
+  options:
+    a: The resistances add up
+    b: The current splits
+    c: The same current flows through every part
+    d: Resistance goes down
+    e: Every part gets the full voltage
+q7:
+  text: 'In a parallel circuit:'
+  show: 4
+  options:
+    a: Voltage is shared
+    b: Every branch gets the same voltage
+    c: The current is the same in each branch
+    d: Resistances simply add
+    e: The combined resistance is below the smallest
+q8:
+  text: 'A divider with R1 = R2 and 10 V in gives:'
+  show: 4
+  options:
+    a: 0 V
+    b: 5 V out
+    c: 2.5 V
+    d: Half the input
+    e: 10 V
+q9:
+  text: Why does an LED need a series resistor?
+  show: 4
+  options:
+    a: LEDs don't need one
+    b: To make it brighter
+    c: Without it the current rises until something is damaged
+    d: To limit its current
+    e: To change its colour
+q10:
+  text: Which leg of an LED is +?
+  show: 4
+  options:
+    a: The short leg
+    b: The cathode
+    c: The side opposite the flat edge
+    d: Either
+    e: The long leg (anode)
+q11:
+  text: 'The RC time constant τ = R × C tells you:'
+  show: 4
+  options:
+    a: How fast a capacitor charges through a resistor
+    b: The maximum current
+    c: About 63% charged after one τ
+    d: How much it costs
+    e: The capacitor's voltage rating
+q12:
+  text: Which capacitors are polarized?
+  show: 4
+  options:
+    a: Ceramic 100 nF
+    b: None
+    c: The ones with a − stripe
+    d: Electrolytic capacitors
+    e: All capacitors
+q13:
+  text: Where does a 100 nF decoupling capacitor go?
+  show: 4
+  options:
+    a: At the far end of the board
+    b: Between VCC and GND of each chip
+    c: Only on the battery
+    d: In series with the supply
+    e: Right next to the chip's power pin
+q14:
+  text: 'A linear regulator from 12 V to 5 V at 0.5 A makes about:'
+  show: 4
+  options:
+    a: (12 − 5) × 0.5 W
+    b: 3.5 W of heat
+    c: 0.5 W
+    d: None
+    e: 6 W
+q15:
+  text: When is a switching (buck) regulator better?
+  show: 4
+  options:
+    a: For tiny 1 mA loads only
+    b: Never
+    c: For battery-powered efficiency
+    d: When a large voltage drop would make a linear one hot
+    e: Only for AC
+q16:
+  text: Why use a transistor to drive a motor from a microcontroller pin?
+  show: 4
+  options:
+    a: Pins are AC
+    b: The pin can only supply about 20 mA
+    c: Transistors store energy
+    d: A small signal can switch a big current
+    e: To make the motor slower
+q17:
+  text: What must a motor or relay coil have across it?
+  show: 4
+  options:
+    a: A diode pointing toward +
+    b: A capacitor in series
+    c: A second motor
+    d: A flyback diode
+    e: Nothing
+q18:
+  text: Why does a MOSFET's gate get a pull-down resistor?
+  show: 4
+  options:
+    a: To make it faster
+    b: To change its colour
+    c: To keep it off while the pin floats at start-up
+    d: So the load doesn't twitch
+    e: To limit motor current
+q19:
+  text: 'With a pull-up and a button to ground, pressed reads:'
+  show: 4
+  options:
+    a: 5 V
+    b: A random value
+    c: LOW
+    d: HIGH
+    e: About 0 V
+q20:
+  text: How do you fix button bounce?
+  show: 4
+  options:
+    a: Nothing can fix it
+    b: Higher voltage
+    c: Ignore changes for about 20 to 50 ms in software
+    d: An RC filter across the button
+    e: A bigger button
+q21:
+  text: Where is pin 1 of a DIP chip?
+  show: 4
+  options:
+    a: At the top left with the notch up
+    b: Any pin
+    c: Always on the right
+    d: In the middle
+    e: Next to the notch or dot
+q22:
+  text: 'Every IC needs:'
+  show: 4
+  options:
+    a: A heatsink
+    b: A crystal
+    c: A 100 nF capacitor between VCC and GND close to it
+    d: Power and ground connected
+    e: Nothing extra
+q23:
+  text: What sets a 555 astable's blink rate?
+  show: 4
+  options:
+    a: f ≈ 1.44 / ((R1 + 2·R2) · C)
+    b: Only the supply voltage
+    c: The LED colour
+    d: Pin 1
+    e: R1, R2 and C
+q24:
+  text: 'An AND gate outputs 1 when:'
+  show: 4
+  options:
+    a: A = 1 and B = 1
+    b: The inputs differ
+    c: Either input is 1
+    d: Both inputs are 1
+    e: Both are 0
+q25:
+  text: In the night light, why did 47 kΩ fail?
+  show: 4
+  options:
+    a: The middle point was above 0.7 V in daylight
+    b: The battery was too weak
+    c: The LEDs burned
+    d: It worked fine
+    e: The lamp stayed on even in a bright room

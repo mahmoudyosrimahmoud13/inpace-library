@@ -1,0 +1,168 @@
+id: microcontroller-pcb
+title: 'Microcontroller PCB design: your own ATmega328P board'
+version: 1
+language: en
+description: Design, build and program your own microcontroller board around the ATmega328P (the Arduino Uno chip). Pins,
+  ports and the datasheet, the minimal circuit (power, decoupling, crystal, reset), USB-C power and protection, ISP, bootloaders
+  and USB-serial with auto-reset, Arduino and register-level programming, a full schematic in blocks, layout rules for microcontroller
+  boards, and staged bring-up and debugging. Ends with your own sensor board and its firmware. Course 3 of the electronics
+  and PCB path. About 3 weeks, an hour a day.
+image: cover.jpg
+downloads:
+- title: ATmega328P datasheet (Microchip)
+  url: https://www.microchip.com/en-us/product/ATmega328P
+- title: Arduino IDE
+  url: https://www.arduino.cc/en/software
+- title: Arduino Uno Rev3 reference design (schematic and files)
+  url: https://docs.arduino.cc/hardware/uno-rev3/
+modules:
+- id: m1
+  title: 'Module 1: The microcontroller'
+  lessons:
+  - id: m1-l1
+    title: What a microcontroller is
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: Pins, ports and the datasheet
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Download the ATmega328P datasheet. Find and screenshot: the 28-pin DIP pinout, the absolute maximum ratings table,
+      and the max frequency vs supply voltage graph. Then plan which pins you''d use for an LED you want to dim, a button,
+      a light sensor and an I²C sensor.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain what an Arduino Uno adds around the ATmega328P, and why designing your own board can be better.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: The minimal circuit and power'
+  lessons:
+  - id: m2-l1
+    title: The minimal circuit
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: Powering the board
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build the minimal circuit on a breadboard (ATmega328P with bootloader, 16 MHz crystal, 22 pF capacitors, reset
+      pull-up and button, decoupling, LED on pin 19) powered from a 5 V USB module. Upload a photo and your power budget table.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what each part of the minimal circuit is for, and what CC1/CC2 resistors do on USB-C.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Programming'
+  lessons:
+  - id: m3-l1
+    title: Getting programs onto the chip
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: Your first programs
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Program your breadboard ATmega: upload Blink through a USB-serial adapter (with the DTR auto-reset capacitor),
+      then a sketch that reads a button and an LDR and prints values to the Serial Monitor. Optionally build and upload the
+      register-level blink with avr-gcc. Upload code and screenshots.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain the difference between ISP and bootloader programming, and why every board should have an ISP header.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Designing the board'
+  lessons:
+  - id: m4-l1
+    title: The full board schematic
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: Layout rules for microcontroller boards
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Draw the full sensor-board schematic in blocks (power, USB-serial, MCU, ISP, I/O), pass the checklist and ERC,
+      assign footprints, then lay it out following the rules: decoupling and crystal close, solid ground, USB pair short,
+      labelled headers and test points. Upload the schematic PDF, layout and 3D screenshots.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain why the crystal and decoupling capacitors must be placed close to their pins, and what goes wrong if they
+      aren't.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Bring-up and project'
+  lessons:
+  - id: m5-l1
+    title: Bring-up and debugging
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'Project: your own sensor board'
+    file: lessons/m5-l2.md
+    minutes: 90
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build your sensor board (ordered, or on perfboard/breadboard if you can't order yet), bring it up in stages, burn
+      the bootloader, and run the project firmware. Upload photos, the avrdude signature output, Serial Monitor output and
+      your v1.1 list.
+  - id: m5-explain
+    type: explain
+    prompt: Describe how you'd find the cause if your board's upload fails with 'not in sync', step by step.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

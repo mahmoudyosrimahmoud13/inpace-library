@@ -1,0 +1,150 @@
+q1:
+  right:
+  - a
+  - e
+  why: أغلب الوقت يذهب في الحصول على البيانات وتنظيفها واستكشافها.
+q2:
+  right:
+  - b
+  - d
+  why: النتيجة تظهر تحت الـ cell.
+q3:
+  right:
+  - b
+  - d
+  why: matplotlib للرسم وscikit-learn للـ models.
+q4:
+  right:
+  - c
+  - d
+  why: list comprehension مع شرط.
+q5:
+  right:
+  - b
+  - d
+  why: لو لم يعمل من أعلى لأسفل فهو مكسور.
+q6:
+  right:
+  - b
+  - c
+  why: مثل (1464, 13).
+q7:
+  right:
+  - c
+  - e
+  why: شرط داخل الأقواس.
+q8:
+  right:
+  - b
+  - d
+  why: ثم تأكد أن الأرقام التعريفية فريدة.
+q9:
+  right:
+  - b
+  - c
+  why: .str تعطي دوال النصوص.
+q10:
+  right:
+  - a
+  - c
+  why: استكشف قبل أن تثق بالأرقام.
+q11:
+  right:
+  - b
+  - e
+  why: قسّم، وطبّق، واجمع.
+q12:
+  right:
+  - b
+  - e
+  why: استخدم how='left' للاحتفاظ بكل صفوف اليسار.
+q13:
+  right:
+  - b
+  - e
+  why: الخطوط للزمن.
+q14:
+  right:
+  - b
+  - e
+  why: اختر الرسم حسب السؤال.
+q15:
+  right:
+  - b
+  - c
+  why: سؤال واحد لكل رسم.
+q16:
+  right:
+  - a
+  - c
+  why: الوسيط لا تحرّكه القيم المتطرفة.
+q17:
+  right:
+  - b
+  - e
+  why: 68% في حدود واحد، و95% في حدود اثنين.
+q18:
+  right:
+  - c
+  - e
+  why: الـ correlation ليس سببية.
+q19:
+  right:
+  - b
+  - c
+  why: أعد سحب العينات مرات كثيرة.
+q20:
+  right:
+  - d
+  - e
+  why: العشوائية هي المفتاح.
+q21:
+  right:
+  - b
+  - e
+  why: لا تمتحن بأسئلة محفوظة.
+q22:
+  right:
+  - a
+  - c
+  why: قارن كل model به.
+q23:
+  right:
+  - a
+  - c
+  why: الأقل أفضل.
+q24:
+  right:
+  - d
+  - e
+  why: استخدم precision وrecall.
+q25:
+  right:
+  - a
+  - e
+  why: اختر حسب تكلفة كل خطأ.
+q26:
+  right:
+  - a
+  - b
+  why: التجهيز والـ model ككائن واحد.
+q27:
+  right:
+  - a
+  - e
+  why: اذكر المتوسط والانتشار.
+q28:
+  right:
+  - a
+  - b
+  why: 'اسأل: هل سأعرف هذا وقت التنبؤ؟'
+q29:
+  right:
+  - d
+  - e
+  why: مثل اختبار الربع الأخير.
+q30:
+  right:
+  - d
+  - e
+  why: يُقرأ في دقيقتين.

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)" font-family="JBM" font-weight="700" text-anchor="middle">
+<rect x="30" y="50" width="190" height="110" rx="18" fill="#1d3b66" stroke="#7fd3ff" stroke-width="2"/><text x="125" y="98" font-size="22" fill="#f3f7ff">a</text><text x="125" y="130" font-size="16" fill="#8fa7c8">now empty</text>
+<rect x="300" y="50" width="190" height="110" rx="18" fill="#ffd166"/><text x="395" y="98" font-size="22" fill="#10233f">b</text><text x="395" y="130" font-size="16" fill="#10233f">1M items</text>
+</g>
+<path d="M222 105 H292" stroke="#ffd166" stroke-width="4" stroke-dasharray="8 6"/><path d="M298 105 l-14 -9 v18 z" fill="#ffd166"/>
+<text x="260" y="200" text-anchor="middle" font-family="JBM" font-size="20" fill="#ffd166">b = std::move(a)</text>
+<g filter="url(#s)"><rect x="30" y="240" width="460" height="150" rx="20" fill="#0b1a30" stroke="#7fd3ff" stroke-width="2"/></g>
+<g font-family="JBM" font-size="20">
+<text x="55" y="285" fill="#7fd3ff">nums</text>
+<text x="75" y="320" fill="#f3f7ff">| views::filter(even)</text>
+<text x="75" y="355" fill="#f3f7ff">| views::transform(sq)</text>
+</g>
+<g font-family="JBM" font-size="17" font-weight="700" text-anchor="middle">
+<rect x="30" y="430" width="140" height="50" rx="25" fill="#ffd166"/><text x="100" y="461" fill="#10233f">concepts</text>
+<rect x="190" y="430" width="140" height="50" rx="25" fill="#fff"/><text x="260" y="461" fill="#10233f">jthread</text>
+<rect x="350" y="430" width="140" height="50" rx="25" fill="#fff"/><text x="420" y="461" fill="#10233f">expected</text>
+</g>
+</svg>

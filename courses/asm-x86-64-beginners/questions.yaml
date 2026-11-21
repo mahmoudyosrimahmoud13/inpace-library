@@ -1,0 +1,250 @@
+q1:
+  text: How many bits are in one byte?
+  show: 4
+  options:
+    a: Enough to store values 0 to 1000
+    b: '64'
+    c: '16'
+    d: Enough to store values 0 to 255
+    e: '8'
+    f: '4'
+q2:
+  text: What is 0x1F in decimal?
+  show: 4
+  options:
+    a: '16'
+    b: '21'
+    c: '0x31'
+    d: 0b11111 in binary
+    e: '31'
+    f: '15'
+q3:
+  text: Which register holds the system call number?
+  show: 4
+  options:
+    a: rdi
+    b: rbx
+    c: rip
+    d: rsp
+    e: The register that also gets the return value
+    f: rax
+q4:
+  text: What is the write system call's number on x86-64 Linux?
+  show: 4
+  options:
+    a: '4'
+    b: '1'
+    c: '60'
+    d: '0'
+    e: '0x3C'
+    f: The value set by mov rax, 1 before syscall
+q5:
+  text: 'In `len: equ $ - msg`, what does `$` mean?'
+  show: 4
+  options:
+    a: A dollar sign
+    b: The value of rax
+    c: The end of the program
+    d: The size of msg in bits
+    e: Where NASM is assembling right now
+    f: The current address
+q6:
+  text: What does `mov rax, [num]` do?
+  show: 4
+  options:
+    a: Copies a qword from memory at num into rax
+    b: Puts the address of num in rax
+    c: Loads the address of num, like lea
+    d: Stores rax at num
+    e: Nothing; it's an error
+    f: Loads the 8 bytes stored at address num
+q7:
+  text: After `idiv rcx`, where is the remainder?
+  show: 4
+  options:
+    a: rcx
+    b: In rdx, while the quotient goes to rax
+    c: rdx
+    d: rsi
+    e: rax
+    f: rbx
+q8:
+  text: Which is not allowed in one instruction?
+  show: 4
+  options:
+    a: mov [a], rax
+    b: add rax, [b]
+    c: mov rax, 5
+    d: mov [a], [b]
+    e: add [a], [b]
+    f: mov rax, [b]
+q9:
+  text: 'After `mov rax, -1` then `mov eax, 5`, rax is:'
+  show: 4
+  options:
+    a: '5'
+    b: '0xFFFFFFFF00000005'
+    c: '-1'
+    d: '-5'
+    e: '0x0000000000000005'
+    f: '0xFFFFFFFFFFFFFF05'
+q10:
+  text: 'To load an unsigned byte into rax, use:'
+  show: 4
+  options:
+    a: mov al, [x] alone
+    b: lea rax, [x]
+    c: mov rax, [x]
+    d: movzx eax, byte [x]
+    e: movsx rax, byte [x]
+    f: movzx rax, byte [x]
+q11:
+  text: What does `cmp rax, rbx` do?
+  show: 4
+  options:
+    a: Sets rax to 0 or 1
+    b: Computes rax - rbx, sets flags, keeps neither result
+    c: Copies rbx to rax
+    d: The same flags as sub rax, rbx, without storing the result
+    e: Sets rax to rax - rbx
+    f: Swaps them
+q12:
+  text: After cmp, which jump means 'greater' for signed numbers?
+  show: 4
+  options:
+    a: jb
+    b: jae
+    c: jnle
+    d: jg
+    e: jz
+    f: ja
+q13:
+  text: Which address picks item rcx of a qword array at rbx?
+  show: 4
+  options:
+    a: '[rbx + rcx*8]'
+    b: '[rbx + rcx]'
+    c: '[rbx + 8*rcx]'
+    d: '[rcx*8]'
+    e: '[rcx + rbx]'
+    f: '[rbx*8 + rcx]'
+q14:
+  text: How does a C string end?
+  show: 4
+  options:
+    a: With a 0 byte
+    b: With its length
+    c: With a newline
+    d: With the byte 0x00
+    e: With 0xFF
+    f: With a space
+q15:
+  text: '`test rax, rax` followed by `jz` jumps when:'
+  show: 4
+  options:
+    a: ZF is 1
+    b: rax is 0
+    c: rax is 1
+    d: always
+    e: The carry flag is set
+    f: rax is negative
+q16:
+  text: What does `call square` push onto the stack?
+  show: 4
+  options:
+    a: The value of rax
+    b: The address of square
+    c: The return address
+    d: Nothing
+    e: Where execution resumes after ret
+    f: The stack pointer rsp
+q17:
+  text: 'The first three integer arguments go in:'
+  show: 4
+  options:
+    a: rsp, rbp, rip
+    b: rdi, rsi, rdx
+    c: The stack only
+    d: rax, rbx, rcx
+    e: r8, r9, r10
+    f: The registers whose 32-bit parts are edi, esi, edx
+q18:
+  text: Which register must a function give back unchanged?
+  show: 4
+  options:
+    a: rax
+    b: r12
+    c: rdi
+    d: rcx
+    e: rbx
+    f: rsi
+q19:
+  text: 'Right before a call, rsp must be:'
+  show: 4
+  options:
+    a: An odd number
+    b: Zero
+    c: A multiple of 3
+    d: rsp % 16 == 0
+    e: Equal to rbp
+    f: A multiple of 16
+q20:
+  text: A function pushes rbx but forgets to pop it. What happens at ret?
+  show: 4
+  options:
+    a: Nothing
+    b: ret uses the pushed rbx value as the return address
+    c: The assembler refuses
+    d: The CPU pops rbx automatically
+    e: It jumps to a wrong address and crashes
+    f: rbx is lost but it's fine
+q21:
+  text: Which gcc option shows assembly with NASM-style operand order?
+  show: 4
+  options:
+    a: -g
+    b: -masm=intel
+    c: -O3
+    d: -no-pie
+    e: -Wall
+    f: -masm=intel, used together with -S
+q22:
+  text: In gdb, which command runs one instruction?
+  show: 4
+  options:
+    a: si
+    b: finish
+    c: stepi
+    d: next
+    e: run
+    f: continue
+q23:
+  text: '`x/4gx $rsp` shows:'
+  show: 4
+  options:
+    a: Four qwords at the top of the stack, in hex
+    b: The rsp register 4 times
+    c: 4 instructions
+    d: 4 eight-byte values at rsp in hex
+    e: 4 registers
+    f: Four characters
+q24:
+  text: Why does the number printer fill its buffer from the right?
+  show: 4
+  options:
+    a: It's faster
+    b: Division gives the digits last-first
+    c: No reason
+    d: Linux prints right to left
+    e: write needs the text reversed
+    f: x % 10 gives the last digit first
+q25:
+  text: Which digit character is d + 48?
+  show: 4
+  options:
+    a: d in hex
+    b: d as a hex digit
+    c: The letter d
+    d: A newline
+    e: The character '0' + d
+    f: The ASCII character for digit d

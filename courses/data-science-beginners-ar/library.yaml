@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- data science
+- python
+- pandas
+- machine learning
+- statistics
+- علم البيانات
+- beginner
+credit: كُتب لمكتبة inPace. كل مثال كود شُغّل بـ pandas وmatplotlib وscikit-learn؛ والملف cafe_sales.csv بيانات مخترعة للتدريب.
+section: ai-ml

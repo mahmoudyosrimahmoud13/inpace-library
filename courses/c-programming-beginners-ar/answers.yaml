@@ -1,0 +1,150 @@
+q1:
+  right:
+  - a
+  - b
+  why: main نقطة البداية.
+q2:
+  right:
+  - d
+  - e
+  why: إنها حرف السطر الجديد.
+q3:
+  right:
+  - b
+  - c
+  why: القسمة الصحيحة ترمي الجزء العشري.
+q4:
+  right:
+  - e
+  - f
+  why: scanf تحتاج %lf للـ double.
+q5:
+  right:
+  - d
+  - e
+  why: '& تعطي address الـ variable.'
+q6:
+  right:
+  - a
+  - c
+  why: = واحدة تخزّن قيمة.
+q7:
+  right:
+  - a
+  - e
+  why: هذا اسمه السقوط.
+q8:
+  right:
+  - a
+  - d
+  why: الصفر خطأ، وأي شيء آخر صح.
+q9:
+  right:
+  - a
+  - e
+  why: i تأخذ 0 و1 و2 و3 و4.
+q10:
+  right:
+  - a
+  - c
+  why: break تخرج؛ وcontinue تتخطى.
+q11:
+  right:
+  - b
+  - f
+  why: المعاملات تُنسخ.
+q12:
+  right:
+  - d
+  - f
+  why: الفهارس تبدأ من 0.
+q13:
+  right:
+  - b
+  - f
+  why: C لا تفحص الحدود.
+q14:
+  right:
+  - e
+  - f
+  why: == تقارن الـ addresses.
+q15:
+  right:
+  - a
+  - b
+  why: النصوص تنتهي بـ null.
+q16:
+  right:
+  - b
+  - d
+  why: '*p تقرأ القيمة في الـ address.'
+q17:
+  right:
+  - a
+  - d
+  why: الكتابة عبر p تغيّر x.
+q18:
+  right:
+  - a
+  - c
+  why: حساب الـ pointers يتحرك بعناصر كاملة.
+q19:
+  right:
+  - b
+  - f
+  why: الـ arrays تصبح pointers عند تمريرها.
+q20:
+  right:
+  - a
+  - f
+  why: تحقق من الـ pointers قبل استخدامها.
+q21:
+  right:
+  - b
+  - f
+  why: malloc تأخذ بايتات.
+q22:
+  right:
+  - a
+  - f
+  why: malloc ترجع NULL عند الفشل.
+q23:
+  right:
+  - a
+  - b
+  why: الذاكرة تبقى مستخدمة.
+q24:
+  right:
+  - a
+  - c
+  why: p->x معناها (*p).x.
+q25:
+  right:
+  - a
+  - e
+  why: typedef struct {...} Student;
+q26:
+  right:
+  - e
+  - f
+  why: w تمسح؛ وa تضيف.
+q27:
+  right:
+  - d
+  - f
+  why: '#ifndef / #define / #endif.'
+q28:
+  right:
+  - b
+  - e
+  why: اذكر كل ملفات .c.
+q29:
+  right:
+  - b
+  - d
+  why: المعاملات تبدأ من argv[1].
+q30:
+  right:
+  - a
+  - f
+  why: bt تعرض stack الاستدعاءات.

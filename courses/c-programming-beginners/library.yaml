@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- c
+- programming
+- systems programming
+- pointers
+- beginner
+credit: Written for the inPace library. Every code example was compiled with gcc (-Wall -Wextra -Werror) and run with AddressSanitizer.
+section: programming-web

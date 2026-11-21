@@ -1,0 +1,31 @@
+id: data-scientist-ar
+title: كن عالم بيانات
+description: من أول notebook حتى الرياضيات والنماذج وراء الـ machine learning، بالترتيب. ابدأ بعلم البيانات للمبتدئين بالعربية، ثم أكمل بالكورسات الإنجليزية لـ NumPy وpandas والرياضيات والخوارزميات.
+language: ar
+author: inPace
+official: true
+order: 33
+tags: [data science, machine learning, python, statistics, career, beginner, arabic]
+steps:
+  - course: python-basics-ar
+    note: فقط لو كانت Python جديدة عليك. كورس علم البيانات يعلّم ما يحتاجه منها، لكن قليلًا من التدريب قبله يساعد.
+    optional: true
+  - course: data-science-beginners-ar
+    note: ابدأ هنا. pandas والتنظيف والرسوم والإحصاء وأول نماذجك، وتنتهي بتقرير حقيقي.
+  - course: numpy-pandas-ml
+    note: بالإنجليزية. تعمّق في NumPy وpandas وابنِ workflow كاملًا للـ machine learning.
+  - course: mml-1-linear-algebra-geometry
+    note: بالإنجليزية. هنا تبدأ الرياضيات وراء النماذج. الـ vectors والـ matrices والإسقاطات.
+  - course: mml-2-decompositions-calculus
+    note: بالإنجليزية. الـ eigenvalues والـ SVD والـ gradients.
+  - course: mml-3-probability-optimization
+    note: بالإنجليزية. الاحتمالات وBayes وكيف تتعلم النماذج بالـ gradient descent.
+  - course: mml-4-machine-learning-problems
+    note: بالإنجليزية. الرياضيات في العمل. الـ regression والـ PCA والـ mixtures والـ SVMs.
+  - course: mls-1-supervised
+    note: بالإنجليزية. خوارزميات الـ supervised learning الكلاسيكية.
+  - course: mls-2-advanced-algorithms
+    note: بالإنجليزية. الـ neural networks وتقييم النموذج والـ decision trees.
+  - course: mls-3-unsupervised-rl
+    note: بالإنجليزية. الـ clustering والـ recommenders والـ reinforcement learning.
+    optional: true

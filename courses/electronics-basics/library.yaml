@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- electronics
+- circuits
+- arduino
+- hardware
+- beginner
+credit: Written for the inPace library. Circuit diagrams drawn for this course; every calculation was run in Python.
+section: electronics

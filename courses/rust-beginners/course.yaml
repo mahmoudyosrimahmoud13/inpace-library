@@ -1,0 +1,199 @@
+id: rust-beginners
+title: Rust for beginners
+version: 1
+language: en
+description: 'Learn Rust from zero: cargo and the compiler''s helpful errors, variables, types and input, if, loops and match,
+  functions and expressions, ownership, borrowing and slices (explained slowly), structs and methods, enums and Option, Vec,
+  String and HashMap with iterators, error handling with Result and ?, traits, generics, modules and built-in tests. Ends
+  with an expense tracker project. Every example was compiled with warnings as errors and run. Course 4 of the systems programming
+  path. About 3 weeks, an hour a day.'
+image: cover.jpg
+downloads:
+- title: The Rust Programming Language (the official free book)
+  url: https://doc.rust-lang.org/book/
+- title: 'Rust Playground: run Rust in the browser'
+  url: https://play.rust-lang.org/
+- title: 'Rustlings: small exercises'
+  url: https://github.com/rust-lang/rustlings
+modules:
+- id: m1
+  title: 'Module 1: First programs'
+  lessons:
+  - id: m1-l1
+    title: Your first Rust program
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: Variables, types and input
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Create a project with cargo that asks for a temperature in Celsius, converts it to Fahrenheit (F = C * 9/5 + 32)
+      and prints it with one decimal. Upload src/main.rs and a screenshot of `cargo run`.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why Rust variables can't change unless marked mut, and why `items / people` with two i32 values gives
+      a whole number.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Control flow and functions'
+  lessons:
+  - id: m2-l1
+    title: Decisions and loops
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: Functions and expressions
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Write `fn fizzbuzz(n: u32) -> String` using match on (n % 3, n % 5), and a function returning a tuple (min, max,
+      average) for a slice of f64. Call both from main. Upload the code and a screenshot.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between an expression and a statement in Rust, and why adding a semicolon to a function's
+      last line can cause an error.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Ownership and borrowing'
+  lessons:
+  - id: m3-l1
+    title: 'Ownership: Rust''s big idea'
+    file: lessons/m3-l1.md
+    minutes: 55
+  - id: m3-l2
+    title: Borrowing, references and slices
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Write `fn longest_word(text: &str) -> &str` and `fn capitalize_all(words: &mut Vec<String>)`. In main, show that
+      the original text is still usable after calling longest_word. Then write one line that doesn''t compile because of a
+      move, put it in a comment, and paste the compiler''s error message below it. Upload the code.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain the three ownership rules and the borrowing rule in your own words, and why `let s2 = s1;` makes s1 unusable
+      for a String but not for an i32.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Structs and enums'
+  lessons:
+  - id: m4-l1
+    title: Structs and methods
+    file: lessons/m4-l1.md
+    minutes: 50
+  - id: m4-l2
+    title: Enums, match and Option
+    file: lessons/m4-l2.md
+    minutes: 55
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Model a parking garage: a struct `Car` (plate, hours), an enum `Spot { Empty, Taken(Car), Reserved(String) }`,
+      and methods to park, leave (returning Option<Car>) and compute the fee. Print the state of 5 spots with match. Upload
+      the code and a screenshot.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain how Option replaces null, and why the compiler forces you to handle None.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Collections and errors'
+  lessons:
+  - id: m5-l1
+    title: Vec, String and HashMap
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: 'Errors: Result, ? and panic'
+    file: lessons/m5-l2.md
+    minutes: 50
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Read a short text from a file (fs::read_to_string, with ? and main returning Result), count word frequencies with
+      a HashMap, and print the 5 most common words sorted. Handle a missing file with a friendly message. Upload the code
+      and a screenshot.
+  - id: m5-explain
+    type: explain
+    prompt: Explain what the ? operator does, and when a panic is the right choice instead of returning a Result.
+    min_words: 50
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Module 6: Traits, modules and a project'
+  lessons:
+  - id: m6-l1
+    title: Traits, generics, modules and tests
+    file: lessons/m6-l1.md
+    minutes: 55
+  - id: m6-l2
+    title: 'Project: an expense tracker'
+    file: lessons/m6-l2.md
+    minutes: 70
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Do at least two of the project's 'Your turn' tasks, including tests for parse_command. Upload your src files and
+      a screenshot of `cargo test` passing and the program running.
+  - id: m6-explain
+    type: explain
+    prompt: Explain the difference between a generic function with a trait bound and a Vec<Box<dyn Trait>>, and when you'd
+      use each.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

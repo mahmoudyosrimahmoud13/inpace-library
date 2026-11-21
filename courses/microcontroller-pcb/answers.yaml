@@ -1,0 +1,125 @@
+q1:
+  right:
+  - b
+  - d
+  why: A computer on one chip.
+q2:
+  right:
+  - a
+  - e
+  why: Ports B, C, D.
+q3:
+  right:
+  - b
+  - d
+  why: AVCC too, even without analog.
+q4:
+  right:
+  - a
+  - d
+  why: Use a transistor for big loads.
+q5:
+  right:
+  - d
+  - e
+  why: 2/3 are the UART.
+q6:
+  right:
+  - b
+  - e
+  why: Load capacitance from its datasheet.
+q7:
+  right:
+  - a
+  - b
+  why: Less accurate, zero parts.
+q8:
+  right:
+  - b
+  - c
+  why: PTC resettable fuse.
+q9:
+  right:
+  - a
+  - c
+  why: The most common USB-C mistake.
+q10:
+  right:
+  - b
+  - c
+  why: USB can't be reversed electrically.
+q11:
+  right:
+  - a
+  - c
+  why: The standard 2×3 header.
+q12:
+  right:
+  - a
+  - b
+  why: Burned once with ISP.
+q13:
+  right:
+  - d
+  - e
+  why: Name nets from the MCU's view.
+q14:
+  right:
+  - b
+  - c
+  why: Without it you press reset by hand.
+q15:
+  right:
+  - b
+  - d
+  why: Burn the bootloader to fix it.
+q16:
+  right:
+  - a
+  - e
+  why: Power, USB-serial, MCU, ISP, I/O.
+q17:
+  right:
+  - d
+  - e
+  why: I²C lines are open-drain.
+q18:
+  right:
+  - a
+  - b
+  why: The most sensitive part.
+q19:
+  right:
+  - b
+  - c
+  why: Full speed is forgiving, but keep good habits.
+q20:
+  right:
+  - a
+  - c
+  why: You'll want probe access.
+q21:
+  right:
+  - a
+  - c
+  why: 0x1e950f for the ATmega328P.
+q22:
+  right:
+  - a
+  - b
+  why: Then upload Blink over USB.
+q23:
+  right:
+  - b
+  - c
+  why: Also the wrong board or port.
+q24:
+  right:
+  - a
+  - c
+  why: The scanner rules out code problems.
+q25:
+  right:
+  - b
+  - d
+  why: The normal style for real programs.

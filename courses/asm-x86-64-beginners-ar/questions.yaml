@@ -1,0 +1,250 @@
+q1:
+  text: كم بت في البايت الواحد؟
+  show: 4
+  options:
+    a: '8'
+    b: يكفي لتخزين القيم من 0 إلى 255
+    c: '64'
+    d: '16'
+    e: يكفي لتخزين القيم من 0 إلى 1000
+    f: '4'
+q2:
+  text: كم تساوي 0x1F بالعشري؟
+  show: 4
+  options:
+    a: '31'
+    b: 0b11111 بالـ binary
+    c: '16'
+    d: '21'
+    e: '15'
+    f: '0x31'
+q3:
+  text: أي register يحمل رقم system call؟
+  show: 4
+  options:
+    a: rip
+    b: rbx
+    c: الـ register الذي يستقبل أيضًا قيمة الإرجاع
+    d: rdi
+    e: rsp
+    f: rax
+q4:
+  text: ما رقم system call write في Linux x86-64؟
+  show: 4
+  options:
+    a: '4'
+    b: القيمة التي يضعها mov rax, 1 قبل syscall
+    c: '0x3C'
+    d: '0'
+    e: '1'
+    f: '60'
+q5:
+  text: 'في `len: equ $ - msg`، ماذا يعني `$`؟'
+  show: 4
+  options:
+    a: الـ address الحالي
+    b: نهاية البرنامج
+    c: علامة الدولار
+    d: المكان الذي يجمّع فيه NASM الآن
+    e: قيمة rax
+    f: حجم msg بالبت
+q6:
+  text: ماذا تفعل `mov rax, [num]`؟
+  show: 4
+  options:
+    a: يحمّل address الـ num مثل lea
+    b: تخزّن rax في num
+    c: تحمّل الـ 8 بايت المخزّنة في الـ address num
+    d: تضع address num في rax
+    e: لا شيء؛ إنها خطأ
+    f: ينسخ qword من الذاكرة عند num إلى rax
+q7:
+  text: بعد `idiv rcx`، أين الباقي؟
+  show: 4
+  options:
+    a: في rdx، بينما ناتج القسمة في rax
+    b: rbx
+    c: rax
+    d: rsi
+    e: rcx
+    f: rdx
+q8:
+  text: أيها غير مسموح في instruction واحدة؟
+  show: 4
+  options:
+    a: mov [a], [b]
+    b: add rax, [b]
+    c: mov rax, 5
+    d: add [a], [b]
+    e: mov [a], rax
+    f: mov rax, [b]
+q9:
+  text: 'بعد `mov rax, -1` ثم `mov eax, 5`، قيمة rax:'
+  show: 4
+  options:
+    a: '0x0000000000000005'
+    b: '5'
+    c: '0xFFFFFFFFFFFFFF05'
+    d: '-5'
+    e: '0xFFFFFFFF00000005'
+    f: '-1'
+q10:
+  text: 'لتحميل بايت بدون إشارة في rax، استخدم:'
+  show: 4
+  options:
+    a: movsx rax, byte [x]
+    b: movzx eax, byte [x]
+    c: mov al, [x] وحدها
+    d: movzx rax, byte [x]
+    e: mov rax, [x]
+    f: lea rax, [x]
+q11:
+  text: ماذا تفعل `cmp rax, rbx`؟
+  show: 4
+  options:
+    a: تجعل rax صفرًا أو واحدًا
+    b: تحسب rax - rbx وتضبط الـ flags ولا تحتفظ بالنتيجة
+    c: تضع rax - rbx في rax
+    d: نفس الـ flags التي تضبطها sub rax, rbx دون حفظ الناتج
+    e: تبدّلهما
+    f: تنسخ rbx إلى rax
+q12:
+  text: بعد cmp، أي jump تعني 'أكبر' للأرقام بإشارة؟
+  show: 4
+  options:
+    a: jae
+    b: ja
+    c: jg
+    d: jnle
+    e: jz
+    f: jb
+q13:
+  text: أي address يختار العنصر رقم rcx من array qword تبدأ عند rbx؟
+  show: 4
+  options:
+    a: '[rbx*8 + rcx]'
+    b: '[rbx + 8*rcx]'
+    c: '[rbx + rcx]'
+    d: '[rcx + rbx]'
+    e: '[rbx + rcx*8]'
+    f: '[rcx*8]'
+q14:
+  text: كيف ينتهي نص C؟
+  show: 4
+  options:
+    a: بطوله
+    b: بالبايت 0x00
+    c: بمسافة
+    d: ببايت قيمته 0
+    e: بسطر جديد
+    f: بـ 0xFF
+q15:
+  text: '`test rax, rax` ثم `jz` تقفز عندما:'
+  show: 4
+  options:
+    a: يكون rax واحدًا
+    b: دائمًا
+    c: يكون rax صفرًا
+    d: يكون rax سالبًا
+    e: الـ carry flag مضبوط
+    f: ZF تساوي 1
+q16:
+  text: ماذا تدفع `call square` على الـ stack؟
+  show: 4
+  options:
+    a: address square
+    b: قيمة rax
+    c: المكان الذي يكمل منه التنفيذ بعد ret
+    d: return address
+    e: لا شيء
+    f: الـ stack pointer rsp
+q17:
+  text: 'أول ثلاثة معاملات صحيحة تذهب في:'
+  show: 4
+  options:
+    a: rdi وrsi وrdx
+    b: rsp وrbp وrip
+    c: rax وrbx وrcx
+    d: الـ stack فقط
+    e: الـ registers التي أجزاؤها 32-bit هي edi وesi وedx
+    f: r8 وr9 وr10
+q18:
+  text: أي register يجب أن ترجعه الـ function بدون تغيير؟
+  show: 4
+  options:
+    a: r12
+    b: rcx
+    c: rdi
+    d: rsi
+    e: rbx
+    f: rax
+q19:
+  text: 'قبل أي call مباشرة، يجب أن يكون rsp:'
+  show: 4
+  options:
+    a: صفرًا
+    b: مساويًا لـ rbp
+    c: من مضاعفات 16
+    d: من مضاعفات 3
+    e: rsp % 16 == 0
+    f: رقم فردي
+q20:
+  text: function دفعت rbx ونسيت سحبه. ماذا يحدث عند ret؟
+  show: 4
+  options:
+    a: يضيع rbx ولا مشكلة
+    b: تقفز إلى address خطأ ويتوقف البرنامج
+    c: المعالج يعمل pop لـ rbx تلقائيًا
+    d: يرفض الـ assembler
+    e: ret تستخدم قيمة rbx المدفوعة كـ return address
+    f: لا شيء
+q21:
+  text: أي خيار في gcc يعرض كود التجميع بترتيب معاملات NASM؟
+  show: 4
+  options:
+    a: -masm=intel مع -S
+    b: -g
+    c: -Wall
+    d: -no-pie
+    e: -masm=intel
+    f: -O3
+q22:
+  text: في gdb، أي أمر ينفّذ instruction واحدة؟
+  show: 4
+  options:
+    a: si
+    b: continue
+    c: next
+    d: run
+    e: finish
+    f: stepi
+q23:
+  text: '`x/4gx $rsp` تعرض:'
+  show: 4
+  options:
+    a: 4 registers
+    b: 4 قيم كل واحدة 8 بايت عند rsp بالـ hex
+    c: أربع qwords في أعلى الـ stack بالـ hex
+    d: أربعة حروف
+    e: الـ register rsp أربع مرات
+    f: 4 instructions
+q24:
+  text: لماذا تملأ طابعة الأرقام مخزنها من اليمين؟
+  show: 4
+  options:
+    a: Linux يطبع من اليمين لليسار
+    b: القسمة تعطي الخانات من الأخيرة للأولى
+    c: x % 10 تعطي آخر رقم أولًا
+    d: write تحتاج النص معكوسًا
+    e: بلا سبب
+    f: لأنها أسرع
+q25:
+  text: ما الحرف الذي قيمته d + 48؟
+  show: 4
+  options:
+    a: الحرف d
+    b: d كرقم hex
+    c: سطر جديد
+    d: الحرف '0' + d
+    e: حرف ASCII للخانة d
+    f: d بالـ hex

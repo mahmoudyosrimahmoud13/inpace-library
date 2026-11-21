@@ -1,0 +1,300 @@
+q1:
+  text: Which flag turns on the C++20 version of the language?
+  show: 4
+  options:
+    a: -std=c++20
+    b: -Wall
+    c: -std=gnu++20 (with GNU extensions)
+    d: -c++20
+    e: -O2
+    f: -c20
+q2:
+  text: What does `int b{3.9};` do?
+  show: 4
+  options:
+    a: Sets b to 3
+    b: Sets b to 3.9
+    c: Sets b to 4
+    d: 'Fails to compile: narrowing'
+    e: A compile error because braces block narrowing
+    f: Rounds b silently
+q3:
+  text: '`std::cin >> name;` with input ''Nour Hassan'' gives:'
+  show: 4
+  options:
+    a: Nour Hassan
+    b: an empty string
+    c: Nour plus a space
+    d: Hassan
+    e: Nour
+    f: Hassan stays waiting in the input
+q4:
+  text: What does `find` return when the text isn't there?
+  show: 4
+  options:
+    a: nullptr
+    b: A value equal to static_cast<size_t>(-1)
+    c: std::string::npos
+    d: an exception
+    e: -1 as an int
+    f: '0'
+q5:
+  text: Which is the C++ way to convert on purpose?
+  show: 4
+  options:
+    a: reinterpret_cast<double>(x)
+    b: (double)x only
+    c: static_cast, which is easy to search for
+    d: static_cast<double>(x)
+    e: convert(x)
+    f: double x!
+q6:
+  text: What is `int& r = x;`?
+  show: 4
+  options:
+    a: A new int with x's value
+    b: A copy of x
+    c: Another name for x
+    d: An alias bound to x for its whole life
+    e: A pointer to x that can be null
+    f: An error
+q7:
+  text: How should a function take a big string it only reads?
+  show: 4
+  options:
+    a: std::string&
+    b: std::string
+    c: std::string&&
+    d: A const reference, to avoid a copy
+    e: std::string*
+    f: const std::string&
+q8:
+  text: 'Two functions named area with different parameters is called:'
+  show: 4
+  options:
+    a: An error
+    b: Allowed when the parameter lists differ
+    c: Name hiding
+    d: Overloading
+    e: Overriding
+    f: Templating
+q9:
+  text: Which line is an error?
+  show: 4
+  options:
+    a: int& r = x;
+    b: int& r = 5;
+    c: int z{};
+    d: const int y = 2;
+    e: int& r;
+    f: int x = 5;
+q10:
+  text: Why not return a reference to a local variable?
+  show: 4
+  options:
+    a: The compiler copies it twice
+    b: The variable is destroyed when the function ends
+    c: It's slower
+    d: The reference would dangle
+    e: References can't be returned
+    f: It copies too much
+q11:
+  text: Which adds an item to the end of a vector?
+  show: 4
+  options:
+    a: push_front
+    b: emplace_back
+    c: add
+    d: insert_end
+    e: append
+    f: push_back
+q12:
+  text: 'To change items inside a range-for loop, write:'
+  show: 4
+  options:
+    a: 'for (int& x : v)'
+    b: 'for (const int x : v)'
+    c: for (x in v)
+    d: 'for (int x : v)'
+    e: 'for (auto x : v)'
+    f: 'for (auto& x : v)'
+q13:
+  text: What does `m["cake"]` do if the key doesn't exist?
+  show: 4
+  options:
+    a: For int values, it starts at 0
+    b: Nothing
+    c: Throws an error
+    d: Creates it with a default value
+    e: Returns end()
+    f: Returns -1
+q14:
+  text: '`std::find` returns what when nothing matches?'
+  show: 4
+  options:
+    a: The last element
+    b: v.end()
+    c: '-1'
+    d: nullptr
+    e: The past-the-end iterator
+    f: v.begin()
+q15:
+  text: Which keeps equal items in their original order?
+  show: 4
+  options:
+    a: std::count
+    b: std::stable_sort
+    c: std::sort
+    d: std::ranges::stable_sort
+    e: std::ranges::sort
+    f: std::find
+q16:
+  text: Who can use a private member?
+  show: 4
+  options:
+    a: Any function in the same file
+    b: Only derived classes
+    c: Only the class's own functions
+    d: Friends of the class
+    e: Only main
+    f: Anyone
+q17:
+  text: What does `const` after a member function mean?
+  show: 4
+  options:
+    a: It returns a constant
+    b: It's static
+    c: It can be called on a const object
+    d: It can only be called once
+    e: It can't be called
+    f: It doesn't change the object
+q18:
+  text: 'The difference between struct and class is:'
+  show: 4
+  options:
+    a: 'Default inheritance: public vs private'
+    b: No difference at all
+    c: 'Default access: public vs private'
+    d: struct can't have functions
+    e: struct can't have constructors
+    f: class is faster
+q19:
+  text: What does `#pragma once` do?
+  show: 4
+  options:
+    a: It includes the header in every file
+    b: Runs code once
+    c: Makes a singleton
+    d: Compiles faster always
+    e: Stops a header being included twice
+    f: 'It does the job of #ifndef include guards'
+q20:
+  text: 'A static data member is:'
+  show: 4
+  options:
+    a: Created per object on the heap
+    b: Shared by all objects of the class
+    c: Copied into every object
+    d: One copy for the whole class
+    e: Private always
+    f: Constant
+q21:
+  text: When does a local object's destructor run?
+  show: 4
+  options:
+    a: When main ends only
+    b: When it goes out of scope
+    c: When its block ends
+    d: When you call delete
+    e: Never automatically
+    f: When the garbage collector runs
+q22:
+  text: Which creates a heap object with a single owner?
+  show: 4
+  options:
+    a: std::unique_ptr<T>(new T)
+    b: std::shared_ptr<T>
+    c: std::make_shared<T>()
+    d: std::make_unique<T>()
+    e: malloc
+    f: new T
+q23:
+  text: Why must a base class have a virtual destructor?
+  show: 4
+  options:
+    a: Otherwise deleting through a base pointer is undefined behaviour
+    b: For speed
+    c: To make it abstract
+    d: It doesn't need one
+    e: So deleting through a base pointer destroys the whole object
+    f: So the class can't be copied
+q24:
+  text: What does `override` do?
+  show: 4
+  options:
+    a: Hides the base class
+    b: Asks the compiler to check you're replacing a base function
+    c: Makes a function virtual
+    d: Makes the base function private
+    e: A signature mismatch becomes a compile error
+    f: Nothing
+q25:
+  text: 'Passing a derived object by value to a function taking the base type causes:'
+  show: 4
+  options:
+    a: Slicing
+    b: Losing the derived part of the object
+    c: Polymorphism
+    d: A memory leak
+    e: Deep copying
+    f: A compile error
+q26:
+  text: '`template <typename T>` means:'
+  show: 4
+  options:
+    a: The function is virtual
+    b: T is a macro
+    c: T is always int
+    d: T is a type filled in when the code is used
+    e: T is a variable
+    f: A placeholder type given or deduced at use
+q27:
+  text: Where do templates usually live?
+  show: 4
+  options:
+    a: Anywhere, split like classes
+    b: In precompiled .o files only
+    c: Only in .cpp files
+    d: Entirely in header files
+    e: In CMakeLists.txt
+    f: In headers, so the compiler sees the full code
+q28:
+  text: Which command sets up a CMake build folder?
+  show: 4
+  options:
+    a: cmake -S . -B build
+    b: cmake --run
+    c: make build
+    d: cmake build/run
+    e: cmake -B build (from the project folder)
+    f: g++ CMakeLists.txt
+q29:
+  text: Which flag catches memory errors at run time?
+  show: 4
+  options:
+    a: -g only
+    b: -O3
+    c: -std=c++20
+    d: -Wextra
+    e: AddressSanitizer
+    f: -fsanitize=address
+q30:
+  text: Why can a saved Book* become invalid after push_back?
+  show: 4
+  options:
+    a: Pointers expire after a second
+    b: Growing past capacity reallocates storage
+    c: It can't
+    d: The vector may move its items to new memory
+    e: push_back deletes all books
+    f: Book* is const

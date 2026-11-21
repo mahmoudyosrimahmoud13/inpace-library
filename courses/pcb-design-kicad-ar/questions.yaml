@@ -1,0 +1,225 @@
+q1:
+  text: ما الذي يوصل طبقة نحاس بأخرى؟
+  show: 4
+  options:
+    a: الـ silkscreen
+    b: pad
+    c: ثقب مطلي
+    d: via
+    e: الـ solder mask
+q2:
+  text: ما هو الـ footprint؟
+  show: 4
+  options:
+    a: التصميم النحاسي الفعلي المطابق للـ pins الحقيقية
+    b: رسم الـ schematic
+    c: 3D model فقط
+    d: سعر الجزء
+    e: نمط الـ pads لجزء على الـ board
+q3:
+  text: ماذا يفعل الـ solder mask؟
+  show: 4
+  options:
+    a: يطبع التسميات
+    b: يوصل الـ current
+    c: يقطع الـ board
+    d: يعزل النحاس
+    e: يمنع انتشار اللحام حيث لا يجب
+q4:
+  text: ما الذي يأتي أولًا في خطوات العمل؟
+  show: 4
+  options:
+    a: تحديد ما المتصل بماذا
+    b: الطلب
+    c: الـ schematic
+    d: توصيل الـ tracks
+    e: ملفات Gerber
+q5:
+  text: أي أنواع الملفات تصف الـ board للمصنع؟
+  show: 4
+  options:
+    a: ملف .kicad_pro فقط
+    b: ملفات Drill
+    c: ملفات Gerber
+    d: BOM وحده
+    e: PDF للـ schematic
+q6:
+  text: متى يكون سلكان متقاطعان متصلين في KiCad؟
+  show: 4
+  options:
+    a: أبدًا
+    b: عندما يكونان بنفس اللون
+    c: فقط مع نقطة junction
+    d: عندما يلتقيان عند طرف pin أو junction
+    e: دائمًا
+q7:
+  text: ماذا يعني net labelان بنفس الاسم؟
+  show: 4
+  options:
+    a: نفس الـ net
+    b: لا شيء
+    c: netان مختلفان
+    d: خطأ في التسمية
+    e: أنهما متصلان
+q8:
+  text: لماذا تضيف PWR_FLAG؟
+  show: 4
+  options:
+    a: للزينة
+    b: ليصبح الـ board أسرع
+    c: لإصلاح 'power input pin not driven'
+    d: لتخبر الـ ERC من أين تدخل الكهرباء
+    e: لإضافة fuse
+q9:
+  text: أي فحوص الـ footprint هي الأهم؟
+  show: 4
+  options:
+    a: الـ pitch بين الـ pads وحجم الثقب
+    b: لون الـ footprint
+    c: طول اسم الملف
+    d: خط الـ symbol
+    e: مكان الـ pin رقم 1 والترقيم
+q10:
+  text: 'مقاس resistor ‏SMD جيد للحام باليد:'
+  show: 4
+  options:
+    a: '1206'
+    b: '0402'
+    c: 0805
+    d: '01005'
+    e: '0201'
+q11:
+  text: ماذا تضع أولًا؟
+  show: 4
+  options:
+    a: الأجزاء الثابتة مثل الـ connectors وثقوب التثبيت
+    b: الأجزاء التي تحدد العلبة أماكنها
+    c: الـ vias
+    d: كتابة الـ silkscreen
+    e: الـ resistors
+q12:
+  text: أين يوضع الـ decoupling capacitor؟
+  show: 4
+  options:
+    a: بحلقة صغيرة جدًا إلى VCC وGND
+    b: عند الـ connector فقط
+    c: تحت الـ silkscreen
+    d: أقرب ما يمكن إلى pin الكهرباء للـ chip
+    e: في أي مكان على الـ board
+q13:
+  text: لماذا تستخدم net classes؟
+  show: 4
+  options:
+    a: لطلب الأجزاء
+    b: لتوصيل الكهرباء بعرض أكبر من الإشارات تلقائيًا
+    c: لضبط عرض الـ track لكل نوع net
+    d: لتخطي الـ DRC
+    e: لتلوين الـ board
+q14:
+  text: ماذا تفعل الـ thermal reliefs؟
+  show: 4
+  options:
+    a: تزيل النحاس
+    b: تسمح للـ pads على الـ pour بالسخونة للحام
+    c: توصل الـ pads بأذرع بدل نحاس كامل
+    d: تمنع الـ current
+    e: تبرّد الـ chip
+q15:
+  text: التوصيل متعثر في كل مكان. أفضل حل؟
+  show: 4
+  options:
+    a: ارجع وحسّن وضع الأجزاء
+    b: اجعل الـ tracks أرفع
+    c: احذف الـ ground pour
+    d: أطفئ الـ DRC
+    e: دوّر الأجزاء وانقلها
+q16:
+  text: 'عرض track وclearance آمنان للمبتدئ:'
+  show: 4
+  options:
+    a: الحد الأدنى للمصنع بالضبط دائمًا
+    b: من 0.2 إلى 0.25 mm
+    c: 0.05 mm
+    d: أعلى من الحد الأدنى للمصنع
+    e: 5 mm
+q17:
+  text: ماذا يجب أن تفعل قبل كل DRC؟
+  show: 4
+  options:
+    a: حدّث الـ PCB من الـ schematic لو تغيّر
+    b: احذف الـ pour
+    c: غيّر الوحدات
+    d: أعد ملء الـ zones ‏(B)
+    e: صدّر Gerbers
+q18:
+  text: لماذا تطبع الـ board ‏1:1 على ورق؟
+  show: 4
+  options:
+    a: للون الـ silkscreen
+    b: KiCad يتطلب ذلك
+    c: لتضغط الأجزاء الحقيقية عليه وتفحص الـ footprints
+    d: لتكتشف المقاسات الخطأ قبل الطلب
+    e: للمصنع
+q19:
+  text: ماذا ترفع لتجميع المصنع؟
+  show: 4
+  options:
+    a: الـ 3D model
+    b: صورة
+    c: الـ BOM بأرقام الأجزاء
+    d: الـ schematic فقط
+    e: الـ position ‏(pick-and-place) file
+q20:
+  text: 'أول طلب شائع:'
+  show: 4
+  options:
+    a: 1000 board
+    b: 8 طبقات
+    c: 5 أو 10 boards
+    d: سمك 0.4 mm
+    e: طبقتان، و1.6 mm، و1 oz، وHASL
+q21:
+  text: أي الأجزاء تلحم أولًا؟
+  show: 4
+  options:
+    a: ترتيب عشوائي
+    b: الـ connectors الطويلة
+    c: الأجزاء الصغيرة المسطحة قبل الطويلة
+    d: الأقل ارتفاعًا، مثل resistors الـ SMD
+    e: الـ electrolytic capacitor
+q22:
+  text: 'الوصلة الباهتة المحببة غالبًا معناها:'
+  show: 4
+  options:
+    a: وصلة مثالية
+    b: حرارة غير كافية
+    c: الجزء تالف
+    d: لحام زائد فقط
+    e: أضف flux وأعد التسخين
+q23:
+  text: 'قبل أول تشغيل، افحص:'
+  show: 4
+  options:
+    a: لا شيء
+    b: الـ resistance بين pins المصدر ليست قرب 0 Ω
+    c: لون الـ silkscreen
+    d: العلبة
+    e: polarity الـ LEDs والـ diodes والـ electrolytics
+q24:
+  text: لماذا تحدّ الـ current عند أول تشغيل؟
+  show: 4
+  options:
+    a: لبرمجة الـ chip
+    b: لحماية الأجزاء لو كان هناك short
+    c: لا فائدة أبدًا
+    d: لتصبح الـ LEDs أسطع
+    e: العطل يسخن بدل أن يحترق
+q25:
+  text: 'بعد الاختبار، يجب أن:'
+  show: 4
+  options:
+    a: لا تراجع أبدًا
+    b: تكتب ملاحظات وقائمة v1.1
+    c: تحذف الـ project
+    d: تغيّر كل القيم
+    e: تسجّل القياسات

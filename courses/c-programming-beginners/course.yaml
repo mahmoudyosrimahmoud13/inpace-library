@@ -1,0 +1,192 @@
+id: c-programming-beginners
+title: C programming from zero
+version: 1
+language: en
+description: 'Learn C from scratch, the language under Linux, Python and most of the software you use: compiling and running,
+  variables and types, decisions and loops, functions, arrays and strings, pointers (explained slowly, with pictures), dynamic
+  memory with malloc and free, structs, files, multi-file programs and make, and debugging with sanitizers and gdb. Ends with
+  a to-do manager project. Every code example was compiled and run. Course 1 of the systems programming path. About 3 weeks,
+  an hour a day.'
+image: cover.jpg
+downloads:
+- title: 'Compiler Explorer: write and run C in the browser'
+  url: https://godbolt.org/
+- title: 'Exercism C track: free practice exercises'
+  url: https://exercism.org/tracks/c
+modules:
+- id: m1
+  title: 'Module 1: First programs'
+  lessons:
+  - id: m1-l1
+    title: Your first C program
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: Variables, types and input
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install a C compiler (or use an online one), then write a program that asks for your name and birth year and prints
+      how old you'll be this year. Upload the .c file and a screenshot of it running.
+  - id: m1-explain
+    type: explain
+    prompt: Explain in your own words what a compiler does, and why 7 / 2 gives 3 in C.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Decisions and loops'
+  lessons:
+  - id: m2-l1
+    title: 'Making decisions: if, else and switch'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: 'Loops: while and for'
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Write a number-guessing game: the program has a secret number between 1 and 100 and keeps asking until you guess
+      it, saying ''too high'' or ''too low'' each time and counting your tries. Upload the code and a screenshot.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between = and == in C and the bug that mixing them causes.
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Functions, arrays and strings'
+  lessons:
+  - id: m3-l1
+    title: Functions
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: Arrays and strings
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Write a program with at least three functions that reads 5 marks into an array and prints the average, the highest
+      and the lowest mark. Upload the code and a screenshot.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why changing a parameter inside a function doesn't change the variable you passed, and how a C string
+      knows where it ends.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Pointers'
+  lessons:
+  - id: m4-l1
+    title: 'Pointers: addresses in memory'
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: Pointers and arrays
+    file: lessons/m4-l2.md
+    minutes: 50
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Write a function void sortThree(int *a, int *b, int *c) that puts three variables in order, smallest first, and
+      a function that counts the vowels in a string by walking it with a pointer. Upload the code and a screenshot.
+  - id: m4-explain
+    type: explain
+    prompt: Explain &x, int *p and *p in your own words, with a small example.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Memory and structs'
+  lessons:
+  - id: m5-l1
+    title: 'Dynamic memory: malloc and free'
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: 'Structs: your own data types'
+    file: lessons/m5-l2.md
+    minutes: 50
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Write a program that reads how many products the user has, allocates an array of structs (name, price, quantity)
+      with malloc, reads them, prints the total stock value, and frees the memory. Run it with -fsanitize=address and upload
+      the code and a screenshot showing no errors.
+  - id: m5-explain
+    type: explain
+    prompt: Name the four classic memory bugs and explain how AddressSanitizer helps.
+    min_words: 50
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Module 6: Files, bigger programs and a project'
+  lessons:
+  - id: m6-l1
+    title: Files and bigger programs
+    file: lessons/m6-l1.md
+    minutes: 50
+  - id: m6-l2
+    title: 'Project and debugging: a small to-do manager'
+    file: lessons/m6-l2.md
+    minutes: 70
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Extend the to-do manager with an interactive menu (add, done, list, quit) that loads tasks at start and saves
+      them when you quit. Split it into main.c, tasks.c and tasks.h, and add a Makefile. Upload the files and a screenshot.
+  - id: m6-explain
+    type: explain
+    prompt: Describe how you would track down a crash in a C program, step by step, with the tools from this module.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

@@ -1,0 +1,300 @@
+q1:
+  text: من أين يبدأ تشغيل كل برنامج C؟
+  show: 4
+  options:
+    a: main هي المكان الذي يسلّم فيه نظام التشغيل التحكم لكودك
+    b: من الـ function main
+    c: 'من #include'
+    d: من أول سطر في الملف
+    e: من أعلى أول header file
+    f: من printf
+q2:
+  text: ماذا تفعل \n داخل printf؟
+  show: 4
+  options:
+    a: تطبع الحرف n
+    b: تنهي البرنامج
+    c: تضيف مسافة tab
+    d: هي escape sequence لحرف السطر الجديد
+    e: تبدأ سطرًا جديدًا
+    f: تمسح الشاشة
+q3:
+  text: 'في C، 7 / 2 (والاثنان int) يساوي:'
+  show: 4
+  options:
+    a: C تقرّب للرقم الزوجي الأقرب
+    b: '3'
+    c: الـ integer division تحذف الجزء .5
+    d: '4'
+    e: '3.5'
+    f: '2'
+q4:
+  text: أي رمز يقرأ double بـ scanf؟
+  show: 4
+  options:
+    a: '%u'
+    b: '%s'
+    c: '%c'
+    d: '%d'
+    e: '%lf، والحرف l يعني long'
+    f: '%lf'
+q5:
+  text: لماذا تحتاج scanf إلى &age؟
+  show: 4
+  options:
+    a: لتطبع age
+    b: مجرد زينة اختيارية
+    c: '& تحوّل age إلى نص'
+    d: تحتاج الـ address لتخزّن القيمة
+    e: '& تعطي scanf مكان الذاكرة الذي تكتب فيه'
+    f: لتكبّر age
+q6:
+  text: أي عملية تختبر التساوي؟
+  show: 4
+  options:
+    a: a == b تعطي 1 عند التساوي و0 غير ذلك
+    b: :=
+    c: ==
+    d: '!='
+    e: ===
+    f: '='
+q7:
+  text: ماذا يحدث في حالة switch بدون break؟
+  show: 4
+  options:
+    a: التنفيذ يكمل (fall through) إلى الـ case التالية
+    b: الـ switch تبدأ من أولها من جديد
+    c: تتكرر
+    d: يتوقف البرنامج
+    e: تُنفّذ الحالات التالية أيضًا
+    f: لا شيء
+q8:
+  text: في C، أي قيمة تُعتبر خطأ (false)؟
+  show: 4
+  options:
+    a: '0'
+    b: '-1'
+    c: أي رقم سالب
+    d: NULL pointer مستخدم كشرط
+    e: '2'
+    f: '1'
+q9:
+  text: كم مرة تعمل for (int i = 0; i < 5; i++)؟
+  show: 4
+  options:
+    a: مرة لكل قيمة من i من 0 إلى 4
+    b: مرة لكل قيمة من i من 0 إلى 5
+    c: '4'
+    d: للأبد
+    e: '5'
+    f: '6'
+q10:
+  text: ماذا تفعل continue في الـ loop؟
+  show: 4
+  options:
+    a: في for loop تُنفّذ خطوة التحديث (مثل i++) رغم ذلك
+    b: تعيد تشغيل البرنامج
+    c: تتخطى إلى الدورة التالية
+    d: توقف مؤقتًا
+    e: تحذف الـ variable الخاص بالـ loop
+    f: تخرج من الـ loop
+q11:
+  text: ماذا تمرر C للـ function عندما يكون المعامل int؟
+  show: 4
+  options:
+    a: لا شيء
+    b: التغييرات داخل الـ function لا تؤثر على variable المُستدعي
+    c: variable المُستدعي يتغير أيضًا
+    d: عنوانه
+    e: الـ variable نفسه
+    f: نسخة من القيمة
+q12:
+  text: 'أول عنصر في int a[5] هو:'
+  show: 4
+  options:
+    a: a[-1]
+    b: a[1]
+    c: a[5]
+    d: a[0]
+    e: a[2]
+    f: '*a'
+q13:
+  text: ماذا يحدث لو كتبت a[10] مع int a[5]؟
+  show: 4
+  options:
+    a: رسالة خطأ واضحة
+    b: قد يتوقف البرنامج أو يطبع قيمًا عشوائية أو يبدو أنه يعمل
+    c: تكبر الـ array
+    d: يُتجاهل
+    e: C تكبّر الـ array تلقائيًا
+    f: 'سلوك غير محدد: C لا تتحقق'
+q14:
+  text: كيف تقارن نصين في C؟
+  show: 4
+  options:
+    a: a == b
+    b: strlen(a) == strlen(b)
+    c: a = b
+    d: strcpy(a, b)
+    e: strcmp(a, b) == 0
+    f: strcmp ترجع 0 عند التطابق
+q15:
+  text: ما الذي يحدد نهاية نص في C؟
+  show: 4
+  options:
+    a: حرف null '\0'
+    b: بايت قيمته 0
+    c: سطر جديد
+    d: طوله المخزّن في أوله
+    e: حرف الرقم '0'
+    f: مسافة
+q16:
+  text: 'لو int x = 5; int *p = &x; فإن *p تساوي:'
+  show: 4
+  options:
+    a: p
+    b: '5'
+    c: '0'
+    d: نفس قيمة x
+    e: address x
+    f: '&p'
+q17:
+  text: 'بعد *p = 9 (و p يشير إلى x)، قيمة x:'
+  show: 4
+  options:
+    a: '*p أيضًا تساوي 9'
+    b: address
+    c: '5'
+    d: '9'
+    e: لا تتغير
+    f: p أصبح يحمل الرقم 9 كـ address
+q18:
+  text: 'مع int *p يشير داخل array، p + 1 يشير إلى:'
+  show: 4
+  options:
+    a: مكان أبعد بمقدار sizeof(int) بايت
+    b: بداية الـ array
+    c: العنصر التالي
+    d: نهاية الـ array
+    e: لا شيء
+    f: البايت التالي
+q19:
+  text: 'داخل function، sizeof على معامل array يعطي:'
+  show: 4
+  options:
+    a: حجم الـ array
+    b: حجم pointer
+    c: sizeof(int)
+    d: عدد العناصر
+    e: '0'
+    f: نفس sizeof(int *)
+q20:
+  text: 'dereferencing عن NULL pointer غالبًا:'
+  show: 4
+  options:
+    a: يوقف البرنامج
+    b: يرجع 0
+    c: صفر آمن
+    d: يطبع NULL
+    e: لا مشكلة
+    f: undefined behavior، وغالبًا segmentation fault
+q21:
+  text: 'malloc(5 * sizeof(int)) تطلب:'
+  show: 4
+  options:
+    a: int قيمته 5
+    b: مساحة لـ 5 قيم int، بالبايت
+    c: 20 قيمة int
+    d: 5 بايت
+    e: 5 كيلوبايت
+    f: 20 بايت إذا كان الـ int أربعة بايت
+q22:
+  text: ماذا يجب أن تتحقق منه دائمًا بعد malloc؟
+  show: 4
+  options:
+    a: أنها لم ترجع NULL
+    b: أن الذاكرة مملوءة بأصفار
+    c: أنها رجعت 0
+    d: حجمها
+    e: لا شيء
+    f: أن الطلب نجح فعلًا
+q23:
+  text: 'نسيان تحرير الذاكرة يسبب:'
+  show: 4
+  options:
+    a: memory leak
+    b: ذاكرة تبقى مشغولة حتى ينتهي البرنامج
+    c: stack overflow
+    d: خطأ في الصياغة
+    e: تحريرًا مزدوجًا
+    f: برنامجًا أسرع
+q24:
+  text: 'مع pointer إلى struct، نصل للحقل بـ:'
+  show: 4
+  options:
+    a: (*p).field، الصيغة الطويلة
+    b: =>
+    c: ->
+    d: p.field
+    e: '::'
+    f: .
+q25:
+  text: ماذا تفعل typedef؟
+  show: 4
+  options:
+    a: تختصر struct point إلى point فقط
+    b: تنشئ نوعًا جديدًا وقت التشغيل
+    c: تنشئ variable
+    d: تعرّف function
+    e: تعطي النوع اسمًا جديدًا أقصر
+    f: تحرر الذاكرة
+q26:
+  text: أي وضع في fopen يضيف إلى آخر الملف؟
+  show: 4
+  options:
+    a: يمسح الملف أولًا
+    b: '"r"'
+    c: '"e"'
+    d: '"w"'
+    e: '"a"'
+    f: الكتابة تُضاف بعد المحتوى الموجود
+q27:
+  text: ما فائدة include guard؟
+  show: 4
+  options:
+    a: يسرّع ترجمة main
+    b: يخفي الـ functions
+    c: يحمي الملف من الهاكرز
+    d: يتجنب أخطاء التعريف المكرر عندما تتضمن الـ headers بعضها
+    e: يجعل الـ header خاصًا
+    f: يمنع تضمين header file مرتين
+q28:
+  text: 'لبناء main.c وgrades.c معًا تكتب:'
+  show: 4
+  options:
+    a: gcc grades.h
+    b: gcc -c لكل ملف، ثم ربط ملفات .o
+    c: gcc main.c -o grades
+    d: make main.c
+    e: gcc main.c grades.c -o grades
+    f: gcc grades.c -o grades
+q29:
+  text: 'argv[0] تحتوي على:'
+  show: 4
+  options:
+    a: أول معامل بعده
+    b: اسم البرنامج
+    c: عدد المعاملات
+    d: الاسم المستخدم لتشغيل البرنامج
+    e: لا شيء
+    f: آخر معامل
+q30:
+  text: في gdb، أي أمر يبيّن الـ functions التي أوصلت إلى السطر الحالي؟
+  show: 4
+  options:
+    a: backtrace
+    b: next
+    c: step
+    d: print
+    e: run
+    f: bt (اختصار backtrace)

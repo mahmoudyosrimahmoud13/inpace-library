@@ -1,0 +1,300 @@
+q1:
+  text: Where does every C program start running?
+  show: 4
+  options:
+    a: In printf
+    b: 'In #include'
+    c: main is where the operating system hands control to your code
+    d: In the main function
+    e: At the top of the first header
+    f: At the first line of the file
+q2:
+  text: What does \n do inside printf?
+  show: 4
+  options:
+    a: Starts a new line
+    b: Ends the program
+    c: Prints the letter n
+    d: Adds a tab
+    e: It clears the screen
+    f: It is the escape sequence for the newline character
+q3:
+  text: 'In C, 7 / 2 (both ints) equals:'
+  show: 4
+  options:
+    a: '3'
+    b: C rounds it to the nearest even number
+    c: '2'
+    d: '3.5'
+    e: Integer division drops the .5 part
+    f: '4'
+q4:
+  text: Which format reads a double with scanf?
+  show: 4
+  options:
+    a: '%c'
+    b: '%u'
+    c: '%lf, where the l stands for long'
+    d: '%s'
+    e: '%d'
+    f: '%lf'
+q5:
+  text: Why does scanf need &age?
+  show: 4
+  options:
+    a: It needs the address to store the value
+    b: It makes age bigger
+    c: It prints age
+    d: '& turns age into a string'
+    e: It's optional decoration
+    f: '& gives scanf the place in memory to write to'
+q6:
+  text: Which operator tests equality?
+  show: 4
+  options:
+    a: ==
+    b: '='
+    c: :=
+    d: ===
+    e: a == b gives 1 when equal and 0 otherwise
+    f: '!='
+q7:
+  text: What happens in a switch case without break?
+  show: 4
+  options:
+    a: Execution falls through into the next case
+    b: The next cases run too
+    c: The program stops
+    d: Nothing
+    e: The switch restarts from the top
+    f: It loops
+q8:
+  text: In C, which value counts as false?
+  show: 4
+  options:
+    a: '0'
+    b: '-1'
+    c: '1'
+    d: A NULL pointer used as a condition
+    e: Any negative number
+    f: '2'
+q9:
+  text: How many times does for (int i = 0; i < 5; i++) run?
+  show: 4
+  options:
+    a: '6'
+    b: Once for each value of i from 0 to 4
+    c: Forever
+    d: '5'
+    e: '4'
+    f: Once for each value of i from 0 to 5
+q10:
+  text: What does continue do in a loop?
+  show: 4
+  options:
+    a: Restarts the program
+    b: In a for loop, the update step (like i++) still runs
+    c: It deletes the loop variable
+    d: Skips to the next round
+    e: Pauses
+    f: Leaves the loop
+q11:
+  text: What does C pass to a function for an int argument?
+  show: 4
+  options:
+    a: A copy of the value
+    b: The variable itself
+    c: Nothing
+    d: Its address
+    e: Changes inside the function don't affect the caller's variable
+    f: The caller's variable changes too
+q12:
+  text: 'The first element of int a[5] is:'
+  show: 4
+  options:
+    a: a[0]
+    b: a[-1]
+    c: a[1]
+    d: a[5]
+    e: a[2]
+    f: '*a'
+q13:
+  text: What happens if you write a[10] for int a[5]?
+  show: 4
+  options:
+    a: It may crash, print garbage, or seem to work
+    b: It's ignored
+    c: A clear error message
+    d: It grows the array
+    e: 'Undefined behaviour: C doesn''t check'
+    f: C resizes the array for you
+q14:
+  text: How do you compare two strings in C?
+  show: 4
+  options:
+    a: a == b
+    b: a = b
+    c: strlen(a) == strlen(b)
+    d: strcmp(a, b) == 0
+    e: strcmp returns 0 when they match
+    f: strcpy(a, b)
+q15:
+  text: What marks the end of a C string?
+  show: 4
+  options:
+    a: The null character '\0'
+    b: Its length stored first
+    c: A space
+    d: A newline
+    e: A byte whose value is 0
+    f: The digit character '0'
+q16:
+  text: 'If int x = 5; int *p = &x; then *p is:'
+  show: 4
+  options:
+    a: '0'
+    b: The same value as x
+    c: '5'
+    d: the address of x
+    e: p
+    f: '&p'
+q17:
+  text: 'After *p = 9 (p points to x), x is:'
+  show: 4
+  options:
+    a: p now holds the number 9 as an address
+    b: '9'
+    c: '5'
+    d: an address
+    e: unchanged
+    f: '*p is also 9'
+q18:
+  text: 'For int *p pointing into an array, p + 1 points to:'
+  show: 4
+  options:
+    a: A spot sizeof(int) bytes further along
+    b: Nothing
+    c: The next element
+    d: The end of the array
+    e: The start of the array
+    f: The next byte
+q19:
+  text: 'Inside a function, sizeof on an array parameter gives:'
+  show: 4
+  options:
+    a: The array's size
+    b: sizeof(int)
+    c: The element count
+    d: The size of a pointer
+    e: '0'
+    f: The same as sizeof(int *)
+q20:
+  text: 'Dereferencing a NULL pointer usually:'
+  show: 4
+  options:
+    a: Returns 0
+    b: Is fine
+    c: Undefined behaviour, often a segmentation fault
+    d: A safe zero
+    e: Crashes the program
+    f: Prints NULL
+q21:
+  text: 'malloc(5 * sizeof(int)) asks for:'
+  show: 4
+  options:
+    a: 20 ints
+    b: 20 bytes when an int is 4 bytes
+    c: 5 kilobytes
+    d: 5 bytes
+    e: Room for 5 ints, in bytes
+    f: An int with value 5
+q22:
+  text: What must you always check after malloc?
+  show: 4
+  options:
+    a: That the request actually succeeded
+    b: That it didn't return NULL
+    c: Nothing
+    d: Its size
+    e: That the memory is filled with zeros
+    f: That it returned 0
+q23:
+  text: 'Forgetting to free memory causes:'
+  show: 4
+  options:
+    a: A memory leak
+    b: A syntax error
+    c: Memory staying used until the program ends
+    d: A stack overflow
+    e: A double free
+    f: A faster program
+q24:
+  text: 'With a pointer to a struct, a field is reached with:'
+  show: 4
+  options:
+    a: =>
+    b: ->
+    c: '::'
+    d: p.field
+    e: .
+    f: (*p).field, the long form
+q25:
+  text: What does typedef do?
+  show: 4
+  options:
+    a: Gives a type a new, shorter name
+    b: Defines a function
+    c: It allocates a new type at run time
+    d: Frees memory
+    e: It can shorten struct point to just point
+    f: Creates a variable
+q26:
+  text: Which fopen mode adds to the end of a file?
+  show: 4
+  options:
+    a: '"r"'
+    b: '"w"'
+    c: Writes go after the existing contents
+    d: It erases the file first
+    e: '"e"'
+    f: '"a"'
+q27:
+  text: What is an include guard for?
+  show: 4
+  options:
+    a: Avoiding redefinition errors when headers include each other
+    b: Speeding up compilation of main
+    c: Stopping a header from being included twice
+    d: Protecting a file from hackers
+    e: Hiding functions
+    f: Making the header private
+q28:
+  text: 'To build main.c and grades.c together you run:'
+  show: 4
+  options:
+    a: gcc grades.c -o grades
+    b: gcc grades.h
+    c: gcc -c on each file, then link the .o files
+    d: gcc main.c -o grades
+    e: make main.c
+    f: gcc main.c grades.c -o grades
+q29:
+  text: 'argv[0] contains:'
+  show: 4
+  options:
+    a: The first argument after it
+    b: The number of arguments
+    c: The last argument
+    d: The program's name
+    e: The name used to launch the program
+    f: Nothing
+q30:
+  text: In gdb, which command shows which functions led to the current line?
+  show: 4
+  options:
+    a: print
+    b: step
+    c: backtrace
+    d: run
+    e: next
+    f: bt (short for backtrace)

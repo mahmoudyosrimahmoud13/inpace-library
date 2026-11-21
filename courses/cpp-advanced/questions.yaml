@@ -1,0 +1,250 @@
+q1:
+  text: What does `std::move(x)` do by itself?
+  show: 4
+  options:
+    a: Copies x
+    b: Moves x to the heap
+    c: Frees x's memory
+    d: Casts x to an rvalue; nothing is moved yet
+    e: Only marks x as something that may be moved from
+    f: Deletes x
+q2:
+  text: 'After `auto b = std::move(a);` with a vector a, a is:'
+  show: 4
+  options:
+    a: Safe to assign a new value to
+    b: A dangling reference
+    c: Valid but unspecified (empty for vector in practice)
+    d: Destroyed
+    e: Unchanged
+    f: Guaranteed to keep its old items
+q3:
+  text: Why mark a move constructor noexcept?
+  show: 4
+  options:
+    a: So reallocation moves instead of copies
+    b: It disables copying
+    c: It makes it faster to compile
+    d: std::vector uses it when growing only if it can't throw
+    e: It's required to compile
+    f: So the class can be constexpr
+q4:
+  text: 'The rule of zero says:'
+  show: 4
+  options:
+    a: Use members like string, vector and unique_ptr
+    b: Write a destructor in every class
+    c: Never use destructors
+    d: Write all five always
+    e: Let members manage resources and write none of the five
+    f: Use raw pointers
+q5:
+  text: Is `return std::move(local);` a good idea?
+  show: 4
+  options:
+    a: 'Yes: always faster'
+    b: 'No: it can block copy elision'
+    c: It doesn't compile
+    d: 'No: a plain return already moves or elides'
+    e: Only for ints
+    f: 'Yes: required for vectors'
+q6:
+  text: What does `static_assert(cond)` do?
+  show: 4
+  options:
+    a: Skips the line
+    b: A check done at compile time
+    c: Prints a warning
+    d: Stops the build if cond is false
+    e: Throws at run time
+    f: Disables the line in release builds
+q7:
+  text: What's special about `if constexpr`?
+  show: 4
+  options:
+    a: It works only with bools at run time
+    b: The branch not taken isn't compiled for that type
+    c: It can't have else
+    d: It runs faster at run time
+    e: It's decided at compile time
+    f: It only works in main
+q8:
+  text: '`(args + ... + 0)` is:'
+  show: 4
+  options:
+    a: Summing a parameter pack with + starting from 0
+    b: A ternary chain
+    c: A loop
+    d: A syntax error
+    e: A fold expression
+    f: A lambda
+q9:
+  text: '`template <std::integral T>` means:'
+  show: 4
+  options:
+    a: T is optional
+    b: T is a class
+    c: T must be a whole-number type
+    d: T is an int variable
+    e: T must be a class type
+    f: T must satisfy the integral concept
+q10:
+  text: 'A big advantage of concepts:'
+  show: 4
+  options:
+    a: No need for headers
+    b: Run-time type checks
+    c: Short, clear errors that name the broken rule
+    d: The template's requirements are written in its signature
+    e: Faster programs always
+    f: They remove the need for templates
+q11:
+  text: '`[x]` in a lambda captures x:'
+  show: 4
+  options:
+    a: By copy, when the lambda is created
+    b: By reference
+    c: A copy made when the lambda is created
+    d: A pointer to x
+    e: Not at all
+    f: When the lambda is called
+q12:
+  text: What does `mutable` allow?
+  show: 4
+  options:
+    a: Recursion
+    b: Throwing exceptions
+    c: The lambda to change its own copies
+    d: Calling non-const operations on captured copies
+    e: Capturing by reference automatically
+    f: Changing the caller's variables
+q13:
+  text: When is std::function the right tool?
+  show: 4
+  options:
+    a: For compile-time-only code
+    b: For templates
+    c: For callbacks chosen at run time
+    d: Always, it's fastest
+    e: Never
+    f: When storing different callables with the same signature
+q14:
+  text: What is a view?
+  show: 4
+  options:
+    a: A GUI window
+    b: Does work only when you iterate it
+    c: A copy of a container
+    d: A lazy, cheap window onto a range
+    e: A sorted vector
+    f: An owning container
+q15:
+  text: '`std::ranges::sort(v, {}, &Student::score)` sorts by:'
+  show: 4
+  options:
+    a: address in memory
+    b: The first member declared
+    c: nothing; it's an error
+    d: score
+    e: The score member, through a projection
+    f: name
+q16:
+  text: When is std::optional the right return type?
+  show: 4
+  options:
+    a: When 'no result' is normal and needs no reason
+    b: When the caller needs the reason
+    c: Never in modern C++
+    d: When the program must stop
+    e: For fatal errors
+    f: When absence is expected, like a missing key
+q17:
+  text: How should you catch exceptions?
+  show: 4
+  options:
+    a: Only std::exception
+    b: By const reference, most specific first
+    c: By pointer
+    d: catch (...) first
+    e: Catch const std::exception& last, as the most general
+    f: By value
+q18:
+  text: What does std::jthread do in its destructor?
+  show: 4
+  options:
+    a: Detaches it
+    b: Kills the thread
+    c: Throws an exception
+    d: Requests stop, then joins
+    e: Joins (waits for) the thread
+    f: Nothing
+q19:
+  text: 'Two threads do ++counter on a plain int. This is:'
+  show: 4
+  options:
+    a: Fine
+    b: 'A data race: undefined behavior'
+    c: A compile error
+    d: Always correct on x86
+    e: Undefined behaviour from unsynchronized writes
+    f: A deadlock
+q20:
+  text: What does future.get() do?
+  show: 4
+  options:
+    a: Blocks until the result is ready
+    b: Waits for the task and returns its result
+    c: Cancels it
+    d: Polls once and returns
+    e: Starts the task
+    f: Returns immediately with 0
+q21:
+  text: What exit code tells CI a test program failed?
+  show: 4
+  options:
+    a: There's no way
+    b: A value like 1 from return 1
+    c: Only -1
+    d: Any non-zero code
+    e: '0'
+    f: Only 255
+q22:
+  text: Why put the logic in a library target?
+  show: 4
+  options:
+    a: To hide the code
+    b: So both the app and the tests can use it
+    c: So the app needs no main
+    d: So tests check the same code the app runs
+    e: CMake requires it
+    f: It compiles faster always
+q23:
+  text: Which command runs CMake-registered tests?
+  show: 4
+  options:
+    a: gtest
+    b: ctest
+    c: ctest --test-dir build
+    d: cmake --test
+    e: cmake --run-tests
+    f: make check
+q24:
+  text: What is std::span?
+  show: 4
+  options:
+    a: A non-owning view of contiguous elements
+    b: A time duration
+    c: A container that owns memory
+    d: A resizable array
+    e: A thread
+    f: A pointer plus a size, owning nothing
+q25:
+  text: Which sanitizer finds data races?
+  show: 4
+  options:
+    a: TSan
+    b: ThreadSanitizer (-fsanitize=thread)
+    c: -Wall
+    d: UBSan
+    e: AddressSanitizer
+    f: clang-format

@@ -1,0 +1,150 @@
+q1:
+  right:
+  - a
+  - b
+  why: Most of the time goes into getting, cleaning and exploring.
+q2:
+  right:
+  - c
+  - e
+  why: The result shows under the cell.
+q3:
+  right:
+  - b
+  - d
+  why: matplotlib draws; scikit-learn models.
+q4:
+  right:
+  - d
+  - e
+  why: A list comprehension with a condition.
+q5:
+  right:
+  - a
+  - e
+  why: If it doesn't run top to bottom, it's broken.
+q6:
+  right:
+  - c
+  - d
+  why: e.g. (1464, 13).
+q7:
+  right:
+  - a
+  - d
+  why: A condition inside the brackets.
+q8:
+  right:
+  - b
+  - e
+  why: Then check IDs are unique.
+q9:
+  right:
+  - a
+  - c
+  why: .str gives text methods.
+q10:
+  right:
+  - b
+  - d
+  why: Explore before you trust numbers.
+q11:
+  right:
+  - c
+  - e
+  why: Split, apply, combine.
+q12:
+  right:
+  - a
+  - b
+  why: Use how='left' to keep all left rows.
+q13:
+  right:
+  - c
+  - d
+  why: Lines for time.
+q14:
+  right:
+  - b
+  - e
+  why: Pick the chart by the question.
+q15:
+  right:
+  - b
+  - e
+  why: One question per chart.
+q16:
+  right:
+  - b
+  - c
+  why: The median isn't moved by extremes.
+q17:
+  right:
+  - b
+  - e
+  why: 68% within 1, 95% within 2.
+q18:
+  right:
+  - b
+  - e
+  why: Correlation isn't causation.
+q19:
+  right:
+  - a
+  - c
+  why: Resample many times.
+q20:
+  right:
+  - a
+  - c
+  why: Randomization is the key.
+q21:
+  right:
+  - b
+  - d
+  why: Never grade on memorized questions.
+q22:
+  right:
+  - a
+  - e
+  why: Compare every model with it.
+q23:
+  right:
+  - b
+  - d
+  why: Lower is better.
+q24:
+  right:
+  - b
+  - c
+  why: Use precision and recall.
+q25:
+  right:
+  - a
+  - c
+  why: Choose by the cost of each mistake.
+q26:
+  right:
+  - b
+  - e
+  why: Preparation and model as one object.
+q27:
+  right:
+  - a
+  - d
+  why: Report mean and spread.
+q28:
+  right:
+  - a
+  - c
+  why: 'Ask: would I know this at prediction time?'
+q29:
+  right:
+  - a
+  - d
+  why: Like the last-quarter test.
+q30:
+  right:
+  - b
+  - d
+  why: Two minutes to read.

@@ -1,0 +1,300 @@
+q1:
+  text: Which command creates a new Rust project?
+  show: 4
+  options:
+    a: cargo new name
+    b: cargo make
+    c: rust init
+    d: rustc new name
+    e: cargo start name
+    f: cargo new followed by a name
+q2:
+  text: Why does println! end with !?
+  show: 4
+  options:
+    a: It can fail
+    b: It's a macro
+    c: It's important
+    d: Macros can take a variable number of arguments
+    e: It panics on error
+    f: It returns a bool
+q3:
+  text: '`let x = 5; x = 6;` does what?'
+  show: 4
+  options:
+    a: Sets x to 6
+    b: 'A compile error: cannot assign twice to an immutable variable'
+    c: 'Fails to compile: x isn''t mut'
+    d: Creates a new x
+    e: Panics at run time
+    f: A warning only
+q4:
+  text: How do you divide two i32 values as decimals?
+  show: 4
+  options:
+    a: a as f64 / b as f64
+    b: (a as f64) / (b as f64)
+    c: float(a) / b
+    d: a.div(b)
+    e: a / b
+    f: a // b
+q5:
+  text: What does `.trim()` do to input?
+  show: 4
+  options:
+    a: Removes spaces and the newline at the ends
+    b: Makes it lowercase
+    c: Deletes it
+    d: Strips whitespace, including the trailing newline
+    e: Turns it into a number
+    f: Removes all spaces in the middle
+q6:
+  text: '`let x = if ok { 1 } else { 0 };` works because:'
+  show: 4
+  options:
+    a: x becomes a bool
+    b: if is an expression that gives a value
+    c: It doesn't work
+    d: It's a special macro
+    e: if returns bool
+    f: Both branches give the same type
+q7:
+  text: '`1..=5` means:'
+  show: 4
+  options:
+    a: 1, 2, 3, 4
+    b: 5 numbers starting at 0
+    c: 0 to 5
+    d: 1, 2, 3, 4, 5
+    e: 6 numbers
+    f: The range 1 to 5 inclusive
+q8:
+  text: What does `_` mean in a match?
+  show: 4
+  options:
+    a: The first value
+    b: An error
+    c: A variable you can print
+    d: Any other value
+    e: Nothing
+    f: A catch-all pattern
+q9:
+  text: 'A function''s value is:'
+  show: 4
+  options:
+    a: Or a value given by return
+    b: Always 0
+    c: Its last expression without a semicolon
+    d: The first line
+    e: Whatever is printed
+    f: The last println!
+q10:
+  text: Does Rust have default arguments?
+  show: 4
+  options:
+    a: Only in methods
+    b: 'No'
+    c: Yes, like C++
+    d: Only for strings
+    e: Yes, with = in the signature
+    f: No; use Option or a builder instead
+q11:
+  text: 'After `let s2 = s1;` with a String s1:'
+  show: 4
+  options:
+    a: s1 is copied
+    b: s2 is empty
+    c: Both are usable
+    d: The text is copied
+    e: Ownership moved to s2
+    f: s1 can't be used anymore
+q12:
+  text: Which types are copied instead of moved?
+  show: 4
+  options:
+    a: None
+    b: Simple stack types like i32, f64, bool, char
+    c: Box<T>
+    d: Types that implement Copy
+    e: All types
+    f: String and Vec
+q13:
+  text: 'At one time you can have:'
+  show: 4
+  options:
+    a: One &T and one &mut T
+    b: Many shared borrows, or one mutable borrow
+    c: Many &T or exactly one &mut T
+    d: Two &mut T in different functions
+    e: Many &mut T
+    f: No references at all
+q14:
+  text: Which parameter type accepts both String and literal text for reading?
+  show: 4
+  options:
+    a: char
+    b: '&String only'
+    c: String
+    d: A string slice
+    e: '&mut String'
+    f: '&str'
+q15:
+  text: Why can't you push to a vec while holding a reference to its first item?
+  show: 4
+  options:
+    a: It's allowed
+    b: Vectors are read-only
+    c: push may reallocate the buffer
+    d: push may move the items, leaving the reference dangling
+    e: Vectors can't grow
+    f: push is slow
+q16:
+  text: Which first parameter lets a method change the object?
+  show: 4
+  options:
+    a: self only
+    b: mut self&
+    c: '&self'
+    d: '&mut self'
+    e: '&Self'
+    f: A mutable borrow of self
+q17:
+  text: 'What does #[derive(Debug)] give you?'
+  show: 4
+  options:
+    a: Printing with {:?}
+    b: A constructor
+    c: The Debug trait implementation
+    d: Display formatting with {}
+    e: Faster code
+    f: Thread safety
+q18:
+  text: 'Rust''s replacement for null is:'
+  show: 4
+  options:
+    a: Option<T>
+    b: nil
+    c: undefined
+    d: Some(value) or None
+    e: '0'
+    f: 'null'
+q19:
+  text: What happens if a match on an enum misses a variant?
+  show: 4
+  options:
+    a: It returns None
+    b: A runtime warning
+    c: A compile error naming the missing case
+    d: It panics
+    e: It doesn't compile
+    f: Nothing
+q20:
+  text: '`.unwrap()` on None does what?'
+  show: 4
+  options:
+    a: Returns None
+    b: Panics (stops the program)
+    c: Nothing
+    d: Returns a default value
+    e: Returns 0
+    f: Stops the program with a panic message
+q21:
+  text: Why doesn't `for s in scores` leave scores usable?
+  show: 4
+  options:
+    a: It sorts it
+    b: It clones the vector
+    c: It does leave it usable
+    d: It moves the vector into the loop
+    e: It deletes the vector
+    f: The loop takes ownership of the vector
+q22:
+  text: 'Iterator methods like map and filter run when:'
+  show: 4
+  options:
+    a: Never
+    b: In parallel automatically
+    c: Something consumes them (collect, sum, for)
+    d: Immediately
+    e: When consumed, since iterators are lazy
+    f: When the program ends
+q23:
+  text: Why is `"مرحبا".len()` 10?
+  show: 4
+  options:
+    a: len counts words
+    b: len counts bytes; Arabic letters are 2 bytes in UTF-8
+    c: len counts characters twice
+    d: Each Arabic letter uses 2 bytes in UTF-8
+    e: It's a bug
+    f: Arabic has 10 letters
+q24:
+  text: What does `?` do on an Err value?
+  show: 4
+  options:
+    a: Ignores it
+    b: Prints it
+    c: Converts it to None silently
+    d: Returns the error from the current function
+    e: Early-returns the Err to the caller
+    f: Panics
+q25:
+  text: 'HashMap iteration order is:'
+  show: 4
+  options:
+    a: Insertion order
+    b: Sorted by key length
+    c: By value
+    d: Not defined; it can differ each run
+    e: Unpredictable; sort or use BTreeMap
+    f: Alphabetical
+q26:
+  text: What is a trait?
+  show: 4
+  options:
+    a: A kind of struct
+    b: Shared behaviour, like an interface
+    c: A set of behaviour types can implement
+    d: A macro
+    e: A variable
+    f: A module
+q27:
+  text: '`fn largest<T: PartialOrd + Copy>` means T must:'
+  show: 4
+  options:
+    a: Be a String
+    b: Be a number
+    c: Support comparison and be copyable
+    d: Implement Display
+    e: Implement PartialOrd and Copy
+    f: Implement Debug
+q28:
+  text: 'To keep different shape types in one Vec, use:'
+  show: 4
+  options:
+    a: Vec<impl Shape>
+    b: Vec<Box<dyn Shape>>
+    c: An array of generics
+    d: Boxed trait objects
+    e: Vec<Shape>
+    f: Vec<T>
+q29:
+  text: 'Items in a module are by default:'
+  show: 4
+  options:
+    a: Public
+    b: Private
+    c: Global
+    d: Constant
+    e: Not visible outside unless marked pub
+    f: Static
+q30:
+  text: 'Which command runs #[test] functions?'
+  show: 4
+  options:
+    a: cargo test
+    b: cargo run --test
+    c: rustc test
+    d: cargo build --tests only
+    e: cargo check
+    f: cargo t (the short alias)

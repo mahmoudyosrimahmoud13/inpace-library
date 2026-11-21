@@ -1,0 +1,161 @@
+id: electronics-basics-ar
+title: 'أساسيات الإلكترونيات: من الصفر إلى دوائر تعمل'
+version: 1
+language: ar
+description: بداية عملية في الإلكترونيات، كلها بجهد منخفض آمن. الـ voltage والـ current والـ resistance، وقانون أوم والـ power،
+  ودوائر الـ series والـ parallel والـ voltage divider، والـ LEDs والـ diodes والـ datasheets، والـ capacitors وتوقيت الـ
+  RC، والـ power supplies والـ regulators، والـ transistors والـ MOSFETs كمفاتيح، والأزرار والـ pull-ups والـ sensors، والـ
+  555 timer والـ logic gates. رسومات واضحة ملونة، ورسومات للأجزاء الحقيقية، وكل حساب مُتحقق منه بالكود. وينتهي بلمبة ليلية
+  أوتوماتيكية تصممها وتبنيها. الكورس الأول في مسار الإلكترونيات والـ PCB. حوالي 2 إلى 3 أسابيع، ساعة يوميًا.
+image: cover.jpg
+downloads:
+- title: محاكي الدوائر Falstad (مجاني في المتصفح)
+  url: https://www.falstad.com/circuit/
+- title: 'Tinkercad Circuits: ابنِ دوائر breadboard وحاكِها'
+  url: https://www.tinkercad.com/circuits
+modules:
+- id: m1
+  title: 'الوحدة 1: الأساسيات'
+  lessons:
+  - id: m1-l1
+    title: الـ Voltage والـ Current والـ Resistance
+    file: lessons/m1-l1.md
+    minutes: 45
+  - id: m1-l2
+    title: قانون أوم والـ Power
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: ابنِ دائرة من بطارية 9 V + resistor ‏1 kΩ على breadboard. توقّع الـ current، ثم قِس الـ current وجهد البطارية
+      بالـ multimeter. ارفع صورة وأرقامك المتوقعة مقابل المقاسة.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح الـ voltage والـ current والـ resistance بتشبيه ماسورة الماء، ولماذا الـ short circuit خطير حتى عند 9 V.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: الدوائر والـ LEDs'
+  lessons:
+  - id: m2-l1
+    title: التوصيل على التوالي والتوازي، والـ Voltage Divider
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: الـ LEDs والـ Diodes وقراءة الـ Datasheets
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: ابنِ divider من resistorين يحوّل 9 V إلى حوالي 3 V وقِسه. ثم أضئ LEDين بلونين مختلفين على التوازي من 5 V، لكل
+      منهما resistor محسوب خاص. ارفع الصور والحسابات والقياسات.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح لماذا يحتاج كل LED على التوازي إلى resistor خاص به، وماذا يعني 'absolute maximum' في الـ datasheet.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: الـ Capacitors والكهرباء'
+  lessons:
+  - id: m3-l1
+    title: الـ Capacitors والتوقيت
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: 'مصادر الكهرباء (Power supplies): من AC إلى DC ثابت'
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: اشحن capacitor ‏100 µF عبر 10 kΩ من 5 V وسجّل جهده كل ثانية لمدة 6 ثوانٍ. ارسم أرقامك بجوار المنحنى المحسوب. ارفع
+      الجدول والرسم.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح ماذا يفعل الـ decoupling capacitor وأين يجب وضعه، ولماذا يسخن الـ 7805 من 12 V.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: التشغيل والاستشعار'
+  lessons:
+  - id: m4-l1
+    title: الـ Transistors كمفاتيح (switches)
+    file: lessons/m4-l1.md
+    minutes: 50
+  - id: m4-l2
+    title: 'المدخلات: الأزرار والـ Pull-ups والـ Sensors'
+    file: lessons/m4-l2.md
+    minutes: 50
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: شغّل motor صغيرًا 5 V أو مجموعة LEDs من سلك 'تحكم' باستخدام NPN transistor أو MOSFET ‏logic-level ‏(مع flyback
+      diode للـ motor). ثم وصّل زرًا مع pull-up وقِس الجهد وهو مضغوط ومتروك. ارفع الصور والقراءات.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح لماذا يجب ألا يطفو input pin أبدًا، وكيف يصلح ذلك الـ pull-up resistor.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: الـ Chips ومشروع'
+  lessons:
+  - id: m5-l1
+    title: 'الـ Integrated circuits: الـ 555 timer والـ Logic gates'
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'مشروع: لمبة ليلية أوتوماتيكية'
+    file: lessons/m5-l2.md
+    minutes: 70
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: ابنِ اللمبة الليلية من درس المشروع، واضبط الحد بالـ potentiometer، وسجّل جهد الـ base في الضوء والظلام. ارفع صورة،
+      وفيديو قصيرًا وهي تتحول، والـ schematic الخاص بك، والقياسات.
+  - id: m5-explain
+    type: explain
+    prompt: صِف كيف اكتشفت الأرقام في درس المشروع قيمة resistor خطأ قبل البناء، وماذا ستفحص لو لم تضئ اللمبة أبدًا.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

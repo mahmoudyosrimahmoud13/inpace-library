@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- c++
+- cpp
+- programming
+- beginner
+- oop
+- systems programming
+credit: Written for the inPace library. Every example was compiled with g++ -std=c++20 -Wall -Wextra -Werror and run with
+  AddressSanitizer.
+section: programming-web

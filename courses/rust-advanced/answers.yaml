@@ -1,0 +1,125 @@
+q1:
+  right:
+  - b
+  - d
+  why: Lifetimes describe; they don't change anything.
+q2:
+  right:
+  - d
+  - e
+  why: Elision covers the common cases.
+q3:
+  right:
+  - a
+  - e
+  why: Literals are baked into the program.
+q4:
+  right:
+  - c
+  - d
+  why: Iterator provides the rest.
+q5:
+  right:
+  - a
+  - c
+  why: Into comes for free; ? uses From.
+q6:
+  right:
+  - a
+  - b
+  why: Every FnMut closure is also FnOnce.
+q7:
+  right:
+  - b
+  - e
+  why: Returned and spawned closures need it.
+q8:
+  right:
+  - b
+  - d
+  why: Box<Expr> has a known size.
+q9:
+  right:
+  - a
+  - b
+  why: Use try_borrow_mut to avoid panics.
+q10:
+  right:
+  - a
+  - c
+  why: upgrade() gives Option<Rc>.
+q11:
+  right:
+  - a
+  - c
+  why: thread::scope lets you borrow instead.
+q12:
+  right:
+  - c
+  - d
+  why: Rc isn't Send.
+q13:
+  right:
+  - b
+  - c
+  why: Drop your own sender copy.
+q14:
+  right:
+  - b
+  - d
+  why: Async is for waiting.
+q15:
+  right:
+  - a
+  - b
+  why: Use spawn_blocking for heavy work.
+q16:
+  right:
+  - b
+  - d
+  why: Implement From for your error.
+q17:
+  right:
+  - c
+  - d
+  why: Libraries use typed errors.
+q18:
+  right:
+  - a
+  - b
+  why: 'Other kinds: ident, ty, tt.'
+q19:
+  right:
+  - a
+  - b
+  why: You promise correctness.
+q20:
+  right:
+  - a
+  - d
+  why: Check everything around it.
+q21:
+  right:
+  - d
+  - e
+  why: Unit tests live next to the code.
+q22:
+  right:
+  - c
+  - d
+  why: Docs can't go stale.
+q23:
+  right:
+  - c
+  - d
+  why: Run it in CI.
+q24:
+  right:
+  - a
+  - c
+  why: The guard drops right after recv.
+q25:
+  right:
+  - a
+  - b
+  why: The compiler checks both.

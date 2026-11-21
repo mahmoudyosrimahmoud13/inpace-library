@@ -1,0 +1,14 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- assembly
+- x86 64
+- nasm
+- linux
+- systems programming
+- low level
+- beginner
+credit: Written for the inPace library. Every example was assembled with NASM, linked and run on x86-64 Linux.
+section: programming-web

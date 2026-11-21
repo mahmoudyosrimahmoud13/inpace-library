@@ -1,0 +1,23 @@
+id: systems-programming-ar
+title: برمجة الأنظمة، من C إلى Rust
+description: افهم كيف تعمل البرامج فعلًا قريبًا من الجهاز. C أولًا، ثم نظرة على الـ assembly، ثم C++ الحديثة وRust. الكورسان المتقدمان اختياريان، خذهما عندما تريد التعمق.
+language: ar
+author: inPace
+official: true
+order: 31
+tags: [systems, c, cpp, rust, assembly, programming, career, arabic]
+steps:
+  - course: c-programming-beginners-ar
+    note: ابدأ هنا. الـ variables والـ pointers والذاكرة والملفات، ومشروع صغير في النهاية.
+  - course: asm-x86-64-beginners-ar
+    note: شاهد ماذا يصبح كود C. الـ registers والـ stack واستدعاء C من الـ assembly.
+  - course: cpp-beginners-ar
+    note: C++ الحديثة. الـ classes والـ standard library والـ RAII والـ smart pointers.
+  - course: cpp-advanced-ar
+    note: الـ move semantics والـ templates والـ concepts والـ ranges والأخطاء والـ threads والـ testing.
+    optional: true
+  - course: rust-beginners-ar
+    note: الـ ownership والـ borrowing، الفكرتان اللتان تجعلان Rust آمنة بدون garbage collector.
+  - course: rust-advanced-ar
+    note: الـ lifetimes والـ smart pointers والـ threads والـ async مع tokio والـ macros واستدعاء C.
+    optional: true

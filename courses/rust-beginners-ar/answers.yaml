@@ -1,0 +1,150 @@
+q1:
+  right:
+  - d
+  - f
+  why: Cargo يدير المشاريع.
+q2:
+  right:
+  - a
+  - f
+  why: الماكرو تأخذ عددًا variable من المعاملات.
+q3:
+  right:
+  - a
+  - e
+  why: استخدم let mut.
+q4:
+  right:
+  - d
+  - e
+  why: Rust لا تحوّل إلا عندما تطلب.
+q5:
+  right:
+  - e
+  - f
+  why: read_line تحتفظ بزر Enter.
+q6:
+  right:
+  - d
+  - f
+  why: الفرعان يعطيان i32.
+q7:
+  right:
+  - d
+  - e
+  why: ..= تشمل النهاية.
+q8:
+  right:
+  - c
+  - d
+  why: تجعل match كاملة.
+q9:
+  right:
+  - a
+  - b
+  why: أو جملة return.
+q10:
+  right:
+  - a
+  - b
+  why: استخدم أسماء مختلفة أو Option.
+q11:
+  right:
+  - b
+  - e
+  why: الـ ownership انتقلت.
+q12:
+  right:
+  - b
+  - c
+  why: تنفّذ Copy.
+q13:
+  right:
+  - b
+  - d
+  why: قاعدة الـ borrowing.
+q14:
+  right:
+  - e
+  - f
+  why: خذ &str للنصوص التي تُقرأ فقط.
+q15:
+  right:
+  - a
+  - b
+  why: Rust ترفض ترجمته.
+q16:
+  right:
+  - c
+  - e
+  why: '&self تقرأ فقط.'
+q17:
+  right:
+  - d
+  - e
+  why: derive تكتب traits قياسية.
+q18:
+  right:
+  - a
+  - c
+  why: Some(x) أو None.
+q19:
+  right:
+  - a
+  - f
+  why: match يجب أن تكون كاملة.
+q20:
+  right:
+  - b
+  - f
+  why: استخدم unwrap_or أو if let.
+q21:
+  right:
+  - d
+  - f
+  why: استخدم &scores للـ borrowing.
+q22:
+  right:
+  - b
+  - d
+  why: إنها كسولة.
+q23:
+  right:
+  - e
+  - f
+  why: استخدم chars().count() للحروف.
+q24:
+  right:
+  - b
+  - f
+  why: ومع Ok تعطي القيمة.
+q25:
+  right:
+  - e
+  - f
+  why: رتّب أو استخدم BTreeMap.
+q26:
+  right:
+  - b
+  - d
+  why: مثل الواجهة.
+q27:
+  right:
+  - b
+  - d
+  why: هذه قيود traits.
+q28:
+  right:
+  - d
+  - e
+  why: object trait.
+q29:
+  right:
+  - b
+  - f
+  why: استخدم pub لإظهارها.
+q30:
+  right:
+  - a
+  - e
+  why: الاختبارات تعيش بجوار الكود.

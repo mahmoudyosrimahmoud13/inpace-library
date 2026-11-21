@@ -1,0 +1,31 @@
+id: data-scientist
+title: Become a data scientist
+description: From your first notebook to the maths and models behind machine learning, in order. Start with data science for beginners, then NumPy and pandas, then the maths and the classic algorithms.
+language: en
+author: inPace
+official: true
+order: 32
+tags: [data science, machine learning, python, statistics, career, beginner]
+steps:
+  - course: python-basics
+    note: Only if Python is new to you. The data science course teaches the Python it needs, but a little practice first helps.
+    optional: true
+  - course: data-science-beginners
+    note: Start here. pandas, cleaning, charts, statistics and your first models, ending with a real report.
+  - course: numpy-pandas-ml
+    note: Go deeper with NumPy and pandas and build a full machine learning workflow.
+  - course: mml-1-linear-algebra-geometry
+    note: The maths behind the models starts here. Vectors, matrices and projections.
+  - course: mml-2-decompositions-calculus
+    note: Eigenvalues, the SVD and gradients.
+  - course: mml-3-probability-optimization
+    note: Probability, Bayes and how models learn with gradient descent.
+  - course: mml-4-machine-learning-problems
+    note: The maths put to work. Regression, PCA, mixtures and SVMs.
+  - course: mls-1-supervised
+    note: The classic supervised algorithms, properly.
+  - course: mls-2-advanced-algorithms
+    note: Neural networks, judging a model, and decision trees.
+  - course: mls-3-unsupervised-rl
+    note: Clustering, recommenders and reinforcement learning.
+    optional: true

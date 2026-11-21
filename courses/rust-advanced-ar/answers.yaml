@@ -1,0 +1,125 @@
+q1:
+  right:
+  - a
+  - d
+  why: lifetimes تصف ولا تغيّر شيئًا.
+q2:
+  right:
+  - b
+  - d
+  why: الحذف يغطي الحالات الشائعة.
+q3:
+  right:
+  - a
+  - d
+  why: النصوص الحرفية مكتوبة داخل البرنامج.
+q4:
+  right:
+  - d
+  - e
+  why: Iterator تقدّم الباقي.
+q5:
+  right:
+  - a
+  - e
+  why: Into مجانًا؛ و? تستخدم From.
+q6:
+  right:
+  - b
+  - c
+  why: كل closure من نوع FnMut هي FnOnce أيضًا.
+q7:
+  right:
+  - c
+  - e
+  why: الـ closures المُرجعة والمُشغّلة في threads تحتاجها.
+q8:
+  right:
+  - a
+  - c
+  why: Box<Expr> حجمها معروف.
+q9:
+  right:
+  - b
+  - e
+  why: استخدم try_borrow_mut لتجنب panic.
+q10:
+  right:
+  - c
+  - d
+  why: upgrade() تعطي Option<Rc>.
+q11:
+  right:
+  - a
+  - e
+  why: thread::scope تسمح بالـ borrowing بدلًا من ذلك.
+q12:
+  right:
+  - d
+  - e
+  why: Rc ليس Send.
+q13:
+  right:
+  - a
+  - c
+  why: أسقط نسختك من المرسل.
+q14:
+  right:
+  - c
+  - e
+  why: async للانتظار.
+q15:
+  right:
+  - a
+  - e
+  why: استخدم spawn_blocking للشغل الثقيل.
+q16:
+  right:
+  - b
+  - c
+  why: نفّذ From لنوع خطئك.
+q17:
+  right:
+  - c
+  - d
+  why: المكتبات تستخدم أخطاء بأنواع.
+q18:
+  right:
+  - b
+  - e
+  why: 'أنواع أخرى: ident وty وtt.'
+q19:
+  right:
+  - a
+  - d
+  why: أنت تتعهد بالصحة.
+q20:
+  right:
+  - c
+  - e
+  why: تحقق من كل ما حولها.
+q21:
+  right:
+  - a
+  - e
+  why: unit tests تعيش بجوار الكود.
+q22:
+  right:
+  - c
+  - e
+  why: التوثيق لا يصبح قديمًا.
+q23:
+  right:
+  - a
+  - b
+  why: شغّله في CI.
+q24:
+  right:
+  - a
+  - e
+  why: الحارس يُسقط بعد recv مباشرة.
+q25:
+  right:
+  - b
+  - d
+  why: الـ compiler يتحقق من الاثنين.

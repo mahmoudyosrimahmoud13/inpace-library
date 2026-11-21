@@ -9,6 +9,7 @@
 - {id: maths,              en: "Maths",                   ar: "الرياضيات"}
 - {id: careers,            en: "Careers and Interviews",  ar: "الوظائف والمقابلات"}
 - {id: business-finance,   en: "Business and Accounting", ar: "الأعمال والمحاسبة"}
+- {id: electronics,        en: "Electronics and Hardware", ar: "الإلكترونيات والعتاد"}
 - {id: chess,              en: "Chess",                   ar: "الشطرنج"}
 - {id: languages,          en: "Languages",               ar: "اللغات"}
 - {id: build-inpace,       en: "Build inPace",            ar: "ابنِ inPace"}

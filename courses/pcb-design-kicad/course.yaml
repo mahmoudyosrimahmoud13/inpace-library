@@ -1,0 +1,162 @@
+id: pcb-design-kicad
+title: 'PCB design with KiCad: from breadboard to factory'
+version: 1
+language: en
+description: Turn breadboard circuits into real manufactured circuit boards with KiCad 10, free and professional. PCB layers
+  and vocabulary, the KiCad workflow, schematics and the ERC, footprints and the BOM, board outline and placement, routing,
+  track widths and ground pours, design rules and the DRC, Gerber files and ordering, then soldering and safe bring-up. Ends
+  with your own LED flasher board, designed, ordered and built. Course 2 of the electronics and PCB path. About 2 to 3 weeks,
+  an hour a day.
+image: cover.jpg
+downloads:
+- title: KiCad (free download)
+  url: https://www.kicad.org/download/
+- title: KiCad documentation
+  url: https://docs.kicad.org/
+modules:
+- id: m1
+  title: 'Module 1: PCBs and KiCad'
+  lessons:
+  - id: m1-l1
+    title: What a PCB is
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: Getting started with KiCad
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Install KiCad, create a project called led-flasher, open each editor, and take a screenshot of the project window
+      and the 3D viewer of any sample board. List the files KiCad created.
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between a symbol and a footprint, with an example.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Schematic and parts'
+  lessons:
+  - id: m2-l1
+    title: Drawing the schematic
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: Footprints, parts and the BOM
+    file: lessons/m2-l2.md
+    minutes: 50
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Draw the 555 flasher schematic in KiCad with power symbols, net labels, PWR_FLAGs and a decoupling capacitor,
+      get the ERC clean, assign footprints, and export a BOM. Upload the schematic PDF and the BOM.
+  - id: m2-explain
+    type: explain
+    prompt: Explain what the ERC checks and why PWR_FLAG is needed.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Layout'
+  lessons:
+  - id: m3-l1
+    title: 'Board layout: outline and placement'
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: 'Routing: tracks, vias and ground'
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Lay out the flasher board: outline on Edge.Cuts, connectors and LEDs placed, C3 beside pin 8, power tracks 0.5
+      mm, a GND pour on the bottom, helpful silkscreen. Upload screenshots of the layout and 3D view.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why placement matters more than routing, and what a ground pour gives you.
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Checks and manufacturing'
+  lessons:
+  - id: m4-l1
+    title: Design rules and the DRC
+    file: lessons/m4-l1.md
+    minutes: 45
+  - id: m4-l2
+    title: Manufacturing files and ordering
+    file: lessons/m4-l2.md
+    minutes: 50
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Set design rules from a real factory's capabilities page, get the DRC clean, export Gerbers and drill files, check
+      them in the Gerber viewer, and get a quote for 5 boards (you don't have to order yet). Upload the zip and a screenshot
+      of the quote page.
+  - id: m4-explain
+    type: explain
+    prompt: List the human checks you'd do before ordering, and why the DRC alone isn't enough.
+    min_words: 50
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Module 5: Build and project'
+  lessons:
+  - id: m5-l1
+    title: Soldering and bringing a board to life
+    file: lessons/m5-l1.md
+    minutes: 50
+  - id: m5-l2
+    title: 'Project: your own LED flasher board, start to finish'
+    file: lessons/m5-l2.md
+    minutes: 80
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Complete the project checklist: order (or, if you can''t order yet, finish everything up to the Gerbers), solder,
+      bring up and measure the board. Upload photos, your measurement table and your v1.1 list.'
+  - id: m5-explain
+    type: explain
+    prompt: Describe the bring-up routine step by step and why a current limit matters on first power-up.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70

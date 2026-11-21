@@ -1,0 +1,17 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<g filter="url(#s)">
+<rect x="30" y="40" width="460" height="200" rx="22" fill="#0b1a30" stroke="#7fd3ff" stroke-width="2"/>
+<g font-family="JBM" font-size="24" font-weight="500">
+<text x="60" y="95" fill="#7fd3ff">int</text><text x="112" y="95" fill="#f3f7ff">x = 42;</text>
+<text x="60" y="140" fill="#7fd3ff">int</text><text x="112" y="140" fill="#ffd166">*p</text><text x="150" y="140" fill="#f3f7ff">= &amp;x;</text>
+<text x="60" y="185" fill="#ffd166">*p</text><text x="98" y="185" fill="#f3f7ff">= 7;</text><text x="190" y="185" fill="#8fa7c8">// x is now 7</text>
+</g></g>
+<g filter="url(#s)" font-family="JBM" font-weight="700" text-anchor="middle">
+<rect x="50" y="330" width="150" height="90" rx="16" fill="#ffd166"/><text x="125" y="370" font-size="22" fill="#10233f">p</text><text x="125" y="402" font-size="17" fill="#10233f">0x7ffc10</text>
+<rect x="310" y="330" width="160" height="90" rx="16" fill="#fff"/><text x="390" y="370" font-size="22" fill="#10233f">x</text><text x="390" y="402" font-size="26" fill="#10233f">7</text>
+</g>
+<path d="M200 375 H300" stroke="#7fd3ff" stroke-width="4"/><path d="M300 375 l-16 -10 v20 z" fill="#7fd3ff"/>
+<text x="390" y="450" text-anchor="middle" font-family="JBM" font-size="17" fill="#7fd3ff">at 0x7ffc10</text>
+<text x="260" y="520" text-anchor="middle" font-family="JBM" font-size="20" fill="#7fd3ff" opacity=".85">gcc -Wall main.c -o app</text>
+</svg>

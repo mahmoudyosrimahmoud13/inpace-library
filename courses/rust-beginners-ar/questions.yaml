@@ -1,0 +1,300 @@
+q1:
+  text: أي أمر يُنشئ مشروع Rust جديدًا؟
+  show: 4
+  options:
+    a: cargo start name
+    b: cargo make
+    c: rustc new name
+    d: cargo new name
+    e: rust init
+    f: cargo new ثم اسم المشروع
+q2:
+  text: لماذا تنتهي println! بعلامة !؟
+  show: 4
+  options:
+    a: الـ macros تقبل عددًا متغيرًا من المعاملات
+    b: لأنها ترجع bool
+    c: تعمل panic عند الخطأ
+    d: لأنها مهمة
+    e: لأنها قد تفشل
+    f: لأنها ماكرو
+q3:
+  text: ماذا تفعل `let x = 5; x = 6;`؟
+  show: 4
+  options:
+    a: 'خطأ compile: لا يمكن الإسناد مرتين لـ variable غير mut'
+    b: تحذير فقط
+    c: تجعل x تساوي 6
+    d: تُنشئ x جديدة
+    e: 'لا تُترجم: x ليست mut'
+    f: panic runtime
+q4:
+  text: كيف تقسم قيمتي i32 قسمة عشرية؟
+  show: 4
+  options:
+    a: a / b
+    b: a // b
+    c: float(a) / b
+    d: (a as f64) / (b as f64)
+    e: a as f64 / b as f64
+    f: a.div(b)
+q5:
+  text: ماذا تفعل `.trim()` بالمدخلات؟
+  show: 4
+  options:
+    a: تحذف كل المسافات في الوسط
+    b: تحذفها
+    c: تجعلها حروفًا صغيرة
+    d: تحوّلها إلى رقم
+    e: تحذف المسافات والسطر الجديد من الطرفين
+    f: تحذف المسافات من الطرفين ومعها السطر الجديد
+q6:
+  text: '`let x = if ok { 1 } else { 0 };` تعمل لأن:'
+  show: 4
+  options:
+    a: x يصبح bool
+    b: لا تعمل
+    c: if ترجع bool
+    d: الفرعان يعطيان نفس النوع
+    e: إنها ماكرو خاصة
+    f: if تعبير يعطي قيمة
+q7:
+  text: '`1..=5` معناها:'
+  show: 4
+  options:
+    a: 6 أرقام
+    b: 1 و2 و3 و4
+    c: من 0 إلى 5
+    d: 1 و2 و3 و4 و5
+    e: الـ range من 1 إلى 5 شاملًا
+    f: 5 أرقام تبدأ من 0
+q8:
+  text: ماذا تعني `_` في match؟
+  show: 4
+  options:
+    a: variable يمكن طباعته
+    b: لا شيء
+    c: pattern يلتقط كل شيء (catch-all)
+    d: أي قيمة أخرى
+    e: القيمة الأولى
+    f: خطأ
+q9:
+  text: 'قيمة الـ function هي:'
+  show: 4
+  options:
+    a: آخر تعبير فيها بدون فاصلة منقوطة
+    b: أو قيمة تُعطى بـ return
+    c: السطر الأول
+    d: دائمًا 0
+    e: ما يُطبع
+    f: آخر println!
+q10:
+  text: هل في Rust معاملات افتراضية؟
+  show: 4
+  options:
+    a: لا
+    b: لا؛ استخدم Option أو builder بدلًا منها
+    c: للنصوص فقط
+    d: نعم، بـ = في الـ signature
+    e: في الـ functions المرتبطة فقط
+    f: نعم، مثل C++
+q11:
+  text: 'بعد `let s2 = s1;` مع String اسمها s1:'
+  show: 4
+  options:
+    a: s1 تم نسخه
+    b: لا يمكن استخدام s1 بعد ذلك
+    c: s2 فارغة
+    d: الاثنان قابلان للاستخدام
+    e: الـ ownership انتقلت إلى s2
+    f: النص يُنسخ
+q12:
+  text: أي الأنواع تُنسخ بدل أن تُنقل؟
+  show: 4
+  options:
+    a: String وVec
+    b: الأنواع التي تطبّق Copy
+    c: أنواع الـ stack البسيطة مثل i32 وf64 وbool وchar
+    d: كل الأنواع
+    e: لا شيء
+    f: Box<T>
+q13:
+  text: 'في نفس الوقت يمكن أن يكون لديك:'
+  show: 4
+  options:
+    a: '&T واحد و&mut T واحد'
+    b: عدة shared borrows أو mutable borrow واحد
+    c: references &mut T كثيرة
+    d: references &T كثيرة أو &mut T واحد بالضبط
+    e: اثنان &mut T في functions مختلفة
+    f: لا references إطلاقًا
+q14:
+  text: أي نوع معامل يقبل String والنص الحرفي معًا للقراءة؟
+  show: 4
+  options:
+    a: String
+    b: char
+    c: '&mut String'
+    d: '&String فقط'
+    e: '&str'
+    f: string slice
+q15:
+  text: لماذا لا تستطيع push إلى vec وأنت تمسك reference لأول عنصر؟
+  show: 4
+  options:
+    a: push قد يعيد حجز الـ buffer
+    b: قد تنقل push العناصر فيصبح الـ reference معلّقًا
+    c: الـ vectors لا تكبر
+    d: push بطيئة
+    e: الـ vectors للقراءة فقط
+    f: مسموح
+q16:
+  text: أي معامل أول يسمح للـ function بتغيير الـ object؟
+  show: 4
+  options:
+    a: '&self'
+    b: '&Self'
+    c: '&mut self'
+    d: self فقط
+    e: mutable borrow للـ self
+    f: mut self&
+q17:
+  text: 'ماذا يعطيك #[derive(Debug)]؟'
+  show: 4
+  options:
+    a: طباعة Display بـ {}
+    b: كودًا أسرع
+    c: constructor
+    d: تطبيق الـ trait Debug
+    e: الطباعة بـ {:?}
+    f: أمان الـ threads
+q18:
+  text: 'بديل null في Rust هو:'
+  show: 4
+  options:
+    a: Some(value) أو None
+    b: nil
+    c: Option<T>
+    d: '0'
+    e: 'null'
+    f: undefined
+q19:
+  text: ماذا يحدث لو نسيت match على enum أحد البدائل؟
+  show: 4
+  options:
+    a: لا تُترجم
+    b: لا شيء
+    c: تحذير وقت التشغيل
+    d: ترجع None
+    e: panic
+    f: خطأ compile يذكر الحالة الناقصة
+q20:
+  text: ماذا تفعل `.unwrap()` على None؟
+  show: 4
+  options:
+    a: ترجع None
+    b: يوقف البرنامج برسالة panic
+    c: يرجع قيمة افتراضية
+    d: لا شيء
+    e: ترجع 0
+    f: panic (توقف البرنامج)
+q21:
+  text: لماذا لا تترك `for s in scores` الـ variable scores قابلًا للاستخدام؟
+  show: 4
+  options:
+    a: بل تتركه قابلًا للاستخدام
+    b: تعمل clone للـ vector
+    c: تحذف الـ vector
+    d: الـ loop تأخذ ownership الـ vector
+    e: ترتبه
+    f: لأنها تنقل الـ vector إلى الـ loop
+q22:
+  text: 'functions الـ iterators مثل map وfilter تعمل عندما:'
+  show: 4
+  options:
+    a: أبدًا
+    b: يستهلكها شيء (collect أو sum أو for)
+    c: بالتوازي تلقائيًا
+    d: عندما تُستهلك، لأن الـ iterators كسولة (lazy)
+    e: فورًا
+    f: عند انتهاء البرنامج
+q23:
+  text: لماذا `"مرحبا".len()` تساوي 10؟
+  show: 4
+  options:
+    a: إنه خطأ
+    b: len تعدّ الحروف مرتين
+    c: الكلمة فيها 10 حروف
+    d: len تعدّ الكلمات
+    e: len تعدّ البايتات؛ والحرف العربي بايتان في UTF-8
+    f: كل حرف عربي يأخذ 2 بايت في UTF-8
+q24:
+  text: ماذا تفعل `?` مع قيمة Err؟
+  show: 4
+  options:
+    a: panic
+    b: ترجع الخطأ من الـ function الحالية
+    c: تطبعه
+    d: يحوّله إلى None بصمت
+    e: تتجاهله
+    f: يرجع الـ Err مبكرًا للمُستدعي
+q25:
+  text: 'ترتيب المرور على HashMap:'
+  show: 4
+  options:
+    a: بترتيب الإدخال
+    b: مرتب حسب طول الـ key
+    c: أبجدي
+    d: حسب القيمة
+    e: غير محدد؛ وقد يختلف في كل تشغيل
+    f: غير متوقع؛ رتّب أو استخدم BTreeMap
+q26:
+  text: ما هو الـ trait؟
+  show: 4
+  options:
+    a: نوع من struct
+    b: سلوك مشترك، مثل interface
+    c: variable
+    d: مجموعة سلوك تستطيع الأنواع تنفيذها
+    e: ماكرو
+    f: module
+q27:
+  text: '`fn largest<T: PartialOrd + Copy>` معناها أن T يجب:'
+  show: 4
+  options:
+    a: أن تكون String
+    b: أن تدعم المقارنة وتكون قابلة للنسخ
+    c: يطبّق Display
+    d: يطبّق PartialOrd وCopy
+    e: أن تكون رقمًا
+    f: أن تنفّذ Debug
+q28:
+  text: 'لوضع أنواع أشكال مختلفة في Vec واحد، استخدم:'
+  show: 4
+  options:
+    a: Vec<Shape>
+    b: array من generics
+    c: Vec<T>
+    d: Vec<Box<dyn Shape>>
+    e: boxed trait objects
+    f: Vec<impl Shape>
+q29:
+  text: 'العناصر داخل الوحدة (module) افتراضيًا:'
+  show: 4
+  options:
+    a: global
+    b: خاصة
+    c: عامة
+    d: static
+    e: ثابتة
+    f: غير مرئية من الخارج إلا إذا عُلّمت pub
+q30:
+  text: 'أي أمر يشغّل functions #[test]؟'
+  show: 4
+  options:
+    a: cargo test
+    b: cargo build --tests فقط
+    c: rustc test
+    d: cargo check
+    e: cargo t (الاختصار)
+    f: cargo run --test

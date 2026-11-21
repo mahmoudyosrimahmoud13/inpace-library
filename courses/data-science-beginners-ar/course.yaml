@@ -1,0 +1,197 @@
+id: data-science-beginners-ar
+title: ‏Data Science للمبتدئين
+version: 1
+language: ar
+description: 'أول مسار كامل لك في الـ data science، ببايثون في Google Colab. تعمل على dataset واقعية واحدة طوال الكورس (سنة
+  من الطلبات في سلسلة مقاهٍ خيالية في القاهرة): بايثون للبيانات، وpandas للتحميل والاستكشاف والتنظيف، والتجميع والدمج، والرسوم
+  بـ matplotlib، والإحصاء (المركز والانتشار والتوزيعات والـ correlation والـ bootstrap واختبارات A/B)، وأول models لك في الـ
+  machine learning ‏(regression وclassification) بـ scikit-learn، وطريقة عمل موثوقة (pipelines وcross-validation وleakage)،
+  ومشروع تقرير نهائي. كل مثال كود شُغّل وتظهر مخرجاته الحقيقية. بيانات التدريب مخترعة للتعلم. الكورس الأول في مسار عالم البيانات.
+  حوالي 3 أسابيع، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: 'Google Colab: شغّل notebooks بايثون في المتصفح'
+  url: https://colab.research.google.com/
+- title: 'بيانات التدريب: cafe_sales.csv'
+  url: https://raw.githubusercontent.com/mahmoudyosrimahmoud13/inpace-library/main/courses/data-science-beginners-ar/files/cafe_sales.csv
+- title: دليل البداية في pandas (بالإنجليزية)
+  url: https://pandas.pydata.org/docs/getting_started/index.html
+- title: دليل مستخدم scikit-learn (بالإنجليزية)
+  url: https://scikit-learn.org/stable/user_guide.html
+modules:
+- id: m1
+  title: 'الوحدة 1: البداية'
+  lessons:
+  - id: m1-l1
+    title: ما هو الـ Data Science، وأول notebook لك
+    file: lessons/m1-l1.md
+    minutes: 35
+  - id: m1-l2
+    title: بايثون التي تحتاجها للبيانات
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: اصنع notebook في Colab فيه list لدرجات حرارة 7 أيام، وfunction تصف كل يوم بأنه cool أو warm أو hot، وlist comprehension
+      للأيام الحارة، وdictionary يعدّ كل وصف. شارك رابطًا أو ارفع لقطة شاشة.
+  - id: m1-explain
+    type: explain
+    prompt: صِف خطوات العمل في الـ data science بكلماتك، باستخدام سؤال تحب أن تجيب عنه بالبيانات.
+    min_words: 50
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: أساسيات pandas والتنظيف'
+  lessons:
+  - id: m2-l1
+    title: '‏pandas: تحميل البيانات واستكشافها'
+    file: lessons/m2-l1.md
+    minutes: 50
+  - id: m2-l2
+    title: تنظيف البيانات
+    file: lessons/m2-l2.md
+    minutes: 55
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: حمّل cafe_sales.csv، واكتشف كل مشكلة من الدرس وأصلحها (المكرر، وكتابة أسماء الفروع، والمسافات في الأصناف، وأسعار
+      الأخطاء الكتابية، وطريقة الدفع الناقصة)، واكتب كل قرار في text cell. احفظ cafe_clean.csv واذكر عدد الصفوف وإجمالي الإيراد.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح لماذا لا يجب ملء التقييمات الناقصة بالمتوسط، بينما لا مشكلة في ملء طرق الدفع الناقصة بـ 'unknown'.
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: الملخصات والرسوم'
+  lessons:
+  - id: m3-l1
+    title: التجميع والتلخيص ودمج الجداول
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: رسوم بيانية تحكي القصة
+    file: lessons/m3-l2.md
+    minutes: 55
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'أجب سؤالين بـ groupby ورسم واحد لكل منهما: أي صنف يحقق أكبر إيراد في كل فرع، وكيف تتغير الطلبات حسب يوم الأسبوع.
+      أعطِ كل رسم عنوانًا ومحاور بأسماء وخلاصة في جملة واحدة.'
+  - id: m3-explain
+    type: explain
+    prompt: 'اشرح أي نوع رسم ستستخدمه لـ: المبيعات خلال 12 شهرًا، ومقارنة 13 صنفًا، ومعرفة هل ترتبط الحرارة بمبيعات المشروبات
+      المثلجة، ولماذا.'
+    min_words: 50
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الإحصاء'
+  lessons:
+  - id: m4-l1
+    title: 'الإحصاء 1: المركز والانتشار والـ distributions'
+    file: lessons/m4-l1.md
+    minutes: 55
+  - id: m4-l2
+    title: 'الإحصاء 2: العلاقات والعينات واختبارات A/B'
+    file: lessons/m4-l2.md
+    minutes: 60
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'لبيانات المقهى: اذكر المتوسط والوسيط لقيمة الطلب واشرح الفرق؛ واحسب مدى bootstrap بنسبة 95% لمتوسط تقييم العملاء
+      الجدد؛ واحسب الـ correlation بين حرارة اليوم وطلبات المشروبات الساخنة. اكتب كل نتيجة في جملة بسيطة واحدة.'
+  - id: m4-explain
+    type: explain
+    prompt: اشرح لماذا لا يثبت الـ correlation السببية، وماذا يضيف اختبار A/B عشوائي، مع مثال.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'الوحدة 5: Machine Learning'
+  lessons:
+  - id: m5-l1
+    title: 'Machine Learning 1: التنبؤ برقم'
+    file: lessons/m5-l1.md
+    minutes: 55
+  - id: m5-l2
+    title: 'Machine Learning 2: التنبؤ بفئة'
+    file: lessons/m5-l2.md
+    minutes: 55
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: تنبأ بالإيراد اليومي (بدل الطلبات) بـ linear regression باستخدام الحرارة وعطلة نهاية الأسبوع؛ واذكر MAE مقارنة
+      بـ baseline. ثم ابنِ classifier لـ 'طلب كبير' (إيراد أكبر من 150) واذكر الـ confusion matrix والـ precision والـ recall
+      عند threshold مختلفين.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح لماذا قد تكون الـ accuracy مضللة مع الفئات النادرة، باستخدام مثال المشروبات المثلجة.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'الوحدة 6: طريقة العمل ومشروع'
+  lessons:
+  - id: m6-l1
+    title: طريقة عمل موثوقة لـ Machine Learning
+    file: lessons/m6-l1.md
+    minutes: 50
+  - id: m6-l2
+    title: 'مشروع: تقرير لصاحب المقهى'
+    file: lessons/m6-l2.md
+    minutes: 80
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: ابنِ notebook التقرير الكامل من درس المشروع، مع مهمتين على الأقل من 'دورك'. ارفع الـ notebook (أو رابطًا) وجزء
+      'التوصيات' الذي يُقرأ في دقيقتين.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح ما هو الـ data leakage، وأعطِ مثال حجم الكوب، وصِف كيف تتحقق من feature جديدة من ناحية الـ leakage.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
