@@ -1238,6 +1238,13 @@ def notebooks_html(c: dict) -> str:
             f'<ul class="nbs">{"".join(rows)}</ul>')
 
 
+def _files_src(rendered: str, cid: str) -> str:
+    """Pictures in a lesson name a file in the course's files folder (that's how inPace reads them); on the website,
+    point them at that file on GitHub so they show."""
+    return re.sub(r'(<img[^>]*?\ssrc=")(?![a-z]+:|/|#)([^"]+)"',
+                  lambda m: f'{m.group(1)}{REPO_RAW}/{cid}/files/{m.group(2)}"', rendered)
+
+
 def course_page(c: dict, road: list[dict] | None = None) -> str:
     e = html.escape
     mine = [r for r in road or [] if r["id"] in (c.get("roadmaps") or [])]
@@ -1256,7 +1263,7 @@ def course_page(c: dict, road: list[dict] | None = None) -> str:
         text = re.sub(r"^#\s+.*\n+", "", c["sample"]["text"])
         sample_html = f"""<h2 class="section-title">{t("Read a lesson first", "اقرأ درسًا أولًا")}</h2>
 <article class="sample"><h2 dir="auto">{e(c["sample"]["title"])}</h2>
-  <div class="prose fade" id="sample" dir="{'rtl' if c['language'] == 'ar' else 'auto'}">{md.render(text)}</div>
+  <div class="prose fade" id="sample" dir="{'rtl' if c['language'] == 'ar' else 'auto'}">{_files_src(md.render(text), c["id"])}</div>
   <p><button class="btn" type="button" id="more">{t("Show the whole lesson", "اعرض الدرس كاملًا")}</button></p></article>"""
     dl = ""
     if c["downloads"]:
