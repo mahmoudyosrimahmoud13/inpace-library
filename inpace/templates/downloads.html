@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Downloads') }}{% endblock %}
+{% block main %}
+{# Downloads (v1.30.14): every video download in one place, like a download manager. The list is drawn by app.js
+   from /downloads.json and updates by itself while something downloads. #}
+<div class="page-head">
+  <h1>{% trans trimmed %}Downloads{% endtrans %}.</h1>
+  <p class="muted" data-dl-summary>{% trans trimmed %}Lesson videos you save to watch offline. They download in the background while you keep learning.{% endtrans %}</p>
+</div>
+
+<section class="dl" data-dl
+  data-l-downloading="{{ _('Downloading') }}" data-l-waiting="{{ _('Waiting') }}" data-l-failed="{{ _('Failed') }}"
+  data-l-done="{{ _('Finished') }}" data-l-all="{{ _('All') }}" data-l-paused="{{ _('Paused') }}"
+  data-l-pause="{{ _('Pause') }}" data-l-resume="{{ _('Resume') }}" data-l-retry="{{ _('Retry') }}"
+  data-l-retryall="{{ _('Retry failed') }}" data-l-cancel="{{ _('Cancel') }}" data-l-next="{{ _('Download next') }}"
+  data-l-clear="{{ _('Clear finished') }}" data-l-pauseall="{{ _('Pause all') }}" data-l-resumeall="{{ _('Resume all') }}"
+  data-l-left="{{ _('{t} left') }}" data-l-of="{{ _('{a} of {b}') }}" data-l-videos="{{ _('{a} of {b} videos') }}"
+  data-l-rest="{{ _('The rest of the course (listed once it is read)') }}" data-l-getting="{{ _('Getting ready…') }}"
+  data-l-now="{{ _('{a} downloading, {b} waiting') }}" data-l-speed="{{ _('Total speed: {s}') }}"
+  data-l-none="{{ _('Nothing is downloading. Download a lesson video with the button under it, or all of a course’s videos from the course page.') }}"
+  data-l-empty="{{ _('Nothing here.') }}" data-l-stopped="{{ _('Stopped') }}" data-l-saved="{{ _('Saved') }}"
+  data-l-open="{{ _('Open the course') }}" data-l-courses="{{ _('Courses, updates and tools') }}">
+  <div class="dl-bar">
+    <div class="dl-tabs" role="tablist" data-dl-tabs></div>
+    <div class="row wrap dl-all" data-dl-all></div>
+  </div>
+  <div class="dl-list" data-dl-list aria-live="polite"><p class="muted">{% trans trimmed %}Loading…{% endtrans %}</p></div>
+  <script type="application/json" data-dl-first>{{ data|tojson }}</script>
+</section>
+
+<form method="post" action="/downloads/settings" class="card stack dl-settings" id="dl-settings" data-dl-form>
+  <h2 style="margin:0">{% trans trimmed %}How videos download{% endtrans %}</h2>
+  <fieldset class="dl-seg">
+    <legend>{% trans trimmed %}Videos at the same time{% endtrans %}</legend>
+    <div class="seg">{% for n in (1, 2, 3, 4, 5) %}<label><input type="radio" name="parallel" value="{{ n }}" {{ 'checked' if n == parallel }}><span>{{ n }}</span></label>{% endfor %}</div>
+    <p class="small muted">{% trans trimmed %}More at once can finish sooner on a fast connection. On a slow one, 1 or 2 is better: each video starts playing offline sooner.{% endtrans %}</p>
+  </fieldset>
+  <div class="row wrap dl-pick">
+    <label>{% trans trimmed %}Speed limit{% endtrans %}
+      <select name="rate">
+        {% for r in rates %}<option value="{{ r }}" {{ 'selected' if r == rate }}>{% if r == '0' %}{{ _('No limit') }}{% elif r == '500k' %}0.5 MB/s{% else %}{{ r[:-1] }} MB/s{% endif %}</option>{% endfor %}
+      </select></label>
+    <label>{% trans trimmed %}Quality{% endtrans %}
+      <select name="quality">
+        {% for q in qualities %}<option value="{{ q }}" {{ 'selected' if q == quality }}>{{ _('Best') if q == 'best' else q ~ 'p' }}</option>{% endfor %}
+      </select></label>
+  </div>
+  <p class="small dl-tool">{% if tool %}{{ icon('check', 16) }} {{ T("yt-dlp {v} is ready. It's the free tool inPace uses to download YouTube videos.", v=tool) }}
+    {% else %}{{ icon('alert', 16) }} {% trans trimmed %}yt-dlp, the free tool inPace uses to download YouTube videos, isn't on this device yet. inPace gets it (about 3 MB) the first time you download a video, or now:{% endtrans %}{% endif %}</p>
+  <p class="small muted" style="margin:0">{% trans trimmed %}The speed limit is for all downloads together, so the rest of your internet stays usable. Quality is for new downloads; a course can keep its own choice.{% endtrans %}</p>
+  <div class="row wrap"><button class="btn primary">{% trans trimmed %}Save{% endtrans %}</button>
+    <button class="btn" formaction="/settings/videos/update" name="back" value="downloads" formnovalidate data-tool-btn>{{ icon('download', 16) }}{% if tool %}{% trans trimmed %}Update yt-dlp{% endtrans %}{% else %}{% trans trimmed %}Get yt-dlp now{% endtrans %}{% endif %}</button></div>
+</form>
+
+<section class="section">
+  <h2>{% trans trimmed %}On this device{% endtrans %}</h2>
+  {% for d in device %}
+  <article class="card dl-have">
+    <div class="row between wrap">
+      <div class="grow">
+        <h3 dir="auto" style="margin:0">{{ d.course.title }}</h3>
+        <p class="small muted" style="margin:.2rem 0 0">{{ T('{a} of {b} videos', a=d.count, b=d.total) }} · {{ nice_size(d.size) }}</p>
+        <p class="small muted dl-path" dir="ltr">{{ d.folder }}</p>
+      </div>
+      <div class="row wrap">
+        <a class="btn small" href="/courses/{{ d.course.id }}/go">{% trans trimmed %}Open the course{% endtrans %}</a>
+        {% if not is_android %}<form method="post" action="/downloads/open/{{ d.course.id }}"><button class="btn small">{{ icon('folder', 16) }}{% trans trimmed %}Open the folder{% endtrans %}</button></form>{% endif %}
+        {% if d.downloaded %}<form method="post" action="/downloads/delete/{{ d.course.id }}" data-confirm="{{ _('Press again to delete') }}"><button class="btn small danger">{{ icon('x', 16) }}{% trans trimmed %}Delete the videos{% endtrans %}</button></form>{% endif %}
+      </div>
+    </div>
+    <details class="dl-files">
+      <summary class="small">{{ T('Show the {n} videos', n=d.count) }}</summary>
+      <ul>
+        {% for f in d.files %}
+        <li><span class="grow" dir="auto">{{ f.title }}</span><span class="small muted">{{ nice_size(f.size) }}</span>
+          <form method="post" action="/downloads/delete-file/{{ d.course.id }}"><input type="hidden" name="video" value="{{ f.id }}">
+            <button class="btn icon-btn small" aria-label="{{ _('Delete') }}" title="{{ _('Delete') }}">{{ icon('x', 16) }}</button></form></li>
+        {% endfor %}
+      </ul>
+    </details>
+  </article>
+  {% else %}
+  <div class="card rem-empty">{{ mascot('think', 72) }}<p>{% trans trimmed %}No videos saved yet. Under each YouTube lesson there's a download button, and a course page can download all its videos at once.{% endtrans %}</p></div>
+  {% endfor %}
+</section>
+{% endblock %}
