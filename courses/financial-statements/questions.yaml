@@ -1,0 +1,320 @@
+q1:
+  text: Which statement covers one day rather than a period?
+  show: 4
+  options:
+    a: The income statement
+    b: The cash flow statement
+    c: The balance sheet
+    d: The statement of changes in equity
+q2:
+  text: 'Net profit flows first into:'
+  show: 4
+  options:
+    a: Cash
+    b: Accounts receivable
+    c: Retained earnings, in the statement of changes in equity
+    d: Share capital
+q3:
+  text: 'A clean audit opinion says the statements:'
+  show: 4
+  options:
+    a: Present fairly, in all material respects
+    b: Contain no errors at all
+    c: Were prepared by the auditor
+    d: Show the company is profitable
+q4:
+  text: In a company, what replaces the owner's drawings?
+  show: 4
+  options:
+    a: Dividends
+    b: Retained earnings
+    c: Share premium
+    d: Salaries
+q5:
+  text: 'The going concern assumption means:'
+  show: 4
+  options:
+    a: The company will be sold
+    b: The business is expected to keep operating
+    c: Assets are shown at scrap value
+    d: Profit must be positive
+q6:
+  text: 'Net sales 490,000 and COGS 294,000. Gross profit is:'
+  show: 4
+  options:
+    a: 784,000
+    b: 196,000
+    c: 294,000
+    d: 56,000
+q7:
+  text: 'Operating profit is also called:'
+  show: 4
+  options:
+    a: Gross profit
+    b: Net income
+    c: EBITDA
+    d: EBIT
+q8:
+  text: 'Gross profit 196,000 on net sales 490,000 is a gross margin of:'
+  show: 4
+  options:
+    a: 60%
+    b: 40%
+    c: 25%
+    d: 15%
+q9:
+  text: 'A supermarket''s 2% net margin compared with a software company''s 20% means:'
+  show: 4
+  options:
+    a: 'Nothing alone: margins differ by industry'
+    b: The supermarket will go bankrupt
+    c: The software company is ten times bigger
+    d: The supermarket is badly run
+q10:
+  text: 'Sales returns and allowances:'
+  show: 4
+  options:
+    a: Increase gross profit
+    b: Are recorded as COGS
+    c: Are an operating expense
+    d: Reduce sales to give net sales
+q11:
+  text: 'A 50,000 loan has 10,000 due next year. On the balance sheet:'
+  show: 4
+  options:
+    a: All 50,000 is current
+    b: All 50,000 is non-current
+    c: 10,000 is current and 40,000 non-current
+    d: Only the interest is shown
+q12:
+  text: 'Current assets 148,000 and current liabilities 52,000 give a current ratio of:'
+  show: 4
+  options:
+    a: '1.60'
+    b: '0.35'
+    c: 96,000
+    d: '2.85'
+q13:
+  text: 'The quick ratio leaves out:'
+  show: 4
+  options:
+    a: Inventory and prepaid expenses
+    b: Current liabilities
+    c: Receivables
+    d: Cash
+q14:
+  text: Which is NOT normally on the balance sheet?
+  show: 4
+  options:
+    a: A bank loan
+    b: Inventory
+    c: A brand the company built itself
+    d: A software licence bought from a supplier
+q15:
+  text: 'Debt to equity fell from 1.09 to 0.68. This means:'
+  show: 4
+  options:
+    a: Profit fell
+    b: The company has less cash
+    c: The company relies less on outside money
+    d: The company borrowed more
+q16:
+  text: 'Beginning inventory 52,000, purchases 302,000, ending inventory 60,000. COGS is:'
+  show: 4
+  options:
+    a: 354,000
+    b: 242,000
+    c: 414,000
+    d: 294,000
+q17:
+  text: 'Ending inventory was undercounted by 5,000. Profit is:'
+  show: 4
+  options:
+    a: 5,000 too low
+    b: 5,000 too high
+    c: 10,000 too low
+    d: Correct
+q18:
+  text: '100 units at 10, 200 at 12, 100 at 15; 300 sold. FIFO COGS is:'
+  show: 4
+  options:
+    a: 3,400
+    b: 4,900
+    c: 3,675
+    d: 3,900
+q19:
+  text: Which method is NOT allowed under IFRS?
+  show: 4
+  options:
+    a: FIFO
+    b: LIFO
+    c: Weighted average
+    d: Specific identification
+q20:
+  text: 'Goods cost 8 each but can now only be sold for 5 with 0.50 of selling costs. Inventory should be shown at:'
+  show: 4
+  options:
+    a: 4.50 each
+    b: 5 each
+    c: 8 each
+    d: 5.50 each
+q21:
+  text: 'Receivables 46,500 and allowance 1,500. Net receivables are:'
+  show: 4
+  options:
+    a: 1,500
+    b: 45,000
+    c: 48,000
+    d: 46,500
+q22:
+  text: 'Writing off a specific bad customer under the allowance method:'
+  show: 4
+  options:
+    a: Debits the allowance and credits receivables
+    b: Changes net receivables
+    c: Credits cash
+    d: Debits bad debt expense
+q23:
+  text: 'Cost 50,000, salvage 5,000, 5 years. Straight-line depreciation per year is:'
+  show: 4
+  options:
+    a: 20,000
+    b: 10,000
+    c: 45,000
+    d: 9,000
+q24:
+  text: 'Year 1 double-declining depreciation on that machine is:'
+  show: 4
+  options:
+    a: 20,000
+    b: 18,000
+    c: 10,000
+    d: 9,000
+q25:
+  text: 'Book value 23,000, sold for 25,000. The result is:'
+  show: 4
+  options:
+    a: Revenue of 25,000
+    b: No gain or loss
+    c: A gain of 2,000
+    d: A loss of 2,000
+q26:
+  text: 'A loan payment of 14,000 is 10,000 principal and 4,000 interest. The expense is:'
+  show: 4
+  options:
+    a: 4,000
+    b: '0'
+    c: 10,000
+    d: 14,000
+q27:
+  text: 'Operating profit 74,000 and interest 4,000. Interest coverage is:'
+  show: 4
+  options:
+    a: 0.05 times
+    b: 78,000
+    c: 70,000
+    d: 18.5 times
+q28:
+  text: 'A lawsuit the company will probably lose, with a reliable estimate, is:'
+  show: 4
+  options:
+    a: Ignored until it's paid
+    b: Recorded as a provision
+    c: Recorded as an asset
+    d: Only described in the notes
+q29:
+  text: 'Dividends declared:'
+  show: 4
+  options:
+    a: Increase share capital
+    b: Reduce revenue
+    c: Are an operating expense
+    d: Reduce retained earnings directly
+q30:
+  text: 'Retained earnings 8,000 at the start, net profit 56,000, ending 56,000. Dividends were:'
+  show: 4
+  options:
+    a: '0'
+    b: 8,000
+    c: 48,000
+    d: 56,000
+q31:
+  text: 'Buying equipment for cash is a:'
+  show: 4
+  options:
+    a: Operating cash flow
+    b: Investing cash flow
+    c: Financing cash flow
+    d: Non-cash item
+q32:
+  text: 'Paying dividends is usually a:'
+  show: 4
+  options:
+    a: Non-cash item
+    b: Operating expense
+    c: Investing cash flow
+    d: Financing cash flow
+q33:
+  text: 'Under the indirect method, depreciation is:'
+  show: 4
+  options:
+    a: Shown in investing
+    b: Subtracted from net profit
+    c: Ignored
+    d: Added back to net profit
+q34:
+  text: 'Receivables went up 7,000. In the indirect method you:'
+  show: 4
+  options:
+    a: Subtract 7,000
+    b: Add 7,000
+    c: Put it in investing
+    d: Ignore it
+q35:
+  text: 'Cash from operations 56,000 and capital spending 20,000. Free cash flow is:'
+  show: 4
+  options:
+    a: 36,000
+    b: 20,000
+    c: 76,000
+    d: 56,000
+q36:
+  text: 'Days inventory 70, receivables days 31, payables days 37. The cash conversion cycle is:'
+  show: 4
+  options:
+    a: 6 days
+    b: 64 days
+    c: 76 days
+    d: 138 days
+q37:
+  text: ROE = net margin × asset turnover × ...?
+  show: 4
+  options:
+    a: Current ratio
+    b: Interest coverage
+    c: Equity multiplier (assets ÷ equity)
+    d: Gross margin
+q38:
+  text: Which is a red flag?
+  show: 4
+  options:
+    a: Operating cash flow well below net profit for several years
+    b: Falling debt
+    c: Rising sales with steady margins
+    d: Interest coverage of 15
+q39:
+  text: 'Asset turnover measures:'
+  show: 4
+  options:
+    a: Sales generated per unit of assets
+    b: Debt per unit of equity
+    c: Profit per unit of sales
+    d: Cash per unit of liabilities
+q40:
+  text: 'The best way to judge a single ratio is to:'
+  show: 4
+  options:
+    a: Compare it with past years and similar companies
+    b: Use it alone to decide
+    c: Ignore it if it's under 1
+    d: Look it up in a table of good values

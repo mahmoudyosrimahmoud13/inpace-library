@@ -1,0 +1,251 @@
+id: financial-statements
+title: 'Financial statements: read them, build them, analyze them'
+version: 1
+language: en
+description: 'The four financial statements of a real company, one line at a time, using one shop (Green Valley Trading) from
+  start to finish: the income statement and margins, the balance sheet and working capital, inventory and FIFO, receivables
+  and bad debts, depreciation methods, liabilities and equity, the cash flow statement with the indirect method, and ratio
+  analysis. Ends with you analyzing a real annual report. Course 2 of the accounting track; take Accounting from zero first
+  if debits and credits are new to you. About 8 days, 45 to 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'Principles of Accounting, Volume 1: Financial Accounting (OpenStax, free book)'
+  url: https://openstax.org/details/books/principles-financial-accounting
+modules:
+- id: m1
+  title: 'Day 1: The statements and their readers'
+  lessons:
+  - id: m1-l1
+    title: The four statements and how they connect
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: Who reads the statements, and how to find them
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Find the latest annual report of a listed company you know. Write down: the auditor''s opinion, the currency
+      and units, revenue, net profit, total assets and total equity for the last two years. Upload your notes with a link
+      to the report.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain how net profit on the income statement ends up on the balance sheet, step by step.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: The income statement'
+  lessons:
+  - id: m2-l1
+    title: The income statement, line by line
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'Margins: profit as a share of sales'
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Build a multi-step income statement and a common-size version (every line as a % of net sales) for the company
+      you chose on Day 1, for two years. Upload the spreadsheet and write two sentences on what changed.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why interest expense is shown below operating profit, and why that helps when comparing two businesses.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: The balance sheet'
+  lessons:
+  - id: m3-l1
+    title: 'The balance sheet: what you own and owe'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'Working capital: reading the balance sheet for safety'
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'From your company''s balance sheet, calculate working capital, the current ratio, the quick ratio and debt to
+      equity for two years. Upload them with a short note: is the company safer or riskier than a year before, and why?'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why equity on the balance sheet isn't the same as what the company is worth.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Inventory'
+  lessons:
+  - id: m4-l1
+    title: Inventory and the cost of goods sold
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: FIFO, weighted average, and LIFO
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Make a spreadsheet that takes a beginning inventory and three purchases at different prices, and calculates COGS
+      and ending inventory with FIFO and weighted average for any number of units sold. Test it on the kettle example (FIFO
+      COGS 3,400; average 3,675). Upload it.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why FIFO shows a higher profit than weighted average when prices are rising, and why the total cost is
+      the same either way.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Receivables and fixed assets'
+  lessons:
+  - id: m5-l1
+    title: Receivables and bad debts
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: Fixed assets and depreciation methods
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build a depreciation schedule in a spreadsheet for an asset of your choice with straight-line, double-declining
+      balance and units of production side by side over its whole life. Then show the entry if it's sold halfway through its
+      life for a price you choose. Upload it.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why the allowance method puts bad debt expense in a better year than the direct write-off method.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Liabilities and equity'
+  lessons:
+  - id: m6-l1
+    title: 'Liabilities: payables, accruals and loans'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: Equity, retained earnings and dividends
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: From your company's annual report, list its debts with their amounts, interest rates and due dates (from the notes),
+      calculate interest coverage, and prepare a short statement of changes in equity for the last year. Upload it.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why retained earnings is not a pile of cash the company can spend.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: The cash flow statement'
+  lessons:
+  - id: m7-l1
+    title: 'The cash flow statement: three kinds of cash'
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'Building cash from operations: the indirect method'
+    file: lessons/m7-l2.md
+    minutes: 35
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Without looking, rebuild Green Valley's full cash flow statement (indirect method) from its two balance sheets
+      and income statement, and prove it reaches the 18,000 increase in cash. Then do the same for the company you chose,
+      using its published statement to check yourself. Upload both.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why an increase in inventory reduces operating cash flow even though no expense was recorded.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Analysis'
+  lessons:
+  - id: m8-l1
+    title: 'Ratio analysis: the full toolkit'
+    file: lessons/m8-l1.md
+    minutes: 35
+  - id: m8-l2
+    title: 'Capstone: read a real annual report'
+    file: lessons/m8-l2.md
+    minutes: 90
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Complete the capstone: the key numbers for at least two years, all the ratios in Step 3, notes on the three biggest
+      balance sheet items, and your one-page story. Upload the spreadsheet and the page.'
+  - id: m8-explain
+    type: explain
+    prompt: Using DuPont, explain how two companies can have the same return on equity but be very different businesses.
+    min_words: 70
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

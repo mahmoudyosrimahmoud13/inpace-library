@@ -1,0 +1,320 @@
+q1:
+  text: 'The accounting equation is:'
+  show: 4
+  options:
+    a: Assets = Liabilities − Equity
+    b: Equity = Assets + Liabilities
+    c: Assets + Liabilities = Equity
+    d: Assets = Liabilities + Equity
+q2:
+  text: Which of these is a liability?
+  show: 4
+  options:
+    a: Money owed to a flour supplier
+    b: Cash in the bank
+    c: Rent paid in advance
+    d: An oven the business owns
+q3:
+  text: A business has assets of 50,000 and liabilities of 18,000. What is its equity?
+  show: 4
+  options:
+    a: 18,000
+    b: 68,000
+    c: 32,000
+    d: 50,000
+q4:
+  text: The owner pays her personal phone bill from her own pocket. How is it recorded in the business?
+  show: 4
+  options:
+    a: As revenue
+    b: As a business liability
+    c: As a business expense
+    d: 'It isn''t: the business is separate from its owner'
+q5:
+  text: Which of these lowers equity?
+  show: 4
+  options:
+    a: The owner investing more cash
+    b: The owner taking cash out for personal use
+    c: Borrowing from a bank
+    d: Earning revenue
+q6:
+  text: A café pays 700 of the 1,200 it owes the bakery. What happens?
+  show: 4
+  options:
+    a: Cash up 700, revenue up 700
+    b: Cash up 700, accounts receivable down 700
+    c: Accounts payable down 700
+    d: Revenue up 700
+q7:
+  text: 'The business buys an oven for 8,000 cash. Total assets:'
+  show: 4
+  options:
+    a: Go up by 16,000
+    b: Go down by 8,000
+    c: Stay the same
+    d: Go up by 8,000
+q8:
+  text: Which of these is NOT revenue?
+  show: 4
+  options:
+    a: A 5,000 bank loan
+    b: Fees earned for a cooking class
+    c: A catering order delivered on credit
+    d: Cakes sold for cash
+q9:
+  text: 'Rent for 3 months is paid in advance. On the day it''s paid, it''s recorded as:'
+  show: 4
+  options:
+    a: Drawings
+    b: A liability
+    c: An expense for the full amount
+    d: An asset (prepaid rent)
+q10:
+  text: Revenue 3,600, expenses 1,200, drawings 500. What is the profit?
+  show: 4
+  options:
+    a: 1,900
+    b: 4,300
+    c: 3,100
+    d: 2,400
+q11:
+  text: Which accounts increase with a debit?
+  show: 4
+  options:
+    a: Only cash
+    b: Assets and revenue
+    c: Liabilities, revenue and capital
+    d: Assets, expenses and drawings
+q12:
+  text: 'The business pays a supplier 1,000. The entry is:'
+  show: 4
+  options:
+    a: Debit Cash, credit Accounts payable
+    b: Debit Expenses, credit Cash
+    c: Debit Accounts payable, credit Cash
+    d: Debit Accounts payable, credit Revenue
+q13:
+  text: What is the normal balance of Sales revenue?
+  show: 4
+  options:
+    a: Debit
+    b: It has no balance
+    c: Credit
+    d: It depends on the month
+q14:
+  text: 'A customer pays 400 in advance for a cake to be delivered next month. Credit:'
+  show: 4
+  options:
+    a: Unearned revenue
+    b: Sales revenue
+    c: Accounts receivable
+    d: Capital
+q15:
+  text: 'In a chart of accounts, an account numbered 5040 is most likely:'
+  show: 4
+  options:
+    a: A liability
+    b: Revenue
+    c: An asset
+    d: An expense
+q16:
+  text: In a journal entry, which comes first?
+  show: 4
+  options:
+    a: The largest amount
+    b: The debits
+    c: The credits
+    d: The cash account
+q17:
+  text: 'Nour buys a 1,200 mixer, paying 400 now and the rest later. The entry is:'
+  show: 4
+  options:
+    a: Debit Equipment 1,200; credit Cash 400 and Accounts payable 800
+    b: Debit Equipment 400; credit Cash 400
+    c: Debit Equipment 1,200; credit Cash 1,200
+    d: Debit Cash 1,200; credit Equipment 1,200
+q18:
+  text: 'Copying journal amounts into the account pages is called:'
+  show: 4
+  options:
+    a: Adjusting
+    b: Reconciling
+    c: Closing
+    d: Posting
+q19:
+  text: 'Cash starts at 9,400. A cash sale of 800, a supplier payment of 500 and wages of 900 follow. The balance is:'
+  show: 4
+  options:
+    a: 9,400
+    b: 10,200
+    c: 11,600
+    d: 8,800
+q20:
+  text: 'Repaying 1,000 of a loan plus 50 interest: which part is an expense?'
+  show: 4
+  options:
+    a: The whole 1,050
+    b: Only the 50 of interest
+    c: None of it
+    d: Only the 1,000
+q21:
+  text: 'A trial balance that balances proves that:'
+  show: 4
+  options:
+    a: Total debits equal total credits
+    b: The business made a profit
+    c: There are no mistakes at all
+    d: Cash matches the bank
+q22:
+  text: Which mistake does NOT unbalance the trial balance?
+  show: 4
+  options:
+    a: Rent recorded as utilities expense
+    b: A debit posted as a credit
+    c: A debit of 540 posted as 450 on one side only
+    d: A balance left off the list
+q23:
+  text: 'The difference between the totals is 270. 270 ÷ 9 = 30. Suspect:'
+  show: 4
+  options:
+    a: 'Nothing: it''s fine'
+    b: An amount on the wrong side
+    c: A transposition or a slide
+    d: A missing account
+q24:
+  text: 'A posted entry has a mistake. The right fix is to:'
+  show: 4
+  options:
+    a: Erase it and rewrite it
+    b: Delete it in the software
+    c: Make a correcting entry
+    d: Ignore it if the totals balance
+q25:
+  text: 'A cash sale of 420 was recorded as 240. The correcting entry is:'
+  show: 4
+  options:
+    a: Debit Cash 420, credit Sales revenue 420
+    b: Debit Cash 180, credit Sales revenue 180
+    c: Debit Sales revenue 180, credit Cash 180
+    d: Debit Cash 240, credit Sales 240
+q26:
+  text: 'Under the accrual basis, revenue is recorded when:'
+  show: 4
+  options:
+    a: The cash is received
+    b: The contract is signed
+    c: The year ends
+    d: The goods or services are delivered
+q27:
+  text: 'Supplies bought: 1,500. Supplies counted at month end: 600. The adjusting entry is:'
+  show: 4
+  options:
+    a: Debit Supplies expense 1,500, credit Cash 1,500
+    b: Debit Supplies 900, credit Supplies expense 900
+    c: Debit Supplies expense 600, credit Supplies 600
+    d: Debit Supplies expense 900, credit Supplies 900
+q28:
+  text: 'An oven costs 8,000, lasts 60 months, salvage 800. Monthly straight-line depreciation is:'
+  show: 4
+  options:
+    a: '133'
+    b: '160'
+    c: '800'
+    d: '120'
+q29:
+  text: 'Staff earned 150 in the last days of the month, to be paid next month. The entry is:'
+  show: 4
+  options:
+    a: Debit Wages expense, credit Wages payable
+    b: Debit Wages payable, credit Cash
+    c: No entry until it's paid
+    d: Debit Cash, credit Wages expense
+q30:
+  text: 'Adjusting entries never touch:'
+  show: 4
+  options:
+    a: Liabilities
+    b: Revenue
+    c: Cash
+    d: Expenses
+q31:
+  text: Which report is prepared first?
+  show: 4
+  options:
+    a: The balance sheet
+    b: The income statement
+    c: The post-closing trial balance
+    d: The statement of owner's equity
+q32:
+  text: 'The balance sheet is dated:'
+  show: 4
+  options:
+    a: For a month
+    b: For the life of the business
+    c: For a year
+    d: As of one day
+q33:
+  text: Which accounts are closed at the end of the period?
+  show: 4
+  options:
+    a: Cash and capital
+    b: Revenue, expenses and drawings
+    c: All accounts
+    d: Assets and liabilities
+q34:
+  text: 'After closing, Income summary has a credit balance of 430. This means:'
+  show: 4
+  options:
+    a: A loss of 430
+    b: Drawings of 430
+    c: Cash of 430
+    d: A profit of 430, closed to Capital
+q35:
+  text: 'Capital 20,000, profit 430, drawings 500. Ending capital is:'
+  show: 4
+  options:
+    a: 19,500
+    b: 20,430
+    c: 20,930
+    d: 19,930
+q36:
+  text: 'Karim receives 400 in advance for work to be done next month. In July it''s:'
+  show: 4
+  options:
+    a: Accounts receivable
+    b: Capital
+    c: Unearned revenue, a liability
+    d: July revenue
+q37:
+  text: 'Tools cost 3,600 and last 3 years with no salvage. July''s depreciation is:'
+  show: 4
+  options:
+    a: 1,200
+    b: '100'
+    c: '300'
+    d: 3,600
+q38:
+  text: 'Parts bought 800, parts on the shelf at month end 350. Parts expense is:'
+  show: 4
+  options:
+    a: '450'
+    b: '800'
+    c: '350'
+    d: 1,150
+q39:
+  text: 'Karim''s net income for July is 780. If drawings were wrongly treated as an expense, it would show:'
+  show: 4
+  options:
+    a: '300'
+    b: 1,080
+    c: '780'
+    d: '480'
+q40:
+  text: 'Karim''s balance sheet totals 11,330 and liabilities are 850. His equity is:'
+  show: 4
+  options:
+    a: 10,000
+    b: 11,330
+    c: 10,480
+    d: 12,180

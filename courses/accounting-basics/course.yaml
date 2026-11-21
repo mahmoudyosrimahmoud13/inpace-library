@@ -1,0 +1,253 @@
+id: accounting-basics
+title: 'Accounting from zero: double entry and the books'
+version: 1
+language: en
+description: 'Bookkeeping and accounting for complete beginners. Follow Nour''s bakery through its first month: the accounting
+  equation, debits and credits, the chart of accounts, the journal and the ledger, the trial balance, accrual accounting and
+  adjusting entries, the first financial statements and closing the books. Ends with a full month you keep yourself, with
+  answers. No maths beyond adding and subtracting. Course 1 of the accounting track. About 8 days, 45 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'Principles of Accounting, Volume 1: Financial Accounting (OpenStax, free book)'
+  url: https://openstax.org/details/books/principles-financial-accounting
+modules:
+- id: m1
+  title: 'Day 1: What accounting is'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: what accounting is for'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: The accounting equation
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: List at least 8 things a small business you know (a shop, a café, a friend's online store) owns or owes, with
+      a rough amount for each. Mark each one as an asset or a liability, then work out its equity. Upload your list or a photo
+      of it.
+  - id: m1-explain
+    type: explain
+    prompt: Explain to a friend why Assets = Liabilities + Equity always balances, using a business example of your own.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Transactions'
+  lessons:
+  - id: m2-l1
+    title: Every transaction touches two things
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Revenue, expenses and the owner's drawings
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Make a table with columns Assets, Liabilities and Equity. Analyze these ten transactions for a new tutoring business:
+      owner invests 5,000 cash; buys a laptop 1,800 cash; buys books on credit 300; tutors students for cash 900; tutors a
+      school on credit 600; pays rent 400; pays the book seller 300; the school pays 600; owner takes 200; pays internet 60.
+      Show each change and prove the equation balances at the end. Upload your spreadsheet.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between an expense and buying an asset, using an oven and a month of electricity as examples.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Debits and credits'
+  lessons:
+  - id: m3-l1
+    title: Debit and credit, without the confusion
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: The chart of accounts
+    file: lessons/m3-l2.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Design a chart of accounts (number, name, type, normal balance) for a business you'd like to run, with at least
+      15 accounts covering all five types. Then write the debit and credit for five transactions it would have in its first
+      week. Upload it.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why expenses increase with a debit, even though they make the owner poorer.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: The journal and the ledger'
+  lessons:
+  - id: m4-l1
+    title: Writing journal entries
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: Posting to the ledger
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Journalize and post Nour's eleven June transactions yourself, without looking at the lesson, in a spreadsheet
+      with a Journal sheet and one ledger block per account with a running balance. Upload it. Your cash balance should end
+      at 9,400.
+  - id: m4-explain
+    type: explain
+    prompt: Explain the difference between the journal and the ledger, and why a business keeps both.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: The trial balance'
+  lessons:
+  - id: m5-l1
+    title: The trial balance
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: Finding and fixing errors
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Prepare the trial balance from the ledger you built yesterday. Then deliberately make two mistakes in a copy (one
+      that unbalances it and one that doesn't) and describe how you'd find each. Upload both.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why a trial balance that balances doesn't prove the books are correct, with two examples.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Accrual accounting and adjusting entries'
+  lessons:
+  - id: m6-l1
+    title: Cash basis or accrual basis
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: Adjusting entries
+    file: lessons/m6-l2.md
+    minutes: 35
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Make Nour's five June adjusting entries yourself and prepare her adjusted trial balance (totals 24,570). Then
+      invent one more adjustment of each kind for a business of your choice. Upload it.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why the accrual basis gives a truer picture of a month's profit than the cash basis, using rent paid in
+      advance as your example.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Statements and closing'
+  lessons:
+  - id: m7-l1
+    title: From the trial balance to the reports
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: Closing the books and the accounting cycle
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: From the adjusted trial balance, prepare Nour's income statement, statement of owner's equity and balance sheet,
+      then her four closing entries and post-closing trial balance (totals 20,700). Upload them.
+  - id: m7-explain
+    type: explain
+    prompt: Walk through the nine steps of the accounting cycle in your own words, saying which ones happen every day and
+      which at the end of the period.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Your own month'
+  lessons:
+  - id: m8-l1
+    title: 'Practice set: one month at Karim''s bike repair'
+    file: lessons/m8-l1.md
+    minutes: 60
+  - id: m8-l2
+    title: 'Practice set: the answers, and what''s next'
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Complete Karim''s practice set in a spreadsheet: journal, ledger, both trial balances, adjustments, the three
+      statements, closing entries and the post-closing trial balance. Upload it, and note any step where your first answer
+      differed from the solution and why.'
+  - id: m8-explain
+    type: explain
+    prompt: Describe the mistake you think beginners make most often in Karim's month, and how to avoid it.
+    min_words: 50
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

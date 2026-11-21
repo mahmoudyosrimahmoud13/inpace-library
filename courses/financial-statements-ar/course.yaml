@@ -1,0 +1,245 @@
+id: financial-statements-ar
+title: 'القوائم المالية: اقرأها وابنِها وحلّلها'
+version: 1
+language: ar
+description: 'القوائم المالية الأربع لشركة حقيقية، بندًا بندًا، بشركة واحدة (الوادي الأخضر للتجارة) من البداية للنهاية: قائمة
+  الدخل والهوامش، والميزانية ورأس المال العامل، والمخزون وطريقة الوارد أولًا، والعملاء والديون المعدومة، وطرق الإهلاك، والخصوم
+  وحقوق الملكية، وقائمة التدفقات النقدية بالطريقة غير المباشرة، وتحليل النسب. وتنتهي بتحليلك لتقرير سنوي حقيقي. الكورس الثاني
+  في مسار المحاسبة؛ خذ "المحاسبة من الصفر" أولًا لو المدين والدائن جديدان عليك. حوالي 8 أيام، 45 إلى 60 دقيقة يوميًا.'
+image: cover.jpg
+downloads:
+- title: Principles of Accounting, Volume 1 (OpenStax، كتاب مجاني بالإنجليزية)
+  url: https://openstax.org/details/books/principles-financial-accounting
+modules:
+- id: m1
+  title: 'اليوم 1: القوائم وقرّاؤها'
+  lessons:
+  - id: m1-l1
+    title: القوائم الأربع وكيف تترابط
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: من يقرأ القوائم، وأين تجدها
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'اعثر على آخر تقرير سنوي لشركة مقيدة في البورصة تعرفها. اكتب: رأي مراقب الحسابات، والعملة والوحدة، والإيرادات،
+      وصافي الربح، وإجمالي الأصول، وإجمالي حقوق الملكية لآخر سنتين. ارفع ملاحظاتك مع رابط التقرير.'
+  - id: m1-explain
+    type: explain
+    prompt: اشرح كيف يصل صافي الربح من قائمة الدخل إلى الميزانية، خطوة بخطوة.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'اليوم 2: قائمة الدخل'
+  lessons:
+  - id: m2-l1
+    title: قائمة الدخل بندًا بندًا
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: 'الهوامش: الربح كنسبة من المبيعات'
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: ابنِ قائمة دخل متعددة المراحل ونسخة بالنسب المئوية (كل بند % من صافي المبيعات) للشركة التي اخترتها في اليوم الأول،
+      لسنتين. ارفع الشيت واكتب جملتين عما تغيّر.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح لماذا يأتي مصروف الفوائد بعد ربح التشغيل، ولماذا يفيد ذلك عند مقارنة مشروعين.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'اليوم 3: الميزانية'
+  lessons:
+  - id: m3-l1
+    title: 'الميزانية: ماذا تملك وماذا عليك'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: 'رأس المال العامل: قراءة الميزانية من زاوية الأمان'
+    file: lessons/m3-l2.md
+    minutes: 25
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'من ميزانية شركتك، احسب رأس المال العامل ونسبة التداول والنسبة السريعة والديون إلى حقوق الملكية لسنتين. ارفعها
+      مع ملاحظة قصيرة: هل الشركة أكثر أمانًا أم خطرًا من العام السابق، ولماذا؟'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح لماذا لا تساوي حقوق الملكية في الميزانية قيمة الشركة.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'اليوم 4: المخزون'
+  lessons:
+  - id: m4-l1
+    title: المخزون وتكلفة البضاعة المباعة
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: الوارد أولًا، والمتوسط المرجّح، والوارد أخيرًا
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اعمل شيتًا يأخذ مخزون أول مدة وثلاث مشتريات بأسعار مختلفة، ويحسب تكلفة البضاعة المباعة ومخزون آخر المدة بـ FIFO
+      والمتوسط المرجّح لأي عدد وحدات مباعة. جرّبه على مثال الغلايات (تكلفة FIFO 3,400؛ المتوسط 3,675). ارفعه.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح لماذا يُظهر FIFO ربحًا أعلى من المتوسط المرجّح عندما ترتفع الأسعار، ولماذا الإجمالي واحد في الحالتين.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'اليوم 5: العملاء والأصول الثابتة'
+  lessons:
+  - id: m5-l1
+    title: العملاء والديون المعدومة
+    file: lessons/m5-l1.md
+    minutes: 30
+  - id: m5-l2
+    title: الأصول الثابتة وطرق الإهلاك
+    file: lessons/m5-l2.md
+    minutes: 30
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: ابنِ جدول إهلاك في شيت لأصل تختاره بالقسط الثابت والمتناقص المضاعف ووحدات الإنتاج جنبًا إلى جنب على عمره كله.
+      ثم أظهر القيد لو بيع في منتصف عمره بسعر تختاره. ارفعه.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح لماذا تضع طريقة المخصص مصروف الديون المعدومة في سنة أصح من طريقة الإعدام المباشر.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'اليوم 6: الخصوم وحقوق الملكية'
+  lessons:
+  - id: m6-l1
+    title: 'الخصوم: الموردون والمستحقات والقروض'
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: حقوق الملكية والأرباح المحتجزة والتوزيعات
+    file: lessons/m6-l2.md
+    minutes: 25
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: من التقرير السنوي لشركتك، اكتب ديونها بمبالغها وفوائدها ومواعيد استحقاقها (من الإيضاحات)، واحسب تغطية الفوائد،
+      وأعدّ قائمة تغيّر في حقوق الملكية مختصرة لآخر سنة. ارفعها.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح لماذا ليست الأرباح المحتجزة كومة نقدية تقدر الشركة على إنفاقها.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'اليوم 7: قائمة التدفقات النقدية'
+  lessons:
+  - id: m7-l1
+    title: 'قائمة التدفقات النقدية: ثلاثة أنواع من النقدية'
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: 'بناء نقدية التشغيل: الطريقة غير المباشرة'
+    file: lessons/m7-l2.md
+    minutes: 35
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: بدون النظر، أعد بناء قائمة التدفقات النقدية للوادي الأخضر كاملة (الطريقة غير المباشرة) من الميزانيتين وقائمة الدخل،
+      وأثبت أنها تصل لزيادة النقدية 18,000. ثم اعمل نفس الشيء لشركتك، مستخدمًا قائمتها المنشورة للتحقّق. ارفع الاثنين.
+  - id: m7-explain
+    type: explain
+    prompt: اشرح لماذا تقلّل زيادة المخزون التدفق النقدي التشغيلي رغم أنه لم يُسجَّل مصروف.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'اليوم 8: التحليل'
+  lessons:
+  - id: m8-l1
+    title: 'تحليل النسب: الأدوات كاملة'
+    file: lessons/m8-l1.md
+    minutes: 35
+  - id: m8-l2
+    title: 'المشروع الختامي: اقرأ تقريرًا سنويًا حقيقيًا'
+    file: lessons/m8-l2.md
+    minutes: 90
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'أكمل المشروع الختامي: الأرقام الرئيسية لسنتين على الأقل، وكل نسب الخطوة 3، وملاحظات عن أكبر ثلاثة بنود في الميزانية،
+      وقصتك في صفحة. ارفع الشيت والصفحة.'
+  - id: m8-explain
+    type: explain
+    prompt: باستخدام ديبونت، اشرح كيف تحقّق شركتان نفس العائد على حقوق الملكية رغم أنهما نشاطان مختلفان جدًا.
+    min_words: 70
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

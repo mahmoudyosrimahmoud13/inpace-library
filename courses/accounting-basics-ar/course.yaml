@@ -1,0 +1,247 @@
+id: accounting-basics-ar
+title: 'المحاسبة من الصفر: القيد المزدوج والدفاتر'
+version: 1
+language: ar
+description: 'مسك الدفاتر والمحاسبة للمبتدئين تمامًا. تابع مخبز نور في شهره الأول: المعادلة المحاسبية، والمدين والدائن، ودليل
+  الحسابات، ودفتر اليومية ودفتر الأستاذ، وميزان المراجعة، وأساس الاستحقاق وقيود التسوية، وأول قوائم مالية، وإقفال الدفاتر.
+  وتنتهي بشهر كامل تمسك حساباته بنفسك، مع الحل. لا تحتاج رياضيات أكثر من الجمع والطرح. المصطلحات بالعربي ومعها الإنجليزي.
+  الكورس الأول في مسار المحاسبة. حوالي 8 أيام، 45 دقيقة يوميًا.'
+image: cover.jpg
+downloads:
+- title: Principles of Accounting, Volume 1 (OpenStax، كتاب مجاني بالإنجليزية)
+  url: https://openstax.org/details/books/principles-financial-accounting
+modules:
+- id: m1
+  title: 'اليوم 1: ما هي المحاسبة'
+  lessons:
+  - id: m1-l1
+    title: 'ابدأ من هنا: لماذا نحتاج المحاسبة؟'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: المعادلة المحاسبية
+    file: lessons/m1-l2.md
+    minutes: 25
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'اكتب 8 أشياء على الأقل يملكها أو عليها مشروع صغير تعرفه (محل، كافيه، متجر أونلاين لصديق)، مع مبلغ تقريبي لكل
+      منها. حدّد كل واحد: أصل أم التزام، ثم احسب حقوق الملكية. ارفع القائمة أو صورتها.'
+  - id: m1-explain
+    type: explain
+    prompt: اشرح لصديق لماذا تتوازن معادلة الأصول = الخصوم + حقوق الملكية دائمًا، بمثال من عندك.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'اليوم 2: العمليات المالية'
+  lessons:
+  - id: m2-l1
+    title: كل عملية تمسّ شيئين على الأقل
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: الإيرادات والمصروفات ومسحوبات المالك
+    file: lessons/m2-l2.md
+    minutes: 25
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'اعمل جدولًا بأعمدة الأصول والخصوم وحقوق الملكية. حلّل هذه العمليات العشر لمشروع دروس خصوصية جديد: المالك يضع
+      5,000 نقدًا؛ يشتري لابتوب 1,800 نقدًا؛ يشتري كتبًا بالآجل 300؛ دروس نقدية 900؛ دروس لمدرسة بالآجل 600؛ يدفع إيجارًا
+      400؛ يدفع لبائع الكتب 300؛ المدرسة تدفع 600؛ المالك يسحب 200؛ يدفع إنترنت 60. أظهر كل تغيير وأثبت توازن المعادلة في
+      النهاية. ارفع الشيت.'
+  - id: m2-explain
+    type: explain
+    prompt: اشرح الفرق بين المصروف وشراء أصل، بمثال فرن وكهرباء شهر.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'اليوم 3: المدين والدائن'
+  lessons:
+  - id: m3-l1
+    title: المدين والدائن بدون لخبطة
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: دليل الحسابات
+    file: lessons/m3-l2.md
+    minutes: 20
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: صمّم دليل حسابات (رقم، اسم، نوع، رصيد طبيعي) لمشروع تحب أن تديره، فيه 15 حسابًا على الأقل من الأنواع الخمسة. ثم
+      اكتب المدين والدائن لخمس عمليات سيقوم بها في أسبوعه الأول. ارفعه.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح لماذا تزيد المصروفات بالمدين رغم أنها تُفقر المالك.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'اليوم 4: اليومية والأستاذ'
+  lessons:
+  - id: m4-l1
+    title: كتابة قيود اليومية
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: الترحيل إلى دفتر الأستاذ
+    file: lessons/m4-l2.md
+    minutes: 30
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: سجّل ورحّل عمليات نور الإحدى عشرة لشهر يونيو بنفسك، بدون النظر للدرس، في شيت فيه صفحة لليومية ومربع أستاذ لكل
+      حساب برصيد جارٍ. ارفعه. رصيد النقدية يجب أن ينتهي عند 9,400.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح الفرق بين دفتر اليومية ودفتر الأستاذ، ولماذا يمسك المشروع الاثنين.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'اليوم 5: ميزان المراجعة'
+  lessons:
+  - id: m5-l1
+    title: ميزان المراجعة
+    file: lessons/m5-l1.md
+    minutes: 25
+  - id: m5-l2
+    title: اكتشاف الأخطاء وتصحيحها
+    file: lessons/m5-l2.md
+    minutes: 25
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: أعدّ ميزان المراجعة من الأستاذ الذي بنيته أمس. ثم اعمل في نسخة منه خطأين متعمّدين (واحد يُخلّ بالتوازن وواحد لا
+      يُخلّ) واشرح كيف تكتشف كلًّا منهما. ارفع الاثنين.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح لماذا لا يثبت ميزان المراجعة المتوازن أن الدفاتر صحيحة، بمثالين.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'اليوم 6: الاستحقاق وقيود التسوية'
+  lessons:
+  - id: m6-l1
+    title: الأساس النقدي أم أساس الاستحقاق؟
+    file: lessons/m6-l1.md
+    minutes: 25
+  - id: m6-l2
+    title: قيود التسوية
+    file: lessons/m6-l2.md
+    minutes: 35
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: اعمل قيود تسوية نور الخمسة لشهر يونيو بنفسك وأعدّ ميزان المراجعة بعد التسوية (الإجمالي 24,570). ثم اخترع تسوية
+      من كل نوع لمشروع تختاره. ارفعه.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح لماذا يعطي أساس الاستحقاق صورة أصدق لربح الشهر من الأساس النقدي، بمثال الإيجار المدفوع مقدمًا.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'اليوم 7: القوائم والإقفال'
+  lessons:
+  - id: m7-l1
+    title: من ميزان المراجعة إلى القوائم المالية
+    file: lessons/m7-l1.md
+    minutes: 25
+  - id: m7-l2
+    title: إقفال الدفاتر والدورة المحاسبية
+    file: lessons/m7-l2.md
+    minutes: 30
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: من ميزان المراجعة بعد التسوية، أعدّ قائمة دخل نور وقائمة التغيّر في حقوق الملكية والميزانية، ثم قيود الإقفال الأربعة
+      وميزان المراجعة بعد الإقفال (الإجمالي 20,700). ارفعها.
+  - id: m7-explain
+    type: explain
+    prompt: امشِ على خطوات الدورة المحاسبية التسع بكلامك، موضّحًا أيها يحدث كل يوم وأيها في نهاية الفترة.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'اليوم 8: شهرك أنت'
+  lessons:
+  - id: m8-l1
+    title: 'تمرين شامل: شهر في ورشة كريم لتصليح العجل'
+    file: lessons/m8-l1.md
+    minutes: 60
+  - id: m8-l2
+    title: حل التمرين الشامل، وماذا بعد
+    file: lessons/m8-l2.md
+    minutes: 30
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'حلّ تمرين ورشة كريم كاملًا في شيت: اليومية، والأستاذ، وميزانا المراجعة، والتسويات، والقوائم الثلاث، وقيود الإقفال،
+      وميزان المراجعة بعد الإقفال. ارفعه، واكتب أي خطوة اختلفت فيها إجابتك الأولى عن الحل ولماذا.'
+  - id: m8-explain
+    type: explain
+    prompt: صِف الخطأ الذي تظن أن المبتدئين يقعون فيه أكثر في شهر كريم، وكيف تتجنّبه.
+    min_words: 50
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

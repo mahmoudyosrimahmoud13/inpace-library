@@ -16,6 +16,40 @@ themes:
   sun:    {bg: '#ffe08a', ink: '#2b1d00', accent: '#2b1d00', chipink: '#fff6d6', glow: '#ffd04d', dot: '#2b1d00'}
 
 courses:
+
+  accounting-basics:
+    theme: mint
+    art: accounting-basics.svg
+    chip: Beginner · 8 days
+    title: Accounting<br>from zero
+    sub: Debits and credits, the journal, the ledger and your first statements, with a bakery's real month
+    tags: [16 lessons, 40 quiz questions]
+
+  accounting-basics-ar:
+    theme: mint
+    art: accounting-basics.svg
+    rtl: true
+    chip: للمبتدئين · 8 أيام
+    title: المحاسبة<br>من الصفر
+    sub: المدين والدائن واليومية والأستاذ وأول قوائم مالية، مع شهر حقيقي لمخبز
+    tags: [16 درسًا, 40 سؤالًا]
+
+  financial-statements:
+    theme: navy
+    art: financial-statements.svg
+    chip: Beginner · 8 days
+    title: Read the<br>numbers
+    sub: Income statement, balance sheet, cash flow and ratios, ending with a real annual report
+    tags: [16 lessons, 40 quiz questions]
+
+  financial-statements-ar:
+    theme: navy
+    art: financial-statements.svg
+    rtl: true
+    chip: للمبتدئين · 8 أيام
+    title: اقرأ<br>الأرقام
+    sub: قائمة الدخل والميزانية والتدفقات النقدية والنسب، وتنتهي بتقرير سنوي حقيقي
+    tags: [16 درسًا, 40 سؤالًا]
   postgres-advanced:
     theme: navy
     art: postgres-advanced.svg

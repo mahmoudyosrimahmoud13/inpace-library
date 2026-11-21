@@ -24,7 +24,7 @@ The app checks every course against the library's list before adding it. Your pr
 
 | | Course | Lessons | Reading time |
 |---|---|---|---|
-| <img src="courses/aws-fundamentals/files/cover.jpg" width="160" alt=""> | [Cloud Computing and AWS Fundamentals](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/aws-fundamentals.html) | 16 | about 7 h |
+| <img src="courses/aws-fundamentals/files/cover.jpg" width="160" alt=""> | [Cloud Computing and AWS Fundamentals](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/aws-fundamentals.html) | 16 | about 8 h |
 | <img src="courses/bash-automation/files/cover.jpg" width="160" alt=""> | [Bash and Linux Automation](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/bash-automation.html) | 16 | about 8 h |
 | <img src="courses/cloud-linux-admin/files/cover.jpg" width="160" alt=""> | [Cloud Linux Administration](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cloud-linux-admin.html) | 14 | about 7 h |
 | <img src="courses/devops-cicd/files/cover.jpg" width="160" alt=""> | [DevOps and CI/CD Pipelines](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/devops-cicd.html) | 14 | about 7 h |
@@ -78,7 +78,7 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/data-engineering-advanced/files/cover.jpg" width="160" alt=""> | [Data engineering: building production pipelines](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-engineering-advanced.html) | 16 | about 9 h |
 | <img src="courses/excel-tutorial-for-data-analysts/files/cover.jpg" width="160" alt=""> | [Excel tutorial for data analysts](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/excel-tutorial-for-data-analysts.html) | 7 | about 1 h |
 | <img src="courses/postgres-advanced/files/cover.jpg" width="160" alt=""> | [Advanced PostgreSQL: how Postgres really works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/postgres-advanced.html) | 12 | about 7 h |
-| <img src="courses/postgres-beginners/files/cover.jpg" width="160" alt=""> | [PostgreSQL for Beginners: from zero to real queries](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/postgres-beginners.html) | 16 | about 7 h |
+| <img src="courses/postgres-beginners/files/cover.jpg" width="160" alt=""> | [PostgreSQL for Beginners: from zero to real queries](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/postgres-beginners.html) | 16 | about 8 h |
 
 ### AI and Machine Learning · الذكاء الاصطناعي وتعلّم الآلة
 
@@ -132,6 +132,10 @@ The app checks every course against the library's list before adding it. Your pr
 
 | | Course | Lessons | Reading time |
 |---|---|---|---|
+| <img src="courses/accounting-basics/files/cover.jpg" width="160" alt=""> | [Accounting from zero: double entry and the books](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/accounting-basics.html) | 16 | about 8 h |
+| <img src="courses/accounting-basics-ar/files/cover.jpg" width="160" alt=""> | [المحاسبة من الصفر: القيد المزدوج والدفاتر](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/accounting-basics-ar.html) | 16 | حوالي 8 ساعة |
+| <img src="courses/financial-statements/files/cover.jpg" width="160" alt=""> | [Financial statements: read them, build them, analyze them](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/financial-statements.html) | 16 | about 9 h |
+| <img src="courses/financial-statements-ar/files/cover.jpg" width="160" alt=""> | [القوائم المالية: اقرأها وابنِها وحلّلها](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/financial-statements-ar.html) | 16 | حوالي 9 ساعة |
 | <img src="courses/cma-part-1-for-complete-beginners-12-weeks-through-sections-/files/cover.jpg" width="160" alt=""> | [CMA Part 1 for Complete Beginners: 12 Weeks Through Sections A–F](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cma-part-1-for-complete-beginners-12-weeks-through-sections-.html) | 36 | about 48 h |
 | <img src="courses/fmaa-prc/files/cover.jpg" width="160" alt=""> | [FMAA Exam Prep: Financial Management and Accounting](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fmaa-prc.html) | 24 | about 8 h |
 | <img src="courses/fmaa-prc-ar/files/cover.jpg" width="160" alt=""> | [التحضير لاختبار FMAA: الإدارة المالية والمحاسبة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fmaa-prc-ar.html) | 24 | حوالي 8 ساعة |
