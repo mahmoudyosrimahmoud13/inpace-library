@@ -466,6 +466,10 @@ def sample(course) -> dict | None:
     text = les["content"]
     if len(text) > 9000:
         text = text[:9000].rsplit("\n\n", 1)[0] + "\n\n…"
+    # The app shows this lesson before the course (and its files) is added, so a picture's bare file name has
+    # nothing to point at. Point it at the file on GitHub instead.
+    text = re.sub(r"(!\[[^\]]*\]\()(?![a-z]+:|/|#)([^)\s]+)\)",
+                  lambda m: f"{m.group(1)}{REPO_RAW}/{course.id}/files/{m.group(2)})", text)
     return {"title": les["title"], "text": text}
 
 
