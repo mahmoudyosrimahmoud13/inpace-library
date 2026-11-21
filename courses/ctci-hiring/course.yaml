@@ -1,0 +1,304 @@
+id: ctci-hiring
+title: 'Cracking the Coding Interview: get hired as a software engineer, from zero'
+version: 1
+language: en
+description: 'The whole software engineering hiring process, from your CV to your offer, following Cracking the Coding Interview
+  (6th edition) by Gayle Laakmann McDowell part by part. How companies hire and how interviewers judge you; your CV and behavioral
+  stories; Big O with code that counts the work; a step-by-step method for any technical question; the question chapters (arrays
+  and strings, linked lists, stacks and queues, trees and graphs, bits and maths, recursion and dynamic programming, sorting
+  and searching, object-oriented and system design, testing, databases, threads); mock interviews; offers and negotiation.
+  Each Read lesson opens the right pages of your own copy of the book; every other lesson has working Python code and verified
+  LeetCode problems to practise. For beginners who can write simple programs. Plan: 8 days, about an hour a day, then weeks
+  of practice.'
+image: cover.jpg
+book: ctci.pdf
+book_info:
+  title: Cracking the Coding Interview, 6th edition
+  url: https://www.crackingthecodinginterview.com/
+  pages: 708
+downloads:
+- title: Cracking the Coding Interview (the author's site, with errata and resources)
+  url: https://www.crackingthecodinginterview.com/
+modules:
+- id: m1
+  title: 'Day 1: How tech companies hire'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how this course gets you hired'
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'Read: the interview process, behind the scenes, special situations (Parts I to III)'
+    file: lessons/m1-l2.md
+    minutes: 45
+    media: ctci.pdf#pages=15-36
+  - id: m1-l3
+    title: The hiring loop, and what interviewers judge
+    file: lessons/m1-l3.md
+    minutes: 20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Choose one company you'd like to work for. Find its current interview steps (careers pages and recent candidate
+      reports) and write them as a list from application to offer. Next to each step, write what you need to prepare for it.
+      Hand in the list.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why thinking out loud matters in a coding interview, using the four things interviewers write down about
+      you.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Your experience, your CV and your stories'
+  lessons:
+  - id: m2-l1
+    title: 'Read: before the interview (Part IV)'
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: ctci.pdf#pages=37-42
+  - id: m2-l2
+    title: A CV that gets you to the interview
+    file: lessons/m2-l2.md
+    minutes: 25
+  - id: m2-l3
+    title: 'Behavioral questions: your stories, ready before the interview (Part V)'
+    file: lessons/m2-l3.md
+    minutes: 35
+    media: ctci.pdf#pages=43-48
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Rewrite your CV with the lesson''s checklist: one page, one column, a result in every bullet. Then build your
+      preparation grid with at least 5 stories, and write out one of them as situation, action, result. Hand in your CV (as
+      a PDF) and your grid.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain what makes a CV bullet strong, and rewrite one weak bullet of your own as an example.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Big O'
+  lessons:
+  - id: m3-l1
+    title: 'Read: Big O (Part VI)'
+    file: lessons/m3-l1.md
+    minutes: 45
+    media: ctci.pdf#pages=49-70
+  - id: m3-l2
+    title: 'Build: watch Big O happen in Python'
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Do at least ten of the book's Big O examples and exercises before checking the answers. Then write two Python
+      functions of your own that solve the same task in O(n²) and in O(n), count their steps for four sizes of input as in
+      the Build lesson, and hand in the code and its output.
+  - id: m3-explain
+    type: explain
+    prompt: Explain, with an example of your own, why a loop that uses `x in my_list` inside it can be O(n²).
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: A method for any technical question'
+  lessons:
+  - id: m4-l1
+    title: 'Read: technical questions (Part VII)'
+    file: lessons/m4-l1.md
+    minutes: 40
+    media: ctci.pdf#pages=71-92
+  - id: m4-l2
+    title: 'Build: one problem, from brute force to the best solution'
+    file: lessons/m4-l2.md
+    minutes: 40
+  - id: m4-l3
+    title: 'Practice: your first five problems, out loud'
+    file: lessons/m4-l3.md
+    minutes: 60
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Solve the LeetCode problems listed in today's lessons, with a timer and out loud. Hand in a link to a document
+      or repository with your code for each one, its Big O, how long it took, and one line on what you missed.
+  - id: m4-explain
+    type: explain
+    prompt: Explain the best conceivable runtime (BCR) and how it tells you when to stop optimizing, using the stock price
+      problem.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Data structures (chapters 1 to 4)'
+  lessons:
+  - id: m5-l1
+    title: Arrays, strings and hash tables (chapter 1)
+    file: lessons/m5-l1.md
+    minutes: 40
+    media: ctci.pdf#pages=99-102
+  - id: m5-l2
+    title: Linked lists, stacks and queues (chapters 2 and 3)
+    file: lessons/m5-l2.md
+    minutes: 40
+    media: ctci.pdf#pages=103-110
+  - id: m5-l3
+    title: Trees and graphs (chapter 4)
+    file: lessons/m5-l3.md
+    minutes: 45
+    media: ctci.pdf#pages=111-122
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Solve the LeetCode problems listed in today's lessons, with a timer and out loud. Hand in a link to a document
+      or repository with your code for each one, its Big O, how long it took, and one line on what you missed.
+  - id: m5-explain
+    type: explain
+    prompt: Explain the difference between depth-first and breadth-first search, and when you'd choose each.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Concepts and algorithms (chapters 5, 6, 8 and 10)'
+  lessons:
+  - id: m6-l1
+    title: Bit manipulation, maths and logic puzzles (chapters 5 and 6)
+    file: lessons/m6-l1.md
+    minutes: 35
+    media: ctci.pdf#pages=123-135
+  - id: m6-l2
+    title: Recursion and dynamic programming (chapter 8)
+    file: lessons/m6-l2.md
+    minutes: 45
+    media: ctci.pdf#pages=141-147
+  - id: m6-l3
+    title: Sorting and searching (chapter 10)
+    file: lessons/m6-l3.md
+    minutes: 35
+    media: ctci.pdf#pages=157-162
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Solve the LeetCode problems listed in today's lessons, with a timer and out loud. Hand in a link to a document
+      or repository with your code for each one, its Big O, how long it took, and one line on what you missed.
+  - id: m6-explain
+    type: explain
+    prompt: Explain how memoization turns an exponential recursion into a linear one, using the stairs example.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Design, testing, databases and threads (chapters 7, 9, 11, 14 and 15)'
+  lessons:
+  - id: m7-l1
+    title: Object-oriented design (chapter 7)
+    file: lessons/m7-l1.md
+    minutes: 35
+    media: ctci.pdf#pages=136-140
+  - id: m7-l2
+    title: System design and scalability (chapter 9)
+    file: lessons/m7-l2.md
+    minutes: 40
+    media: ctci.pdf#pages=148-156
+  - id: m7-l3
+    title: Testing, databases, and threads and locks (chapters 11, 14 and 15)
+    file: lessons/m7-l3.md
+    minutes: 30
+    media: ctci.pdf#pages=163-191
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Pick one design question from chapter 7 and one from chapter 9 of the book. For each, write the requirements you'd
+      agree on, then the classes (chapter 7) or a diagram with numbers and trade-offs (chapter 9). Code the key classes of
+      the first one. Hand in your notes and code.
+  - id: m7-explain
+    type: explain
+    prompt: Explain why `count += 1` can lose updates when two threads run it, and how a lock prevents it.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Mock interviews and the offer'
+  lessons:
+  - id: m8-l1
+    title: Mock interviews, and your plan for the next weeks
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: 'Read: the offer and beyond (Part VIII)'
+    file: lessons/m8-l2.md
+    minutes: 30
+    media: ctci.pdf#pages=93-97
+  - id: m8-l3
+    title: Looking back, and what to do next
+    file: lessons/m8-l3.md
+    minutes: 10
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Run one 45-minute mock interview as the candidate and one as the interviewer, using a Medium problem from the
+      course lists. Write the four-part feedback for each. Then write your six-week plan with dates. Hand in the feedback
+      and the plan.
+  - id: m8-explain
+    type: explain
+    prompt: Explain how you'd compare two job offers, and what you'd say to negotiate politely.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

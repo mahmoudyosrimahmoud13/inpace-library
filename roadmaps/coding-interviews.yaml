@@ -12,6 +12,11 @@ steps:
   - course: python-full
     note: Functions, data structures and clean code, so you can focus on the algorithm in an interview.
     optional: true
+  - course: ctci-hiring
+    note: The whole hiring process with Cracking the Coding Interview, from your CV and stories to the offer, with LeetCode practice for every chapter.
+  - course: ctci-hiring-ar
+    note: "Optional, in Arabic: the same course, Cracking the Coding Interview step by step."
+    optional: true
   - course: dsa-interviews
     note: The heart of the path. Fourteen patterns, from two pointers to dynamic programming, with LeetCode practice and a playbook for the interview itself.
   - course: icpc-mansoura-problem-solving-ar

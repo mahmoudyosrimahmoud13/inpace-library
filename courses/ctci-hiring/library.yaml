@@ -1,0 +1,17 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- career
+- interview
+- coding interview
+- algorithms
+- data structures
+- leetcode
+- python
+- beginner
+credit: 'Book (not included): Cracking the Coding Interview, 6th edition, by Gayle Laakmann McDowell (CareerCup, 2015). This
+  course follows its parts and chapters, explains the ideas in its own words, and doesn''t copy its questions or solutions.
+  Practice problems: LeetCode (leetcode.com), linked, not copied. Notes, code, tasks and questions: inPace.'
+section: careers

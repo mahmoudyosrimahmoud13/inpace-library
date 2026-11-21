@@ -1,0 +1,296 @@
+id: ctci-hiring-ar
+title: 'Cracking the Coding Interview: التوظيف مهندس برمجيات من الصفر'
+version: 1
+language: ar
+description: 'مسار توظيف مهندس البرمجيات كاملًا، من سيرتك الذاتية حتى العرض، مع كتاب Cracking the Coding Interview (الطبعة
+  السادسة) لـ Gayle Laakmann McDowell جزءًا جزءًا. كيف توظّف الشركات وكيف يحكم عليك المقابِلون؛ سيرتك الذاتية وقصصك للأسئلة
+  السلوكية؛ Big O مع كود يعدّ العمل؛ طريقة خطوة بخطوة لأي سؤال تقني؛ فصول الأسئلة (arrays وstrings، linked lists، stacks وqueues،
+  trees وgraphs، الـ bits والرياضيات، recursion وdynamic programming، الترتيب والبحث، تصميم الكائنات وتصميم الأنظمة، الاختبار،
+  قواعد البيانات، الـ threads)؛ مقابلات تجريبية؛ العروض والتفاوض. كل درس قراءة يفتح الصفحات المطلوبة من نسختك من الكتاب؛ وباقي
+  الدروس فيها كود Python يعمل ومسائل LeetCode مراجَعة للتدريب. للمبتدئين الذين يكتبون برامج بسيطة. الخطة: 8 أيام، نحو ساعة
+  يوميًا، ثم أسابيع من التدريب.'
+image: cover.jpg
+book: ctci.pdf
+book_info:
+  title: Cracking the Coding Interview, 6th edition
+  url: https://www.crackingthecodinginterview.com/
+  pages: 708
+downloads:
+- title: Cracking the Coding Interview (موقع المؤلفة، مع التصحيحات والموارد)
+  url: https://www.crackingthecodinginterview.com/
+modules:
+- id: m1
+  title: 'اليوم 1: كيف توظّف شركات التقنية'
+  lessons:
+  - id: m1-l1
+    title: 'ابدأ من هنا: كيف يوصلك هذا الكورس إلى الوظيفة'
+    file: lessons/m1-l1.md
+    minutes: 10
+  - id: m1-l2
+    title: 'قراءة: مسار المقابلة، ما وراء الكواليس، الحالات الخاصة (الأجزاء I إلى III)'
+    file: lessons/m1-l2.md
+    minutes: 45
+    media: ctci.pdf#pages=15-36
+  - id: m1-l3
+    title: مسار التوظيف، وما يحكم عليه المقابِلون
+    file: lessons/m1-l3.md
+    minutes: 20
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: اختر شركة تحب أن تعمل بها. ابحث عن خطوات المقابلة الحالية عندها (صفحات الوظائف وتجارب المرشحين الحديثة) واكتبها
+      قائمةً من التقديم حتى العرض. وبجوار كل خطوة، اكتب ما تحتاج أن تجهّزه لها. سلّم القائمة.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح لماذا يهم التفكير بصوت عالٍ في مقابلة البرمجة، مستخدمًا الأشياء الأربعة التي يكتبها المقابِلون عنك.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'اليوم 2: خبرتك وسيرتك الذاتية وقصصك'
+  lessons:
+  - id: m2-l1
+    title: 'قراءة: قبل المقابلة (الجزء IV)'
+    file: lessons/m2-l1.md
+    minutes: 30
+    media: ctci.pdf#pages=37-42
+  - id: m2-l2
+    title: سيرة ذاتية توصلك إلى المقابلة
+    file: lessons/m2-l2.md
+    minutes: 25
+  - id: m2-l3
+    title: 'الأسئلة السلوكية: قصصك جاهزة قبل المقابلة (الجزء V)'
+    file: lessons/m2-l3.md
+    minutes: 35
+    media: ctci.pdf#pages=43-48
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'أعد كتابة سيرتك الذاتية بقائمة مراجعة الدرس: صفحة واحدة، عمود واحد، نتيجة في كل نقطة. ثم ابنِ جدول استعدادك بخمس
+      قصص على الأقل، واكتب واحدة منها موقفًا ثم فعلًا ثم نتيجة. سلّم سيرتك الذاتية (PDF) وجدولك.'
+  - id: m2-explain
+    type: explain
+    prompt: اشرح ما الذي يجعل نقطة السيرة الذاتية قوية، وأعد كتابة نقطة ضعيفة من سيرتك كمثال.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'اليوم 3: Big O'
+  lessons:
+  - id: m3-l1
+    title: 'قراءة: Big O (الجزء VI)'
+    file: lessons/m3-l1.md
+    minutes: 45
+    media: ctci.pdf#pages=49-70
+  - id: m3-l2
+    title: 'بناء: شاهد Big O تحدث في Python'
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: حلّ عشرة على الأقل من أمثلة Big O وتمارينها في الكتاب قبل النظر في الإجابات. ثم اكتب دالتين في Python تحلان المهمة
+      نفسها في O(n²) وفي O(n)، وعدّ خطواتهما لأربعة أحجام من المدخلات كما في درس البناء، وسلّم الكود ونتيجته.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح، بمثال من عندك، لماذا قد تكون حلقة بداخلها `x in my_list` هي O(n²).
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'اليوم 4: طريقة لأي سؤال تقني'
+  lessons:
+  - id: m4-l1
+    title: 'قراءة: الأسئلة التقنية (الجزء VII)'
+    file: lessons/m4-l1.md
+    minutes: 40
+    media: ctci.pdf#pages=71-92
+  - id: m4-l2
+    title: 'بناء: مسألة واحدة، من الـ brute force إلى أفضل حل'
+    file: lessons/m4-l2.md
+    minutes: 40
+  - id: m4-l3
+    title: 'تدريب: مسائلك الخمس الأولى، بصوت عالٍ'
+    file: lessons/m4-l3.md
+    minutes: 60
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: حلّ مسائل LeetCode المذكورة في دروس اليوم، بمؤقت وبصوت عالٍ. سلّم رابط مستند أو مستودع فيه كودك لكل مسألة، والـ
+      Big O، والوقت الذي أخذته، وسطرًا عمّا فاتك.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح الـ best conceivable runtime (BCR) وكيف تخبرك متى تتوقف عن التحسين، مستخدمًا مسألة أسعار السهم.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'اليوم 5: هياكل البيانات (الفصول 1 إلى 4)'
+  lessons:
+  - id: m5-l1
+    title: الـ arrays والـ strings والـ hash tables (الفصل 1)
+    file: lessons/m5-l1.md
+    minutes: 40
+    media: ctci.pdf#pages=99-102
+  - id: m5-l2
+    title: الـ linked lists والـ stacks والـ queues (الفصلان 2 و3)
+    file: lessons/m5-l2.md
+    minutes: 40
+    media: ctci.pdf#pages=103-110
+  - id: m5-l3
+    title: الـ trees والـ graphs (الفصل 4)
+    file: lessons/m5-l3.md
+    minutes: 45
+    media: ctci.pdf#pages=111-122
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: حلّ مسائل LeetCode المذكورة في دروس اليوم، بمؤقت وبصوت عالٍ. سلّم رابط مستند أو مستودع فيه كودك لكل مسألة، والـ
+      Big O، والوقت الذي أخذته، وسطرًا عمّا فاتك.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح الفرق بين الـ depth-first search والـ breadth-first search، ومتى تختار كلًا منهما.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'اليوم 6: المفاهيم والخوارزميات (الفصول 5 و6 و8 و10)'
+  lessons:
+  - id: m6-l1
+    title: التعامل مع الـ bits، والرياضيات، والألغاز المنطقية (الفصلان 5 و6)
+    file: lessons/m6-l1.md
+    minutes: 35
+    media: ctci.pdf#pages=123-135
+  - id: m6-l2
+    title: الـ recursion والـ dynamic programming (الفصل 8)
+    file: lessons/m6-l2.md
+    minutes: 45
+    media: ctci.pdf#pages=141-147
+  - id: m6-l3
+    title: الترتيب والبحث (الفصل 10)
+    file: lessons/m6-l3.md
+    minutes: 35
+    media: ctci.pdf#pages=157-162
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: حلّ مسائل LeetCode المذكورة في دروس اليوم، بمؤقت وبصوت عالٍ. سلّم رابط مستند أو مستودع فيه كودك لكل مسألة، والـ
+      Big O، والوقت الذي أخذته، وسطرًا عمّا فاتك.
+  - id: m6-explain
+    type: explain
+    prompt: اشرح كيف تحوّل الـ memoization دالة recursive أُسّية إلى خطية، مستخدمًا مثال الدرج.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'اليوم 7: التصميم والاختبار وقواعد البيانات والـ threads (الفصول 7 و9 و11 و14 و15)'
+  lessons:
+  - id: m7-l1
+    title: تصميم الكائنات، Object-oriented design (الفصل 7)
+    file: lessons/m7-l1.md
+    minutes: 35
+    media: ctci.pdf#pages=136-140
+  - id: m7-l2
+    title: تصميم الأنظمة والقابلية للتوسع (الفصل 9)
+    file: lessons/m7-l2.md
+    minutes: 40
+    media: ctci.pdf#pages=148-156
+  - id: m7-l3
+    title: الاختبار، وقواعد البيانات، والـ threads والـ locks (الفصول 11 و14 و15)
+    file: lessons/m7-l3.md
+    minutes: 30
+    media: ctci.pdf#pages=163-191
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: اختر سؤال تصميم من الفصل 7 وآخر من الفصل 9 في الكتاب. لكل منهما، اكتب المتطلبات التي ستتفق عليها، ثم الـ classes
+      (الفصل 7) أو رسمًا بالأرقام والمقايضات (الفصل 9). واكتب كود الـ classes الأساسية للأول. سلّم ملاحظاتك والكود.
+  - id: m7-explain
+    type: explain
+    prompt: اشرح لماذا قد تضيع تحديثات `count += 1` حين تشغّلها thread اثنتان، وكيف يمنع الـ lock ذلك.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'اليوم 8: المقابلات التجريبية والعرض'
+  lessons:
+  - id: m8-l1
+    title: المقابلات التجريبية، وخطتك للأسابيع القادمة
+    file: lessons/m8-l1.md
+    minutes: 30
+  - id: m8-l2
+    title: 'قراءة: العرض وما بعده (الجزء VIII)'
+    file: lessons/m8-l2.md
+    minutes: 30
+    media: ctci.pdf#pages=93-97
+  - id: m8-l3
+    title: نظرة إلى الوراء، وماذا تفعل بعد ذلك
+    file: lessons/m8-l3.md
+    minutes: 10
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: أجرِ مقابلة تجريبية مدتها 45 دقيقة كمرشح، وأخرى كمقابِل، بمسألة Medium من قوائم الكورس. اكتب الملاحظات بأجزائها
+      الأربعة لكل منهما. ثم اكتب خطتك للأسابيع الستة بالتواريخ. سلّم الملاحظات والخطة.
+  - id: m8-explain
+    type: explain
+    prompt: اشرح كيف تقارن بين عرضَي عمل، وماذا ستقول لتتفاوض بأدب.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70

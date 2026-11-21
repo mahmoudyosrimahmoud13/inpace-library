@@ -1,0 +1,400 @@
+q1:
+  text: In the book's view, how is your answer to an interview question judged?
+  show: 4
+  options:
+    a: By how fast you start typing
+    b: Against a perfect answer, so any mistake fails
+    c: A hard question for you is probably hard for others too
+    d: Only by the hiring manager, without written feedback
+    e: Only on whether the final code runs
+    f: Relative to other candidates who got the same question
+q2:
+  text: Which of these are steps in a typical hiring loop?
+  show: 4
+  options:
+    a: A technical screen before the final round
+    b: An offer before any interview
+    c: A decision based on the interviewers' written feedback
+    d: Choosing your own interviewers
+    e: A final round with no coding at all, for every engineering role
+    f: A written exam on the company's history
+q3:
+  text: Which are among the four things a coding interviewer usually writes down?
+  show: 4
+  options:
+    a: Which editor you use
+    b: How many languages you know
+    c: Your typing speed
+    d: 'Communication: could they follow your thinking?'
+    e: 'Verification: did you test your own code?'
+    f: Your university grades
+q4:
+  text: A candidate solves the problem correctly but in silence. Why might they score lower than expected?
+  show: 4
+  options:
+    a: Interviewers only score talking
+    b: Silent candidates must restart
+    c: The interviewer can't see their problem solving
+    d: Correct answers are always marked down
+    e: There's little to write about communication
+    f: Silence is against the rules
+q5:
+  text: How should you use Part II's descriptions of specific companies?
+  show: 4
+  options:
+    a: 'Skip them: companies don''t have processes'
+    b: Read them for the common pattern
+    c: Treat them as rules all companies follow
+    d: Memorize them as today's exact process
+    e: Use them to pick questions you'll get
+    f: Check each company's current process before you interview
+q6:
+  text: Which CV bullets are strong?
+  show: 4
+  options:
+    a: Wrote 120 automated tests that caught 14 bugs before release
+    b: Worked on the backend
+    c: Cut API response time from 900 ms to 200 ms by adding caching
+    d: Hard-working team player
+    e: Used many technologies
+    f: Responsible for testing
+q7:
+  text: Why use a plain, one-column CV layout?
+  show: 4
+  options:
+    a: Icons are always better
+    b: It's quicker for a recruiter to scan
+    c: It makes the CV longer
+    d: Columns are against the law
+    e: Recruiters only read the first line
+    f: Software (an ATS) often reads CVs first and can be confused by tables and columns
+q8:
+  text: In a behavioral answer, what should you do?
+  show: 4
+  options:
+    a: Spend most of the time on what YOU did
+    b: Pick a hidden strength when asked about a weakness
+    c: Talk for at least ten minutes
+    d: Say 'we' throughout so you sound humble
+    e: Avoid giving any results
+    f: Lead with a one-sentence summary of the story
+q9:
+  text: How many prepared stories does the lesson suggest you need?
+  show: 4
+  options:
+    a: At least thirty
+    b: Enough that one story can cover several themes
+    c: 'None: improvise'
+    d: Only your most recent job
+    e: Exactly one per possible question
+    f: Five to eight
+q10:
+  text: What makes a project count well on a CV?
+  show: 4
+  options:
+    a: It's unfinished but ambitious
+    b: It was copied from a tutorial unchanged
+    c: You can explain every part of it in depth
+    d: It has no README, to look mysterious
+    e: It's finished and runnable, with a good README
+    f: It uses as many frameworks as possible
+q11:
+  text: Which statements about Big O are correct?
+  show: 4
+  options:
+    a: Big O measures seconds on your computer
+    b: O(n² + n) simplifies to O(n²)
+    c: O(log n) grows faster than O(n)
+    d: O(n²) is faster than O(n) for large n
+    e: O(n + m) simplifies to O(n) always
+    f: O(2n) simplifies to O(n)
+q12:
+  text: In the Build lesson, n went from 1,000 to 2,000. What happened?
+  show: 4
+  options:
+    a: Both did the same work
+    b: The pairs version did half the work
+    c: Neither changed
+    d: The set version did four times the work
+    e: The pairs version did about four times the work
+    f: The set version did about twice the work
+q13:
+  text: Binary search on a sorted list of 1,000,000,000 items needed 30 steps. Why so few?
+  show: 4
+  options:
+    a: 2 to the power 30 is about a billion
+    b: It only works on small lists
+    c: It skips the first billion items
+    d: Each step halves the remaining items
+    e: It reads every item very fast
+    f: It uses a hash table
+q14:
+  text: Which of these are true about the recursive Fibonacci example?
+  show: 4
+  options:
+    a: The slow version is O(n)
+    b: With memoization, each value is computed once, so O(n)
+    c: Both versions make the same number of calls
+    d: Recursion can never be fast
+    e: Without memory, the number of calls grows exponentially
+    f: Memoization makes it slower
+q15:
+  text: You loop over list a and, inside, over a different list b. What's the time?
+  show: 4
+  options:
+    a: O(1)
+    b: O(a²) always
+    c: O(log a)
+    d: Not O(n²) unless a and b have the same size
+    e: O(a + b)
+    f: O(a · b)
+q16:
+  text: In 'Look for BUD', what do the letters stand for?
+  show: 4
+  options:
+    a: Binary search
+    b: Big O, upper bound
+    c: Debugging
+    d: Duplicated work
+    e: Undo the last step
+    f: Bottlenecks and Unnecessary work
+q17:
+  text: Which steps come BEFORE writing code in the method?
+  show: 4
+  options:
+    a: Ask for the answer
+    b: Walk through the plan on your example
+    c: Optimize the variable names
+    d: Submit the code
+    e: Test edge cases on the finished code
+    f: State a brute force and its Big O
+q18:
+  text: For the stock price problem, why is O(n) the best conceivable runtime?
+  show: 4
+  options:
+    a: Any price could be the best day to buy or sell
+    b: Because the answer is a single number
+    c: Every price must be looked at at least once
+    d: Because sorting is O(n)
+    e: Because the brute force is O(n)
+    f: Because O(1) is impossible for every problem
+q19:
+  text: What made the fast stock solution possible?
+  show: 4
+  options:
+    a: A hash table of all prices
+    b: Trying every pair
+    c: Keeping a running minimum while walking the list
+    d: Sorting the prices first
+    e: Only the cheapest earlier price matters for each day
+    f: A recursive search
+q20:
+  text: 'Good ways to test interview code include:'
+  show: 4
+  options:
+    a: Asking the interviewer to test it
+    b: Skipping edge cases to save time
+    c: Comparing against a brute force you trust on many random inputs
+    d: Walking through your example by hand
+    e: Only running it once on the given example
+    f: Testing only very large inputs
+q21:
+  text: Why is appending to a Python list O(1) on average?
+  show: 4
+  options:
+    a: Python never moves a list in memory
+    b: The rare expensive moves are spread over many cheap appends
+    c: Lists have a fixed size
+    d: The list keeps spare room and grows in bigger steps
+    e: Appending is always O(n)
+    f: Lists are linked lists
+q22:
+  text: What do slow and fast pointers (the runner technique) find in a linked list?
+  show: 4
+  options:
+    a: The largest value
+    b: The k-th largest value directly
+    c: The middle node
+    d: Whether there's a cycle
+    e: The length of every node
+    f: The list sorted
+q23:
+  text: Which statements about a binary search tree are true?
+  show: 4
+  options:
+    a: Every node must have two children
+    b: Validity depends on whole subtrees, not just each parent and child
+    c: The root is always the smallest value
+    d: It's always balanced
+    e: An in-order traversal visits the values in sorted order
+    f: Checking each node against its children is enough
+q24:
+  text: When should you use breadth-first search?
+  show: 4
+  options:
+    a: To reverse a linked list
+    b: To sort a list
+    c: When edges have different weights and you need the cheapest path
+    d: 'Never: DFS is always better'
+    e: To visit nodes in order of distance from the start
+    f: To find the shortest path when every edge has the same length
+q25:
+  text: A topological sort (build order) returns None in the lesson. Why?
+  show: 4
+  options:
+    a: No task is left without prerequisites
+    b: The dependencies contain a cycle
+    c: There are too many tasks
+    d: The tasks are already sorted
+    e: Python ran out of memory
+    f: The graph has no edges
+q26:
+  text: Which are true about bit tricks?
+  show: 4
+  options:
+    a: ~x equals x in Python
+    b: Shifting left divides by 2
+    c: x ^ x equals x
+    d: n | 1 always doubles n
+    e: n & (n - 1) clears the lowest set bit
+    f: XOR-ing a list where every value appears twice except one leaves that one
+q27:
+  text: The plain recursive stairs function made 433,993 calls for n = 20. What fixes it?
+  show: 4
+  options:
+    a: Adding more base cases only
+    b: Sorting the input
+    c: Using a bigger computer
+    d: Filling a table from the smallest case (bottom-up DP)
+    e: Using BFS
+    f: Memoizing each answer (top-down DP)
+q28:
+  text: In backtracking, what are the three moves at each step?
+  show: 4
+  options:
+    a: Undo the choice afterwards
+    b: Always pick the largest item
+    c: Make a choice, then explore from it
+    d: Stop at the first answer even when all are needed
+    e: Copy the whole input at every step
+    f: Sort the input first
+q29:
+  text: Why merge from the back when array A has empty space at its end?
+  show: 4
+  options:
+    a: Front merging is O(n³)
+    b: It works in place, with O(1) extra space
+    c: It's the only way to sort
+    d: It makes the result reversed
+    e: B must be empty
+    f: Filling from the back never overwrites values of A you still need
+q30:
+  text: Which sorting facts are correct?
+  show: 4
+  options:
+    a: Quick sort can be O(n²) in the worst case
+    b: Quick sort is always stable
+    c: Python's sorted is O(n²)
+    d: Merge sort uses no extra space
+    e: Merge sort is O(n log n) even in the worst case
+    f: Bubble sort is O(n log n)
+q31:
+  text: In an object-oriented design question, what should you do first?
+  show: 4
+  options:
+    a: Write every class at once
+    b: Choose a design pattern
+    c: Draw the user interface
+    d: Agree on who uses the system and how
+    e: Ask questions to clear up the requirements
+    f: Start with the database schema
+q32:
+  text: 'Good habits in object-oriented design include:'
+  show: 4
+  options:
+    a: Avoiding methods
+    b: Using inheritance for every relationship
+    c: Giving each class one clear job
+    d: Preferring composition (has-a) unless 'is a' is real
+    e: Putting all logic in one big class
+    f: Making every class a singleton
+q33:
+  text: In the URL shortener, why add a cache?
+  show: 4
+  options:
+    a: Writes are more common than reads
+    b: Reads are far more common than writes
+    c: It removes the need for a database
+    d: The database can't store URLs
+    e: A small share of links gets most of the visits
+    f: Caches never go stale
+q34:
+  text: What did the LEFT JOIN do in the SQL example?
+  show: 4
+  options:
+    a: It sorted by name only
+    b: It created a new table
+    c: It kept students with no enrollments
+    d: It counted rows twice
+    e: Sara appeared with 0 courses
+    f: It dropped students without enrollments
+q35:
+  text: Which are true about threads and locks?
+  show: 4
+  options:
+    a: Deadlock means a thread finished early
+    b: Taking locks in a fixed order prevents deadlock
+    c: Without a lock, two threads can both read 0 and both write 1
+    d: Race conditions always show up in testing
+    e: Locks make every program faster
+    f: count += 1 is a single, safe step
+q36:
+  text: 'Good practice for mock interviews includes:'
+  show: 4
+  options:
+    a: Only saying 'good job'
+    b: Taking turns as the interviewer
+    c: Giving the full answer after one minute
+    d: Writing specific feedback in four parts
+    e: Using a problem the candidate already solved
+    f: Skipping the Big O question
+q37:
+  text: Why apply to several companies at about the same time?
+  show: 4
+  options:
+    a: Early interviews become practice for later ones
+    b: It means you can skip preparation
+    c: Companies require it
+    d: It avoids technical screens
+    e: It guarantees an offer
+    f: Offers arrive close together, which helps you compare and negotiate
+q38:
+  text: You're rejected after a final round. What does the course suggest?
+  show: 4
+  options:
+    a: Assume you're not good enough
+    b: Ask the recruiter if they can share feedback, and note the topics in your log
+    c: Never apply to that company again
+    d: Argue with the decision
+    e: Stop preparing
+    f: Remember you can usually apply again after six months to a year
+q39:
+  text: When comparing offers, what should you look at?
+  show: 4
+  options:
+    a: Only the job title
+    b: Only the base salary
+    c: 'The whole package: salary, bonus, equity and benefits'
+    d: Only the office location
+    e: Only the company logo
+    f: 'Growth: what you''ll learn and who your manager is'
+q40:
+  text: Which are good negotiation habits?
+  show: 4
+  options:
+    a: Being specific and polite about what you're asking for
+    b: Using other offers as your strongest argument
+    c: Refusing to talk about anything but salary
+    d: Lying about other offers
+    e: Accepting, then continuing to negotiate
+    f: Giving a number before any research

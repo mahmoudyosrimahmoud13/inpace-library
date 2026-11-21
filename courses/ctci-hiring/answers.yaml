@@ -1,0 +1,201 @@
+q1:
+  right:
+  - c
+  - f
+  why: 'Part I''s ''It''s all relative'': you''re compared with others on the same question, so a calm attempt at a hard one
+    can still score well.'
+q2:
+  right:
+  - a
+  - c
+  why: 'The usual shape: CV screen, recruiter call, technical screen, final interviews, then a decision from written feedback.'
+q3:
+  right:
+  - d
+  - e
+  why: 'The four: problem solving, coding, verification, communication.'
+q4:
+  right:
+  - c
+  - e
+  why: Without your reasoning out loud, three of the four feedback areas have no evidence.
+q5:
+  right:
+  - b
+  - f
+  why: Processes change; the pattern (screen, several interviews, a decision from feedback) lasts.
+q6:
+  right:
+  - a
+  - c
+  why: Strong bullets say what you did and what came of it, with numbers.
+q7:
+  right:
+  - b
+  - f
+  why: Simple layouts survive both automatic parsing and a quick human scan.
+q8:
+  right:
+  - a
+  - f
+  why: 'Situation, action, result: lead with the point, focus on your actions, end with the result.'
+q9:
+  right:
+  - b
+  - f
+  why: A grid of 5 to 8 solid stories covers almost any behavioral question.
+q10:
+  right:
+  - c
+  - e
+  why: 'Finished, real and yours: projects you can discuss in depth are experience.'
+q11:
+  right:
+  - b
+  - f
+  why: Drop constants and non-dominant terms; Big O describes growth.
+q12:
+  right:
+  - e
+  - f
+  why: 499,500 to 1,999,000 steps for the pairs version (n²); 1,000 to 2,000 for the set version (n).
+q13:
+  right:
+  - a
+  - d
+  why: 'O(log n): halving each step, so a billion items take about 30 steps.'
+q14:
+  right:
+  - b
+  - e
+  why: fib(25) took 242,785 calls without memory and 49 with it.
+q15:
+  right:
+  - d
+  - f
+  why: Two different inputs need two letters; nested loops multiply.
+q16:
+  right:
+  - d
+  - f
+  why: 'BUD: Bottlenecks, Unnecessary work, Duplicated work.'
+q17:
+  right:
+  - b
+  - f
+  why: Listen, example, brute force, optimize, walk through, then implement and test.
+q18:
+  right:
+  - a
+  - c
+  why: You can't skip a price, so nothing beats O(n), and the running-minimum solution reaches it.
+q19:
+  right:
+  - c
+  - e
+  why: 'Removing unnecessary work: for each sell day, only the lowest earlier price matters.'
+q20:
+  right:
+  - c
+  - d
+  why: Hand walk-through, edge cases, and comparison against a trusted brute force.
+q21:
+  right:
+  - b
+  - d
+  why: 'Amortized O(1): only 8 of 64 appends in the lesson needed new memory.'
+q22:
+  right:
+  - c
+  - d
+  why: When fast reaches the end, slow is in the middle; in a cycle, fast catches slow.
+q23:
+  right:
+  - b
+  - e
+  why: The BST rule covers whole subtrees, so pass down an allowed range.
+q24:
+  right:
+  - e
+  - f
+  why: BFS with a queue visits by distance, so it finds shortest unweighted paths.
+q25:
+  right:
+  - a
+  - b
+  why: With a cycle, some tasks always wait for each other, so no order exists.
+q26:
+  right:
+  - e
+  - f
+  why: n & (n - 1) drops the lowest 1; XOR cancels pairs because x ^ x is 0.
+q27:
+  right:
+  - d
+  - f
+  why: Repeated subproblems are the signal for dynamic programming; both versions are O(n).
+q28:
+  right:
+  - a
+  - c
+  why: 'Choose, explore, undo: that builds every answer.'
+q29:
+  right:
+  - b
+  - f
+  why: The free space is at the end, so writing there first is safe.
+q30:
+  right:
+  - a
+  - e
+  why: 'Merge sort: O(n log n) always, O(n) space; quick sort: fast in practice, O(n²) worst case.'
+q31:
+  right:
+  - d
+  - e
+  why: Handle ambiguity first; the requirements decide the design.
+q32:
+  right:
+  - c
+  - d
+  why: Clear responsibilities and composition keep a design easy to extend.
+q33:
+  right:
+  - b
+  - e
+  why: Caching popular codes makes the common case fast, at the cost of possibly stale data.
+q34:
+  right:
+  - c
+  - e
+  why: A left join keeps every row from the left table; an inner join would drop Sara.
+q35:
+  right:
+  - b
+  - c
+  why: Read-add-write can interleave; consistent lock order avoids circular waiting.
+q36:
+  right:
+  - b
+  - d
+  why: Being the interviewer teaches you what they look for; specific feedback improves you fastest.
+q37:
+  right:
+  - a
+  - f
+  why: Batching applications gives you choices and leverage.
+q38:
+  right:
+  - b
+  - f
+  why: Interviews are noisy; learn from it and apply again later.
+q39:
+  right:
+  - c
+  - f
+  why: Compare the whole package against your own priorities.
+q40:
+  right:
+  - a
+  - b
+  why: Polite, specific, backed by other offers, and you keep your word once you accept.
