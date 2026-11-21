@@ -1,0 +1,193 @@
+id: german-a2
+title: 'German A2: talk about the past and explain why'
+version: 1
+language: en
+description: 'German level A2, taught in English with the same research-based method as A1: a real conversation first, the
+  phrases people use, one grammar point per unit, a voice note every unit, and review from memory. Tell what you did (the
+  Perfekt with haben and sein), use the dative, compare and buy clothes, talk to a doctor and give reasons with weil and dass,
+  and move into a flat with the two-way prepositions. Ends with an A2 level check. About 2 weeks at 45 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'DW Learn German: free courses from A1 to B1, including the video series Nicos Weg'
+  url: https://learngerman.dw.com/
+- title: 'Easy German: street interviews with subtitles (YouTube)'
+  url: https://www.youtube.com/@EasyGerman
+- title: 'dict.cc: German dictionary with audio pronunciation'
+  url: https://www.dict.cc/
+modules:
+- id: m1
+  title: 'Unit 1: Last weekend'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how this course works'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: What did you do?
+    file: lessons/m1-l2.md
+    minutes: 35
+  - id: m1-l3
+    title: The Perfekt with haben
+    file: lessons/m1-l3.md
+    minutes: 40
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): last weekend, with at least six verbs in the Perfekt. Upload it.'
+  - id: m1-explain
+    type: explain
+    prompt: Write 5 sentences in German about what you did yesterday.
+    min_words: 30
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Unit 2: A trip'
+  lessons:
+  - id: m2-l1
+    title: Telling the story of a trip
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: The Perfekt with sein, and war / hatte
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Voice note (90 seconds): the story of a trip. Upload it.'
+  - id: m2-explain
+    type: explain
+    prompt: Write 6 sentences in German about a trip, using at least three verbs with sein and war or hatte.
+    min_words: 35
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Unit 3: Helping and giving'
+  lessons:
+  - id: m3-l1
+    title: A birthday present
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: The dative
+    file: lessons/m3-l2.md
+    minutes: 40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): presents for three people, with dative forms. Upload it.'
+  - id: m3-explain
+    type: explain
+    prompt: Write 5 sentences in German with mit, nach, zu and helfen or gefallen.
+    min_words: 25
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Unit 4: Shopping for clothes'
+  lessons:
+  - id: m4-l1
+    title: In a clothes shop
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Comparisons and adjective endings
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): a shop conversation (both roles) and a comparison. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Write 5 sentences in German comparing two places, with als, so... wie and am ...sten.
+    min_words: 30
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Unit 5: At the doctor''s'
+  lessons:
+  - id: m5-l1
+    title: I don't feel well
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: weil, dass, sollen and the Sie imperative
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): calling in sick, at the doctor''s, and advice for a friend. Upload it.'
+  - id: m5-explain
+    type: explain
+    prompt: Write 5 sentences in German with weil or dass about your health habits or a time you were ill.
+    min_words: 30
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Unit 6: A new flat'
+  lessons:
+  - id: m6-l1
+    title: Moving in
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: 'Two-way prepositions: wo? and wohin?'
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'Level check: can you do A2?'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Voice note (90 seconds): your home and where things are or will go. Upload it.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Write 6 sentences in German about your room: three with wo? (dative) and three with wohin? (accusative).'
+    min_words: 30
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

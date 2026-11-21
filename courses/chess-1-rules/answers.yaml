@@ -1,0 +1,80 @@
+q1:
+  right:
+  - c
+  why: 'Queen on her color: d1 is a light square.'
+q2:
+  right:
+  - c
+  why: 7 on its file plus 7 on its rank.
+q3:
+  right:
+  - a
+  why: It moves straight but captures diagonally.
+q4:
+  right:
+  - c
+  why: The knight's L-move ignores pieces in between.
+q5:
+  right:
+  - d
+  why: Knight 3, rook 5.
+q6:
+  right:
+  - c
+  why: The king moves two squares toward the rook; the rook goes to f1.
+q7:
+  right:
+  - d
+  why: Also not through or into check, or after the king or rook moved.
+q8:
+  right:
+  - b
+  why: Miss that one move and the chance is gone.
+q9:
+  right:
+  - c
+  why: Stalemate ends the game in a draw.
+q10:
+  right:
+  - b
+  why: A single bishop can never mate.
+q11:
+  right:
+  - a
+  why: The extra letter tells which knight.
+q12:
+  right:
+  - b
+  why: Pawn captures name the file they come from.
+q13:
+  right:
+  - a
+  why: A back-rank mate.
+q14:
+  right:
+  - c
+  why: 3...Nf6?? allows Qxf7#; 3...g6 attacks the queen.
+q15:
+  right:
+  - d
+  why: Always leave the enemy king a move until you give mate.
+q16:
+  right:
+  - a
+  why: It takes the center and opens lines for the queen and bishop.
+q17:
+  right:
+  - c
+  why: Center, develop, castle.
+q18:
+  right:
+  - c
+  why: Every queen move gives you a free developing move.
+q19:
+  right:
+  - a
+  why: Find threats before you plan.
+q20:
+  right:
+  - d
+  why: Rapid gives time to think and learn.

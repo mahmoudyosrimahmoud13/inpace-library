@@ -1,0 +1,194 @@
+id: spanish-a1
+title: 'Spanish from zero: level A1'
+version: 1
+language: en
+description: 'Spanish for complete beginners, taught in English with a research-based method: listen to a real conversation
+  first, learn the phrases people actually use, one grammar point per unit, a voice note every unit, and review from memory.
+  Greetings, family, your day, the city, food and shopping, and plans, with ser, estar, tener, the present tense, gustar and
+  ir a. Ends with an A1 level check. About 2 weeks at 45 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'Dreaming Spanish: free videos sorted by level, from complete beginner up'
+  url: https://www.dreaming.com/
+- title: 'Easy Spanish: street interviews with subtitles (YouTube)'
+  url: https://www.youtube.com/@EasySpanish
+- title: 'SpanishDict: dictionary, conjugation tables and pronunciation'
+  url: https://www.spanishdict.com/
+modules:
+- id: m1
+  title: 'Unit 1: Hello, I''m...'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how this course works'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: Meeting someone new
+    file: lessons/m1-l2.md
+    minutes: 35
+  - id: m1-l3
+    title: 'Ser and me llamo: who are you?'
+    file: lessons/m1-l3.md
+    minutes: 40
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Voice note (30 seconds): greet, introduce yourself (name, country, city, job), ask the other person''s name and
+      say goodbye. Upload the recording.'
+  - id: m1-explain
+    type: explain
+    prompt: Write 4 to 6 sentences in Spanish introducing yourself, using soy, me llamo and vivo en.
+    min_words: 20
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Unit 2: My family'
+  lessons:
+  - id: m2-l1
+    title: Talking about your family
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Tener, el / la, and words that agree
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Voice note (45 seconds): describe your family (names, ages, jobs, one adjective each). Upload the recording.'
+  - id: m2-explain
+    type: explain
+    prompt: Write 5 sentences in Spanish about one person in your family.
+    min_words: 25
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Unit 3: My day'
+  lessons:
+  - id: m3-l1
+    title: A normal day
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: 'The present tense: -ar, -er, -ir'
+    file: lessons/m3-l2.md
+    minutes: 40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Voice note (45 seconds): your typical day with times and at least six verbs. Upload it.'
+  - id: m3-explain
+    type: explain
+    prompt: Write 5 sentences in Spanish about what a friend does every day (él/ella forms).
+    min_words: 25
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Unit 4: Around town'
+  lessons:
+  - id: m4-l1
+    title: Asking the way
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Hay or está? Ser or estar?
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Voice note (45 seconds): directions from your home to a nearby place. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Write 5 sentences in Spanish describing your street or neighbourhood, using hay and está.
+    min_words: 25
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Unit 5: Food and shopping'
+  lessons:
+  - id: m5-l1
+    title: At the café
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: 'Gustar: I like, you like'
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): a café order (both roles), then your food likes and dislikes. Upload it.'
+  - id: m5-explain
+    type: explain
+    prompt: Write 5 sentences in Spanish about what you and people you know like and don't like.
+    min_words: 25
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Unit 6: Plans'
+  lessons:
+  - id: m6-l1
+    title: Making plans for the weekend
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: Ir a + verb, and verbs that change their vowel
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'Level check: can you do A1?'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): invite a friend for the weekend and say your other plans. Upload it.'
+  - id: m6-explain
+    type: explain
+    prompt: Write 5 sentences in Spanish about your plans for next week, using voy a.
+    min_words: 25
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

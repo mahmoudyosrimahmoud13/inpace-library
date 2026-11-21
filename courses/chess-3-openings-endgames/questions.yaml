@@ -1,0 +1,160 @@
+q1:
+  text: 'In the Italian Game, White''s bishop on c4 aims at:'
+  show: 4
+  options:
+    a: f7
+    b: e5
+    c: h7
+    d: a8
+q2:
+  text: 'After 4. Ng5 d5 5. exd5 in the Two Knights, Black''s best move is:'
+  show: 4
+  options:
+    a: 5... Na5
+    b: 5... Ke7
+    c: 5... Qxd5
+    d: 5... Nxd5
+q3:
+  text: Why does White often play h3 in the Italian?
+  show: 4
+  options:
+    a: To open the h-file for a rook
+    b: To stop ...Bg4 pinning the knight
+    c: To castle queenside
+    d: To attack the queen
+q4:
+  text: 'After 1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. Nxe5, Black plays:'
+  show: 4
+  options:
+    a: 5... Qe7
+    b: 5... Qd4
+    c: 5... Bd6
+    d: 5... f6
+q5:
+  text: 'In the Elephant Trap, White''s 6. Nxd5? loses because:'
+  show: 4
+  options:
+    a: The knight was pinned to the king
+    b: It was stalemate
+    c: White's king was in check
+    d: The pin on the f6 knight was only relative
+q6:
+  text: 'A pawn with no friendly pawns on the files next to it is:'
+  show: 4
+  options:
+    a: Isolated
+    b: Backward
+    c: Passed
+    d: Doubled
+q7:
+  text: 'A pawn with no enemy pawns in front of it or on the next files is:'
+  show: 4
+  options:
+    a: Passed
+    b: Hanging
+    c: Isolated
+    d: Doubled
+q8:
+  text: 'Rooks belong:'
+  show: 4
+  options:
+    a: In front of your own pawns
+    b: On open files
+    c: In the corners
+    d: Behind closed pawns
+q9:
+  text: 'Your pawns are on dark squares. Your dark-squared bishop is:'
+  show: 4
+  options:
+    a: Bad
+    b: Unaffected
+    c: Always strong
+    d: Good
+q10:
+  text: 'The first question in the middlegame routine is:'
+  show: 4
+  options:
+    a: Is there a tactic?
+    b: Where do my pawns point?
+    c: Where is my worst piece?
+    d: What time is it?
+q11:
+  text: 'The key squares of a white pawn on e4 are:'
+  show: 4
+  options:
+    a: d5, e5 and f5
+    b: d8, e8 and f8
+    c: d6, e6 and f6
+    d: e5 and e6
+q12:
+  text: 'White: Ke5, Pe4. Black: Ke7. White to move. The result with best play is:'
+  show: 4
+  options:
+    a: A draw
+    b: It depends on time
+    c: White wins
+    d: Black wins
+q13:
+  text: 'A king on f5, Black to move, and a white pawn on a4 with White''s king far away. ...Ke5:'
+  show: 4
+  options:
+    a: Gives stalemate
+    b: Is illegal
+    c: Is too slow
+    d: Catches the pawn
+q14:
+  text: 'In the Lucena position, the winning method is called:'
+  show: 4
+  options:
+    a: The rule of the square
+    b: The Philidor defense
+    c: Zugzwang
+    d: Building a bridge
+q15:
+  text: 'In rook endgames, a rook belongs:'
+  show: 4
+  options:
+    a: Next to its king
+    b: Behind passed pawns
+    c: In front of passed pawns
+    d: On the first rank always
+q16:
+  text: 'When converting a material advantage, you should trade:'
+  show: 4
+  options:
+    a: Nothing
+    b: Only queens for rooks
+    c: Pawns, not pieces
+    d: Pieces, not pawns
+q17:
+  text: 'King, light-squared bishop and h-pawn against a king in the h8 corner is usually:'
+  show: 4
+  options:
+    a: A draw
+    b: Checkmate in 2
+    c: A loss
+    d: A win
+q18:
+  text: 'Bishops usually prefer:'
+  show: 4
+  options:
+    a: Closed, blocked positions
+    b: Only the endgame
+    c: Being in front of their own pawns
+    d: Open positions with pawns on both wings
+q19:
+  text: 'The fastest way to improve is:'
+  show: 4
+  options:
+    a: Analyzing your own games
+    b: Watching random videos
+    c: Memorizing long opening lines
+    d: Playing only bullet
+q20:
+  text: 'When you analyze a game, first:'
+  show: 4
+  options:
+    a: Turn on the engine at move 1
+    b: Skip the lost games
+    c: Only look at the final position
+    d: Go through it on your own, without an engine

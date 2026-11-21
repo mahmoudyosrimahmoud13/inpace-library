@@ -1,0 +1,15 @@
+id: german-from-zero
+title: German from zero to B1
+description: Three courses in order, explained in English, from your first Hallo to giving your opinion and applying for a job. Every unit starts with listening and ends with a voice note, with the free DW course Nicos Weg alongside.
+language: en
+author: inPace
+official: true
+order: 29
+tags: [german, speaking, listening, beginner]
+steps:
+  - course: german-a1
+    note: "From zero: greetings, family, your day, the city, food and appointments, with word order, the accusative and modal verbs."
+  - course: german-a2
+    note: The Perfekt, the dative, comparisons, the doctor, weil and dass, and moving into a flat.
+  - course: german-b1
+    note: Opinions and connectors, Konjunktiv II, relative clauses, the passive, applications and goals.

@@ -1,120 +1,120 @@
 q1:
   right:
-  - a
-  - b
-  why: zuständig für + Akkusativ، و das Marketing.
+  - d
+  why: trotzdem في الموقع 1 ← الفعل بعدها.
 q2:
   right:
-  - a
   - b
-  why: صيغ الاعتراض.
+  why: obwohl ← الفعل في الآخر.
 q3:
   right:
-  - a
   - b
-  why: ob والفعل في الآخر.
+  why: تعطي نتيجة.
 q4:
   right:
-  - a
   - b
-  why: Erfahrung in / mit.
+  why: Meiner Meinung nach في الموقع 1 ← الفعل بعدها.
 q5:
   right:
-  - a
   - b
-  why: gehen → ging.
+  why: طريقة مهذبة للاعتراض.
 q6:
   right:
-  - a
-  - b
-  why: حركة → war + Partizip، و als لمرة واحدة.
+  - c
+  why: شرط غير حقيقي مع sein ← wäre.
 q7:
   right:
-  - a
-  - b
-  why: nachdem + Plusquamperfekt.
+  - c
+  why: Konjunktiv II = مهذب.
 q8:
   right:
-  - a
   - b
-  why: schreiben → schrieb.
+  why: أمنية مهذبة.
 q9:
   right:
-  - a
-  - b
-  why: مفعول مذكر → den، والفعل في الآخر.
+  - c
+  why: würde + المصدر في الجملة الرئيسية.
 q10:
   right:
-  - a
-  - b
-  why: mit + Dativ مؤنث → mit der.
+  - c
+  why: Konjunktiv II = غير حقيقي.
 q11:
   right:
-  - a
-  - b
-  why: بعد alles → was.
+  - d
+  why: فاعل في الجملة، مذكر ← der.
 q12:
   right:
-  - a
   - b
-  why: wo(r) + über للأشياء.
+  why: مفعول لـ gesehen، مذكر ← den.
 q13:
   right:
-  - a
-  - b
-  why: hätte gewusst، و kommen مع wäre.
+  - c
+  why: mit + جر، مؤنث ← der.
 q14:
   right:
-  - a
-  - b
-  why: hätte + مصدر + sollen.
+  - d
+  why: مثل weil وdass.
 q15:
   right:
-  - a
-  - b
-  why: als ob + Konjunktiv II في الآخر.
+  - c
+  why: بعد alles ← was.
 q16:
   right:
   - a
-  - b
-  why: Konjunktiv II للأدب.
+  why: 'المجهول: werden + اسم المفعول؛ der Müll ← wird.'
 q17:
   right:
   - a
-  - b
-  why: 'Präteritum Passiv: wurde + Partizip.'
+  why: wurde + اسم المفعول.
 q18:
   right:
-  - a
-  - b
-  why: فعل شكلي + Partizip + werden.
+  - d
+  why: von = بواسطة (الفاعل).
 q19:
   right:
-  - a
-  - b
-  why: الصيغة الرسمية القياسية.
+  - c
+  why: مساعد + اسم المفعول + werden.
 q20:
   right:
-  - a
-  - b
-  why: der Lebenslauf → meinen (Akkusativ).
+  - d
+  why: werden + اسم = يصبح.
 q21:
   right:
-  - a
   - b
-  why: 'obwohl: الفعل في الآخر ثم فعل؛ trotzdem: الفعل بعده.'
+  why: 'فعل قوي: ging.'
 q22:
   right:
   - a
-  - b
-  why: فاعل مختلف → damit.
+  why: 'فعل ضعيف: الجذر + -te.'
 q23:
   right:
   - a
-  - b
-  why: je + فعل في الآخر، desto + فعل مباشرة.
+  why: حدث واحد في الماضي ← als.
 q24:
   right:
-  - a
+  - c
+  why: الأحداث المتكررة ← wenn.
+q25:
+  right:
   - b
-  why: 'wegen + Genitiv: des Wetters.'
+  why: الختام الرسمي المعتاد.
+q26:
+  right:
+  - b
+  why: نفس الفاعل + مصدر مع zu ← um... zu.
+q27:
+  right:
+  - b
+  why: فاعلان مختلفان ← damit.
+q28:
+  right:
+  - b
+  why: سؤال غير مباشر ← الفعل في الآخر.
+q29:
+  right:
+  - a
+  why: ob = هل / إن كان.
+q30:
+  right:
+  - b
+  why: zu تأتي بين البادئة والفعل.

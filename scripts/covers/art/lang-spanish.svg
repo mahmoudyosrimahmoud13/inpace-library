@@ -1,0 +1,35 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="50" width="390" height="92" rx="26" fill="#fff1ea"/></g>
+<path d="M80,138 l-10,26 l34,-26 z" fill="#fff1ea"/>
+<text x="64" y="106" font-family="JBM" font-size="21" fill="#3a1408">¡Hola! Me llamo Lucía.</text>
+<rect x="356" y="80" width="52" height="32" rx="8" fill="#3a1408"/><text x="382" y="103" text-anchor="middle" font-family="JBM" font-weight="700" font-size="18" fill="#fff1ea">A1</text>
+<g filter="url(#s)"><rect x="90" y="178" width="390" height="92" rx="26" fill="#ffbfa3"/></g>
+<path d="M440,266 l10,26 l-34,-26 z" fill="#ffbfa3"/>
+<text x="114" y="234" font-family="JBM" font-size="21" fill="#3a1408">Ayer fui a Granada.</text>
+<rect x="406" y="208" width="52" height="32" rx="8" fill="#3a1408"/><text x="432" y="231" text-anchor="middle" font-family="JBM" font-weight="700" font-size="18" fill="#fff1ea">A2</text>
+<g filter="url(#s)"><rect x="40" y="306" width="390" height="92" rx="26" fill="#fff1ea"/></g>
+<path d="M80,394 l-10,26 l34,-26 z" fill="#fff1ea"/>
+<text x="64" y="362" font-family="JBM" font-size="21" fill="#3a1408">Ojalá tengas suerte.</text>
+<rect x="356" y="336" width="52" height="32" rx="8" fill="#3a1408"/><text x="382" y="359" text-anchor="middle" font-family="JBM" font-weight="700" font-size="18" fill="#fff1ea">B1</text>
+<g filter="url(#s)"><rect x="90" y="440" width="340" height="70" rx="35" fill="#3a1408"/></g>
+<circle cx="128" cy="475" r="18" fill="#ffbfa3"/><path d="M122,465 l16,10 l-16,10 z" fill="#3a1408"/>
+<rect x="165" y="468.5" width="6" height="13" rx="3" fill="#fff1ea"/>
+<rect x="178" y="467.0" width="6" height="16" rx="3" fill="#fff1ea"/>
+<rect x="191" y="462.5" width="6" height="25" rx="3" fill="#fff1ea"/>
+<rect x="204" y="461.0" width="6" height="28" rx="3" fill="#fff1ea"/>
+<rect x="217" y="467.5" width="6" height="15" rx="3" fill="#fff1ea"/>
+<rect x="230" y="463.5" width="6" height="23" rx="3" fill="#fff1ea"/>
+<rect x="243" y="469.0" width="6" height="12" rx="3" fill="#fff1ea"/>
+<rect x="256" y="458.5" width="6" height="33" rx="3" fill="#fff1ea"/>
+<rect x="269" y="459.0" width="6" height="32" rx="3" fill="#fff1ea"/>
+<rect x="282" y="459.0" width="6" height="32" rx="3" fill="#fff1ea"/>
+<rect x="295" y="464.0" width="6" height="22" rx="3" fill="#fff1ea"/>
+<rect x="308" y="471.0" width="6" height="8" rx="3" fill="#fff1ea"/>
+<rect x="321" y="469.5" width="6" height="11" rx="3" fill="#fff1ea"/>
+<rect x="334" y="467.0" width="6" height="16" rx="3" fill="#fff1ea"/>
+<rect x="347" y="470.0" width="6" height="10" rx="3" fill="#fff1ea"/>
+<rect x="360" y="470.0" width="6" height="10" rx="3" fill="#fff1ea"/>
+<rect x="373" y="461.0" width="6" height="28" rx="3" fill="#fff1ea"/>
+<rect x="386" y="470.5" width="6" height="9" rx="3" fill="#fff1ea"/>
+</svg>

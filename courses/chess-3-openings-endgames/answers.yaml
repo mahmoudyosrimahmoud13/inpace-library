@@ -1,0 +1,80 @@
+q1:
+  right:
+  - a
+  why: f7 is defended only by the black king at the start.
+q2:
+  right:
+  - a
+  why: 5...Nxd5 allows the Fried Liver Attack, 6. Nxf7.
+q3:
+  right:
+  - b
+  why: A quiet useful move.
+q4:
+  right:
+  - b
+  why: The queen forks e5 and e4.
+q5:
+  right:
+  - d
+  why: Black gives the queen and wins it back with ...Bb4+.
+q6:
+  right:
+  - a
+  why: No pawn can defend it.
+q7:
+  right:
+  - a
+  why: Passed pawns must be pushed.
+q8:
+  right:
+  - b
+  why: Open files let rooks reach the 7th rank.
+q9:
+  right:
+  - a
+  why: Your own pawns block it.
+q10:
+  right:
+  - a
+  why: Tactics first, then plans.
+q11:
+  right:
+  - c
+  why: Two ranks in front of the pawn.
+q12:
+  right:
+  - a
+  why: Black has the opposition.
+q13:
+  right:
+  - d
+  why: e5 is inside the square a4–a8–e8–e4.
+q14:
+  right:
+  - d
+  why: The rook blocks the checks.
+q15:
+  right:
+  - b
+  why: It gets more active as the pawn advances.
+q16:
+  right:
+  - d
+  why: Pawns are what you promote.
+q17:
+  right:
+  - a
+  why: The bishop can't control the dark h8 square.
+q18:
+  right:
+  - d
+  why: Long diagonals give them power.
+q19:
+  right:
+  - a
+  why: It shows your own mistakes.
+q20:
+  right:
+  - d
+  why: Your own thinking is what you want to fix.

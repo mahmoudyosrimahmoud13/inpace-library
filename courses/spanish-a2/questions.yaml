@@ -1,0 +1,240 @@
+q1:
+  text: '«Visité a mi primo» means:'
+  show: 4
+  options:
+    a: I visited my cousin.
+    b: I'll visit my cousin.
+    c: I visit my cousin.
+    d: He visited my cousin.
+q2:
+  text: Ayer ella ___ (comer) en casa.
+  show: 4
+  options:
+    a: comieron
+    b: comió
+    c: come
+    d: comí
+q3:
+  text: 'llegar, yo, preterite:'
+  show: 4
+  options:
+    a: llego
+    b: llegué
+    c: llegé
+    d: llegó
+q4:
+  text: Which word goes with the preterite?
+  show: 4
+  options:
+    a: ayer
+    b: mañana
+    c: todos los días
+    d: ahora
+q5:
+  text: '«Lo pasé fatal» means:'
+  show: 4
+  options:
+    a: I had a great time.
+    b: I went past it.
+    c: I passed the exam.
+    d: I had an awful time.
+q6:
+  text: '«Fui a Granada» means:'
+  show: 4
+  options:
+    a: I was Granada.
+    b: I went to Granada.
+    c: He went to Granada.
+    d: I'm going to Granada.
+q7:
+  text: 'hacer, él/ella, preterite:'
+  show: 4
+  options:
+    a: hizo
+    b: hició
+    c: hizó
+    d: hace
+q8:
+  text: Nosotros ___ (estar) en Sevilla tres días.
+  show: 4
+  options:
+    a: estábamos
+    b: estuvieron
+    c: estamos
+    d: estuvimos
+q9:
+  text: '"It was sunny" (past):'
+  show: 4
+  options:
+    a: Estuvo sol.
+    b: Hizo sol.
+    c: Fue sol.
+    d: Tuvo sol.
+q10:
+  text: 'Irregular preterites like tuve and pude:'
+  show: 4
+  options:
+    a: are only for ir
+    b: have no written accent
+    c: end in -é
+    d: always have an accent
+q11:
+  text: '«Jugábamos en la calle» means:'
+  show: 4
+  options:
+    a: We'll play in the street.
+    b: We used to play in the street.
+    c: We played in the street once.
+    d: We play in the street.
+q12:
+  text: 'ser, yo, imperfect:'
+  show: 4
+  options:
+    a: sería
+    b: fui
+    c: soy
+    d: era
+q13:
+  text: '"There were no phones":'
+  show: 4
+  options:
+    a: No eran teléfonos.
+    b: No hubo teléfonos.
+    c: No hay teléfonos.
+    d: No había teléfonos.
+q14:
+  text: Which tense? «Un día la maestra me ___ (castigar).»
+  show: 4
+  options:
+    a: castiga
+    b: castigó
+    c: castigaba
+    d: castigaría
+q15:
+  text: '«Llovía cuando salí» means:'
+  show: 4
+  options:
+    a: It will rain when I go out.
+    b: I go out when it rains.
+    c: It rained after I went out.
+    d: It was raining when I went out.
+q16:
+  text: '"cheaper than":'
+  show: 4
+  options:
+    a: mejor barato que
+    b: más barato como
+    c: tan barato que
+    d: más barato que
+q17:
+  text: '"better" in Spanish:'
+  show: 4
+  options:
+    a: mejor
+    b: bueníssimo
+    c: más bueno que
+    d: mayor
+q18:
+  text: ¿La chaqueta? Me ___ llevo.
+  show: 4
+  options:
+    a: le
+    b: las
+    c: lo
+    d: la
+q19:
+  text: '«Me queda pequeño» means:'
+  show: 4
+  options:
+    a: It's too small on me.
+    b: I'm staying a little.
+    c: It's my small one.
+    d: I have a little left.
+q20:
+  text: 200 →
+  show: 4
+  options:
+    a: doscien
+    b: doscientos
+    c: dos cien
+    d: dos cientos
+q21:
+  text: '"My feet hurt":'
+  show: 4
+  options:
+    a: Me duelen mis pies.
+    b: Me duelen los pies.
+    c: Me duele los pies.
+    d: Mis pies duelo.
+q22:
+  text: '«Tengo que descansar» means:'
+  show: 4
+  options:
+    a: I have a rest.
+    b: I have to rest.
+    c: I rested.
+    d: I want to rest.
+q23:
+  text: 'Polite command of beber:'
+  show: 4
+  options:
+    a: bebe
+    b: beba
+    c: bebo
+    d: bebas
+q24:
+  text: 'Friendly command of venir:'
+  show: 4
+  options:
+    a: vienes
+    b: ven
+    c: venga
+    d: viene
+q25:
+  text: '«¡Que te mejores!» means:'
+  show: 4
+  options:
+    a: Be better than me!
+    b: Improve your Spanish!
+    c: Get well soon!
+    d: You're better!
+q26:
+  text: '«Nunca he estado en Valencia» means:'
+  show: 4
+  options:
+    a: I was never in Valencia yesterday.
+    b: I've never been to Valencia.
+    c: I'm never in Valencia.
+    d: I'll never go to Valencia.
+q27:
+  text: 'The participle of hacer:'
+  show: 4
+  options:
+    a: hizo
+    b: hacido
+    c: hecho
+    d: hecido
+q28:
+  text: Hoy nosotros ___ trabajado mucho.
+  show: 4
+  options:
+    a: han
+    b: hemos sido
+    c: hemos
+    d: habemos
+q29:
+  text: '«Te encantará» means:'
+  show: 4
+  options:
+    a: Do you love it?
+    b: You'll love it.
+    c: You love it.
+    d: You loved it.
+q30:
+  text: 'To book a room you say:'
+  show: 4
+  options:
+    a: Quería reservar una habitación.
+    b: Reservo una habitación ayer.
+    c: Quería reservada una habitación.
+    d: He reservar una habitación.

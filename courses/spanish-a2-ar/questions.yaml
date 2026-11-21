@@ -1,240 +1,240 @@
 q1:
-  text: '«لم آكل بعد»:'
+  text: '«Visité a mi primo» معناها:'
   show: 4
   options:
-    a: Todavía no he comido.
-    b: No he comido todavía.
-    c: Todavía no he comer.
-    d: Ya he comido.
-    e: No he comí todavía.
-    f: Todavía no comido.
+    a: هو زار ابن عمي.
+    b: أزور ابن عمي.
+    c: زرت ابن عمي.
+    d: سأزور ابن عمي.
 q2:
+  text: Ayer ella ___ (comer) en casa.
+  show: 4
+  options:
+    a: comí
+    b: comió
+    c: comieron
+    d: come
+q3:
+  text: 'llegar مع yo في الماضي:'
+  show: 4
+  options:
+    a: llegé
+    b: llegué
+    c: llegó
+    d: llego
+q4:
+  text: أي كلمة تأتي مع الماضي البسيط؟
+  show: 4
+  options:
+    a: todos los días
+    b: ahora
+    c: ayer
+    d: mañana
+q5:
+  text: '«Lo pasé fatal» معناها:'
+  show: 4
+  options:
+    a: نجحت في الامتحان.
+    b: مررت بجانبه.
+    c: قضيت وقتًا رائعًا.
+    d: قضيت وقتًا سيئًا جدًا.
+q6:
+  text: '«Fui a Granada» معناها:'
+  show: 4
+  options:
+    a: هو ذهب إلى غرناطة.
+    b: سأذهب إلى غرناطة.
+    c: كنت غرناطة.
+    d: ذهبت إلى غرناطة.
+q7:
+  text: 'hacer مع él/ella في الماضي:'
+  show: 4
+  options:
+    a: hició
+    b: hizó
+    c: hace
+    d: hizo
+q8:
+  text: Nosotros ___ (estar) en Sevilla tres días.
+  show: 4
+  options:
+    a: estábamos
+    b: estuvimos
+    c: estuvieron
+    d: estamos
+q9:
+  text: '"كان مشمسًا" (في الماضي):'
+  show: 4
+  options:
+    a: Tuvo sol.
+    b: Fue sol.
+    c: Estuvo sol.
+    d: Hizo sol.
+q10:
+  text: 'الأفعال الشاذة مثل tuve وpude:'
+  show: 4
+  options:
+    a: عليها علامة دائمًا
+    b: خاصة بـ ir فقط
+    c: ليس عليها علامة مكتوبة
+    d: تنتهي بـ -é
+q11:
+  text: '«Jugábamos en la calle» معناها:'
+  show: 4
+  options:
+    a: لعبنا في الشارع مرة.
+    b: نلعب في الشارع.
+    c: كنا نلعب في الشارع.
+    d: سنلعب في الشارع.
+q12:
+  text: 'ser مع yo في الماضي المستمر:'
+  show: 4
+  options:
+    a: fui
+    b: era
+    c: sería
+    d: soy
+q13:
+  text: '"لم تكن هناك هواتف":'
+  show: 4
+  options:
+    a: No eran teléfonos.
+    b: No hubo teléfonos.
+    c: No había teléfonos.
+    d: No hay teléfonos.
+q14:
+  text: أي زمن؟ «Un día la maestra me ___ (castigar).»
+  show: 4
+  options:
+    a: castigaba
+    b: castiga
+    c: castigó
+    d: castigaría
+q15:
+  text: '«Llovía cuando salí» معناها:'
+  show: 4
+  options:
+    a: أخرج عندما تمطر.
+    b: كانت تمطر عندما خرجت.
+    c: أمطرت بعد أن خرجت.
+    d: ستمطر عندما أخرج.
+q16:
+  text: '"أرخص من":'
+  show: 4
+  options:
+    a: más barato como
+    b: mejor barato que
+    c: más barato que
+    d: tan barato que
+q17:
+  text: '"أفضل" بالإسبانية:'
+  show: 4
+  options:
+    a: mayor
+    b: mejor
+    c: más bueno que
+    d: bueníssimo
+q18:
+  text: ¿La chaqueta? Me ___ llevo.
+  show: 4
+  options:
+    a: las
+    b: lo
+    c: le
+    d: la
+q19:
+  text: '«Me queda pequeño» معناها:'
+  show: 4
+  options:
+    a: بقي لي قليل.
+    b: هذا الصغير الخاص بي.
+    c: سأبقى قليلًا.
+    d: ضيق عليّ.
+q20:
+  text: 200 →
+  show: 4
+  options:
+    a: dos cientos
+    b: doscientos
+    c: dos cien
+    d: doscien
+q21:
+  text: '"قدماي تؤلمانني":'
+  show: 4
+  options:
+    a: Mis pies duelo.
+    b: Me duelen los pies.
+    c: Me duele los pies.
+    d: Me duelen mis pies.
+q22:
+  text: '«Tengo que descansar» معناها:'
+  show: 4
+  options:
+    a: ارتحت.
+    b: عندي راحة.
+    c: أريد أن أرتاح.
+    d: يجب أن أرتاح.
+q23:
+  text: 'أمر beber الرسمي:'
+  show: 4
+  options:
+    a: bebe
+    b: bebas
+    c: beba
+    d: bebo
+q24:
+  text: 'أمر venir غير الرسمي:'
+  show: 4
+  options:
+    a: viene
+    b: vienes
+    c: venga
+    d: ven
+q25:
+  text: '«¡Que te mejores!» معناها:'
+  show: 4
+  options:
+    a: أنت أفضل!
+    b: ألف سلامة!
+    c: كن أفضل مني!
+    d: حسّن إسبانيتك!
+q26:
+  text: '«Nunca he estado en Valencia» معناها:'
+  show: 4
+  options:
+    a: لن أذهب إلى فالنسيا أبدًا.
+    b: لم أكن في فالنسيا أمس.
+    c: لم أزر فالنسيا أبدًا.
+    d: لست في فالنسيا أبدًا.
+q27:
   text: 'اسم المفعول من hacer:'
   show: 4
   options:
     a: hecho
-    b: he hecho (yo)
+    b: hecido
     c: hacido
-    d: haciendo
-    e: hizo
-    f: hago
-q3:
-  text: '«أعرف السباحة»:'
+    d: hizo
+q28:
+  text: Hoy nosotros ___ trabajado mucho.
   show: 4
   options:
-    a: Sé nadar.
-    b: Yo sé nadar.
-    c: Conozco nadar.
-    d: Puedo a nadar.
-    e: Sabo nadar.
-    f: Conozco a nadar.
-q4:
-  text: '«سأسافر في الصيف»:'
+    a: han
+    b: habemos
+    c: hemos sido
+    d: hemos
+q29:
+  text: '«Te encantará» معناها:'
   show: 4
   options:
-    a: Voy a viajar en verano.
-    b: En verano voy a viajar.
-    c: Voy viajar en verano.
-    d: Voy a viajo en verano.
-    e: He viajado en verano mañana.
-    f: Vamos a viajar yo en verano.
-q5:
-  text: '«ذهبت إلى السينما أمس»:'
+    a: هل تعجبك؟
+    b: أعجبتك جدًا.
+    c: تعجبك جدًا.
+    d: ستعجبك جدًا.
+q30:
+  text: 'لتحجز غرفة تقول:'
   show: 4
   options:
-    a: Ayer fui al cine.
-    b: Fui al cine ayer.
-    c: Ayer he ido al cine.
-    d: Ayer iba al cine una vez.
-    e: Ayer fue al cine yo.
-    f: Ayer voy al cine.
-q6:
-  text: 'الماضي من hacer مع él:'
-  show: 4
-  options:
-    a: hizo
-    b: él hizo
-    c: hació
-    d: hice
-    e: hacía
-    f: hizó
-q7:
-  text: '(yo) llegar في الماضي البسيط:'
-  show: 4
-  options:
-    a: llegué
-    b: yo llegué
-    c: llegé
-    d: llegó
-    e: llegaba
-    f: llegue
-q8:
-  text: 'أكمل: Esta semana ___ mucho. (trabajar)'
-  show: 4
-  options:
-    a: he trabajado
-    b: he trabajado (زمن لم ينته)
-    c: trabajé ayer
-    d: trabajaba
-    e: trabajó
-    f: trabajaré
-q9:
-  text: '«كنا نذهب إلى الشاطئ كل صيف»:'
-  show: 4
-  options:
-    a: Todos los veranos íbamos a la playa.
-    b: Íbamos a la playa todos los veranos.
-    c: Todos los veranos fuimos a la playa siempre.
-    d: Todos los veranos vamos a la playa.
-    e: Todos los veranos ibamos playa.
-    f: Todos los veranos hemos ido a la playa ayer.
-q10:
-  text: 'أكمل: Estaba en la ducha cuando ___ el teléfono.'
-  show: 4
-  options:
-    a: sonó
-    b: sonó (حدث قطع الخلفية)
-    c: sonaba siempre
-    d: suena
-    e: ha sonado ayer
-    f: sonaré
-q11:
-  text: 'imperfecto من ser مع yo:'
-  show: 4
-  options:
-    a: era
-    b: yo era
-    c: fui siempre
-    d: eraba
-    e: sería
-    f: soy
-q12:
-  text: 'الماضي من hay (كان يوجد):'
-  show: 4
-  options:
-    a: había
-    b: había (imperfecto)
-    c: habió
-    d: hayaba
-    e: hay sido
-    f: habían una
-q13:
-  text: '«القطار أرخص من الطائرة»:'
-  show: 4
-  options:
-    a: El tren es más barato que el avión.
-    b: El tren es menos caro que el avión.
-    c: El tren es más barato de el avión.
-    d: El tren es tan barato que el avión.
-    e: El tren es barato más que el avión.
-    f: El tren es más barato como el avión.
-q14:
-  text: '«أفضل فيلم في السنة»:'
-  show: 4
-  options:
-    a: la mejor película del año
-    b: la película más buena del año (أقل شيوعًا)
-    c: la más mejor película del año
-    d: la película mejor de año
-    e: la mejor película de el año
-    f: la buenísima película del año
-q15:
-  text: '«أخي أكبر مني سنًا»:'
-  show: 4
-  options:
-    a: Mi hermano es mayor que yo.
-    b: Mi hermano es mayor que yo (de edad).
-    c: Mi hermano es más mayor que yo.
-    d: Mi hermano es mayor que mí.
-    e: Mi hermano es más grande de yo.
-    f: Mi hermano tiene mayor que yo.
-q16:
-  text: '«يجب الوصول مبكرًا» (عمومًا):'
-  show: 4
-  options:
-    a: Hay que llegar temprano.
-    b: Es necesario llegar temprano.
-    c: Hay llegar temprano.
-    d: Tiene que llegar temprano todos.
-    e: Hay de llegar temprano.
-    f: Debe llegando temprano.
-q17:
-  text: '«هل ترى ماريا؟ نعم، أراها»:'
-  show: 4
-  options:
-    a: Sí, la veo.
-    b: Sí, veo a María.
-    c: Sí, le veo ella.
-    d: Sí, lo veo.
-    e: Sí, la ve yo.
-    f: Sí, veo la.
-q18:
-  text: '«أعطيه الكتاب» بضميرين:'
-  show: 4
-  options:
-    a: Se lo doy.
-    b: Se lo doy (a él).
-    c: Le lo doy.
-    d: Lo le doy.
-    e: Se la doy el libro.
-    f: Le doylo.
-q19:
-  text: 'أمر لصديق: «تعال هنا!»'
-  show: 4
-  options:
-    a: ¡Ven aquí!
-    b: ¡Ven acá!
-    c: ¡Vienes aquí!
-    d: ¡Venga aquí tú!
-    e: ¡Vene aquí!
-    f: ¡No vengas aquí!
-q20:
-  text: '«قدماي تؤلمانني»:'
-  show: 4
-  options:
-    a: Me duelen los pies.
-    b: Me duelen mucho los pies.
-    c: Me duele los pies.
-    d: Mis pies duelen a mí.
-    e: Tengo dolen los pies.
-    f: Me dolen los pies.
-q21:
-  text: '«سأتصل بك غدًا»:'
-  show: 4
-  options:
-    a: Te llamaré mañana.
-    b: Mañana te llamaré.
-    c: Te llamarré mañana.
-    d: Te llamo mañana ayer.
-    e: Te llamaría ayer.
-    f: Te he llamado mañana.
-q22:
-  text: 'أكمل: Si ___ tiempo, iré al cine.'
-  show: 4
-  options:
-    a: tengo
-    b: tengo (si + مضارع)
-    c: tendré
-    d: tendría
-    e: tuve ayer
-    f: tenga
-q23:
-  text: 'طلب مهذب جدًا: «هل يمكنك مساعدتي؟»'
-  show: 4
-  options:
-    a: ¿Podría ayudarme?
-    b: ¿Me podría ayudar?
-    c: ¿Puedes ayudar mí?
-    d: ¿Podrá ayudarme ayer?
-    e: ¿Pudiste ayudarme ahora?
-    f: ¿Podía ayudame?
-q24:
-  text: 'المستقبل من hacer مع ella:'
-  show: 4
-  options:
-    a: hará
-    b: ella hará
-    c: hacerá
-    d: hacirá
-    e: haría
-    f: hizo
+    a: Quería reservada una habitación.
+    b: Quería reservar una habitación.
+    c: He reservar una habitación.
+    d: Reservo una habitación ayer.

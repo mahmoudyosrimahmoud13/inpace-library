@@ -1,0 +1,528 @@
+q1:
+  text: 'PV of 20,000 received in 5 years at 6% is about:'
+  show: 4
+  options:
+    a: 14,945
+    b: 26,765
+    c: 15,000
+    d: 18,868
+q2:
+  text: 'A perpetuity pays 6 a year; required return 8%. Its value:'
+  show: 4
+  options:
+    a: '75'
+    b: '0.48'
+    c: '133'
+    d: '48'
+q3:
+  text: '12% a year compounded monthly has an effective annual rate of about:'
+  show: 4
+  options:
+    a: 12.00%
+    b: 13.50%
+    c: 1.00%
+    d: 12.68%
+q4:
+  text: 'An annuity due differs from an ordinary annuity because payments come:'
+  show: 4
+  options:
+    a: Only once
+    b: At the end of each period
+    c: At the start of each period
+    d: Forever
+q5:
+  text: 'Excel''s NPV function assumes the first cash flow comes:'
+  show: 4
+  options:
+    a: In the middle of year 1
+    b: At the end of year 1
+    c: Today (year 0)
+    d: At the end of the project
+q6:
+  text: 'D₁ = 2.10, k = 12%, g = 5%. The Gordon model value:'
+  show: 4
+  options:
+    a: '30'
+    b: '17.50'
+    c: '42'
+    d: '21'
+q7:
+  text: 'Current ratio 1.5 (600/400). After paying 100 of payables with cash, it is:'
+  show: 4
+  options:
+    a: '2.0'
+    b: '1.67'
+    c: '1.25'
+    d: '1.5'
+q8:
+  text: 'EBIT 400, interest 100. Degree of financial leverage:'
+  show: 4
+  options:
+    a: '4.0'
+    b: '0.75'
+    c: '1.33'
+    d: '3.0'
+q9:
+  text: 'Net margin 9%, asset turnover 1.67, equity multiplier 2. ROE:'
+  show: 4
+  options:
+    a: 3.3%
+    b: 30%
+    c: 15%
+    d: 18%
+q10:
+  text: '1,000,000 shares at Jan 1; 200,000 issued Apr 1; 100,000 bought back Oct 1. Weighted average shares:'
+  show: 4
+  options:
+    a: 1,200,000
+    b: 1,100,000
+    c: 1,150,000
+    d: 1,125,000
+q11:
+  text: 'A 2-for-1 stock split during the year is:'
+  show: 4
+  options:
+    a: Added only to diluted EPS
+    b: Applied retroactively to the start of the period
+    c: Ignored in EPS
+    d: Weighted by months outstanding
+q12:
+  text: 'ROE 15% and payout 40%. Sustainable growth:'
+  show: 4
+  options:
+    a: 21%
+    b: 6%
+    c: 15%
+    d: 9%
+q13:
+  text: 'Net income rising while operating cash flow falls suggests:'
+  show: 4
+  options:
+    a: Higher earnings quality
+    b: Lower leverage
+    c: Lower earnings quality
+    d: Better liquidity
+q14:
+  text: 'Over-provisioning in good years and releasing it in bad years is called:'
+  show: 4
+  options:
+    a: Bill-and-hold
+    b: Cookie jar reserves
+    c: Big bath
+    d: Channel stuffing
+q15:
+  text: 'When prices rise, compared with FIFO, LIFO gives:'
+  show: 4
+  options:
+    a: Higher profit
+    b: Higher COGS and lower taxes
+    c: No difference
+    d: Higher ending inventory
+q16:
+  text: 'To compare debt ratios fairly, analysts add to debt:'
+  show: 4
+  options:
+    a: Accounts receivable
+    b: Deferred revenue only
+    c: The PV of significant off-balance-sheet obligations
+    d: Retained earnings
+q17:
+  text: 'With inflation, historical-cost depreciation makes ROA look:'
+  show: 4
+  options:
+    a: Unchanged
+    b: Better than it really is
+    c: Worse than it really is
+    d: Negative
+q18:
+  text: 'Shipping excess goods to distributors at period end to boost sales is:'
+  show: 4
+  options:
+    a: Hedging
+    b: Channel stuffing
+    c: A cookie jar
+    d: A big bath
+q19:
+  text: 'Risk-free 4%, market 10%, beta 1.3. CAPM required return:'
+  show: 4
+  options:
+    a: 9.2%
+    b: 17.0%
+    c: 11.8%
+    d: 13.0%
+q20:
+  text: 'Market interest rates rise. Existing bond prices:'
+  show: 4
+  options:
+    a: Stay the same
+    b: Fall
+    c: Rise
+    d: Go to face value
+q21:
+  text: 'A 6% coupon bond when market yields are 8% sells at:'
+  show: 4
+  options:
+    a: A discount
+    b: A premium
+    c: Zero
+    d: Face value
+q22:
+  text: 'Pre-tax debt yield 8%, tax 25%. After-tax cost of debt:'
+  show: 4
+  options:
+    a: 8%
+    b: 10.7%
+    c: 2%
+    d: 6%
+q23:
+  text: 'Retained earnings of 1,000,000 and an equity weight of 50% give a WACC break point at:'
+  show: 4
+  options:
+    a: 500,000
+    b: 1,500,000
+    c: 2,000,000
+    d: 1,000,000
+q24:
+  text: 'Under the pecking order theory, managers prefer first:'
+  show: 4
+  options:
+    a: Internal funds
+    b: New common stock
+    c: Preferred stock
+    d: Convertible bonds
+q25:
+  text: 'Demand 36,000, order cost 200, carrying cost 4 per unit. EOQ:'
+  show: 4
+  options:
+    a: 2,683
+    b: 3,600
+    c: 1,200
+    d: 1,897
+q26:
+  text: 'Nominal annual cost of skipping 2/10, net 30 (365 days):'
+  show: 4
+  options:
+    a: About 37.2%
+    b: About 24.5%
+    c: About 18.6%
+    d: 2%
+q27:
+  text: 'A 100,000 loan at 8% with a 10% compensating balance has an effective rate of about:'
+  show: 4
+  options:
+    a: 10.0%
+    b: 7.2%
+    c: 8.0%
+    d: 8.9%
+q28:
+  text: 'Under a residual dividend policy with net income 5,000,000, budget 6,000,000 and 60% equity, dividends are:'
+  show: 4
+  options:
+    a: 2,000,000
+    b: 5,000,000
+    c: 1,400,000
+    d: '0'
+q29:
+  text: 'Buying a stock on its ex-dividend date means you:'
+  show: 4
+  options:
+    a: Receive the dividend
+    b: Must sell before the record date
+    c: Don't receive the declared dividend
+    d: Receive twice the dividend
+q30:
+  text: 'An importer paying USD in 60 days fears the dollar rising. A suitable hedge is:'
+  show: 4
+  options:
+    a: Buying USD forward
+    b: Selling USD forward
+    c: Doing nothing
+    d: A put option on USD
+q31:
+  text: 'Products A (CM 20) and B (CM 30) in a 3:2 unit mix; fixed costs 120,000. Break-even units of A:'
+  show: 4
+  options:
+    a: 2,400
+    b: 2,000
+    c: 6,000
+    d: 3,000
+q32:
+  text: 'Price 40, VC 24, FC 160,000, tax 25%, target after-tax profit 60,000. Units:'
+  show: 4
+  options:
+    a: 15,000
+    b: 12,500
+    c: 10,000
+    d: 13,750
+q33:
+  text: 'Machine X (FC 50,000, VC 12) vs Y (FC 80,000, VC 9). Indifference volume:'
+  show: 4
+  options:
+    a: 10,000 units
+    b: 5,000 units
+    c: 3,000 units
+    d: 26,667 units
+q34:
+  text: 'A special order that exceeds capacity must also cover:'
+  show: 4
+  options:
+    a: Nothing extra
+    b: The contribution margin lost on regular sales
+    c: All allocated fixed costs
+    d: Sunk costs
+q35:
+  text: 'Sell at split-off for 20, or process further for 28 with an extra cost of 6. The decision:'
+  show: 4
+  options:
+    a: Sell at split-off
+    b: Depends on the joint cost
+    c: Process further (gain 2 per unit)
+    d: Indifferent
+q36:
+  text: 'With one machine-hour constraint, rank products by:'
+  show: 4
+  options:
+    a: CM per machine hour
+    b: CM per unit
+    c: Gross margin %
+    d: Selling price
+q37:
+  text: 'Price up 10%, quantity down 15%. Demand is:'
+  show: 4
+  options:
+    a: Inelastic
+    b: Perfectly inelastic
+    c: Elastic
+    d: Unit elastic
+q38:
+  text: 'If demand is inelastic, raising the price makes total revenue:'
+  show: 4
+  options:
+    a: Rise
+    b: Stay the same
+    c: Go to zero
+    d: Fall
+q39:
+  text: 'Target price 120, target profit 25% of price. Target cost:'
+  show: 4
+  options:
+    a: '150'
+    b: '30'
+    c: '90'
+    d: '96'
+q40:
+  text: 'Outcomes 300,000 (0.3), 100,000 (0.5), −150,000 (0.2). Expected value:'
+  show: 4
+  options:
+    a: 83,333
+    b: 250,000
+    c: 110,000
+    d: 140,000
+q41:
+  text: 'EV with perfect information 1,600; EV of the best action 1,280. EVPI:'
+  show: 4
+  options:
+    a: 2,880
+    b: 1,600
+    c: '320'
+    d: 1,280
+q42:
+  text: 'A profit-maximizing firm produces where:'
+  show: 4
+  options:
+    a: Price equals average cost
+    b: Revenue is highest
+    c: Marginal revenue equals marginal cost
+    d: Costs are lowest
+q43:
+  text: Buying insurance is which risk response?
+  show: 4
+  options:
+    a: Share (transfer)
+    b: Avoid
+    c: Accept
+    d: Reduce
+q44:
+  text: 'Risk remaining after controls and responses is:'
+  show: 4
+  options:
+    a: Risk appetite
+    b: Inherent risk
+    c: Systematic risk
+    d: Residual risk
+q45:
+  text: '''95% one-day VaR of 2 million'' means:'
+  show: 4
+  options:
+    a: On 95% of days, losses won't exceed 2 million
+    b: The maximum possible loss is 2 million
+    c: Losses will be exactly 2 million
+    d: There's a 95% chance of losing 2 million
+q46:
+  text: 'A company with floating-rate debt fearing rate rises can:'
+  show: 4
+  options:
+    a: Pay fixed and receive floating in a swap
+    b: Buy a put on its own shares
+    c: Receive fixed and pay floating
+    d: Lengthen the loan
+q47:
+  text: 'A call option with strike 50 and premium 3; price at expiry 58. Net profit:'
+  show: 4
+  options:
+    a: '5'
+    b: −3
+    c: '8'
+    d: '3'
+q48:
+  text: Which hedge protects against a price rise but keeps the benefit of a fall?
+  show: 4
+  options:
+    a: A call option
+    b: A long forward
+    c: A swap
+    d: A futures contract
+q49:
+  text: 'Cash savings 35,000, depreciation 20,000, tax 25%. Annual operating cash flow:'
+  show: 4
+  options:
+    a: 31,250
+    b: 15,000
+    c: 26,250
+    d: 35,000
+q50:
+  text: Which is NOT a relevant cash flow in capital budgeting?
+  show: 4
+  options:
+    a: Increase in working capital
+    b: Interest on the loan financing the project
+    c: Depreciation tax shield
+    d: After-tax salvage value
+q51:
+  text: 'Investment 60,000; 18,000 a year for 5 years; annuity factor 3.605. NPV:'
+  show: 4
+  options:
+    a: 4,890
+    b: 30,000
+    c: −4,890
+    d: 64,890
+q52:
+  text: 'Investment 50,000; flows 15,000, 20,000, 25,000. Payback:'
+  show: 4
+  options:
+    a: 2.4 years
+    b: 2.0 years
+    c: 3.0 years
+    d: 2.6 years
+q53:
+  text: 'A profitability index above 1 means:'
+  show: 4
+  options:
+    a: IRR is below the cost of capital
+    b: The project loses money
+    c: Payback is under 1 year
+    d: NPV is positive
+q54:
+  text: 'The option to abandon a project if things go badly makes its value:'
+  show: 4
+  options:
+    a: Zero
+    b: Higher than traditional NPV
+    c: Lower than traditional NPV
+    d: Equal to traditional NPV
+q55:
+  text: Which is one of the IMA's four standards?
+  show: 4
+  options:
+    a: Loyalty
+    b: Credibility
+    c: Efficiency
+    d: Profitability
+q56:
+  text: 'Using inside information to buy shares violates mainly:'
+  show: 4
+  options:
+    a: Competence
+    b: Credibility
+    c: Confidentiality
+    d: Fairness only
+q57:
+  text: 'Your supervisor is involved in the issue. You should first take it to:'
+  show: 4
+  options:
+    a: The tax authority
+    b: The newspapers
+    c: Nobody
+    d: The next higher level of management
+q58:
+  text: 'Disclosing a potential conflict of interest falls under:'
+  show: 4
+  options:
+    a: Credibility
+    b: Competence
+    c: Integrity
+    d: Confidentiality
+q59:
+  text: Which fraud triangle element do internal controls mainly reduce?
+  show: 4
+  options:
+    a: Pressure
+    b: Rationalization
+    c: Capability
+    d: Opportunity
+q60:
+  text: 'The FCPA prohibits:'
+  show: 4
+  options:
+    a: Bribing foreign officials
+    b: Hedging currency risk
+    c: Paying dividends
+    d: All gifts to customers
+q61:
+  text: 'The CMA Part 2 passing score is:'
+  show: 4
+  options:
+    a: 70%
+    b: 300 out of 500
+    c: 360 out of 500
+    d: 400 out of 500
+q62:
+  text: 'For CBQs to be scored, you need at least:'
+  show: 4
+  options:
+    a: A passing score on Part 1
+    b: 50% of the MCQ points
+    c: Nothing extra
+    d: 70% of the MCQ points
+q63:
+  text: Which section has the highest weight?
+  show: 4
+  options:
+    a: Professional Ethics (15%)
+    b: Decision Analysis (25%)
+    c: Risk Management (10%)
+    d: Investment Decisions (10%)
+q64:
+  text: 'DOL 2 and DFL 1.5. Degree of total leverage:'
+  show: 4
+  options:
+    a: '3.5'
+    b: '3.0'
+    c: '0.75'
+    d: '1.33'
+q65:
+  text: 'In the Gordon model you must use:'
+  show: 4
+  options:
+    a: Next year's dividend D₁
+    b: EPS
+    c: Last year's dividend D₀
+    d: The average dividend
+q66:
+  text: 'Wrong MCQ answers are:'
+  show: 4
+  options:
+    a: Penalized by a full point
+    b: Not penalized, so never leave one blank
+    c: Penalized by a quarter point
+    d: Counted twice

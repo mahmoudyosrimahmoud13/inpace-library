@@ -136,25 +136,48 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/accounting-basics-ar/files/cover.jpg" width="160" alt=""> | [المحاسبة من الصفر: القيد المزدوج والدفاتر](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/accounting-basics-ar.html) | 16 | حوالي 8 ساعة |
 | <img src="courses/financial-statements/files/cover.jpg" width="160" alt=""> | [Financial statements: read them, build them, analyze them](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/financial-statements.html) | 16 | about 9 h |
 | <img src="courses/financial-statements-ar/files/cover.jpg" width="160" alt=""> | [القوائم المالية: اقرأها وابنِها وحلّلها](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/financial-statements-ar.html) | 16 | حوالي 9 ساعة |
+| <img src="courses/cost-management-accounting/files/cover.jpg" width="160" alt=""> | [Cost and management accounting: numbers for decisions](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cost-management-accounting.html) | 12 | about 11 h |
+| <img src="courses/cost-management-accounting-ar/files/cover.jpg" width="160" alt=""> | [محاسبة التكاليف والمحاسبة الإدارية: أرقام للقرارات](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cost-management-accounting-ar.html) | 12 | حوالي 11 ساعة |
+| <img src="courses/excel-for-accountants/files/cover.jpg" width="160" alt=""> | [Excel for accountants: from journal to month end](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/excel-for-accountants.html) | 12 | about 13 h |
+| <img src="courses/excel-for-accountants-ar/files/cover.jpg" width="160" alt=""> | [الإكسل للمحاسبين: من اليومية إلى إقفال الشهر](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/excel-for-accountants-ar.html) | 12 | حوالي 13 ساعة |
 | <img src="courses/cma-part-1-for-complete-beginners-12-weeks-through-sections-/files/cover.jpg" width="160" alt=""> | [CMA Part 1 for Complete Beginners: 12 Weeks Through Sections A–F](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cma-part-1-for-complete-beginners-12-weeks-through-sections-.html) | 36 | about 48 h |
+| <img src="courses/cma-part-2/files/cover.jpg" width="160" alt=""> | [CMA Part 2: Strategic Financial Management, step by step](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cma-part-2.html) | 21 | about 130 h |
+| <img src="courses/cma-part-2-ar/files/cover.jpg" width="160" alt=""> | [CMA الجزء الثاني: الإدارة المالية الاستراتيجية خطوة بخطوة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/cma-part-2-ar.html) | 21 | حوالي 130 ساعة |
 | <img src="courses/fmaa-prc/files/cover.jpg" width="160" alt=""> | [FMAA Exam Prep: Financial Management and Accounting](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fmaa-prc.html) | 24 | about 8 h |
 | <img src="courses/fmaa-prc-ar/files/cover.jpg" width="160" alt=""> | [التحضير لاختبار FMAA: الإدارة المالية والمحاسبة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fmaa-prc-ar.html) | 24 | حوالي 8 ساعة |
+
+### Chess · الشطرنج
+
+| | Course | Lessons | Reading time |
+|---|---|---|---|
+| <img src="courses/chess-1-rules/files/cover.jpg" width="160" alt=""> | [Chess 1: the rules and your first games](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/chess-1-rules.html) | 8 | about 6 h |
+| <img src="courses/chess-1-rules-ar/files/cover.jpg" width="160" alt=""> | [الشطرنج 1: القواعد ومبارياتك الأولى](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/chess-1-rules-ar.html) | 8 | حوالي 6 ساعة |
+| <img src="courses/chess-2-tactics/files/cover.jpg" width="160" alt=""> | [Chess 2: tactics that win games](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/chess-2-tactics.html) | 8 | about 6 h |
+| <img src="courses/chess-2-tactics-ar/files/cover.jpg" width="160" alt=""> | [الشطرنج 2: تكتيكات تكسب المباريات](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/chess-2-tactics-ar.html) | 8 | حوالي 6 ساعة |
+| <img src="courses/chess-3-openings-endgames/files/cover.jpg" width="160" alt=""> | [Chess 3: openings, plans and endgames](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/chess-3-openings-endgames.html) | 8 | about 7 h |
+| <img src="courses/chess-3-openings-endgames-ar/files/cover.jpg" width="160" alt=""> | [الشطرنج 3: الافتتاحات والخطط والنهايات](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/chess-3-openings-endgames-ar.html) | 8 | حوالي 7 ساعة |
 
 ### Languages · اللغات
 
 | | Course | Lessons | Reading time |
 |---|---|---|---|
-| <img src="courses/english-a1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a1-ar.html) | 25 | حوالي 10 ساعة |
-| <img src="courses/english-a2-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى A2: تكلم عن الماضي والمستقبل بثقة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a2-ar.html) | 24 | حوالي 10 ساعة |
-| <img src="courses/english-b1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي مستوى B1: من الكلام اليومي إلى الطلاقة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-b1-ar.html) | 25 | حوالي 11 ساعة |
+| <img src="courses/spanish-a1/files/cover.jpg" width="160" alt=""> | [Spanish from zero: level A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a1.html) | 14 | about 9 h |
+| <img src="courses/spanish-a2/files/cover.jpg" width="160" alt=""> | [Spanish A2: talk about the past and get things done](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a2.html) | 14 | about 9 h |
+| <img src="courses/spanish-b1/files/cover.jpg" width="160" alt=""> | [Spanish B1: opinions, the subjunctive and real conversations](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-b1.html) | 14 | about 10 h |
+| <img src="courses/spanish-a1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a1-ar.html) | 14 | حوالي 9 ساعة |
+| <img src="courses/spanish-a2-ar/files/cover.jpg" width="160" alt=""> | [الإسباني A2: احكِ عن الماضي وتدبّر أمورك](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a2-ar.html) | 14 | حوالي 9 ساعة |
+| <img src="courses/spanish-b1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني B1: الرأي والـ subjuntivo والمحادثات الحقيقية](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-b1-ar.html) | 14 | حوالي 10 ساعة |
+| <img src="courses/german-a1/files/cover.jpg" width="160" alt=""> | [German from zero: level A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a1.html) | 14 | about 9 h |
+| <img src="courses/german-a2/files/cover.jpg" width="160" alt=""> | [German A2: talk about the past and explain why](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a2.html) | 14 | about 9 h |
+| <img src="courses/german-b1/files/cover.jpg" width="160" alt=""> | [German B1: opinions, Konjunktiv II and working life](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-b1.html) | 14 | about 10 h |
+| <img src="courses/german-a1-ar/files/cover.jpg" width="160" alt=""> | [الألماني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a1-ar.html) | 14 | حوالي 9 ساعة |
+| <img src="courses/german-a2-ar/files/cover.jpg" width="160" alt=""> | [الألماني A2: احكِ عن الماضي واشرح الأسباب](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a2-ar.html) | 14 | حوالي 9 ساعة |
+| <img src="courses/german-b1-ar/files/cover.jpg" width="160" alt=""> | [الألماني B1: الرأي وKonjunktiv II وحياة العمل](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-b1-ar.html) | 14 | حوالي 10 ساعة |
+| <img src="courses/english-a1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a1-ar.html) | 14 | حوالي 9 ساعة |
+| <img src="courses/english-a2-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي A2: احكِ عن الماضي وتدبّر أمورك](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-a2-ar.html) | 14 | حوالي 9 ساعة |
 | <img src="courses/english-irregular-verbs/files/cover.jpg" width="160" alt=""> | [English irregular verbs, the easy way](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-irregular-verbs.html) | 10 | about 2 h |
 | <img src="courses/english-irregular-verbs-ar/files/cover.jpg" width="160" alt=""> | [الأفعال الشاذة في الإنجليزية بطريقة سهلة](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-irregular-verbs-ar.html) | 10 | حوالي 2 ساعة |
-| <img src="courses/german-a1-ar/files/cover.jpg" width="160" alt=""> | [الألماني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a1-ar.html) | 19 | حوالي 10 ساعة |
-| <img src="courses/german-a2-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-a2-ar.html) | 18 | حوالي 10 ساعة |
-| <img src="courses/german-b1-ar/files/cover.jpg" width="160" alt=""> | [الألماني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/german-b1-ar.html) | 18 | حوالي 10 ساعة |
-| <img src="courses/spanish-a1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني من الصفر: مستوى A1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a1-ar.html) | 19 | حوالي 10 ساعة |
-| <img src="courses/spanish-a2-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى A2](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-a2-ar.html) | 19 | حوالي 10 ساعة |
-| <img src="courses/spanish-b1-ar/files/cover.jpg" width="160" alt=""> | [الإسباني مستوى B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/spanish-b1-ar.html) | 18 | حوالي 9 ساعة |
+| <img src="courses/english-b1-ar/files/cover.jpg" width="160" alt=""> | [الإنجليزي B1: الرأي والمحادثات الحقيقية وحياة العمل](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/english-b1-ar.html) | 14 | حوالي 10 ساعة |
 
 ### Build inPace · ابنِ inPace
 
@@ -230,6 +253,12 @@ leads into another comes before it, and the English and Arabic versions sit side
 | [Problem solving and coding interviews](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/coding-interviews.html) | 7 | English |
 | [Computer vision engineer](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/computer-vision.html) | 8 | English |
 | [PyTorch, TensorFlow and Hugging Face, from zero to master](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/deep-learning-frameworks.html) | 9 | English |
+| [Become an accountant](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/accountant.html) | 6 | English |
+| [كن محاسبًا](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/accountant-ar.html) | 6 | Arabic |
+| [Chess, from zero to your first tournament](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/chess.html) | 3 | English |
+| [الشطرنج من الصفر إلى أول بطولة](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/chess-ar.html) | 3 | Arabic |
+| [Spanish from zero to B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/spanish-from-zero.html) | 3 | English |
+| [German from zero to B1](https://mahmoudyosrimahmoud13.github.io/inpace-library/r/german-from-zero.html) | 3 | English |
 
 Roadmaps live in [`roadmaps/`](roadmaps), one small YAML file each:
 

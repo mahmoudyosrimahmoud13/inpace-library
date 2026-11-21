@@ -1,166 +1,120 @@
 q1:
   right:
-  - of3d93d
-  - o7c3be9
-  why: مدة حتى الآن ← have been + ing، و for/since.
+  - b
+  why: لا تجمع although وbut.
 q2:
   right:
-  - o918f0c
-  - ob683e5
-  why: used to للحالة، و did + use to.
+  - c
+  why: However تبدأ جملة جديدة بفاصلة.
 q3:
   right:
-  - of65683
-  - o18159a
-  why: be used to + ing أو اسم.
+  - a
+  why: النفي مع think.
 q4:
   right:
-  - ob696d2
-  - o24b082
-  why: أفعال الحالة بدون ing، والعدد ← simple.
+  - b
+  why: للاعتراف بحجة الآخر.
 q5:
   right:
-  - o1ffba4
-  - oabc9c3
-  why: الحدث الأقدم ← had + التصريف الثالث.
+  - b
+  why: أداة إضافة.
 q6:
   right:
-  - o424090
-  - o1d6759
-  why: نشاط مستمر قبل لحظة في الماضي.
+  - b
+  why: المضارع التام + for + مدة.
 q7:
   right:
-  - o4f2ee8
-  - o9d19e8
-  why: had left = قبل وصولي.
+  - c
+  why: since + نقطة البداية.
 q8:
   right:
-  - oe3c3b5
-  - o3dfd81
-  why: by the time + past simple، ثم past perfect.
+  - b
+  why: yet في السؤال والنفي، في الآخر.
 q9:
   right:
-  - o069dd4
-  - of38aca
-  why: 'second: if + past، would + فعل.'
+  - c
+  why: الماضي البسيط = منتهٍ.
 q10:
   right:
-  - o30fe7a
-  - o3986da
-  why: 'third: had + p.p، would have + p.p.'
+  - c
+  why: been بعدها ← has.
 q11:
   right:
-  - o5c6989
-  - ofa2a3a
-  why: ندم على الماضي ← wish + past perfect.
+  - d
+  why: الشرط الثاني ← were.
 q12:
   right:
-  - o7e4368
-  - o7e94c3
-  why: wish للحاضر ← past simple / could.
+  - c
+  why: 'الشرط الأول: if + مضارع، will + فعل.'
 q13:
   right:
-  - o53fc31
-  - o835f44
-  why: be + التصريف الثالث.
+  - b
+  why: الشرط الثاني ← would.
 q14:
   right:
-  - o50fd2e
-  - o15f1da
-  why: has been + p.p، is being + p.p.
+  - b
+  why: unless = إلا إذا.
 q15:
   right:
-  - ofbebbf
-  - of5e330
-  why: have/get + شيء + p.p.
+  - d
+  why: لو كنت مكانك...
 q16:
   right:
-  - o593686
-  - o30cb6b
-  why: modal + be + p.p.
+  - a
+  why: 'مجهول مضارع: is + made.'
 q17:
   right:
-  - o7aae66
-  - o98af7f
-  why: say بدون شخص، tell + شخص.
+  - b
+  why: was + التصريف الثالث.
 q18:
   right:
-  - o46d991
-  - od8bfa5
-  why: ترتيب جملة عادية بدون do/did.
+  - c
+  why: الفاعل الحقيقي مع by.
 q19:
   right:
-  - o2b245f
-  - o5ae7ae
-  why: tell + شخص + not to.
+  - a
+  why: is + spoken.
 q20:
   right:
-  - o05bf91
-  - o4afcd4
-  why: will ← would، tomorrow ← the next day.
+  - d
+  why: ترى المادة ← made of.
 q21:
   right:
-  - o819499
-  - o3f5c42
-  why: who للأشخاص، where للمكان.
+  - d
+  why: للناس ← who.
 q22:
   right:
-  - obb99e8
-  - o178957
-  why: whose للملكية، ولا تكرر الضمير.
+  - c
+  why: لا تكرر الضمير؛ للمكان ← where.
 q23:
   right:
-  - o515e08
-  - o5e4738
-  why: نفي الاستنتاج ← can't.
+  - c
+  why: للأشياء ← which.
 q24:
   right:
-  - o59e3f3
-  - o0b6d01
-  why: modal + have + p.p.
+  - a
+  why: مع الاسم ← sincerely.
 q25:
   right:
-  - ob1ce6f
-  - o3c029b
-  - oe1c9ce
-  why: they're = they are، their = لهم، than للمقارنة، وprefer الضغط في آخرها فنكرر r.
+  - a
+  why: I am وليس I'm.
 q26:
   right:
-  - o962c0b
-  - o2efe4a
-  why: run out of، turn down.
+  - d
+  why: مضارع ← ماضٍ.
 q27:
   right:
-  - od46171
-  - oa905d7
-  why: مع الضمير يجب الفصل، و look after = يرعى.
+  - c
+  why: tell + شخص؛ say بدون شخص.
 q28:
   right:
-  - ofe6f3d
-  - o5b9d2c
-  why: despite + اسم، although + جملة.
+  - d
+  why: أسئلة نعم/لا ← if.
 q29:
   right:
-  - oc8b9e2
-  - ofbd6bd
-  why: لا تعرف الاسم ← Yours faithfully.
+  - c
+  why: ترتيب عادي بدون did.
 q30:
   right:
-  - ob6711f
-  - o1dc324
-  why: 'مراجعة: for/since، والشرط الثالث.'
-q31:
-  right:
-  - o3f1dc7
-  - o3423b5
-  why: 'مراجعة: المبني للمجهول، و tell + شخص.'
-q32:
-  right:
-  - o3f4ae0
-  - o01e67e
-  why: 'مراجعة: used to، و must be.'
-q33:
-  right:
-  - od9d6dc
-  - ob22329
-  why: 'مراجعة: although، و wish.'
+  - b
+  why: tell + شخص + not to + فعل.

@@ -1,120 +1,120 @@
 q1:
   right:
   - a
-  - b
-  why: 'bleiben مع sein: geblieben.'
+  why: haben في الموقع 2، واسم المفعول في الآخر.
 q2:
   right:
-  - a
   - b
-  why: ge في الوسط مع المنفصل.
+  why: 'شاذ: ge-gess-en.'
 q3:
   right:
-  - a
   - b
-  why: be- بدون ge.
+  why: 'منفصل: ge في المنتصف.'
 q4:
   right:
   - a
-  - b
-  why: حركة → sein، و fliegen → geflogen.
+  why: أفعال be- بدون ge-.
 q5:
   right:
-  - a
-  - b
-  why: 'sein في الماضي: war، والفعل ثانيًا.'
+  - d
+  why: hatte = ماضي haben.
 q6:
   right:
-  - a
   - b
-  why: مرة واحدة في الماضي → als.
+  why: الحركة ← sein.
 q7:
   right:
-  - a
-  - b
-  why: seit + Dativ + المضارع لما لا يزال مستمرًا.
+  - c
+  why: لا حركة ← haben.
 q8:
   right:
   - a
-  - b
-  why: können → konnte.
+  why: war = ماضي sein.
 q9:
   right:
-  - a
-  - b
-  why: 'حركة (Wohin?) → Akkusativ: ins.'
+  - c
+  why: 'شاذ: ge-flog-en.'
 q10:
   right:
-  - a
-  - b
-  why: ثابت → liegen + Dativ.
+  - c
+  why: الجزء الأول من الكلمة المركبة.
 q11:
   right:
-  - a
-  - b
-  why: stellen + Akkusativ للحركة.
+  - d
+  why: mit + جر؛ die U-Bahn ← der.
 q12:
   right:
   - a
-  - b
-  why: einen Termin vereinbaren.
+  why: gefallen + جر.
 q13:
   right:
   - a
-  - b
-  why: 'weil: الفعل في الآخر؛ denn: الترتيب العادي.'
+  why: er ← ihm.
 q14:
   right:
-  - a
-  - b
-  why: ob = هل، والفعل في الآخر.
+  - c
+  why: zu dem ← zum؛ zu der ← zur.
 q15:
   right:
-  - a
-  - b
-  why: um ... zu + مصدر.
+  - d
+  why: 'helfen تأخذ حالة الجر: mir.'
 q16:
   right:
-  - a
-  - b
-  why: بعد Meiner Meinung nach يأتي الفعل مباشرة.
+  - d
+  why: -er + als.
 q17:
   right:
-  - a
   - b
-  why: 'المقارنة: -er + als.'
+  why: gut ← besser ← am besten.
 q18:
   right:
-  - a
-  - b
-  why: gut → besser → am besten.
+  - d
+  why: مذكر مفعول بعد einen ← -en.
 q19:
   right:
-  - a
   - b
-  why: sich freuen auf = يتطلع لشيء قادم.
+  why: محايد فاعل بعد ein ← -es.
 q20:
   right:
-  - a
-  - b
-  why: Kopfschmerzen haben، أو tut weh.
+  - c
+  why: eng = ضيق.
 q21:
   right:
-  - a
-  - b
-  why: wenn + hätte (في الآخر)، ثم würde أولًا.
+  - c
+  why: weil ← الفعل في الآخر.
 q22:
   right:
-  - a
   - b
-  why: Könnten / Würden Sie للأدب، و helfen + Dativ (mir).
+  why: wehtun = يؤلم.
 q23:
   right:
-  - a
-  - b
-  why: arbeiten als + المهنة بدون أداة.
+  - d
+  why: الفعل + Sie.
 q24:
   right:
   - a
+  why: dass ← الفعل المصرّف في الآخر.
+q25:
+  right:
+  - c
+  why: تُقال للمريض.
+q26:
+  right:
+  - d
+  why: مكان ثابت (wo?) ← جر.
+q27:
+  right:
   - b
-  why: werden + المصدر في الآخر.
+  why: حركة (wohin?) ← مفعول.
+q28:
+  right:
+  - b
+  why: in das ← ins؛ in dem ← im.
+q29:
+  right:
+  - c
+  why: liegen = ممدد؛ stehen = واقف.
+q30:
+  right:
+  - d
+  why: Kaltmiete = بدونها.

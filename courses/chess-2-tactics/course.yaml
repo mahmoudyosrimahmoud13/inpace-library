@@ -1,0 +1,132 @@
+id: chess-2-tactics
+title: 'Chess 2: tactics that win games'
+version: 1
+language: en
+description: 'The tactics that decide most games, with checked puzzles and Lichess links: loose pieces and counting, forks,
+  pins and skewers, discovered attacks and double check, removing the defender, deflection and overloading, the mating patterns
+  every player must know (back rank, smothered, Arabian, queen and bishop), and how to calculate with checks, captures and
+  threats. Ends with a practice set. Course 2 of 3 in the chess path. About 4 days, an hour a day, plus daily puzzles.'
+image: cover.jpg
+downloads:
+- title: Lichess puzzles by theme (free)
+  url: https://lichess.org/training/themes
+- title: 'Lichess Practice: checkmate patterns (free)'
+  url: https://lichess.org/practice
+modules:
+- id: m1
+  title: 'Module 1: Safety and forks'
+  lessons:
+  - id: m1-l1
+    title: 'Safety first: loose pieces and counting'
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: 'Forks: one piece, two targets'
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Solve 20 Lichess puzzles with the theme 'Fork' and upload a screenshot of your results. Then find one fork from
+      your own games (yours or your opponent's) and upload the game link with the move.
+  - id: m1-explain
+    type: explain
+    prompt: Explain how to decide whether a capture wins material by counting attackers and defenders, and why you capture
+      with the least valuable piece first.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Lines: pins, skewers and discoveries'
+  lessons:
+  - id: m2-l1
+    title: 'Pins and skewers: attacks along a line'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: Discovered attacks and double check
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Solve 15 'Pin', 10 'Skewer', 15 'Discovered attack' and 5 'Double check' puzzles on Lichess. Upload screenshots
+      and write which theme was hardest for you.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between a pin and a skewer, with an example of each.
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Defenders and mating patterns'
+  lessons:
+  - id: m3-l1
+    title: Removing the defender, deflection and overloading
+    file: lessons/m3-l1.md
+    minutes: 45
+  - id: m3-l2
+    title: Mating patterns you must know
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Finish Lichess Practice 'Checkmate patterns I to IV' and solve 15 'Mate in 2' puzzles. Upload screenshots, and
+      draw (or set up on Lichess) one example of the smothered mate and one of the Arabian mate.
+  - id: m3-explain
+    type: explain
+    prompt: Explain what an overloaded piece is and how you can use it, with an example.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Calculation and practice'
+  lessons:
+  - id: m4-l1
+    title: 'Calculation: checks, captures and threats'
+    file: lessons/m4-l1.md
+    minutes: 45
+  - id: m4-l2
+    title: 'Practice set: six puzzles'
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Solve 10 puzzles slowly: for each, write your candidate moves and the line you calculated before moving. Then
+      do 20 puzzles a day for a week. Upload your notes and your puzzle rating at the start and the end of the week.'
+  - id: m4-explain
+    type: explain
+    prompt: Describe your process for finding a tactic in a game, from forcing moves to the blunder check.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

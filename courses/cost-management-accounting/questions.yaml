@@ -1,0 +1,240 @@
+q1:
+  text: 'Rent of 6,000 a month, as cake sales rise from 300 to 500, is:'
+  show: 4
+  options:
+    a: Fixed in total, lower per cake
+    b: Variable in total
+    c: Higher per cake
+    d: A direct cost
+q2:
+  text: Which is a sunk cost?
+  show: 4
+  options:
+    a: A planned new oven
+    b: An oven bought last year
+    c: Wages for next week
+    d: Next month's flour
+q3:
+  text: 'High: 500 hours, 4,800. Low: 200 hours, 3,000. Variable cost per hour:'
+  show: 4
+  options:
+    a: '9.6'
+    b: 1,800
+    c: '15'
+    d: '6'
+q4:
+  text: 'Using that rate, the fixed part is:'
+  show: 4
+  options:
+    a: 1,800
+    b: 3,000
+    c: '600'
+    d: 1,200
+q5:
+  text: 'Costs that are part of making goods and wait in inventory until sold are:'
+  show: 4
+  options:
+    a: Sunk costs
+    b: Product costs
+    c: Opportunity costs
+    d: Period costs
+q6:
+  text: 'Price 120, variable cost 50, fixed costs 21,000. Break-even units:'
+  show: 4
+  options:
+    a: '300'
+    b: '420'
+    c: '175'
+    d: '246'
+q7:
+  text: 'For a target profit of 7,000, units needed:'
+  show: 4
+  options:
+    a: '100'
+    b: '540'
+    c: '300'
+    d: '400'
+q8:
+  text: 'Sales 450 units, break-even 300 units. Margin of safety:'
+  show: 4
+  options:
+    a: 33%
+    b: 50%
+    c: 67%
+    d: 150%
+q9:
+  text: 'Contribution margin 31,500, operating profit 10,500. Operating leverage:'
+  show: 4
+  options:
+    a: '0.33'
+    b: '3.0'
+    c: '2.0'
+    d: 42,000
+q10:
+  text: 'If variable cost per unit rises, break-even:'
+  show: 4
+  options:
+    a: Stays the same
+    b: Falls
+    c: Rises
+    d: Becomes zero
+q11:
+  text: 'Budgeted overhead 18,000 and 1,200 labor hours. The overhead rate is:'
+  show: 4
+  options:
+    a: 6.67 per labor hour
+    b: 15 per labor hour
+    c: 21,600
+    d: 1.5 per labor hour
+q12:
+  text: 'A job: materials 900, labor 400, 10 hours at an overhead rate of 15. Its cost is:'
+  show: 4
+  options:
+    a: 1,450
+    b: 1,315
+    c: 1,300
+    d: 1,600
+q13:
+  text: 'Overhead applied is more than actual overhead. Overhead is:'
+  show: 4
+  options:
+    a: Overapplied
+    b: Exactly right
+    c: Underapplied
+    d: A sunk cost
+q14:
+  text: 'Materials added at the start; 2,000 units in ending WIP, 50% converted. Their equivalent units for conversion:'
+  show: 4
+  options:
+    a: '500'
+    b: 4,000
+    c: 1,000
+    d: 2,000
+q15:
+  text: 'ABC assigns overhead using:'
+  show: 4
+  options:
+    a: Equal shares per product
+    b: Sales value
+    c: Only labor hours
+    d: The activities that drive each cost
+q16:
+  text: 'Production 500, sales 450, fixed overhead 20 per unit. Absorption profit compared with variable costing profit is:'
+  show: 4
+  options:
+    a: 1,000 higher
+    b: 9,000 higher
+    c: 1,000 lower
+    d: The same
+q17:
+  text: 'A special order with spare capacity should be accepted if:'
+  show: 4
+  options:
+    a: It's at the normal price
+    b: Fixed costs fall
+    c: Its price covers full cost including fixed costs
+    d: Its price is above the extra (variable) cost
+q18:
+  text: 'Make: variable 8 per unit plus 500 avoidable fixed for 200 units. Buy at 9. Which is cheaper?'
+  show: 4
+  options:
+    a: Buy, by 300
+    b: Make, by 300
+    c: Make, by 100
+    d: They cost the same
+q19:
+  text: 'With a limited oven, products should be ranked by:'
+  show: 4
+  options:
+    a: Contribution margin per oven hour
+    b: Sales volume
+    c: Selling price
+    d: Contribution margin per unit
+q20:
+  text: 'A product line has CM 2,000 and avoidable fixed costs 1,000. Dropping it changes profit by:'
+  show: 4
+  options:
+    a: −1,000
+    b: +2,000
+    c: +1,000
+    d: '0'
+q21:
+  text: 'The master budget starts with the:'
+  show: 4
+  options:
+    a: Sales budget
+    b: Capital budget
+    c: Production budget
+    d: Cash budget
+q22:
+  text: 'Sales 60,000 this month and 54,000 last month; 60% collected in the month, 40% the next. Collections this month:'
+  show: 4
+  options:
+    a: 54,000
+    b: 60,000
+    c: 57,600
+    d: 36,000
+q23:
+  text: 'Actual 4,900 kg at 3.20; standard price 3.00. Price variance:'
+  show: 4
+  options:
+    a: 300 unfavorable
+    b: 980 unfavorable
+    c: 1,280 unfavorable
+    d: 980 favorable
+q24:
+  text: 'Standard allows 4,800 kg at 3.00; 4,900 kg used. Quantity variance:'
+  show: 4
+  options:
+    a: 980 unfavorable
+    b: 320 unfavorable
+    c: 300 unfavorable
+    d: 300 favorable
+q25:
+  text: 'Padding a budget to make it easy to beat is called:'
+  show: 4
+  options:
+    a: A variance
+    b: Budgetary slack
+    c: A rolling budget
+    d: Zero-based budgeting
+q26:
+  text: 'Profit 60,000 on assets 400,000. ROI:'
+  show: 4
+  options:
+    a: 15%
+    b: 12%
+    c: 6.7%
+    d: 25%
+q27:
+  text: 'Profit 60,000, assets 400,000, required return 12%. Residual income:'
+  show: 4
+  options:
+    a: 48,000
+    b: 7,200
+    c: 60,000
+    d: 12,000
+q28:
+  text: 'A branch manager controls costs and sales but not investment. It''s a:'
+  show: 4
+  options:
+    a: Revenue center
+    b: Investment center
+    c: Profit center
+    d: Cost center
+q29:
+  text: Which balanced scorecard perspective includes staff training hours?
+  show: 4
+  options:
+    a: Customer
+    b: Financial
+    c: Internal process
+    d: Learning and growth
+q30:
+  text: 'Cutting the price from 120 to 110 with variable cost 50 and fixed costs 21,000 moves break-even to:'
+  show: 4
+  options:
+    a: 191 cakes
+    b: 420 cakes
+    c: 300 cakes
+    d: 350 cakes

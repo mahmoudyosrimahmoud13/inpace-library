@@ -1,0 +1,130 @@
+id: chess-1-rules-ar
+title: 'الشطرنج 1: القواعد ومبارياتك الأولى'
+version: 1
+language: ar
+description: 'تعلّم الشطرنج من الصفر: الرقعة وحركة كل قطعة، والتبييت والأخذ في الطريق والترقية، والكش والكش مات والجمود والتعادل،
+  وقراءة النقلات وكتابتها، وأول أنواع المات (الصف الخلفي، ومات الوزير والقلعة، ومات العالِم وكيف توقفه)، ومبادئ الافتتاح،
+  وروتين تفكير لكل نقلة. كل وضع معه رابط لفتحه على Lichess. الكورس الأول من 3 في مسار الشطرنج. حوالي 4 أيام، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: 'Lichess: تعلّم القواعد بشكل تفاعلي (مجانًا)'
+  url: https://lichess.org/learn
+- title: قوانين الشطرنج من الاتحاد الدولي FIDE (بالإنجليزية)
+  url: https://handbook.fide.com/chapter/E012023
+modules:
+- id: m1
+  title: 'الوحدة 1: الرقعة والقطع'
+  lessons:
+  - id: m1-l1
+    title: الرقعة ووضع البداية
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: كيف تتحرك القطع، وكم تساوي
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: رتّب وضع البداية على رقعة حقيقية أو على Lichess من الذاكرة، وارفع صورة أو لقطة شاشة. ثم أكمل أول دروس 'Learn chess'
+      على Lichess (القلعة، الفيل، الوزير، الملك، الحصان، الجندي) وارفع لقطة لتقدّمك.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح بكلماتك كيف يتحرك الحصان، ولماذا الحصان في الركن ضعيف.
+    min_words: 30
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: القواعد الخاصة وكيف تنتهي المباراة'
+  lessons:
+  - id: m2-l1
+    title: 'نقلات خاصة: التبييت والأخذ في الطريق والترقية'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: الكش والكش مات والجمود والتعادل
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: في 'Learn chess' على Lichess، أكمل دروس التبييت والأخذ في الطريق والترقية والكش والكش مات والجمود. ثم رتّب وضع
+      كش مات ووضع جمود بملك ووزير ضد ملك فقط، وارفع لقطة لكل منهما.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح الفرق بين الكش مات والجمود، ولماذا الجمود خطر على اللاعب الفائز.
+    min_words: 35
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: التدوين وأول أنواع المات'
+  lessons:
+  - id: m3-l1
+    title: قراءة النقلات وكتابتها
+    file: lessons/m3-l1.md
+    minutes: 40
+  - id: m3-l2
+    title: أول أنواع المات
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: حل 'Piece checkmates I' في Lichess Practice (مات الوزير ومات القلعة) حتى تستطيع عمل المات ضد الكمبيوتر بكل منهما
+      بدون جمود. ارفع لقطات، واكتب بالتدوين آخر خمس نقلات لإحدى مرات المات.
+  - id: m3-explain
+    type: explain
+    prompt: صف خطوة بخطوة طريقة المات بالملك والوزير ضد الملك.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: لعب مباراة كاملة'
+  lessons:
+  - id: m4-l1
+    title: 'كيف تبدأ المباراة: مبادئ الافتتاح'
+    file: lessons/m4-l1.md
+    minutes: 40
+  - id: m4-l2
+    title: مبارياتك الأولى
+    file: lessons/m4-l2.md
+    minutes: 45
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: العب خمس مباريات رابيد (15+10 أو أبطأ) على Lichess. لكل واحدة، ارفع رابط المباراة واكتب أكبر خطأ لك وأي سؤال من
+      روتين التفكير كان سيمنعه.
+  - id: m4-explain
+    type: explain
+    prompt: اكتب أسئلة روتين التفكير الأربعة واشرح لماذا فحص الخطأ الفادح مهم.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

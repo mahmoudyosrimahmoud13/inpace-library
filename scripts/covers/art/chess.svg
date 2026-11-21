@@ -1,0 +1,57 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter>
+<marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e07a5f"/></marker></defs>
+<g filter="url(#s)"><rect x="52" y="54" width="416" height="416" rx="18" fill="#fffaf0"/></g>
+<rect x="116" y="70" width="48" height="48" fill="#b7c9a8"/>
+<rect x="212" y="70" width="48" height="48" fill="#b7c9a8"/>
+<rect x="308" y="70" width="48" height="48" fill="#b7c9a8"/>
+<rect x="404" y="70" width="48" height="48" fill="#b7c9a8"/>
+<rect x="68" y="118" width="48" height="48" fill="#b7c9a8"/>
+<rect x="164" y="118" width="48" height="48" fill="#b7c9a8"/>
+<rect x="260" y="118" width="48" height="48" fill="#b7c9a8"/>
+<rect x="356" y="118" width="48" height="48" fill="#b7c9a8"/>
+<rect x="116" y="166" width="48" height="48" fill="#b7c9a8"/>
+<rect x="212" y="166" width="48" height="48" fill="#b7c9a8"/>
+<rect x="308" y="166" width="48" height="48" fill="#b7c9a8"/>
+<rect x="404" y="166" width="48" height="48" fill="#b7c9a8"/>
+<rect x="68" y="214" width="48" height="48" fill="#b7c9a8"/>
+<rect x="164" y="214" width="48" height="48" fill="#b7c9a8"/>
+<rect x="260" y="214" width="48" height="48" fill="#b7c9a8"/>
+<rect x="356" y="214" width="48" height="48" fill="#b7c9a8"/>
+<rect x="116" y="262" width="48" height="48" fill="#b7c9a8"/>
+<rect x="212" y="262" width="48" height="48" fill="#b7c9a8"/>
+<rect x="308" y="262" width="48" height="48" fill="#b7c9a8"/>
+<rect x="404" y="262" width="48" height="48" fill="#b7c9a8"/>
+<rect x="68" y="310" width="48" height="48" fill="#b7c9a8"/>
+<rect x="164" y="310" width="48" height="48" fill="#b7c9a8"/>
+<rect x="260" y="310" width="48" height="48" fill="#b7c9a8"/>
+<rect x="356" y="310" width="48" height="48" fill="#b7c9a8"/>
+<rect x="116" y="358" width="48" height="48" fill="#b7c9a8"/>
+<rect x="212" y="358" width="48" height="48" fill="#b7c9a8"/>
+<rect x="308" y="358" width="48" height="48" fill="#b7c9a8"/>
+<rect x="404" y="358" width="48" height="48" fill="#b7c9a8"/>
+<rect x="68" y="406" width="48" height="48" fill="#b7c9a8"/>
+<rect x="164" y="406" width="48" height="48" fill="#b7c9a8"/>
+<rect x="260" y="406" width="48" height="48" fill="#b7c9a8"/>
+<rect x="356" y="406" width="48" height="48" fill="#b7c9a8"/>
+<circle cx="188.0" cy="142.0" r="19" fill="#fdf6e9" stroke="#1f3d36" stroke-width="3"/>
+<text x="188.0" y="149.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#1f3d36">N</text>
+<circle cx="284.0" cy="94.0" r="19" fill="#1f3d36" stroke="#1f3d36" stroke-width="3"/>
+<text x="284.0" y="101.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#fdf6e9">K</text>
+<circle cx="92.0" cy="94.0" r="19" fill="#1f3d36" stroke="#1f3d36" stroke-width="3"/>
+<text x="92.0" y="101.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#fdf6e9">R</text>
+<circle cx="332.0" cy="142.0" r="19" fill="#1f3d36" stroke="#1f3d36" stroke-width="3"/>
+<text x="332.0" y="149.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#fdf6e9">P</text>
+<circle cx="380.0" cy="142.0" r="19" fill="#1f3d36" stroke="#1f3d36" stroke-width="3"/>
+<text x="380.0" y="149.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#fdf6e9">P</text>
+<circle cx="284.0" cy="430.0" r="19" fill="#fdf6e9" stroke="#1f3d36" stroke-width="3"/>
+<text x="284.0" y="437.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#1f3d36">K</text>
+<circle cx="236.0" cy="286.0" r="19" fill="#fdf6e9" stroke="#1f3d36" stroke-width="3"/>
+<text x="236.0" y="293.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#1f3d36">P</text>
+<circle cx="284.0" cy="286.0" r="19" fill="#fdf6e9" stroke="#1f3d36" stroke-width="3"/>
+<text x="284.0" y="293.0" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#1f3d36">P</text>
+<line x1="207.67739820199816" y1="132.16130089900093" x2="262.53374741600203" y2="104.73312629199899" stroke="#e07a5f" stroke-width="6" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="168.32260179800184" y1="132.16130089900093" x2="113.46625258399798" y2="104.73312629199899" stroke="#e07a5f" stroke-width="6" stroke-linecap="round" marker-end="url(#ah)"/>
+<g filter="url(#s)"><rect x="150" y="474" width="240" height="64" rx="18" fill="#f4d35e"/></g>
+<text x="270" y="515" text-anchor="middle" font-family="JBM" font-weight="700" font-size="24" fill="#1f3d36">Nc7+ fork</text>
+</svg>

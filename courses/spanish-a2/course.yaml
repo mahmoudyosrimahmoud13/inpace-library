@@ -1,0 +1,194 @@
+id: spanish-a2
+title: 'Spanish A2: talk about the past and get things done'
+version: 1
+language: en
+description: 'Spanish level A2, taught in English with the same research-based method as A1: a real conversation first, the
+  phrases people use, one grammar point per unit, a voice note every unit, and review from memory. Tell what you did (the
+  preterite, regular and irregular), describe how things used to be (the imperfect), compare and buy things, talk to a doctor,
+  and talk about experiences and the future. Ends with an A2 level check. About 2 weeks at 45 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'Dreaming Spanish: free videos sorted by level, from complete beginner up'
+  url: https://www.dreaming.com/
+- title: 'Easy Spanish: street interviews with subtitles (YouTube)'
+  url: https://www.youtube.com/@EasySpanish
+- title: 'SpanishDict: dictionary, conjugation tables and pronunciation'
+  url: https://www.spanishdict.com/
+modules:
+- id: m1
+  title: 'Unit 1: Last weekend'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how this course works'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: What did you do?
+    file: lessons/m1-l2.md
+    minutes: 35
+  - id: m1-l3
+    title: 'The preterite: regular verbs'
+    file: lessons/m1-l3.md
+    minutes: 40
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): last weekend, with at least six verbs in the preterite. Upload it.'
+  - id: m1-explain
+    type: explain
+    prompt: Write 5 sentences in Spanish about what you did yesterday.
+    min_words: 30
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Unit 2: A trip'
+  lessons:
+  - id: m2-l1
+    title: Telling the story of a trip
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'The preterite: irregular verbs'
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Voice note (90 seconds): the story of a trip. Upload it.'
+  - id: m2-explain
+    type: explain
+    prompt: Write 6 sentences in Spanish about a trip, using at least four irregular verbs (fui, hice, tuve, estuve...).
+    min_words: 35
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Unit 3: When I was little'
+  lessons:
+  - id: m3-l1
+    title: Childhood memories
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: 'The imperfect: how things used to be'
+    file: lessons/m3-l2.md
+    minutes: 40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Voice note (90 seconds): your childhood, with habits (imperfect) and one event (preterite). Upload it.'
+  - id: m3-explain
+    type: explain
+    prompt: Write 6 sentences in Spanish about your childhood, using the imperfect at least four times.
+    min_words: 35
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Unit 4: Shopping'
+  lessons:
+  - id: m4-l1
+    title: In a clothes shop
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Comparisons, and lo / la / los / las
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): a shop conversation (both roles), then a comparison of two shops. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Write 5 sentences in Spanish comparing two things, with más... que, tan... como and mejor or peor.
+    min_words: 30
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Unit 5: At the doctor''s'
+  lessons:
+  - id: m5-l1
+    title: I don't feel well
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: Doler, obligation and advice, and the imperative
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): describe symptoms to a doctor, then give a friend advice. Upload it.'
+  - id: m5-explain
+    type: explain
+    prompt: Write 5 pieces of advice in Spanish for someone who wants to sleep better, using tú commands, debes and tienes
+      que.
+    min_words: 30
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Unit 6: Experiences and the future'
+  lessons:
+  - id: m6-l1
+    title: Booking a room and talking about experiences
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: The present perfect and the future
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'Level check: can you do A2?'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Voice note (90 seconds): a hotel booking by phone, then places you''ve been and will visit. Upload it.'
+  - id: m6-explain
+    type: explain
+    prompt: Write 6 sentences in Spanish about your experiences (he estado, nunca he...) and two predictions with the future.
+    min_words: 35
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

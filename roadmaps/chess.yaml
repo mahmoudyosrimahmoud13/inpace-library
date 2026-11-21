@@ -1,0 +1,15 @@
+id: chess
+title: Chess, from zero to your first tournament
+description: Three courses in order. Learn the rules and play your first games, then the tactics that decide most games, then a simple opening repertoire, plans and the endgames every player needs. Every position has a link to open it on Lichess.
+language: en
+author: inPace
+official: true
+order: 26
+tags: [chess, beginner]
+steps:
+  - course: chess-1-rules
+    note: "Start here: the board, how every piece moves, the special rules, your first checkmates and a routine for every move."
+  - course: chess-2-tactics
+    note: Forks, pins, skewers, discovered attacks, mating patterns and calculation. Keep doing daily puzzles after it.
+  - course: chess-3-openings-endgames
+    note: The Italian Game and the Queen's Gambit Declined, pawn structure and plans, and the key king, pawn and rook endgames.

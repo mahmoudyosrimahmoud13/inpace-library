@@ -1,120 +1,120 @@
 q1:
   right:
-  - a
-  - b
-  why: no creo que + subjuntivo.
+  - d
+  why: 'الرأي المثبت ← indicativo: Creo que es...'
 q2:
   right:
-  - a
-  - b
-  why: من tengo → tengamos.
+  - d
+  why: أداة مقابلة.
 q3:
   right:
-  - a
   - b
-  why: creo que (إثبات) + indicativo.
+  why: 'echar de menos = يفتقد (إسبانيا)؛ وفي أمريكا اللاتينية: extrañar.'
 q4:
   right:
-  - a
-  - b
-  why: es mejor que + subjuntivo (vayas)، أو مصدر بدون que.
+  - c
+  why: como التعليلية تأتي في أول الجملة.
 q5:
   right:
-  - a
   - b
-  why: 'فاعل مختلف: que + subjuntivo.'
+  why: اعترف برأي الآخر أولًا، ثم اعترض.
 q6:
   right:
-  - a
-  - b
-  why: cuando + subjuntivo للمستقبل.
+  - d
+  why: tengo ← teng- + a.
 q7:
   right:
-  - a
-  - b
-  why: المشاعر + que + subjuntivo.
+  - c
+  why: أمنية عن شخص آخر ← subjuntivo.
 q8:
   right:
-  - a
-  - b
-  why: 'نفس الفاعل: مصدر (أو ojalá).'
+  - c
+  why: نفس الشخص ← المصدر.
 q9:
   right:
-  - a
-  - b
-  why: 'pluscuamperfecto: había + participio.'
+  - d
+  why: '"لو شاء الله".'
 q10:
   right:
-  - a
-  - b
-  why: الخلفية بالـ imperfecto.
+  - d
+  why: ser ← sea وseas وsea وseamos وseáis وsean.
 q11:
   right:
-  - a
   - b
-  why: seguir + gerundio.
+  why: الشك ← subjuntivo.
 q12:
   right:
-  - a
-  - b
-  why: dejar de + مصدر.
+  - c
+  why: الاعتقاد ← indicativo.
 q13:
   right:
-  - a
-  - b
-  why: si + subjuntivo الماضي + شرطي.
+  - d
+  why: شعور + que + فاعل آخر ← subjuntivo.
 q14:
   right:
-  - a
-  - b
-  why: ir/ser → fueron → fuera.
+  - c
+  why: llevar + مدة + اسم الفاعل.
 q15:
   right:
-  - a
   - b
-  why: como si + subjuntivo الماضي دائمًا.
+  why: عبارة ثابتة للنصيحة.
 q16:
   right:
-  - a
-  - b
-  why: puede que + subjuntivo.
+  - d
+  why: si الافتراضية ← subjuntivo ماضٍ.
 q17:
   right:
   - a
-  - b
-  why: presente → imperfecto بعد dijo que.
+  why: جذر شاذ har-.
 q18:
   right:
-  - a
-  - b
-  why: سؤال نعم/لا يُنقل بـ si.
+  - d
+  why: الشرطي يلطّف الطلبات.
 q19:
   right:
-  - a
-  - b
-  why: le + lo → se lo.
+  - c
+  why: 'شرط حقيقي: si + مضارع، ثم مستقبل.'
 q20:
   right:
-  - a
-  - b
-  why: الأمر المنقول بالماضي → subjuntivo الماضي.
+  - d
+  why: تُستخدم للنصيحة مع الشرطي.
 q21:
   right:
   - a
-  - b
-  why: que للأشياء.
+  why: الماضي التام = ماضٍ أسبق.
 q22:
   right:
   - a
-  - b
-  why: شيء غير محدد → subjuntivo.
+  why: haber (ماضٍ مستمر) + visto.
 q23:
   right:
   - a
-  - b
-  why: lo que = ما / الشيء الذي.
+  why: Estimado/a + اللقب + الاسم + نقطتان.
 q24:
   right:
-  - a
+  - d
+  why: llevar + اسم الفاعل = ما زال مستمرًا.
+q25:
+  right:
+  - c
+  why: المواقف الرسمية ← usted.
+q26:
+  right:
+  - d
+  why: مضارع ← ماضٍ مستمر.
+q27:
+  right:
+  - d
+  why: مستقبل ← شرطي.
+q28:
+  right:
   - b
-  why: احتمال → aunque + subjuntivo.
+  why: أسئلة نعم/لا ← si.
+q29:
+  right:
+  - c
+  why: الطلبات ← subjuntivo ماضٍ.
+q30:
+  right:
+  - d
+  why: تُقال للإنجازات.

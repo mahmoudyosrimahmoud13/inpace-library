@@ -1,0 +1,133 @@
+id: chess-1-rules
+title: 'Chess 1: the rules and your first games'
+version: 1
+language: en
+description: 'Learn chess from zero: the board and how every piece moves, castling, en passant and promotion, check, checkmate,
+  stalemate and draws, reading and writing moves, your first checkmates (back rank, queen and rook mates, the scholar''s mate
+  and how to stop it), the opening principles, and a thinking routine for every move. Every position comes with a link to
+  open it on Lichess. Course 1 of 3 in the chess path. About 4 days, an hour a day.'
+image: cover.jpg
+downloads:
+- title: 'Lichess: learn the rules interactively (free)'
+  url: https://lichess.org/learn
+- title: FIDE Laws of Chess
+  url: https://handbook.fide.com/chapter/E012023
+modules:
+- id: m1
+  title: 'Module 1: The board and the pieces'
+  lessons:
+  - id: m1-l1
+    title: The board and the starting position
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: How the pieces move, and what they are worth
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Set up the starting position on a real board or on Lichess from memory and upload a photo or screenshot. Then
+      finish the first Lichess 'Learn chess' lessons (rook, bishop, queen, king, knight, pawn) and upload a screenshot of
+      your progress.
+  - id: m1-explain
+    type: explain
+    prompt: Explain in your own words how the knight moves and why a knight in the corner is weak.
+    min_words: 30
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Special rules and how a game ends'
+  lessons:
+  - id: m2-l1
+    title: 'Special moves: castling, en passant and promotion'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: Check, checkmate, stalemate and draws
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: On Lichess 'Learn chess', finish the lessons on castling, en passant, promotion, check, checkmate and stalemate.
+      Then set up one checkmate and one stalemate position with only king and queen against king, and upload screenshots of
+      both.
+  - id: m2-explain
+    type: explain
+    prompt: Explain the difference between checkmate and stalemate, and why stalemate is dangerous for the player who is winning.
+    min_words: 35
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Notation and your first checkmates'
+  lessons:
+  - id: m3-l1
+    title: Reading and writing moves
+    file: lessons/m3-l1.md
+    minutes: 40
+  - id: m3-l2
+    title: Your first checkmates
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Do Lichess Practice 'Piece checkmates I' (queen mate and rook mate) until you can mate the computer with each
+      without stalemate. Upload screenshots, and write down in notation the last five moves of one of your mates.
+  - id: m3-explain
+    type: explain
+    prompt: Describe the method for mating with king and queen against king, step by step.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Playing a whole game'
+  lessons:
+  - id: m4-l1
+    title: 'How to start a game: opening principles'
+    file: lessons/m4-l1.md
+    minutes: 40
+  - id: m4-l2
+    title: Playing your first games
+    file: lessons/m4-l2.md
+    minutes: 45
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Play five rapid games (15+10 or slower) on Lichess. For each, upload the game link and write your biggest mistake
+      and which question of the thinking routine would have prevented it.
+  - id: m4-explain
+    type: explain
+    prompt: Write the four questions of the thinking routine and explain why the blunder check matters.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

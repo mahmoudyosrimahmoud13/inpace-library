@@ -1,39 +1,44 @@
 id: german-b1-ar
-title: الألماني مستوى B1
-version: 1
+title: 'الألماني B1: الرأي وKonjunktiv II وحياة العمل'
+version: 2
 language: ar
-description: 'المستوى الثالث بعد الألماني A2، والشرح بالعربي. المستوى المطلوب غالبًا للعمل والتدريب المهني في ألمانيا:
-  مقابلة العمل والنقاش، و Präteritum و Plusquamperfekt، وجمل الوصل، و hätte gemacht، و Passiv، والرسائل الرسمية،
-  والروابط و Genitiv. كل أسبوع يبدأ بالكلام، مع جزء اختياري من فيلم «Nicos Weg B1» أو حلقة من Easy German. الخطة:
-  6 أسابيع، 40 دقيقة يوميًا.'
+description: 'الألماني مستوى B1، بالشرح العربي وبنفس الطريقة المبنية على الأبحاث: محادثات حقيقية أولًا، والعبارات التي يستخدمها
+  الناس، وقاعدة واحدة في كل وحدة، وتسجيل صوتي في كل وحدة، ومراجعة من الذاكرة. عبّر عن رأيك ودافع عنه بأدوات الربط، وتكلّم
+  عن الأمنيات والافتراضات بـ Konjunktiv II، وصِف الناس والأشياء بالجمل الموصولة، واشرح العمليات بالمبني للمجهول، وتقدّم لوظيفة
+  واحكِ القصص بالـ Präteritum، وعبّر عن الأهداف بـ um... zu وdamit. وينتهي باختبار مستوى B1. حوالي أسبوعين إلى 3 أسابيع، 45
+  دقيقة يوميًا.'
 image: cover.jpg
+downloads:
+- title: 'DW تعلّم الألمانية: دورات مجانية من A1 إلى B1، ومنها مسلسل Nicos Weg (وفيها واجهة عربية)'
+  url: https://learngerman.dw.com/
+- title: 'Easy German: مقابلات في الشارع مع ترجمة (YouTube)'
+  url: https://www.youtube.com/@EasyGerman
+- title: 'dict.cc: قاموس ألماني مع نطق صوتي'
+  url: https://www.dict.cc/
 modules:
 - id: m1
-  title: 'الأسبوع 1: ابدأ بالكلام: مقابلة العمل والرأي'
+  title: 'الوحدة 1: في رأيي'
   lessons:
   - id: m1-l1
-    title: ابدأ من هنا
+    title: 'ابدأ من هنا: كيف يعمل هذا الكورس'
     file: lessons/m1-l1.md
-    minutes: 10
+    minutes: 20
   - id: m1-l2
-    title: 'محادثة: أسئلة مقابلة العمل'
+    title: إبداء الرأي والدفاع عنه
     file: lessons/m1-l2.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=I1y460_dViU
   - id: m1-l3
-    title: 'النقاش: الرأي والموافقة والاعتراض'
+    title: أدوات الربط وترتيب الكلمات
     file: lessons/m1-l3.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=LkufozluseI&end=1140
+    minutes: 40
   requires:
   - id: m1-practical
     type: practical
-    prompt: 'تسجيل صوتي (2 دقيقة): قدّم نفسك كما في مقابلة عمل: من أنت، ماذا درست وعملت، نقاط قوتك، ولماذا تريد
-      العمل في ألمانيا.'
+    prompt: 'تسجيل صوتي (دقيقتان): رأي مع أسباب، وحجة مضادة، وخلاصة. ارفعه.'
   - id: m1-explain
     type: explain
-    prompt: 'Schreib einen Meinungstext (120 Wörter): «Homeoffice: mehr Vorteile oder mehr Nachteile?».'
-    min_words: 120
+    prompt: اكتب حوالي 80 كلمة بالألمانية تعبّر فيها عن رأيك في موضوع تختاره، باستخدام deshalb وtrotzdem وobwohl.
+    min_words: 70
   - id: m1-quiz
     type: quiz
     questions:
@@ -41,178 +46,149 @@ modules:
     - q2
     - q3
     - q4
+    - q5
     pass: 70
 - id: m2
-  title: 'الأسبوع 2: الحكاية: Präteritum و Plusquamperfekt'
+  title: 'الوحدة 2: لو استطعت...'
   lessons:
   - id: m2-l1
-    title: 'Präteritum: لغة القصص والأخبار'
+    title: الأحلام والطلبات المهذبة
     file: lessons/m2-l1.md
-    minutes: 40
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=1140&end=2280
-  - id: m2-l2
-    title: Plusquamperfekt و nachdem / bevor
-    file: lessons/m2-l2.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=1140&end=2280
-  - id: m2-l3
-    title: اكتب قصة
-    file: lessons/m2-l3.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=1140&end=2280
+  - id: m2-l2
+    title: 'Konjunktiv II: الأمنيات والافتراضات والتأدب'
+    file: lessons/m2-l2.md
+    minutes: 40
   requires:
   - id: m2-practical
     type: practical
-    prompt: 'تسجيل صوتي (2 دقيقة): احكِ قصة حقيقية مرت بك (سفر، عمل، موقف مضحك) بالترتيب وبروابط القصة.'
+    prompt: 'تسجيل صوتي (دقيقتان): أسئلة افتراضية وطلبات مهذبة. ارفعه.'
   - id: m2-explain
     type: explain
-    prompt: 'Schreib eine Geschichte (150 Wörter): «Eine Reise, die anders lief als geplant».'
-    min_words: 150
+    prompt: اكتب حوالي 70 كلمة بالألمانية عن حياة أحلامك، باستخدام würde وhätte وwäre وkönnte.
+    min_words: 60
   - id: m2-quiz
     type: quiz
     questions:
-    - q5
     - q6
     - q7
     - q8
+    - q9
+    - q10
     pass: 70
 - id: m3
-  title: 'الأسبوع 3: جمل الوصل (Relativsätze)'
+  title: 'الوحدة 3: الشخص الذي...'
   lessons:
   - id: m3-l1
-    title: der, die, das كضمائر وصل
+    title: وصف الناس والأشياء
     file: lessons/m3-l1.md
-    minutes: 40
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=2280&end=3420
+    minutes: 35
   - id: m3-l2
-    title: was, wo, worüber
+    title: الجمل الموصولة
     file: lessons/m3-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=2280&end=3420
-  - id: m3-l3
-    title: 'صِف بدقة: Relativsätze في الكلام'
-    file: lessons/m3-l3.md
-    minutes: 25
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=2280&end=3420
+    minutes: 40
   requires:
   - id: m3-practical
     type: practical
-    prompt: 'تسجيل صوتي (90 ثانية): صِف أهم 3 أشخاص في حياتك بجمل وصل (der, den, dem, mit dem...).'
+    prompt: 'تسجيل صوتي (90 ثانية): أشخاص وأشياء مهمة لك، بجمل موصولة. ارفعه.'
   - id: m3-explain
     type: explain
-    prompt: Beschreib deine Traumwohnung oder deinen Traumjob (120 Wörter) mit mindestens fünf Relativsätzen.
-    min_words: 120
+    prompt: اكتب 6 جمل بالألمانية، كل واحدة بجملة موصولة، واستخدم den وdem وحرف جر + اسم موصول مرة على الأقل.
+    min_words: 40
   - id: m3-quiz
     type: quiz
     questions:
-    - q9
-    - q10
     - q11
     - q12
-    pass: 70
-- id: m4
-  title: 'الأسبوع 4: لو كان...: Konjunktiv II'
-  lessons:
-  - id: m4-l1
-    title: 'Konjunktiv II في الماضي: hätte gemacht'
-    file: lessons/m4-l1.md
-    minutes: 40
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=3420&end=4560
-  - id: m4-l2
-    title: als ob، و sollte، و die Bitte
-    file: lessons/m4-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=3420&end=4560
-  - id: m4-l3
-    title: 'نقاش: ماذا كنت ستفعل؟'
-    file: lessons/m4-l3.md
-    minutes: 25
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=3420&end=4560
-  requires:
-  - id: m4-practical
-    type: practical
-    prompt: 'تسجيل صوتي (2 دقيقة): شيء تندم عليه أو قرار كنت ستتخذه بشكل مختلف: ماذا حدث، وماذا كان سيحدث لو...'
-  - id: m4-explain
-    type: explain
-    prompt: 'Schreib einen Text (150 Wörter): «Wenn ich in einem anderen Land geboren wäre...».'
-    min_words: 150
-  - id: m4-quiz
-    type: quiz
-    questions:
     - q13
     - q14
     - q15
-    - q16
     pass: 70
-- id: m5
-  title: 'الأسبوع 5: المبني للمجهول، والرسائل الرسمية'
+- id: m4
+  title: 'الوحدة 4: كيف يُصنع؟'
   lessons:
-  - id: m5-l1
-    title: 'Passiv: wird gemacht'
-    file: lessons/m5-l1.md
-    minutes: 40
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=4560&end=5700
-  - id: m5-l2
-    title: 'الرسالة الرسمية: شكوى وطلب'
-    file: lessons/m5-l2.md
+  - id: m4-l1
+    title: شرح عملية
+    file: lessons/m4-l1.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=4560&end=5700
-  - id: m5-l3
-    title: الرسائل غير الرسمية والبريد في العمل
-    file: lessons/m5-l3.md
-    minutes: 25
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=4560&end=5700
+  - id: m4-l2
+    title: المبني للمجهول
+    file: lessons/m4-l2.md
+    minutes: 40
   requires:
-  - id: m5-practical
+  - id: m4-practical
     type: practical
-    prompt: 'تسجيل صوتي (90 ثانية): صِف عملية تعرفها بالمبني للمجهول (كيف يُصنع الخبز، كيف يُقدَّم طلب، كيف يُطبخ
-      طبق مصري).'
-  - id: m5-explain
+    prompt: 'تسجيل صوتي (90 ثانية): عملية مشروحة خطوة بخطوة بالمبني للمجهول. ارفعه.'
+  - id: m4-explain
     type: explain
-    prompt: 'Schreib eine formelle Beschwerde (120 Wörter) an ein Online-Geschäft: Die Lieferung ist zu spät und
-      falsch.'
-    min_words: 120
-  - id: m5-quiz
+    prompt: اكتب 6 جمل بالألمانية عن كيف يُنتج شيء أو يُعمل، بالمبني للمجهول (مضارع وماضٍ).
+    min_words: 40
+  - id: m4-quiz
     type: quiz
     questions:
+    - q16
     - q17
     - q18
     - q19
     - q20
     pass: 70
-- id: m6
-  title: 'الأسبوع 6: الروابط، و Genitiv، ومراجعة B1'
+- id: m5
+  title: 'الوحدة 5: العمل والتقديم للوظائف'
   lessons:
-  - id: m6-l1
-    title: obwohl، trotzdem، damit، deshalb
-    file: lessons/m6-l1.md
+  - id: m5-l1
+    title: مقابلة عمل
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: الـ Präteritum، وals وwenn، والرسائل الرسمية
+    file: lessons/m5-l2.md
     minutes: 40
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=5700
-  - id: m6-l2
-    title: Genitiv و wegen / trotz
-    file: lessons/m6-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=5700
-  - id: m6-l3
-    title: مراجعة B1، وماذا بعد
-    file: lessons/m6-l3.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=LkufozluseI&t=5700
   requires:
-  - id: m6-practical
+  - id: m5-practical
     type: practical
-    prompt: 'تسجيل صوتي (2 دقيقة): «مزايا وعيوب العيش في بلد آخر»: رأيك بحجتين وحجة معارضة وخاتمة، بـ obwohl و trotzdem
-      و deshalb.'
-  - id: m6-explain
+    prompt: 'تسجيل صوتي (دقيقتان): إجابات مقابلة عمل بألمانية رسمية. ارفعه.'
+  - id: m5-explain
     type: explain
-    prompt: 'Schreib einen Forumsbeitrag (150 Wörter): «Sollten alle Schüler ein Jahr im Ausland verbringen?» Benutze
-      mindestens vier Konnektoren.'
-    min_words: 150
-  - id: m6-quiz
+    prompt: اكتب حوالي 100 كلمة بالألمانية تحكي فيها قصة حياتك بالـ Präteritum، مع als مرتين على الأقل.
+    min_words: 80
+  - id: m5-quiz
     type: quiz
     questions:
     - q21
     - q22
     - q23
     - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'الوحدة 6: الأهداف والخطط'
+  lessons:
+  - id: m6-l1
+    title: لماذا تتعلم الألمانية؟
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: um... zu وdamit والأسئلة غير المباشرة
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'اختبار المستوى: هل أتقنت B1؟'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (دقيقتان): أهدافك مع um... zu وdamit، وثلاثة أسئلة غير مباشرة. ارفعه.'
+  - id: m6-explain
+    type: explain
+    prompt: اكتب حوالي 80 كلمة بالألمانية عن خططك للسنتين القادمتين، باستخدام um... zu وdamit وMein Ziel ist es, ... zu....
+    min_words: 70
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
     pass: 70

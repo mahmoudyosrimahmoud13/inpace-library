@@ -1,0 +1,240 @@
+q1:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Es regnet. Trotzdem ich gehe raus.
+    b: Es regnet. Trotzdem gehe ich raus.
+    c: Es regnet, trotzdem ich raus gehe.
+    d: Es regnet. Ich trotzdem gehe raus.
+q2:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Ich komme, obwohl bin ich krank.
+    b: Ich komme, obwohl ich bin krank.
+    c: Ich komme, obwohl ich krank bin.
+    d: Ich komme obwohl krank ich bin.
+q3:
+  text: '«deshalb» means:'
+  show: 4
+  options:
+    a: because
+    b: besides
+    c: that's why
+    d: although
+q4:
+  text: Meiner Meinung nach ___ das falsch.
+  show: 4
+  options:
+    a: sein
+    b: ist
+    c: das ist
+    d: es ist
+q5:
+  text: '«Ich bin anderer Meinung» means:'
+  show: 4
+  options:
+    a: I changed my mind.
+    b: I'm another person.
+    c: I see it differently.
+    d: I agree.
+q6:
+  text: Wenn ich reich ___, würde ich reisen.
+  show: 4
+  options:
+    a: wäre
+    b: bin
+    c: würde
+    d: war
+q7:
+  text: 'The most polite request:'
+  show: 4
+  options:
+    a: Können Sie helfen jetzt?
+    b: Helfen Sie mir!
+    c: Könnten Sie mir bitte helfen?
+    d: Sie können mir helfen.
+q8:
+  text: '«Ich hätte gern einen Tee» means:'
+  show: 4
+  options:
+    a: I'll have tea later.
+    b: I like tea.
+    c: I had a tea.
+    d: I'd like a tea.
+q9:
+  text: Wenn ich Zeit hätte, ___ ich kommen.
+  show: 4
+  options:
+    a: wurde
+    b: werde
+    c: würde
+    d: will
+q10:
+  text: '«Wenn ich Zeit hätte» implies:'
+  show: 4
+  options:
+    a: I have time.
+    b: I had time yesterday.
+    c: I'll have time.
+    d: I don't have time.
+q11:
+  text: Das ist der Mann, ___ mir geholfen hat.
+  show: 4
+  options:
+    a: der
+    b: die
+    c: den
+    d: dem
+q12:
+  text: Das ist der Film, ___ ich gesehen habe.
+  show: 4
+  options:
+    a: das
+    b: den
+    c: dem
+    d: der
+q13:
+  text: Das ist die Freundin, mit ___ ich reise.
+  show: 4
+  options:
+    a: dem
+    b: die
+    c: der
+    d: denen
+q14:
+  text: Where does the verb go in a relative clause?
+  show: 4
+  options:
+    a: At the end
+    b: Second position
+    c: Anywhere
+    d: First position
+q15:
+  text: Das ist alles, ___ ich weiß.
+  show: 4
+  options:
+    a: wo
+    b: das
+    c: der
+    d: was
+q16:
+  text: Der Müll ___ sortiert.
+  show: 4
+  options:
+    a: hat
+    b: wird
+    c: werden
+    d: ist
+q17:
+  text: 'Past passive: «Das Haus ___ 1900 gebaut.»'
+  show: 4
+  options:
+    a: wird
+    b: wurde
+    c: würde
+    d: war gebaut
+q18:
+  text: '«Der Brief wird von der Post gebracht» means:'
+  show: 4
+  options:
+    a: The letter will bring the post.
+    b: The letter is brought by the post.
+    c: The post becomes a letter.
+    d: The letter brings the post.
+q19:
+  text: Das muss gemacht ___.
+  show: 4
+  options:
+    a: werden
+    b: wurde
+    c: wird
+    d: sein
+q20:
+  text: '«Ich werde Ärztin» uses werden as:'
+  show: 4
+  options:
+    a: become
+    b: would
+    c: passive
+    d: future
+q21:
+  text: 'Präteritum of «gehen», er:'
+  show: 4
+  options:
+    a: gegangen
+    b: gehte
+    c: ging
+    d: gang
+q22:
+  text: 'Präteritum of «machen», ich:'
+  show: 4
+  options:
+    a: gemacht
+    b: machtete
+    c: mach
+    d: machte
+q23:
+  text: ___ ich 2020 nach Deutschland kam, ...
+  show: 4
+  options:
+    a: Wenn
+    b: Als
+    c: Wann
+    d: Ob
+q24:
+  text: Immer ___ ich Zeit hatte, las ich.
+  show: 4
+  options:
+    a: ob
+    b: als
+    c: wann
+    d: wenn
+q25:
+  text: 'A formal letter ends with:'
+  show: 4
+  options:
+    a: Tschüss
+    b: Bis bald!
+    c: Liebe Grüße und Küsse
+    d: Mit freundlichen Grüßen
+q26:
+  text: Ich lerne Deutsch, ___ in Deutschland zu arbeiten.
+  show: 4
+  options:
+    a: weil
+    b: um
+    c: damit
+    d: dass
+q27:
+  text: Ich erkläre es noch einmal, ___ du es verstehst.
+  show: 4
+  options:
+    a: ob
+    b: um
+    c: weil
+    d: damit
+q28:
+  text: 'Indirect: «Wo ist der Bahnhof?» →'
+  show: 4
+  options:
+    a: Wissen Sie, wo der Bahnhof ist?
+    b: Wissen Sie, wo ist Bahnhof der?
+    c: Wissen Sie, ob der Bahnhof ist wo?
+    d: Wissen Sie, wo ist der Bahnhof?
+q29:
+  text: 'For an indirect yes/no question use:'
+  show: 4
+  options:
+    a: ob
+    b: dass
+    c: wenn
+    d: als
+q30:
+  text: 'Infinitive with zu of «anrufen»:'
+  show: 4
+  options:
+    a: anzurufen
+    b: angerufen
+    c: anrufenzu
+    d: zu anrufen

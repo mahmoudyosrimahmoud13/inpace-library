@@ -1,42 +1,43 @@
 id: spanish-a2-ar
-title: الإسباني مستوى A2
-version: 1
+title: 'الإسباني A2: احكِ عن الماضي وتدبّر أمورك'
+version: 2
 language: ar
-description: 'المستوى الثاني بعد الإسباني A1، والشرح بالعربي. كل وحدة تبدأ بالكلام مع فيديو اختياري لمحادثة حقيقية
-  بإسبانية بطيئة: الخطط، و pretérito perfecto و indefinido و imperfecto، والطفولة، والأكل والسفر والمقارنة، والضمائر
-  والأمر والطبيب، والمستقبل والشرط والرأي. الخطة: 5 أسابيع، 30 إلى 45 دقيقة يوميًا.'
+description: 'الإسباني مستوى A2، بالشرح العربي وبنفس طريقة A1 المبنية على الأبحاث: محادثة حقيقية أولًا، والعبارات التي يستخدمها
+  الناس، وقاعدة واحدة في كل وحدة، وتسجيل صوتي في كل وحدة، ومراجعة من الذاكرة. احكِ ما فعلته (الماضي المنتظم والشاذ)، وصِف
+  كيف كانت الأمور (الماضي المستمر)، وقارن واشترِ، وتكلّم مع الطبيب، وتكلّم عن تجاربك والمستقبل. وينتهي باختبار مستوى A2. حوالي
+  أسبوعين، 45 دقيقة يوميًا.'
 image: cover.jpg
+downloads:
+- title: 'Dreaming Spanish: فيديوهات مجانية مرتبة حسب المستوى، من الصفر (بالإسبانية)'
+  url: https://www.dreaming.com/
+- title: 'Easy Spanish: مقابلات في الشارع مع ترجمة (YouTube)'
+  url: https://www.youtube.com/@EasySpanish
+- title: 'SpanishDict: قاموس وجداول تصريف ونطق (بالإنجليزية)'
+  url: https://www.spanishdict.com/
 modules:
 - id: m1
-  title: 'الأيام 1-5: ابدأ بالكلام: خططك وما فعلته'
+  title: 'الوحدة 1: عطلة نهاية الأسبوع الماضية'
   lessons:
   - id: m1-l1
-    title: ابدأ من هنا
+    title: 'ابدأ من هنا: كيف يعمل هذا الكورس'
     file: lessons/m1-l1.md
-    minutes: 10
+    minutes: 20
   - id: m1-l2
-    title: 'محادثة: خططك (ir a, querer, pensar)'
+    title: ماذا فعلت؟
     file: lessons/m1-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=ZO548K8i18c
-  - id: m1-l3
-    title: 'ما فعلته: pretérito perfecto'
-    file: lessons/m1-l3.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=36397&end=37511
-  - id: m1-l4
-    title: saber أم poder أم conocer؟
-    file: lessons/m1-l4.md
-    minutes: 25
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=37511
+  - id: m1-l3
+    title: 'الماضي البسيط: الأفعال المنتظمة'
+    file: lessons/m1-l3.md
+    minutes: 40
   requires:
   - id: m1-practical
     type: practical
-    prompt: 'تسجيل صوتي (60 ثانية): احكِ عن خططك للعام القادم، وعن 3 أشياء فعلتها هذا الأسبوع (pretérito perfecto).'
+    prompt: 'تسجيل صوتي (60 ثانية): عطلة نهاية الأسبوع الماضية، بستة أفعال على الأقل في الماضي البسيط. ارفعه.'
   - id: m1-explain
     type: explain
-    prompt: 'Escribe 6 frases: 3 cosas que has hecho este año y 3 cosas que nunca has hecho.'
-    min_words: 40
+    prompt: اكتب 5 جمل بالإسبانية عمّا فعلته أمس.
+    min_words: 30
   - id: m1-quiz
     type: quiz
     questions:
@@ -44,165 +45,149 @@ modules:
     - q2
     - q3
     - q4
+    - q5
     pass: 70
 - id: m2
-  title: 'الأيام 6-11: الماضي البسيط: pretérito indefinido'
+  title: 'الوحدة 2: رحلة'
   lessons:
   - id: m2-l1
-    title: الماضي البسيط المنتظم
+    title: حكاية رحلة
     file: lessons/m2-l1.md
     minutes: 35
   - id: m2-l2
-    title: 'الماضي الشاذ: fui, tuve, hice'
+    title: 'الماضي البسيط: الأفعال الشاذة'
     file: lessons/m2-l2.md
     minutes: 40
-  - id: m2-l3
-    title: احكِ عن يوم أو رحلة
-    file: lessons/m2-l3.md
-    minutes: 30
   requires:
   - id: m2-practical
     type: practical
-    prompt: 'تسجيل صوتي (60 ثانية): احكِ ما فعلته أمس من الصباح إلى الليل، أو عن آخر سفرة لك.'
+    prompt: 'تسجيل صوتي (90 ثانية): حكاية رحلة. ارفعه.'
   - id: m2-explain
     type: explain
-    prompt: Escribe un correo a un amigo contando tu último fin de semana (8-10 frases, en indefinido).
-    min_words: 50
+    prompt: اكتب 6 جمل بالإسبانية عن رحلة، باستخدام أربعة أفعال شاذة على الأقل (fui وhice وtuve وestuve...).
+    min_words: 35
   - id: m2-quiz
     type: quiz
     questions:
-    - q5
     - q6
     - q7
     - q8
+    - q9
+    - q10
     pass: 70
 - id: m3
-  title: 'الأيام 12-17: الطفولة والوصف في الماضي: el imperfecto'
+  title: 'الوحدة 3: عندما كنت صغيرًا'
   lessons:
   - id: m3-l1
-    title: 'كنت أفعل: el imperfecto'
+    title: ذكريات الطفولة
     file: lessons/m3-l1.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=76jg_xxMBSY
   - id: m3-l2
-    title: imperfecto أم indefinido؟
+    title: 'الماضي المستمر: كيف كانت الأمور'
     file: lessons/m3-l2.md
     minutes: 40
-  - id: m3-l3
-    title: صِف مكانًا أو شخصًا من الماضي
-    file: lessons/m3-l3.md
-    minutes: 25
   requires:
   - id: m3-practical
     type: practical
-    prompt: 'تسجيل صوتي (60 ثانية): كيف كانت حياتك وأنت طفل؟ أين كنت تعيش، ماذا كنت تحب، وماذا حدث في يوم لا تنساه.'
+    prompt: 'تسجيل صوتي (90 ثانية): طفولتك، بالعادات (الماضي المستمر) وحدث واحد (الماضي البسيط). ارفعه.'
   - id: m3-explain
     type: explain
-    prompt: 'Escribe una historia corta (10 frases) que empiece así: «Era un día normal de invierno...».'
-    min_words: 60
+    prompt: اكتب 6 جمل بالإسبانية عن طفولتك، مستخدمًا الماضي المستمر أربع مرات على الأقل.
+    min_words: 35
   - id: m3-quiz
     type: quiz
     questions:
-    - q9
-    - q10
     - q11
     - q12
-    pass: 70
-- id: m4
-  title: 'الأيام 18-23: الأكل والسفر، والمقارنة'
-  lessons:
-  - id: m4-l1
-    title: 'محادثة: اطلب أكل الشارع'
-    file: lessons/m4-l1.md
-    minutes: 25
-    media: https://www.youtube.com/watch?v=6CwX_8xM8eE
-  - id: m4-l2
-    title: المقارنة والأفضل
-    file: lessons/m4-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=11120&end=12186
-  - id: m4-l3
-    title: 'السفر: الفندق والمواصلات والمشاكل'
-    file: lessons/m4-l3.md
-    minutes: 35
-    media: https://www.youtube.com/watch?v=jmDQ9AC7UzY
-  requires:
-  - id: m4-practical
-    type: practical
-    prompt: 'تسجيل صوتي (60 ثانية): قارن بين بلدك وبلد زرته أو تحب زيارته: الأكل، الطقس، الأسعار، الناس.'
-  - id: m4-explain
-    type: explain
-    prompt: 'Escribe una reseña de un restaurante o un hotel (8 frases): qué pediste, qué te gustó y qué no, y si
-      lo recomiendas.'
-    min_words: 50
-  - id: m4-quiz
-    type: quiz
-    questions:
     - q13
     - q14
     - q15
-    - q16
     pass: 70
-- id: m5
-  title: 'الأيام 24-29: الضمائر، والأمر، والصحة'
+- id: m4
+  title: 'الوحدة 4: التسوق'
   lessons:
-  - id: m5-l1
-    title: 'lo, la, le: لا تكرر الاسم'
-    file: lessons/m5-l1.md
-    minutes: 40
-  - id: m5-l2
-    title: 'الأمر: نصائح وتعليمات'
-    file: lessons/m5-l2.md
+  - id: m4-l1
+    title: في محل ملابس
+    file: lessons/m4-l1.md
     minutes: 35
-  - id: m5-l3
-    title: 'عند الطبيب: me duele'
-    file: lessons/m5-l3.md
-    minutes: 30
+  - id: m4-l2
+    title: المقارنة، وlo / la / los / las
+    file: lessons/m4-l2.md
+    minutes: 40
   requires:
-  - id: m5-practical
+  - id: m4-practical
     type: practical
-    prompt: 'تسجيل صوتي: أعطِ تعليمات للوصول من بيتك إلى أقرب صيدلية، ثم 3 نصائح لصديق مريض.'
-  - id: m5-explain
+    prompt: 'تسجيل صوتي (60 ثانية): محادثة في محل (الدوران)، ثم مقارنة بين محلين. ارفعه.'
+  - id: m4-explain
     type: explain
-    prompt: 'Escribe un mensaje a un amigo que viene a tu ciudad: 6 consejos (qué hacer, qué no hacer, qué comer).'
-    min_words: 40
-  - id: m5-quiz
+    prompt: اكتب 5 جمل بالإسبانية تقارن فيها بين شيئين، باستخدام más... que وtan... como وmejor أو peor.
+    min_words: 30
+  - id: m4-quiz
     type: quiz
     questions:
+    - q16
     - q17
     - q18
     - q19
     - q20
     pass: 70
-- id: m6
-  title: 'الأيام 30-35: المستقبل، و «لو»، والرأي، ومراجعة A2'
+- id: m5
+  title: 'الوحدة 5: عند الطبيب'
   lessons:
-  - id: m6-l1
-    title: المستقبل البسيط
-    file: lessons/m6-l1.md
-    minutes: 30
-  - id: m6-l2
-    title: '«لو» و «أود»: si + المضارع، والشرط'
-    file: lessons/m6-l2.md
-    minutes: 30
-  - id: m6-l3
-    title: قل رأيك، ومراجعة A2
-    file: lessons/m6-l3.md
+  - id: m5-l1
+    title: لا أشعر أنني بخير
+    file: lessons/m5-l1.md
     minutes: 35
+  - id: m5-l2
+    title: doler، والإلزام والنصيحة، وصيغة الأمر
+    file: lessons/m5-l2.md
+    minutes: 40
   requires:
-  - id: m6-practical
+  - id: m5-practical
     type: practical
-    prompt: 'تسجيل صوتي (90 ثانية): ما رأيك في التعلم عبر الإنترنت؟ قل رأيك بسببين، وما ستفعله العام القادم، وماذا
-      ستفعل لو كان عندك وقت أكثر.'
-  - id: m6-explain
+    prompt: 'تسجيل صوتي (60 ثانية): صِف الأعراض لطبيب، ثم انصح صديقًا. ارفعه.'
+  - id: m5-explain
     type: explain
-    prompt: 'Escribe un texto de 120 palabras: «Mi vida hace diez años y mi vida dentro de diez años».'
-    min_words: 120
-  - id: m6-quiz
+    prompt: اكتب 5 نصائح بالإسبانية لشخص يريد أن ينام أفضل، باستخدام أمر tú وdebes وtienes que.
+    min_words: 30
+  - id: m5-quiz
     type: quiz
     questions:
     - q21
     - q22
     - q23
     - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'الوحدة 6: التجارب والمستقبل'
+  lessons:
+  - id: m6-l1
+    title: حجز غرفة والكلام عن التجارب
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: المضارع التام والمستقبل
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'اختبار المستوى: هل أتقنت A2؟'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (90 ثانية): حجز فندق بالهاتف، ثم أماكن زرتها وستزورها. ارفعه.'
+  - id: m6-explain
+    type: explain
+    prompt: اكتب 6 جمل بالإسبانية عن تجاربك (he estado، nunca he...) وتوقعين بالمستقبل.
+    min_words: 35
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
     pass: 70

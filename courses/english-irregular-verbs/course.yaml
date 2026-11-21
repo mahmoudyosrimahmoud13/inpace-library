@@ -1,11 +1,10 @@
 id: english-irregular-verbs
 title: English irregular verbs, the easy way
-version: 1
+version: 2
 language: en
-description: The 100+ irregular verbs you use most, learned in groups that change the same way, so you remember
-  patterns, not a long list. Each group has a table with examples, a tip to remember it, practice and a quiz. Then
-  the mistakes everyone makes (I have went, did you saw), British and American forms, and the full list to review.
-  About 2 weeks, 15 minutes a day.
+description: The 100+ irregular verbs you use most, learned in groups that change the same way, so you remember patterns,
+  not a long list. Each group has a table with examples, a tip to remember it, practice and a quiz. Then the mistakes everyone
+  makes (I have went, did you saw), British and American forms, and the full list to review. About 2 weeks, 15 minutes a day.
 image: cover.jpg
 modules:
 - id: m1
@@ -18,8 +17,9 @@ modules:
   requires:
   - id: m1-practical
     type: practical
-    prompt: 'Write 6 sentences about your life: 2 with the base (now), 2 with the past simple (yesterday, last year),
-      and 2 with have + participle. Use go, see and do. Example: I went to the market yesterday.'
+    prompt: 'Write 6 sentences about your life: 2 with the base (now), 2 with the past simple (yesterday, last year), and
+      2 with have + participle. Use go, see and do. Example: I went to the market yesterday. Also record a voice note of yourself
+      saying the verb forms from this module aloud, and upload it with your writing.'
   - id: m1-explain
     type: explain
     prompt: 'In your own words: when do you use the past simple, and when do you use the past participle?'
@@ -47,8 +47,9 @@ modules:
   requires:
   - id: m2-practical
     type: practical
-    prompt: 'Choose 8 verbs from families A and B. For each, write one true sentence in the past about your week.
-      Then say all of them out loud, with all three forms first: cut, cut, cut.'
+    prompt: 'Choose 8 verbs from families A and B. For each, write one true sentence in the past about your week. Then say
+      all of them out loud, with all three forms first: cut, cut, cut. Also record a voice note of yourself saying the verb
+      forms from this module aloud, and upload it with your writing.'
   - id: m2-explain
     type: explain
     prompt: How can you tell if “I put my bag here” is about now or the past? Give one example of each.
@@ -77,8 +78,9 @@ modules:
   requires:
   - id: m3-practical
     type: practical
-    prompt: Write a short story (8 to 10 sentences) about the last time you went shopping or travelled. Use at least
-      10 verbs from family C, in the past simple. Underline them.
+    prompt: Write a short story (8 to 10 sentences) about the last time you went shopping or travelled. Use at least 10 verbs
+      from family C, in the past simple. Underline them. Also record a voice note of yourself saying the verb forms from this
+      module aloud, and upload it with your writing.
   - id: m3-explain
     type: explain
     prompt: Pick two patterns from family C (like -ought or -ept). Explain each one and give three verbs for it.
@@ -110,9 +112,10 @@ modules:
   requires:
   - id: m4-practical
     type: practical
-    prompt: 'Make your own “I have / I haven''t” list: 10 sentences with family D participles about things you have
-      or haven''t done (I have ridden a horse. I haven''t flown in a plane). Then ask someone the same questions:
-      Have you ever ridden a horse?'
+    prompt: 'Make your own “I have / I haven''t” list: 10 sentences with family D participles about things you have or haven''t
+      done (I have ridden a horse. I haven''t flown in a plane). Then ask someone the same questions: Have you ever ridden
+      a horse? Also record a voice note of yourself saying the verb forms from this module aloud, and upload it with your
+      writing.'
   - id: m4-explain
     type: explain
     prompt: Explain the difference between “She has gone to Alexandria” and “She has been to Alexandria”.
@@ -146,9 +149,10 @@ modules:
   requires:
   - id: m5-practical
     type: practical
-    prompt: 'Find and fix the mistakes in these 6 sentences, then write 4 of your own with the right forms: 1) I
-      have saw this film. 2) Did you went out? 3) She buyed a dress. 4) The letter was wrote by hand. 5) I didn''t
-      knew that. 6) He has broke his phone yesterday.'
+    prompt: 'Find and fix the mistakes in these 6 sentences, then write 4 of your own with the right forms: 1) I have saw
+      this film. 2) Did you went out? 3) She buyed a dress. 4) The letter was wrote by hand. 5) I didn''t knew that. 6) He
+      has broke his phone yesterday. Also record a voice note of yourself saying the verb forms from this module aloud, and
+      upload it with your writing.'
   - id: m5-explain
     type: explain
     prompt: Why is “I have seen him yesterday” wrong? How do you fix it, and when would “I have seen him” be right?
@@ -173,8 +177,9 @@ modules:
   requires:
   - id: m6-practical
     type: practical
-    prompt: Write a short text (about 120 words) about the best trip or day of your life. Use at least 15 different
-      irregular verbs, both past simple and have + participle. Read it out loud once.
+    prompt: Write a short text (about 120 words) about the best trip or day of your life. Use at least 15 different irregular
+      verbs, both past simple and have + participle. Read it out loud once. Also record a voice note of yourself saying the
+      verb forms from this module aloud, and upload it with your writing.
   - id: m6-explain
     type: explain
     prompt: Which family of irregular verbs was the hardest for you, and what will you do to remember it?

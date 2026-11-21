@@ -1,0 +1,240 @@
+q1:
+  text: 'تنسخ =B2*E1 لأسفل عمود وتريدها دائمًا تستخدم E1. اكتب المرجع:'
+  show: 4
+  options:
+    a: E$1$
+    b: $E$1
+    c: E1
+    d: '#E1'
+q2:
+  text: أيّها يجمع Amount حيث Region هي القاهرة؟
+  show: 4
+  options:
+    a: =SUM(Sales[Amount], "Cairo")
+    b: =SUMIFS(Sales[Amount], Sales[Region], "Cairo")
+    c: =COUNTIFS(Sales[Region], "Cairo")
+    d: =SUMIF("Cairo", Sales[Amount])
+q3:
+  text: لماذا تحوّل البيانات إلى جدول (Ctrl + T)؟
+  show: 4
+  options:
+    a: يقفل البيانات
+    b: يجعل الملف أصغر
+    c: المعادلات والجداول المحورية والرسوم تشمل الصفوف الجديدة تلقائيًا
+    d: يحذف المعادلات
+q4:
+  text: أي تنسيق يُظهر السالب بين أقواس والصفر شَرطة؟
+  show: 4
+  options:
+    a: '#,##0'
+    b: General
+    c: '#,##0;(#,##0);-'
+    d: '0.00'
+q5:
+  text: 'بحث يفشل بسبب مسافات في الآخر. استخدم:'
+  show: 4
+  options:
+    a: ROUND
+    b: TRIM
+    c: LEN
+    d: VALUE
+q6:
+  text: أيها يبحث يسار عمود البحث؟
+  show: 4
+  options:
+    a: XLOOKUP
+    b: HLOOKUP
+    c: SUMIFS
+    d: VLOOKUP
+q7:
+  text: '=COUNTIFS(Ledger[Invoice], A2) تُرجع 0. الفاتورة:'
+  show: 4
+  options:
+    a: مدفوعة
+    b: غير موجودة في الأستاذ
+    c: متأخرة
+    d: مكرّرة
+q8:
+  text: 'في شيت ميزان المراجعة، إجمالي المدين للكود A2:'
+  show: 4
+  options:
+    a: =SUM(Journal[Debit])
+    b: =SUMIFS(Journal[Debit], Journal[Code], A2)
+    c: =XLOOKUP(A2, Journal[Code], Journal[Debit])
+    d: =COUNTIFS(Journal[Code], A2)
+q9:
+  text: في INDEX/MATCH، ماذا تُرجع MATCH(A2, COA[Code], 0)؟
+  show: 4
+  options:
+    a: اسم الحساب
+    b: TRUE أو FALSE
+    c: موضع A2 في القائمة
+    d: مجموع التطابقات
+q10:
+  text: 'عمود الرصيد المدين يُكتب الأفضل:'
+  show: 4
+  options:
+    a: =MAX(Debits-Credits, 0)
+    b: =Debits+Credits
+    c: =MIN(Debits, Credits)
+    d: =Debits/Credits
+q11:
+  text: 'لرؤية المبيعات حسب الشهر في جدول محوري:'
+  show: 4
+  options:
+    a: تكتب كل شهر
+    b: ترتّب حسب المبلغ
+    c: تضيف مقسّمًا
+    d: تجمّع حقل التاريخ بالأشهر
+q12:
+  text: 'الإجمالي الكلي للجدول المحوري يُفحص مقابل:'
+  show: 4
+  options:
+    a: الشهر السابق
+    b: إجماليه الفرعي
+    c: =SUM لعمود المصدر
+    d: الرسم
+q13:
+  text: '=EOMONTH("15/03/2026", 0) تُرجع:'
+  show: 4
+  options:
+    a: 28/02/2026
+    b: 31/03/2026
+    c: 15/04/2026
+    d: 01/03/2026
+q14:
+  text: 'فاتورة تستحق 10 مارس، وتاريخ التقرير 31 مارس. أيام التأخير:'
+  show: 4
+  options:
+    a: '31'
+    b: '21'
+    c: '0'
+    d: '10'
+q15:
+  text: 'المخصص من إجماليات الفئات ونسب الخسارة أسرع بـ:'
+  show: 4
+  options:
+    a: SUMPRODUCT
+    b: COUNT
+    c: VLOOKUP
+    d: CONCAT
+q16:
+  text: 'شيك حرّرته ولم يصرفه البنك بعد هو:'
+  show: 4
+  options:
+    a: إيداع في الطريق
+    b: شيك لم يُصرف
+    c: خطأ
+    d: مصاريف بنكية
+q17:
+  text: أي بند تسوية يحتاج قيدًا في دفاترك؟
+  show: 4
+  options:
+    a: شيك لم يُصرف
+    b: إيداع في الطريق
+    c: لا شيء منها
+    d: مصاريف بنكية في الكشف
+q18:
+  text: '=PMT(12%/12, 36, -100000) تعطي حوالي:'
+  show: 4
+  options:
+    a: 2,778
+    b: 3,321
+    c: 1,000
+    d: 4,000
+q19:
+  text: 'في الشهر 1 لهذا القرض، الفائدة:'
+  show: 4
+  options:
+    a: 1,000
+    b: 2,321
+    c: 12,000
+    d: 3,321
+q20:
+  text: '=SLN(50000, 5000, 5) تُرجع:'
+  show: 4
+  options:
+    a: 10,000
+    b: 45,000
+    c: 9,000
+    d: 20,000
+q21:
+  text: 'الإيراد (رصيد دائن مخزّن كسالب) يُعرض موجبًا بـ:'
+  show: 4
+  options:
+    a: =ABS(TB[Balance])
+    b: =SUMIFS(TB[Balance], TB[Line], "Revenue")*-1
+    c: =SUMIFS(TB[Balance], TB[Line], "Revenue")
+    d: =COUNTIFS(TB[Line], "Revenue")
+q22:
+  text: 'فحص أن كل حساب مربوط:'
+  show: 4
+  options:
+    a: لا حاجة لفحص
+    b: =COUNT(TB[Code]) تساوي 0
+    c: =SUM(TB[Balance]) تساوي 1
+    d: =COUNTIFS(TB[Line], "") تساوي 0
+q23:
+  text: 'Goal Seek تجد:'
+  show: 4
+  options:
+    a: أفضل رسم
+    b: أخطاء المعادلات
+    c: التكرارات
+    d: قيمة المدخل التي تجعل معادلة تصل لهدف
+q24:
+  text: 'جدول بيانات بمتغيّر واحد يُظهر:'
+  show: 4
+  options:
+    a: نتيجة لقائمة قيم مدخل واحد
+    b: قائمة مرتّبة
+    c: معادلات الشيت
+    d: جدولًا محوريًا للبيانات
+q25:
+  text: 'لقلب نموذج كامل بين ثلاثة سيناريوهات، استخدم خلية اختيار مع:'
+  show: 4
+  options:
+    a: TRIM
+    b: EOMONTH
+    c: CHOOSE أو XLOOKUP
+    d: SUMPRODUCT
+q26:
+  text: 'Power Query الأفضل لـ:'
+  show: 4
+  options:
+    a: تنظيف نفس نوع التصدير كل شهر بتحديث واحد
+    b: عمل الرسوم
+    c: كتابة قيود اليومية
+    d: حماية الشيتات
+q27:
+  text: 'الأرقام المخزّنة كنص تُصلح بـ:'
+  show: 4
+  options:
+    a: ROUND
+    b: TRIM فقط
+    c: VALUE، أو Text to Columns
+    d: PROPER
+q28:
+  text: أيّ هذه ضابط جيد؟
+  show: 4
+  options:
+    a: معادلات مخفية بداخلها ثوابت
+    b: شيت فحوص يجب أن يُظهر ALL OK
+    c: إجماليات مكتوبة
+    d: خلايا مدمجة في البيانات
+q29:
+  text: 'لمنع المستخدمين من الكتابة فوق المعادلات:'
+  show: 4
+  options:
+    a: احذفها
+    b: اقفل خلايا المعادلات واحمِ الشيت، مع ترك المدخلات غير مقفلة
+    c: أخفِ الملف
+    d: لوّنها بالأحمر
+q30:
+  text: 'معادلة إجمالي تفوّت الصفوف المضافة حديثًا تُتجنّب بـ:'
+  show: 4
+  options:
+    a: الخلايا المدمجة
+    b: كتابة الإجمالي
+    c: استخدام الجداول
+    d: مزيد من IF

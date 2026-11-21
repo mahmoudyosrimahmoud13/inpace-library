@@ -1,0 +1,21 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter></defs>
+<g filter="url(#s)"><rect x="40" y="60" width="440" height="320" rx="22" fill="#fffaf0"/></g>
+<g stroke="#1f3d36" stroke-width="3" fill="none">
+<line x1="90" y1="330" x2="450" y2="330"/><line x1="90" y1="330" x2="90" y2="100"/>
+<line x1="90" y1="330" x2="440" y2="110" stroke="#2f6a5c" stroke-width="6" stroke-linecap="round"/>
+<line x1="90" y1="250" x2="440" y2="150" stroke="#e07a5f" stroke-width="6" stroke-linecap="round"/>
+<line x1="90" y1="250" x2="440" y2="250" stroke="#1f3d36" stroke-width="3" stroke-dasharray="10 8"/>
+</g>
+<circle cx="300" cy="198" r="14" fill="#f4d35e" stroke="#1f3d36" stroke-width="4"/>
+<g font-family="JBM" font-size="17" fill="#1f3d36">
+<text x="70" y="96" font-weight="700" font-size="19">BREAK-EVEN</text>
+<text x="330" y="232">300 units</text>
+<text x="400" y="100" text-anchor="end" fill="#2f6a5c" font-weight="700">sales</text>
+<text x="442" y="178" text-anchor="end" fill="#e07a5f" font-weight="700">costs</text>
+<text x="442" y="276" text-anchor="end">fixed</text></g>
+<g filter="url(#s)"><rect x="90" y="410" width="340" height="110" rx="20" fill="#f4d35e"/></g>
+<g font-family="JBM" font-size="18" fill="#1f3d36">
+<text x="116" y="452">price 120 − variable 50</text>
+<text x="116" y="492" font-weight="700" font-size="21">= 70 per loaf</text></g>
+</svg>

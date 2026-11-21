@@ -1,0 +1,197 @@
+id: spanish-b1
+title: 'Spanish B1: opinions, the subjunctive and real conversations'
+version: 1
+language: en
+description: 'Spanish level B1, taught in English with the same research-based method: real conversations first, the phrases
+  people use, one grammar point per unit, a voice note every unit, and review from memory. Give and defend opinions, use the
+  present subjunctive for wishes, advice, feelings and doubt, talk about hypothetical situations with the conditional, handle
+  a job interview and formal emails, and report what people said. Ends with a B1 level check. About 2 to 3 weeks at 45 minutes
+  a day.'
+image: cover.jpg
+downloads:
+- title: 'Dreaming Spanish: free videos sorted by level, from complete beginner up'
+  url: https://www.dreaming.com/
+- title: 'Easy Spanish: street interviews with subtitles (YouTube)'
+  url: https://www.youtube.com/@EasySpanish
+- title: 'SpanishDict: dictionary, conjugation tables and pronunciation'
+  url: https://www.spanishdict.com/
+modules:
+- id: m1
+  title: 'Unit 1: In my opinion'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how this course works'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: Giving and defending an opinion
+    file: lessons/m1-l2.md
+    minutes: 35
+  - id: m1-l3
+    title: Expressing opinions and linking ideas
+    file: lessons/m1-l3.md
+    minutes: 40
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Voice note (2 minutes): an opinion with reasons, a counter-argument and a conclusion. Upload it.'
+  - id: m1-explain
+    type: explain
+    prompt: Write about 80 words in Spanish giving your opinion on a topic of your choice, with at least four connectors.
+    min_words: 70
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Unit 2: I hope that...'
+  lessons:
+  - id: m2-l1
+    title: Wishes and requests
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: 'The present subjunctive: wishes and requests'
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Voice note (90 seconds): wishes and requests for a friend starting something new. Upload it.'
+  - id: m2-explain
+    type: explain
+    prompt: 'Write about 60 words in Spanish: what your family or your boss wants you to do, and what you hope for this year
+      (quiero que, espero que, ojalá).'
+    min_words: 50
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Unit 3: Advice, feelings and doubt'
+  lessons:
+  - id: m3-l1
+    title: Asking a friend for advice
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: The subjunctive for advice, feelings and doubt
+    file: lessons/m3-l2.md
+    minutes: 40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Voice note (2 minutes): advice for a friend, with at least five subjunctive phrases. Upload it.'
+  - id: m3-explain
+    type: explain
+    prompt: 'Write about 70 words in Spanish: advice for a new student at your school or company (te recomiendo que, es importante
+      que, no creo que).'
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Unit 4: What would you do?'
+  lessons:
+  - id: m4-l1
+    title: Imagining a different life
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: The conditional and hypothetical sentences
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Voice note (2 minutes): three hypothetical questions with reasons. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Write about 70 words in Spanish about what you would do if you had a free year, using the conditional and si +
+      tuviera/pudiera.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Unit 5: Work and formal Spanish'
+  lessons:
+  - id: m5-l1
+    title: A job interview
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: The past perfect, and formal writing
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Voice note (2 minutes): a job interview answer in formal Spanish. Upload it.'
+  - id: m5-explain
+    type: explain
+    prompt: Write a formal email of about 100 words in Spanish asking a company or school for information.
+    min_words: 80
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Unit 6: She told me that...'
+  lessons:
+  - id: m6-l1
+    title: Passing on news
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: Reported speech
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'Level check: can you do B1?'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Voice note (2 minutes): retell a real conversation with reported speech. Upload it.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Write about 80 words in Spanish reporting a phone call or meeting: dijo que, me preguntó si, me pidió que.'
+    min_words: 70
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

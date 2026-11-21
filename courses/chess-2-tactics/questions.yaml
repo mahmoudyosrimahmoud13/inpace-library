@@ -1,0 +1,161 @@
+q1:
+  text: 'A black knight on d4 is attacked by a white pawn and a white knight, and defended by one black pawn. White''s best
+    capture is usually:'
+  show: 4
+  options:
+    a: With the knight first
+    b: Not to capture
+    c: With the queen
+    d: With the pawn first
+q2:
+  text: '''LPDO'' means:'
+  show: 4
+  options:
+    a: Long pieces dominate openings
+    b: Lose pawns, defend others
+    c: Loose pieces drop off
+    d: Last piece decides outcome
+q3:
+  text: 'White: Nd5. Black: Ke8, Ra8, c7 empty. Which move forks king and rook?'
+  show: 4
+  options:
+    a: Nc7+
+    b: Nf6+
+    c: Ne7
+    d: Nb6
+q4:
+  text: 'A white pawn on e4 moves to e5, attacking black knights on d6 and f6. This is a:'
+  show: 4
+  options:
+    a: Discovered attack
+    b: Pawn fork
+    c: Skewer
+    d: Pin
+q5:
+  text: 'When you are ahead in material, trading pieces is usually:'
+  show: 4
+  options:
+    a: Good
+    b: Forbidden
+    c: Always a draw
+    d: Bad
+q6:
+  text: 'A piece pinned to its own king:'
+  show: 4
+  options:
+    a: Can only move backward
+    b: Can move freely
+    c: Cannot legally move off the line
+    d: Is captured at once
+q7:
+  text: 'A white bishop on g5 attacks a black knight on f6, with the black queen on d8 behind it. This is:'
+  show: 4
+  options:
+    a: An absolute pin
+    b: A relative pin
+    c: A fork
+    d: A skewer
+q8:
+  text: 'White: Ra1, Kg1. Black: Ke4, Qe8. White plays Re1+. This is a:'
+  show: 4
+  options:
+    a: Pin
+    b: Fork
+    c: Skewer
+    d: Smothered mate
+q9:
+  text: 'In a double check, the defender must:'
+  show: 4
+  options:
+    a: Capture one checking piece
+    b: Resign
+    c: Block one check
+    d: Move the king
+q10:
+  text: 'Your bishop stands between your rook and the enemy queen on the same file. Moving the bishop with check is a:'
+  show: 4
+  options:
+    a: Discovered attack
+    b: Pin
+    c: Decoy
+    d: Deflection
+q11:
+  text: 'The pawn on d5 is defended only by a knight on f6, which your bishop can capture. This idea is called:'
+  show: 4
+  options:
+    a: Removing the defender
+    b: Castling
+    c: Stalemate
+    d: A skewer
+q12:
+  text: 'White: Qd4, Rd1, Kg1. Black: Kg8, Rc8, Qb2, pawns f7 g7 h7. White plays Qd8+. After Rxd8, White plays:'
+  show: 4
+  options:
+    a: Rd7
+    b: Rxd8#
+    c: h3
+    d: Qxd8
+q13:
+  text: 'A knight mates a king surrounded by its own pieces. This is the:'
+  show: 4
+  options:
+    a: Back-rank mate
+    b: Smothered mate
+    c: Arabian mate
+    d: Scholar's mate
+q14:
+  text: 'The Arabian mate uses:'
+  show: 4
+  options:
+    a: A queen and a king
+    b: Two knights
+    c: A rook and a knight
+    d: Two bishops
+q15:
+  text: 'A quiet move like h3 that gives your king an escape square is called:'
+  show: 4
+  options:
+    a: Zugzwang
+    b: Castling
+    c: Making luft
+    d: Fianchetto
+q16:
+  text: Which moves should you look at first?
+  show: 4
+  options:
+    a: Checks, captures and threats
+    b: King moves
+    c: Pawn moves on the edge
+    d: Moves that look natural
+q17:
+  text: 'Calculate a line until:'
+  show: 4
+  options:
+    a: The position is quiet (no checks or captures left)
+    b: Your clock runs out
+    c: You see one good move
+    d: You reach move 40
+q18:
+  text: 'White: Kg1, Qd1, pawns. Black: Ke8, Bb4 (undefended), pawns, a4–e8 diagonal empty. Which move wins the bishop?'
+  show: 4
+  options:
+    a: Qa4+
+    b: Qb3
+    c: Qe2+
+    d: Qd8+
+q19:
+  text: 'White: Kg1, pawn b7. Black: Kg7, Ra8. White''s best move is:'
+  show: 4
+  options:
+    a: Kf2
+    b: b8=Q
+    c: bxa8=Q
+    d: Kg2
+q20:
+  text: 'A healthy tactics routine is:'
+  show: 4
+  options:
+    a: No puzzles, only openings
+    b: 300 puzzles once a month
+    c: 15 to 20 puzzles a day, reviewing misses
+    d: Only bullet games

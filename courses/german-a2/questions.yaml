@@ -1,0 +1,240 @@
+q1:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Ich gespielt habe Fußball.
+    b: Ich habe Fußball gespielt.
+    c: Ich habe Fußball spielt.
+    d: Ich habe gespielt Fußball.
+q2:
+  text: 'The participle of «essen»:'
+  show: 4
+  options:
+    a: geessen
+    b: gegessen
+    c: geesst
+    d: gegesst
+q3:
+  text: 'The participle of «einkaufen»:'
+  show: 4
+  options:
+    a: einkaufte
+    b: eingekaufen
+    c: geeinkauft
+    d: eingekauft
+q4:
+  text: 'The participle of «besuchen»:'
+  show: 4
+  options:
+    a: gebesucht
+    b: besuchen
+    c: gesucht
+    d: besucht
+q5:
+  text: '«Ich hatte keine Zeit» means:'
+  show: 4
+  options:
+    a: I don't have time.
+    b: I didn't have time.
+    c: I had a time.
+    d: I'll have time.
+q6:
+  text: Ich ___ nach Berlin gefahren.
+  show: 4
+  options:
+    a: habe
+    b: bin
+    c: hat
+    d: war
+q7:
+  text: Wir ___ einen Film gesehen.
+  show: 4
+  options:
+    a: hatten
+    b: sind
+    c: waren
+    d: haben
+q8:
+  text: '"I was in Munich."'
+  show: 4
+  options:
+    a: Ich hatte in München.
+    b: Ich war in München.
+    c: Ich habe in München gewesen.
+    d: Ich bin in München.
+q9:
+  text: 'The participle of «fliegen»:'
+  show: 4
+  options:
+    a: geflugen
+    b: gefliegen
+    c: gefliegt
+    d: geflogen
+q10:
+  text: 'In «Hauptbahnhof», the main stress is on:'
+  show: 4
+  options:
+    a: Bahn
+    b: hof
+    c: all equally
+    d: Haupt
+q11:
+  text: Ich fahre mit ___ U-Bahn.
+  show: 4
+  options:
+    a: die
+    b: der
+    c: den
+    d: dem
+q12:
+  text: '«Das gefällt mir» means:'
+  show: 4
+  options:
+    a: I like that.
+    b: That falls on me.
+    c: I like you.
+    d: That's mine.
+q13:
+  text: 'Dative of «er»:'
+  show: 4
+  options:
+    a: sein
+    b: ihm
+    c: ihn
+    d: ihr
+q14:
+  text: zu + dem =
+  show: 4
+  options:
+    a: zum
+    b: zudem
+    c: zem
+    d: zur
+q15:
+  text: Kannst du ___ helfen?
+  show: 4
+  options:
+    a: mir
+    b: mich
+    c: ich
+    d: mein
+q16:
+  text: '"cheaper than":'
+  show: 4
+  options:
+    a: mehr billig als
+    b: billiger wie
+    c: billiger als
+    d: so billig als
+q17:
+  text: 'Comparative of «gut»:'
+  show: 4
+  options:
+    a: mehr gut
+    b: guter
+    c: besser
+    d: güter
+q18:
+  text: Ich suche einen schwarz___ Mantel.
+  show: 4
+  options:
+    a: -er
+    b: -es
+    c: -e
+    d: -en
+q19:
+  text: Das ist ein klein___ Haus.
+  show: 4
+  options:
+    a: -er
+    b: -e
+    c: -es
+    d: -en
+q20:
+  text: '«Die Jacke ist zu eng» means:'
+  show: 4
+  options:
+    a: The jacket is too long.
+    b: The jacket is closed.
+    c: The jacket is too tight.
+    d: The jacket is near.
+q21:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Weil ich bin krank, ich bleibe zu Hause.
+    b: Ich bleibe zu Hause, weil ich krank bin.
+    c: Ich bleibe zu Hause, weil bin ich krank.
+    d: Ich bleibe zu Hause, weil ich bin krank.
+q22:
+  text: '«Mein Hals tut weh» means:'
+  show: 4
+  options:
+    a: My throat hurts.
+    b: My neck is long.
+    c: My throat is fine.
+    d: I'm doing it slowly.
+q23:
+  text: 'Polite command of «trinken»:'
+  show: 4
+  options:
+    a: Trinken Sie!
+    b: Trinkt!
+    c: Trink Sie!
+    d: Sie trinken!
+q24:
+  text: Ich glaube, dass er morgen ___.
+  show: 4
+  options:
+    a: komme
+    b: kommt er
+    c: kommen
+    d: kommt
+q25:
+  text: '«Gute Besserung!» means:'
+  show: 4
+  options:
+    a: Enjoy your meal!
+    b: Good improvement in your German!
+    c: Good morning!
+    d: Get well soon!
+q26:
+  text: Die Tasse steht auf ___ Tisch.
+  show: 4
+  options:
+    a: der
+    b: den
+    c: das
+    d: dem
+q27:
+  text: Ich stelle die Tasse auf ___ Tisch.
+  show: 4
+  options:
+    a: den
+    b: dem
+    c: der
+    d: das
+q28:
+  text: in + das =
+  show: 4
+  options:
+    a: inn
+    b: in's
+    c: im
+    d: ins
+q29:
+  text: 'For a book lying flat on the table you use:'
+  show: 4
+  options:
+    a: stellen
+    b: stehen
+    c: hängen
+    d: liegen
+q30:
+  text: '«Warmmiete» includes:'
+  show: 4
+  options:
+    a: furniture
+    b: heating and other bills
+    c: food
+    d: only the room

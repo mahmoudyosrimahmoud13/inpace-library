@@ -1,39 +1,43 @@
 id: english-a2-ar
-title: 'الإنجليزي مستوى A2: تكلم عن الماضي والمستقبل بثقة'
-version: 1
+title: 'الإنجليزي A2: احكِ عن الماضي وتدبّر أمورك'
+version: 2
 language: ar
-description: 'كورس إنجليزي لمتحدثي العربية بعد مستوى A1: الشرح بالعربي، والأمثلة والتمارين بالإنجليزي. الماضي البسيط
-  والمستمر، المستقبل، المقارنة، المضارع التام، must و should و might، الكميات والأدوات، if للمستقبل، ثم مهارات حقيقية:
-  رسائل، هاتف، سفر، ومقابلة بسيطة. تمارين بإجاباتها واختبار لكل وحدة. الخطة: 5 أسابيع، 40 إلى 50 دقيقة يوميًا.'
+description: 'الإنجليزي مستوى A2 لمتحدثي العربية، بنفس طريقة A1 المبنية على الأبحاث: محادثة حقيقية أولًا، والعبارات التي يستخدمها
+  الناس، وقاعدة واحدة في كل وحدة مع شرح الفروق عن العربية، وتسجيل صوتي في كل وحدة، ومراجعة من الذاكرة. احكِ ما فعلته (الماضي
+  البسيط المنتظم والشاذ)، واحكِ قصة بالماضي المستمر، وقارن واشترِ، وتكلّم مع الطبيب، وتكلّم عن تجاربك والمستقبل. وينتهي باختبار
+  مستوى A2. حوالي أسبوعين، 45 دقيقة يوميًا.'
 image: cover.jpg
+downloads:
+- title: 'BBC Learning English: دروس وفيديوهات وبودكاست مجانية حسب المستوى'
+  url: https://www.bbc.co.uk/learningenglish/
+- title: 'VOA Learning English: أخبار وقصص بإنجليزية بطيئة وواضحة مع النص'
+  url: https://learningenglish.voanews.com/
+- title: 'Cambridge Dictionary: قاموس مع نطق بريطاني وأمريكي وترجمة عربية'
+  url: https://dictionary.cambridge.org/
 modules:
 - id: m1
-  title: 'الأيام 1-4: الماضي والحكي'
+  title: 'الوحدة 1: عطلة نهاية الأسبوع الماضية'
   lessons:
   - id: m1-l1
-    title: ابدأ من هنا
+    title: 'ابدأ من هنا: كيف يعمل هذا الكورس'
     file: lessons/m1-l1.md
-    minutes: 10
+    minutes: 20
   - id: m1-l2
-    title: مراجعة الماضي البسيط وأسئلته
+    title: ماذا فعلت؟
     file: lessons/m1-l2.md
-    minutes: 30
+    minutes: 35
   - id: m1-l3
-    title: 'الماضي المستمر: كنت أفعل'
+    title: 'الماضي البسيط: الأفعال المنتظمة وdid'
     file: lessons/m1-l3.md
-    minutes: 30
-  - id: m1-l4
-    title: احكِ قصة
-    file: lessons/m1-l4.md
-    minutes: 25
+    minutes: 40
   requires:
   - id: m1-practical
     type: practical
-    prompt: سجّل قصة حقيقية حدثت لك (دقيقة إلى دقيقتين) بالماضي البسيط والمستمر وكلمات الربط. ارفع التسجيل.
+    prompt: 'تسجيل صوتي (60 ثانية): عطلة نهاية الأسبوع الماضية بستة أفعال ماضية على الأقل. ارفعه.'
   - id: m1-explain
     type: explain
-    prompt: 'Write a short story (80 words) that starts: ''I was walking home last night when...'''
-    min_words: 60
+    prompt: اكتب 5 جمل بالإنجليزية عمّا فعلته أمس.
+    min_words: 30
   - id: m1-quiz
     type: quiz
     questions:
@@ -41,230 +45,149 @@ modules:
     - q2
     - q3
     - q4
+    - q5
     pass: 70
 - id: m2
-  title: 'الأيام 5-8: المستقبل'
+  title: 'الوحدة 2: رحلة'
   lessons:
   - id: m2-l1
-    title: 'going to: خطط ونوايا'
+    title: حكاية رحلة
     file: lessons/m2-l1.md
-    minutes: 25
+    minutes: 35
   - id: m2-l2
-    title: 'will: قرار الآن، وعود، وتوقعات'
+    title: 'الماضي البسيط: الأفعال الشاذة'
     file: lessons/m2-l2.md
-    minutes: 25
-  - id: m2-l3
-    title: تمرين المستقبل
-    file: lessons/m2-l3.md
-    minutes: 20
+    minutes: 40
   requires:
   - id: m2-practical
     type: practical
-    prompt: اكتب خطتك للسنة القادمة (going to)، وموعدين مؤكدين الأسبوع القادم (present continuous)، و3 توقعات عن
-      العالم بعد 10 سنوات (will). سجّلها صوتيًا وارفع النص والتسجيل.
+    prompt: 'تسجيل صوتي (90 ثانية): حكاية رحلة. ارفعه.'
   - id: m2-explain
     type: explain
-    prompt: Write an email to a friend about your plans for next weekend (60-80 words). Use going to, will and the
-      present continuous.
-    min_words: 55
+    prompt: اكتب 6 جمل بالإنجليزية عن رحلة، باستخدام أربعة أفعال شاذة على الأقل.
+    min_words: 35
   - id: m2-quiz
     type: quiz
     questions:
-    - q5
     - q6
     - q7
     - q8
+    - q9
+    - q10
     pass: 70
 - id: m3
-  title: 'الأيام 9-12: المقارنة والوصف'
+  title: 'الوحدة 3: قصة'
   lessons:
   - id: m3-l1
-    title: أكبر من، الأكبر
+    title: ماذا كنت تفعل عندما...؟
     file: lessons/m3-l1.md
-    minutes: 30
+    minutes: 35
   - id: m3-l2
-    title: 'فيديو: قواعد التهجئة الأربع وأخطاء شائعة'
+    title: الماضي المستمر والماضي البسيط
     file: lessons/m3-l2.md
-    minutes: 25
-    media: https://www.youtube.com/watch?v=IWPfD2WcAXg
-  - id: m3-l3
-    title: as...as, too, enough
-    file: lessons/m3-l3.md
-    minutes: 25
-  - id: m3-l4
-    title: صف الأشخاص والأماكن
-    file: lessons/m3-l4.md
-    minutes: 25
+    minutes: 40
   requires:
   - id: m3-practical
     type: practical
-    prompt: قارن بين مدينتين تعرفهما (أو هاتفين، أو وظيفتين) في 8 جمل على الأقل بالمقارنة والتفضيل و as...as و too/enough.
-      اكتبها وسجّلها.
+    prompt: 'تسجيل صوتي (90 ثانية): قصة بالمشهد والحدث والنهاية. ارفعه.'
   - id: m3-explain
     type: explain
-    prompt: 'Describe your best friend: what they look like and what they''re like (70 words).'
-    min_words: 55
+    prompt: 'اكتب 6 جمل بالإنجليزية عن يوم أمس: ماذا كنت تفعل في أوقات مختلفة (at 8 o''clock I was...) وحدث واحد.'
+    min_words: 35
   - id: m3-quiz
     type: quiz
     questions:
-    - q9
-    - q10
     - q11
     - q12
     - q13
+    - q14
+    - q15
     pass: 70
 - id: m4
-  title: 'الأيام 13-17: المضارع التام'
+  title: 'الوحدة 4: التسوق'
   lessons:
   - id: m4-l1
-    title: have / has + التصريف الثالث
+    title: في محل ملابس
     file: lessons/m4-l1.md
-    minutes: 30
+    minutes: 35
   - id: m4-l2
-    title: ever, never, just, already, yet
+    title: المقارنة والتفضيل
     file: lessons/m4-l2.md
-    minutes: 25
-  - id: m4-l3
-    title: المضارع التام أم الماضي البسيط؟
-    file: lessons/m4-l3.md
-    minutes: 30
+    minutes: 40
   requires:
   - id: m4-practical
     type: practical
-    prompt: اكتب 5 أشياء فعلتها في حياتك و5 أشياء لم تفعلها أبدًا (present perfect)، ثم اختر واحدة واحكِ تفاصيلها
-      بالماضي البسيط. ارفع النص أو تسجيلًا صوتيًا.
+    prompt: 'تسجيل صوتي (60 ثانية): محادثة في محل ومقارنة بين مدينتين. ارفعه.'
   - id: m4-explain
     type: explain
-    prompt: Write a short conversation (8 lines) where you ask a friend about places they've been and when they
-      went.
-    min_words: 50
+    prompt: اكتب 5 جمل بالإنجليزية تقارن فيها بين شيئين، مع -er وmore وthe best.
+    min_words: 30
   - id: m4-quiz
     type: quiz
     questions:
-    - q14
-    - q15
     - q16
     - q17
-    pass: 70
-- id: m5
-  title: 'الأيام 18-21: must, have to, should, might'
-  lessons:
-  - id: m5-l1
-    title: الإلزام والنصيحة
-    file: lessons/m5-l1.md
-    minutes: 30
-  - id: m5-l2
-    title: الاحتمال والطلبات
-    file: lessons/m5-l2.md
-    minutes: 25
-  - id: m5-l3
-    title: تمرين الأفعال المساعدة
-    file: lessons/m5-l3.md
-    minutes: 20
-  requires:
-  - id: m5-practical
-    type: practical
-    prompt: 'اكتب ''قواعد'' لمكان تعرفه (بيتك، عملك، مدرستك): 3 must، 3 mustn''t، 3 don''t have to، ونصيحتين should
-      لشخص جديد. ارفع النص أو سجّله.'
-  - id: m5-explain
-    type: explain
-    prompt: A friend is going to their first job interview. Write them advice (70 words) with should, must and might.
-    min_words: 55
-  - id: m5-quiz
-    type: quiz
-    questions:
     - q18
     - q19
     - q20
-    - q21
     pass: 70
-- id: m6
-  title: 'الأيام 22-25: الكميات والأدوات'
+- id: m5
+  title: 'الوحدة 5: عند الطبيب'
   lessons:
-  - id: m6-l1
-    title: a lot of, much, many, a few, a little
-    file: lessons/m6-l1.md
-    minutes: 25
-  - id: m6-l2
-    title: a / an / the / بدون أداة
-    file: lessons/m6-l2.md
-    minutes: 30
-  - id: m6-l3
-    title: تمرين
-    file: lessons/m6-l3.md
-    minutes: 15
+  - id: m5-l1
+    title: لست بخير
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: should، وmust، وhave to
+    file: lessons/m5-l2.md
+    minutes: 40
   requires:
-  - id: m6-practical
+  - id: m5-practical
     type: practical
-    prompt: صوّر مطبخك أو ثلاجتك واكتب 8 جمل بالكميات (a lot of, much, many, a few, a little, some, any). ارفع الصورة
-      والجمل.
-  - id: m6-explain
+    prompt: 'تسجيل صوتي (60 ثانية): الأعراض عند الطبيب، ثم نصائح صحية لصديق. ارفعه.'
+  - id: m5-explain
     type: explain
-    prompt: 'Write about your opinions on general things (70 words): life, money, music, sport, work. Watch your
-      articles.'
-    min_words: 55
-  - id: m6-quiz
+    prompt: اكتب 5 قواعد بالإنجليزية لمكان عملك أو مدرستك، مع must وmustn't وhave to وdon't have to.
+    min_words: 30
+  - id: m5-quiz
     type: quiz
     questions:
+    - q21
     - q22
     - q23
     - q24
     - q25
     pass: 70
-- id: m7
-  title: 'الأيام 26-29: if للمستقبل، و ing أم to'
+- id: m6
+  title: 'الوحدة 6: التجارب والمستقبل'
   lessons:
-  - id: m7-l1
-    title: First conditional
-    file: lessons/m7-l1.md
-    minutes: 25
-  - id: m7-l2
-    title: فعل + ing أم فعل + to؟
-    file: lessons/m7-l2.md
-    minutes: 30
+  - id: m6-l1
+    title: هل سبق لك أن...؟
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: المضارع التام للتجارب، وwill
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'اختبار المستوى: هل أتقنت A2؟'
+    file: lessons/m6-l3.md
+    minutes: 40
   requires:
-  - id: m7-practical
+  - id: m6-practical
     type: practical
-    prompt: 'اكتب 6 جمل if عن خطتك هذا الشهر (مثل: If I finish this course, I''ll...) و6 جمل عن أشياء تحبها وتريدها
-      وقررتها (ing / to). ارفع النص أو تسجيلًا.'
-  - id: m7-explain
+    prompt: 'تسجيل صوتي (90 ثانية): حجز فندق، وتجاربك، وتوقع للمستقبل. ارفعه.'
+  - id: m6-explain
     type: explain
-    prompt: 'Write about your goals (70 words): what you want to do, what you''ve decided to change, and what will
-      happen if you succeed.'
-    min_words: 55
-  - id: m7-quiz
+    prompt: اكتب 6 جمل بالإنجليزية عن تجاربك (I've... / I've never...) وتوقعين بـ will.
+    min_words: 35
+  - id: m6-quiz
     type: quiz
     questions:
     - q26
     - q27
     - q28
     - q29
-    pass: 70
-- id: m8
-  title: 'الأيام 30-32: مهارات A2 الحقيقية واختبار'
-  lessons:
-  - id: m8-l1
-    title: رسائل، هاتف، وسفر
-    file: lessons/m8-l1.md
-    minutes: 35
-  - id: m8-l2
-    title: اختبار تجريبي A2
-    file: lessons/m8-l2.md
-    minutes: 35
-  requires:
-  - id: m8-practical
-    type: practical
-    prompt: 'سجّل مكالمة تمثيلية (أو اكتبها): تحجز غرفة فندق لليلتين، تسأل عن الإفطار والسعر، وتترك رسالة لشخص غير
-      موجود. ارفع التسجيل أو النص.'
-  - id: m8-explain
-    type: explain
-    prompt: 'Write the email from the test task: a trip, what you did, what you saw and your plans (80+ words).'
-    min_words: 70
-  - id: m8-quiz
-    type: quiz
-    questions:
     - q30
-    - q31
-    - q32
-    - q33
     pass: 70

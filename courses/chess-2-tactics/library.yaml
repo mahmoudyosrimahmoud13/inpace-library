@@ -1,0 +1,11 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- chess
+- tactics
+- puzzles
+- beginner
+credit: Written for the inPace library. Every puzzle was checked move by move with python-chess. Practice links point to Lichess.
+section: chess

@@ -1,0 +1,240 @@
+q1:
+  text: '«Woher kommst du?» means:'
+  show: 4
+  options:
+    a: Where are you from?
+    b: Where are you going?
+    c: What's your name?
+    d: Where do you live?
+q2:
+  text: Ich ___ Ingenieur.
+  show: 4
+  options:
+    a: sind
+    b: ist
+    c: bist
+    d: bin
+q3:
+  text: 'You speak to a police officer. You ask "What''s your name?":'
+  show: 4
+  options:
+    a: Wie heißen Sie?
+    b: Wie heiße ich?
+    c: Wie heißt ihr?
+    d: Wie heißt du?
+q4:
+  text: 'The female form of «Lehrer»:'
+  show: 4
+  options:
+    a: Lehrere
+    b: Lehrin
+    c: Lehrerina
+    d: Lehrerin
+q5:
+  text: 'German «w» (wohnen) sounds like:'
+  show: 4
+  options:
+    a: f
+    b: English v
+    c: u
+    d: English w
+q6:
+  text: 'The article for «Mutter»:'
+  show: 4
+  options:
+    a: der
+    b: die
+    c: das
+    d: den
+q7:
+  text: Er ___ zwei Schwestern.
+  show: 4
+  options:
+    a: habt
+    b: haben
+    c: hat
+    d: hast
+q8:
+  text: 'The plural article is always:'
+  show: 4
+  options:
+    a: das
+    b: die
+    c: der
+    d: it depends on the gender
+q9:
+  text: '"my sister":'
+  show: 4
+  options:
+    a: meiner Schwester
+    b: meine Schwester
+    c: meinen Schwester
+    d: mein Schwester
+q10:
+  text: 'In «und», the final d sounds like:'
+  show: 4
+  options:
+    a: th
+    b: it's silent
+    c: t
+    d: d
+q11:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Am Abend koche ich.
+    b: Ich am Abend koche.
+    c: Am Abend ich koche.
+    d: Koche am Abend ich.
+q12:
+  text: 'aufstehen in a sentence:'
+  show: 4
+  options:
+    a: Ich stehe auf um sieben.
+    b: Ich um sieben aufstehe.
+    c: Ich stehe um sieben auf.
+    d: Ich aufstehe um sieben.
+q13:
+  text: '«halb acht» is:'
+  show: 4
+  options:
+    a: '8:15'
+    b: '7:15'
+    c: '8:30'
+    d: '7:30'
+q14:
+  text: Er ___ Deutsch. (sprechen)
+  show: 4
+  options:
+    a: sprecht
+    b: sprechen
+    c: sprechst
+    d: spricht
+q15:
+  text: Is the a in «Stadt» long or short?
+  show: 4
+  options:
+    a: silent
+    b: long
+    c: short
+    d: it changes
+q16:
+  text: '"There is a park":'
+  show: 4
+  options:
+    a: Es gibt einen Park.
+    b: Es gibt ein Park.
+    c: Es gibt der Park.
+    d: Es ist einen Park.
+q17:
+  text: Ich suche ___ Bahnhof.
+  show: 4
+  options:
+    a: der
+    b: das
+    c: dem
+    d: den
+q18:
+  text: 'Only one gender changes in the accusative:'
+  show: 4
+  options:
+    a: neuter
+    b: plural
+    c: masculine
+    d: feminine
+q19:
+  text: '«geradeaus» means:'
+  show: 4
+  options:
+    a: right
+    b: straight on
+    c: back
+    d: left
+q20:
+  text: Ich habe ___ Zeit.
+  show: 4
+  options:
+    a: kein
+    b: keine
+    c: nicht
+    d: keinen
+q21:
+  text: 'A polite way to order:'
+  show: 4
+  options:
+    a: Kaffee!
+    b: Ich hätte gern einen Kaffee.
+    c: Ich will Kaffee jetzt.
+    d: Ich habe einen Kaffee.
+q22:
+  text: Möchtest du etwas ___?
+  show: 4
+  options:
+    a: gegessen
+    b: esst
+    c: essen
+    d: isst
+q23:
+  text: '«Ich trinke lieber Tee» means:'
+  show: 4
+  options:
+    a: I don't drink tea.
+    b: I'm drinking tea now.
+    c: I like tea a little.
+    d: I prefer drinking tea.
+q24:
+  text: 67 →
+  show: 4
+  options:
+    a: sechzigsieben
+    b: sechsundsiebzig
+    c: siebenundsechzig
+    d: siebzigsechs
+q25:
+  text: '«Was macht das zusammen?» means:'
+  show: 4
+  options:
+    a: What are you doing together?
+    b: What does it make?
+    c: Who's coming with you?
+    d: How much is that altogether?
+q26:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Ich muss am Samstag arbeite.
+    b: Ich muss arbeiten am Samstag.
+    c: Ich muss am Samstag arbeiten.
+    d: Ich arbeiten muss am Samstag.
+q27:
+  text: 'können, er form:'
+  show: 4
+  options:
+    a: kannt
+    b: kann
+    c: können
+    d: könnt
+q28:
+  text: '«Ich will gehen» means:'
+  show: 4
+  options:
+    a: I will go.
+    b: I can go.
+    c: I want to go.
+    d: I must go.
+q29:
+  text: '«Das passt mir» means:'
+  show: 4
+  options:
+    a: That fits in my bag.
+    b: That works for me.
+    c: I passed.
+    d: That's mine.
+q30:
+  text: 'Wednesday:'
+  show: 4
+  options:
+    a: Montag
+    b: Dienstag
+    c: Donnerstag
+    d: Mittwoch

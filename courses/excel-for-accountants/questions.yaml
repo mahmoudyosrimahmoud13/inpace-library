@@ -1,0 +1,240 @@
+q1:
+  text: 'You copy =B2*E1 down a column but want it always to use E1. Write the reference as:'
+  show: 4
+  options:
+    a: E$1$
+    b: $E$1
+    c: '#E1'
+    d: E1
+q2:
+  text: Which totals Amount where Region is Cairo?
+  show: 4
+  options:
+    a: =SUMIF("Cairo", Sales[Amount])
+    b: =COUNTIFS(Sales[Region], "Cairo")
+    c: =SUMIFS(Sales[Amount], Sales[Region], "Cairo")
+    d: =SUM(Sales[Amount], "Cairo")
+q3:
+  text: Why convert data to a Table (Ctrl + T)?
+  show: 4
+  options:
+    a: Formulas, pivots and charts include new rows automatically
+    b: It locks the data
+    c: It removes formulas
+    d: It makes the file smaller
+q4:
+  text: Which format shows negatives in brackets and zero as a dash?
+  show: 4
+  options:
+    a: General
+    b: '0.00'
+    c: '#,##0'
+    d: '#,##0;(#,##0);-'
+q5:
+  text: 'A lookup fails because of trailing spaces. Use:'
+  show: 4
+  options:
+    a: VALUE
+    b: ROUND
+    c: TRIM
+    d: LEN
+q6:
+  text: Which can look to the left of the lookup column?
+  show: 4
+  options:
+    a: SUMIFS
+    b: XLOOKUP
+    c: HLOOKUP
+    d: VLOOKUP
+q7:
+  text: '=COUNTIFS(Ledger[Invoice], A2) returns 0. The invoice is:'
+  show: 4
+  options:
+    a: Duplicated
+    b: Overdue
+    c: Paid
+    d: Missing from the ledger
+q8:
+  text: 'In a trial balance sheet, total debits for code A2 are:'
+  show: 4
+  options:
+    a: =SUM(Journal[Debit])
+    b: =COUNTIFS(Journal[Code], A2)
+    c: =XLOOKUP(A2, Journal[Code], Journal[Debit])
+    d: =SUMIFS(Journal[Debit], Journal[Code], A2)
+q9:
+  text: 'INDEX/MATCH: what does MATCH(A2, COA[Code], 0) return?'
+  show: 4
+  options:
+    a: TRUE or FALSE
+    b: The account name
+    c: The position of A2 in the list
+    d: The sum of matches
+q10:
+  text: 'A debit balance column is best written as:'
+  show: 4
+  options:
+    a: =Debits+Credits
+    b: =MAX(Debits-Credits, 0)
+    c: =Debits/Credits
+    d: =MIN(Debits, Credits)
+q11:
+  text: 'To see sales by month in a pivot, you:'
+  show: 4
+  options:
+    a: Group the date field by months
+    b: Sort by amount
+    c: Add a slicer
+    d: Type each month
+q12:
+  text: 'A pivot''s grand total should be checked against:'
+  show: 4
+  options:
+    a: =SUM of the source column
+    b: Its own subtotal
+    c: The previous month
+    d: The chart
+q13:
+  text: '=EOMONTH("15/03/2026", 0) returns:'
+  show: 4
+  options:
+    a: 31/03/2026
+    b: 15/04/2026
+    c: 01/03/2026
+    d: 28/02/2026
+q14:
+  text: 'Invoice due 10 March, report date 31 March. Days overdue:'
+  show: 4
+  options:
+    a: '21'
+    b: '31'
+    c: '0'
+    d: '10'
+q15:
+  text: 'The allowance from bucket totals and loss rates is fastest with:'
+  show: 4
+  options:
+    a: VLOOKUP
+    b: COUNT
+    c: SUMPRODUCT
+    d: CONCAT
+q16:
+  text: 'A check you wrote that the bank hasn''t paid yet is:'
+  show: 4
+  options:
+    a: An outstanding check
+    b: An error
+    c: A deposit in transit
+    d: A bank charge
+q17:
+  text: Which reconciling item needs a journal entry in your books?
+  show: 4
+  options:
+    a: A bank charge on the statement
+    b: None of them
+    c: An outstanding check
+    d: A deposit in transit
+q18:
+  text: '=PMT(12%/12, 36, -100000) gives about:'
+  show: 4
+  options:
+    a: 1,000
+    b: 4,000
+    c: 2,778
+    d: 3,321
+q19:
+  text: 'In month 1 of that loan, interest is:'
+  show: 4
+  options:
+    a: 2,321
+    b: 1,000
+    c: 3,321
+    d: 12,000
+q20:
+  text: '=SLN(50000, 5000, 5) returns:'
+  show: 4
+  options:
+    a: 9,000
+    b: 20,000
+    c: 45,000
+    d: 10,000
+q21:
+  text: 'Revenue (a credit balance stored as negative) is shown positive with:'
+  show: 4
+  options:
+    a: =COUNTIFS(TB[Line], "Revenue")
+    b: =SUMIFS(TB[Balance], TB[Line], "Revenue")*-1
+    c: =ABS(TB[Balance])
+    d: =SUMIFS(TB[Balance], TB[Line], "Revenue")
+q22:
+  text: 'A check that every account is mapped:'
+  show: 4
+  options:
+    a: =COUNTIFS(TB[Line], "") equals 0
+    b: No check is needed
+    c: =SUM(TB[Balance]) equals 1
+    d: =COUNT(TB[Code]) equals 0
+q23:
+  text: 'Goal Seek finds:'
+  show: 4
+  options:
+    a: The input value that makes a formula hit a target
+    b: Errors in formulas
+    c: Duplicates
+    d: The best chart
+q24:
+  text: 'A one-variable data table shows:'
+  show: 4
+  options:
+    a: A sorted list
+    b: The formulas in a sheet
+    c: A pivot of the data
+    d: A result for a list of values of one input
+q25:
+  text: 'To switch a whole model between three scenarios, use a selector with:'
+  show: 4
+  options:
+    a: EOMONTH
+    b: CHOOSE or XLOOKUP
+    c: TRIM
+    d: SUMPRODUCT
+q26:
+  text: 'Power Query is best for:'
+  show: 4
+  options:
+    a: Protecting sheets
+    b: Making charts
+    c: Writing journal entries
+    d: Cleaning the same kind of export every month with one refresh
+q27:
+  text: 'Numbers stored as text can be fixed with:'
+  show: 4
+  options:
+    a: ROUND
+    b: VALUE, or Text to Columns
+    c: PROPER
+    d: TRIM only
+q28:
+  text: Which is a good control?
+  show: 4
+  options:
+    a: Hidden formulas with constants inside
+    b: Typed totals
+    c: Merged cells in data
+    d: A Checks sheet that must show ALL OK
+q29:
+  text: 'To keep users from overwriting formulas:'
+  show: 4
+  options:
+    a: Color them red
+    b: Lock formula cells and protect the sheet, leaving inputs unlocked
+    c: Delete them
+    d: Hide the workbook
+q30:
+  text: 'A total formula that misses newly added rows is avoided by:'
+  show: 4
+  options:
+    a: Using more IFs
+    b: Using Tables
+    c: Typing the total
+    d: Using merged cells

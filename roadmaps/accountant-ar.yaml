@@ -1,0 +1,23 @@
+id: accountant-ar
+title: كن محاسبًا
+description: من الصفر إلى العمل على أرقام شركات حقيقية، بالترتيب. مسك الدفاتر والدورة المحاسبية، والقوائم المالية الثلاث، ومحاسبة التكاليف والمحاسبة الإدارية، وExcel كما يستخدمه المحاسبون، ثم جزءا CMA لو أردت الشهادة.
+language: ar
+author: inPace
+official: true
+order: 25
+tags: [accounting, career, cma, excel, beginner, arabic]
+steps:
+  - course: accounting-basics-ar
+    note: "ابدأ هنا: المدين والدائن، ودفتر اليومية، ودفتر الأستاذ، وميزان المراجعة، وإقفال الدفاتر، مع مخبز صغير واحد."
+  - course: financial-statements-ar
+    note: قائمة الدخل والميزانية وقائمة التدفقات النقدية، وكيف ترتبط، وكيف تقرأ قوائم حقيقية.
+  - course: cost-management-accounting-ar
+    note: أرقام للقرارات داخل المشروع. سلوك التكاليف والتعادل والموازنات والانحرافات وقياس الأداء.
+  - course: excel-for-accountants-ar
+    note: مهارات Excel التي تطلبها وظائف المحاسبة. البحث والجداول المحورية والتسويات والإهلاك وملف الإقفال الشهري.
+  - course: cma-part-1-for-complete-beginners-12-weeks-through-sections-
+    note: بالإنجليزية. لشهادة CMA. الجزء الأول يغطي التقارير والتخطيط والأداء وإدارة التكاليف والرقابة الداخلية.
+    optional: true
+  - course: cma-part-2-ar
+    note: امتحان CMA الثاني والأخير. التحليل المالي وتمويل الشركات والقرارات والمخاطر والاستثمار والأخلاقيات.
+    optional: true

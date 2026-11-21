@@ -1,0 +1,15 @@
+id: spanish-from-zero
+title: Spanish from zero to B1
+description: Three courses in order, explained in English, from your first ¡Hola! to giving your opinion and handling a job interview. Every unit starts with listening and ends with a voice note.
+language: en
+author: inPace
+official: true
+order: 28
+tags: [spanish, speaking, listening, beginner]
+steps:
+  - course: spanish-a1
+    note: "From zero: greetings, family, your day, the city, food and plans, with ser, estar, tener, gustar and ir a."
+  - course: spanish-a2
+    note: Talk about the past, tell stories, shop, see a doctor, and talk about experiences and the future.
+  - course: spanish-b1
+    note: Opinions, the subjunctive, hypotheticals, working life and reported speech.

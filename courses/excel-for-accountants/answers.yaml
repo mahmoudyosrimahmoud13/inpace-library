@@ -1,0 +1,120 @@
+q1:
+  right:
+  - b
+  why: Dollar signs fix the column and row.
+q2:
+  right:
+  - c
+  why: SUMIFS takes the range to add first, then pairs of criteria range and criteria.
+q3:
+  right:
+  - a
+  why: Tables grow with the data.
+q4:
+  right:
+  - d
+  why: Sections for positive; negative; zero.
+q5:
+  right:
+  - c
+  why: TRIM removes extra spaces.
+q6:
+  right:
+  - b
+  why: XLOOKUP takes separate lookup and return arrays.
+q7:
+  right:
+  - d
+  why: Zero matches means not there; 2 means duplicated.
+q8:
+  right:
+  - d
+  why: Add every debit line for that account.
+q9:
+  right:
+  - c
+  why: INDEX then uses the position to return the value.
+q10:
+  right:
+  - b
+  why: Shows the net when it's on the debit side, else 0.
+q11:
+  right:
+  - a
+  why: Right-click a date → Group.
+q12:
+  right:
+  - a
+  why: A quick control that nothing was filtered out by mistake.
+q13:
+  right:
+  - a
+  why: The last day of the same month.
+q14:
+  right:
+  - a
+  why: 31 − 10.
+q15:
+  right:
+  - c
+  why: Multiplies pairs and adds them.
+q16:
+  right:
+  - a
+  why: It's in your books but not yet on the statement.
+q17:
+  right:
+  - a
+  why: Book-side items are things the bank knows and you haven't recorded.
+q18:
+  right:
+  - d
+  why: The monthly payment that repays 100,000 with interest in 36 months.
+q19:
+  right:
+  - b
+  why: 100,000 × 1%.
+q20:
+  right:
+  - a
+  why: (50,000 − 5,000) ÷ 5.
+q21:
+  right:
+  - b
+  why: Debits positive, credits negative, so flip the sign.
+q22:
+  right:
+  - a
+  why: Any blank line means an unmapped account.
+q23:
+  right:
+  - a
+  why: It works backward from a result.
+q24:
+  right:
+  - d
+  why: For example profit at prices from 100 to 140.
+q25:
+  right:
+  - b
+  why: The active inputs pick from the scenario columns.
+q26:
+  right:
+  - d
+  why: It records the steps and repeats them.
+q27:
+  right:
+  - b
+  why: They turn text digits into real numbers.
+q28:
+  right:
+  - d
+  why: Visible checks catch errors.
+q29:
+  right:
+  - b
+  why: Protection with unlocked inputs.
+q30:
+  right:
+  - b
+  why: Table references grow with the data.

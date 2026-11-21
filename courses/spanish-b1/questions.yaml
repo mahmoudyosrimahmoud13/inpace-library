@@ -1,0 +1,240 @@
+q1:
+  text: 'After «Creo que...» you use:'
+  show: 4
+  options:
+    a: the infinitive
+    b: the imperative
+    c: the indicative
+    d: the subjunctive
+q2:
+  text: '«sin embargo» means:'
+  show: 4
+  options:
+    a: so
+    b: because
+    c: however
+    d: besides
+q3:
+  text: '«Echo de menos a mi familia» means:'
+  show: 4
+  options:
+    a: I throw out my family.
+    b: I miss my family.
+    c: I see less of my family.
+    d: My family is less.
+q4:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Porque llueve como me quedo.
+    b: Como llueve, me quedo en casa.
+    c: Llueve como, me quedo en casa.
+    d: Me quedo en casa, como llueve.
+q5:
+  text: 'A polite way to disagree:'
+  show: 4
+  options:
+    a: No.
+    b: Eso es tonto.
+    c: Estás equivocado y punto.
+    d: Entiendo lo que dices, sin embargo...
+q6:
+  text: 'Subjunctive of tener, yo:'
+  show: 4
+  options:
+    a: tiene
+    b: tenga
+    c: tena
+    d: tengo
+q7:
+  text: Quiero que tú ___ conmigo.
+  show: 4
+  options:
+    a: venir
+    b: vengo
+    c: vengas
+    d: vienes
+q8:
+  text: Quiero ___ al cine esta noche.
+  show: 4
+  options:
+    a: voy
+    b: que vaya
+    c: vaya
+    d: ir
+q9:
+  text: '«Ojalá» comes from:'
+  show: 4
+  options:
+    a: Arabic
+    b: Latin
+    c: French
+    d: Greek
+q10:
+  text: 'Subjunctive of ser, ellos:'
+  show: 4
+  options:
+    a: son
+    b: fueran
+    c: seran
+    d: sean
+q11:
+  text: No creo que ella ___ razón.
+  show: 4
+  options:
+    a: tiene
+    b: tenga
+    c: tendrá
+    d: tener
+q12:
+  text: Creo que ella ___ razón.
+  show: 4
+  options:
+    a: tenga
+    b: tiene
+    c: tengas
+    d: tener
+q13:
+  text: Me alegro de que ___ bien.
+  show: 4
+  options:
+    a: eres
+    b: estés
+    c: estás
+    d: estar
+q14:
+  text: '«Llevo un año estudiando español» means:'
+  show: 4
+  options:
+    a: I'll study Spanish for a year.
+    b: I carry a Spanish book.
+    c: I studied Spanish a year ago.
+    d: I've been studying Spanish for a year.
+q15:
+  text: '«Si yo fuera tú...» means:'
+  show: 4
+  options:
+    a: If I went with you...
+    b: If you were me...
+    c: When I was you...
+    d: If I were you...
+q16:
+  text: Si ___ dinero, compraría una casa.
+  show: 4
+  options:
+    a: tengo
+    b: tendría
+    c: tuviera
+    d: tenga
+q17:
+  text: 'Conditional of hacer, yo:'
+  show: 4
+  options:
+    a: hacería
+    b: haría
+    c: hiciera
+    d: hacía
+q18:
+  text: 'A polite request:'
+  show: 4
+  options:
+    a: Ayúdame.
+    b: ¿Pudiste ayudarme?
+    c: ¿Podrías ayudarme?
+    d: ¿Puedes ayudarme ahora mismo ya?
+q19:
+  text: Si llueve mañana, ___ en casa.
+  show: 4
+  options:
+    a: me quedara
+    b: me quedaría
+    c: me quedé
+    d: me quedaré
+q20:
+  text: '«Yo en tu lugar...» means:'
+  show: 4
+  options:
+    a: I'm in your place.
+    b: Take my place.
+    c: Me in your house...
+    d: If I were you...
+q21:
+  text: '«Cuando llegué, la clase ya había empezado» means:'
+  show: 4
+  options:
+    a: When I arrived, the class started.
+    b: The class started after I arrived.
+    c: When I arrive, the class will start.
+    d: When I arrived, the class had already started.
+q22:
+  text: 'Past perfect of ver, yo:'
+  show: 4
+  options:
+    a: habí visto
+    b: he visto
+    c: había veído
+    d: había visto
+q23:
+  text: 'A formal email starts with:'
+  show: 4
+  options:
+    a: Querida Ruiz,
+    b: 'Estimada señora Ruiz:'
+    c: 'Oye, señora:'
+    d: ¡Hola, guapa!
+q24:
+  text: «Llevo seis años trabajando aquí» — is the speaker still working there?
+  show: 4
+  options:
+    a: 'No'
+    b: Only for six more years
+    c: 'Yes'
+    d: We can't know
+q25:
+  text: 'In an interview, unless invited, you should use:'
+  show: 4
+  options:
+    a: no pronoun at all
+    b: tú
+    c: usted
+    d: vosotros
+q26:
+  text: «Vivo en Sevilla.» → Dijo que ___ en Sevilla.
+  show: 4
+  options:
+    a: vivió
+    b: vive
+    c: viviera
+    d: vivía
+q27:
+  text: «Te llamaré.» → Dijo que me ___.
+  show: 4
+  options:
+    a: llamará
+    b: llamaría
+    c: llamaba
+    d: llamara
+q28:
+  text: «¿Vienes?» → Me preguntó ___ iba.
+  show: 4
+  options:
+    a: cuando
+    b: qué
+    c: que
+    d: si
+q29:
+  text: «Cierra la puerta.» → Me pidió que ___ la puerta.
+  show: 4
+  options:
+    a: cierro
+    b: cerraba
+    c: cerrara
+    d: cerraría
+q30:
+  text: '«¡Enhorabuena!» means:'
+  show: 4
+  options:
+    a: Enjoy your meal!
+    b: Good luck!
+    c: Good morning!
+    d: Congratulations!

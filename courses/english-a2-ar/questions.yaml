@@ -1,331 +1,240 @@
 q1:
-  text: أي جمل صحيحة؟
+  text: أيها صحيح؟
   show: 4
   options:
-    o558c19: While we ate, the lights were going out suddenly.
-    o6e355c: I read when he was arriving.
-    o2635e5: I was reading when he arrived.
-    odc8980: I was read when he arrived.
-    o93ee4b: While we were eat, the lights went out.
-    o8da965: While we were eating, the lights went out.
+    a: I didn't worked yesterday.
+    b: I don't worked yesterday.
+    c: I not worked yesterday.
+    d: I didn't work yesterday.
 q2:
-  text: أي أسئلة صحيحة؟
+  text: 'السؤال الصحيح:'
   show: 4
   options:
-    oa6d9c2: Who did you call?
-    oec2a74: Whom called you did?
-    oac72c2: Who you called?
-    oa14566: Who did you called?
-    oe6dbbf: Who called you?
-    o6db383: Who did call you?
+    a: Did you visited your cousin?
+    b: You visited your cousin?
+    c: Did you visit your cousin?
+    d: Do you visited your cousin?
 q3:
-  text: أي أفعال ماضيها صحيح؟
+  text: '"منذ يومين":'
   show: 4
   options:
-    oc4925c: bring → brought
-    ob52cc5: pay → payed
-    obd832e: think → thinked
-    o19981a: catch → catched
-    o8721ca: bring → brang
-    o92a4a3: think → thought
+    a: two days ago
+    b: before two days
+    c: ago two days
+    d: since two days
 q4:
-  text: أي جمل صحيحة؟
+  text: We ___ at home last night.
   show: 4
   options:
-    o24beff: They weren't listening.
-    o345a3c: They wasn't listening.
-    o0f46ec: What were you doing at 10?
-    ob619cf: What you were doing at 10?
-    oa1edd7: What did you doing at 10?
-    ofb3b5c: They weren't listen.
+    a: did
+    b: are
+    c: was
+    d: were
 q5:
-  text: الهاتف يرن الآن. ماذا تقول؟
+  text: '«walked» آخرها يُنطق:'
   show: 4
   options:
-    o4c8837: I'm answering it next year.
-    o7ad9c4: I'll get it.
-    o5eb3e5: I'll answer it.
-    o885001: I'm going to answer it since last week.
-    ob420bf: I answer it tomorrow.
-    oc063e0: I will to answer it.
+    a: صامت
+    b: /id/
+    c: /d/
+    d: /t/
 q6:
-  text: أي جمل صحيحة لخطة قررتها من قبل؟
+  text: 'الماضي من «go»:'
   show: 4
   options:
-    o595bae: I'm going to learn French this year.
-    o1527d6: We're going to move house in June.
-    o933989: I'm going learn French.
-    o8df8cd: We go to move house.
-    o673596: We're going to moving house.
-    o7192c6: I will learning French.
+    a: wented
+    b: gone
+    c: goed
+    d: went
 q7:
-  text: أي جمل صحيحة لموعد محدد؟
+  text: أيها صحيح؟
   show: 4
   options:
-    oa9af77: She's flying to Paris on Monday.
-    o013827: I meet the manager tomorrow will.
-    o598d96: She will flying to Paris.
-    of17c51: I'm meet the manager at 10.
-    ob8f67b: I'm meeting the manager at 10 tomorrow.
-    o5d7d1e: She flying to Paris on Monday.
+    a: Did you see the castle?
+    b: Did you saw the castle?
+    c: You did see the castle?
+    d: Did you seen the castle?
 q8:
-  text: أي جمل صحيحة؟
+  text: 'الماضي من «buy»:'
   show: 4
   options:
-    obdc920: I won't tell anyone.
-    o7d9d02: I willn't tell anyone.
-    od52974: Will you to open the door?
-    o06b509: I won't to tell anyone.
-    o7c0667: Will you open the door, please?
-    ob53e43: Do you will open the door?
+    a: boughted
+    b: buyed
+    c: bought
+    d: brought
 q9:
-  text: أي كلمات مكتوبة صحيحًا؟
+  text: We stayed ___ four days.
   show: 4
   options:
-    o0c6c9f: biger
-    o7a3b73: happiest
-    o085d97: bigger
-    od6341d: recieved
-    o8b1f69: happyest
-    o4c3ca9: received
-    o343464: nicest-er
+    a: ago
+    b: since
+    c: for
+    d: during
 q10:
-  text: أي جمل صحيحة؟
+  text: أيها صحيح؟
   show: 4
   options:
-    o36a1a3: This is the beautifulest beach.
-    o47c108: Aswan is hotter than Cairo in summer.
-    oa038e2: This is the most beautiful beach.
-    odb9dd9: Aswan is more hotter than Cairo.
-    o3c71cb: Aswan is hotter from Cairo.
-    oc79a37: This is most beautiful beach the.
+    a: I not ate breakfast.
+    b: I didn't eat breakfast.
+    c: I didn't ate breakfast.
+    d: I ate not breakfast.
 q11:
-  text: أي جمل صحيحة؟
+  text: I ___ dinner when the phone rang.
   show: 4
   options:
-    o7dd0ad: She's more good at maths.
-    oa695a1: She's gooder at maths.
-    o78c824: It's the baddest day.
-    o4abf8d: She's better at maths than me.
-    o1f127c: It's the most bad day.
-    od1156a: It's the worst day of my life.
+    a: was having
+    b: have
+    c: were having
+    d: had
 q12:
-  text: أي جمل صحيحة؟
+  text: While she was driving, she ___ a strange noise.
   show: 4
   options:
-    od45359: He isn't enough old to vote.
-    oe3524e: He isn't old enough to vote.
-    o93326c: The tea is too hot to drink.
-    o2032b7: The tea is too much hot.
-    ofa4ed8: He isn't old to enough vote.
-    o919edf: The tea is very hot to drink it.
+    a: has heard
+    b: hears
+    c: heard
+    d: was hearing
 q13:
-  text: 'لتسأل عن شخصية شخص:'
+  text: They ___ playing football at 5.
   show: 4
   options:
-    o98e339: What does he like?
-    o08755e: What is he like?
-    o878cc4: What's she like as a person?
-    ocabe59: What he is like?
-    o1bca96: How he looks like?
-    ofb0cc5: How is he like?
+    a: are
+    b: did
+    c: was
+    d: were
 q14:
-  text: أي جمل صحيحة؟
+  text: أيها صحيح؟
   show: 4
   options:
-    o74002c: I went to Aswan ever.
-    obc8db2: I've been to Aswan last year.
-    o4c3169: I've been to Aswan twice.
-    o531bb4: I have be to Aswan.
-    o3f3f7a: I went to Aswan last year.
-    o3ce67b: I've went to Aswan.
+    a: I knowed the answer.
+    b: I were knowing the answer.
+    c: I was knowing the answer.
+    d: I knew the answer.
 q15:
-  text: أي جمل صحيحة؟
+  text: '«just in time» معناها:'
   show: 4
   options:
-    o2d44ef: Have you finished yet?
-    o2767ac: She's left just.
-    ofe2741: Did you finished yet?
-    of54ced: She just has leaved.
-    o8b823e: Have you finish yet?
-    o5aac04: She's just left.
+    a: متأخرًا جدًا
+    b: مرة واحدة فقط
+    c: في آخر لحظة
+    d: في الوقت المحدد بالضبط دائمًا
 q16:
-  text: صديقك في دبي الآن. أي جملة صحيحة؟
+  text: '"أرخص من":'
   show: 4
   options:
-    o248ae2: He goes to Dubai ago.
-    oaf77cf: He has went to Dubai.
-    o6d203d: He's gone to Dubai.
-    oc59711: He has be in Dubai.
-    o334bf2: He has been to Dubai.
-    odfc7ee: He has gone to Dubai.
+    a: cheaper that
+    b: more cheap as
+    c: cheaper than
+    d: more cheaper than
 q17:
-  text: أي أسئلة صحيحة؟
+  text: 'المقارنة من «good»:'
   show: 4
   options:
-    o4df371: When have you started this job?
-    o59f994: Did you ever ate camel meat?
-    o691bcf: Have you ever eaten camel meat?
-    o2db580: When did you start this job?
-    o1a174e: When you started this job?
-    od9f88f: Have you ever ate camel meat?
+    a: more good
+    b: better
+    c: best
+    d: gooder
 q18:
-  text: أي جمل تعني 'مش لازم'؟
+  text: It's the ___ expensive phone in the shop.
   show: 4
   options:
-    of7b1a6: You must not to pay.
-    oed2f33: You don't need to pay.
-    ob51415: You mustn't pay.
-    o2fb131: You have to not pay.
-    oc93b38: You don't have to pay.
-    o64f119: You shouldn't to pay.
+    a: very
+    b: more
+    c: most
+    d: much
 q19:
-  text: أي جمل صحيحة؟
+  text: 'المقارنة من «big»:'
   show: 4
   options:
-    oed52c6: She have to wear a uniform.
-    o9fbfac: You should drinks more water.
-    odb0884: She has to wear a uniform.
-    oa041db: She must to wear a uniform.
-    odaca8e: You should to drink more water.
-    odcbd5c: You should drink more water.
+    a: biger
+    b: biggest
+    c: bigger
+    d: more big
 q20:
-  text: أي طلبات مهذبة وصحيحة؟
+  text: '«It looks great on you» معناها:'
   show: 4
   options:
-    o8b1eea: Could you send me the file, please?
-    obbbad0: You can send me the file?
-    o53e630: Could you to send me the file?
-    o8083af: Would you mind wait?
-    o1edc7b: Would you mind waiting a moment?
-    oabb5b1: Would you mind to wait?
+    a: يبدو رائعًا عليك.
+    b: أنت تنظر جيدًا.
+    c: إنه كبير عليك.
+    d: انظر إليه جيدًا.
 q21:
-  text: أي جمل تعني احتمالًا؟
+  text: '"ينبغي أن ترتاح":'
   show: 4
   options:
-    o4a61a8: We must be late.
-    oae8ef3: It has to snow tonight.
-    o30bcfe: We might be late.
-    oe9c2ad: We might are late.
-    o4b31d9: It may snow tonight.
-    o75ab82: It mays snow.
+    a: You should resting.
+    b: You should rest.
+    c: You shoulds rest.
+    d: You should to rest.
 q22:
-  text: أي جمل صحيحة؟
+  text: '«You don''t have to come» معناها:'
   show: 4
   options:
-    o93303d: A life is short.
-    o8f0b30: I love a music.
-    ob15523: I love music.
-    oac8dc9: Life is short.
-    oad8c9e: I love the music in general.
-    ofd3d53: The life is short.
+    a: لن تأتي.
+    b: ممنوع أن تأتي.
+    c: يجب أن تأتي.
+    d: لست مضطرًا أن تأتي.
 q23:
-  text: أي جمل صحيحة؟
+  text: '«You mustn''t smoke» معناها:'
   show: 4
   options:
-    oa5edf8: There are a little people here.
-    od798a3: There are a few people here.
-    o540172: I don't have much moneys.
-    o691e36: I don't have many money.
-    o5c6a91: I don't have much money.
-    oadcc82: There is a few people here.
+    a: لست مضطرًا للتدخين.
+    b: ربما تدخن.
+    c: يجب أن تدخن.
+    d: ممنوع التدخين.
 q24:
-  text: أي جمل صحيحة؟
+  text: She ___ to wear a uniform.
   show: 4
   options:
-    o58bfce: Sun rises in the east.
-    ocdbfbb: She goes to the work by the bus.
-    of4ed3e: A sun rises in east.
-    o3fc7da: She goes to work by bus.
-    o263a93: The sun rises in the east.
-    ofacc47: She goes to a work by bus.
+    a: should
+    b: must
+    c: have
+    d: has
 q25:
-  text: أي جمل صحيحة؟
+  text: 'نطق «stomach»:'
   show: 4
   options:
-    o247371: He's engineer.
-    ocf5a98: He's an engineer.
-    o3710cd: I saw a film. The film was boring.
-    od2dddf: I saw film. Film was boring.
-    o8cb7b1: He's the engineer in general.
-    ob289fd: I saw the film. A film was boring.
+    a: sto-MATCH
+    b: STUM-ach (بالخاء)
+    c: STO-mach
+    d: STUM-ək
 q26:
-  text: أي جمل صحيحة؟
+  text: 'السؤال الصحيح عن تجربة:'
   show: 4
   options:
-    o716304: If I will see him, I'll tell him.
-    o20a961: If I'll see him, I tell him.
-    o7edb17: If I see him, I'll tell him.
-    o53bce7: If I see him, I tell him tomorrow.
-    o4765ac: We'll start when everyone arrives.
-    o7846fb: We'll start when everyone will arrive.
+    a: Have you ever been to Paris?
+    b: Are you ever been to Paris?
+    c: Did you ever been to Paris?
+    d: Have you ever went to Paris?
 q27:
-  text: أي جمل صحيحة؟
+  text: أيها صحيح؟
   show: 4
   options:
-    of00ac5: I want travel.
-    ofb9384: I enjoy read.
-    oe2a38b: I enjoy to read.
-    o028eda: I want to travel.
-    oc5abb8: I enjoy reading.
-    o0c7e79: I want traveling.
+    a: I've went to Rome in 2019.
+    b: I went to Rome in 2019.
+    c: I go to Rome in 2019.
+    d: I've been to Rome in 2019.
 q28:
-  text: أي جمل صحيحة؟
+  text: 'التصريف الثالث من «eat»:'
   show: 4
   options:
-    oe02f1e: She decided leaving.
-    oa158ac: He stopped smoking.
-    oacb9f6: He stopped to smoking.
-    o3e9254: He stopped smoke.
-    o348e7d: She decided leave.
-    o1a5398: She decided to leave.
+    a: eated
+    b: eat
+    c: eaten
+    d: ate
 q29:
-  text: أي جمل صحيحة؟
+  text: '«He''s gone to Paris» معناها:'
   show: 4
   options:
-    o606c2c: She's good at sing.
-    od120d7: I'm looking forward to meeting you.
-    o3bbf77: She's good to singing.
-    o162fbb: She's good at singing.
-    o834c9f: I'm looking forward to meet you.
-    o12211e: I'm looking forward meeting you.
+    a: زار باريس ورجع.
+    b: ذهب إلى باريس وما زال هناك.
+    c: لا يحب باريس.
+    d: سيذهب إلى باريس.
 q30:
-  text: أي جمل صحيحة؟
+  text: 'وعد:'
   show: 4
   options:
-    o3edc02: We already have visit the museum.
-    o488eeb: We've already visited the museum.
-    oe2247d: While I was wait, I read a book.
-    o9c6efc: We've already visit the museum.
-    o9e3256: While I waited, I was read a book.
-    oec0e2a: While I was waiting, I read a book.
-q31:
-  text: أي جمل صحيحة؟
-  show: 4
-  options:
-    oc84ef4: This hotel isn't as quiet as the old one.
-    o99dbf0: This hotel isn't quiet as the old one.
-    o034356: It's the cheapest room.
-    o8570e9: It's cheapest room the.
-    oe2c2c2: This hotel isn't as quieter as the old one.
-    o159434: It's the most cheap room.
-q32:
-  text: على الهاتف، أي جمل صحيحة ومهذبة؟
-  show: 4
-  options:
-    o4afec7: Could I to speak to Mr Ali?
-    o829b07: Could you call me back?
-    o8cb50e: You call me back?
-    o826b77: Can you calling me back?
-    o641ff4: Could I speak to Mr Ali, please?
-    o92cd07: Give me Mr Ali.
-q33:
-  text: أي جمل صحيحة؟
-  show: 4
-  options:
-    o1bdb7d: We must to leave early.
-    o96e004: We have to leave early.
-    oed32da: If it's sunny, we going to the beach.
-    o1bfed7: We have to leaving early.
-    oe8ee42: If it's sunny, we'll go to the beach.
-    oca3470: If it will be sunny, we go to the beach.
+    a: I call you tomorrow.
+    b: I called you tomorrow.
+    c: I'll call you tomorrow.
+    d: I'm calling you tomorrow always.

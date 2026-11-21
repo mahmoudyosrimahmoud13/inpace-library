@@ -1,0 +1,194 @@
+id: cost-management-accounting
+title: 'Cost and management accounting: numbers for decisions'
+version: 1
+language: en
+description: Accounting from the inside, for the people running a business. Cost behavior and the high-low method, contribution
+  margin and break-even, target profit and operating leverage, job, process and activity-based costing, absorption vs variable
+  costing, relevant costs for special orders, make-or-buy and scarce resources, budgets and cash budgets, flexible budgets
+  and variances, ROI, residual income and the balanced scorecard. Follows Nour's growing bakery and ends with four real decisions.
+  Course 3 of the accounting track. About 6 days, 60 minutes a day.
+image: cover.jpg
+downloads:
+- title: 'Principles of Accounting, Volume 2: Managerial Accounting (OpenStax, free book)'
+  url: https://openstax.org/details/books/principles-managerial-accounting
+modules:
+- id: m1
+  title: 'Day 1: Costs and how they behave'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: costs from the inside'
+    file: lessons/m1-l1.md
+    minutes: 25
+  - id: m1-l2
+    title: 'How costs behave: splitting mixed costs'
+    file: lessons/m1-l2.md
+    minutes: 30
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Collect six months of one mixed cost you know (your electricity, mobile data, a car's fuel) with an activity measure.
+      Use the high-low method to split it into fixed and variable parts, then check the formula against the other months.
+      Upload your spreadsheet.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why the cost of one unit changes with volume, using Nour's cake at 300 and 500 cakes a month.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Cost-volume-profit'
+  lessons:
+  - id: m2-l1
+    title: Contribution margin and break-even
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: Target profit, safety margin and operating leverage
+    file: lessons/m2-l2.md
+    minutes: 30
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Build a CVP model in a spreadsheet for a small business of your choice: price, variable cost, fixed costs as
+      inputs; contribution margin, break-even, units for a target profit, margin of safety and operating leverage as outputs.
+      Change the price by 10% and note what happens. Upload it.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain operating leverage, and why a business with high fixed costs gains more in good years and suffers more
+      in bad ones.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Product costing'
+  lessons:
+  - id: m3-l1
+    title: 'Job costing: the cost of one order'
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Process costing and activity-based costing
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Cost a custom order of your choice (a website, a wedding cake, furniture) with a job cost sheet: materials, labor
+      and overhead applied with a rate you justify. Then set a price. Upload the cost sheet.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain why custom products are often undercosted when overhead is spread by labor hours, and how activity-based
+      costing fixes it.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Profit and decisions'
+  lessons:
+  - id: m4-l1
+    title: Absorption costing and variable costing
+    file: lessons/m4-l1.md
+    minutes: 30
+  - id: m4-l2
+    title: 'Relevant costs: making decisions'
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Analyze a real or invented decision in your work or life (accept a side job, buy vs rent, drop a product) with
+      a relevant-cost table: list every option, keep only future costs that differ, include opportunity costs, and add two
+      non-financial points. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain why a product line showing a 'loss' after allocated costs may still be worth keeping.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Budgets and variances'
+  lessons:
+  - id: m5-l1
+    title: 'Budgets: planning the months ahead'
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: Flexible budgets and variances
+    file: lessons/m5-l2.md
+    minutes: 35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Make a three-month cash budget for a small business or your own household: opening cash, collections or income
+      with their timing, every payment, and a minimum balance. Show the month where you''d need to borrow or cut, if any.
+      Upload it.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain why actual results must be compared with a flexible budget, not with the original budget.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Performance and your decisions'
+  lessons:
+  - id: m6-l1
+    title: Measuring performance
+    file: lessons/m6-l1.md
+    minutes: 30
+  - id: m6-l2
+    title: 'Capstone: Nour''s big decisions'
+    file: lessons/m6-l2.md
+    minutes: 60
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Solve all four capstone decisions in a spreadsheet, then write your half-page advice to Nour with five KPIs she
+      should track monthly. Upload both.
+  - id: m6-explain
+    type: explain
+    prompt: Explain how residual income can lead a manager to accept a good project that ROI would make them reject.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

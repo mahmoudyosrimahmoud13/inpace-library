@@ -1,0 +1,23 @@
+id: accountant
+title: Become an accountant
+description: From zero to working with real company numbers, in order. Bookkeeping and the accounting cycle, the three financial statements, cost and management accounting, Excel the way accountants use it, then the two CMA parts if you want the certificate.
+language: en
+author: inPace
+official: true
+order: 24
+tags: [accounting, career, cma, excel, beginner]
+steps:
+  - course: accounting-basics
+    note: "Start here: debits and credits, the journal, the ledger, the trial balance and closing the books, using one small bakery."
+  - course: financial-statements
+    note: The income statement, balance sheet and cash flow statement, how they connect, and how to read real ones.
+  - course: cost-management-accounting
+    note: Numbers for decisions inside a business. Cost behavior, break-even, budgets, variances and performance.
+  - course: excel-for-accountants
+    note: The Excel skills accounting jobs ask for. Lookups, pivots, reconciliations, depreciation and a monthly close file.
+  - course: cma-part-1-for-complete-beginners-12-weeks-through-sections-
+    note: For the CMA certificate. Part 1 covers reporting, planning, performance, cost management and internal controls.
+    optional: true
+  - course: cma-part-2
+    note: The second and last CMA exam. Financial analysis, corporate finance, decisions, risk, investments and ethics.
+    optional: true

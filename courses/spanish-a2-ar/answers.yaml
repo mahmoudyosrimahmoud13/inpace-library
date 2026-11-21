@@ -1,120 +1,120 @@
 q1:
   right:
-  - a
-  - b
-  why: haber + participio، و todavía no = لم ... بعد.
+  - c
+  why: -é = yo، في الماضي.
 q2:
   right:
-  - a
   - b
-  why: hacer → hecho (شاذ).
+  why: 'أفعال -er: él/ella ← -ió.'
 q3:
   right:
-  - a
   - b
-  why: 'مهارة متعلمة: saber + مصدر.'
+  why: حرف u يحافظ على صوت g.
 q4:
   right:
-  - a
-  - b
-  why: ir a + مصدر.
+  - c
+  why: ayer = أمس، وقت منتهٍ.
 q5:
   right:
-  - a
-  - b
-  why: 'وقت منتهٍ (ayer) → indefinido، و ir: fui.'
+  - d
+  why: pasarlo bien/mal = يقضي وقتًا جيدًا/سيئًا.
 q6:
   right:
-  - a
-  - b
-  why: hacer → hizo (بالـ z وبدون علامة).
+  - d
+  why: fui هنا = ir (ذهبت).
 q7:
   right:
-  - a
-  - b
-  why: g → gu قبل é.
+  - d
+  why: 'شاذ: hizo، بحرف z وبدون علامة.'
 q8:
   right:
-  - a
   - b
-  why: esta semana مع pretérito perfecto (في إسبانيا).
+  why: estar ← estuv- + -imos.
 q9:
   right:
-  - a
-  - b
-  why: عادة في الماضي → imperfecto.
+  - d
+  why: الطقس يُقال بـ hacer.
 q10:
   right:
-  - a
-  - b
-  why: الحدث القاطع بالـ indefinido.
+  - c
+  why: 'tuve وtuvo وpude وpudo: بدون علامات.'
 q11:
   right:
-  - a
-  - b
-  why: 'ser شاذ: era.'
+  - c
+  why: الماضي المستمر = عادة في الماضي.
 q12:
   right:
-  - a
   - b
-  why: hay → había.
+  why: 'ser شاذ: era وeras وera...'
 q13:
   right:
-  - a
-  - b
-  why: más/menos ... que.
+  - c
+  why: وصف الماضي ← había.
 q14:
   right:
-  - a
-  - b
-  why: mejor هي «أفضل»، و de + el = del.
+  - c
+  why: Un día = حدث واحد ← الماضي البسيط.
 q15:
   right:
-  - a
   - b
-  why: mayor = أكبر سنًا، وبعد que نستخدم yo.
+  why: المستمر = الخلفية؛ البسيط = الحدث.
 q16:
   right:
-  - a
-  - b
-  why: hay que + مصدر.
+  - c
+  why: más + صفة + que.
 q17:
   right:
-  - a
   - b
-  why: ماريا مؤنث → la قبل الفعل.
+  why: bueno ← mejor.
 q18:
   right:
-  - a
-  - b
-  why: le + lo → se lo.
+  - d
+  why: La chaqueta مؤنث مفرد ← la.
 q19:
   right:
-  - a
-  - b
-  why: venir → ven.
+  - d
+  why: quedar (للملابس) = يناسب المقاس.
 q20:
   right:
-  - a
   - b
-  why: doler مثل gustar، والجمع duelen.
+  why: 'كلمة واحدة: doscientos (doscientas مع المؤنث).'
 q21:
   right:
-  - a
   - b
-  why: 'المستقبل: llamaré.'
+  why: جمع ← duelen؛ واستخدم los لا mis.
 q22:
   right:
-  - a
-  - b
-  why: لا مستقبل بعد si.
+  - d
+  why: tener que = يجب / مضطر.
 q23:
   right:
-  - a
-  - b
-  why: 'condicional للأدب: podría.'
+  - c
+  why: 'usted: -er ← -a.'
 q24:
   right:
-  - a
+  - d
+  why: أمر tú شاذ.
+q25:
+  right:
   - b
-  why: 'hacer → har-: hará.'
+  why: أمنية شائعة للمريض.
+q26:
+  right:
+  - c
+  why: المضارع التام = تجربة.
+q27:
+  right:
+  - a
+  why: اسم مفعول شاذ.
+q28:
+  right:
+  - d
+  why: haber مع nosotros ← hemos.
+q29:
+  right:
+  - d
+  why: 'المستقبل: -á.'
+q30:
+  right:
+  - b
+  why: Quería + المصدر مهذبة.

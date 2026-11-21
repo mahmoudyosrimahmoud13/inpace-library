@@ -364,3 +364,234 @@ courses:
     title: Zero to<br>Hero
     sub: Backprop, makemore, GPT and the tokenizer, built from scratch
     tags: [12 lessons, 30 quiz questions]
+
+  cost-management-accounting:
+    theme: forest
+    art: cost-management.svg
+    chip: Accounting · course 3 of 4
+    title: Costs and<br>decisions
+    sub: Break-even, costing, budgets, variances and performance, with a growing bakery
+    tags: [12 lessons, 30 quiz questions]
+
+  cost-management-accounting-ar:
+    theme: forest
+    art: cost-management.svg
+    rtl: true
+    chip: المحاسبة · الكورس 3 من 4
+    title: محاسبة<br>التكاليف
+    sub: التعادل والتكاليف والموازنات والانحرافات وقياس الأداء، مع مخبز يكبر
+    tags: [12 درسًا, 30 سؤالًا]
+
+  excel-for-accountants:
+    theme: sun
+    art: excel.svg
+    chip: Accounting · course 4 of 4
+    title: Excel for<br>accountants
+    sub: Lookups, pivots, reconciliations, depreciation and a month-end close file
+    tags: [12 lessons, 30 quiz questions]
+
+  excel-for-accountants-ar:
+    theme: sun
+    art: excel.svg
+    rtl: true
+    chip: المحاسبة · الكورس 4 من 4
+    title: Excel<br>للمحاسبين
+    sub: البحث والجداول المحورية والتسويات والإهلاك وملف الإقفال الشهري
+    tags: [12 درسًا, 30 سؤالًا]
+
+  cma-part-2:
+    theme: navy
+    art: cma-part-2.svg
+    chip: CMA · 10 weeks
+    title: CMA Part 2,<br>step by step
+    sub: Analysis, corporate finance, decisions, risk, investments and ethics, with exam-style quizzes
+    tags: [21 lessons, 66 quiz questions]
+
+  cma-part-2-ar:
+    theme: navy
+    art: cma-part-2.svg
+    rtl: true
+    chip: CMA · 10 أسابيع
+    title: CMA<br>الجزء الثاني
+    sub: التحليل وتمويل الشركات والقرارات والمخاطر والاستثمار والأخلاقيات، مع اختبارات بأسلوب الامتحان
+    tags: [21 درسًا, 66 سؤالًا]
+
+  chess-1-rules:
+    theme: forest
+    art: chess.svg
+    chip: Chess · course 1 of 3
+    title: Chess from<br>zero
+    sub: The rules, your first checkmates, opening principles and a routine for every move
+    tags: [8 lessons, 20 quiz questions]
+
+  chess-1-rules-ar:
+    theme: forest
+    art: chess.svg
+    rtl: true
+    chip: الشطرنج · الكورس 1 من 3
+    title: الشطرنج<br>من الصفر
+    sub: القواعد وأول أنواع المات ومبادئ الافتتاح وروتين لكل نقلة
+    tags: [8 دروس, 20 سؤالًا]
+
+  chess-2-tactics:
+    theme: sun
+    art: chess.svg
+    chip: Chess · course 2 of 3
+    title: Chess<br>tactics
+    sub: Forks, pins, skewers, discoveries, mating patterns and calculation, with checked puzzles
+    tags: [8 lessons, 20 quiz questions]
+
+  chess-2-tactics-ar:
+    theme: sun
+    art: chess.svg
+    rtl: true
+    chip: الشطرنج · الكورس 2 من 3
+    title: تكتيكات<br>الشطرنج
+    sub: الشوكة والتثبيت والسيخ والهجوم المكشوف وأشكال المات والحساب، مع ألغاز مُتحقَّق منها
+    tags: [8 دروس, 20 سؤالًا]
+
+  chess-3-openings-endgames:
+    theme: navy
+    art: chess.svg
+    chip: Chess · course 3 of 3
+    title: Openings and<br>endgames
+    sub: A simple repertoire, pawn structure, plans, and the endgames every player needs
+    tags: [8 lessons, 20 quiz questions]
+
+  chess-3-openings-endgames-ar:
+    theme: navy
+    art: chess.svg
+    rtl: true
+    chip: الشطرنج · الكورس 3 من 3
+    title: الافتتاحات<br>والنهايات
+    sub: قائمة افتتاحات بسيطة وبنية الجنود والخطط والنهايات التي يحتاجها كل لاعب
+    tags: [8 دروس, 20 سؤالًا]
+
+  spanish-a1:
+    theme: coral
+    art: lang-spanish.svg
+    chip: Spanish · level A1
+    title: Spanish<br>from zero
+    sub: Listen first, then speak. Greetings, family, your day, the city, food and plans
+    tags: [14 lessons, voice notes]
+
+  spanish-a2:
+    theme: coral
+    art: lang-spanish.svg
+    chip: Spanish · level A2
+    title: Spanish A2
+    sub: The past, stories, shopping, the doctor, experiences and the future
+    tags: [14 lessons, voice notes]
+
+  spanish-b1:
+    theme: coral
+    art: lang-spanish.svg
+    chip: Spanish · level B1
+    title: Spanish B1
+    sub: Opinions, the subjunctive, hypotheticals, work and reported speech
+    tags: [14 lessons, voice notes]
+
+  german-a1:
+    theme: sun
+    art: lang-german.svg
+    chip: German · level A1
+    title: German<br>from zero
+    sub: Listen first, then speak. Greetings, family, your day, the city, food and appointments
+    tags: [14 lessons, voice notes]
+
+  german-a2:
+    theme: sun
+    art: lang-german.svg
+    chip: German · level A2
+    title: German A2
+    sub: The Perfekt, the dative, shopping, the doctor and a new flat
+    tags: [14 lessons, voice notes]
+
+  german-b1:
+    theme: sun
+    art: lang-german.svg
+    chip: German · level B1
+    title: German B1
+    sub: Opinions, Konjunktiv II, relative clauses, the passive and working life
+    tags: [14 lessons, voice notes]
+
+  spanish-a1-ar:
+    theme: coral
+    art: lang-spanish.svg
+    rtl: true
+    chip: الإسباني · مستوى A1
+    title: الإسباني<br>من الصفر
+    sub: استمع أولًا ثم تكلّم. التحية والعائلة ويومك والمدينة والأكل والخطط
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  spanish-a2-ar:
+    theme: coral
+    art: lang-spanish.svg
+    rtl: true
+    chip: الإسباني · مستوى A2
+    title: الإسباني<br>مستوى A2
+    sub: الماضي والقصص والتسوق والطبيب والتجارب والمستقبل
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  spanish-b1-ar:
+    theme: coral
+    art: lang-spanish.svg
+    rtl: true
+    chip: الإسباني · مستوى B1
+    title: الإسباني<br>مستوى B1
+    sub: الرأي والـ subjuntivo والافتراض والعمل والكلام المنقول
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  german-a1-ar:
+    theme: sun
+    art: lang-german.svg
+    rtl: true
+    chip: الألماني · مستوى A1
+    title: الألماني<br>من الصفر
+    sub: استمع أولًا ثم تكلّم. التحية والعائلة ويومك والمدينة والأكل والمواعيد
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  german-a2-ar:
+    theme: sun
+    art: lang-german.svg
+    rtl: true
+    chip: الألماني · مستوى A2
+    title: الألماني<br>مستوى A2
+    sub: الـ Perfekt وحالة الجر والتسوق والطبيب والشقة الجديدة
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  german-b1-ar:
+    theme: sun
+    art: lang-german.svg
+    rtl: true
+    chip: الألماني · مستوى B1
+    title: الألماني<br>مستوى B1
+    sub: الرأي وKonjunktiv II والجمل الموصولة والمجهول وحياة العمل
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  english-a1-ar:
+    theme: sky
+    art: lang-english.svg
+    rtl: true
+    chip: الإنجليزي · مستوى A1
+    title: الإنجليزي<br>من الصفر
+    sub: استمع أولًا ثم تكلّم، مع شرح الفروق بين الإنجليزية والعربية
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  english-a2-ar:
+    theme: sky
+    art: lang-english.svg
+    rtl: true
+    chip: الإنجليزي · مستوى A2
+    title: الإنجليزي<br>مستوى A2
+    sub: الماضي والقصص والمقارنة والطبيب والتجارب والمستقبل
+    tags: [14 درسًا, تسجيلات صوتية]
+
+  english-b1-ar:
+    theme: sky
+    art: lang-english.svg
+    rtl: true
+    chip: الإنجليزي · مستوى B1
+    title: الإنجليزي<br>مستوى B1
+    sub: الرأي وfor/since والشرط والمجهول ومقابلات العمل والكلام المنقول
+    tags: [14 درسًا, تسجيلات صوتية]

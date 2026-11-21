@@ -1,0 +1,190 @@
+id: excel-for-accountants
+title: 'Excel for accountants: from journal to month end'
+version: 1
+language: en
+description: 'The spreadsheet skills accountants use every day, built around real accounting work: trustworthy workbook habits,
+  Tables and named inputs, SUMIFS and the IFS family, XLOOKUP and INDEX/MATCH, a journal, ledger and trial balance that update
+  themselves, pivot tables, receivables aging, bank reconciliation, depreciation and loan tables, statements and ratios from
+  a trial balance, budgets with Goal Seek, data tables and scenarios, and Power Query for messy exports. Ends with a full
+  month-end workbook for your portfolio. Excel 365 or 2021+, with Google Sheets notes. Course 4 of the accounting track. About
+  6 days, 60 minutes a day.'
+image: cover.jpg
+downloads:
+- title: Microsoft's Excel help and training (free)
+  url: https://support.microsoft.com/excel
+modules:
+- id: m1
+  title: 'Day 1: Trustworthy spreadsheets and core functions'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: a spreadsheet you can trust'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: The functions accountants use most
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Build the invoice workbook from the first lesson (named VAT rate, a Table of invoices, VAT and gross columns,
+      a check cell), then add the expense summary from the second lesson with SUMIFS, COUNTIFS and FILTER. Upload the file.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why typing a number inside a formula (like =B5*0.14) is dangerous, and what to do instead.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Lookups and a ledger in a workbook'
+  lessons:
+  - id: m2-l1
+    title: 'Lookups: XLOOKUP, VLOOKUP and INDEX/MATCH'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: From journal to trial balance in a spreadsheet
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Build the four-sheet system (COA, Journal, Trial balance, Ledger) and enter Nour''s 11 June transactions. Upload
+      it: the trial balance must total 24,100, every entry check must be 0 and Cash must end at 9,400.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain why VLOOKUP without FALSE can give a wrong answer with no error.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Summaries and aging'
+  lessons:
+  - id: m3-l1
+    title: Pivot tables for accountants
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: Dates and receivables aging
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Build the sales pivots (by month and region, product share, top 5 customers) with total checks, and the receivables
+      aging with buckets, a customer summary and the allowance. Change the report date and note what moves. Upload the file.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why a month-end report should use a fixed report date in a cell instead of TODAY().
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Reconciliations and schedules'
+  lessons:
+  - id: m4-l1
+    title: Bank reconciliation in Excel
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Depreciation schedules and loan tables
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Do the bank reconciliation exercise (matching with COUNTIFS, reconciliation statement with a zero check, list
+      of journal entries), then a depreciation schedule with three methods and a loan amortization table with the year-end
+      current portion. Upload the file.
+  - id: m4-explain
+    type: explain
+    prompt: Explain which reconciling items need journal entries and which just wait to clear, with an example of each.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Statements, ratios and what-if'
+  lessons:
+  - id: m5-l1
+    title: Statements and ratios from a trial balance
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: Budgets and what-if analysis
+    file: lessons/m5-l2.md
+    minutes: 35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Build statements from a mapped trial balance with checks and a ratios sheet, then a 12-month driver budget with
+      Goal Seek for break-even, a two-variable data table and three scenarios with a selector. Upload the file.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why a budget model should hold drivers (volume, price, growth) as inputs rather than typed results.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Clean data and your month-end workbook'
+  lessons:
+  - id: m6-l1
+    title: Clean data, controls and Power Query
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: 'Capstone: a month-end workbook'
+    file: lessons/m6-l2.md
+    minutes: 120
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build the month-end workbook with all 13 sheets and an ALL OK checks sheet. Upload it, and note the three changes
+      a friend made that your checks caught (or didn't).
+  - id: m6-explain
+    type: explain
+    prompt: Describe the three controls in your workbook you think matter most, and what mistake each one would catch.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

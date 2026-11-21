@@ -1,0 +1,346 @@
+id: cma-part-2
+title: 'CMA Part 2: Strategic Financial Management, step by step'
+version: 1
+language: en
+description: 'Complete preparation for CMA Part 2 (the 2026 exam with case-based questions), in plain words with worked examples
+  and an exam-style quiz after every module: time value of money; Section A financial statement analysis (ratios, DuPont,
+  EPS, earnings quality); Section B corporate finance (CAPM, bond and stock valuation, WACC, capital structure, working capital,
+  financing, dividends, international finance); Section C decision analysis (CVP, marginal analysis, pricing, uncertainty);
+  Section D risk management (ERM, hedging); Section E investment decisions (cash flows, NPV, IRR, payback, real options);
+  Section F professional ethics (the IMA Statement, fraud, governance); and a formula sheet with exam strategy. Follows CMA
+  Part 1 in the library. About 10 weeks, 12 to 15 hours a week.'
+image: cover.jpg
+downloads:
+- title: 'IMA: the CMA exam and its content specification outlines'
+  url: https://www.imanet.org/cma-certification
+modules:
+- id: m1
+  title: 'Module 1: The exam and time value of money'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: CMA Part 2 and how to pass it'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: 'Time value of money: the tool behind Part 2'
+    file: lessons/m1-l2.md
+    minutes: 60
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Make a one-page study plan for your exam window, then build an Excel sheet that computes PV, FV, annuity payments,
+      NPV and IRR for three examples of your own, checking each against the formulas by hand. Upload both.
+  - id: m1-explain
+    type: explain
+    prompt: Explain, with numbers, why 10,000 received in three years is worth less than 10,000 today.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    - q6
+    pass: 70
+- id: m2
+  title: 'Module 2: Section A, ratios'
+  lessons:
+  - id: m2-l1
+    title: 'Section A: ratios for liquidity, leverage and activity'
+    file: lessons/m2-l1.md
+    minutes: 60
+  - id: m2-l2
+    title: 'Section A: profitability, DuPont and market ratios'
+    file: lessons/m2-l2.md
+    minutes: 60
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Download the latest annual report of a listed company. In Excel, compute every ratio in these two lessons for
+      two years, a five-step DuPont breakdown, and write five sentences interpreting the changes. Upload the file.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why paying a current liability with cash raises the current ratio when it is above 1.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q7
+    - q8
+    - q9
+    - q10
+    - q11
+    - q12
+    pass: 70
+- id: m3
+  title: 'Module 3: Section A, analytical issues'
+  lessons:
+  - id: m3-l1
+    title: 'Section A: earnings quality and analytical issues'
+    file: lessons/m3-l1.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Using the same annual report, compute the accrual ratio for two years, list any off-balance-sheet obligations
+      from the notes, and identify two accounting policy choices that affect comparisons with a competitor. Upload a short
+      memo.
+  - id: m3-explain
+    type: explain
+    prompt: Explain three warning signs of low earnings quality and why each matters.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q13
+    - q14
+    - q15
+    - q16
+    - q17
+    - q18
+    pass: 70
+- id: m4
+  title: 'Module 4: Section B, risk, return, valuation and cost of capital'
+  lessons:
+  - id: m4-l1
+    title: 'Section B: risk, return and CAPM'
+    file: lessons/m4-l1.md
+    minutes: 60
+  - id: m4-l2
+    title: 'Section B: cost of capital and capital structure'
+    file: lessons/m4-l2.md
+    minutes: 60
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Build an Excel model that values a bond (price for any yield), a stock with the Gordon model, computes CAPM required
+      return, and a company's WACC with a marginal cost of capital break point. Test it on the lesson examples. Upload it.
+  - id: m4-explain
+    type: explain
+    prompt: Explain why investors are rewarded only for systematic risk, and what beta measures.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q19
+    - q20
+    - q21
+    - q22
+    - q23
+    - q24
+    pass: 70
+- id: m5
+  title: 'Module 5: Section B, working capital, financing and international finance'
+  lessons:
+  - id: m5-l1
+    title: 'Section B: working capital management'
+    file: lessons/m5-l1.md
+    minutes: 60
+  - id: m5-l2
+    title: 'Section B: short-term financing, raising capital and dividends'
+    file: lessons/m5-l2.md
+    minutes: 60
+  - id: m5-l3
+    title: 'Section B: international finance'
+    file: lessons/m5-l3.md
+    minutes: 50
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'In Excel: an EOQ and reorder point calculator, a credit policy change analysis, the cost of skipping a trade
+      discount, effective rates with compensating balances, and a forward hedge for a foreign currency payable. Use your own
+      numbers and upload the file.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain the three kinds of exchange rate risk with one example each, and which one a forward contract hedges.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q25
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m6
+  title: 'Module 6: Section C, CVP and marginal analysis'
+  lessons:
+  - id: m6-l1
+    title: 'Section C: CVP analysis at exam depth'
+    file: lessons/m6-l1.md
+    minutes: 60
+  - id: m6-l2
+    title: 'Section C: marginal analysis and short-term decisions'
+    file: lessons/m6-l2.md
+    minutes: 60
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Build a multi-product CVP model in Excel with a sales mix input, then a decision sheet that handles a special
+      order with a capacity limit and a make-or-buy with avoidable fixed costs and an opportunity cost. Upload it.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why joint costs are irrelevant to a sell-or-process-further decision.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    - q36
+    pass: 70
+- id: m7
+  title: 'Module 7: Section C, pricing and uncertainty'
+  lessons:
+  - id: m7-l1
+    title: 'Section C: pricing'
+    file: lessons/m7-l1.md
+    minutes: 50
+  - id: m7-l2
+    title: 'Section C: decisions under uncertainty'
+    file: lessons/m7-l2.md
+    minutes: 50
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Build a payoff table for a decision of your choice with at least two actions and two states, compute EV and EVPI,
+      and draw (or describe) the decision tree. Then compute a target cost and the price elasticity for a pricing example.
+      Upload it.
+  - id: m7-explain
+    type: explain
+    prompt: Explain when cost-plus pricing is dangerous and why target costing fits competitive markets better.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q37
+    - q38
+    - q39
+    - q40
+    - q41
+    - q42
+    pass: 70
+- id: m8
+  title: 'Module 8: Section D, risk management'
+  lessons:
+  - id: m8-l1
+    title: 'Section D: enterprise risk management'
+    file: lessons/m8-l1.md
+    minutes: 50
+  - id: m8-l2
+    title: 'Section D: financial risk and hedging'
+    file: lessons/m8-l2.md
+    minutes: 50
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: 'Make a risk register for a company you know with 10 risks: type, likelihood and impact (1–5), a heat map, the
+      chosen response and its cost. Add one hedge for a financial risk with its payoff at two price levels. Upload it.'
+  - id: m8-explain
+    type: explain
+    prompt: Explain the difference between risk appetite and risk tolerance with an example.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q43
+    - q44
+    - q45
+    - q46
+    - q47
+    - q48
+    pass: 70
+- id: m9
+  title: 'Module 9: Section E, investment decisions'
+  lessons:
+  - id: m9-l1
+    title: 'Section E: capital budgeting cash flows, NPV and IRR'
+    file: lessons/m9-l1.md
+    minutes: 60
+  - id: m9-l2
+    title: 'Section E: payback, PI and risk in capital budgeting'
+    file: lessons/m9-l2.md
+    minutes: 50
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'Build a full capital budgeting model in Excel for a project of your choice: initial investment with working capital,
+      after-tax operating cash flows with the depreciation tax shield, terminal flows, NPV, IRR, payback, discounted payback
+      and PI, plus a sensitivity table. Upload it.'
+  - id: m9-explain
+    type: explain
+    prompt: Explain why NPV is preferred to IRR when ranking mutually exclusive projects.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q49
+    - q50
+    - q51
+    - q52
+    - q53
+    - q54
+    pass: 70
+- id: m10
+  title: 'Module 10: Section F, professional ethics'
+  lessons:
+  - id: m10-l1
+    title: 'Section F: the IMA Statement of Ethical Professional Practice'
+    file: lessons/m10-l1.md
+    minutes: 50
+  - id: m10-l2
+    title: 'Section F: fraud, ethical culture and governance'
+    file: lessons/m10-l2.md
+    minutes: 50
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: Write two short ethics cases from situations a management accountant could face. For each, name the IMA standards
+      involved, the fraud triangle elements if any, and the resolution steps in order. Upload them.
+  - id: m10-explain
+    type: explain
+    prompt: Walk through the IMA's steps for resolving an ethical conflict when your direct supervisor is the one involved.
+    min_words: 70
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q55
+    - q56
+    - q57
+    - q58
+    - q59
+    - q60
+    pass: 70
+- id: m11
+  title: 'Module 11: Final review'
+  lessons:
+  - id: m11-l1
+    title: 'Final review: formula sheet and exam strategy'
+    file: lessons/m11-l1.md
+    minutes: 60
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: Take a full timed mock exam (100 MCQs in 3 hours and 2 CBQs in 1 hour) from a review provider or the IMA's sample
+      questions. Upload your score by section and your error log with the rule behind each miss.
+  - id: m11-explain
+    type: explain
+    prompt: Describe your plan for the last two weeks before the exam, based on your mock exam results.
+    min_words: 60
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q61
+    - q62
+    - q63
+    - q64
+    - q65
+    - q66
+    pass: 70

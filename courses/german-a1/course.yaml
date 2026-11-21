@@ -1,0 +1,195 @@
+id: german-a1
+title: 'German from zero: level A1'
+version: 1
+language: en
+description: 'German for complete beginners, taught in English with a research-based method: listen to a real conversation
+  first, learn the phrases people actually use, one grammar point per unit, a voice note every unit, and review from memory.
+  Greetings, family, your day, the city, food and shopping, and appointments, with sein, haben, word order, separable verbs,
+  the accusative, möchten and the modal verbs. Ends with an A1 level check. About 2 weeks at 45 minutes a day.'
+image: cover.jpg
+downloads:
+- title: 'DW Learn German: free courses from A1 to B1, including the video series Nicos Weg'
+  url: https://learngerman.dw.com/
+- title: 'Easy German: street interviews with subtitles (YouTube)'
+  url: https://www.youtube.com/@EasyGerman
+- title: 'dict.cc: German dictionary with audio pronunciation'
+  url: https://www.dict.cc/
+modules:
+- id: m1
+  title: 'Unit 1: Hello, I''m...'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: how this course works'
+    file: lessons/m1-l1.md
+    minutes: 20
+  - id: m1-l2
+    title: Meeting someone new
+    file: lessons/m1-l2.md
+    minutes: 35
+  - id: m1-l3
+    title: Sein and heißen, du and Sie
+    file: lessons/m1-l3.md
+    minutes: 40
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Voice note (30 seconds): greet, introduce yourself (name, country, city, job), ask the other person''s name,
+      say goodbye. Upload it.'
+  - id: m1-explain
+    type: explain
+    prompt: Write 4 to 6 sentences in German introducing yourself.
+    min_words: 20
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Unit 2: My family'
+  lessons:
+  - id: m2-l1
+    title: Talking about your family
+    file: lessons/m2-l1.md
+    minutes: 35
+  - id: m2-l2
+    title: Haben, der / die / das, and mein
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Voice note (45 seconds): describe your family. Upload it.'
+  - id: m2-explain
+    type: explain
+    prompt: Write 5 sentences in German about one person in your family.
+    min_words: 25
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Unit 3: My day'
+  lessons:
+  - id: m3-l1
+    title: A normal day
+    file: lessons/m3-l1.md
+    minutes: 35
+  - id: m3-l2
+    title: Word order and separable verbs
+    file: lessons/m3-l2.md
+    minutes: 40
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Voice note (45 seconds): your typical day with times, verb-second word order and separable verbs. Upload it.'
+  - id: m3-explain
+    type: explain
+    prompt: Write 5 sentences in German about your day, starting at least three with a time.
+    min_words: 25
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Unit 4: Around town'
+  lessons:
+  - id: m4-l1
+    title: Asking the way
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: Es gibt and the accusative
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Voice note (45 seconds): directions from your home to a nearby place. Upload it.'
+  - id: m4-explain
+    type: explain
+    prompt: Write 5 sentences in German describing your neighbourhood with es gibt and kein.
+    min_words: 25
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Unit 5: Food and shopping'
+  lessons:
+  - id: m5-l1
+    title: At the bakery and the café
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: Möchten, gern, and numbers to 100
+    file: lessons/m5-l2.md
+    minutes: 40
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): an order at a bakery or café (both roles), then your food likes and dislikes. Upload
+      it.'
+  - id: m5-explain
+    type: explain
+    prompt: Write 5 sentences in German about what you like and don't like eating and drinking.
+    min_words: 25
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Unit 6: Appointments and plans'
+  lessons:
+  - id: m6-l1
+    title: Making a plan for the weekend
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: 'Modal verbs: können, müssen, wollen'
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'Level check: can you do A1?'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Voice note (60 seconds): invite a friend, with können, müssen and wollen. Upload it.'
+  - id: m6-explain
+    type: explain
+    prompt: 'Write 5 sentences in German about your week: what you have to do, can do and want to do.'
+    min_words: 25
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

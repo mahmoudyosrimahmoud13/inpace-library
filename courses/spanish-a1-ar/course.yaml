@@ -1,41 +1,43 @@
 id: spanish-a1-ar
 title: 'الإسباني من الصفر: مستوى A1'
-version: 1
+version: 2
 language: ar
-description: 'كورس إسباني للمبتدئين تمامًا من متحدثي العربية: الشرح بالعربي البسيط، والأمثلة والتمارين بالإسباني.
-  تبدأ بالكلام من اليوم الأول، ثم ser و estar و tener، والمضارع، والروتين، والعائلة، و gustar، والأكل والتسوق والاتجاهات.
-  فوق أغلب الدروس فيديو اختياري لمتحدثين ومعلمين أصليين، والشرح كامل بدونه. الخطة: 4 أسابيع، 30 إلى 45 دقيقة يوميًا.'
+description: 'إسباني للمبتدئين تمامًا، بالشرح العربي وبطريقة مبنية على الأبحاث: استمع لمحادثة حقيقية أولًا، واحفظ العبارات
+  التي يستخدمها الناس فعلًا، وقاعدة واحدة في كل وحدة، وتسجيل صوتي في كل وحدة، ومراجعة من الذاكرة. التحية والعائلة ويومك والمدينة
+  والأكل والتسوق والخطط، مع ser وestar وtener والمضارع وgustar وir a. وينتهي باختبار مستوى A1. حوالي أسبوعين، 45 دقيقة يوميًا.'
 image: cover.jpg
+downloads:
+- title: 'Dreaming Spanish: فيديوهات مجانية مرتبة حسب المستوى، من الصفر (بالإسبانية)'
+  url: https://www.dreaming.com/
+- title: 'Easy Spanish: مقابلات في الشارع مع ترجمة (YouTube)'
+  url: https://www.youtube.com/@EasySpanish
+- title: 'SpanishDict: قاموس وجداول تصريف ونطق (بالإنجليزية)'
+  url: https://www.spanishdict.com/
 modules:
 - id: m1
-  title: 'الأيام 1-4: ابدأ بالكلام: التحية وتقديم نفسك'
+  title: 'الوحدة 1: مرحبًا، أنا...'
   lessons:
   - id: m1-l1
-    title: ابدأ من هنا
+    title: 'ابدأ من هنا: كيف يعمل هذا الكورس'
     file: lessons/m1-l1.md
-    minutes: 10
+    minutes: 20
   - id: m1-l2
-    title: 'تكلّم من أول يوم: Hola, me llamo...'
+    title: التعرّف على شخص جديد
     file: lessons/m1-l2.md
-    minutes: 25
-    media: https://www.youtube.com/watch?v=JsGQizTuPSo
+    minutes: 35
   - id: m1-l3
-    title: الحروف والنطق
+    title: 'ser وme llamo: من أنت؟'
     file: lessons/m1-l3.md
-    minutes: 30
-  - id: m1-l4
-    title: الأرقام والعمر ورقم الهاتف
-    file: lessons/m1-l4.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=992&end=2733
+    minutes: 40
   requires:
   - id: m1-practical
     type: practical
-    prompt: 'تسجيل صوتي (30 ثانية): حيِّ المستمع، قدّم نفسك بالإسباني (اسمك، بلدك، مدينتك، عملك)، وتهجَّ اسمك.'
+    prompt: 'تسجيل صوتي (30 ثانية): حيِّ المستمع، وقدّم نفسك (الاسم، البلد، المدينة، المهنة)، واسأل عن اسمه، وودّعه. ارفع
+      التسجيل.'
   - id: m1-explain
     type: explain
-    prompt: 'Escribe 5 frases sobre ti: tu nombre, tu país, tu ciudad, tu trabajo y tu edad.'
-    min_words: 25
+    prompt: اكتب من 4 إلى 6 جمل بالإسبانية تقدّم فيها نفسك، باستخدام soy وme llamo وvivo en.
+    min_words: 20
   - id: m1-quiz
     type: quiz
     questions:
@@ -46,31 +48,24 @@ modules:
     - q5
     pass: 70
 - id: m2
-  title: 'الأيام 5-8: ser و tener و estar و hay'
+  title: 'الوحدة 2: عائلتي'
   lessons:
   - id: m2-l1
-    title: 'ser و llamarse: من أنت؟'
+    title: الكلام عن عائلتك
     file: lessons/m2-l1.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=2733&end=4154
-  - id: m2-l2
-    title: tener، و el / la، والمذكر والمؤنث
-    file: lessons/m2-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=6731&end=7664
-  - id: m2-l3
-    title: ser أم estar؟ و hay
-    file: lessons/m2-l3.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=7664&end=9713
+  - id: m2-l2
+    title: tener وel / la والكلمات التي تتطابق
+    file: lessons/m2-l2.md
+    minutes: 40
   requires:
   - id: m2-practical
     type: practical
-    prompt: 'تسجيل صوتي: صِف نفسك وعائلتك في 6 جمل باستخدام ser و tener و estar (مثلًا: Soy..., Tengo..., Hoy estoy...).'
+    prompt: 'تسجيل صوتي (45 ثانية): صِف عائلتك (الأسماء، الأعمار، المهن، صفة لكل واحد). ارفع التسجيل.'
   - id: m2-explain
     type: explain
-    prompt: 'Escribe sobre tu ciudad: 5 frases con hay y está (qué hay y dónde está).'
-    min_words: 30
+    prompt: اكتب 5 جمل بالإسبانية عن شخص واحد من عائلتك.
+    min_words: 25
   - id: m2-quiz
     type: quiz
     questions:
@@ -78,141 +73,121 @@ modules:
     - q7
     - q8
     - q9
+    - q10
     pass: 70
 - id: m3
-  title: 'الأيام 9-12: المضارع والأسئلة'
+  title: 'الوحدة 3: يومي'
   lessons:
   - id: m3-l1
-    title: 'المضارع المنتظم: -ar و -er و -ir'
+    title: يوم عادي
     file: lessons/m3-l1.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=5823&end=6731
   - id: m3-l2
-    title: أفعال شاذة لا غنى عنها
+    title: 'المضارع: -ar و-er و-ir'
     file: lessons/m3-l2.md
-    minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=25984&end=27288
-  - id: m3-l3
-    title: كلمات السؤال و por / para / porque
-    file: lessons/m3-l3.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=4154&end=5823
+    minutes: 40
   requires:
   - id: m3-practical
     type: practical
-    prompt: 'تسجيل صوتي: صِف يومًا عاديًا لك بـ 6 أفعال على الأقل (trabajo, como, voy, vuelvo...).'
+    prompt: 'تسجيل صوتي (45 ثانية): يومك العادي بالأوقات وستة أفعال على الأقل. ارفعه.'
   - id: m3-explain
     type: explain
-    prompt: Escribe 6 preguntas para un nuevo compañero de clase, con qué, dónde, cuándo, cómo, cuántos y por qué.
-    min_words: 30
+    prompt: اكتب 5 جمل بالإسبانية عمّا يفعله صديق كل يوم (صيغ él/ella).
+    min_words: 25
   - id: m3-quiz
     type: quiz
     questions:
-    - q10
     - q11
     - q12
     - q13
+    - q14
+    - q15
     pass: 70
 - id: m4
-  title: 'الأيام 13-16: يومك: الوقت والأيام والروتين والطقس'
+  title: 'الوحدة 4: في المدينة'
   lessons:
   - id: m4-l1
-    title: الأيام والساعة
+    title: السؤال عن الطريق
     file: lessons/m4-l1.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=22407&end=23836
-  - id: m4-l2
-    title: 'روتينك: الأفعال الانعكاسية'
-    file: lessons/m4-l2.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=23836&end=25984
-  - id: m4-l3
-    title: الطقس
-    file: lessons/m4-l3.md
-    minutes: 20
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=9713&end=11120
+  - id: m4-l2
+    title: hay أم está؟ ser أم estar؟
+    file: lessons/m4-l2.md
+    minutes: 40
   requires:
   - id: m4-practical
     type: practical
-    prompt: 'تسجيل صوتي (45 ثانية): احكِ يومك العادي من الاستيقاظ إلى النوم بالساعات، ثم قل كيف الجو اليوم في مدينتك.'
+    prompt: 'تسجيل صوتي (45 ثانية): الاتجاهات من بيتك إلى مكان قريب. ارفعه.'
   - id: m4-explain
     type: explain
-    prompt: Escribe tu rutina de un lunes normal (8 frases, con primero, después, luego, por último).
-    min_words: 30
+    prompt: اكتب 5 جمل بالإسبانية تصف شارعك أو حيّك، باستخدام hay وestá.
+    min_words: 25
   - id: m4-quiz
     type: quiz
     questions:
-    - q14
-    - q15
     - q16
     - q17
-    pass: 70
-- id: m5
-  title: 'الأيام 17-20: العائلة ووصف الناس وما تحبه'
-  lessons:
-  - id: m5-l1
-    title: العائلة والملكية
-    file: lessons/m5-l1.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=21107&end=22407
-  - id: m5-l2
-    title: وصف الناس
-    file: lessons/m5-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=17125&end=18897
-  - id: m5-l3
-    title: 'gustar: ما تحبه'
-    file: lessons/m5-l3.md
-    minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=18897&end=21107
-  requires:
-  - id: m5-practical
-    type: practical
-    prompt: 'تسجيل صوتي: صِف شخصًا من عائلتك (الشكل والشخصية)، ثم قل 3 أشياء يحبها و3 أشياء تحبها أنت.'
-  - id: m5-explain
-    type: explain
-    prompt: 'Describe a tu mejor amigo o amiga: cómo es, qué le gusta y qué no le gusta (6 frases).'
-    min_words: 30
-  - id: m5-quiz
-    type: quiz
-    questions:
     - q18
     - q19
     - q20
-    - q21
     pass: 70
-- id: m6
-  title: 'الأيام 21-24: الأكل والتسوق والاتجاهات'
+- id: m5
+  title: 'الوحدة 5: الأكل والتسوق'
   lessons:
-  - id: m6-l1
-    title: الأكل وطلب الطعام
-    file: lessons/m6-l1.md
+  - id: m5-l1
+    title: في المقهى
+    file: lessons/m5-l1.md
     minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=28482&end=29547
-  - id: m6-l2
-    title: 'التسوق: الألوان والملابس والأسعار'
-    file: lessons/m6-l2.md
-    minutes: 30
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=15384&end=17125
-  - id: m6-l3
-    title: حيّك والاتجاهات، ومراجعة A1
-    file: lessons/m6-l3.md
-    minutes: 35
-    media: https://www.youtube.com/watch?v=bp9OZoQu3A0&t=32199&end=33650
+  - id: m5-l2
+    title: 'gustar: أحب، تحب'
+    file: lessons/m5-l2.md
+    minutes: 40
   requires:
-  - id: m6-practical
+  - id: m5-practical
     type: practical
-    prompt: 'تسجيل صوتي (60 ثانية): مثّل دورين: تطلب وجبة في مطعم، ثم تسأل شخصًا عن الطريق إلى المحطة.'
-  - id: m6-explain
+    prompt: 'تسجيل صوتي (60 ثانية): طلب في مقهى (الدوران)، ثم الأكل الذي تحبه والذي لا تحبه. ارفعه.'
+  - id: m5-explain
     type: explain
-    prompt: 'Escribe un correo corto a un amigo español: preséntate, describe tu barrio y tu comida favorita (8
-      frases).'
-    min_words: 30
-  - id: m6-quiz
+    prompt: اكتب 5 جمل بالإسبانية عمّا تحبه أنت ومن تعرفهم وما لا تحبونه.
+    min_words: 25
+  - id: m5-quiz
     type: quiz
     questions:
+    - q21
     - q22
     - q23
     - q24
     - q25
+    pass: 70
+- id: m6
+  title: 'الوحدة 6: الخطط'
+  lessons:
+  - id: m6-l1
+    title: التخطيط لعطلة نهاية الأسبوع
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: ir a + فعل، والأفعال التي يتغير حرف العلة فيها
+    file: lessons/m6-l2.md
+    minutes: 40
+  - id: m6-l3
+    title: 'اختبار المستوى: هل أتقنت A1؟'
+    file: lessons/m6-l3.md
+    minutes: 40
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'تسجيل صوتي (60 ثانية): ادعُ صديقًا لعطلة نهاية الأسبوع وقل خططك الأخرى. ارفعه.'
+  - id: m6-explain
+    type: explain
+    prompt: اكتب 5 جمل بالإسبانية عن خططك للأسبوع القادم، باستخدام voy a.
+    min_words: 25
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
     pass: 70

@@ -1,0 +1,120 @@
+q1:
+  right:
+  - b
+  why: trotzdem takes position 1 → verb next.
+q2:
+  right:
+  - c
+  why: obwohl → verb at the end.
+q3:
+  right:
+  - c
+  why: It gives a result.
+q4:
+  right:
+  - b
+  why: Meiner Meinung nach is position 1 → verb next.
+q5:
+  right:
+  - c
+  why: A polite way to disagree.
+q6:
+  right:
+  - a
+  why: Unreal condition with sein → wäre.
+q7:
+  right:
+  - c
+  why: Konjunktiv II = polite.
+q8:
+  right:
+  - d
+  why: A polite wish.
+q9:
+  right:
+  - c
+  why: würde + infinitive in the main clause.
+q10:
+  right:
+  - d
+  why: Konjunktiv II = not real.
+q11:
+  right:
+  - a
+  why: Subject of the clause, masculine → der.
+q12:
+  right:
+  - b
+  why: Object of gesehen, masculine → den.
+q13:
+  right:
+  - c
+  why: mit + dative, feminine → der.
+q14:
+  right:
+  - a
+  why: Like weil and dass.
+q15:
+  right:
+  - d
+  why: After alles → was.
+q16:
+  right:
+  - b
+  why: 'Passive: werden + participle; der Müll → wird.'
+q17:
+  right:
+  - b
+  why: wurde + participle.
+q18:
+  right:
+  - b
+  why: von = by (the doer).
+q19:
+  right:
+  - a
+  why: modal + participle + werden.
+q20:
+  right:
+  - a
+  why: werden + noun = become.
+q21:
+  right:
+  - c
+  why: 'Strong verb: ging.'
+q22:
+  right:
+  - d
+  why: 'Weak verb: stem + -te.'
+q23:
+  right:
+  - b
+  why: One event in the past → als.
+q24:
+  right:
+  - d
+  why: Repeated events → wenn.
+q25:
+  right:
+  - d
+  why: Standard formal closing.
+q26:
+  right:
+  - b
+  why: Same subject + infinitive with zu → um... zu.
+q27:
+  right:
+  - d
+  why: Different subjects → damit.
+q28:
+  right:
+  - a
+  why: Indirect question → verb at the end.
+q29:
+  right:
+  - a
+  why: ob = whether.
+q30:
+  right:
+  - a
+  why: zu goes between prefix and verb.

@@ -1,0 +1,131 @@
+id: chess-3-openings-endgames-ar
+title: 'الشطرنج 3: الافتتاحات والخطط والنهايات'
+version: 1
+language: ar
+description: 'كل ما بين أول تكتيكاتك وأول بطولة لك: قائمة افتتاحات بسيطة (الإيطالي بالأبيض، و1...e5 وجامبيت الوزير المرفوض
+  بالأسود، مع الفخاخ التي يجب أن تعرفها)، وبنية الجنود، وخطط وسط اللعبة ومتى تبادل، ونهايات الملك والجنود (قاعدة المربع والمقابلة
+  والمربعات المفتاحية)، ونهايات القلاع (لوسينا وفيليدور)، وتحويل التفوق إلى فوز، وخطة تدريب لتستمر في التحسّن. الكورس الثالث
+  من 3 في مسار الشطرنج. حوالي 4 أيام، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: مستكشف الافتتاحات على Lichess (مجانًا)
+  url: https://lichess.org/analysis#explorer
+- title: 'Lichess Practice: النهايات (مجانًا)'
+  url: https://lichess.org/practice
+modules:
+- id: m1
+  title: 'الوحدة 1: قائمة افتتاحات بسيطة'
+  lessons:
+  - id: m1-l1
+    title: 'افتتاح للأبيض: الافتتاح الإيطالي'
+    file: lessons/m1-l1.md
+    minutes: 50
+  - id: m1-l2
+    title: 'افتتاحات للأسود: ضد 1. e4 و1. d4'
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: العب 10 مباريات بقائمتك الجديدة (الإيطالي بالأبيض؛ و1...e5 وجامبيت الوزير المرفوض بالأسود). لكل واحدة، ارفع الرابط
+      والنقلة التي خرجت فيها عن الخطوط الرئيسية في مستكشف الافتتاحات.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح خطة الأبيض في الافتتاح الإيطالي بعد c3 وd3 والتبييت.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: البنية والخطط'
+  lessons:
+  - id: m2-l1
+    title: 'بنية الجنود: هيكل الوضع'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: خطط وسط اللعبة
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: خذ ثلاثًا من مبارياتك الأخيرة، ولوضع ما بعد النقلة 20 اكتب نقاط ضعف الجنود والأعمدة المفتوحة والمواقع المتقدمة
+      للطرفين، والخطة التي كنت ستختارها. ارفع ملاحظاتك.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح متى يجب أن تبادل القطع ومتى يجب أن تتجنب التبادل.
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: نهايات مهمة'
+  lessons:
+  - id: m3-l1
+    title: نهايات الملك والجنود
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: نهايات القلاع
+    file: lessons/m3-l2.md
+    minutes: 45
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'أكمل ''Key squares'' و''Opposition'' و''Rook endgames: Lucena and Philidor'' في Lichess Practice. وافز بوضع لوسينا
+      ضد الكمبيوتر ثلاث مرات. ارفع لقطات.'
+  - id: m3-explain
+    type: explain
+    prompt: اشرح قاعدة المربع وفكرة المقابلة، بمثال لكل منهما.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: التحويل والتحسّن'
+  lessons:
+  - id: m4-l1
+    title: تحويل التفوق إلى فوز، ونهايات القطع الخفيفة
+    file: lessons/m4-l1.md
+    minutes: 45
+  - id: m4-l2
+    title: كيف تستمر في التحسّن
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'حلّل آخر 10 مباريات لك: أولًا وحدك ثم بالمحرك. ابدأ سجل أخطاء فيه أكبر 2 أو 3 أخطاء في كل مباراة وسببها. ارفع
+      السجل وهدفًا محددًا للشهر القادم.'
+  - id: m4-explain
+    type: explain
+    prompt: صف خطتك الأسبوعية للتدريب واشرح لماذا تحليل مبارياتك هو الأهم.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

@@ -1,0 +1,80 @@
+q1:
+  right:
+  - d
+  why: 'The least valuable attacker first: you give a pawn for a knight.'
+q2:
+  right:
+  - c
+  why: Undefended pieces are targets.
+q3:
+  right:
+  - a
+  why: From c7 the knight attacks e8 and a8.
+q4:
+  right:
+  - b
+  why: One pawn attacks two pieces.
+q5:
+  right:
+  - a
+  why: Fewer pieces make the extra material count more.
+q6:
+  right:
+  - c
+  why: That's an absolute pin.
+q7:
+  right:
+  - b
+  why: The knight may move, but the queen would be lost.
+q8:
+  right:
+  - c
+  why: The king must move and the queen behind it falls.
+q9:
+  right:
+  - d
+  why: Two checks can't be blocked or captured at once.
+q10:
+  right:
+  - a
+  why: Moving it uncovers the rook's attack.
+q11:
+  right:
+  - a
+  why: Capture the guard, then the target.
+q12:
+  right:
+  - b
+  why: The rook was deflected from the back rank.
+q13:
+  right:
+  - b
+  why: The king is 'smothered' by its own pieces.
+q14:
+  right:
+  - c
+  why: The knight protects the rook and covers the escape square.
+q15:
+  right:
+  - c
+  why: It prevents back-rank mates.
+q16:
+  right:
+  - a
+  why: Forcing moves limit the opponent's replies.
+q17:
+  right:
+  - a
+  why: Then judge the position.
+q18:
+  right:
+  - a
+  why: Check plus an attack on the loose bishop.
+q19:
+  right:
+  - c
+  why: Capture and promote at once; b8=Q is answered by ...Rxb8.
+q20:
+  right:
+  - c
+  why: Steady practice builds pattern recognition.

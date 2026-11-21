@@ -1,13 +1,13 @@
 official: true
 author: inPace
 license: CC-BY-4.0
+updated: '2026-11-21'
 tags:
 - spanish
-- grammar
-- speaking
+- a2
 - arabic
-- beginner
-updated: '2026-11-14'
-credit: 'كتابة inPace. الفيديوهات الاختيارية: قناة Easy Spanish، وكورس A1 على قناة freeCodeCamp.org (Master Spanish Academy)،
-  على YouTube.'
+- speaking
+- listening
+credit: كُتب لمكتبة inPace وفق وصف مستوى A2 في الإطار الأوروبي المرجعي (CEFR). روابط الاستماع لمواد مجانية من Dreaming Spanish
+  وEasy Spanish.
 section: languages

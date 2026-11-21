@@ -30,6 +30,7 @@ BY_ID = [
     (r"^(mml-|math|maths|statistics|calculus|linear-algebra)", "maths"),
     (r"^(ai-engineer-hired|interview|career)", "careers"),
     (r"^(cma|fmaa|accounting|finance)", "business-finance"),
+    (r"^chess", "chess"),
     (r"^(english|german|spanish|french|arabic-language)", "languages"),
     (r"^(python|javascript|csharp|java|fastapi|flutter|html|css|react|system-design|web)", "programming-web"),
 ]
@@ -40,6 +41,7 @@ BY_TAG = [
     ({"math", "statistics", "calculus", "linear algebra"}, "maths"),
     ({"career", "interview"}, "careers"),
     ({"accounting", "finance", "business", "marketing"}, "business-finance"),
+    ({"chess"}, "chess"),
     ({"english", "german", "spanish", "french", "language", "grammar"}, "languages"),
     ({"python", "javascript", "web", "programming", "backend", "frontend", "mobile", "flutter"}, "programming-web"),
 ]

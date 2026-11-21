@@ -1,250 +1,240 @@
 q1:
-  text: كيف تقول «أنا من مصر»؟
+  text: ما معنى «¿Cómo te llamas?»؟
+  show: 4
+  options:
+    a: أين تعيش؟
+    b: من أين أنت؟
+    c: كيف حالك؟
+    d: ما اسمك؟
+q2:
+  text: '"أنا من مصر" بالإسبانية:'
   show: 4
   options:
     a: Soy de Egipto.
-    b: Yo soy de Egipto.
-    c: Estoy de Egipto.
-    d: Tengo de Egipto.
-    e: Me llamo Egipto.
-    f: Soy en Egipto.
-q2:
-  text: أي تحية تناسب الساعة 9 صباحًا؟
-  show: 4
-  options:
-    a: Buenos días.
-    b: Hola, buenos días.
-    c: Buenas noches.
-    d: Buenas tardes.
-    e: Hasta luego.
-    f: Adiós.
+    b: Tengo de Egipto.
+    c: Me llamo Egipto.
+    d: Estoy de Egipto.
 q3:
-  text: كيف تُنطق كلمة hola؟
+  text: Ella ___ de Chile.
   show: 4
   options:
-    a: '«أولا»: الـ h صامتة'
-    b: بدون صوت الهاء
-    c: «هولا» بهاء واضحة
-    d: «خولا» بخاء
-    e: «حولا» بحاء
-    f: «جولا»
+    a: eres
+    b: son
+    c: es
+    d: soy
 q4:
-  text: 'امرأة تقول «تشرفت»:'
+  text: 'امرأة تقول "تشرّفت":'
   show: 4
   options:
-    a: Encantada.
-    b: Mucho gusto.
-    c: Encantado.
-    d: Encantados.
-    e: Me llamo.
-    f: De nada.
+    a: Encanto
+    b: Encantado
+    c: Encantada
+    d: Encantados
 q5:
-  text: كيف تقول «عمري 30 سنة»؟
+  text: 'تقابل جد صديقك. تسأله "من أين حضرتك؟":'
   show: 4
   options:
-    a: Tengo treinta años.
-    b: Tengo 30 años.
-    c: Soy treinta años.
-    d: Estoy treinta años.
-    e: Tengo treinta.
-    f: Mi edad treinta años.
+    a: ¿De dónde eres tú?
+    b: ¿De dónde soy?
+    c: ¿De dónde es usted?
+    d: ¿De dónde sois?
 q6:
-  text: 'أكمل: El hotel ___ en el centro.'
+  text: '«Tengo veinticinco años» معناها:'
+  show: 4
+  options:
+    a: عندي خمسة وعشرون أخًا.
+    b: عمري خمس وعشرون سنة.
+    c: أعيش هنا منذ خمس وعشرين سنة.
+    d: إنها سنة خمس وعشرين.
+q7:
+  text: Mi madre ___ cincuenta años.
   show: 4
   options:
     a: está
-    b: Está (مكان الأشياء مع estar)
+    b: tiene
     c: es
-    d: hay
-    e: son
-    f: tiene
-q7:
-  text: 'أكمل: ___ dos farmacias en mi calle.'
-  show: 4
-  options:
-    a: Hay
-    b: Hay (لوجود شيء غير معروف)
-    c: Están
-    d: Son
-    e: Es
-    f: Tiene
+    d: tengo
 q8:
-  text: أي كلمتين مذكرتان؟
+  text: 'جمع «el hermano»:'
   show: 4
   options:
-    a: el día
-    b: el problema
-    c: la día
-    d: la problema
-    e: el mano
-    f: el foto
+    a: los hermanos
+    b: las hermanos
+    c: el hermanos
+    d: los hermanas
 q9:
-  text: كيف تقول «أنا تعبان اليوم»؟
+  text: أي كلمة معناها "كلب"؟
   show: 4
   options:
-    a: Hoy estoy cansado.
-    b: Estoy cansado hoy.
-    c: Hoy soy cansado.
-    d: Hoy tengo cansado.
-    e: Hoy hay cansado.
-    f: Soy cansado hoy.
+    a: pera
+    b: para
+    c: perro
+    d: pero
 q10:
-  text: 'صرّف vivir مع nosotros:'
+  text: Mi hermana es muy ___.
   show: 4
   options:
-    a: vivimos
-    b: Nosotros vivimos
-    c: vivemos
-    d: vivamos
-    e: viven
-    f: vivís
+    a: simpáticos
+    b: simpática
+    c: simpáticas
+    d: simpático
 q11:
-  text: كيف تقول «سآكل» (مستقبل قريب)؟
+  text: '«Me levanto a las siete» معناها:'
   show: 4
   options:
-    a: Voy a comer.
-    b: Ahora voy a comer.
-    c: Voy comer.
-    d: Voy a como.
-    e: Va a comer.
-    f: Vamos comer.
+    a: أنام في السابعة.
+    b: أخرج في السابعة.
+    c: الساعة السابعة.
+    d: أستيقظ في السابعة.
 q12:
-  text: yo + hacer =
+  text: 'hablar مع nosotros:'
   show: 4
   options:
-    a: hago
-    b: Yo hago
-    c: haco
-    d: hace
-    e: hacemos
-    f: hizo
+    a: hablo
+    b: hablemos
+    c: hablamos
+    d: hablan
 q13:
-  text: 'أكمل: Estudio español ___ quiero viajar.'
+  text: '«Son las tres y media» هي:'
   show: 4
   options:
-    a: porque
-    b: porque (لأن)
-    c: por qué
-    d: para
-    e: por
-    f: qué
+    a: '3:30'
+    b: '3:45'
+    c: '3:15'
+    d: '2:30'
 q14:
-  text: كيف تقول «الساعة الثالثة والنصف»؟
+  text: 'salir مع yo:'
   show: 4
   options:
-    a: Son las tres y media.
-    b: Son las tres y treinta.
-    c: Es la tres y media.
-    d: Son tres y media.
-    e: Están las tres y media.
-    f: Hay las tres y media.
+    a: salo
+    b: sale
+    c: salimos
+    d: salgo
 q15:
-  text: '«كل يوم اثنين أذهب للنادي»:'
+  text: 'في «trabajo»، النبر يقع على:'
   show: 4
   options:
-    a: Los lunes voy al gimnasio.
-    b: Todos los lunes voy al gimnasio.
-    c: El lunes voy al gimnasio siempre.
-    d: Lunes voy a el gimnasio.
-    e: En lunes voy al gimnasio.
-    f: Los lunes voy a gimnasio.
+    a: كل المقاطع بالتساوي
+    b: ba
+    c: jo
+    d: tra
 q16:
-  text: 'أكمل: Yo ___ a las once. (acostarse)'
+  text: '"يوجد بنك في الميدان":'
   show: 4
   options:
-    a: me acuesto
-    b: me acuesto (o→ue)
-    c: me acosto
-    d: se acuesta
-    e: acuesto
-    f: me acostamos
+    a: Tiene un banco en la plaza.
+    b: Hay un banco en la plaza.
+    c: Está un banco en la plaza.
+    d: Es un banco en la plaza.
 q17:
-  text: '«الجو حار»:'
+  text: '"البنك قريب":'
   show: 4
   options:
-    a: Hace calor.
-    b: Hace mucho calor.
-    c: Es calor.
-    d: Está calor.
-    e: Tengo calor el día.
-    f: Hay calor tiempo.
+    a: El banco es cerca.
+    b: Hay el banco cerca.
+    c: El banco está cerca.
+    d: El banco hay cerca.
 q18:
-  text: 'أكمل: Me ___ los perros.'
+  text: لماذا «Estoy cansado» وليس «Soy cansado»؟
+  show: 4
+  options:
+    a: لأنها عن مكان.
+    b: الاثنتان صحيحتان دائمًا.
+    c: لأن cansado مؤنثة.
+    d: التعب حالة مؤقتة.
+q19:
+  text: '«a la izquierda» معناها:'
+  show: 4
+  options:
+    a: على اليمين
+    b: على اليسار
+    c: أمام
+    d: على طول
+q20:
+  text: a + el =
+  show: 4
+  options:
+    a: al
+    b: del
+    c: a el
+    d: ael
+q21:
+  text: أيها صحيح؟
+  show: 4
+  options:
+    a: Me gusta los tomates.
+    b: Yo gusto los tomates.
+    c: Me gustan los tomates.
+    d: Me gustan tomates los.
+q22:
+  text: '«¿Cuánto es?» معناها:'
+  show: 4
+  options:
+    a: ما هذا؟
+    b: متى؟
+    c: كم الحساب؟
+    d: أين هو؟
+q23:
+  text: '70 بالإسبانية:'
+  show: 4
+  options:
+    a: setenta
+    b: diecisiete
+    c: siete
+    d: sesenta
+q24:
+  text: 'طريقة مهذبة للطلب:'
+  show: 4
+  options:
+    a: Dame café.
+    b: Café.
+    c: Tengo un café.
+    d: Quería un café, por favor.
+q25:
+  text: A ellos ___ el fútbol.
   show: 4
   options:
     a: gustan
-    b: encantan
-    c: gusta
-    d: gusto
-    e: gustamos
-    f: le gustan perros
-q19:
-  text: '«سيارة آنا»:'
+    b: le gustan
+    c: les gustan
+    d: les gusta
+q26:
+  text: '«Voy a visitar a mis abuelos» تتكلم عن:'
   show: 4
   options:
-    a: el coche de Ana
-    b: su coche (si sabemos que es de Ana)
-    c: el Ana's coche
-    d: Ana coche
-    e: el coche Ana
-    f: la coche de Ana
-q20:
-  text: 'صفة صحيحة: Mis hermanas son ___.'
+    a: شيء في الماضي
+    b: عادة
+    c: أمنية مستحيلة
+    d: خطة للمستقبل
+q27:
+  text: Voy ___ cine.
   show: 4
   options:
-    a: altas
-    b: simpáticas
-    c: alto
-    d: altos
-    e: simpático
-    f: simpáticos
-q21:
-  text: '«No me gusta el té.»، «وأنا كذلك لا»:'
+    a: el
+    b: al
+    c: en el
+    d: a el
+q28:
+  text: 'querer مع yo:'
   show: 4
   options:
-    a: A mí tampoco.
-    b: Tampoco a mí.
-    c: A mí también.
-    d: A mí sí.
-    e: Yo también no.
-    f: Me tampoco.
-q22:
-  text: '«انعطف يسارًا»:'
+    a: quiero
+    b: queremos
+    c: queriero
+    d: quero
+q29:
+  text: '«Nos vemos» معناها:'
   show: 4
   options:
-    a: Gire a la izquierda.
-    b: Gira a la izquierda.
-    c: Gire a la derecha.
-    d: Siga todo recto.
-    e: Gire en izquierda.
-    f: Está a la izquierda gira.
-q23:
-  text: «بكم هذا الحذاء؟»
+    a: سنغادر
+    b: نتقابل / إلى اللقاء
+    c: انظر إلينا
+    d: نحن قادمون
+q30:
+  text: 'الثلاثاء:'
   show: 4
   options:
-    a: ¿Cuánto cuestan estos zapatos?
-    b: ¿Cuánto valen estos zapatos?
-    c: ¿Cuánto cuesta estos zapatos?
-    d: ¿Cuántos cuestan estos zapatos?
-    e: ¿Qué cuesta este zapatos?
-    f: ¿Cuánto es estas zapatos?
-q24:
-  text: 'طلب مهذب في مطعم:'
-  show: 4
-  options:
-    a: Quisiera el pescado, por favor.
-    b: Para mí, el pescado, por favor.
-    c: Dame pescado.
-    d: Yo pescado.
-    e: Quiero pescado tú.
-    f: El pescado me gusto.
-q25:
-  text: 'أكمل: La farmacia está al lado ___ banco.'
-  show: 4
-  options:
-    a: del
-    b: del (de + el)
-    c: de el
-    d: de la
-    e: al
-    f: en
+    a: jueves
+    b: martes
+    c: miércoles
+    d: lunes

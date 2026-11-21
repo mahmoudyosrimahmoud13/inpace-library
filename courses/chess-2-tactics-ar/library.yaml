@@ -1,0 +1,12 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-21'
+tags:
+- chess
+- tactics
+- puzzles
+- beginner
+- شطرنج
+credit: كُتب لمكتبة inPace. كل لغز تم التحقق منه نقلة بنقلة باستخدام python-chess. روابط التمرين تشير إلى Lichess.
+section: chess

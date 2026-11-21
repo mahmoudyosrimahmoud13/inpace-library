@@ -1,125 +1,120 @@
 q1:
   right:
-  - a
-  - b
-  why: 'الأصل والبلد مع ser: soy de...'
+  - d
+  why: llamarse معناها "يُسمّى".
 q2:
   right:
   - a
-  - b
-  why: buenos días حتى الظهر.
+  why: 'البلد يُقال بـ ser: soy de...'
 q3:
   right:
-  - a
-  - b
-  why: الـ h لا تُنطق في الإسبانية.
+  - c
+  why: él / ella / usted ← es.
 q4:
   right:
-  - a
-  - b
-  why: Encantada تتبع المتكلمة المؤنثة، و Mucho gusto للجميع.
+  - c
+  why: 'النهاية تتبع المتكلم: -a للمرأة.'
 q5:
   right:
-  - a
-  - b
-  why: 'العمر مع tener: tengo ... años.'
+  - c
+  why: استخدم usted مع الأكبر سنًا، وفعلها مثل él/ella.
 q6:
   right:
-  - a
   - b
-  why: مكان شيء معروف مع estar.
+  why: العمر يُقال بـ tener + años.
 q7:
   right:
-  - a
   - b
-  why: hay ثابتة للمفرد والجمع.
+  why: العمر بـ tener؛ ella ← tiene.
 q8:
   right:
   - a
-  - b
-  why: 'استثناءات: el día, el problema, la mano, la foto.'
+  why: el ← los، ونضيف -s.
 q9:
   right:
-  - a
-  - b
-  why: الحالة المؤقتة مع estar.
+  - c
+  why: pero (راء خفيفة) = لكن؛ perro (راء مشددة) = كلب.
 q10:
   right:
-  - a
   - b
-  why: '-ir مع nosotros: -imos.'
+  why: 'مؤنث مفرد: -a.'
 q11:
   right:
-  - a
-  - b
-  why: ir a + المصدر.
+  - d
+  why: levantarse = يستيقظ / ينهض.
 q12:
   right:
-  - a
-  - b
-  why: 'hacer شاذ في yo: hago.'
+  - c
+  why: 'أفعال -ar: nosotros ← -amos.'
 q13:
   right:
   - a
-  - b
-  why: porque = لأن، كلمة واحدة بدون علامة.
+  why: y media = والنصف.
 q14:
   right:
-  - a
-  - b
-  why: son las + الساعة، و y media للنصف.
+  - d
+  why: شاذ مع yo فقط.
 q15:
   right:
-  - a
   - b
-  why: los lunes للتكرار، و a + el = al.
+  why: تنتهي بحرف علة ← المقطع قبل الأخير.
 q16:
   right:
-  - a
   - b
-  why: 'acostarse: me acuesto.'
+  why: الوجود ← hay.
 q17:
   right:
-  - a
-  - b
-  why: الطقس مع hace. (Tengo calor = أنا أشعر بالحر.)
+  - c
+  why: مكان شيء محدد ← estar.
 q18:
   right:
-  - a
-  - b
-  why: الشيء المحبوب جمع → gustan.
+  - d
+  why: الحالات المؤقتة بـ estar.
 q19:
   right:
-  - a
   - b
-  why: الملكية بـ de، و su لـ «لها».
+  why: izquierda = left.
 q20:
   right:
   - a
-  - b
-  why: 'الصفة تتبع الاسم: مؤنث جمع.'
+  why: 'تندمجان دائمًا: al lado، al cine.'
 q21:
   right:
-  - a
-  - b
-  why: 'للموافقة على النفي: tampoco.'
+  - c
+  why: شيء جمع ← gustan.
 q22:
   right:
-  - a
-  - b
-  why: izquierda = يسار، derecha = يمين.
+  - c
+  why: cuánto = كم.
 q23:
   right:
   - a
-  - b
-  why: zapatos جمع → cuestan و estos.
+  why: 60 sesenta, 70 setenta.
 q24:
   right:
-  - a
-  - b
-  why: Quisiera و Para mí مهذبتان.
+  - d
+  why: Quería / Quisiera تجعل الطلب ألطف.
 q25:
   right:
-  - a
+  - d
+  why: ellos ← les؛ شيء واحد ← gusta.
+q26:
+  right:
+  - d
+  why: ir a + المصدر = سوف.
+q27:
+  right:
   - b
-  why: de + el = del.
+  why: a + el = al.
+q28:
+  right:
+  - a
+  why: 'e ← ie: quiero.'
+q29:
+  right:
+  - b
+  why: طريقة شائعة للوداع.
+q30:
+  right:
+  - b
+  why: lunes (الإثنين)، martes (الثلاثاء)، miércoles (الأربعاء)...

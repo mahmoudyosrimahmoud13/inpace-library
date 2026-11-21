@@ -1,0 +1,240 @@
+q1:
+  text: What does «¿Cómo te llamas?» mean?
+  show: 4
+  options:
+    a: Where are you from?
+    b: What's your name?
+    c: Where do you live?
+    d: How are you?
+q2:
+  text: '"I''m from Egypt" in Spanish:'
+  show: 4
+  options:
+    a: Me llamo Egipto.
+    b: Soy de Egipto.
+    c: Tengo de Egipto.
+    d: Estoy de Egipto.
+q3:
+  text: Ella ___ de Chile.
+  show: 4
+  options:
+    a: eres
+    b: son
+    c: soy
+    d: es
+q4:
+  text: 'A woman says "Nice to meet you":'
+  show: 4
+  options:
+    a: Encantada
+    b: Encantado
+    c: Encantados
+    d: Encanto
+q5:
+  text: 'You meet your friend''s grandfather. You ask "Where are you from?":'
+  show: 4
+  options:
+    a: ¿De dónde es usted?
+    b: ¿De dónde soy?
+    c: ¿De dónde sois?
+    d: ¿De dónde eres tú?
+q6:
+  text: '«Tengo veinticinco años» means:'
+  show: 4
+  options:
+    a: It's the year twenty-five.
+    b: I've lived here twenty-five years.
+    c: I'm twenty-five.
+    d: I have twenty-five brothers.
+q7:
+  text: Mi madre ___ cincuenta años.
+  show: 4
+  options:
+    a: es
+    b: tengo
+    c: está
+    d: tiene
+q8:
+  text: 'The plural of «el hermano»:'
+  show: 4
+  options:
+    a: el hermanos
+    b: las hermanos
+    c: los hermanas
+    d: los hermanos
+q9:
+  text: Which word means "dog"?
+  show: 4
+  options:
+    a: para
+    b: perro
+    c: pero
+    d: pera
+q10:
+  text: Mi hermana es muy ___.
+  show: 4
+  options:
+    a: simpáticas
+    b: simpáticos
+    c: simpática
+    d: simpático
+q11:
+  text: '«Me levanto a las siete» means:'
+  show: 4
+  options:
+    a: I go to bed at seven.
+    b: It's seven o'clock.
+    c: I leave at seven.
+    d: I get up at seven.
+q12:
+  text: 'hablar, nosotros form:'
+  show: 4
+  options:
+    a: hablemos
+    b: hablan
+    c: hablamos
+    d: hablo
+q13:
+  text: '«Son las tres y media» is:'
+  show: 4
+  options:
+    a: '3:45'
+    b: '3:30'
+    c: '3:15'
+    d: '2:30'
+q14:
+  text: 'salir, yo form:'
+  show: 4
+  options:
+    a: sale
+    b: salgo
+    c: salo
+    d: salimos
+q15:
+  text: 'In «trabajo», the stress falls on:'
+  show: 4
+  options:
+    a: jo
+    b: ba
+    c: all syllables equally
+    d: tra
+q16:
+  text: '"There is a bank in the square":'
+  show: 4
+  options:
+    a: Tiene un banco en la plaza.
+    b: Hay un banco en la plaza.
+    c: Es un banco en la plaza.
+    d: Está un banco en la plaza.
+q17:
+  text: '"The bank is near":'
+  show: 4
+  options:
+    a: El banco es cerca.
+    b: El banco hay cerca.
+    c: El banco está cerca.
+    d: Hay el banco cerca.
+q18:
+  text: Why «Estoy cansado» and not «Soy cansado»?
+  show: 4
+  options:
+    a: Both are always correct.
+    b: Tiredness is a temporary state.
+    c: Because it's about a place.
+    d: Because cansado is feminine.
+q19:
+  text: '«a la izquierda» means:'
+  show: 4
+  options:
+    a: straight on
+    b: on the left
+    c: opposite
+    d: on the right
+q20:
+  text: a + el =
+  show: 4
+  options:
+    a: del
+    b: a el
+    c: ael
+    d: al
+q21:
+  text: Which is correct?
+  show: 4
+  options:
+    a: Me gustan tomates los.
+    b: Yo gusto los tomates.
+    c: Me gustan los tomates.
+    d: Me gusta los tomates.
+q22:
+  text: '«¿Cuánto es?» means:'
+  show: 4
+  options:
+    a: Where is it?
+    b: What is it?
+    c: How much is it?
+    d: When is it?
+q23:
+  text: '70 in Spanish:'
+  show: 4
+  options:
+    a: siete
+    b: diecisiete
+    c: sesenta
+    d: setenta
+q24:
+  text: 'A polite way to order:'
+  show: 4
+  options:
+    a: Tengo un café.
+    b: Dame café.
+    c: Quería un café, por favor.
+    d: Café.
+q25:
+  text: A ellos ___ el fútbol.
+  show: 4
+  options:
+    a: gustan
+    b: le gustan
+    c: les gusta
+    d: les gustan
+q26:
+  text: '«Voy a visitar a mis abuelos» talks about:'
+  show: 4
+  options:
+    a: a plan for the future
+    b: a habit
+    c: something in the past
+    d: a wish that can't happen
+q27:
+  text: Voy ___ cine.
+  show: 4
+  options:
+    a: en el
+    b: a el
+    c: al
+    d: el
+q28:
+  text: 'querer, yo form:'
+  show: 4
+  options:
+    a: quero
+    b: quiero
+    c: queremos
+    d: queriero
+q29:
+  text: '«Nos vemos» means:'
+  show: 4
+  options:
+    a: Look at us
+    b: We're leaving
+    c: See you
+    d: We're coming
+q30:
+  text: 'Tuesday:'
+  show: 4
+  options:
+    a: miércoles
+    b: jueves
+    c: martes
+    d: lunes

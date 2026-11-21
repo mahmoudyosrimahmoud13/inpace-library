@@ -1,0 +1,160 @@
+q1:
+  text: Which piece starts on d1?
+  show: 4
+  options:
+    a: A white bishop
+    b: The black queen
+    c: The white queen
+    d: The white king
+q2:
+  text: How many squares does a rook in the middle of an empty board control?
+  show: 4
+  options:
+    a: '8'
+    b: '16'
+    c: '14'
+    d: '27'
+q3:
+  text: 'A pawn captures:'
+  show: 4
+  options:
+    a: Diagonally forward, one square
+    b: Like a knight
+    c: Straight forward
+    d: Diagonally backward
+q4:
+  text: Which piece can jump over other pieces?
+  show: 4
+  options:
+    a: The bishop
+    b: The king
+    c: The knight
+    d: The queen
+q5:
+  text: 'Giving a knight for a rook is:'
+  show: 4
+  options:
+    a: 'Bad: you lose 2 points'
+    b: Not allowed
+    c: Even
+    d: 'Good: you win about 2 points'
+q6:
+  text: 'When castling kingside, the white king goes to:'
+  show: 4
+  options:
+    a: h1
+    b: c1
+    c: g1
+    d: f1
+q7:
+  text: 'You may NOT castle if:'
+  show: 4
+  options:
+    a: Your opponent has castled
+    b: It is move 20
+    c: Your queen has moved
+    d: Your king is in check
+q8:
+  text: 'En passant is possible:'
+  show: 4
+  options:
+    a: Only for the king
+    b: Only on the move right after the enemy pawn's two-square move
+    c: Only on the 8th rank
+    d: At any time later
+q9:
+  text: 'The player to move is not in check but has no legal move. The result is:'
+  show: 4
+  options:
+    a: The player skips a turn
+    b: A win for the player to move
+    c: A draw by stalemate
+    d: Checkmate
+q10:
+  text: Which of these is a draw by insufficient material?
+  show: 4
+  options:
+    a: King and two pawns against king
+    b: King and bishop against king
+    c: King and queen against king
+    d: King and rook against king
+q11:
+  text: What does Nbd2 mean?
+  show: 4
+  options:
+    a: The knight on the b-file moves to d2
+    b: A bishop moves to d2
+    c: A knight captures on d2
+    d: Two knights move
+q12:
+  text: What does exd5 mean?
+  show: 4
+  options:
+    a: A piece on e5 moves to d5
+    b: The pawn on the e-file captures on d5
+    c: The king moves to d5
+    d: The e-pawn promotes
+q13:
+  text: 'White: Kg1, Rd1, pawns f2 g2 h2. Black: Kg8, pawns f7 g7 h7. White plays:'
+  show: 4
+  options:
+    a: Rd8#
+    b: Kf1
+    c: h3
+    d: Rd7
+q14:
+  text: 'After 1. e4 e5 2. Bc4 Nc6 3. Qh5, a good move for Black is:'
+  show: 4
+  options:
+    a: 3... Nd4
+    b: 3... Nf6
+    c: 3... g6
+    d: 3... Ke7
+q15:
+  text: 'When mating with king and queen, the biggest danger is:'
+  show: 4
+  options:
+    a: A draw by agreement
+    b: Running out of moves
+    c: Losing the queen to the king's check
+    d: Stalemate
+q16:
+  text: Which is a good first move?
+  show: 4
+  options:
+    a: 1. e4
+    b: 1. Nh3
+    c: 1. a3
+    d: 1. h4
+q17:
+  text: Which opening principle is correct?
+  show: 4
+  options:
+    a: Bring the queen out first
+    b: Move the same piece many times
+    c: Develop knights and bishops early and castle
+    d: Push the edge pawns first
+q18:
+  text: 'Your opponent brings the queen out early. You should:'
+  show: 4
+  options:
+    a: Move your king forward
+    b: Push all your pawns
+    c: Develop your pieces with attacks on the queen
+    d: Bring your queen out too
+q19:
+  text: 'The first question of the thinking routine is:'
+  show: 4
+  options:
+    a: What did my opponent's last move do?
+    b: How much time is left?
+    c: Can I castle?
+    d: Which piece is prettiest?
+q20:
+  text: 'The best time control for learning is:'
+  show: 4
+  options:
+    a: Any, it doesn't matter
+    b: Bullet, 1 minute
+    c: Blitz, 3 minutes
+    d: Rapid, like 15+10

@@ -1,166 +1,120 @@
 q1:
   right:
-  - o2635e5
-  - o8da965
-  why: الطويل ← was/were + ing، القصير ← past simple.
+  - d
+  why: didn't + الفعل الأصلي.
 q2:
   right:
-  - oe6dbbf
-  - oa6d9c2
-  why: سؤال عن الفاعل بدون did.
+  - c
+  why: Did + الفاعل + الفعل الأصلي.
 q3:
   right:
-  - o92a4a3
-  - oc4925c
-  why: أفعال شاذة شائعة.
+  - a
+  why: ago بعد المدة.
 q4:
   right:
-  - o0f46ec
-  - o24beff
-  why: were + ing، والسؤال يبدأ بـ were.
+  - d
+  why: we ← were.
 q5:
   right:
-  - o5eb3e5
-  - o7ad9c4
-  why: قرار لحظي ← will.
+  - d
+  why: بعد k ← /t/.
 q6:
   right:
-  - o595bae
-  - o1527d6
-  why: be + going to + فعل.
+  - d
+  why: فعل شاذ.
 q7:
   right:
-  - ob8f67b
-  - oa9af77
-  why: present continuous للترتيبات.
+  - a
+  why: Did + الفعل الأصلي.
 q8:
   right:
-  - obdc920
-  - o7c0667
-  why: will + فعل مجرد.
+  - c
+  why: buy ← bought (و bring ← brought).
 q9:
   right:
-  - o085d97
-  - o7a3b73
-  - o4c3ca9
-  why: 'big ← bigger (تكرار g)، happy ← happiest (y تصبح i)، و receive: e قبل i بعد c.'
+  - c
+  why: for + مدة.
 q10:
   right:
-  - o47c108
-  - oa038e2
-  why: -er/-est للقصيرة، more/most للطويلة.
+  - b
+  why: didn't + الفعل الأصلي.
 q11:
   right:
-  - o4abf8d
-  - od1156a
-  why: good → better → best، bad → worse → worst.
+  - a
+  why: المشهد ← was + -ing.
 q12:
   right:
-  - o93326c
-  - oe3524e
-  why: too + صفة، صفة + enough.
+  - c
+  why: الحدث القصير ← الماضي البسيط.
 q13:
   right:
-  - o08755e
-  - o878cc4
-  why: What is he like? للشخصية.
+  - d
+  why: they ← were.
 q14:
   right:
-  - o4c3169
-  - o3f3f7a
-  why: وقت محدد ← past simple.
+  - d
+  why: know فعل حالة، وماضيه knew.
 q15:
   right:
-  - o2d44ef
-  - o5aac04
-  why: have + التصريف الثالث، و just بين have والفعل.
+  - c
+  why: قبل فوات الأوان بقليل.
 q16:
   right:
-  - odfc7ee
-  - o6d203d
-  why: gone = ذهب ولم يرجع.
+  - c
+  why: -er + than.
 q17:
   right:
-  - o691bcf
-  - o2db580
-  why: تجربة ← perfect، متى ← past simple.
+  - b
+  why: good ← better ← the best.
 q18:
   right:
-  - oc93b38
-  - oed2f33
-  why: don't have to = غير ضروري.
+  - c
+  why: صفة طويلة ← the most.
 q19:
   right:
-  - odb0884
-  - odcbd5c
-  why: have to تتصرف، should + فعل مجرد.
+  - c
+  why: مضاعفة g.
 q20:
   right:
-  - o8b1eea
-  - o1edc7b
-  why: would you mind + ing.
+  - a
+  why: للمجاملة في المحل.
 q21:
   right:
-  - o30bcfe
-  - o4b31d9
-  why: might / may + فعل مجرد.
+  - b
+  why: should + الفعل الأصلي.
 q22:
   right:
-  - oac8dc9
-  - ob15523
-  why: الكلام العام بدون the.
+  - d
+  why: don't have to = ليس ضروريًا.
 q23:
   right:
-  - o5c6a91
-  - od798a3
-  why: much لغير المعدود، a few للمعدود.
+  - d
+  why: mustn't = ممنوع.
 q24:
   right:
-  - o263a93
-  - o3fc7da
-  why: the لما هو واحد فقط، و go to work بدون أداة.
+  - d
+  why: 'have to تتغير: she has to.'
 q25:
   right:
-  - o3710cd
-  - ocf5a98
-  why: a أول مرة، ثم the.
+  - d
+  why: ch هنا = k.
 q26:
   right:
-  - o7edb17
-  - o4765ac
-  why: لا will بعد if و when.
+  - a
+  why: Have + ever + التصريف الثالث.
 q27:
   right:
-  - oc5abb8
-  - o028eda
-  why: enjoy + ing، want + to.
+  - b
+  why: وقت محدد ← الماضي البسيط.
 q28:
   right:
-  - o1a5398
-  - oa158ac
-  why: decide + to، stop + ing (توقف عن).
+  - c
+  why: eat → ate → eaten.
 q29:
   right:
-  - od120d7
-  - o162fbb
-  why: بعد حرف الجر ← ing.
+  - b
+  why: gone = ما زال هناك؛ been = ذهب ورجع.
 q30:
   right:
-  - o488eeb
-  - oec0e2a
-  why: 'مراجعة: perfect، والماضي المستمر.'
-q31:
-  right:
-  - oc84ef4
-  - o034356
-  why: as + صفة + as، و -est للقصيرة.
-q32:
-  right:
-  - o641ff4
-  - o829b07
-  why: Could + فعل مجرد.
-q33:
-  right:
-  - oe8ee42
-  - o96e004
-  why: 'مراجعة: if، و have to.'
+  - c
+  why: will للوعود.

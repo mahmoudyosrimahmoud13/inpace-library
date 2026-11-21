@@ -1,0 +1,264 @@
+q1:
+  right:
+  - a
+  why: 20,000 ÷ 1.06⁵.
+q2:
+  right:
+  - a
+  why: 6 ÷ 0.08.
+q3:
+  right:
+  - d
+  why: (1 + 0.01)¹² − 1.
+q4:
+  right:
+  - c
+  why: Multiply the ordinary annuity value by (1 + r).
+q5:
+  right:
+  - b
+  why: Add the year-0 flow outside the function.
+q6:
+  right:
+  - a
+  why: 2.10 ÷ 0.07.
+q7:
+  right:
+  - b
+  why: 500 ÷ 300.
+q8:
+  right:
+  - c
+  why: 400 ÷ (400 − 100).
+q9:
+  right:
+  - b
+  why: 9% × 1.67 × 2.
+q10:
+  right:
+  - d
+  why: 1,000,000 + 150,000 − 25,000.
+q11:
+  right:
+  - b
+  why: Splits and stock dividends restate prior shares.
+q12:
+  right:
+  - d
+  why: 15% × 0.6.
+q13:
+  right:
+  - c
+  why: Profit may be driven by accruals.
+q14:
+  right:
+  - b
+  why: Smoothing earnings through reserves.
+q15:
+  right:
+  - b
+  why: Newest (higher) costs go to COGS.
+q16:
+  right:
+  - c
+  why: Hidden obligations understate leverage.
+q17:
+  right:
+  - b
+  why: Assets and depreciation are understated.
+q18:
+  right:
+  - b
+  why: It pulls future sales into this period.
+q19:
+  right:
+  - c
+  why: 4% + 1.3 × 6%.
+q20:
+  right:
+  - b
+  why: Fixed coupons are worth less when new bonds pay more.
+q21:
+  right:
+  - a
+  why: Coupon below yield means price below face.
+q22:
+  right:
+  - d
+  why: 8% × 0.75.
+q23:
+  right:
+  - c
+  why: 1,000,000 ÷ 0.5.
+q24:
+  right:
+  - a
+  why: Then debt, then new equity.
+q25:
+  right:
+  - d
+  why: √(2 × 36,000 × 200 ÷ 4).
+q26:
+  right:
+  - a
+  why: (2/98) × (365/20).
+q27:
+  right:
+  - d
+  why: 8,000 ÷ 90,000.
+q28:
+  right:
+  - c
+  why: 5,000,000 − 3,600,000.
+q29:
+  right:
+  - c
+  why: The price drops by about the dividend.
+q30:
+  right:
+  - a
+  why: It locks in the cost of the dollars.
+q31:
+  right:
+  - d
+  why: Bundle CM 120; 1,000 bundles × 3.
+q32:
+  right:
+  - a
+  why: (160,000 + 80,000) ÷ 16.
+q33:
+  right:
+  - a
+  why: 30,000 ÷ 3.
+q34:
+  right:
+  - b
+  why: Displaced sales are an opportunity cost.
+q35:
+  right:
+  - c
+  why: Incremental revenue 8 > incremental cost 6.
+q36:
+  right:
+  - a
+  why: The constraint limits total CM.
+q37:
+  right:
+  - c
+  why: Elasticity 1.5 > 1.
+q38:
+  right:
+  - a
+  why: Quantity falls proportionally less than price rises.
+q39:
+  right:
+  - c
+  why: 120 − 30.
+q40:
+  right:
+  - c
+  why: 90,000 + 50,000 − 30,000.
+q41:
+  right:
+  - c
+  why: The most to pay for a perfect forecast.
+q42:
+  right:
+  - c
+  why: One more unit adds as much cost as revenue.
+q43:
+  right:
+  - a
+  why: The financial impact moves to the insurer.
+q44:
+  right:
+  - d
+  why: Inherent risk is before responses.
+q45:
+  right:
+  - a
+  why: VaR is a threshold at a confidence level.
+q46:
+  right:
+  - a
+  why: It converts the loan to a fixed rate.
+q47:
+  right:
+  - a
+  why: Payoff 8 minus premium 3.
+q48:
+  right:
+  - a
+  why: The holder can let it expire.
+q49:
+  right:
+  - a
+  why: 35,000 × 0.75 + 20,000 × 0.25.
+q50:
+  right:
+  - b
+  why: Financing is in the discount rate.
+q51:
+  right:
+  - a
+  why: 64,890 − 60,000.
+q52:
+  right:
+  - d
+  why: 35,000 after two years; 15,000 ÷ 25,000 = 0.6.
+q53:
+  right:
+  - d
+  why: PV of inflows exceeds the investment.
+q54:
+  right:
+  - b
+  why: Flexibility has value.
+q55:
+  right:
+  - b
+  why: Competence, Confidentiality, Integrity, Credibility.
+q56:
+  right:
+  - c
+  why: Never use confidential information for personal advantage.
+q57:
+  right:
+  - d
+  why: After following company policy, escalate past the involved person.
+q58:
+  right:
+  - c
+  why: Avoid actual conflicts and disclose potential ones.
+q59:
+  right:
+  - d
+  why: Controls make fraud harder to commit and hide.
+q60:
+  right:
+  - a
+  why: It also requires accurate books and controls.
+q61:
+  right:
+  - c
+  why: Scores are scaled from 0 to 500.
+q62:
+  right:
+  - b
+  why: The MCQ gate.
+q63:
+  right:
+  - b
+  why: Sections A and B are 20% each.
+q64:
+  right:
+  - b
+  why: DOL × DFL.
+q65:
+  right:
+  - a
+  why: D₁ = D₀ × (1 + g).
+q66:
+  right:
+  - b
+  why: Always answer every question.

@@ -1,0 +1,131 @@
+id: chess-2-tactics-ar
+title: 'الشطرنج 2: تكتيكات تكسب المباريات'
+version: 1
+language: ar
+description: 'التكتيكات التي تحسم أغلب المباريات، مع ألغاز مُتحقَّق منها وروابط Lichess: القطع السائبة والعدّ، والشوكة، والتثبيت
+  والسيخ، والهجوم المكشوف والكش المزدوج، وإزالة المدافع والإبعاد والإرهاق، وأشكال المات التي يجب أن يعرفها كل لاعب (الصف الخلفي،
+  والمات الخانق، والمات العربي، والوزير والفيل)، وكيف تحسب بالكش والأكل والتهديد. وينتهي بمجموعة تدريب. الكورس الثاني من 3
+  في مسار الشطرنج. حوالي 4 أيام، ساعة يوميًا، مع ألغاز يومية.'
+image: cover.jpg
+downloads:
+- title: ألغاز Lichess حسب الموضوع (مجانًا)
+  url: https://lichess.org/training/themes
+- title: 'Lichess Practice: أشكال المات (مجانًا)'
+  url: https://lichess.org/practice
+modules:
+- id: m1
+  title: 'الوحدة 1: الأمان والشوكة'
+  lessons:
+  - id: m1-l1
+    title: 'الأمان أولًا: القطع السائبة والعدّ'
+    file: lessons/m1-l1.md
+    minutes: 40
+  - id: m1-l2
+    title: 'الشوكة: قطعة واحدة وهدفان'
+    file: lessons/m1-l2.md
+    minutes: 45
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: حل 20 لغزًا على Lichess بموضوع 'Fork' وارفع لقطة لنتائجك. ثم اعثر على شوكة من مبارياتك (لك أو لخصمك) وارفع رابط
+      المباراة مع النقلة.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح كيف تقرر هل الأكل يكسب بعدّ المهاجمين والمدافعين، ولماذا تأكل بأقل قطعة قيمة أولًا.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'الوحدة 2: الخطوط: التثبيت والسيخ والهجوم المكشوف'
+  lessons:
+  - id: m2-l1
+    title: 'التثبيت والسيخ: هجوم على خط'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: الهجوم المكشوف والكش المزدوج
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: حل 15 لغزًا 'Pin' و10 'Skewer' و15 'Discovered attack' و5 'Double check' على Lichess. ارفع لقطات واكتب أي موضوع
+      كان الأصعب عليك.
+  - id: m2-explain
+    type: explain
+    prompt: اشرح الفرق بين التثبيت والسيخ، بمثال لكل منهما.
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'الوحدة 3: المدافعون وأشكال المات'
+  lessons:
+  - id: m3-l1
+    title: إزالة المدافع، والإبعاد، والإرهاق
+    file: lessons/m3-l1.md
+    minutes: 45
+  - id: m3-l2
+    title: أشكال المات التي يجب أن تعرفها
+    file: lessons/m3-l2.md
+    minutes: 50
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: أكمل 'Checkmate patterns' من I إلى IV في Lichess Practice وحل 15 لغز 'Mate in 2'. ارفع لقطات، وارسم (أو رتّب على
+      Lichess) مثالًا للمات الخانق ومثالًا للمات العربي.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح ما هي القطعة المُرهَقة وكيف تستفيد منها، بمثال.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'الوحدة 4: الحساب والتدريب'
+  lessons:
+  - id: m4-l1
+    title: 'الحساب: الكش والأكل والتهديد'
+    file: lessons/m4-l1.md
+    minutes: 45
+  - id: m4-l2
+    title: 'مجموعة تدريب: ستة ألغاز'
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'حل 10 ألغاز ببطء: لكل لغز، اكتب نقلاتك المرشّحة والخط الذي حسبته قبل التحريك. ثم حل 20 لغزًا يوميًا لمدة أسبوع.
+      ارفع ملاحظاتك وتصنيفك في الألغاز في بداية الأسبوع ونهايته.'
+  - id: m4-explain
+    type: explain
+    prompt: صف طريقتك في العثور على تكتيك أثناء المباراة، من النقلات الإجبارية إلى فحص الخطأ الفادح.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

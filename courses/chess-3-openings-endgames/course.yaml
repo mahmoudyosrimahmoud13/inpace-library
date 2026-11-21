@@ -1,0 +1,131 @@
+id: chess-3-openings-endgames
+title: 'Chess 3: openings, plans and endgames'
+version: 1
+language: en
+description: 'Everything between your first tactics and your first tournament: a simple repertoire (the Italian Game for White,
+  1...e5 and the Queen''s Gambit Declined for Black, with the traps to know), pawn structure, middlegame plans and when to
+  trade, king and pawn endgames (the square, opposition, key squares), rook endgames (Lucena and Philidor), converting an
+  advantage, and a training plan to keep improving. Course 3 of 3 in the chess path. About 4 days, an hour a day.'
+image: cover.jpg
+downloads:
+- title: Lichess Opening Explorer (free)
+  url: https://lichess.org/analysis#explorer
+- title: 'Lichess Practice: endgames (free)'
+  url: https://lichess.org/practice
+modules:
+- id: m1
+  title: 'Module 1: A simple repertoire'
+  lessons:
+  - id: m1-l1
+    title: 'An opening for White: the Italian Game'
+    file: lessons/m1-l1.md
+    minutes: 50
+  - id: m1-l2
+    title: 'Openings for Black: against 1. e4 and 1. d4'
+    file: lessons/m1-l2.md
+    minutes: 50
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Play 10 games with your new repertoire (Italian with White; 1...e5 and the Queen's Gambit Declined with Black).
+      For each, upload the link and the move where you left the main lines in the Lichess Opening Explorer.
+  - id: m1-explain
+    type: explain
+    prompt: Explain White's plan in the Italian Game after c3, d3 and castling.
+    min_words: 40
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Module 2: Structure and plans'
+  lessons:
+  - id: m2-l1
+    title: 'Pawn structure: the skeleton of the position'
+    file: lessons/m2-l1.md
+    minutes: 45
+  - id: m2-l2
+    title: Middlegame plans
+    file: lessons/m2-l2.md
+    minutes: 45
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Take three of your recent games and, for the position after move 20, write the pawn weaknesses, open files and
+      outposts for both sides, and the plan you would choose. Upload your notes.
+  - id: m2-explain
+    type: explain
+    prompt: Explain when you should trade pieces and when you should avoid trades.
+    min_words: 40
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Module 3: Key endgames'
+  lessons:
+  - id: m3-l1
+    title: King and pawn endgames
+    file: lessons/m3-l1.md
+    minutes: 50
+  - id: m3-l2
+    title: Rook endgames
+    file: lessons/m3-l2.md
+    minutes: 45
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Finish Lichess Practice ''Key squares'', ''Opposition'' and ''Rook endgames: Lucena and Philidor''. Win the Lucena
+      position against the computer three times. Upload screenshots.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain the rule of the square and the idea of opposition, with an example of each.
+    min_words: 40
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Module 4: Converting and improving'
+  lessons:
+  - id: m4-l1
+    title: Converting an advantage and minor-piece endgames
+    file: lessons/m4-l1.md
+    minutes: 45
+  - id: m4-l2
+    title: How to keep getting better
+    file: lessons/m4-l2.md
+    minutes: 40
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Analyze your last 10 games: first alone, then with the engine. Start a mistake log with the 2 or 3 biggest mistakes
+      of each game and their reason. Upload the log and one specific goal for next month.'
+  - id: m4-explain
+    type: explain
+    prompt: Describe your weekly training plan and explain why analyzing your own games matters most.
+    min_words: 40
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70

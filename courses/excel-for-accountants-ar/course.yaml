@@ -1,0 +1,188 @@
+id: excel-for-accountants-ar
+title: 'الإكسل للمحاسبين: من اليومية إلى إقفال الشهر'
+version: 1
+language: ar
+description: 'مهارات الشيتات التي يستخدمها المحاسبون كل يوم، مبنية على عمل محاسبي حقيقي: عادات ملف موثوق، والجداول والمدخلات
+  المسمّاة، وSUMIFS وعائلتها، وXLOOKUP وINDEX/MATCH، ويومية وأستاذ وميزان مراجعة يحدّثون أنفسهم، والجداول المحورية، وأعمار
+  الديون، والتسوية البنكية، وجداول الإهلاك والقروض، والقوائم والنسب من ميزان المراجعة، والموازنات مع Goal Seek وجداول البيانات
+  والسيناريوهات، وPower Query للتصديرات الفوضوية. وينتهي بملف إقفال شهر كامل لملف أعمالك. إكسل 365 أو 2021 فأحدث، مع ملاحظات
+  Google Sheets. الكورس الرابع في مسار المحاسبة. حوالي 6 أيام، ساعة يوميًا.'
+image: cover.jpg
+downloads:
+- title: مساعدة وتدريب إكسل من مايكروسوفت (مجاني)
+  url: https://support.microsoft.com/excel
+modules:
+- id: m1
+  title: 'اليوم 1: شيتات موثوقة ودوال أساسية'
+  lessons:
+  - id: m1-l1
+    title: 'ابدأ من هنا: شيت تقدر تثق فيه'
+    file: lessons/m1-l1.md
+    minutes: 30
+  - id: m1-l2
+    title: الدوال التي يستخدمها المحاسبون أكثر
+    file: lessons/m1-l2.md
+    minutes: 35
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: ابنِ ملف الفواتير من الدرس الأول (نسبة ضريبة مسمّاة، جدول فواتير، عمودا الضريبة والإجمالي، خلية فحص)، ثم أضف ملخص
+      المصروفات من الدرس الثاني بـ SUMIFS وCOUNTIFS وFILTER. ارفع الملف.
+  - id: m1-explain
+    type: explain
+    prompt: اشرح لماذا كتابة رقم داخل معادلة (مثل =B5*0.14) خطر، وماذا تفعل بدلًا منه.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'اليوم 2: البحث ودفتر أستاذ في ملف'
+  lessons:
+  - id: m2-l1
+    title: 'البحث: XLOOKUP وVLOOKUP وINDEX/MATCH'
+    file: lessons/m2-l1.md
+    minutes: 30
+  - id: m2-l2
+    title: من اليومية إلى ميزان المراجعة في شيت
+    file: lessons/m2-l2.md
+    minutes: 40
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'ابنِ النظام ذا الشيتات الأربعة (COA، Journal، ميزان المراجعة، Ledger) وأدخل عمليات نور الإحدى عشرة. ارفعه: الميزان
+      يجب أن يكون إجماليه 24,100، وكل فحص قيد صفرًا، والنقدية تنتهي عند 9,400.'
+  - id: m2-explain
+    type: explain
+    prompt: اشرح لماذا قد تعطي VLOOKUP بدون FALSE إجابة خطأ بلا رسالة خطأ.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'اليوم 3: الملخصات وأعمار الديون'
+  lessons:
+  - id: m3-l1
+    title: الجداول المحورية للمحاسبين
+    file: lessons/m3-l1.md
+    minutes: 30
+  - id: m3-l2
+    title: التواريخ وأعمار الديون
+    file: lessons/m3-l2.md
+    minutes: 35
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: ابنِ جداول المبيعات المحورية (حسب الشهر والمنطقة، نصيب المنتجات، أكبر 5 عملاء) مع فحوص الإجماليات، وأعمار الديون
+      بالفئات وملخص العملاء والمخصص. غيّر تاريخ التقرير واكتب ما تحرّك. ارفع الملف.
+  - id: m3-explain
+    type: explain
+    prompt: اشرح لماذا يجب أن يستخدم تقرير آخر الشهر تاريخ تقرير ثابتًا في خلية بدل TODAY().
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'اليوم 4: التسويات والجداول'
+  lessons:
+  - id: m4-l1
+    title: التسوية البنكية في إكسل
+    file: lessons/m4-l1.md
+    minutes: 35
+  - id: m4-l2
+    title: جداول الإهلاك والقروض
+    file: lessons/m4-l2.md
+    minutes: 35
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: اعمل تمرين التسوية البنكية (مطابقة بـ COUNTIFS، مذكرة تسوية بفحص صفري، قائمة القيود)، ثم جدول إهلاك بثلاث طرق
+      وجدول سداد قرض بالجزء المتداول آخر السنة. ارفع الملف.
+  - id: m4-explain
+    type: explain
+    prompt: اشرح أي بنود التسوية تحتاج قيود يومية وأيها تنتظر فقط، بمثال لكل منهما.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'اليوم 5: القوائم والنسب وماذا لو'
+  lessons:
+  - id: m5-l1
+    title: القوائم والنسب من ميزان المراجعة
+    file: lessons/m5-l1.md
+    minutes: 35
+  - id: m5-l2
+    title: الموازنات وتحليل "ماذا لو"
+    file: lessons/m5-l2.md
+    minutes: 35
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: ابنِ القوائم من ميزان مراجعة مربوط مع الفحوص وشيت النسب، ثم موازنة محرّكات لـ 12 شهرًا مع Goal Seek للتعادل وجدول
+      بيانات بمتغيّرين وثلاثة سيناريوهات بخلية اختيار. ارفع الملف.
+  - id: m5-explain
+    type: explain
+    prompt: اشرح لماذا يجب أن يحتفظ نموذج الموازنة بالمحرّكات (الحجم، السعر، النمو) كمدخلات بدل نتائج مكتوبة.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'اليوم 6: بيانات نظيفة وملف إقفال الشهر'
+  lessons:
+  - id: m6-l1
+    title: البيانات النظيفة والضوابط وPower Query
+    file: lessons/m6-l1.md
+    minutes: 35
+  - id: m6-l2
+    title: 'المشروع الختامي: ملف إقفال الشهر'
+    file: lessons/m6-l2.md
+    minutes: 120
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: ابنِ ملف إقفال الشهر بالشيتات الثلاثة عشر وشيت فحوص يقول ALL OK. ارفعه، واكتب التغييرات الثلاثة التي عملها صديقك
+      واكتشفتها فحوصك (أو لم تكتشفها).
+  - id: m6-explain
+    type: explain
+    prompt: صِف أهم ثلاثة ضوابط في ملفك، وأي خطأ يكتشفه كل منها.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70

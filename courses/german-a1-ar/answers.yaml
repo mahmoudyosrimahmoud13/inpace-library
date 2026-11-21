@@ -1,125 +1,120 @@
 q1:
   right:
-  - a
-  - b
-  why: 'الأصل: Ich komme aus...'
+  - d
+  why: woher = من أين.
 q2:
   right:
   - a
-  - b
-  why: في العمل Sie حتى يُطلب منك du.
+  why: 'sein: ich bin.'
 q3:
   right:
   - a
-  - b
-  why: w الألمانية = v.
+  why: الغرباء والموظفون الرسميون ← Sie.
 q4:
   right:
   - a
-  - b
-  why: Gute Nacht للوداع قبل النوم، و Guten Abend للتحية.
+  why: أضف -in.
 q5:
   right:
   - a
-  - b
-  why: الآحاد + und + العشرات.
+  why: w = v؛ وv = فاء.
 q6:
   right:
-  - a
-  - b
-  why: wir haben.
+  - c
+  why: die Mutter (مؤنث).
 q7:
   right:
-  - a
   - b
-  why: -chen دائمًا das، و das Buch.
+  why: 'haben: er hat.'
 q8:
   right:
-  - a
   - b
-  why: كلمة السؤال + الفعل + الفاعل.
+  why: كل الجموع تأخذ die.
 q9:
   right:
-  - a
-  - b
-  why: المهنة مع sein، والمؤنث -in.
+  - d
+  why: مؤنث ← meine.
 q10:
   right:
-  - a
-  - b
-  why: الفعل في المكان الثاني.
+  - c
+  why: 'تقسية الحرف الأخير: d ← t.'
 q11:
   right:
-  - a
   - b
-  why: a → ä مع er.
+  why: الفعل ثانيًا؛ والفاعل بعده.
 q12:
   right:
-  - a
-  - b
-  why: اسم بدون أداة → kein.
+  - c
+  why: البادئة تذهب للآخر.
 q13:
   right:
-  - a
-  - b
-  why: 'نعم على سؤال منفي: doch.'
+  - c
+  why: halb acht = نصف إلى الثامنة.
 q14:
   right:
-  - a
-  - b
-  why: halb neun = نصف إلى التاسعة = 8:30.
+  - c
+  why: 'e ← i: er spricht.'
 q15:
   right:
-  - a
   - b
-  why: البادئة في آخر الجملة.
+  why: قبل حرفين ساكنين ← قصير.
 q16:
   right:
   - a
-  - b
-  why: الفعل الشكلي ثانيًا والمصدر في الآخر.
+  why: es gibt + المفعول؛ der Park ← einen.
 q17:
   right:
   - a
-  - b
-  why: möchte مهذبة.
+  why: مفعول مذكر ← den.
 q18:
   right:
-  - a
   - b
-  why: 'المذكر في Akkusativ: einen.'
+  why: der ← den، وein ← einen.
 q19:
   right:
-  - a
-  - b
-  why: لها = ihr، و Auto محايد.
+  - d
+  why: geradeaus = إلى الأمام مباشرة.
 q20:
   right:
-  - a
   - b
-  why: Ich hätte gern... أكثر الطرق تهذيبًا.
+  why: die Zeit ← keine.
 q21:
   right:
-  - a
   - b
-  why: 'es gibt + Akkusativ: einen.'
+  why: Ich hätte gern / Ich möchte.
 q22:
   right:
-  - a
   - b
-  why: 'mit + Dativ: dem.'
+  why: مع möchten، الفعل الثاني مصدر في الآخر.
 q23:
   right:
-  - a
-  - b
-  why: حركة → sein، و gehen → gegangen.
+  - d
+  why: lieber = يفضّل.
 q24:
   right:
-  - a
-  - b
-  why: essen → gegessen.
+  - d
+  why: 'الآحاد أولًا: sieben-und-sechzig.'
 q25:
   right:
-  - a
   - b
-  why: war، والفعل ثانيًا.
+  why: تُقال عند الدفع.
+q26:
+  right:
+  - c
+  why: المساعد في الموقع 2، والمصدر في الآخر.
+q27:
+  right:
+  - a
+  why: 'ich وer لهما نفس الصيغة: kann.'
+q28:
+  right:
+  - b
+  why: wollen = يريد.
+q29:
+  right:
+  - b
+  why: تُقال عند الاتفاق على وقت.
+q30:
+  right:
+  - d
+  why: Mittwoch = منتصف الأسبوع.
