@@ -1,0 +1,351 @@
+q1:
+  text: What are the two steps of retrieval-augmented generation?
+  show: 4
+  options:
+    a: Retrieve relevant text from your documents
+    b: Generate an answer from that text, citing it
+    c: Fine-tune the model on your documents
+    d: Translate the question
+    e: Train an embedding model
+    f: Compress the documents
+q2:
+  text: Why is a RAG system 'mostly a search engine'?
+  show: 4
+  options:
+    a: If the right text never reaches the prompt, no model can answer correctly from it
+    b: Most RAG failures are retrieval failures
+    c: The model is never used
+    d: Search engines generate text
+    e: Because embeddings are a kind of model
+    f: Because prompts are short
+q3:
+  text: What does recall@5 measure?
+  show: 4
+  options:
+    a: The share of questions with a right document somewhere in the top 5
+    b: How fast the top 5 come back
+    c: The share of the top 5 that are right
+    d: The rank of the first right document
+    e: How many documents the corpus has
+    f: The length of the 5 results
+q4:
+  text: In BM25, why does a rare word like 'rmtree' count more than 'file'?
+  show: 4
+  options:
+    a: 'Its idf is higher: it appears in few documents, so it says more about them'
+    b: Longer words count more
+    c: BM25 counts letters
+    d: Rare words are always in titles
+    e: Common words are removed by the index
+    f: It appears more times in each document
+q5:
+  text: What failure of keyword search does 'Delete a folder' show in project 1?
+  show: 4
+  options:
+    a: The docs say 'directory', the question says 'folder', so the words don't match
+    b: BM25 can't handle long questions
+    c: The corpus is too small
+    d: Stop words were kept
+    e: The index wasn't built
+    f: Recall can't be measured
+q6:
+  text: Why not index whole documents?
+  show: 4
+  options:
+    a: Long documents match many questions a little and fill the prompt with off-topic text
+    b: The prompt can only hold a few sources
+    c: Search engines can't read long text
+    d: Whole documents always have higher recall
+    e: Embeddings require exactly 400 characters
+    f: Documents can't be stored whole
+q7:
+  text: What is chunk overlap for?
+  show: 4
+  options:
+    a: So a sentence cut between two chunks still appears whole in one of them
+    b: To make chunks smaller
+    c: To remove duplicate documents
+    d: To speed up the index
+    e: To store the title
+    f: To translate chunks
+q8:
+  text: What is a chunk header, and why does it help?
+  show: 4
+  options:
+    a: The document's title at the start of every chunk
+    b: It puts the most important words, the names, in every chunk of that document
+    c: A hidden field the model never sees
+    d: The chunk's number
+    e: A hash of the chunk
+    f: A summary written by the model
+q9:
+  text: In project 2, which chunking won?
+  show: 4
+  options:
+    a: Paragraphs up to about 500 characters, with a title header
+    b: Whole documents
+    c: Fixed 400 characters without a header
+    d: Paragraphs without a header
+    e: One sentence per chunk
+    f: All were the same
+q10:
+  text: Which two things should you measure when choosing a chunking?
+  show: 4
+  options:
+    a: Recall of the right documents
+    b: The size of the context sent to the model
+    c: The number of files on disk
+    d: How many words are stop words
+    e: The model's temperature
+    f: The length of the questions
+q11:
+  text: What is an embedding?
+  show: 4
+  options:
+    a: A vector of numbers that represents a text so that similar meanings get similar vectors
+    b: A compressed copy of the text
+    c: A list of the text's keywords
+    d: A hash for deduplication
+    e: The model's answer
+    f: A database table
+q12:
+  text: Why normalize vectors before searching?
+  show: 4
+  options:
+    a: With length-1 vectors, cosine similarity is just a dot product
+    b: So searching all chunks is one matrix multiplication
+    c: To make vectors shorter on disk
+    d: Because embeddings can't be negative
+    e: To remove stop words
+    f: So BM25 can read them
+q13:
+  text: Why did LSA do worse than the trained embedding model?
+  show: 4
+  options:
+    a: LSA learns only from this small corpus's word co-occurrences
+    b: The trained model learned from far more text which words mean the same
+    c: LSA uses too many dimensions
+    d: SVD is approximate
+    e: LSA can't handle numbers
+    f: LSA is slower to search
+q14:
+  text: Which failure is typical of embeddings, as seen in project 3?
+  show: 4
+  options:
+    a: Matching a word in the wrong sense, like 'copy' a file against the copy module
+    b: Blurring exact names and rare terms
+    c: Never matching synonyms
+    d: Being slow for 2,000 chunks
+    e: Requiring a GPU
+    f: Returning documents in random order
+q15:
+  text: When do you need an approximate vector index like HNSW?
+  show: 4
+  options:
+    a: When brute-force search over all vectors is measured to be too slow, usually at millions of vectors
+    b: Always, from the first vector
+    c: Never; brute force is always fine
+    d: Only for keyword search
+    e: When the corpus has fewer than 1,000 chunks
+    f: When vectors are normalized
+q16:
+  text: Why combine BM25 and embeddings?
+  show: 4
+  options:
+    a: They fail on different questions
+    b: BM25 catches exact names; embeddings catch different wording
+    c: Embeddings need BM25 to work
+    d: It halves the index size
+    e: Fusion removes the need for a test set
+    f: BM25 scores and cosines can be added directly
+q17:
+  text: How does reciprocal rank fusion score a document?
+  show: 4
+  options:
+    a: Sum over lists of 1 / (60 + its rank in that list)
+    b: Average of the raw scores
+    c: Highest raw score wins
+    d: Number of words in common
+    e: Product of the ranks
+    f: Cosine similarity to the question
+q18:
+  text: Why does RRF use ranks rather than scores?
+  show: 4
+  options:
+    a: Scores from different retrievers have different, changing ranges
+    b: Ranks need no calibration
+    c: Ranks are always integers below 10
+    d: Scores are secret
+    e: Ranks are faster to compute than scores
+    f: It's required by BM25
+q19:
+  text: Why did the one-line summary view work so well on this corpus?
+  show: 4
+  options:
+    a: A docstring's first line says what the function is for, in one clean sentence
+    b: It has fewer argument details to dilute the match
+    c: It's longer than the chunks
+    d: It contains the test questions
+    e: Summaries use BM25
+    f: It removes the function names
+q20:
+  text: What does a reranker do?
+  show: 4
+  options:
+    a: Reorders a larger set of retrieved candidates with a slower, more careful model
+    b: It can only promote documents retrieval already found
+    c: Finds documents retrieval missed entirely
+    d: Writes the final answer
+    e: Builds the index
+    f: Removes stop words
+q21:
+  text: What should a RAG system prompt contain?
+  show: 4
+  options:
+    a: 'Rules: use only the sources, cite them, refuse with a fixed sentence if they don''t cover it'
+    b: The numbered sources, clearly marked
+    c: The whole corpus
+    d: The model's training data
+    e: The user's password
+    f: Random examples from other questions
+q22:
+  text: Why use a fixed refusal sentence like 'I don't know from these docs'?
+  show: 4
+  options:
+    a: Your code can detect, count and handle it
+    b: It makes the model smarter
+    c: It's required by Ollama
+    d: It shortens the prompt
+    e: It improves recall
+    f: It hides the sources
+q23:
+  text: Why put the best source first in the prompt?
+  show: 4
+  options:
+    a: Models pay most attention to the beginning and end of a prompt
+    b: The budget may cut the last sources
+    c: Models only read the first source
+    d: Citations must be in order
+    e: Ollama sorts sources anyway
+    f: It changes the temperature
+q24:
+  text: In project 5, the model answered the POST question with http.client, though no source was about it. What does this
+    show?
+  show: 4
+  options:
+    a: The model answered from its own memory, not from the sources
+    b: A right answer isn't proof of a grounded one
+    c: Retrieval worked perfectly
+    d: The sources were cited correctly
+    e: Small models always refuse
+    f: The budget was too large
+q25:
+  text: Why use temperature 0 while developing?
+  show: 4
+  options:
+    a: Answers become repeatable, so you can compare versions
+    b: It makes the model more creative
+    c: It removes the need for sources
+    d: It's faster on GPUs only
+    e: It forces citations
+    f: It shortens answers
+q26:
+  text: What does 'correct but not found' mean?
+  show: 4
+  options:
+    a: The answer is right, but the right document wasn't in the sources
+    b: The model answered from memory
+    c: Retrieval found the right document but the answer is wrong
+    d: The question was out of scope
+    e: The answer cited the wrong number
+    f: The test set is wrong
+q27:
+  text: Which checks can a script do without a person?
+  show: 4
+  options:
+    a: Whether a gold document was retrieved
+    b: Whether the answer cites a source number
+    c: Whether the refusal sentence appears
+    d: Whether an explanation is subtly misleading
+    e: Whether the tone suits the user
+    f: Whether the user was satisfied
+q28:
+  text: What should you do before trusting an LLM judge?
+  show: 4
+  options:
+    a: Check its verdicts against human labels on a small set
+    b: Nothing; LLM judges are always right
+    c: Use it only on out-of-scope questions
+    d: Give it a higher temperature
+    e: Remove the sources from its prompt
+    f: Let it rewrite the answers
+q29:
+  text: In project 6, what was the main bottleneck?
+  show: 4
+  options:
+    a: 'Retrieval: the right document reached the prompt for few questions'
+    b: The model refusing too often
+    c: The HTTP server
+    d: Prompt length
+    e: Disk space
+    f: Tokenizing
+q30:
+  text: With only 15 test questions, how should you treat a 5-point difference?
+  show: 4
+  options:
+    a: 'As noise: one question is almost 7 points'
+    b: As a clear win
+    c: As proof the model changed
+    d: As a bug in the scorer
+    e: As a reason to stop testing
+    f: As statistically significant
+q31:
+  text: How does an incremental index avoid rebuilding everything?
+  show: 4
+  options:
+    a: It stores a fingerprint (hash) of each document and re-embeds only new and changed ones
+    b: It deletes deleted documents' vectors
+    c: It re-embeds everything nightly
+    d: It never updates
+    e: It asks the model what changed
+    f: It sorts documents by date
+q32:
+  text: Where must access rules (who may see which document) be enforced?
+  show: 4
+  options:
+    a: As a filter in search, before results reach the prompt
+    b: As an instruction in the prompt
+    c: In the model's training
+    d: In the answer cache only
+    e: Nowhere; models respect privacy
+    f: In the user's browser
+q33:
+  text: What is indirect prompt injection in RAG?
+  show: 4
+  options:
+    a: Instructions hidden in retrieved documents that try to steer the model
+    b: A user typing a long question
+    c: A slow vector search
+    d: Duplicate chunks
+    e: A wrong citation number
+    f: An expired cache entry
+q34:
+  text: Which are layers of defense against injection through documents?
+  show: 4
+  options:
+    a: Scanning and quarantining documents at index time
+    b: Marking sources as data, not instructions, in the prompt
+    c: Never letting answers trigger actions without a check
+    d: Raising the temperature
+    e: Using bigger chunks
+    f: Removing citations
+q35:
+  text: Why normalize a question before using it as a cache key?
+  show: 4
+  options:
+    a: So 'Count items' and 'count  items' hit the same entry
+    b: To hide it from logs
+    c: To make the answer shorter
+    d: Because Ollama requires lowercase
+    e: To improve recall
+    f: To encrypt it

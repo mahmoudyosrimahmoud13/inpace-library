@@ -66,6 +66,14 @@ courses:
     sub: Kestra, BigQuery, dbt, Spark and Kafka, with the Data Engineering Zoomcamp
     tags: [16 lessons, 6 modules]
 
+  rag-from-scratch:
+    theme: sky
+    art: rag-from-scratch.svg
+    chip: 7 projects · 7 days
+    title: RAG,<br>built from<br>scratch
+    sub: A docs assistant with search, embeddings, citations and real evaluation, on your laptop
+    tags: [16 lessons, 7 projects]
+
   designing-data-intensive-applications:
     theme: plum
     art: designing-data-intensive-applications.svg

@@ -1,0 +1,161 @@
+q1:
+  right:
+  - a
+  - b
+  why: RAG retrieves a few relevant pieces and puts them in the prompt for the model to answer from; no training is involved.
+q2:
+  right:
+  - a
+  - b
+  why: Generation can only use what retrieval provides; fixing search fixes most problems.
+q3:
+  right:
+  - a
+  why: 'Recall@k asks: is a right document anywhere in the top k? If not, it can''t be in the prompt.'
+q4:
+  right:
+  - a
+  why: Inverse document frequency gives high weight to words found in few documents.
+q5:
+  right:
+  - a
+  why: 'Vocabulary mismatch: people and documents use different words for the same thing.'
+q6:
+  right:
+  - a
+  - b
+  why: Chunks keep each retrieved piece focused and keep the context within budget.
+q7:
+  right:
+  - a
+  why: Overlap repeats the end of one chunk at the start of the next.
+q8:
+  right:
+  - a
+  - b
+  why: A chunk from the middle of a document no longer says what it's about; the header fixes it cheaply.
+q9:
+  right:
+  - a
+  why: Paragraph chunks with headers had the best recall@5 and a small context.
+q10:
+  right:
+  - a
+  - b
+  why: 'Good chunking raises recall and lowers context size: both matter.'
+q11:
+  right:
+  - a
+  why: Texts with similar meaning are mapped to nearby vectors.
+q12:
+  right:
+  - a
+  - b
+  why: Normalized vectors turn cosine similarity into a fast dot product.
+q13:
+  right:
+  - a
+  - b
+  why: LSA only knows word pairs the corpus uses together; trained models know far more.
+q14:
+  right:
+  - a
+  - b
+  why: Embeddings capture meaning broadly and can lose exact details.
+q15:
+  right:
+  - a
+  why: Brute force is exact and fast for thousands; approximate indexes trade recall for speed at scale.
+q16:
+  right:
+  - a
+  - b
+  why: Hybrid search covers each method's blind spots.
+q17:
+  right:
+  - a
+  why: RRF uses only positions, so lists with incomparable scores can be merged.
+q18:
+  right:
+  - a
+  - b
+  why: A BM25 score of 12 and a cosine of 0.6 can't be compared; ranks can.
+q19:
+  right:
+  - a
+  - b
+  why: A short, clean view of each document can beat its full text.
+q20:
+  right:
+  - a
+  - b
+  why: Retrieve many cheaply, rerank them carefully, keep the best few.
+q21:
+  right:
+  - a
+  - b
+  why: Rules, numbered sources and the question make a grounded prompt.
+q22:
+  right:
+  - a
+  why: A fixed sentence is machine-checkable.
+q23:
+  right:
+  - a
+  - b
+  why: Order by rank so the best evidence is read and never cut.
+q24:
+  right:
+  - a
+  - b
+  why: The answer was plausible and ungrounded; on private docs this becomes a confident wrong answer.
+q25:
+  right:
+  - a
+  why: Repeatable outputs make evaluation meaningful.
+q26:
+  right:
+  - a
+  - b
+  why: It's the ungrounded-success case that becomes failure on private data.
+q27:
+  right:
+  - a
+  - b
+  - c
+  why: Mechanical checks are cheap and repeatable; nuance needs a judge or people.
+q28:
+  right:
+  - a
+  why: A judge has its own errors; measure them first.
+q29:
+  right:
+  - a
+  why: Found was the lowest number; improving search comes first.
+q30:
+  right:
+  - a
+  why: Small sets need large differences, or more questions.
+q31:
+  right:
+  - a
+  - b
+  why: Fingerprints show exactly what changed.
+q32:
+  right:
+  - a
+  why: A prompt instruction can be bypassed; a search filter can't leak what it never returns.
+q33:
+  right:
+  - a
+  why: RAG puts other people's text into your prompt; that text may contain instructions.
+q34:
+  right:
+  - a
+  - b
+  - c
+  why: No single layer is enough; the ones you control in code are the most reliable.
+q35:
+  right:
+  - a
+  why: Small differences in case and spacing shouldn't miss the cache.

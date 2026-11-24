@@ -1,0 +1,237 @@
+id: rag-from-scratch
+title: 'RAG: build a docs assistant from scratch'
+version: 1
+language: en
+description: 'Build Ask Python, a retrieval-augmented generation (RAG) assistant that answers questions about Python''s standard
+  library from 1,517 real docstrings, with sources. One project a day, each measured on the same 45 test questions: BM25 search
+  from scratch, chunking, embeddings (LSA from scratch and a small trained model) and a vector index, hybrid search with rank
+  fusion, prompts with citations and refusals on a free local model through Ollama, answer evaluation, and production: incremental
+  updates, filters, prompt-injection scanning, caching and an HTTP API. Runs on an ordinary laptop, no GPU or paid API. Every
+  output shown is real. For people who write Python. Plan: 7 days, about 2 hours a day.'
+image: cover.jpg
+downloads:
+- title: Ollama (run open models on your computer)
+  url: https://ollama.com
+- title: model2vec (small, fast embedding models)
+  url: https://github.com/MinishLab/model2vec
+modules:
+- id: m1
+  title: 'Day 1: RAG, and a search engine of your own'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: what you''ll build'
+    file: lessons/m1-l1.md
+    minutes: 15
+    media: lab/
+  - id: m1-l2
+    title: RAG in plain words
+    file: lessons/m1-l2.md
+    minutes: 20
+  - id: m1-l3
+    title: 'Project 1: the corpus, a test set, and your own search engine'
+    file: lessons/m1-l3.md
+    minutes: 45
+    media: lab/p01_bm25.py
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Do project 1, add stemming, and add five questions of your own to evalset.json. Report recall@5 and MRR before
+      and after stemming, and start the git repository. Hand in your numbers and your five questions.
+  - id: m1-explain
+    type: explain
+    prompt: Explain recall@5 and MRR to a teammate, and why a RAG system needs a test set before anything else.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Chunking'
+  lessons:
+  - id: m2-l1
+    title: 'Chunking: how to cut documents'
+    file: lessons/m2-l1.md
+    minutes: 20
+  - id: m2-l2
+    title: 'Project 2: cut the documents, and measure each way'
+    file: lessons/m2-l2.md
+    minutes: 40
+    media: lab/p02_chunking.py
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Do project 2 with paragraph targets of 250, 500 and 1,000 characters. Make a table of recall@5 and top-5 context
+      size for each, and say which you'd pick and why. Hand in the table.
+  - id: m2-explain
+    type: explain
+    prompt: Explain why adding the document title to every chunk improves search.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Embeddings and vector search'
+  lessons:
+  - id: m3-l1
+    title: 'Embeddings: search by meaning'
+    file: lessons/m3-l1.md
+    minutes: 25
+  - id: m3-l2
+    title: 'Project 3: embeddings two ways, and a vector index'
+    file: lessons/m3-l2.md
+    minutes: 45
+    media: lab/p03_embeddings.py
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Do project 3, then embed only chunk titles with the trained model and compare recall@5 with full chunks. Find
+      one question embeddings get right and BM25 misses, and one the other way round. Hand in both, with your explanation.
+  - id: m3-explain
+    type: explain
+    prompt: Explain cosine similarity, and why normalized vectors make vector search one matrix multiplication.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Hybrid search'
+  lessons:
+  - id: m4-l1
+    title: 'Hybrid search: combine, don''t choose'
+    file: lessons/m4-l1.md
+    minutes: 20
+  - id: m4-l2
+    title: 'Project 4: hybrid search with rank fusion'
+    file: lessons/m4-l2.md
+    minutes: 40
+    media: lab/p04_hybrid.py
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Do project 4 and write a reranker over the hybrid's top 20. Report recall@5, recall@10 and MRR with and without
+      it. Hand in your code and the table.
+  - id: m4-explain
+    type: explain
+    prompt: Explain reciprocal rank fusion, and why it merges ranks instead of scores.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: The answer'
+  lessons:
+  - id: m5-l1
+    title: 'The answer: prompts that keep the model on the sources'
+    file: lessons/m5-l1.md
+    minutes: 20
+  - id: m5-l2
+    title: 'Project 5: from search results to a cited answer'
+    file: lessons/m5-l2.md
+    minutes: 45
+    media: lab/p05_answer.py
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Do project 5 and add a relevance threshold that refuses without calling the model. Show it refusing the out-of-scope
+      question and answering the other three. Hand in your threshold, how you chose it, and the outputs.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why a correct answer from the model doesn't prove the answer is grounded in your documents.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Evaluation'
+  lessons:
+  - id: m6-l1
+    title: 'Evaluating RAG: search numbers and answer checks'
+    file: lessons/m6-l1.md
+    minutes: 20
+  - id: m6-l2
+    title: 'Project 6: measure the answers, then fix the prompt'
+    file: lessons/m6-l2.md
+    minutes: 45
+    media: lab/p06_evaluate.py
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Do project 6, add prompt v3, and run all three prompts. Make the four-group table (found or not, correct or not)
+      for your best prompt. Hand in the table and two failing answers with your diagnosis.
+  - id: m6-explain
+    type: explain
+    prompt: Explain what 'correct but not found' means in a RAG evaluation, and why it matters most for private documents.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Production, and the capstone'
+  lessons:
+  - id: m7-l1
+    title: Running RAG for real
+    file: lessons/m7-l1.md
+    minutes: 20
+  - id: m7-l2
+    title: 'Project 7: updates, filters, injection, a cache and an API'
+    file: lessons/m7-l2.md
+    minutes: 50
+    media: lab/p07_production.py
+  - id: m7-l3
+    title: 'Capstone: Ask Python, your way'
+    file: lessons/m7-l3.md
+    minutes: 30
+    media: lab/
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Do the capstone (A: your own documents, or B: beat the course''s numbers). Hand in the repository link, the README
+      with your before and after results, one good answer with sources and one failure you understand.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain indirect prompt injection in RAG and the three layers of defense, as you would in an interview.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70

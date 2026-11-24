@@ -29,6 +29,9 @@ steps:
   - course: pytorch-1-foundations
     note: Many AI engineer posts ask for PyTorch. Tensors, autograd and training loops, so fine-tuning and model code make sense.
     optional: true
+  - course: rag-from-scratch
+    note: "RAG from the inside: build search, embeddings, hybrid retrieval, cited answers and evaluation yourself, on a free local model."
+    optional: true
   - course: langchain-agents
     note: LangChain and LangGraph v1, the agent frameworks named in many posts. Build tools, middleware, memory and RAG with tested code.
     optional: true

@@ -1,0 +1,17 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-24'
+section: ai-ml
+tags:
+- rag
+- llm
+- embeddings
+- search
+- vector database
+- evaluation
+- ai
+- python
+- projects
+credit: 'Written for the inPace library; all code tested. Documents: Python standard library docstrings (PSF License). Embedding
+  model: model2vec potion-base-8M by MinishLab (MIT). Local model: Qwen2.5 through Ollama.'

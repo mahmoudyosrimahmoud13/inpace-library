@@ -1,0 +1,26 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".3"/></filter>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffd166"/></marker></defs>
+<g filter="url(#s)">
+<rect x="70" y="40" width="380" height="64" rx="32" fill="#f3f7ff"/>
+<text x="260" y="80" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#10233f">delete a folder?</text>
+</g>
+<g stroke="#ffd166" stroke-width="4" fill="none" marker-end="url(#a)" stroke-linecap="round">
+<path d="M200 108 L150 148"/><path d="M320 108 L370 148"/>
+<path d="M150 214 L230 262"/><path d="M370 214 L290 262"/>
+<path d="M260 396 L260 428"/>
+</g>
+<g filter="url(#s)">
+<rect x="50" y="150" width="200" height="62" rx="16" fill="#ffd166"/>
+<text x="150" y="189" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#10233f">BM25</text>
+<rect x="270" y="150" width="200" height="62" rx="16" fill="#ffd166"/>
+<text x="370" y="189" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#10233f">vectors</text>
+<rect x="110" y="264" width="300" height="130" rx="18" fill="#f3f7ff"/>
+<text x="140" y="304" font-family="JBM" font-weight="700" font-size="18" fill="#10233f">[1] shutil.rmtree</text>
+<text x="140" y="338" font-family="JBM" font-weight="500" font-size="18" fill="#3b5a85">[2] shutil.move</text>
+<text x="140" y="372" font-family="JBM" font-weight="500" font-size="18" fill="#3b5a85">[3] tempfile...</text>
+<rect x="60" y="432" width="400" height="80" rx="18" fill="#1e4b85"/>
+<text x="260" y="468" text-anchor="middle" font-family="JBM" font-weight="700" font-size="19" fill="#f3f7ff">use shutil.rmtree() [1]</text>
+<text x="260" y="496" text-anchor="middle" font-family="JBM" font-weight="500" font-size="15" fill="#bcd3f5">answer, with sources</text>
+</g>
+</svg>
