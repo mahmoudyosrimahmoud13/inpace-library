@@ -10,16 +10,20 @@ steps:
   - course: python-full
     note: Every course here uses Python and NumPy. Skip it if you already write Python comfortably.
     optional: true
+  - course: numpy-pandas-ml
+    note: Images are NumPy arrays. Take it if arrays, shapes and broadcasting aren't second nature yet.
+    optional: true
   - course: computer-vision
-    note: "Start here: pixels, filters, contours, features, CNNs, detection, segmentation, ViT and CLIP, in five days."
+    note: 'Start here: pixels, filters, contours, features, CNNs, detection, segmentation, ViT and CLIP, in five days.'
   - course: dl-1-neural-networks
     note: How neural networks learn, built by hand and then with PyTorch and Keras.
   - course: dl-2-improving-networks
     note: Make networks train well. Regularization, optimizers and tuning.
+  - course: dl-3-ml-projects
+    note: 'How to run a deep learning project: metrics, data splits and error analysis. Useful before your first real vision project.'
+    optional: true
   - course: dl-4-cnns
     note: Convolutional networks in depth, with hands-on training.
-  - course: dl-3-ml-projects
-    note: Short and practical. How to run a real machine learning project, from data to errors.
   - course: machine-vision
     note: The physics side, following MIT 6.801 topics. Camera geometry, motion, calibration, shading and subpixel measurement.
   - course: llms-essentials

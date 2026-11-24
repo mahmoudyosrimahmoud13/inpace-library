@@ -1,0 +1,22 @@
+id: coding-interviews-ar
+title: حل المشكلات ومقابلات البرمجة
+description: من أول خطواتك في البرمجة إلى أنماط الخوارزميات وراء مقابلات البرمجة والبرمجة التنافسية، بالعربي.
+language: ar
+author: inPace
+official: true
+order: 38
+tags: [algorithms, data structures, interview, problem solving, career, arabic]
+steps:
+  - course: python-basics-ar
+    note: لغة دورة المقابلات. تخطَّها لو تكتب بايثون بثقة.
+    optional: true
+  - course: ctci-hiring-ar
+    note: 'عملية التوظيف كاملة مع كتاب Cracking the Coding Interview: من سيرتك الذاتية وقصصك إلى العرض، مع تدريب LeetCode لكل فصل.'
+  - course: icpc-mansoura-problem-solving-ar
+    note: حل المشكلات والبرمجة التنافسية بـ C++، على خطى تدريبات ICPC Mansoura للمستوى 0 و1. تدريب ممتاز للمقابلات.
+  - course: icpc-mansoura-advanced-ar
+    note: 'المستوى التالي، على خطى معسكرات المستوى 2: DP متقدم و Dijkstra و DSU و segment trees ونظرية الألعاب.'
+    optional: true
+  - course: system-design-beginners
+    note: تصميم الأنظمة الكبيرة، النوع الثاني من المقابلات في أغلب الشركات. (الدورة بالإنجليزية.)
+    optional: true

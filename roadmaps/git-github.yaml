@@ -11,6 +11,3 @@ steps:
     note: Commits, undo, branches, rebase, teamwork and how Git works inside. Everything after this uses it.
   - course: github-actions-cli
     note: Pull requests and reviews, the gh command, and GitHub Actions to test and publish your work.
-  - course: docker-containers
-    note: Build and ship containers, the next step after a CI pipeline.
-    optional: true

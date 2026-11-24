@@ -7,9 +7,16 @@ official: true
 order: 10
 tags: [docker, kubernetes, devops]
 steps:
+  - course: linux-fundamentals
+    note: Containers are Linux. Take it first if the command line is new to you.
+    optional: true
   - course: docker-containers
     note: Containers properly, from what they are to Compose, security and shipping images.
   - course: docker-kubernetes-en
     note: Then Kubernetes, from one container to a cluster. The video is in Egyptian Arabic; the English notes cover everything.
+  - course: devops-cicd
+    note: Build and deploy your containers automatically on every change.
+    optional: true
   - course: system-design-beginners
     note: Where containers fit in a whole system.
+    optional: true

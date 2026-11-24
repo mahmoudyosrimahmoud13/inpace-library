@@ -8,41 +8,41 @@ order: 13
 tags: [ai engineer, career, interview, python, llm]
 steps:
   - course: python-full
-    note: "Python is in about 8 of every 10 AI engineer job posts. Skip this if you already write Python comfortably: functions, tests, classes, files."
+    note: 'Python is in about 8 of every 10 AI engineer job posts. Skip this if you already write Python comfortably: functions, tests, classes, files.'
     optional: true
   - course: ai-engineer-hired-1
-    note: "Start here: the market, how hiring works, your first project (DocAnswer), your CV and the job search."
+    note: 'Start here: the market, how hiring works, your first project (DocAnswer), your CV and the job search.'
   - course: ai-engineer-hired-2
     note: Take it alongside part 1. Twelve weeks of coding interview practice, from patterns to mock interviews.
+  - course: mls-1-supervised
+    note: About two in three AI engineer posts also want some classic machine learning. This fills that gap.
+    optional: true
+  - course: llms-essentials
+    note: 'A short look inside LLMs: tokens, attention, training stages and sampling. Makes part 3''s theory questions much easier.'
+    optional: true
+  - course: rag-from-scratch
+    note: 'RAG from the inside: build search, embeddings, hybrid retrieval, cited answers and evaluation yourself, on a free local model.'
+    optional: true
+  - course: langchain-agents
+    note: LangChain and LangGraph v1, the agent frameworks named in many posts. Build tools, middleware, memory and RAG with tested code.
+    optional: true
+  - course: pytorch-1-foundations
+    note: Many AI engineer posts ask for PyTorch. Tensors, autograd and training loops, so fine-tuning and model code make sense.
+    optional: true
   - course: fastapi
     note: If building DocAnswer's API felt new, this goes deeper into APIs.
     optional: true
   - course: docker-containers
     note: Containers and deployment, asked for in many AI engineer posts. Package your model's API and ship it.
     optional: true
-  - course: mls-1-supervised
-    note: About two in three AI engineer posts also want some classic machine learning. This fills that gap.
-    optional: true
-  - course: llms-essentials
-    note: "A short look inside LLMs: tokens, attention, training stages and sampling. Makes part 3's theory questions much easier."
-    optional: true
-  - course: pytorch-1-foundations
-    note: Many AI engineer posts ask for PyTorch. Tensors, autograd and training loops, so fine-tuning and model code make sense.
-    optional: true
-  - course: rag-from-scratch
-    note: "RAG from the inside: build search, embeddings, hybrid retrieval, cited answers and evaluation yourself, on a free local model."
-    optional: true
-  - course: langchain-agents
-    note: LangChain and LangGraph v1, the agent frameworks named in many posts. Build tools, middleware, memory and RAG with tested code.
+  - course: mlops-ship-models
+    note: Deploy and run ML models with MLflow, FastAPI, Docker and GitHub Actions, and catch drift before users do.
     optional: true
   - course: ai-engineer-hired-3
-    note: The AI-specific rounds, AI system design, and your second project, TriageBot.
-  - course: computer-vision
-    note: For roles that work with images and documents. From filters and CNNs to detection, ViT and CLIP.
-    optional: true
+    note: The AI-specific rounds, AI system design, and your second project, TriageBot. Take it after the optional courses above that your target jobs ask for.
   - course: system-design-beginners
     note: General system design, for interview loops that also have a classic design round.
     optional: true
-  - course: mlops-ship-models
-    note: Deploy and run ML models with MLflow, FastAPI, Docker and GitHub Actions, and catch drift before users do.
+  - course: computer-vision
+    note: For roles that work with images and documents. From filters and CNNs to detection, ViT and CLIP.
     optional: true

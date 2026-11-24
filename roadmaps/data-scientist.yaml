@@ -12,6 +12,8 @@ steps:
     optional: true
   - course: data-science-beginners
     note: Start here. pandas, cleaning, charts, statistics and your first models, ending with a real report.
+  - course: postgres-beginners
+    note: Most company data lives in SQL databases. Get your own data out without waiting for someone else.
   - course: numpy-pandas-ml
     note: Go deeper with NumPy and pandas and build a full machine learning workflow.
   - course: mml-1-linear-algebra-geometry

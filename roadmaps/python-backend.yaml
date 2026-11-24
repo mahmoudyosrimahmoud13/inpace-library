@@ -11,10 +11,14 @@ steps:
     note: A short first taste, if you've never programmed. Skip it if you'd rather start the full course straight away.
     optional: true
   - course: python-full
-    note: "The whole language first: functions, errors, tests, files, classes and the tools a backend developer uses every day."
+    note: 'The whole language first: functions, errors, tests, files, classes and the tools a backend developer uses every day.'
+  - course: git-zero-to-master
+    note: Every backend job uses Git. Branches, merges and teamwork.
+  - course: postgres-beginners
+    note: Almost every backend stores its data in a SQL database. Tables, queries, joins and indexes.
   - course: fastapi
     note: Your first API, all the way to production.
   - course: docker-containers
     note: Pack the API and its database in containers with Docker Compose, the way teams ship.
   - course: system-design-beginners
-    note: "Step back and design a whole service: the questions interviewers ask."
+    note: 'Step back and design a whole service: the questions interviewers ask.'

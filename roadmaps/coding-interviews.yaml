@@ -12,21 +12,9 @@ steps:
   - course: python-full
     note: Functions, data structures and clean code, so you can focus on the algorithm in an interview.
     optional: true
+  - course: dsa-interviews
+    note: The heart of the path. Fourteen patterns, from two pointers to dynamic programming, with LeetCode practice. Do it before the hiring course so its chapters feel like revision.
   - course: ctci-hiring
     note: The whole hiring process with Cracking the Coding Interview, from your CV and stories to the offer, with LeetCode practice for every chapter.
-  - course: ctci-hiring-ar
-    note: "Optional, in Arabic: the same course, Cracking the Coding Interview step by step."
-    optional: true
-  - course: dsa-interviews
-    note: The heart of the path. Fourteen patterns, from two pointers to dynamic programming, with LeetCode practice and a playbook for the interview itself.
-  - course: icpc-mansoura-problem-solving-ar
-    note: "Optional, in Arabic: competitive programming in C++, following ICPC Mansoura's Level 0 and Level 1 training. Great extra practice."
-    optional: true
-  - course: icpc-mansoura-advanced-ar
-    note: "Optional, in Arabic: the next level, following ICPC Mansoura's Level 2 camps (advanced DP, Dijkstra, DSU, segment trees, game theory)."
-    optional: true
   - course: system-design-beginners
     note: How large systems are designed, the second kind of interview at most tech companies.
-  - course: git-zero-to-master
-    note: Show your work. A tidy GitHub with your solutions helps your CV.
-    optional: true

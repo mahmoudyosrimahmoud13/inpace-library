@@ -7,12 +7,10 @@ official: true
 order: 37
 tags: [data engineering, pipelines, sql, python, career, projects]
 steps:
-  - course: postgres-beginners
-    note: SQL first. Every data engineer writes it every day. Skip it if SELECT, JOIN and GROUP BY already feel easy.
-    optional: true
   - course: python-full
-    note: The glue language of data engineering. Skip it if you already write Python with functions, files and tests.
-    optional: true
+    note: Pipelines are written in Python. Skip it if you already write it comfortably.
+  - course: postgres-beginners
+    note: SQL is the data engineer's main tool. Skip it if you already write joins and window functions.
   - course: git-zero-to-master
     note: Pipelines are code, and code lives in git. Enough to commit, branch and publish your projects.
     optional: true

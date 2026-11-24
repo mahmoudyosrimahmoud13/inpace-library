@@ -11,6 +11,3 @@ steps:
     note: الـ commits والتراجع والفروع و rebase والعمل مع فريق وكيف يعمل Git من الداخل. كل ما بعده يعتمد عليه.
   - course: github-actions-cli-ar
     note: طلبات الدمج والمراجعات، وأداة gh، و GitHub Actions لاختبار عملك ونشره.
-  - course: docker-kubernetes-ar
-    note: ابنِ الحاويات وانشرها، وهي الخطوة التالية بعد خط CI.
-    optional: true
