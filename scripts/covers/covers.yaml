@@ -312,10 +312,10 @@ courses:
   langchain-agents:
     theme: forest
     art: langchain-agents.svg
-    chip: AI · 5 days
+    chip: AI · 5 days · 5 projects
     title: Agents with<br>LangChain v1
-    sub: Tools, middleware, human approval, memory, RAG and LangGraph
-    tags: [10 lessons, 25 quiz questions]
+    sub: Tools, middleware, human approval, memory, RAG and LangGraph, built into one support desk
+    tags: [15 lessons, 5 projects]
 
   computer-vision:
     theme: coral

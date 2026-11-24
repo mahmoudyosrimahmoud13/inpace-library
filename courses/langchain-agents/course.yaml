@@ -1,12 +1,13 @@
 id: langchain-agents
 title: 'LangChain and LangGraph: build agents with v1'
-version: 1
+version: 2
 language: en
 description: 'A short, practical course on the current LangChain 1.x and LangGraph 1.x APIs (not the old chains): models and
   messages, tools, create_agent, structured output, middleware for PII, budgets and human approval, your own middleware as
   policies in code, memory with checkpointers, RAG with retrieval as a tool, custom workflows as graphs, and testing, tracing
-  and shipping. All code is tested and runs with free local models through Ollama or any hosted provider. Optional videos
-  at the end of some lessons. About 5 days, 60 minutes a day.'
+  and shipping. Each day ends with a project: you build one app, the support desk of a small bike shop, from its first tools
+  to a tested LangGraph workflow. All code is tested and runs with free local models through Ollama or any hosted provider.
+  Optional videos at the end of some lessons. About 5 days, 60 minutes a day.'
 image: cover.jpg
 downloads:
 - title: LangChain documentation (Python)
@@ -29,6 +30,11 @@ modules:
     title: 'Tools: let the model ask your code to act'
     file: lessons/m1-l2.md
     minutes: 30
+  - id: m1-l3
+    title: 'Project 1: Pedal & Co.''s first tools'
+    file: lessons/m1-l3.md
+    minutes: 35
+    media: lab/p1_tools.py
   requires:
   - id: m1-practical
     type: practical
@@ -59,6 +65,11 @@ modules:
     title: 'Structured output: answers your code can use'
     file: lessons/m2-l2.md
     minutes: 25
+  - id: m2-l3
+    title: 'Project 2: an agent that looks things up, and tickets your code can file'
+    file: lessons/m2-l3.md
+    minutes: 40
+    media: lab/p2_agent.py
   requires:
   - id: m2-practical
     type: practical
@@ -89,6 +100,11 @@ modules:
     title: Write your own middleware
     file: lessons/m3-l2.md
     minutes: 25
+  - id: m3-l3
+    title: 'Project 3: refunds that wait for a person'
+    file: lessons/m3-l3.md
+    minutes: 40
+    media: lab/p3_middleware.py
   requires:
   - id: m3-practical
     type: practical
@@ -119,6 +135,11 @@ modules:
     title: 'RAG: an agent that answers from your documents'
     file: lessons/m4-l2.md
     minutes: 35
+  - id: m4-l3
+    title: 'Project 4: conversations that continue, and answers from the policies'
+    file: lessons/m4-l3.md
+    minutes: 40
+    media: lab/p4_memory_rag.py
   requires:
   - id: m4-practical
     type: practical
@@ -151,6 +172,11 @@ modules:
     title: Test, trace and ship your agent
     file: lessons/m5-l2.md
     minutes: 30
+  - id: m5-l3
+    title: 'Project 5: a workflow that can''t skip steps, with tests'
+    file: lessons/m5-l3.md
+    minutes: 50
+    media: lab/p5_graph.py
   requires:
   - id: m5-practical
     type: practical
