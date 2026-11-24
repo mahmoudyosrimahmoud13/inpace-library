@@ -1,0 +1,677 @@
+q1:
+  text: How do the authors define data engineering?
+  show: 4
+  options:
+    a: Building and running systems that take in raw data and produce high-quality, consistent information for downstream
+      uses
+    b: Training machine learning models on large datasets
+    c: Designing dashboards for business users
+    d: Administering a single relational database
+    e: Any work that involves writing SQL
+    f: Collecting data from websites by scraping
+q2:
+  text: What are the three stages of the book's data maturity model?
+  show: 4
+  options:
+    a: Starting with data
+    b: Scaling with data
+    c: Leading with data
+    d: Mining data
+    e: Monetizing data
+    f: Archiving data
+q3:
+  text: Which describe a Type A data engineer?
+  show: 4
+  options:
+    a: A stands for abstraction
+    b: Prefers off-the-shelf products and managed services
+    c: Avoids undifferentiated heavy lifting
+    d: A stands for analytics
+    e: Builds custom data tools as their main job
+    f: Works only at companies leading with data
+q4:
+  text: Which does the book name as the primary languages of data engineering?
+  show: 4
+  options:
+    a: SQL
+    b: Python
+    c: bash
+    d: A JVM language such as Java or Scala
+    e: PHP
+    f: Visual Basic
+    g: COBOL
+    h: Assembly
+q5:
+  text: A company is 'starting with data'. Which are good first moves for its data engineer?
+  show: 4
+  options:
+    a: Find quick wins that show the value of data
+    b: Talk to people across the business
+    c: Build a custom distributed platform before any use case exists
+    d: Prefer simple, managed tools
+    e: Copy the architecture of a giant tech company
+    f: Wait until the company is bigger before delivering anything
+q6:
+  text: Which are the five stages of the data engineering lifecycle?
+  show: 4
+  options:
+    a: Generation
+    b: Storage
+    c: Ingestion
+    d: Transformation
+    e: Serving
+    f: Monetization
+    g: Archiving
+    h: Deletion
+q7:
+  text: Which are undercurrents of the lifecycle?
+  show: 4
+  options:
+    a: Security
+    b: DataOps
+    c: Orchestration
+    d: Data management
+    e: Marketing
+    f: Hardware procurement
+    g: Accounting
+    h: Hiring
+q8:
+  text: What are the three pillars of DataOps in the book?
+  show: 4
+  options:
+    a: Automation
+    b: Monitoring and observability
+    c: Incident response
+    d: Encryption
+    e: Data modeling
+    f: Vendor management
+q9:
+  text: What is the book's advice on batch versus streaming ingestion?
+  show: 4
+  options:
+    a: Adopt real-time streaming only after finding a business use case that justifies its costs
+    b: Batch is fine for many common uses, such as model training and weekly reporting
+    c: Always stream, because batch is obsolete
+    d: Never use streaming
+    e: Streaming is always cheaper than batch
+    f: Choose whichever tool is newest
+q10:
+  text: In project 2, why does running the pipeline twice not double the revenue?
+  show: 4
+  options:
+    a: Ingestion copies each file under the same name, so a second copy replaces the first
+    b: The step is idempotent
+    c: DuckDB automatically removes duplicate rows
+    d: The second run is skipped by the operating system
+    e: Revenue is rounded
+    f: The quality check deletes the second copy
+q11:
+  text: Which words are central to the book's definition of data architecture?
+  show: 4
+  options:
+    a: Evolving data needs
+    b: Flexible and reversible decisions
+    c: Careful evaluation of trade-offs
+    d: A fixed five-year plan
+    e: One vendor for everything
+    f: Maximum normalization
+q12:
+  text: What does recovery point objective (RPO) mean?
+  show: 4
+  options:
+    a: The maximum acceptable amount of data loss after an outage
+    b: The longest acceptable outage
+    c: The share of time a system is up
+    d: The chance a system works correctly
+    e: The cost of recovering a system
+    f: The number of backups kept
+q13:
+  text: What is a 'two-way door' decision?
+  show: 4
+  options:
+    a: A decision you can reverse if you don't like the result
+    b: A decision to prefer when possible
+    c: A decision that can never be undone
+    d: A decision that needs two approvals
+    e: A decision about network ports
+    f: A decision to use two vendors
+q14:
+  text: Which are among Zhamak Dehghani's four key components of the data mesh?
+  show: 4
+  options:
+    a: Domain-oriented decentralized data ownership
+    b: Data as a product
+    c: Self-serve data infrastructure as a platform
+    d: Federated computational governance
+    e: One central data team owns all data
+    f: A single monolithic warehouse
+    g: A single central warehouse team approving every change
+    h: Banning data products
+q15:
+  text: In project 3, what does the loosely coupled design need that the tight one didn't?
+  show: 4
+  options:
+    a: A queue between the shop and the email service
+    b: A consumer that skips events it already handled
+    c: Retries when the email service fails
+    d: Orders that wait for the email to be sent
+    e: A faster email server
+    f: Fewer orders
+q16:
+  text: What is total opportunity cost of ownership (TOCO)?
+  show: 4
+  options:
+    a: The cost of the opportunities you give up by choosing a technology, architecture or process
+    b: The cloud bill for one month
+    c: The price of the hardware
+    d: The cost of training staff only
+    e: The tax on software licences
+    f: The cost of data egress
+q17:
+  text: Which are examples of immutable technologies in the book's sense?
+  show: 4
+  options:
+    a: Object storage
+    b: SQL
+    c: bash
+    d: Networking
+    e: This year's most hyped orchestration tool
+    f: A brand-new startup's proprietary query engine
+    g: A dashboard tool released last month
+    h: A vendor's beta feature
+q18:
+  text: How often do the authors suggest re-evaluating your technology choices?
+  show: 4
+  options:
+    a: About every two years
+    b: Every month
+    c: Never, once chosen
+    d: Every ten years
+    e: Only when a tool fails
+    f: Whenever a vendor offers a discount
+q19:
+  text: In project 4, why did the own server stop looking cheapest once people were counted?
+  show: 4
+  options:
+    a: It needed far more engineer hours to keep running
+    b: Indirect costs were most of its total
+    c: Its electricity was free
+    d: It had no egress costs, which made it more expensive
+    e: Servers always cost more than the cloud
+    f: Its upfront cost was zero
+q20:
+  text: What does Appendix B say about cloud data egress?
+  show: 4
+  options:
+    a: Clouds charge for data leaving them
+    b: Egress charges can apply between zones and regions too
+    c: Getting data into the cloud is usually cheap or free
+    d: Egress is always free
+    e: Only on-premises systems have egress fees
+    f: Egress fees only apply to databases
+q21:
+  text: Which are the types of time the book describes for events?
+  show: 4
+  options:
+    a: Event time
+    b: Ingestion time
+    c: Process time
+    d: Processing time
+    e: Billing time
+    f: Compile time
+    g: Retention time
+    h: Response time
+q22:
+  text: What is the difference between a message queue and a stream, as the book describes them?
+  show: 4
+  options:
+    a: A message is removed from the queue once it's delivered
+    b: A stream is an append-only log of events
+    c: Streams keep records for a long time and can be replayed
+    d: Queues keep every message forever
+    e: Streams can only hold one event
+    f: There is no difference
+q23:
+  text: What are the costs of the insert-only pattern?
+  show: 4
+  options:
+    a: Tables can grow large
+    b: Finding the current state of a record takes extra work
+    c: History is lost on every update
+    d: Records can't be read at all
+    e: It needs streaming
+    f: It can't store timestamps
+q24:
+  text: Inkwell's orders table is CRUD. What can it NOT tell you on its own?
+  show: 4
+  options:
+    a: When an order moved from placed to shipped
+    b: How long orders take to ship
+    c: Each order's current status
+    d: How many orders exist
+    e: Which customer placed an order
+    f: The order's creation time
+q25:
+  text: What is a data contract, according to the definition the book quotes?
+  show: 4
+  options:
+    a: A written agreement between a source system's owner and the team ingesting its data
+    b: It covers what data is extracted, how, how often, and who to contact
+    c: A software licence
+    d: A law about personal data
+    e: A cloud provider's price list
+    f: An agreement between two analysts
+q26:
+  text: Why do columnar formats like Parquet suit analytics?
+  show: 4
+  options:
+    a: A query can read only the columns it needs
+    b: Similar values sit together, so they compress well
+    c: They store the schema with types
+    d: They are plain text you can edit by hand
+    e: They make single-row updates cheapest
+    f: They repeat column names on every row
+q27:
+  text: What does BASE stand for?
+  show: 4
+  options:
+    a: Basically available
+    b: Soft-state
+    c: Eventual consistency
+    d: Atomic
+    e: Strongly isolated
+    f: Durable
+q28:
+  text: Which describe object storage?
+  show: 4
+  options:
+    a: Examples include Amazon S3 and Google Cloud Storage
+    b: Objects can't be changed in place
+    c: It's the usual home of data lakes
+    d: It's the fastest storage for a database's random writes
+    e: You can edit one byte of an object directly
+    f: It's only available on premises
+q29:
+  text: In project 6, what did the measurements show?
+  show: 4
+  options:
+    a: JSON lines was the largest format
+    b: Parquet was several times smaller than CSV
+    c: Querying Parquet was much faster than CSV
+    d: gzip wrote noticeably slower than snappy
+    e: CSV was the smallest
+    f: All formats took the same time
+    g: Single-threaded
+    h: Append-never
+q30:
+  text: What does 'separation of compute from storage' allow?
+  show: 4
+  options:
+    a: Paying for compute only while it runs
+    b: Scaling storage and compute independently
+    c: Several engines reading the same data
+    d: Storing data inside the query engine's memory only
+    e: Never paying for storage
+    f: Removing the need for any file format
+q31:
+  text: What does the authors' mantra 'all data is unbounded until it's bounded' mean?
+  show: 4
+  options:
+    a: Data happens continuously in reality
+    b: Batches are boundaries we choose, such as a day
+    c: All data must be streamed
+    d: Data can never be stored
+    e: Bounded data is always wrong
+    f: Batches are a convenience for processing
+q32:
+  text: Why should an ingestion job save its watermark only after the data is written?
+  show: 4
+  options:
+    a: A crash in between means re-reading data, not skipping it
+    b: Duplicates are easier to fix than gaps
+    c: It makes the job faster
+    d: The database requires it
+    e: So the watermark can move backwards
+    f: It isn't important when it's saved
+q33:
+  text: What does the book call querying a table for rows whose updated_at is after the last run?
+  show: 4
+  options:
+    a: Batch-oriented CDC
+    b: Continuous CDC
+    c: A full snapshot
+    d: Reverse ETL
+    e: A dead-letter queue
+    f: Query federation
+q34:
+  text: What should happen to an event that can't be parsed?
+  show: 4
+  options:
+    a: It goes to a dead-letter queue or file
+    b: Someone can inspect and fix it later
+    c: The whole pipeline stops forever
+    d: It's silently dropped
+    e: It's loaded into the lake as is
+    f: It's corrected by guessing
+q35:
+  text: Which are true of ETL and ELT?
+  show: 4
+  options:
+    a: ELT loads raw data first and transforms it inside the warehouse or lake
+    b: ETL transforms data before loading it
+    c: Inkwell's pipeline is ELT
+    d: ELT can't keep raw data
+    e: ETL means 'extract, transfer, log'
+    f: They are the same thing
+q36:
+  text: Which are tips from the book for improving query performance?
+  show: 4
+  options:
+    a: Use the explain plan
+    b: Avoid full table scans
+    c: Leverage cached query results
+    d: Vacuum dead records
+    e: Always use SELECT *
+    f: Add more joins to every query
+    g: Delete every index
+    h: Run each query twice
+q37:
+  text: What is row explosion?
+  show: 4
+  options:
+    a: Many-to-many matches in a join multiply rows
+    b: It can happen with repeated join keys
+    c: The database raises an error
+    d: A table runs out of disk space
+    e: A query returns zero rows
+    f: Partitions are too small
+q38:
+  text: Which window types does the book describe for streaming queries?
+  show: 4
+  options:
+    a: Session
+    b: Fixed-time (tumbling)
+    c: Sliding
+    d: Circular
+    e: Random
+    f: Nested
+q39:
+  text: What is a watermark in stream processing?
+  show: 4
+  options:
+    a: A threshold a window uses to decide whether data is in time or late
+    b: A way to close a window while allowing for some late data
+    c: A copyright mark on data
+    d: The newest file in a lake
+    e: A database index
+    f: A backup
+q40:
+  text: In project 8's plan, what showed that partition pruning worked?
+  show: 4
+  options:
+    a: 'Scanning Files: 1/60'
+    b: File filters on year and month
+    c: The query returned an error
+    d: All 60 folders were read
+    e: The plan had no Read step
+    f: The query used SELECT *
+q41:
+  text: What are the three levels of data model in the book?
+  show: 4
+  options:
+    a: Conceptual
+    b: Logical
+    c: Physical
+    d: Emotional
+    e: Temporary
+    f: Final
+q42:
+  text: Which describe the Kimball approach?
+  show: 4
+  options:
+    a: Star schemas of facts and dimensions
+    b: Bottom-up
+    c: Fact tables at the lowest grain possible
+    d: A highly normalized central warehouse feeding marts
+    e: Hubs, links and satellites
+    f: No dimensions at all
+q43:
+  text: Which slowly changing dimension type keeps a full history with a new row per change?
+  show: 4
+  options:
+    a: Type 2
+    b: Type 1
+    c: Type 3
+    d: Type 0
+    e: Type 5
+    f: None of them
+q44:
+  text: What are the three main table types of a Data Vault?
+  show: 4
+  options:
+    a: Hubs
+    b: Links
+    c: Satellites
+    d: Facts
+    e: Marts
+    f: Snapshots
+q45:
+  text: In project 9, why do 'revenue by city' answers differ between the normalized model and the star schema?
+  show: 4
+  options:
+    a: The normalized model uses each customer's city today
+    b: The star schema uses the city at the time of the sale
+    c: One of them has a bug that loses sales
+    d: Total revenue is different
+    e: The star schema ignores cancelled orders and the other doesn't
+    f: DuckDB rounds differently
+q46:
+  text: Which update patterns does the book describe?
+  show: 4
+  options:
+    a: Truncate and reload
+    b: Insert only
+    c: Upsert/merge
+    d: Delete
+    e: Copy and forget
+    f: Rename only
+    g: Lock and wait
+    h: Print and retype
+q47:
+  text: What are the two kinds of distributed join the book describes?
+  show: 4
+  options:
+    a: Broadcast join
+    b: Shuffle hash join
+    c: Cross-border join
+    d: Lazy join
+    e: Cloud join
+    f: Index join only
+q48:
+  text: In write, audit, publish, what happens when a data test fails?
+  show: 4
+  options:
+    a: Nothing is published
+    b: Users keep the last good tables
+    c: The run reports which test failed
+    d: The failing rows are published anyway
+    e: The raw data is deleted
+    f: The test is skipped next time
+q49:
+  text: Why is fct_sales built with a LEFT JOIN to dim_customer in project 10?
+  show: 4
+  options:
+    a: A sale without a matching customer version stays in the table
+    b: A test can then catch it
+    c: An inner join would silently drop the sale
+    d: LEFT JOIN is always faster
+    e: It removes duplicates
+    f: It makes the dimension type 1
+q50:
+  text: Which are true of the incremental fct_events model?
+  show: 4
+  options:
+    a: It adds only event_ids it hasn't stored yet
+    b: Running the pipeline twice adds nothing the second time
+    c: It rebuilds the whole table every run
+    d: It keeps duplicate events
+    e: Its new rows are published before the tests run
+    f: It deletes old events
+q51:
+  text: Which does the book list among general considerations for serving data?
+  show: 4
+  options:
+    a: Trust
+    b: The use case and the user
+    c: Data products
+    d: Data definitions and logic
+    e: The newest visualization library
+    f: The colour of the dashboard
+    g: The font of the report
+    h: The company logo
+q52:
+  text: What is reverse ETL?
+  show: 4
+  options:
+    a: Serving data by loading it from an OLAP system back into a source system
+    b: Putting results where people work, such as a CRM
+    c: Undoing an ETL job
+    d: Extracting data from a warehouse to delete it
+    e: Running ETL backwards in time
+    f: Loading raw data into a lake
+q53:
+  text: Why does the book warn about reverse ETL?
+  show: 4
+  options:
+    a: It creates feedback loops
+    b: A bug can feed its own output back in and grow
+    c: It's illegal
+    d: It's always slow
+    e: It can't use CSV files
+    f: It needs streaming
+q54:
+  text: What does a metrics layer give a data team?
+  show: 4
+  options:
+    a: Each metric defined once
+    b: Every report asking for 'metric by dimension'
+    c: One definition change updating every report
+    d: A different revenue in each dashboard
+    e: No need for any SQL engine
+    f: Faster disks
+q55:
+  text: In project 11's feature table, what keeps the model from cheating?
+  show: 4
+  options:
+    a: Features use only sales before the cutoff
+    b: The label uses only sales on or after the cutoff
+    c: Features use the whole week
+    d: The label is computed before the features
+    e: Customers are shuffled
+    f: Cancelled orders are counted as sales
+q56:
+  text: In which order does Chapter 10 cover security?
+  show: 4
+  options:
+    a: People, then processes, then technology
+    b: Technology first
+    c: Processes first
+    d: In alphabetical order
+    e: Only technology
+    f: Only people
+q57:
+  text: What does the principle of least privilege mean?
+  show: 4
+  options:
+    a: A person or system gets only the privileges and data needed for the task
+    b: Nothing more
+    c: Everyone gets admin rights to save time
+    d: Only managers have access
+    e: Data is never shared
+    f: Privileges never expire
+q58:
+  text: What should you monitor, according to Chapter 10?
+  show: 4
+  options:
+    a: Access
+    b: Resources
+    c: Billing
+    d: Excess permissions
+    e: Office temperature
+    f: Number of meetings
+    g: Desk layout
+    h: Coffee consumption
+q59:
+  text: What does the book say about backups?
+  show: 4
+  options:
+    a: Always back up your data
+    b: Test restoring backups regularly
+    c: Backups are never needed in the cloud
+    d: Ransomware makes backups pointless
+    e: One backup a decade is enough
+    f: Never restore a backup
+q60:
+  text: Why does project 12 use a keyed hash (HMAC) for customer pseudonyms?
+  show: 4
+  options:
+    a: A plain hash of an email can be matched by hashing known emails
+    b: Without the key, nobody can match a pseudonym to an email
+    c: The same email always gets the same pseudonym, so customers can be counted
+    d: It makes the data smaller
+    e: It can be reversed by anyone
+    f: It encrypts the whole warehouse
+q61:
+  text: What makes a data engineering portfolio project convincing?
+  show: 4
+  options:
+    a: Recorded decisions (ADRs) with the reasons
+    b: 'Evidence: outputs, measurements, screenshots'
+    c: Clear instructions to run it
+    d: Committing the data folder and secrets
+    e: As many tools as possible, whether needed or not
+    f: No README
+q62:
+  text: Which belong in the data engineering lifecycle's undercurrents, which you used across the course?
+  show: 4
+  options:
+    a: Security
+    b: Data management
+    c: DataOps
+    d: Orchestration
+    e: Advertising
+    f: Payroll
+    g: Interior design
+    h: Event planning
+q63:
+  text: Which habits from the course make a pipeline safe to re-run?
+  show: 4
+  options:
+    a: Idempotent steps
+    b: Moving watermarks only after writing
+    c: Removing duplicates in staging
+    d: Appending a new copy of every file on each run
+    e: Deleting raw data after loading
+    f: Skipping tests
+q64:
+  text: Your company wants a new tool. What does the book suggest asking?
+  show: 4
+  options:
+    a: What problem it solves, for whom
+    b: Whether the team can run it
+    c: Its total cost of ownership
+    d: How you would leave it
+    e: Whether it's the newest
+    f: Whether a giant tech company uses it
+    g: Whether its logo looks modern
+    h: How many conference talks mention it
+q65:
+  text: What will the book's authors say stays the same as tools change?
+  show: 4
+  options:
+    a: The data engineering lifecycle
+    b: Its undercurrents
+    c: Every tool's name
+    d: Cloud prices
+    e: Job titles
+    f: Nothing at all

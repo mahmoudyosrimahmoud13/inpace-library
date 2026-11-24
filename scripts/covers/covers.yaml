@@ -66,6 +66,14 @@ courses:
     sub: Kestra, BigQuery, dbt, Spark and Kafka, with the Data Engineering Zoomcamp
     tags: [16 lessons, 6 modules]
 
+  fundamentals-data-engineering:
+    theme: navy
+    art: fundamentals-data-engineering.svg
+    chip: Book + 13 projects · 13 days
+    title: Data<br>engineering,<br>built
+    sub: Reis and Housley's book, chapter by chapter, as one data platform
+    tags: [43 lessons, 13 projects]
+
   fmaa-prc:
     theme: sand
     art: fmaa.svg

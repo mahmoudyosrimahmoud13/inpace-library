@@ -1,0 +1,506 @@
+id: fundamentals-data-engineering
+title: 'Fundamentals of Data Engineering: build a data platform, chapter by chapter'
+version: 1
+language: en
+description: 'The whole data engineering lifecycle, following Fundamentals of Data Engineering by Joe Reis and Matt Housley
+  chapter by chapter, and built as one project: the data platform of a small online bookshop. Source systems and change data
+  capture, storage formats and a partitioned data lake, re-runnable ingestion with watermarks and dead letters, query plans,
+  a Kimball star schema with type 2 history, a tested SQL pipeline with write-audit-publish, a metrics layer, a dashboard,
+  ML features and reverse ETL, privacy controls, tested backups and an orchestrated nightly run, then a capstone you publish
+  on GitHub. Each Read lesson opens the right pages of your own copy of the book; every project runs on a laptop with Python
+  and DuckDB, and every output shown was produced by the real code. For people who know basic SQL and Python. Plan: 13 days,
+  about 2 hours a day.'
+image: cover.jpg
+book: fode.pdf
+book_info:
+  title: Fundamentals of Data Engineering
+  url: https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/
+  pages: 446
+downloads:
+- title: Fundamentals of Data Engineering (O'Reilly, the publisher's page)
+  url: https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/
+- title: DuckDB documentation
+  url: https://duckdb.org/docs/
+modules:
+- id: m1
+  title: 'Day 1: What data engineering is'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: the book, the projects and your plan'
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: 'Read: Preface and Chapter 1, Data Engineering Described'
+    file: lessons/m1-l2.md
+    minutes: 60
+    media: fode.pdf#pages=19-58
+  - id: m1-l3
+    title: The data engineer's job, on one page
+    file: lessons/m1-l3.md
+    minutes: 20
+  - id: m1-l4
+    title: 'Project 1: your workbench for Inkwell Books'
+    file: lessons/m1-l4.md
+    minutes: 25
+    media: inkwell/
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Do project 1: set up your `inkwell` folder, run `p01_setup_check.py`, and start the git repository with a `.gitignore`
+      for `inkwell_data/`. Then write half a page on a company you know: its data maturity stage, one thing a data engineer
+      there should do first, and one to avoid. Hand in a screenshot of the check and your half page.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain the difference between a Type A and a Type B data engineer, and which one a small company starting with
+      data needs, and why.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: The data engineering lifecycle'
+  lessons:
+  - id: m2-l1
+    title: 'Read: Chapter 2, The Data Engineering Lifecycle'
+    file: lessons/m2-l1.md
+    minutes: 60
+    media: fode.pdf#pages=59-96
+  - id: m2-l2
+    title: The lifecycle and its undercurrents, as one picture
+    file: lessons/m2-l2.md
+    minutes: 20
+  - id: m2-l3
+    title: 'Project 2: the whole lifecycle in one small file'
+    file: lessons/m2-l3.md
+    minutes: 40
+    media: inkwell/p02_lifecycle.py
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Do project 2 and its four ''make it yours'' changes: break and restore idempotency, add a second quality rule,
+      add average order value to the report, and write the alert message you''d want. Hand in your code and the output of
+      two runs in a row.'
+  - id: m2-explain
+    type: explain
+    prompt: Pick two undercurrents and explain, with an example from Inkwell, what goes wrong at which lifecycle stage if
+      a team ignores them.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Good data architecture'
+  lessons:
+  - id: m3-l1
+    title: 'Read: Chapter 3, Designing Good Data Architecture'
+    file: lessons/m3-l1.md
+    minutes: 75
+    media: fode.pdf#pages=97-139
+  - id: m3-l2
+    title: Architecture ideas you'll use every week
+    file: lessons/m3-l2.md
+    minutes: 25
+  - id: m3-l3
+    title: 'Project 3: loose coupling and planning for failure'
+    file: lessons/m3-l3.md
+    minutes: 40
+    media: inkwell/p03_decoupled.py
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Do project 3 with a dead-letter folder added, and write `ARCHITECTURE.md` with ADR 1 (the queue) and ADR 2 (raw
+      data in a lake) and a Mermaid diagram of the platform you'll build. Hand in the output and the file.
+  - id: m3-explain
+    type: explain
+    prompt: Explain why a loosely coupled system needs idempotent consumers, using the email example.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Choosing technologies'
+  lessons:
+  - id: m4-l1
+    title: 'Read: Chapter 4, Choosing Technologies Across the Lifecycle'
+    file: lessons/m4-l1.md
+    minutes: 55
+    media: fode.pdf#pages=141-178
+  - id: m4-l4
+    title: 'Read: Appendix B, Cloud Networking'
+    file: lessons/m4-l4.md
+    minutes: 10
+    media: fode.pdf#pages=425-428
+  - id: m4-l2
+    title: A checklist for choosing a data tool
+    file: lessons/m4-l2.md
+    minutes: 20
+  - id: m4-l3
+    title: 'Project 4: total cost of ownership for Inkwell''s analytics'
+    file: lessons/m4-l3.md
+    minutes: 40
+    media: inkwell/p04_tco.py
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: Do project 4 with real prices you looked up today (with links to the pricing pages) and a real engineer's hourly
+      cost. Add ADR 3 with your choice, the TCO table and one TOCO sentence. Hand in the script, its output and the ADR.
+  - id: m4-explain
+    type: explain
+    prompt: Explain the difference between total cost of ownership and total opportunity cost of ownership, with an example
+      of each for Inkwell.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Source systems'
+  lessons:
+  - id: m5-l1
+    title: 'Read: Chapter 5, Data Generation in Source Systems'
+    file: lessons/m5-l1.md
+    minutes: 60
+    media: fode.pdf#pages=181-214
+  - id: m5-l2
+    title: 'Source systems: what they keep, and what they forget'
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: 'Project 5: Inkwell''s source systems'
+    file: lessons/m5-l3.md
+    minutes: 40
+    media: inkwell/p05_source_system.py
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Do project 5. Find a customer who moved city and show their row in `customers` next to their rows in `change_log`.
+      Then write the data contract for the `orders` table. Hand in both.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why a CRUD table can't tell you how long orders take to ship, and two ways to keep that history.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Storage'
+  lessons:
+  - id: m6-l1
+    title: 'Read: Chapter 6, Storage'
+    file: lessons/m6-l1.md
+    minutes: 65
+    media: fode.pdf#pages=215-258
+  - id: m6-l4
+    title: 'Read: Appendix A, Serialization and Compression'
+    file: lessons/m6-l4.md
+    minutes: 15
+    media: fode.pdf#pages=417-424
+  - id: m6-l2
+    title: Rows, columns, and where data lives
+    file: lessons/m6-l2.md
+    minutes: 25
+  - id: m6-l3
+    title: 'Project 6: four storage formats, measured'
+    file: lessons/m6-l3.md
+    minutes: 40
+    media: inkwell/p06_storage.py
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Do project 6 and its variations (a bigger table, the one-record question, a city-partitioned lake). Write ADR
+      4 with the format and compression you choose for Inkwell's lake, backed by your measurements. Hand in your results table
+      and the ADR.
+  - id: m6-explain
+    type: explain
+    prompt: Explain why a columnar file answers 'revenue by genre' faster than a CSV file of the same data.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Ingestion'
+  lessons:
+  - id: m7-l1
+    title: 'Read: Chapter 7, Ingestion'
+    file: lessons/m7-l1.md
+    minutes: 60
+    media: fode.pdf#pages=259-296
+  - id: m7-l2
+    title: Ingestion patterns that survive real life
+    file: lessons/m7-l2.md
+    minutes: 25
+  - id: m7-l3
+    title: 'Project 7: ingest Inkwell''s data into the lake, safely and only once'
+    file: lessons/m7-l3.md
+    minutes: 50
+    media: inkwell/p07_ingest.py
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Do project 7, including the crash test: show with two DuckDB and SQLite counts that no order was skipped after
+      a crash between writing and saving the watermark. Add the volume warning. Hand in the counts and your code.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain why the watermark must be saved after the data is written, and what happens in each order if the job crashes
+      in between.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Queries'
+  lessons:
+  - id: m8-l1
+    title: 'Read: Chapter 8, part 1, Queries'
+    file: lessons/m8-l1.md
+    minutes: 45
+    media: fode.pdf#pages=297-313
+  - id: m8-l2
+    title: How to read a query plan, and three ways to scan less
+    file: lessons/m8-l2.md
+    minutes: 20
+  - id: m8-l3
+    title: 'Project 8: query plans, pruning, a join that lies, and windows'
+    file: lessons/m8-l3.md
+    minutes: 40
+    media: inkwell/p08_queries.py
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Do project 8. Fix the lying join two ways and show the row counts match, and count purchases in 6-hour sliding
+      windows starting every 3 hours. Hand in your SQL and outputs.
+  - id: m8-explain
+    type: explain
+    prompt: 'Explain row explosion: how it happens, why no error appears, and three habits that catch it.'
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m9
+  title: 'Day 9: Data modeling'
+  lessons:
+  - id: m9-l1
+    title: 'Read: Chapter 8, part 2, Data Modeling'
+    file: lessons/m9-l1.md
+    minutes: 60
+    media: fode.pdf#pages=313-335
+  - id: m9-l2
+    title: Normalized, star schema, one big table
+    file: lessons/m9-l2.md
+    minutes: 25
+  - id: m9-l3
+    title: 'Project 9: three models of Inkwell''s sales'
+    file: lessons/m9-l3.md
+    minutes: 45
+    media: inkwell/p09_model.py
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Do project 9, add a type 1 customer dimension, and answer 'revenue by city' with both. Draw the star schema (tables,
+      keys, grain). Hand in the drawing and both answers with one sentence on when each is the right one.
+  - id: m9-explain
+    type: explain
+    prompt: Explain what a type 2 slowly changing dimension is and why a sale must join to the version valid at the time of
+      the sale.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    pass: 70
+- id: m10
+  title: 'Day 10: Transformations'
+  lessons:
+  - id: m10-l1
+    title: 'Read: Chapter 8, part 3, Transformations'
+    file: lessons/m10-l1.md
+    minutes: 60
+    media: fode.pdf#pages=335-362
+  - id: m10-l2
+    title: 'Transformation pipelines: layers, a DAG, tests, and publishing safely'
+    file: lessons/m10-l2.md
+    minutes: 25
+  - id: m10-l3
+    title: 'Project 10, part 1: the SQL models'
+    file: lessons/m10-l3.md
+    minutes: 30
+    media: inkwell/models/
+  - id: m10-l4
+    title: 'Project 10, part 2: the runner, the tests, and publishing safely'
+    file: lessons/m10-l4.md
+    minutes: 40
+    media: inkwell/p10_transform.py
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: Do project 10, then add `mart_genre_sales` and a test that the mart's revenue equals the fact table's revenue.
+      Show one run where a test fails and nothing is published, and one green run. Hand in the outputs and your new files.
+  - id: m10-explain
+    type: explain
+    prompt: Explain write, audit, publish, and what the owner sees on her dashboard when a test fails.
+    min_words: 60
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q46
+    - q47
+    - q48
+    - q49
+    - q50
+    pass: 70
+- id: m11
+  title: 'Day 11: Serving data'
+  lessons:
+  - id: m11-l1
+    title: 'Read: Chapter 9, Serving Data for Analytics, ML, and Reverse ETL'
+    file: lessons/m11-l1.md
+    minutes: 60
+    media: fode.pdf#pages=363-392
+  - id: m11-l2
+    title: 'Serving: one definition, many users'
+    file: lessons/m11-l2.md
+    minutes: 20
+  - id: m11-l3
+    title: 'Project 11: a metrics layer, a dashboard, ML features, and reverse ETL'
+    file: lessons/m11-l3.md
+    minutes: 45
+    media: inkwell/p11_serve.py
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: Do project 11, add the `units` metric and `author` dimension to the dashboard, and write the dashboard's one-paragraph
+      data product description. Hand in a screenshot of the dashboard and the description.
+  - id: m11-explain
+    type: explain
+    prompt: Explain data leakage in a feature table, and how a cutoff date prevents it.
+    min_words: 60
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q51
+    - q52
+    - q53
+    - q54
+    - q55
+    pass: 70
+- id: m12
+  title: 'Day 12: Security, privacy and the future'
+  lessons:
+  - id: m12-l1
+    title: 'Read: Chapter 10, Security and Privacy, and Chapter 11, The Future'
+    file: lessons/m12-l1.md
+    minutes: 50
+    media: fode.pdf#pages=395-416
+  - id: m12-l2
+    title: Privacy and security habits for a data platform
+    file: lessons/m12-l2.md
+    minutes: 20
+  - id: m12-l3
+    title: 'Project 12, part 1: privacy, least privilege and tested backups'
+    file: lessons/m12-l3.md
+    minutes: 35
+    media: inkwell/p12_secure.py
+  - id: m12-l4
+    title: 'Project 12, part 2: the whole pipeline, on a schedule'
+    file: lessons/m12-l4.md
+    minutes: 35
+    media: inkwell/run_all.py
+  requires:
+  - id: m12-practical
+    type: practical
+    prompt: Do project 12, schedule `run_all.py` to run every night, and let it run at least twice. Hand in `logs/pipeline_runs.jsonl`,
+      the output of a safe failure, and Inkwell's one-page security policy.
+  - id: m12-explain
+    type: explain
+    prompt: Explain why a plain hash of an email doesn't protect a customer, and what a keyed hash changes.
+    min_words: 60
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - q56
+    - q57
+    - q58
+    - q59
+    - q60
+    pass: 70
+- id: m13
+  title: 'Day 13: Capstone'
+  lessons:
+  - id: m13-l1
+    title: 'Capstone: publish Inkwell as your portfolio project'
+    file: lessons/m13-l1.md
+    minutes: 90
+  - id: m13-l2
+    title: Looking back, and what to learn next
+    file: lessons/m13-l2.md
+    minutes: 10
+  requires:
+  - id: m13-practical
+    type: practical
+    prompt: Publish your Inkwell project on GitHub with the README, ARCHITECTURE.md with your ADRs, a dashboard screenshot,
+      and the outputs of a green run and a safe failure. Hand in the repository link and your CV line.
+  - id: m13-explain
+    type: explain
+    prompt: 'Explain your Inkwell platform in about a minute, as you would in a job interview: the problem, the stages, two
+      decisions you made and why.'
+    min_words: 60
+  - id: m13-quiz
+    type: quiz
+    questions:
+    - q61
+    - q62
+    - q63
+    - q64
+    - q65
+    pass: 70

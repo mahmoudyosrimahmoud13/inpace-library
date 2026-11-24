@@ -1,0 +1,18 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".3"/></filter>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffd166"/></marker></defs>
+<rect x="40" y="440" width="440" height="70" rx="18" fill="#1e4b85" filter="url(#s)"/>
+<text x="260" y="483" text-anchor="middle" font-family="JBM" font-weight="700" font-size="20" fill="#f3f7ff">storage, under every stage</text>
+<g stroke="#ffd166" stroke-width="4" fill="none" marker-end="url(#a)" stroke-linecap="round">
+<path d="M260 118 L260 150"/><path d="M260 218 L260 250"/><path d="M260 318 L260 350"/>
+</g>
+<g stroke="#7fd3ff" stroke-width="3" fill="none" stroke-dasharray="6 7">
+<path d="M120 184 C60 260 60 380 120 440"/><path d="M400 284 C460 330 460 400 400 440"/>
+</g>
+<g filter="url(#s)">
+<rect x="130" y="50" width="260" height="66" rx="33" fill="#ffd166"/><text x="260" y="91" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">generation</text>
+<rect x="130" y="152" width="260" height="66" rx="33" fill="#f3f7ff"/><text x="260" y="193" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">ingestion</text>
+<rect x="130" y="252" width="260" height="66" rx="33" fill="#f3f7ff"/><text x="260" y="293" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">transformation</text>
+<rect x="130" y="352" width="260" height="66" rx="33" fill="#ffd166"/><text x="260" y="393" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">serving</text>
+</g>
+</svg>

@@ -89,6 +89,7 @@ The app checks every course against the library's list before adding it. Your pr
 | <img src="courses/data-analytics-beginners/files/cover.jpg" width="160" alt=""> | [Data analytics for beginners: Excel, Power BI and Python](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-analytics-beginners.html) | 27 | about 12 h |
 | <img src="courses/data-engineering-advanced/files/cover.jpg" width="160" alt=""> | [Data engineering: building production pipelines](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/data-engineering-advanced.html) | 16 | about 9 h |
 | <img src="courses/excel-tutorial-for-data-analysts/files/cover.jpg" width="160" alt=""> | [Excel tutorial for data analysts](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/excel-tutorial-for-data-analysts.html) | 7 | about 1 h |
+| <img src="courses/fundamentals-data-engineering/files/cover.jpg" width="160" alt=""> | [Fundamentals of Data Engineering: build a data platform, chapter by chapter](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/fundamentals-data-engineering.html) | 43 | about 28 h |
 | <img src="courses/postgres-advanced/files/cover.jpg" width="160" alt=""> | [Advanced PostgreSQL: how Postgres really works](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/postgres-advanced.html) | 12 | about 7 h |
 | <img src="courses/postgres-beginners/files/cover.jpg" width="160" alt=""> | [PostgreSQL for Beginners: from zero to real queries](https://mahmoudyosrimahmoud13.github.io/inpace-library/c/postgres-beginners.html) | 16 | about 8 h |
 

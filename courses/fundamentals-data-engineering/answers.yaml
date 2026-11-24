@@ -1,0 +1,381 @@
+q1:
+  right:
+  - a
+  why: 'Chapter 1''s definition: systems and processes that turn raw data into high-quality, consistent information that supports
+    downstream uses such as analysis and machine learning.'
+q2:
+  right:
+  - a
+  - b
+  - c
+  why: 'Figure 1-8: starting with data, scaling with data, leading with data.'
+q3:
+  right:
+  - a
+  - b
+  - c
+  why: Type A (abstraction) assembles managed and off-the-shelf tools and avoids reinventing the wheel; Type B (build) builds
+    custom systems, usually where that gives a competitive edge.
+q4:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: SQL, Python, a JVM language (usually Java or Scala) and bash.
+q5:
+  right:
+  - a
+  - b
+  - d
+  why: 'Early on: quick wins, talking to stakeholders, off-the-shelf tools. Big custom platforms and copying big tech are
+    the classic mistakes at this stage.'
+q6:
+  right:
+  - a
+  - b
+  - c
+  - d
+  - e
+  why: 'Figure 2-1: generation, storage, ingestion, transformation, serving.'
+q7:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: 'The six undercurrents: security, data management, DataOps, data architecture, orchestration, software engineering.'
+q8:
+  right:
+  - a
+  - b
+  - c
+  why: 'Figure 2-8: automation, monitoring and observability, and incident response.'
+q9:
+  right:
+  - a
+  - b
+  why: 'Chapter 2: batch is excellent for many uses; adopt true real-time streaming only with a business use case that justifies
+    the trade-offs.'
+q10:
+  right:
+  - a
+  - b
+  why: 'The file name is the key: landing the same file again overwrites it, so running once or many times gives the same
+    result.'
+q11:
+  right:
+  - a
+  - b
+  - c
+  why: Design of systems supporting the evolving data needs of an enterprise, through flexible and reversible decisions reached
+    by evaluating trade-offs.
+q12:
+  right:
+  - a
+  why: RPO is about lost data; RTO is about outage time; availability and reliability are separate ideas.
+q13:
+  right:
+  - a
+  - b
+  why: Bezos' term for reversible decisions; the authors advise aiming for two-way doors whenever possible.
+q14:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: The four components listed in Chapter 3.
+q15:
+  right:
+  - a
+  - b
+  - c
+  why: Loose coupling adds a queue and a consumer; because queues and retries can deliver twice, the consumer must be idempotent.
+q16:
+  right:
+  - a
+  why: 'Chapter 4: TOCO is the cost of lost opportunities incurred by a choice.'
+q17:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: Immutable technologies have stood the test of time (the Lindy effect); new hyped tools are transitory until proven
+    otherwise.
+q18:
+  right:
+  - a
+  why: 'Chapter 4''s advice: use a two-year horizon to reevaluate technology choices.'
+q19:
+  right:
+  - a
+  - b
+  why: 'People were 74% of its 3-year cost in the example: the indirect cost a price list never shows.'
+q20:
+  right:
+  - a
+  - b
+  - c
+  why: Getting data in is cheap; getting it out costs per gigabyte, and moving between zones and regions can be charged too.
+q21:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: 'Figure 5-6: event, ingestion, process and processing time.'
+q22:
+  right:
+  - a
+  - b
+  - c
+  why: Messages are consumed and removed; a stream is an ordered, append-only log kept over a retention window, so you can
+    rewind it.
+q23:
+  right:
+  - a
+  - b
+  why: Insert-only keeps history, at the cost of table size and more expensive current-state lookups.
+q24:
+  right:
+  - a
+  - b
+  why: UPDATE overwrites the old status, so the table only knows the current state; the change log keeps the history.
+q25:
+  right:
+  - a
+  - b
+  why: 'Chapter 5 quotes James Denmore: a written agreement between the source owner and the ingesting team about what, how,
+    how often, and contacts.'
+q26:
+  right:
+  - a
+  - b
+  - c
+  why: Column pruning, better compression and an embedded schema; row formats are better for whole-record access and are what
+    you edit by hand.
+q27:
+  right:
+  - a
+  - b
+  - c
+  why: 'BASE: basically available, soft-state, eventual consistency, ''the opposite of ACID''.'
+q28:
+  right:
+  - a
+  - b
+  - c
+  why: Objects are written whole; object storage is cheap, durable and parallel, the base of lakes.
+q29:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: JSON repeats names on every line; Parquet was 4 to 6 times smaller and about 20 times faster; gzip compressed a bit
+    more but wrote much slower.
+q30:
+  right:
+  - a
+  - b
+  - c
+  why: Data lives in object storage; engines come and go and scale on their own.
+q31:
+  right:
+  - a
+  - b
+  - f
+  why: Unbounded data is data as events happen; bounded data is a convenient bucketing, for example by time.
+q32:
+  right:
+  - a
+  - b
+  why: 'Write first, then move the bookmark: the worst case is a duplicate, which transformation removes.'
+q33:
+  right:
+  - a
+  why: 'Chapter 7: batch-oriented CDC uses an updated_at field; continuous CDC reads every change from the log.'
+q34:
+  right:
+  - a
+  - b
+  why: Dead letters keep bad records out of the lake without losing them or stopping the pipeline.
+q35:
+  right:
+  - a
+  - b
+  - c
+  why: 'Inkwell lands raw data, then transforms it: ELT, so logic can be fixed and rebuilt from raw.'
+q36:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: Chapter 8's list also includes optimizing join strategy, and knowing how your database handles commits.
+q37:
+  right:
+  - a
+  - b
+  why: Repeated keys or join logic create many-to-many matches; no error appears, the numbers just grow.
+q38:
+  right:
+  - a
+  - b
+  - c
+  why: Session, fixed-time (aka tumbling) and sliding windows, plus watermarks.
+q39:
+  right:
+  - a
+  - b
+  why: 'Figure 8-8: a watermark decides whether data in a window is within the threshold or late.'
+q40:
+  right:
+  - a
+  - b
+  why: The Read Parquet step listed the file filters and scanned 1 of 60 files.
+q41:
+  right:
+  - a
+  - b
+  - c
+  why: 'Figure 8-12: conceptual, logical and physical models.'
+q42:
+  right:
+  - a
+  - b
+  - c
+  why: Inmon is the normalized central warehouse; Data Vault uses hubs, links and satellites.
+q43:
+  right:
+  - a
+  why: Type 1 overwrites; Type 2 keeps full history (the most used in practice); Type 3 keeps a current and a previous value.
+q44:
+  right:
+  - a
+  - b
+  - c
+  why: Hubs store business keys, links relationships, satellites attributes and context.
+q45:
+  right:
+  - a
+  - b
+  why: Totals match; only the city attribution differs, because the type 2 dimension keeps the customer's city at the time
+    of each sale.
+q46:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: The four update patterns in Chapter 8's transformations section.
+q47:
+  right:
+  - a
+  - b
+  why: Broadcast the small table to every node, or shuffle both sides by key (more expensive).
+q48:
+  right:
+  - a
+  - b
+  - c
+  why: Models are built in staging; only a run where every test passes is copied to where users read.
+q49:
+  right:
+  - a
+  - b
+  - c
+  why: Problems should fail a test loudly, not disappear silently.
+q50:
+  right:
+  - a
+  - b
+  why: New rows are staged, tested, and appended only on publish; re-runs find nothing new.
+q51:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: Also self-service and data mesh.
+q52:
+  right:
+  - a
+  - b
+  why: 'Chapter 9: loading data from an OLAP database back into a source system.'
+q53:
+  right:
+  - a
+  - b
+  why: 'Example: computing ad bids, loading them back into the ad platform, and repeating with an error.'
+q54:
+  right:
+  - a
+  - b
+  - c
+  why: Semantic and metrics layers keep definitions in one place.
+q55:
+  right:
+  - a
+  - b
+  why: Point-in-time correctness prevents data leakage.
+q56:
+  right:
+  - a
+  why: 'People, processes and technology, in that order: ''the weakest link in security and privacy is you''.'
+q57:
+  right:
+  - a
+  - b
+  why: 'Chapter 10: only what''s needed for the task at hand and nothing more.'
+q58:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: A billing spike or unusual resource use can mean an attacker.
+q59:
+  right:
+  - a
+  - b
+  why: Back up, and test restoration regularly, especially in the era of ransomware.
+q60:
+  right:
+  - a
+  - b
+  - c
+  why: Hashing without a salt or key may not protect privacy, as Chapter 7 warns.
+q61:
+  right:
+  - a
+  - b
+  - c
+  why: Decisions, evidence and a way to run it; no data, no secrets.
+q62:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: With data architecture and software engineering, the six undercurrents.
+q63:
+  right:
+  - a
+  - b
+  - c
+  why: Re-running must never lose or double data.
+q64:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: Architecture first, then team, cost, opportunity cost and reversibility; not hype.
+q65:
+  right:
+  - a
+  - b
+  why: 'Chapter 11: the lifecycle isn''t going away; tools, titles and prices keep changing.'

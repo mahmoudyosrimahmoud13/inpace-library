@@ -1,0 +1,27 @@
+id: data-engineer
+title: Become a data engineer
+description: From SQL and Python to building and running real data pipelines. Every step after the basics is a project you can show, ending with a production-style pipeline on cloud tools.
+language: en
+author: inPace
+official: true
+order: 37
+tags: [data engineering, pipelines, sql, python, career, projects]
+steps:
+  - course: postgres-beginners
+    note: SQL first. Every data engineer writes it every day. Skip it if SELECT, JOIN and GROUP BY already feel easy.
+    optional: true
+  - course: python-full
+    note: The glue language of data engineering. Skip it if you already write Python with functions, files and tests.
+    optional: true
+  - course: git-zero-to-master
+    note: Pipelines are code, and code lives in git. Enough to commit, branch and publish your projects.
+    optional: true
+  - course: fundamentals-data-engineering
+    note: The core of this path. The whole data engineering lifecycle, from the book by Reis and Housley, built as one project on your laptop.
+  - course: docker-containers
+    note: Containers, so your pipelines run the same everywhere. The next course uses them from day one.
+  - course: aws-fundamentals
+    note: The cloud basics behind data lakes and warehouses. Optional if you'll work with another cloud.
+    optional: true
+  - course: data-engineering-advanced
+    note: The same ideas on industry tools, Kestra, BigQuery, dbt, Spark and Kafka, built the way production teams do.
