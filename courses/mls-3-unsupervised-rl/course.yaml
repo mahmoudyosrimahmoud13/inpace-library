@@ -1,14 +1,17 @@
 id: mls-3-unsupervised-rl
 title: 'Machine Learning refresh 3: unsupervised learning, recommenders and reinforcement learning'
-version: 2
+version: 3
 language: en
-description: 'An advanced refresh of part 3 of Andrew Ng''s Machine Learning Specialization, with the original slides
-  inside each lesson: k-means, anomaly detection, collaborative and content-based recommenders, retrieval and ranking,
-  reinforcement learning, the Bellman equation and deep Q-learning, plus PCA and an interview drill. Plan: about
-  9 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
+description: 'An advanced refresh of part 3 of Andrew Ng''s Machine Learning Specialization, with the original slides inside
+  each lesson, and a project you build alongside it: Movie night, a recommender for MovieLens 100K. The lessons cover k-means,
+  anomaly detection, collaborative and content-based recommenders, retrieval and ranking, reinforcement learning, the Bellman
+  equation and deep Q-learning, plus PCA and an interview drill. The seven project lessons build each idea on real data: k-means
+  from scratch, catching rating bots, collaborative filtering from scratch, content-based filtering with an honest ranking
+  test, the Mars rover solved with the Bellman equation and Q-learning, deep Q-learning, and PCA on what the recommender learned.
+  Every output shown is real. Plan: about 9 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
 image: cover.jpg
 downloads:
-- title: 'Official slides (DeepLearning.AI, Course 3)'
+- title: Official slides (DeepLearning.AI, Course 3)
   url: https://community.deeplearning.ai/t/mls-course-3-lecture-notes/178332
 modules:
 - id: m1
@@ -23,16 +26,20 @@ modules:
     file: lessons/m1-l2.md
     minutes: 35
     media: C3_W1.pdf#pages=2-35
+  - id: m1-l3
+    title: 'Project 1: Movie night starts with k-means'
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: lab/p1_kmeans.py
   requires:
   - id: m1-practical
     type: practical
-    prompt: Implement k-means from scratch in NumPy (assign and move steps, many random starts, the cost J), use
-      it to compress an image to 16 colours, and compare with scikit-learn's KMeans. Upload the notebook and the
-      two images.
+    prompt: Implement k-means from scratch in NumPy (assign and move steps, many random starts, the cost J), use it to compress
+      an image to 16 colours, and compare with scikit-learn's KMeans. Upload the notebook and the two images.
   - id: m1-explain
     type: explain
-    prompt: Why does the k-means cost never increase, and why can it still end in a poor result? How do you protect
-      against that?
+    prompt: Why does the k-means cost never increase, and why can it still end in a poor result? How do you protect against
+      that?
     min_words: 60
   - id: m1-quiz
     type: quiz
@@ -54,11 +61,16 @@ modules:
     title: 'Going further: modern options'
     file: lessons/m2-l2.md
     minutes: 15
+  - id: m2-l3
+    title: 'Project 2: catch the rating bots'
+    file: lessons/m2-l3.md
+    minutes: 30
+    media: lab/p2_anomaly.py
   requires:
   - id: m2-practical
     type: practical
-    prompt: Build a Gaussian anomaly detector from scratch on a dataset with a few labelled anomalies, choose ε
-      by F1 on a CV set, and compare with scikit-learn's IsolationForest. Upload the notebook.
+    prompt: Build a Gaussian anomaly detector from scratch on a dataset with a few labelled anomalies, choose ε by F1 on a
+      CV set, and compare with scikit-learn's IsolationForest. Upload the notebook.
   - id: m2-explain
     type: explain
     prompt: When would you use anomaly detection instead of a supervised classifier? Use fraud and spam as examples.
@@ -84,12 +96,17 @@ modules:
     file: lessons/m3-l2.md
     minutes: 25
     media: C3_W2.pdf#pages=20-29
+  - id: m3-l3
+    title: 'Project 3: collaborative filtering from scratch'
+    file: lessons/m3-l3.md
+    minutes: 40
+    media: lab/p3_collaborative.py
   requires:
   - id: m3-practical
     type: practical
-    prompt: Implement collaborative filtering with mean normalization in TensorFlow (GradientTape) on MovieLens
-      small. Add your own ratings for 10 movies and show your top 10 recommendations and the 5 movies most similar
-      to one you like. Upload the notebook.
+    prompt: Implement collaborative filtering with mean normalization in TensorFlow (GradientTape) on MovieLens small. Add
+      your own ratings for 10 movies and show your top 10 recommendations and the 5 movies most similar to one you like. Upload
+      the notebook.
   - id: m3-explain
     type: explain
     prompt: Explain the cold-start problem and how mean normalization helps a new user. What does it NOT solve?
@@ -110,12 +127,16 @@ modules:
     file: lessons/m4-l1.md
     minutes: 35
     media: C3_W2.pdf#pages=30-48
+  - id: m4-l2
+    title: 'Project 4: content-based filtering, and retrieve then rank'
+    file: lessons/m4-l2.md
+    minutes: 35
+    media: lab/p4_content.py
   requires:
   - id: m4-practical
     type: practical
-    prompt: 'Design (in writing, with a diagram) the recommender for inPace''s course library: what retrieval would
-      gather, what features each tower would use, what you''d optimize, and one ethical risk with a mitigation.
-      Upload it.'
+    prompt: 'Design (in writing, with a diagram) the recommender for inPace''s course library: what retrieval would gather,
+      what features each tower would use, what you''d optimize, and one ethical risk with a mitigation. Upload it.'
   - id: m4-explain
     type: explain
     prompt: Explain retrieval and ranking, and why a large recommender needs both steps.
@@ -144,12 +165,11 @@ modules:
   requires:
   - id: m5-practical
     type: practical
-    prompt: 'Code the Mars rover in Python: compute Q(s, a) for every state and action by brute force for γ = 0.5
-      and γ = 0.9, and show how the best policy changes. Upload the code and both tables.'
+    prompt: 'Code the Mars rover in Python: compute Q(s, a) for every state and action by brute force for γ = 0.5 and γ =
+      0.9, and show how the best policy changes. Upload the code and both tables.'
   - id: m5-explain
     type: explain
-    prompt: Explain what the discount factor does, and how the rover's best policy changes when γ gets closer to
-      1.
+    prompt: Explain what the discount factor does, and how the rover's best policy changes when γ gets closer to 1.
     min_words: 60
   - id: m5-quiz
     type: quiz
@@ -172,11 +192,16 @@ modules:
     file: lessons/m6-l2.md
     minutes: 30
     media: C3_W3.pdf#pages=34-48
+  - id: m6-l3
+    title: 'Project 5: the Mars rover, solved'
+    file: lessons/m6-l3.md
+    minutes: 35
+    media: lab/p5_bellman.py
   requires:
   - id: m6-practical
     type: practical
-    prompt: Solve the rover by value iteration (repeatedly applying the Bellman equation until Q stops changing),
-      with and without a 10% slip probability. Compare with your Day 6 brute force. Upload the code.
+    prompt: Solve the rover by value iteration (repeatedly applying the Bellman equation until Q stops changing), with and
+      without a 10% slip probability. Compare with your Day 6 brute force. Upload the code.
   - id: m6-explain
     type: explain
     prompt: Explain the Bellman equation in words and why it lets you create training targets for a network.
@@ -201,12 +226,16 @@ modules:
     title: 'Going further: what interviewers may ask'
     file: lessons/m7-l2.md
     minutes: 15
+  - id: m7-l3
+    title: 'Project 6: deep Q-learning on a continuous rover'
+    file: lessons/m7-l3.md
+    minutes: 35
+    media: lab/p6_dqn.py
   requires:
   - id: m7-practical
     type: practical
-    prompt: Train a DQN on Gymnasium's LunarLander-v3 (or CartPole-v1 if you're short on time) with a replay buffer,
-      ε-greedy and a soft-updated target network. Plot the average return over episodes. Upload the notebook and
-      a short video or GIF.
+    prompt: Train a DQN on Gymnasium's LunarLander-v3 (or CartPole-v1 if you're short on time) with a replay buffer, ε-greedy
+      and a soft-updated target network. Plot the average return over episodes. Upload the notebook and a short video or GIF.
   - id: m7-explain
     type: explain
     prompt: Why does DQN need a target network and a replay buffer? What goes wrong without each?
@@ -230,15 +259,19 @@ modules:
     title: 25 questions, short answers
     file: lessons/m8-l2.md
     minutes: 40
+  - id: m8-l3
+    title: 'Project 7: PCA on what the recommender learned'
+    file: lessons/m8-l3.md
+    minutes: 30
+    media: lab/p7_pca.py
   requires:
   - id: m8-practical
     type: practical
-    prompt: Write a one-page answer to the design question in the last lesson, with a diagram, and record yourself
-      answering 10 of the 25 questions. Upload both.
+    prompt: Write a one-page answer to the design question in the last lesson, with a diagram, and record yourself answering
+      10 of the 25 questions. Upload both.
   - id: m8-explain
     type: explain
-    prompt: 'An interviewer asks: ''How would you evaluate a recommender system before and after launch?'' Answer
-      it.'
+    prompt: 'An interviewer asks: ''How would you evaluate a recommender system before and after launch?'' Answer it.'
     min_words: 90
   - id: m8-quiz
     type: quiz

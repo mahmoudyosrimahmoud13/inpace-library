@@ -1,12 +1,15 @@
 id: computer-vision
 title: 'Computer vision: from pixels to modern models'
-version: 1
+version: 2
 language: en
-description: 'A short, practical tour of computer vision with tested Python and OpenCV examples: images as arrays and colour
-  spaces, convolution, blur and edges, thresholds, contours and measuring objects, keypoints, matching and RANSAC, convolutional
-  neural networks and famous architectures, transfer learning, object detection with IoU, NMS and mAP, segmentation and Segment
-  Anything, vision transformers, CLIP and vision-language models, and how to ship a vision project. Optional videos from Stanford
-  CS231n, 3Blue1Brown and Computerphile. About 5 days, 60 minutes a day.'
+description: 'A short, practical tour of computer vision with tested Python and OpenCV examples, and a project you build alongside
+  it: a coin inspector that finds, counts and measures coins in a photo. The lessons cover images as arrays and colour spaces,
+  convolution, blur and edges, thresholds, contours and measuring objects, keypoints, matching and RANSAC, convolutional neural
+  networks and famous architectures, transfer learning, object detection with IoU, NMS and mAP, segmentation and Segment Anything,
+  vision transformers, CLIP and vision-language models, and how to ship a vision project. Each day ends with a project: pixels
+  and edges, counting with contours and matching with RANSAC, a small CNN, watershed and a detector graded with IoU, and a
+  shipped inspect() function with robustness tests. Every output shown is real. Optional videos from Stanford CS231n, 3Blue1Brown
+  and Computerphile. About 5 days, 90 minutes a day.'
 image: cover.jpg
 downloads:
 - title: OpenCV Python tutorials
@@ -27,6 +30,11 @@ modules:
     title: 'Filters and convolution: blur, sharpen, edges'
     file: lessons/m1-l2.md
     minutes: 35
+  - id: m1-l3
+    title: 'Project 1: the coin inspector starts with pixels'
+    file: lessons/m1-l3.md
+    minutes: 30
+    media: lab/p1_pixels.py
   requires:
   - id: m1-practical
     type: practical
@@ -57,6 +65,11 @@ modules:
     title: 'Features and matching: finding the same thing twice'
     file: lessons/m2-l2.md
     minutes: 30
+  - id: m2-l3
+    title: 'Project 2: count and measure with classic vision'
+    file: lessons/m2-l3.md
+    minutes: 40
+    media: lab/p2_measure.py
   requires:
   - id: m2-practical
     type: practical
@@ -89,6 +102,11 @@ modules:
     title: Famous architectures and transfer learning
     file: lessons/m3-l2.md
     minutes: 25
+  - id: m3-l3
+    title: 'Project 3: a CNN that tells coin from background'
+    file: lessons/m3-l3.md
+    minutes: 40
+    media: lab/p3_cnn.py
   requires:
   - id: m3-practical
     type: practical
@@ -120,6 +138,11 @@ modules:
     title: 'Segmentation: labelling every pixel'
     file: lessons/m4-l2.md
     minutes: 25
+  - id: m4-l3
+    title: 'Project 4: split touching coins, and build a detector'
+    file: lessons/m4-l3.md
+    minutes: 40
+    media: lab/p4_detect.py
   requires:
   - id: m4-practical
     type: practical
@@ -150,6 +173,11 @@ modules:
     title: Vision-language models and shipping a vision project
     file: lessons/m5-l2.md
     minutes: 30
+  - id: m5-l3
+    title: 'Project 5: ship the inspector'
+    file: lessons/m5-l3.md
+    minutes: 35
+    media: lab/p5_ship.py
   requires:
   - id: m5-practical
     type: practical

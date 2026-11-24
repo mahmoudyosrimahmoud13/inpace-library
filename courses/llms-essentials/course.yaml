@@ -1,12 +1,14 @@
 id: llms-essentials
 title: 'LLMs: how they work and how to use them'
-version: 1
+version: 2
 language: en
-description: 'A short course that opens the box on large language models, with small runnable Python examples: next-token
-  prediction, tokens and byte-pair encoding, embeddings and attention, the transformer, pretraining and scaling laws, fine-tuning,
-  RLHF, DPO and reasoning models, sampling settings, inference speed, the KV cache and context windows, and how to use LLMs
-  well with prompts, structured output, RAG, tools and evaluation. Optional videos by 3Blue1Brown and Andrej Karpathy. About
-  5 days, 60 minutes a day.'
+description: 'A short course that opens the box on large language models, and a project you build alongside it: TinyGPT, a
+  small GPT trained from scratch on Shakespeare on your own computer. The lessons cover next-token prediction, tokens and
+  byte-pair encoding, embeddings and attention, the transformer, pretraining and scaling laws, fine-tuning, RLHF, DPO and
+  reasoning models, sampling settings, inference speed, the KV cache and context windows, and how to use LLMs well with prompts,
+  structured output, RAG, tools and evaluation. Each day ends with a project: your own BPE tokenizer, the transformer in PyTorch,
+  pretraining, sampling and a KV cache, and an evaluation against baselines. Every output shown is real. Optional videos by
+  3Blue1Brown and Andrej Karpathy. About 5 days, 90 minutes a day.'
 image: cover.jpg
 downloads:
 - title: '3Blue1Brown: Neural networks series'
@@ -27,6 +29,11 @@ modules:
     title: 'Tokens: how text becomes numbers'
     file: lessons/m1-l2.md
     minutes: 30
+  - id: m1-l3
+    title: 'Project 1: a tokenizer of your own'
+    file: lessons/m1-l3.md
+    minutes: 40
+    media: lab/p1_tokenizer.py
   requires:
   - id: m1-practical
     type: practical
@@ -57,6 +64,11 @@ modules:
     title: The transformer, end to end
     file: lessons/m2-l2.md
     minutes: 30
+  - id: m2-l3
+    title: 'Project 2: build the transformer'
+    file: lessons/m2-l3.md
+    minutes: 45
+    media: lab/gpt.py
   requires:
   - id: m2-practical
     type: practical
@@ -87,6 +99,11 @@ modules:
     title: 'From base model to assistant: fine-tuning, preferences and reasoning'
     file: lessons/m3-l2.md
     minutes: 30
+  - id: m3-l3
+    title: 'Project 3: pretrain TinyGPT'
+    file: lessons/m3-l3.md
+    minutes: 45
+    media: lab/p3_train.py
   requires:
   - id: m3-practical
     type: practical
@@ -119,6 +136,11 @@ modules:
     title: 'Inference: speed, memory and context windows'
     file: lessons/m4-l2.md
     minutes: 30
+  - id: m4-l3
+    title: 'Project 4: sampling settings and a KV cache'
+    file: lessons/m4-l3.md
+    minutes: 35
+    media: lab/p4_generate.py
   requires:
   - id: m4-practical
     type: practical
@@ -149,6 +171,11 @@ modules:
     title: 'Beyond the prompt: RAG, tools, evaluation and limits'
     file: lessons/m5-l2.md
     minutes: 30
+  - id: m5-l3
+    title: 'Project 5: evaluate TinyGPT'
+    file: lessons/m5-l3.md
+    minutes: 35
+    media: lab/p5_evaluate.py
   requires:
   - id: m5-practical
     type: practical

@@ -304,10 +304,10 @@ courses:
   llms-essentials:
     theme: sky
     art: llms-essentials.svg
-    chip: AI · 5 days
+    chip: AI · 5 days · 5 projects
     title: How LLMs<br>really work
     sub: Tokens, attention, training stages, sampling and using them well
-    tags: [10 lessons, 25 quiz questions]
+    tags: [15 lessons, 5 projects]
 
   langchain-agents:
     theme: forest
@@ -320,10 +320,10 @@ courses:
   computer-vision:
     theme: coral
     art: computer-vision.svg
-    chip: AI · 5 days
+    chip: AI · 5 days · 5 projects
     title: Computer<br>vision
     sub: From pixels and filters to CNNs, detection, ViT and CLIP
-    tags: [10 lessons, 25 quiz questions]
+    tags: [15 lessons, 5 projects]
 
   machine-vision:
     theme: navy

@@ -1,14 +1,16 @@
 id: mls-1-supervised
 title: 'Machine Learning refresh 1: supervised learning (regression and classification)'
-version: 2
+version: 3
 language: en
-description: 'An advanced refresh of part 1 of Andrew Ng''s Machine Learning Specialization, with the original slides
-  inside each lesson: linear regression, cost functions, gradient descent, vectorization, feature scaling and engineering,
-  logistic regression, overfitting and regularization, then a from-scratch build and an interview drill. Plan: about
-  10 days, 1 to 1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
+description: 'An advanced refresh of part 1 of Andrew Ng''s Machine Learning Specialization, with the original slides inside
+  each lesson, and a project you build alongside it: Homes, predicting California house values from census data. The lessons
+  cover linear regression, cost functions, gradient descent, vectorization, feature scaling and engineering, logistic regression,
+  overfitting and regularization, then a from-scratch build and an interview drill. The six project lessons build each idea
+  yourself in NumPy on real data and check it against scikit-learn; every output shown is real. Plan: about 10 days, 1 to
+  1.5 hours a day. Slides by DeepLearning.AI (CC BY-SA 2.0, non-commercial).'
 image: cover.jpg
 downloads:
-- title: 'Official slides (DeepLearning.AI, Course 1)'
+- title: Official slides (DeepLearning.AI, Course 1)
   url: https://community.deeplearning.ai/t/mls-course-1-lecture-notes/148503
 modules:
 - id: m1
@@ -30,13 +32,12 @@ modules:
   requires:
   - id: m1-practical
     type: practical
-    prompt: 'Write one page describing three ML problems from your own life or work: for each, the input x, the
-      output y (or the structure you''d look for), the kind of learning, and where the data would come from. Upload
-      it.'
+    prompt: 'Write one page describing three ML problems from your own life or work: for each, the input x, the output y (or
+      the structure you''d look for), the kind of learning, and where the data would come from. Upload it.'
   - id: m1-explain
     type: explain
-    prompt: Explain the difference between supervised and unsupervised learning to a friend, with one example of
-      each that isn't in the slides.
+    prompt: Explain the difference between supervised and unsupervised learning to a friend, with one example of each that
+      isn't in the slides.
     min_words: 60
   - id: m1-quiz
     type: quiz
@@ -63,15 +64,20 @@ modules:
     title: 'Practice: compute a cost by hand'
     file: lessons/m2-l3.md
     minutes: 15
+  - id: m2-l4
+    title: 'Project 1: a line through real house prices'
+    file: lessons/m2-l4.md
+    minutes: 30
+    media: lab/p1_one_feature.py
   requires:
   - id: m2-practical
     type: practical
-    prompt: In a notebook, plot the cost J(w) for b = 0 over a range of w for a small dataset, and a contour plot
-      of J(w, b). Mark the minimum. Upload the notebook or the plots.
+    prompt: In a notebook, plot the cost J(w) for b = 0 over a range of w for a small dataset, and a contour plot of J(w,
+      b). Mark the minimum. Upload the notebook or the plots.
   - id: m2-explain
     type: explain
-    prompt: Why is squared error the usual cost for linear regression? Give the practical reason and the statistical
-      one (maximum likelihood).
+    prompt: Why is squared error the usual cost for linear regression? Give the practical reason and the statistical one (maximum
+      likelihood).
     min_words: 60
   - id: m2-quiz
     type: quiz
@@ -94,16 +100,20 @@ modules:
     file: lessons/m3-l2.md
     minutes: 30
     media: C1_W1.pdf#pages=70-86
+  - id: m3-l3
+    title: 'Project 2: gradient descent from scratch'
+    file: lessons/m3-l3.md
+    minutes: 30
+    media: lab/p2_gradient_descent.py
   requires:
   - id: m3-practical
     type: practical
-    prompt: Implement gradient descent for univariate linear regression in NumPy (no ML libraries). Run it with
-      three learning rates (one too small, one good, one that diverges) and plot the three cost curves. Upload the
-      notebook.
+    prompt: Implement gradient descent for univariate linear regression in NumPy (no ML libraries). Run it with three learning
+      rates (one too small, one good, one that diverges) and plot the three cost curves. Upload the notebook.
   - id: m3-explain
     type: explain
-    prompt: Derive the gradient of J with respect to w for linear regression, step by step, and explain why the
-      update must be simultaneous.
+    prompt: Derive the gradient of J with respect to w for linear regression, step by step, and explain why the update must
+      be simultaneous.
     min_words: 60
   - id: m3-quiz
     type: quiz
@@ -129,12 +139,11 @@ modules:
   requires:
   - id: m4-practical
     type: practical
-    prompt: Write fully vectorized multiple linear regression (predict, cost, gradients, training loop) for a dataset
-      with at least 4 features. Time it against a loop version with %timeit. Upload the notebook.
+    prompt: Write fully vectorized multiple linear regression (predict, cost, gradients, training loop) for a dataset with
+      at least 4 features. Time it against a loop version with %timeit. Upload the notebook.
   - id: m4-explain
     type: explain
-    prompt: Why is vectorized code faster? Mention what NumPy does under the hood, and one bug broadcasting can
-      hide.
+    prompt: Why is vectorized code faster? Mention what NumPy does under the hood, and one bug broadcasting can hide.
     min_words: 60
   - id: m4-quiz
     type: quiz
@@ -162,16 +171,20 @@ modules:
     file: lessons/m5-l3.md
     minutes: 25
     media: C1_W2.pdf#pages=31-35
+  - id: m5-l4
+    title: 'Project 3: many features, vectorized and scaled'
+    file: lessons/m5-l4.md
+    minutes: 35
+    media: lab/p3_many_features.py
   requires:
   - id: m5-practical
     type: practical
-    prompt: Take a real dataset (for example scikit-learn's California housing). Train with and without z-score
-      scaling and compare the cost curves; then add 2 engineered features and report the change in validation error.
-      Upload the notebook.
+    prompt: Take a real dataset (for example scikit-learn's California housing). Train with and without z-score scaling and
+      compare the cost curves; then add 2 engineered features and report the change in validation error. Upload the notebook.
   - id: m5-explain
     type: explain
-    prompt: 'Explain data leakage in feature scaling: what goes wrong if you compute the mean and standard deviation
-      on all the data, and how to do it right.'
+    prompt: 'Explain data leakage in feature scaling: what goes wrong if you compute the mean and standard deviation on all
+      the data, and how to do it right.'
     min_words: 60
   - id: m5-quiz
     type: quiz
@@ -199,16 +212,20 @@ modules:
     file: lessons/m6-l3.md
     minutes: 20
     media: C1_W3.pdf#pages=25-28
+  - id: m6-l4
+    title: 'Project 4: logistic regression, is this district expensive?'
+    file: lessons/m6-l4.md
+    minutes: 35
+    media: lab/p4_logistic.py
   requires:
   - id: m6-practical
     type: practical
-    prompt: Implement logistic regression from scratch in NumPy on a 2-feature dataset, plot the data and the decision
-      boundary, then add squared features to fit a circular boundary. Compare your accuracy with scikit-learn's
-      LogisticRegression. Upload the notebook.
+    prompt: Implement logistic regression from scratch in NumPy on a 2-feature dataset, plot the data and the decision boundary,
+      then add squared features to fit a circular boundary. Compare your accuracy with scikit-learn's LogisticRegression.
+      Upload the notebook.
   - id: m6-explain
     type: explain
-    prompt: Why don't we use squared error for logistic regression? Explain convexity and maximum likelihood in
-      your own words.
+    prompt: Why don't we use squared error for logistic regression? Explain convexity and maximum likelihood in your own words.
     min_words: 60
   - id: m6-quiz
     type: quiz
@@ -231,11 +248,16 @@ modules:
     file: lessons/m7-l2.md
     minutes: 30
     media: C1_W3.pdf#pages=37-48
+  - id: m7-l3
+    title: 'Project 5: overfitting, seen and fixed'
+    file: lessons/m7-l3.md
+    minutes: 35
+    media: lab/p5_regularization.py
   requires:
   - id: m7-practical
     type: practical
-    prompt: Fit a degree-10 polynomial to 15 noisy points with several λ values (0, 0.01, 1, 100). Plot the curves
-      and the training and validation error against λ. Upload the notebook and say which λ you'd pick.
+    prompt: Fit a degree-10 polynomial to 15 noisy points with several λ values (0, 0.01, 1, 100). Plot the curves and the
+      training and validation error against λ. Upload the notebook and say which λ you'd pick.
   - id: m7-explain
     type: explain
     prompt: Explain the bias-variance trade-off with the polynomial example, and how λ moves a model along it.
@@ -259,15 +281,19 @@ modules:
     title: 'Interview drill: 15 questions'
     file: lessons/m8-l2.md
     minutes: 40
+  - id: m8-l3
+    title: 'Project 6: check it all against scikit-learn'
+    file: lessons/m8-l3.md
+    minutes: 35
+    media: lab/p6_check_with_sklearn.py
   requires:
   - id: m8-practical
     type: practical
-    prompt: Finish tinyml.py with tests and a README (learning curves, comparison with scikit-learn). Upload the
-      zip.
+    prompt: Finish tinyml.py with tests and a README (learning curves, comparison with scikit-learn). Upload the zip.
   - id: m8-explain
     type: explain
-    prompt: 'An interviewer says: ''Explain logistic regression to me from the model to the training loop.'' Write
-      your answer as you would say it, in under 250 words.'
+    prompt: 'An interviewer says: ''Explain logistic regression to me from the model to the training loop.'' Write your answer
+      as you would say it, in under 250 words.'
     min_words: 120
   - id: m8-quiz
     type: quiz
