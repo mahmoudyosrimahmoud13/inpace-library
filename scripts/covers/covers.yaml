@@ -66,6 +66,14 @@ courses:
     sub: Kestra, BigQuery, dbt, Spark and Kafka, with the Data Engineering Zoomcamp
     tags: [16 lessons, 6 modules]
 
+  designing-data-intensive-applications:
+    theme: plum
+    art: designing-data-intensive-applications.svg
+    chip: Book + 14 projects · 15 days
+    title: Data systems,<br>built from<br>scratch
+    sub: Kleppmann's DDIA, chapter by chapter, every idea as a small working program
+    tags: [45 lessons, 14 projects]
+
   fundamentals-data-engineering:
     theme: navy
     art: fundamentals-data-engineering.svg

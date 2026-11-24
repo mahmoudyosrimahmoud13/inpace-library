@@ -1,0 +1,20 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".3"/></filter>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ff8fab"/></marker></defs>
+<g filter="url(#s)">
+<rect x="40" y="40" width="440" height="70" rx="14" fill="#fbf2ff"/>
+<g font-family="JBM" font-weight="700" font-size="18" fill="#2d1b3d">
+<text x="60" y="82">log</text>
+</g>
+<g fill="#ff8fab"><rect x="120" y="56" width="50" height="38" rx="6"/><rect x="178" y="56" width="50" height="38" rx="6"/><rect x="236" y="56" width="50" height="38" rx="6"/><rect x="294" y="56" width="50" height="38" rx="6"/><rect x="352" y="56" width="50" height="38" rx="6" opacity=".55"/><rect x="410" y="56" width="50" height="38" rx="6" opacity=".25"/></g>
+</g>
+<g stroke="#ff8fab" stroke-width="4" fill="none" marker-end="url(#a)" stroke-linecap="round">
+<path d="M260 118 L260 170"/><path d="M200 250 C150 290 120 300 120 340"/><path d="M320 250 C370 290 400 300 400 340"/>
+</g>
+<g filter="url(#s)">
+<rect x="170" y="176" width="180" height="70" rx="35" fill="#ff8fab"/><text x="260" y="219" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#2d1b3d">leader</text>
+<rect x="40" y="346" width="160" height="66" rx="33" fill="#fbf2ff"/><text x="120" y="387" text-anchor="middle" font-family="JBM" font-weight="700" font-size="19" fill="#2d1b3d">follower</text>
+<rect x="320" y="346" width="160" height="66" rx="33" fill="#fbf2ff"/><text x="400" y="387" text-anchor="middle" font-family="JBM" font-weight="700" font-size="19" fill="#2d1b3d">follower</text>
+<rect x="110" y="450" width="300" height="62" rx="16" fill="#4b2d66"/><text x="260" y="489" text-anchor="middle" font-family="JBM" font-weight="700" font-size="18" fill="#fbf2ff">LSM · MVCC · quorums · Raft</text>
+</g>
+</svg>

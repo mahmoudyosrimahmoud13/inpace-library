@@ -23,5 +23,8 @@ steps:
   - course: aws-fundamentals
     note: The cloud basics behind data lakes and warehouses. Optional if you'll work with another cloud.
     optional: true
+  - course: designing-data-intensive-applications
+    note: How databases, replication, transactions and streams work inside, each built from scratch. Take it before or alongside the next course; it makes every tool there make sense.
+    optional: true
   - course: data-engineering-advanced
     note: The same ideas on industry tools, Kestra, BigQuery, dbt, Spark and Kafka, built the way production teams do.

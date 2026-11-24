@@ -1,0 +1,551 @@
+id: designing-data-intensive-applications
+title: 'Designing Data-Intensive Applications: build the ideas from scratch'
+version: 1
+language: en
+description: 'Martin Kleppmann''s Designing Data-Intensive Applications, chapter by chapter, and every big idea built as a
+  small working program you can read line by line: Twitter''s timeline and tail latency, three data models, a Bitcask-style
+  store with crash recovery, an LSM-tree with Bloom filters, a column store, your own Protocol Buffers and Avro encodings,
+  replication lag and quorums, partitioning and rebalancing, an MVCC store with three isolation levels, clock skew and fencing
+  tokens, Lamport clocks and leader election, MapReduce with parallel processes and joins, a Kafka-like log with CDC, and
+  an unbundled database with audits. Each Read lesson opens the right pages of your own copy of the book; every project uses
+  only Python''s standard library, and every output shown is real. For developers who know Python and some SQL. Plan: 15 days,
+  about 2 hours a day.'
+image: cover.jpg
+book: ddia.pdf
+book_info:
+  title: Designing Data-Intensive Applications
+  url: https://dataintensive.net/
+  pages: 613
+downloads:
+- title: The book's website (references, errata, author's notes)
+  url: https://dataintensive.net/
+- title: The book at O'Reilly
+  url: https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
+modules:
+- id: m1
+  title: 'Day 1: Reliable, scalable and maintainable'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: the book, the lab and your plan'
+    file: lessons/m1-l1.md
+    minutes: 15
+  - id: m1-l2
+    title: 'Read: Preface and Chapter 1, Reliable, Scalable, and Maintainable Applications'
+    file: lessons/m1-l2.md
+    minutes: 60
+    media: ddia.pdf#pages=15-48
+  - id: m1-l3
+    title: Percentiles, fan-out and tail latency, in plain words
+    file: lessons/m1-l3.md
+    minutes: 20
+  - id: m1-l4
+    title: 'Project 1: Chirp''s timeline and the shape of latency'
+    file: lessons/m1-l4.md
+    minutes: 40
+    media: lab/
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: 'Do project 1 and its variations: find the read/write ratio where fan-out on read and on write cost the same,
+      and how many backend calls per page you can afford before 10% of pages take over 200 ms. Start the git repository. Hand
+      in your numbers and the commands you ran.'
+  - id: m1-explain
+    type: explain
+    prompt: Explain why response times should be reported as percentiles rather than as an average, and what tail latency
+      amplification is.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Data models and query languages'
+  lessons:
+  - id: m2-l1
+    title: 'Read: Chapter 2, Data Models and Query Languages'
+    file: lessons/m2-l1.md
+    minutes: 60
+    media: ddia.pdf#pages=49-90
+  - id: m2-l2
+    title: Choosing a data model by its relationships
+    file: lessons/m2-l2.md
+    minutes: 20
+  - id: m2-l3
+    title: 'Project 2: one dataset, three data models'
+    file: lessons/m2-l3.md
+    minutes: 35
+    media: lab/p02_data_models.py
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: 'Do project 2: add Boise and Paris to the graph, run the unchanged query, and write the ''born in Africa, living
+      in Europe'' query. Then design the many-to-many recommendations table. Hand in your queries and outputs.'
+  - id: m2-explain
+    type: explain
+    prompt: Explain when a document model fits better than a relational one, and when it doesn't, using the region-name example.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Storage engines 1, logs and hash indexes'
+  lessons:
+  - id: m3-l1
+    title: 'Read: Chapter 3, Data Structures That Power Your Database, and Hash Indexes'
+    file: lessons/m3-l1.md
+    minutes: 40
+    media: ddia.pdf#pages=91-97
+  - id: m3-l2
+    title: A log-structured store, piece by piece
+    file: lessons/m3-l2.md
+    minutes: 20
+  - id: m3-l3
+    title: 'Project 3: build a Bitcask-style key-value store'
+    file: lessons/m3-l3.md
+    minutes: 50
+    media: lab/p03_logkv.py
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: 'Do project 3 and add hint files: save the compacted segment''s index and load it on restart. Time a restart with
+      and without hints on 200,000 writes. Hand in your code and timings.'
+  - id: m3-explain
+    type: explain
+    prompt: Explain how a checksum lets a log-structured store recover safely from a crash in the middle of a write.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Storage engines 2, SSTables, LSM-trees and B-trees'
+  lessons:
+  - id: m4-l1
+    title: 'Read: Chapter 3, SSTables and LSM-Trees, B-Trees, Other Indexing Structures'
+    file: lessons/m4-l1.md
+    minutes: 60
+    media: ddia.pdf#pages=97-111
+  - id: m4-l2
+    title: How an LSM-tree reads and writes
+    file: lessons/m4-l2.md
+    minutes: 20
+  - id: m4-l3
+    title: 'Project 4: build an LSM-tree'
+    file: lessons/m4-l3.md
+    minutes: 50
+    media: lab/p04_lsm.py
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Do project 4 and add WAL recovery: write 1,000 keys, start a new LSM object on the same folder without flushing,
+      replay wal.log, and show no write was lost. Also report false positives with a 4,096-bit Bloom filter. Hand in code
+      and output.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain what a Bloom filter does for an LSM-tree read, and why it can say 'maybe' but never wrongly say 'no'.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: Analytics and column storage'
+  lessons:
+  - id: m5-l1
+    title: 'Read: Chapter 3, Transaction Processing or Analytics?, to the end of the chapter'
+    file: lessons/m5-l1.md
+    minutes: 45
+    media: ddia.pdf#pages=112-131
+  - id: m5-l2
+    title: Column storage, bitmaps and run-length encoding
+    file: lessons/m5-l2.md
+    minutes: 20
+  - id: m5-l3
+    title: 'Project 5: a row store against a column store'
+    file: lessons/m5-l3.md
+    minutes: 40
+    media: lab/p05_columns.py
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: 'Do project 5, re-sort the table by product, and answer a query about promotions and products using only bitwise
+      operations on bitmaps. Hand in your results table: query shape, better layout, why.'
+  - id: m5-explain
+    type: explain
+    prompt: Explain why sorting a column store by one column makes that column compress extremely well.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Encoding and evolution'
+  lessons:
+  - id: m6-l1
+    title: 'Read: Chapter 4, Encoding and Evolution'
+    file: lessons/m6-l1.md
+    minutes: 60
+    media: ddia.pdf#pages=133-166
+  - id: m6-l2
+    title: Binary encodings and schema evolution, byte by byte
+    file: lessons/m6-l2.md
+    minutes: 25
+  - id: m6-l3
+    title: 'Project 6: write your own binary encodings'
+    file: lessons/m6-l3.md
+    minutes: 45
+    media: lab/p06_encoding.py
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: 'Do project 6 and write the compatibility checker: given two Avro-style schemas, list each change and whether
+      it keeps backward and forward compatibility. Hand in the checker and three test cases.'
+  - id: m6-explain
+    type: explain
+    prompt: Explain backward and forward compatibility, and why a rolling upgrade needs both.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: Replication'
+  lessons:
+  - id: m7-l1
+    title: 'Read: Part II introduction and Chapter 5, Replication'
+    file: lessons/m7-l1.md
+    minutes: 90
+    media: ddia.pdf#pages=167-220
+  - id: m7-l2
+    title: Replication lag and quorums, pictured
+    file: lessons/m7-l2.md
+    minutes: 25
+  - id: m7-l3
+    title: 'Project 7: replication, simulated'
+    file: lessons/m7-l3.md
+    minutes: 45
+    media: lab/p07_replication.py
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: 'Do project 7: tabulate read-your-writes violations against replication lag, then make follower-1 synchronous
+      and show how many writes a failover loses now. Hand in your table and the failover result.'
+  - id: m7-explain
+    type: explain
+    prompt: Explain how asynchronous replication plus leader failover can lose writes that users were told were saved.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Partitioning'
+  lessons:
+  - id: m8-l1
+    title: 'Read: Chapter 6, Partitioning'
+    file: lessons/m8-l1.md
+    minutes: 45
+    media: ddia.pdf#pages=221-242
+  - id: m8-l2
+    title: 'Partitioning: spreading data, and moving it later'
+    file: lessons/m8-l2.md
+    minutes: 20
+  - id: m8-l3
+    title: 'Project 8: hot spots, rebalancing, and secondary indexes'
+    file: lessons/m8-l3.md
+    minutes: 40
+    media: lab/p08_partitioning.py
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Do project 8 with compound keys (hash the sensor, sort by time) and consistent hashing. Compare keys moved when
+      growing from 4 to 8 nodes for all three strategies. Hand in your comparison.
+  - id: m8-explain
+    type: explain
+    prompt: Explain why rebalancing with hash mod N moves so much data, and how a fixed number of partitions avoids it.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m9
+  title: 'Day 9: Transactions'
+  lessons:
+  - id: m9-l1
+    title: 'Read: Chapter 7, Transactions'
+    file: lessons/m9-l1.md
+    minutes: 90
+    media: ddia.pdf#pages=243-294
+  - id: m9-l2
+    title: Isolation levels, and the anomaly each one stops
+    file: lessons/m9-l2.md
+    minutes: 25
+  - id: m9-l3
+    title: 'Project 9: a multi-version store with three isolation levels'
+    file: lessons/m9-l3.md
+    minutes: 45
+    media: lab/p09_transactions.py
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: Do project 9, add the meeting-room phantom scenario, and count aborts for 1,000 random transactions under snapshot
+      isolation and serializable. Hand in the code and the counts.
+  - id: m9-explain
+    type: explain
+    prompt: Explain write skew with the doctors-on-call example, and why snapshot isolation doesn't prevent it.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    pass: 70
+- id: m10
+  title: 'Day 10: The trouble with distributed systems'
+  lessons:
+  - id: m10-l1
+    title: 'Read: Chapter 8, The Trouble with Distributed Systems'
+    file: lessons/m10-l1.md
+    minutes: 75
+    media: ddia.pdf#pages=295-342
+  - id: m10-l2
+    title: Timeouts, clocks and fencing tokens
+    file: lessons/m10-l2.md
+    minutes: 20
+  - id: m10-l3
+    title: 'Project 10: timeouts, a clock that loses a write, and fencing tokens'
+    file: lessons/m10-l3.md
+    minutes: 35
+    media: lab/p10_faults.py
+  requires:
+  - id: m10-practical
+    type: practical
+    prompt: Do project 10 and implement the simple accrual detector (mean plus 5 standard deviations of the last 100 response
+      times). Compare its false alarms and detection time with fixed timeouts. Hand in the comparison.
+  - id: m10-explain
+    type: explain
+    prompt: Explain why a node can't trust its own belief that it holds a lease, and how fencing tokens solve it.
+    min_words: 60
+  - id: m10-quiz
+    type: quiz
+    questions:
+    - q46
+    - q47
+    - q48
+    - q49
+    - q50
+    pass: 70
+- id: m11
+  title: 'Day 11: Consistency and consensus'
+  lessons:
+  - id: m11-l1
+    title: 'Read: Chapter 9, Consistency and Consensus'
+    file: lessons/m11-l1.md
+    minutes: 120
+    media: ddia.pdf#pages=343-406
+  - id: m11-l2
+    title: Linearizability, Lamport clocks, 2PC and majority votes
+    file: lessons/m11-l2.md
+    minutes: 25
+  - id: m11-l3
+    title: 'Project 11: linearizability, Lamport clocks, 2PC and leader election'
+    file: lessons/m11-l3.md
+    minutes: 45
+    media: lab/p11_consensus.py
+  requires:
+  - id: m11-practical
+    type: practical
+    prompt: 'Do project 11: add terms that only increase (refuse votes from lower terms), bring an old leader back and show
+      it can''t win, and give the 2PC coordinator a log so it finishes the commit after a restart. Hand in code and output.'
+  - id: m11-explain
+    type: explain
+    prompt: Explain why a majority vote with terms can never produce two leaders in the same term, even during a network partition.
+    min_words: 60
+  - id: m11-quiz
+    type: quiz
+    questions:
+    - q51
+    - q52
+    - q53
+    - q54
+    - q55
+    pass: 70
+- id: m12
+  title: 'Day 12: Batch processing'
+  lessons:
+  - id: m12-l1
+    title: 'Read: Part III introduction and Chapter 10, Batch Processing'
+    file: lessons/m12-l1.md
+    minutes: 75
+    media: ddia.pdf#pages=407-460
+  - id: m12-l2
+    title: MapReduce and joins, step by step
+    file: lessons/m12-l2.md
+    minutes: 20
+  - id: m12-l3
+    title: 'Project 12: MapReduce from scratch, with real parallel processes'
+    file: lessons/m12-l3.md
+    minutes: 45
+    media: lab/p12_mapreduce.py
+  requires:
+  - id: m12-practical
+    type: practical
+    prompt: Do project 12 with a combiner, and measure the shuffle size before and after. Then add skew (one user with half
+      the events) and time each reducer. Hand in your measurements.
+  - id: m12-explain
+    type: explain
+    prompt: Explain when you would use a broadcast hash join instead of a sort-merge join, with sizes.
+    min_words: 60
+  - id: m12-quiz
+    type: quiz
+    questions:
+    - q56
+    - q57
+    - q58
+    - q59
+    - q60
+    pass: 70
+- id: m13
+  title: 'Day 13: Stream processing'
+  lessons:
+  - id: m13-l1
+    title: 'Read: Chapter 11, Stream Processing'
+    file: lessons/m13-l1.md
+    minutes: 75
+    media: ddia.pdf#pages=461-510
+  - id: m13-l2
+    title: Logs, offsets, CDC and stream joins
+    file: lessons/m13-l2.md
+    minutes: 20
+  - id: m13-l3
+    title: 'Project 13: a partitioned log, CDC, and a stream-table join'
+    file: lessons/m13-l3.md
+    minutes: 45
+    media: lab/p13_streams.py
+  requires:
+  - id: m13-practical
+    type: practical
+    prompt: Do project 13 and implement log compaction for a partition, then use it to bootstrap a new consumer with the current
+      state of every user. Hand in the code and output.
+  - id: m13-explain
+    type: explain
+    prompt: Explain why dual writes can leave a database and a search index permanently inconsistent, and how change data
+      capture prevents it.
+    min_words: 60
+  - id: m13-quiz
+    type: quiz
+    questions:
+    - q61
+    - q62
+    - q63
+    - q64
+    - q65
+    pass: 70
+- id: m14
+  title: 'Day 14: The future of data systems'
+  lessons:
+  - id: m14-l1
+    title: 'Read: Chapter 12, The Future of Data Systems'
+    file: lessons/m14-l1.md
+    minutes: 90
+    media: ddia.pdf#pages=511-574
+  - id: m14-l2
+    title: 'The unbundled database: one log, many views'
+    file: lessons/m14-l2.md
+    minutes: 20
+  - id: m14-l3
+    title: 'Project 14: an unbundled database for a payments app'
+    file: lessons/m14-l3.md
+    minutes: 45
+    media: lab/p14_unbundled.py
+  requires:
+  - id: m14-practical
+    type: practical
+    prompt: Do project 14 and add overdraft protection in the single ordered append step, plus persisted view offsets that
+      survive a restart. Hand in code and output.
+  - id: m14-explain
+    type: explain
+    prompt: Explain the end-to-end argument with the example of a client retrying a money transfer.
+    min_words: 60
+  - id: m14-quiz
+    type: quiz
+    questions:
+    - q66
+    - q67
+    - q68
+    - q69
+    - q70
+    pass: 70
+- id: m15
+  title: 'Day 15: Capstone'
+  lessons:
+  - id: m15-l1
+    title: 'Capstone: publish your data systems lab'
+    file: lessons/m15-l1.md
+    minutes: 90
+  - id: m15-l2
+    title: Looking back, and what to learn next
+    file: lessons/m15-l2.md
+    minutes: 10
+  requires:
+  - id: m15-practical
+    type: practical
+    prompt: Publish your lab on GitHub with a README table of every project and your own measured results, plus at least two
+      of your 'Make it yours' extensions. Hand in the repository link and your CV line.
+  - id: m15-explain
+    type: explain
+    prompt: Pick one design question from 'Looking back' and answer it for a system you know, as you would in an interview.
+    min_words: 60
+  - id: m15-quiz
+    type: quiz
+    questions:
+    - q71
+    - q72
+    - q73
+    - q74
+    - q75
+    pass: 70

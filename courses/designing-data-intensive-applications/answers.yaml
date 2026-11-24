@@ -1,0 +1,383 @@
+q1:
+  right:
+  - a
+  why: 'Chapter 1: the system continues to work correctly even when things go wrong; faults happen, the goal is to stop them
+    becoming failures.'
+q2:
+  right:
+  - a
+  - b
+  why: The median says what a typical user waits; p95, p99 and p999 show the tail.
+q3:
+  right:
+  - a
+  - b
+  why: With many parallel calls, the chance that at least one is slow grows quickly.
+q4:
+  right:
+  - a
+  - b
+  why: Do more work at write time so the far more common read is cheap; celebrities are handled separately.
+q5:
+  right:
+  - a
+  - b
+  - c
+  why: Operability, simplicity and evolvability.
+q6:
+  right:
+  - a
+  why: Documents give locality for one-to-many trees; many-to-many relationships favour relational or graph models.
+q7:
+  right:
+  - a
+  - b
+  why: Normalization removes duplication of many-to-one data, at the cost of joins.
+q8:
+  right:
+  - a
+  - b
+  why: 'Like dynamic type checking: the schema still exists, in the reading code.'
+q9:
+  right:
+  - a
+  - b
+  why: 'Example 2-5: WITH RECURSIVE follows edges until no new vertices appear.'
+q10:
+  right:
+  - a
+  - b
+  why: Saying what, not how, leaves room for optimization and parallel execution.
+q11:
+  right:
+  - a
+  - b
+  why: 'The world''s simplest database: db_set just appends.'
+q12:
+  right:
+  - a
+  why: 'Figure 3-1: an in-memory hash map from key to byte offset in the data file.'
+q13:
+  right:
+  - a
+  - b
+  why: Values can be on disk, but the key map must fit in RAM, and ranges need a scan of every key.
+q14:
+  right:
+  - a
+  - b
+  why: A special deletion record, the tombstone, tells merging to discard older values.
+q15:
+  right:
+  - a
+  why: 'Partially written records: Bitcask files include checksums, so corrupted parts are detected and ignored.'
+q16:
+  right:
+  - a
+  - b
+  - c
+  why: The three advantages listed for SSTables.
+q17:
+  right:
+  - a
+  why: Writes are appended to a log before the memtable; after a crash, replaying it rebuilds the memtable.
+q18:
+  right:
+  - a
+  - b
+  why: No false negatives, occasional false positives.
+q19:
+  right:
+  - a
+  - b
+  - c
+  why: B-trees overwrite pages in place and need a WAL; LSM-trees support ranges since files are sorted.
+q20:
+  right:
+  - a
+  - b
+  why: Compaction and page rewrites mean each user byte is written several times.
+q21:
+  right:
+  - a
+  - b
+  - c
+  why: Table 3-1 compares them.
+q22:
+  right:
+  - a
+  - b
+  why: Fact tables are huge and often wider than 100 columns; dimensions hold who, what, where, when.
+q23:
+  right:
+  - a
+  - b
+  why: 'Figure 3-10: values of one column are stored together.'
+q24:
+  right:
+  - a
+  - b
+  why: Sorting groups equal values together; the first sort key compresses best.
+q25:
+  right:
+  - a
+  why: Fast for its predefined aggregates, no flexibility for others; warehouses keep raw data too.
+q26:
+  right:
+  - a
+  why: 'Backward: new code reads old data. Forward: old code reads new data, the harder one.'
+q27:
+  right:
+  - a
+  - b
+  - c
+  why: MessagePack 66, Thrift Binary 59, Thrift Compact 34, Protocol Buffers 33, Avro 32.
+q28:
+  right:
+  - a
+  - b
+  why: Tags are the field's identity; new fields must be optional or have defaults.
+q29:
+  right:
+  - a
+  - b
+  why: Avro data has no tags; Figure 4-6 shows schema resolution.
+q30:
+  right:
+  - a
+  - b
+  why: Only fields with defaults can be added or removed while keeping both directions.
+q31:
+  right:
+  - a
+  - b
+  why: Asynchronous replication is fast and can lose recent writes on failover.
+q32:
+  right:
+  - a
+  why: Figure 5-3.
+q33:
+  right:
+  - a
+  - b
+  why: If a user always reads from one replica, they never see time go backwards.
+q34:
+  right:
+  - a
+  why: Figure 5-11; the book then lists edge cases where stale values can still be returned.
+q35:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: All listed under 'Handling Node Outages'.
+q36:
+  right:
+  - a
+  - b
+  why: The sensor example; fix it by prefixing the key, e.g. with the sensor name.
+q37:
+  right:
+  - a
+  - b
+  why: Hashing spreads load but destroys key order.
+q38:
+  right:
+  - a
+  - b
+  why: A fixed number of partitions, many more than nodes, moves only whole partitions.
+q39:
+  right:
+  - a
+  - b
+  why: Figure 6-4; global (term-partitioned) indexes make reads cheaper and writes more complex.
+q40:
+  right:
+  - a
+  - b
+  why: A two-digit random number splits writes over 100 keys, at the cost of reads.
+q41:
+  right:
+  - a
+  - b
+  why: Atomicity is not about concurrency; isolation is.
+q42:
+  right:
+  - a
+  why: 'Figure 7-6: Alice sees a consistent snapshot of her accounts.'
+q43:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: All four techniques from 'Preventing Lost Updates'.
+q44:
+  right:
+  - a
+  - b
+  why: 'The doctors on call: only serializable isolation prevents it.'
+q45:
+  right:
+  - a
+  - b
+  - c
+  why: The three techniques in the chapter.
+q46:
+  right:
+  - a
+  why: 'Figure 8-1: you can''t tell why there was no response.'
+q47:
+  right:
+  - a
+  - b
+  why: No correct timeout; measure response times, or use an accrual detector.
+q48:
+  right:
+  - a
+  - b
+  why: 'Figure 8-3: skew under 3 ms still drops client B''s increment.'
+q49:
+  right:
+  - a
+  - b
+  why: Figures 8-4 and 8-5.
+q50:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: Listed under 'Process Pauses'.
+q51:
+  right:
+  - a
+  - b
+  why: A recency guarantee on a single object; different from serializability.
+q52:
+  right:
+  - a
+  - b
+  why: The book finds the CAP theorem unhelpful and stresses latency as the real cost.
+q53:
+  right:
+  - a
+  - b
+  why: They can't tell you, at the moment of a request, whether another node has a smaller timestamp; that needs total order
+    broadcast.
+q54:
+  right:
+  - a
+  - b
+  why: 'Figure 9-10: 2PC is blocking.'
+q55:
+  right:
+  - a
+  - b
+  - c
+  why: 'Epochs and overlapping quorums: a minority side can''t elect a leader.'
+q56:
+  right:
+  - a
+  - b
+  why: Simple log analysis; sort handles data larger than memory.
+q57:
+  right:
+  - a
+  - b
+  why: 'Figure 10-1: partition, sort, shuffle, reduce.'
+q58:
+  right:
+  - a
+  - b
+  why: The small side is loaded into a hash table in each mapper.
+q59:
+  right:
+  - a
+  - b
+  why: Rerunnable jobs make mistakes recoverable.
+q60:
+  right:
+  - a
+  - b
+  why: 'Beyond MapReduce: materialization of intermediate state.'
+q61:
+  right:
+  - a
+  - b
+  why: 'Figure 11-3: reading doesn''t delete; consumers track offsets and can replay.'
+q62:
+  right:
+  - a
+  - b
+  why: At-least-once delivery; make processing idempotent.
+q63:
+  right:
+  - a
+  - b
+  why: Figure 11-4; CDC derives the second system from the first's ordered log.
+q64:
+  right:
+  - a
+  - b
+  why: Joins on streams depend on time.
+q65:
+  right:
+  - a
+  - b
+  - c
+  - d
+  why: The four window types described in 'Reasoning About Time'.
+q66:
+  right:
+  - a
+  - b
+  why: Federated databases unify reads; unbundled databases unify writes.
+q67:
+  right:
+  - a
+  - b
+  why: The end-to-end argument (Saltzer, Reed and Clark).
+q68:
+  right:
+  - a
+  - b
+  - c
+  why: The author argues integrity is usually more important.
+q69:
+  right:
+  - a
+  - b
+  why: Auditing and self-validating systems.
+q70:
+  right:
+  - a
+  - b
+  why: Derived views are functions of the log.
+q71:
+  right:
+  - a
+  - b
+  why: Part III introduction.
+q72:
+  right:
+  - a
+  - b
+  why: LSM-trees favour writes; B-trees often favour reads.
+q73:
+  right:
+  - a
+  - b
+  why: Read committed and snapshot isolation prevent the others.
+q74:
+  right:
+  - a
+  - b
+  why: Chapters 4, 11 and 12 all return to this.
+q75:
+  right:
+  - a
+  - b
+  - c
+  why: Evidence and understanding, not just finished code.

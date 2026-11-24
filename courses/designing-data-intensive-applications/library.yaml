@@ -1,0 +1,19 @@
+official: true
+author: inPace
+license: CC-BY-4.0
+updated: '2026-11-24'
+tags:
+- distributed systems
+- databases
+- storage engines
+- replication
+- transactions
+- consensus
+- stream processing
+- system design
+- book
+- projects
+credit: 'Book (not included): Designing Data-Intensive Applications by Martin Kleppmann (O''Reilly, 2017). This course follows
+  its chapters, explains the ideas in its own words and doesn''t copy its text. Projects, code, notes, tasks and questions:
+  inPace.'
+section: data-databases

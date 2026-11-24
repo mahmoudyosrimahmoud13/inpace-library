@@ -1,0 +1,754 @@
+q1:
+  text: How does the book define reliability?
+  show: 4
+  options:
+    a: Continuing to work correctly even when things go wrong
+    b: Never having any faults
+    c: Running on expensive hardware
+    d: Having the fastest response time
+    e: Using only one server
+    f: Passing all unit tests
+q2:
+  text: Why are percentiles better than the mean for response times?
+  show: 4
+  options:
+    a: The mean can be pulled up by a few slow requests and describes no real user
+    b: High percentiles show what the slowest users experience
+    c: Percentiles are always smaller than the mean
+    d: The mean can't be computed for large data
+    e: Percentiles ignore slow requests
+    f: The book forbids averages
+q3:
+  text: What is tail latency amplification?
+  show: 4
+  options:
+    a: When a request needs several backend calls, the slowest one decides its time
+    b: Rare slow calls become common slow pages as fan-out grows
+    c: Logs growing faster than data
+    d: Caches making responses slower
+    e: Retries reducing latency
+    f: A bug in TCP
+q4:
+  text: In the Twitter example, why did Twitter move towards fanning out on write?
+  show: 4
+  options:
+    a: Timeline reads are far more frequent than posts
+    b: Precomputing timelines makes the frequent operation cheap
+    c: Posts are more frequent than reads
+    d: Fan-out on write uses less storage
+    e: Celebrities have few followers
+    f: It needs no cache
+q5:
+  text: Which are the three design principles of maintainability in the book?
+  show: 4
+  options:
+    a: Operability
+    b: Simplicity
+    c: Evolvability
+    d: Profitability
+    e: Popularity
+    f: Portability only
+q6:
+  text: Which data fits the document model best?
+  show: 4
+  options:
+    a: Tree-shaped, one-to-many data loaded together, like a résumé
+    b: Highly interconnected many-to-many data
+    c: Data needing many joins
+    d: Paths of unknown length between entities
+    e: A social graph
+    f: Accounting ledgers with many references
+q7:
+  text: Why store a region's ID instead of its name in each profile?
+  show: 4
+  options:
+    a: The name is stored once, so renaming touches one row
+    b: Copies of the name can go stale and disagree
+    c: IDs are always shorter so queries are faster
+    d: Document databases forbid strings
+    e: It removes the need for any joins
+    f: Names can't be indexed
+q8:
+  text: What does 'schema on read' mean?
+  show: 4
+  options:
+    a: The structure is implicit and interpreted by the code that reads the data
+    b: Readers must handle old and new shapes of data
+    c: The database enforces a schema on every write
+    d: There is no structure at all
+    e: Reads are forbidden without a schema migration
+    f: Schemas are stored in a separate database
+q9:
+  text: Why do graph queries in SQL use recursive common table expressions?
+  show: 4
+  options:
+    a: Paths can have a variable, unknown number of steps
+    b: A fixed number of joins can't follow 'within' to any depth
+    c: SQL has no joins
+    d: Recursive queries are always faster
+    e: Graphs can't be stored in tables
+    f: It's required by the SQL standard for every query
+q10:
+  text: Why do declarative query languages help databases improve?
+  show: 4
+  options:
+    a: The optimizer chooses how to run the query, so it can change the method without changing your query
+    b: They hide implementation details
+    c: They force a fixed execution order
+    d: They require the programmer to pick indexes
+    e: They can't run in parallel
+    f: They are imperative
+q11:
+  text: Why is appending to a log the fastest kind of write?
+  show: 4
+  options:
+    a: 'It''s sequential: no searching or rewriting'
+    b: It never overwrites existing data
+    c: It compresses data
+    d: It updates every index
+    e: It reads the whole file first
+    f: It's done in memory only
+q12:
+  text: What does a hash index in a Bitcask-style store map?
+  show: 4
+  options:
+    a: Each key to the byte offset of its latest value
+    b: Each value to its key
+    c: Each byte to a key
+    d: Each segment to its size
+    e: Each key to all its old values
+    f: Each file to a checksum
+q13:
+  text: What are the limits of hash indexes, according to the book?
+  show: 4
+  options:
+    a: All keys must fit in memory
+    b: Range queries are not efficient
+    c: Writes are slow
+    d: Values must fit in memory
+    e: They can't handle deletes
+    f: They can't recover after a crash
+q14:
+  text: How does a log-structured store delete a key?
+  show: 4
+  options:
+    a: It appends a tombstone record
+    b: Compaction later discards earlier values of that key
+    c: It overwrites the old record in place
+    d: It truncates the file
+    e: It deletes the segment file
+    f: Deletes are impossible
+q15:
+  text: How does Bitcask handle a record that was half written when the machine crashed?
+  show: 4
+  options:
+    a: Checksums detect and ignore the damaged record
+    b: It's read as a normal value
+    c: The whole file is deleted
+    d: The database refuses to start
+    e: The OS repairs it
+    f: It can't happen with append-only logs
+q16:
+  text: What does sorting segment files by key (SSTables) make possible?
+  show: 4
+  options:
+    a: Merging segments efficiently, like a merge sort
+    b: A sparse in-memory index
+    c: Compressing blocks
+    d: Keeping every key in memory is now required
+    e: Faster random overwrites in place
+    f: No need for compaction
+q17:
+  text: Why does an LSM-tree keep a write-ahead log?
+  show: 4
+  options:
+    a: So the memtable's contents survive a crash
+    b: To make range queries fast
+    c: To replace SSTables
+    d: To sort keys
+    e: To compress data
+    f: To store Bloom filters
+q18:
+  text: What does a Bloom filter tell an LSM-tree read?
+  show: 4
+  options:
+    a: If a key definitely isn't in an SSTable, so the file can be skipped
+    b: If a key might be there; sometimes falsely
+    c: The exact offset of the key
+    d: The value of the key
+    e: That a key is definitely present
+    f: The number of keys in the database
+q19:
+  text: Which are generally true when comparing LSM-trees and B-trees?
+  show: 4
+  options:
+    a: LSM-trees are typically faster for writes
+    b: B-trees are thought to be faster for reads
+    c: LSM-trees often compress better
+    d: B-trees never need a write-ahead log
+    e: LSM-trees can't do range queries
+    f: B-trees are append-only
+q20:
+  text: What is write amplification?
+  show: 4
+  options:
+    a: One write to the database causing several writes to disk over time
+    b: It matters for SSD wear and write throughput
+    c: Writing the same value twice by mistake
+    d: Replicating to more followers
+    e: A larger value after compression
+    f: Writes amplifying read speed
+q21:
+  text: Which describe OLAP workloads compared with OLTP?
+  show: 4
+  options:
+    a: Few queries that scan many rows
+    b: Aggregating a few columns
+    c: Used by analysts for decisions
+    d: Many small reads and writes by key
+    e: Mostly single-row updates by users
+    f: Latency per request is everything
+q22:
+  text: In a star schema, what is the fact table?
+  show: 4
+  options:
+    a: A table of events, one row per event such as a sale
+    b: It has foreign keys to dimension tables
+    c: A small table of product names
+    d: A table describing the schema
+    e: A table of facts about the database
+    f: Always under 10 columns
+q23:
+  text: Why does column-oriented storage speed up analytics?
+  show: 4
+  options:
+    a: Queries read only the columns they need
+    b: Columns of similar values compress well
+    c: It makes single-row inserts cheapest
+    d: It stores each row twice
+    e: It needs no disk
+    f: It forbids aggregation
+q24:
+  text: When does run-length encoding of a column work very well?
+  show: 4
+  options:
+    a: When the table is sorted by that column
+    b: When the column has few distinct values in long runs
+    c: When values are random
+    d: When the column is unsorted with many distinct values
+    e: Only for text columns
+    f: Never in practice
+q25:
+  text: What is the downside of a data cube?
+  show: 4
+  options:
+    a: It can only answer questions about the dimensions it was built with
+    b: It's slow for the questions it was built for
+    c: It can't be precomputed
+    d: It stores every row twice
+    e: It needs a B-tree
+    f: It forbids sums
+q26:
+  text: What is forward compatibility?
+  show: 4
+  options:
+    a: Older code can read data written by newer code
+    b: Newer code can read data written by older code
+    c: Data never changes
+    d: Code runs faster in the future
+    e: Only one version runs at a time
+    f: A license term
+q27:
+  text: How many bytes does the book's example record take in each format?
+  show: 4
+  options:
+    a: 'JSON: 81 bytes'
+    b: 'Protocol Buffers: 33 bytes'
+    c: 'Avro: 32 bytes'
+    d: 'Avro: 81 bytes'
+    e: 'JSON: 32 bytes'
+    f: 'Protocol Buffers: 66 bytes'
+q28:
+  text: In Protocol Buffers or Thrift, which schema changes are safe?
+  show: 4
+  options:
+    a: Renaming a field but keeping its tag number
+    b: Adding a new optional field with a new tag
+    c: Changing an existing field's tag number
+    d: Reusing a deleted field's tag for something else
+    e: Adding a new required field
+    f: Removing a required field
+q29:
+  text: How does an Avro reader decode data?
+  show: 4
+  options:
+    a: It needs the exact writer's schema
+    b: It resolves the writer's schema against its own by field name
+    c: It reads field tags from the data
+    d: It guesses types from the bytes
+    e: It needs no schema
+    f: Field order doesn't matter in the bytes
+q30:
+  text: Which Avro schema changes keep compatibility?
+  show: 4
+  options:
+    a: Adding a field that has a default value
+    b: Removing a field that has a default value
+    c: Adding a field with no default
+    d: Removing a field with no default
+    e: Changing a field name with no alias
+    f: Reordering bytes by hand
+q31:
+  text: Which statements about asynchronous replication are true?
+  show: 4
+  options:
+    a: The leader doesn't wait for followers before acknowledging
+    b: Writes acknowledged but not yet replicated can be lost if the leader fails
+    c: Followers are always up to date
+    d: It's slower for writes than synchronous replication
+    e: It makes failover lossless
+    f: It needs no replication log
+q32:
+  text: A user updates their profile and reloads, but sees the old version. Which guarantee was violated?
+  show: 4
+  options:
+    a: Read-your-writes (read-after-write) consistency
+    b: Monotonic reads
+    c: Consistent prefix reads
+    d: Durability
+    e: Atomicity
+    f: Linearizability of a different user
+q33:
+  text: How can a system provide monotonic reads?
+  show: 4
+  options:
+    a: Always route each user's reads to the same replica
+    b: Choose the replica by a hash of the user ID
+    c: Read from a random replica each time
+    d: Use last write wins
+    e: Disable replication
+    f: Increase the timeout
+q34:
+  text: In leaderless replication with n replicas, what does w + r > n guarantee?
+  show: 4
+  options:
+    a: Every read overlaps at least one replica that has the latest write
+    b: No stale values are ever returned in any situation
+    c: Writes never fail
+    d: Only one replica is needed
+    e: There is a leader
+    f: Clocks are synchronized
+q35:
+  text: What problems with leader failover does the book describe?
+  show: 4
+  options:
+    a: Unreplicated writes lost with asynchronous replication
+    b: 'Split brain: two nodes believing they are leader'
+    c: Reused primary keys exposing data, as at GitHub
+    d: Choosing a timeout that is neither too short nor too long
+    e: Failover making all writes synchronous
+    f: Followers deleting their data
+    g: Followers refusing to replicate
+q36:
+  text: Why can key-range partitioning by timestamp create a hot spot?
+  show: 4
+  options:
+    a: All current writes have similar keys and go to one partition
+    b: Other partitions sit idle
+    c: Hashing makes keys random
+    d: Timestamps can't be sorted
+    e: Range partitions can't be queried
+    f: It always balances perfectly
+q37:
+  text: What do you lose with hash partitioning?
+  show: 4
+  options:
+    a: Efficient range queries over the key
+    b: Keys that were adjacent are now scattered
+    c: Even load
+    d: The ability to store data
+    e: Replication
+    f: Point lookups
+q38:
+  text: Why is rebalancing by hash mod N a bad idea?
+  show: 4
+  options:
+    a: Changing N moves most keys to a different node
+    b: It makes rebalancing very expensive
+    c: It moves no keys
+    d: It can't use hashes
+    e: It's only for key ranges
+    f: It needs consensus
+q39:
+  text: With a local (document-partitioned) secondary index, how is a query by the indexed value served?
+  show: 4
+  options:
+    a: It's sent to all partitions (scatter/gather)
+    b: It can suffer from tail latency amplification
+    c: One partition answers it
+    d: It needs no index
+    e: It updates the index asynchronously
+    f: It reads the global index
+q40:
+  text: How can you relieve a single very hot key?
+  show: 4
+  options:
+    a: Add a random number to the key to spread writes over many keys
+    b: Reads must then gather from all the split keys
+    c: Hash it twice
+    d: Use hash mod N
+    e: Nothing can be done
+    f: Delete it
+q41:
+  text: What does the book say atomicity means in ACID?
+  show: 4
+  options:
+    a: 'If a transaction can''t complete, its writes are discarded: all or nothing'
+    b: It could be called abortability
+    c: It's about concurrent transactions seeing each other
+    d: Data is never lost
+    e: Every operation takes one CPU cycle
+    f: The database is always consistent
+q42:
+  text: Which anomaly does snapshot isolation prevent that read committed allows?
+  show: 4
+  options:
+    a: Read skew
+    b: Write skew
+    c: Phantoms in write skew
+    d: None
+    e: Dirty reads only
+    f: Dirty writes only
+q43:
+  text: Which can prevent lost updates?
+  show: 4
+  options:
+    a: Atomic write operations
+    b: Explicit locking (SELECT ... FOR UPDATE)
+    c: Automatic lost update detection
+    d: Compare-and-set
+    e: Reading from a follower
+    f: Increasing the timeout
+    g: Using last write wins with wall clocks
+q44:
+  text: What characterizes write skew?
+  show: 4
+  options:
+    a: Transactions read the same data, decide, then update different objects
+    b: The premise of each decision is no longer true at commit
+    c: Two transactions write the same row
+    d: A dirty read
+    e: A crash during commit
+    f: It's prevented by snapshot isolation
+q45:
+  text: Which are ways to achieve serializability?
+  show: 4
+  options:
+    a: Actual serial execution
+    b: Two-phase locking
+    c: Serializable snapshot isolation
+    d: Read committed
+    e: Last write wins
+    f: Asynchronous replication
+q46:
+  text: You send a request and get no response. What can you conclude?
+  show: 4
+  options:
+    a: 'Nothing certain: the request, the node or the response could be the problem'
+    b: The request was definitely lost
+    c: The node definitely crashed
+    d: The operation definitely didn't happen
+    e: The network is down everywhere
+    f: You should always retry blindly
+q47:
+  text: What is the trade-off when choosing a failure-detection timeout?
+  show: 4
+  options:
+    a: Short timeouts declare slow but healthy nodes dead
+    b: Long timeouts take a long time to notice real failures
+    c: Long timeouts never miss a failure
+    d: Short timeouts reduce load
+    e: There is a correct universal value
+    f: Timeouts are not needed
+q48:
+  text: Why is last write wins with time-of-day clocks dangerous?
+  show: 4
+  options:
+    a: Clock skew can give a later write an earlier timestamp
+    b: The later write is silently discarded
+    c: It never loses data
+    d: It needs consensus
+    e: Clocks never drift
+    f: It's only a problem across continents
+q49:
+  text: What problem do fencing tokens solve?
+  show: 4
+  options:
+    a: A paused client acting on a lease that has expired
+    b: Storage rejecting writes with an older token than it has seen
+    c: Network partitions
+    d: Clock skew between datacenters
+    e: Slow disks
+    f: Byzantine faults
+q50:
+  text: Which can cause a process to pause for a long time?
+  show: 4
+  options:
+    a: Garbage collection
+    b: Virtual machine suspension
+    c: A laptop lid being closed
+    d: Paging to disk
+    e: Reading a monotonic clock
+    f: A completed TCP handshake
+    g: Using an SSD instead of a spinning disk
+q51:
+  text: What is linearizability?
+  show: 4
+  options:
+    a: The system appears to have a single copy of the data
+    b: Once a read returns a new value, all later reads return it too
+    c: Transactions are serializable
+    d: Data is replicated asynchronously
+    e: Events are processed in batches
+    f: Writes are always fast
+q52:
+  text: What does the book say about the cost of linearizability?
+  show: 4
+  options:
+    a: It costs latency
+    b: During a network partition, some replicas can't serve linearizable requests
+    c: It's free with leaderless quorums
+    d: It makes systems faster
+    e: It needs no coordination
+    f: CAP makes it impossible always
+q53:
+  text: What do Lamport timestamps provide?
+  show: 4
+  options:
+    a: A total order consistent with causality
+    b: A pair of counter and node ID
+    c: The ability to decide uniqueness on the spot without other nodes
+    d: Physical time
+    e: Linearizability
+    f: Consensus
+q54:
+  text: What happens in two-phase commit if the coordinator crashes after participants vote yes?
+  show: 4
+  options:
+    a: Participants are in doubt and must wait
+    b: They may hold locks until the coordinator recovers
+    c: They safely abort on their own
+    d: They safely commit on their own
+    e: Nothing happens to locks
+    f: A new coordinator is always elected instantly
+q55:
+  text: How do consensus algorithms like Raft avoid two leaders?
+  show: 4
+  options:
+    a: Epoch (term) numbers that only increase
+    b: A leader needs votes from a majority (quorum)
+    c: Two majorities always overlap
+    d: Synchronized clocks
+    e: A single master node that never fails
+    f: Last write wins
+q56:
+  text: What does the Unix pipeline 'awk ... | sort | uniq -c | sort -r -n | head -n 5' compute in Chapter 10?
+  show: 4
+  options:
+    a: The five most requested URLs
+    b: With sort able to spill to disk for large inputs
+    c: The five slowest requests
+    d: The number of users
+    e: Unique IP addresses only
+    f: The file sizes
+q57:
+  text: In MapReduce, what guarantees that all values of one key meet in one reducer?
+  show: 4
+  options:
+    a: Partitioning map output by a hash of the key
+    b: Every mapper writes a file per reducer
+    c: Random assignment
+    d: One reducer for each record
+    e: Sorting by value
+    f: The input file order
+q58:
+  text: When is a broadcast hash join a good choice?
+  show: 4
+  options:
+    a: One input is small enough to fit in memory in every mapper
+    b: You want to avoid the shuffle
+    c: Both inputs are huge
+    d: The inputs are not partitioned the same way and both are huge
+    e: Only for text data
+    f: Never in practice
+q59:
+  text: Why does the book value immutable inputs for batch jobs?
+  show: 4
+  options:
+    a: A job with a bug can be fixed and rerun
+    b: 'Old output can be discarded: ''human fault tolerance'''
+    c: Inputs can be edited in place to save space
+    d: It makes jobs non-repeatable
+    e: It needs distributed transactions
+    f: It prevents parallelism
+q60:
+  text: What do dataflow engines like Spark and Flink improve over MapReduce?
+  show: 4
+  options:
+    a: They avoid materializing every intermediate step to disk
+    b: They handle a workflow as one job
+    c: They remove the need for fault tolerance
+    d: They can't do joins
+    e: They only process streams
+    f: They require more disk writes
+q61:
+  text: In a log-based message broker like Kafka, what happens when a consumer reads a message?
+  show: 4
+  options:
+    a: The message stays in the log
+    b: The consumer advances its offset
+    c: The message is deleted for everyone
+    d: Other consumers can't read it
+    e: The partition is locked
+    f: The producer is notified
+q62:
+  text: Why can a restarted consumer process a message twice?
+  show: 4
+  options:
+    a: It restarts from its last committed offset
+    b: It processed messages after that offset but crashed before committing
+    c: Brokers always send twice
+    d: Logs are unordered
+    e: Offsets are random
+    f: It can't happen
+q63:
+  text: What is the problem with dual writes?
+  show: 4
+  options:
+    a: Concurrent writes can be applied in different orders to the two systems
+    b: The systems can stay inconsistent forever
+    c: They're too slow
+    d: They need CDC
+    e: They can't write to a database
+    f: They lose all data
+q64:
+  text: What is a stream-table join?
+  show: 4
+  options:
+    a: Enriching events with a table kept up to date from a changelog
+    b: Joining each event with the table as it was at that time
+    c: Joining two batch files
+    d: Joining two streams within a window only
+    e: A join that never changes
+    f: A SQL join on a static table only
+q65:
+  text: Which are window types for stream processing?
+  show: 4
+  options:
+    a: Tumbling
+    b: Hopping
+    c: Sliding
+    d: Session
+    e: Circular
+    f: Static
+    g: Diagonal
+q66:
+  text: What does 'unbundling the database' mean?
+  show: 4
+  options:
+    a: Rebuilding a database's features (indexes, views, replication) across separate systems connected by logs
+    b: Deriving several specialized systems from one ordered stream of writes
+    c: Using a single database for everything
+    d: Deleting indexes
+    e: Splitting tables randomly
+    f: Avoiding logs
+q67:
+  text: Why must a client-generated request ID be used for end-to-end duplicate suppression?
+  show: 4
+  options:
+    a: Only the endpoint that started the operation knows two requests are the same
+    b: Lower layers like TCP only suppress duplicates within themselves
+    c: Databases can't store IDs
+    d: IDs make requests faster
+    e: Servers generate better random numbers
+    f: It isn't needed with transactions
+q68:
+  text: What is the difference between timeliness and integrity?
+  show: 4
+  options:
+    a: 'Timeliness: users see an up-to-date state'
+    b: 'Integrity: no corruption, loss or contradiction'
+    c: Integrity violations are permanent until fixed; timeliness violations fix themselves
+    d: They are the same
+    e: Timeliness matters more than integrity
+    f: Integrity only applies to banks
+q69:
+  text: What does 'trust, but verify' mean for data systems?
+  show: 4
+  options:
+    a: Continually audit data integrity rather than assume guarantees are absolute
+    b: Design systems to be auditable
+    c: Never trust any database
+    d: Disable checksums
+    e: Only verify during development
+    f: Ask users to report errors
+q70:
+  text: In project 14, what lets a new fraud view be added without a migration?
+  show: 4
+  options:
+    a: Replaying the event log from the beginning
+    b: Each view keeps its own offset
+    c: Copying the balances table
+    d: Deleting old events
+    e: A distributed transaction
+    f: Last write wins
+q71:
+  text: Which system is the 'system of record'?
+  show: 4
+  options:
+    a: The one that holds the authoritative version of the data
+    b: The source of truth from which derived data is built
+    c: A cache
+    d: A search index
+    e: Any materialized view
+    f: The fastest database
+q72:
+  text: Which workload suggests an LSM-tree storage engine?
+  show: 4
+  options:
+    a: Write-heavy, with many inserts and updates
+    b: Where compression and sequential writes matter
+    c: Read-heavy with strict, predictable latency only
+    d: No writes at all
+    e: Single-row updates in place only
+    f: Tiny data that fits in one page
+q73:
+  text: Which anomaly needs serializable isolation to prevent?
+  show: 4
+  options:
+    a: Write skew
+    b: Phantoms causing write skew
+    c: Dirty reads
+    d: Dirty writes
+    e: Read skew
+    f: Lost updates in PostgreSQL's repeatable read
+q74:
+  text: How do you make a retried request safe?
+  show: 4
+  options:
+    a: Make the operation idempotent
+    b: Attach a unique request ID and suppress duplicates
+    c: Retry faster
+    d: Use a longer timeout only
+    e: Use wall-clock timestamps
+    f: Never retry
+q75:
+  text: What makes a from-scratch lab convincing in an interview?
+  show: 4
+  options:
+    a: Measured results from your own runs
+    b: Your own extensions beyond the lessons
+    c: Explaining trade-offs with what you built
+    d: Copying outputs from the course
+    e: Hiding the code
+    f: Avoiding numbers
