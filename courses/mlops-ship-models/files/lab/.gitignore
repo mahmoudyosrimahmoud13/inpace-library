@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+mlruns/
+mlflow.db
+.datastore/
+pipeline_out/
+model/
+*.jsonl
+*.pt
+*.onnx
+p0*_result.json
+data.lock.json
+params.json

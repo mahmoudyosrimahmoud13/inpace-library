@@ -1,0 +1,8 @@
+# Only what the prediction service needs: no MLflow server, no training tools.
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+skops>=0.10
+mlflow-skinny>=3.0
+fastapi>=0.110
+uvicorn>=0.29

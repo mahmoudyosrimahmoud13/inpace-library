@@ -1,0 +1,215 @@
+q1:
+  right:
+  - a
+  - b
+  why: Data shapes behaviour, and failures are silent until measured.
+q2:
+  right:
+  - a
+  - b
+  why: 'Random split: 25.6; honest time split: 28.0.'
+q3:
+  right:
+  - a
+  - b
+  why: A feature that contains the answer, or is only known afterwards, is a leak.
+q4:
+  right:
+  - a
+  - b
+  why: Beat a simple, sensible prediction clearly, and be suspicious of miracles.
+q5:
+  right:
+  - a
+  why: 'Same settings, same seed, same data: identical predictions.'
+q6:
+  right:
+  - a
+  - b
+  why: Stop bad batches at the door, in every pipeline.
+q7:
+  right:
+  - a
+  why: Range rules catch unit changes that models would silently accept.
+q8:
+  right:
+  - a
+  - b
+  why: 'DVC''s idea: hash-named copies plus a small lock file in git.'
+q9:
+  right:
+  - a
+  why: Git tracks the pointer; the store holds the data.
+q10:
+  right:
+  - a
+  - b
+  why: Code version plus data version make a model reproducible.
+q11:
+  right:
+  - a
+  - b
+  - c
+  why: Plus the model as an artifact. Every run, good or bad.
+q12:
+  right:
+  - a
+  - b
+  why: 'MAE 46.5 and bias -43: calendar features memorized last year.'
+q13:
+  right:
+  - a
+  - b
+  why: 'Treat model files like code: load only what you trust.'
+q14:
+  right:
+  - a
+  why: It documents and checks what the model accepts.
+q15:
+  right:
+  - a
+  - b
+  why: Planning bikes needs to know if you're always short.
+q16:
+  right:
+  - a
+  - b
+  why: 'Same key and an existing output: the output is still right.'
+q17:
+  right:
+  - a
+  - b
+  why: Precise dependencies, minimal reruns.
+q18:
+  right:
+  - a
+  - b
+  why: Fail early, and leave good outputs alone.
+q19:
+  right:
+  - a
+  - b
+  why: Model changes become visible changes.
+q20:
+  right:
+  - a
+  why: Same steps-and-dependencies idea, plus operations.
+q21:
+  right:
+  - a
+  why: Versions never change; aliases say which one does what.
+q22:
+  right:
+  - a
+  - b
+  why: Decouple the service from release decisions.
+q23:
+  right:
+  - a
+  why: 'Same, recent, unseen data: the question is how each does on what''s coming.'
+q24:
+  right:
+  - a
+  why: Small differences are often noise.
+q25:
+  right:
+  - a
+  - b
+  why: MAE 93.0 against 42.5, bias -50.
+q26:
+  right:
+  - a
+  why: Nothing crashes; predictions are quietly wrong.
+q27:
+  right:
+  - a
+  - b
+  why: Project 7's skew test does exactly this.
+q28:
+  right:
+  - a
+  - b
+  why: Conventions differ; a classic skew source.
+q29:
+  right:
+  - a
+  - b
+  why: Check at the door.
+q30:
+  right:
+  - a
+  - b
+  why: Small, fixed, testable releases.
+q31:
+  right:
+  - a
+  - b
+  - c
+  why: Plus data checks and API behaviour; fast and deterministic.
+q32:
+  right:
+  - a
+  - b
+  why: Quality gates catch what unit tests can't.
+q33:
+  right:
+  - a
+  why: No silent lowering of standards.
+q34:
+  right:
+  - a
+  why: check_quality.py exits with 1 when a limit fails.
+q35:
+  right:
+  - a
+  - b
+  why: Two different questions, two different times.
+q36:
+  right:
+  - a
+  - b
+  why: Both make a fixed model decay.
+q37:
+  right:
+  - a
+  - b
+  why: Compare like with like.
+q38:
+  right:
+  - a
+  - b
+  why: Pick input checks that match how your model fails.
+q39:
+  right:
+  - a
+  - b
+  why: Alert on sustained or clear problems.
+q40:
+  right:
+  - a
+  - b
+  why: 49.1 never, 40.1 on alerts (3), 37.5 every 4 weeks (8); the steady bias went unnoticed.
+q41:
+  right:
+  - a
+  - b
+  - c
+  why: Everything needed to use the model correctly later.
+q42:
+  right:
+  - a
+  - b
+  why: Preprocessing travels with the weights.
+q43:
+  right:
+  - a
+  why: 'Same lesson as skops: model files can carry code.'
+q44:
+  right:
+  - a
+  - b
+  why: About 4 to 5 times faster here, from a far smaller dependency.
+q45:
+  right:
+  - a
+  why: torch.expm1 didn't export; comparing outputs catches the silent cases.

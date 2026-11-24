@@ -1,0 +1,26 @@
+<svg viewBox="0 0 520 560" width="520" height="560">
+<defs><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".3"/></filter>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffd166"/></marker></defs>
+<g stroke="#ffd166" stroke-width="4" fill="none" marker-end="url(#a)" stroke-linecap="round">
+<path d="M262 108 L330 150"/><path d="M398 222 L398 288"/><path d="M330 360 L262 402"/>
+<path d="M190 402 L122 360"/><path d="M122 288 L122 222"/><path d="M190 150 L240 112"/>
+</g>
+<g filter="url(#s)">
+<rect x="170" y="44" width="180" height="62" rx="31" fill="#ffd166"/>
+<text x="260" y="83" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">data</text>
+<rect x="308" y="152" width="180" height="62" rx="31" fill="#f3f7ff"/>
+<text x="398" y="191" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">train</text>
+<rect x="308" y="294" width="180" height="62" rx="31" fill="#f3f7ff"/>
+<text x="398" y="333" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">registry</text>
+<rect x="170" y="404" width="180" height="62" rx="31" fill="#ffd166"/>
+<text x="260" y="443" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">serve</text>
+<rect x="32" y="294" width="180" height="62" rx="31" fill="#f3f7ff"/>
+<text x="122" y="333" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">monitor</text>
+<rect x="32" y="152" width="180" height="62" rx="31" fill="#f3f7ff"/>
+<text x="122" y="191" text-anchor="middle" font-family="JBM" font-weight="700" font-size="21" fill="#10233f">retrain</text>
+<circle cx="260" cy="255" r="58" fill="#1e5a3c"/>
+<text x="260" y="250" text-anchor="middle" font-family="JBM" font-weight="700" font-size="17" fill="#f3f7ff">quality</text>
+<text x="260" y="273" text-anchor="middle" font-family="JBM" font-weight="700" font-size="17" fill="#f3f7ff">gate</text>
+</g>
+<text x="260" y="520" text-anchor="middle" font-family="JBM" font-weight="500" font-size="17" fill="#f3f7ff" opacity=".85">CI blocks what the gate rejects</text>
+</svg>

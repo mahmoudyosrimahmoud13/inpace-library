@@ -1,0 +1,300 @@
+id: mlops-ship-models
+title: 'MLOps: ship and run ML and deep learning models'
+version: 1
+language: en
+description: 'Take one model all the way to production and keep it right there. Bikecast predicts hourly bike rentals from
+  real data (Washington D.C., 2011-2012) while demand grows 65% under it. One project a day: an honest training script (time
+  split, baseline, leak check), data validation and DVC-style versioning, experiment tracking with MLflow, a cached pipeline,
+  a model registry with a quality gate and rollback, a FastAPI service with a Docker image, GitHub Actions CI that blocks
+  bad models, monitoring with drift checks and measured retraining policies, and the same steps for a PyTorch model exported
+  to ONNX. Every output shown is real. Builds on the machine learning, deep learning and PyTorch courses. Plan: 9 days, about
+  2 hours a day.'
+image: cover.jpg
+downloads:
+- title: MLflow documentation
+  url: https://mlflow.org/docs/latest/
+- title: UCI Bike Sharing Dataset (the data)
+  url: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
+- title: FastAPI documentation
+  url: https://fastapi.tiangolo.com/
+modules:
+- id: m1
+  title: 'Day 1: From notebook to a training script'
+  lessons:
+  - id: m1-l1
+    title: 'Start here: what you''ll build'
+    file: lessons/m1-l1.md
+    minutes: 15
+    media: lab/
+  - id: m1-l2
+    title: What MLOps is
+    file: lessons/m1-l2.md
+    minutes: 20
+  - id: m1-l3
+    title: 'Project 1: a training script you can rerun and trust'
+    file: lessons/m1-l3.md
+    minutes: 40
+    media: lab/p01_train.py
+  requires:
+  - id: m1-practical
+    type: practical
+    prompt: Do project 1 and its first three variations. Report the validation MAE and bias for each, and how much MAE moves
+      between three seeds. Start the git repository and commit. Hand in your numbers and the commit link or hash.
+  - id: m1-explain
+    type: explain
+    prompt: Explain why a random split flatters a model on time data, and what a leak is, using Bikecast's examples.
+    min_words: 60
+  - id: m1-quiz
+    type: quiz
+    questions:
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    pass: 70
+- id: m2
+  title: 'Day 2: Data checks and data versions'
+  lessons:
+  - id: m2-l1
+    title: Data checks and data versions
+    file: lessons/m2-l1.md
+    minutes: 20
+  - id: m2-l2
+    title: 'Project 2: check every batch, and version the data'
+    file: lessons/m2-l2.md
+    minutes: 40
+    media: lab/p02_data.py
+  requires:
+  - id: m2-practical
+    type: practical
+    prompt: Do project 2, add the 6-hour gap rule, and split problems into errors and warnings. Report how many gaps the real
+      data has and your decision for each rule. Hand in the code and output.
+  - id: m2-explain
+    type: explain
+    prompt: Explain how content-addressed storage and a lock file in git version data, and what a model gains from it.
+    min_words: 60
+  - id: m2-quiz
+    type: quiz
+    questions:
+    - q6
+    - q7
+    - q8
+    - q9
+    - q10
+    pass: 70
+- id: m3
+  title: 'Day 3: Experiment tracking'
+  lessons:
+  - id: m3-l1
+    title: Experiment tracking
+    file: lessons/m3-l1.md
+    minutes: 20
+  - id: m3-l2
+    title: 'Project 3: track every run with MLflow'
+    file: lessons/m3-l2.md
+    minutes: 40
+    media: lab/p03_experiments.py
+  requires:
+  - id: m3-practical
+    type: practical
+    prompt: Do project 3 with max_iter in the grid and a predicted-against-actual plot logged as an artifact. Commit first
+      so runs carry a real commit. Hand in a screenshot of the MLflow UI and your best run's settings.
+  - id: m3-explain
+    type: explain
+    prompt: Explain what you'd log for every training run, and why the data version and the commit matter.
+    min_words: 60
+  - id: m3-quiz
+    type: quiz
+    questions:
+    - q11
+    - q12
+    - q13
+    - q14
+    - q15
+    pass: 70
+- id: m4
+  title: 'Day 4: Pipelines'
+  lessons:
+  - id: m4-l1
+    title: 'Pipelines: steps, inputs, outputs, and caching'
+    file: lessons/m4-l1.md
+    minutes: 20
+  - id: m4-l2
+    title: 'Project 4: a pipeline that reruns only what changed'
+    file: lessons/m4-l2.md
+    minutes: 40
+    media: lab/p04_pipeline.py
+  requires:
+  - id: m4-practical
+    type: practical
+    prompt: 'Do project 4 and add the report step. Show, with output, which steps rerun after: a training setting, a validation
+      setting, a change to step_features, and a data change. Hand in the code and the four outputs.'
+  - id: m4-explain
+    type: explain
+    prompt: Explain how a pipeline decides to skip a step, and why each step hashes only the settings it uses.
+    min_words: 60
+  - id: m4-quiz
+    type: quiz
+    questions:
+    - q16
+    - q17
+    - q18
+    - q19
+    - q20
+    pass: 70
+- id: m5
+  title: 'Day 5: The model registry'
+  lessons:
+  - id: m5-l1
+    title: 'The model registry: versions, a gate, and rollback'
+    file: lessons/m5-l1.md
+    minutes: 20
+  - id: m5-l2
+    title: 'Project 5: a registry with a quality gate and rollback'
+    file: lessons/m5-l2.md
+    minutes: 40
+    media: lab/p05_registry.py
+  requires:
+  - id: m5-practical
+    type: practical
+    prompt: Do project 5, add the weekend rule to the gate and record the gate's result as tags on each version. Hand in the
+      code, the output, and a screenshot of the Models page.
+  - id: m5-explain
+    type: explain
+    prompt: Explain why production should load a model by alias, and how promotion and rollback work with aliases.
+    min_words: 60
+  - id: m5-quiz
+    type: quiz
+    questions:
+    - q21
+    - q22
+    - q23
+    - q24
+    - q25
+    pass: 70
+- id: m6
+  title: 'Day 6: Serving'
+  lessons:
+  - id: m6-l1
+    title: 'Serving: online, batch, and containers'
+    file: lessons/m6-l1.md
+    minutes: 20
+  - id: m6-l2
+    title: 'Project 6: a prediction service, tested and packaged'
+    file: lessons/m6-l2.md
+    minutes: 50
+    media: lab/serve.py
+  requires:
+  - id: m6-practical
+    type: practical
+    prompt: Do project 6, run the service with uvicorn and try /docs, build and run the Docker image (or explain what stopped
+      you), and write the batch script. Hand in the image size, a /predict response from the container, and the script.
+  - id: m6-explain
+    type: explain
+    prompt: Explain training/serving skew with one Bikecast example, and two ways to prevent it.
+    min_words: 60
+  - id: m6-quiz
+    type: quiz
+    questions:
+    - q26
+    - q27
+    - q28
+    - q29
+    - q30
+    pass: 70
+- id: m7
+  title: 'Day 7: CI/CD'
+  lessons:
+  - id: m7-l1
+    title: 'CI/CD for models: tests that matter'
+    file: lessons/m7-l1.md
+    minutes: 20
+  - id: m7-l2
+    title: 'Project 7: CI that blocks bad models'
+    file: lessons/m7-l2.md
+    minutes: 45
+    media: lab/p07_ci.py
+  requires:
+  - id: m7-practical
+    type: practical
+    prompt: Push the project to GitHub. Show a green Actions run, then a pull request with max_iter 15 that the gate turns
+      red. Add the weather monotonicity test. Hand in the repository link and both run links.
+  - id: m7-explain
+    type: explain
+    prompt: Explain the difference between the quality gate in CI and the promotion gate in the registry.
+    min_words: 60
+  - id: m7-quiz
+    type: quiz
+    questions:
+    - q31
+    - q32
+    - q33
+    - q34
+    - q35
+    pass: 70
+- id: m8
+  title: 'Day 8: Monitoring and retraining'
+  lessons:
+  - id: m8-l1
+    title: Monitoring, drift, and retraining
+    file: lessons/m8-l1.md
+    minutes: 20
+  - id: m8-l2
+    title: 'Project 8: watch the model, catch drift, and retrain'
+    file: lessons/m8-l2.md
+    minutes: 45
+    media: lab/p08_monitor.py
+  requires:
+  - id: m8-practical
+    type: practical
+    prompt: Do project 8 with a bias alert and a combined policy (every 8 weeks plus alerts). Make a table of MAE and retrains
+      for all your policies and say which you'd run in production. Hand in the code and table.
+  - id: m8-explain
+    type: explain
+    prompt: Explain why live errors must be compared with an honest pre-launch error, not the training error.
+    min_words: 60
+  - id: m8-quiz
+    type: quiz
+    questions:
+    - q36
+    - q37
+    - q38
+    - q39
+    - q40
+    pass: 70
+- id: m9
+  title: 'Day 9: Deep learning, and the capstone'
+  lessons:
+  - id: m9-l1
+    title: Deep learning models in the same pipeline
+    file: lessons/m9-l1.md
+    minutes: 20
+  - id: m9-l2
+    title: 'Project 9: a PyTorch model, checkpointed and exported to ONNX'
+    file: lessons/m9-l2.md
+    minutes: 40
+    media: lab/p09_deep_learning.py
+  - id: m9-l3
+    title: 'Capstone: ship your own model'
+    file: lessons/m9-l3.md
+    minutes: 30
+    media: lab/
+  requires:
+  - id: m9-practical
+    type: practical
+    prompt: 'Do the capstone: take a model of your own through all eight steps. Hand in the repository link (with a green
+      and a blocked Actions run), the README, and your worst bug with the step that would have caught it.'
+  - id: m9-explain
+    type: explain
+    prompt: Explain what a complete deep learning checkpoint contains, and why you check an ONNX export.
+    min_words: 60
+  - id: m9-quiz
+    type: quiz
+    questions:
+    - q41
+    - q42
+    - q43
+    - q44
+    - q45
+    pass: 70

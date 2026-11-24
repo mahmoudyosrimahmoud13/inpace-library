@@ -1,0 +1,450 @@
+q1:
+  text: Why is MLOps harder than shipping ordinary code?
+  show: 4
+  options:
+    a: A model's behaviour comes from data as well as code
+    b: A wrong model usually returns plausible numbers instead of errors
+    c: Models can't be stored in files
+    d: Python can't serve HTTP
+    e: Models never change after training
+    f: Tests are impossible for models
+q2:
+  text: Why test Bikecast on a period after its training data?
+  show: 4
+  options:
+    a: It will predict the future, so the test should look like the future
+    b: A random split lets it learn from hours next to the ones it's tested on
+    c: Random splits are slower
+    d: Time splits always give lower errors
+    e: scikit-learn requires it
+    f: It removes the need for a baseline
+q3:
+  text: Why were casual and registered a leak?
+  show: 4
+  options:
+    a: They add up exactly to the count being predicted
+    b: Nobody knows them at prediction time
+    c: They're text columns
+    d: They have missing values
+    e: They're weather data
+    f: They're always zero
+q4:
+  text: What is a baseline for?
+  show: 4
+  options:
+    a: To show whether the model is worth deploying at all
+    b: 'To catch bugs: results far better than expected often mean a leak'
+    c: To replace the model in production
+    d: To speed up training
+    e: To version the data
+    f: To remove the need for validation
+q5:
+  text: What made training reproducible in project 1?
+  show: 4
+  options:
+    a: All settings in one dictionary and a fixed random seed
+    b: Training twice on the same data
+    c: Using a GPU
+    d: A random split
+    e: Deleting old models
+    f: Logging to MLflow
+q6:
+  text: Why validate every data batch before use?
+  show: 4
+  options:
+    a: Bad data rarely crashes anything; it quietly makes the model worse
+    b: Problems like unit changes, duplicates and gaps happen upstream
+    c: Validation trains the model
+    d: It compresses the data
+    e: Only to save disk space
+    f: Because pandas requires it
+q7:
+  text: A temperature of 21.5 arrives where values are 0 to 1. What probably happened?
+  show: 4
+  options:
+    a: A feed started sending Celsius instead of normalized values
+    b: A heat wave
+    c: The model drifted
+    d: Nothing; it's fine
+    e: The hour column is wrong
+    f: The data was compressed
+q8:
+  text: How does a content-addressed store version data?
+  show: 4
+  options:
+    a: Each file is stored under the hash of its contents
+    b: The same contents always get the same name, so nothing is stored twice
+    c: Files are named by date
+    d: Each version replaces the last
+    e: Data is committed directly to git
+    f: It stores only the differences in rows
+q9:
+  text: What goes into git when using DVC-style data versioning?
+  show: 4
+  options:
+    a: A small lock file with the hash of the data in use
+    b: The full data file every time
+    c: Nothing
+    d: The model only
+    e: The hash store itself
+    f: A copy of every row
+q10:
+  text: Why record the data's hash with every model?
+  show: 4
+  options:
+    a: So any model can be traced back to the exact data it saw
+    b: To reproduce the model later
+    c: To make training faster
+    d: To encrypt the data
+    e: Because MLflow can't run without it
+    f: To remove duplicates
+q11:
+  text: What should experiment tracking record for each run?
+  show: 4
+  options:
+    a: Parameters (settings)
+    b: Metrics (scores, time)
+    c: The data version and code commit
+    d: Your screen resolution
+    e: Only the best run
+    f: Nothing, if the score is bad
+q12:
+  text: Why did adding month and season make the model worse?
+  show: 4
+  options:
+    a: With one year of training data, they taught the model 2011's level for each month
+    b: 2012 was much busier, so those levels were too low
+    c: Months are text
+    d: They leak the answer
+    e: They slow training down
+    f: MLflow can't log them
+q13:
+  text: Why did MLflow ask you to name a trusted type when logging the model?
+  show: 4
+  options:
+    a: Saved model files can carry code, so skops only loads types known to be safe
+    b: Loading a tampered model file can be as risky as running someone's script
+    c: The model was too big
+    d: MLflow needs a license
+    e: The data had missing values
+    f: Trees can't be saved
+q14:
+  text: What is a model signature in MLflow?
+  show: 4
+  options:
+    a: The input columns and types (and outputs) the model expects
+    b: A cryptographic signature of the author
+    c: The model's file size
+    d: The training time
+    e: The git commit
+    f: The model's name
+q15:
+  text: When comparing runs, why look at bias as well as MAE?
+  show: 4
+  options:
+    a: MAE says how far off; bias says in which direction
+    b: A slightly lower MAE with much worse bias can be the wrong choice
+    c: Bias is always zero
+    d: MAE can't be compared between runs
+    e: Bias measures training time
+    f: MLflow ranks by bias
+q16:
+  text: How does the pipeline decide to skip a step?
+  show: 4
+  options:
+    a: A hash of the step's code, the settings it uses and its input files matches the last run
+    b: The output file still exists
+    c: The step ran less than a day ago
+    d: The user says so
+    e: The data is small
+    f: Steps are never skipped
+q17:
+  text: Why does each step hash only the settings it uses?
+  show: 4
+  options:
+    a: So changing an unrelated setting doesn't rerun it
+    b: Changing the validation window then reruns only evaluation
+    c: To save memory
+    d: Settings can't be hashed together
+    e: To hide settings from git
+    f: Because JSON is slow
+q18:
+  text: What happened when a bad file arrived in project 4?
+  show: 4
+  options:
+    a: The pipeline stopped at validation
+    b: The last good model stayed untouched
+    c: It trained a model on the bad data
+    d: It deleted all outputs
+    e: It skipped validation
+    f: It fixed the data itself
+q19:
+  text: Why keep often-changed settings in params.json under git?
+  show: 4
+  options:
+    a: A model change becomes a small, reviewable diff
+    b: CI can run the pipeline on it
+    c: JSON trains faster
+    d: Git requires it
+    e: To hide them from the pipeline
+    f: So nobody can change them
+q20:
+  text: What do orchestrators like Airflow or Dagster add to this idea?
+  show: 4
+  options:
+    a: Schedules, retries, alerts and parallel steps across machines
+    b: A different meaning of 'pipeline'
+    c: Automatic model accuracy
+    d: Data versioning only
+    e: Nothing
+    f: A replacement for tests
+q21:
+  text: What is an alias in the model registry?
+  show: 4
+  options:
+    a: A movable name, like 'champion', pointing to a model version
+    b: Another word for version number
+    c: The model's file name
+    d: A copy of the model
+    e: A training setting
+    f: A user account
+q22:
+  text: Why does the service load models:/bikecast@champion instead of a version number?
+  show: 4
+  options:
+    a: Releasing and rolling back become alias moves, with no code change
+    b: The service always gets whatever passed the gate
+    c: Version numbers expire
+    d: Aliases load faster
+    e: MLflow forbids version numbers
+    f: It saves disk space
+q23:
+  text: What should a promotion gate compare?
+  show: 4
+  options:
+    a: Challenger and champion on the same recent data neither trained on
+    b: The challenger's training error with the champion's
+    c: Their file sizes only
+    d: The challenger against itself
+    e: Their training times only
+    f: Nothing; newer is better
+q24:
+  text: Why require at least 2% improvement to promote?
+  show: 4
+  options:
+    a: So noise doesn't flip the champion back and forth
+    b: MLflow requires it
+    c: To make training faster
+    d: Because 2% is the bias
+    e: To make rollback impossible
+    f: It's a legal rule
+q25:
+  text: In project 5, why did version 3 fail the gate?
+  show: 4
+  options:
+    a: With only 20 trees its error was about twice the champion's
+    b: Its bias was far worse
+    c: It was trained on less data
+    d: It had no alias
+    e: It was the third version
+    f: It used different features
+q26:
+  text: What is training/serving skew?
+  show: 4
+  options:
+    a: The service computes features differently from training, so the model gets wrong inputs
+    b: Serving is slower than training
+    c: The model is larger in production
+    d: Training uses more data
+    e: A drift in the weather
+    f: Two models disagreeing
+q27:
+  text: Which prevent training/serving skew?
+  show: 4
+  options:
+    a: Shared feature code for training and serving
+    b: A test comparing the service's features with training data for a known input
+    c: More training epochs
+    d: A bigger Docker image
+    e: Logging less
+    f: Random splits
+q28:
+  text: Why did serve.py convert weekday carefully?
+  show: 4
+  options:
+    a: The data uses 0 for Sunday; Python's dayofweek uses 0 for Monday
+    b: A mismatch would silently shift every weekday
+    c: FastAPI requires it
+    d: Weekdays are text
+    e: To speed up predictions
+    f: Holidays are weekdays
+q29:
+  text: Why validate request bodies with Pydantic in the API?
+  show: 4
+  options:
+    a: To refuse nonsense with a clear 422 instead of returning a nonsense prediction
+    b: Every request is untrusted input
+    c: To train the model
+    d: To compress responses
+    e: To log less
+    f: Pydantic makes models more accurate
+q30:
+  text: What belongs in the serving Docker image?
+  show: 4
+  options:
+    a: The code, the serving libraries and one fixed model
+    b: Only what serving needs, running as a non-root user
+    c: The training data and notebooks
+    d: The MLflow server and UI
+    e: Every version of the model
+    f: Your SSH keys
+q31:
+  text: Which tests matter most in CI for an ML project?
+  show: 4
+  options:
+    a: Serving features equal training features
+    b: The model beats the baseline by a margin
+    c: Training is reproducible
+    d: The README has no typos
+    e: The model file is under 1 KB
+    f: Tests that take hours
+q32:
+  text: In project 7, why did the max_iter 15 change pass the tests but fail CI?
+  show: 4
+  options:
+    a: The code was fine, but the model's quality fell below the gate's limits
+    b: The gate compares metrics, which tests of code don't
+    c: The tests were broken
+    d: GitHub was down
+    e: The data changed
+    f: params.json is invalid JSON
+q33:
+  text: Why keep the quality limits in quality.json?
+  show: 4
+  options:
+    a: Changing a limit becomes a visible, reviewed change
+    b: JSON is faster than Python
+    c: GitHub requires it
+    d: To hide the limits
+    e: So the limits change automatically
+    f: To skip tests
+q34:
+  text: How does a CI step fail?
+  show: 4
+  options:
+    a: Its command exits with a non-zero code
+    b: It prints the word FAIL
+    c: It takes longer than a minute
+    d: It writes a file
+    e: It uses Python
+    f: It has no output
+q35:
+  text: How do the CI gate and the registry's promotion gate differ?
+  show: 4
+  options:
+    a: CI asks whether a change is safe to merge, on a fixed validation window
+    b: Promotion asks whether a model beats production now, on the latest data
+    c: They're the same thing
+    d: CI gates only check code style
+    e: Promotion gates run on every push
+    f: Neither uses metrics
+q36:
+  text: What is the difference between data drift and concept drift?
+  show: 4
+  options:
+    a: 'Data drift: the inputs change'
+    b: 'Concept drift: the relationship between inputs and the answer changes'
+    c: They're the same
+    d: Data drift is only about missing values
+    e: Concept drift means the code changed
+    f: Data drift only happens in images
+q37:
+  text: Why compare weekly errors with an error measured on unseen data before launch?
+  show: 4
+  options:
+    a: The training error is too optimistic, so every week would look bad
+    b: It's an honest picture of normal
+    c: It's faster
+    d: The training error isn't stored
+    e: MLflow requires it
+    f: Weekly errors are always lower
+q38:
+  text: Why was 'share of hours beyond the training range' a good input check for Bikecast?
+  show: 4
+  options:
+    a: Tree models can't predict beyond what they trained on
+    b: It flagged early June while the error was still under the alert line
+    c: It measures weather
+    d: It replaces labels
+    e: It's always 0%
+    f: It measures training time
+q39:
+  text: Why alert only after two bad weeks in a row?
+  show: 4
+  options:
+    a: Weekly errors jump with holidays and storms; one bad week is often noise
+    b: Alerts nobody trusts get ignored
+    c: Monitoring can only run every two weeks
+    d: Labels arrive after two weeks
+    e: To retrain more often
+    f: It's required by law
+q40:
+  text: What did project 8 show about retraining policies?
+  show: 4
+  options:
+    a: Never retraining had the highest error
+    b: Measured on this data, retraining every 4 weeks did best, with more retrains
+    c: Retraining always makes models worse
+    d: Alerts caught the July to October bias
+    e: One retrain is always enough
+    f: Policies can't be compared
+q41:
+  text: What should a complete deep learning checkpoint contain?
+  show: 4
+  options:
+    a: The weights
+    b: The preprocessing (like feature means and standard deviations)
+    c: The settings, feature order and data version
+    d: The whole training dataset
+    e: Your password
+    f: Only the optimizer's learning rate
+q42:
+  text: Why put normalization inside the model as buffers?
+  show: 4
+  options:
+    a: Whoever loads the model can't forget to normalize
+    b: Forgotten normalization is a common, silent serving bug
+    c: Buffers train faster
+    d: ONNX requires it
+    e: It makes the file smaller
+    f: To hide the means
+q43:
+  text: Why load checkpoints with weights_only=True?
+  show: 4
+  options:
+    a: Full checkpoints can run code when loaded; weights_only refuses anything but tensors and simple types
+    b: It's faster on GPUs
+    c: It loads the optimizer too
+    d: It compresses the file
+    e: It's required for ONNX
+    f: It skips the buffers
+q44:
+  text: Why export a PyTorch model to ONNX for serving?
+  show: 4
+  options:
+    a: ONNX Runtime is a much smaller install than PyTorch
+    b: It's often faster for CPU inference
+    c: It retrains the model
+    d: It removes the need for tests
+    e: It improves accuracy
+    f: It's the only way to save weights
+q45:
+  text: What does checking an ONNX export catch?
+  show: 4
+  options:
+    a: Operations that don't export, or exports that give different numbers
+    b: Data drift
+    c: Leaky features
+    d: Slow training
+    e: Wrong aliases
+    f: Missing labels

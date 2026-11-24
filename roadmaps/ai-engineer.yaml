@@ -43,3 +43,6 @@ steps:
   - course: system-design-beginners
     note: General system design, for interview loops that also have a classic design round.
     optional: true
+  - course: mlops-ship-models
+    note: Deploy and run ML models with MLflow, FastAPI, Docker and GitHub Actions, and catch drift before users do.
+    optional: true

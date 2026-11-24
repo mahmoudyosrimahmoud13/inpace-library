@@ -29,3 +29,6 @@ steps:
   - course: mls-3-unsupervised-rl
     note: Clustering, recommenders and reinforcement learning.
     optional: true
+  - course: mlops-ship-models
+    note: When your models need to run for real. Pipelines, a model registry, serving and drift monitoring.
+    optional: true

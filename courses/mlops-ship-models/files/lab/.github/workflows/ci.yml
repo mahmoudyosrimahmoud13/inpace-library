@@ -1,0 +1,31 @@
+# Runs on every push and pull request: the same steps p07_ci.py runs on your computer.
+name: bikecast-ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-train-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Unit and service tests
+        run: pytest -q tests
+      - name: Run the training pipeline
+        run: python p04_pipeline.py run
+      - name: Quality gate
+        run: python check_quality.py
+      - name: Keep the model and its scores
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-and-metrics
+          path: |
+            pipeline_out/model.pkl
+            pipeline_out/metrics.json

@@ -34,3 +34,5 @@ steps:
     note: Networks that see. Convolutions and computer vision.
   - course: dl-5-sequence-models
     note: Attention and transformers, the ideas behind today's language models.
+  - course: mlops-ship-models
+    note: "The last step to a job: ship a model to production and keep it right, with MLflow, FastAPI, Docker, CI and monitoring."

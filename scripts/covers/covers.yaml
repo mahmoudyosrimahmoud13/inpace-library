@@ -66,6 +66,14 @@ courses:
     sub: Kestra, BigQuery, dbt, Spark and Kafka, with the Data Engineering Zoomcamp
     tags: [16 lessons, 6 modules]
 
+  mlops-ship-models:
+    theme: forest
+    art: mlops-ship-models.svg
+    chip: 9 projects · 9 days
+    title: MLOps:<br>ship it,<br>keep it right
+    sub: One real model from a script to a monitored service, with MLflow, FastAPI, Docker and CI
+    tags: [20 lessons, 9 projects]
+
   rag-from-scratch:
     theme: sky
     art: rag-from-scratch.svg

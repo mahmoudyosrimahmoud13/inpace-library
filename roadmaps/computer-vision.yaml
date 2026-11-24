@@ -25,3 +25,6 @@ steps:
   - course: llms-essentials
     note: Transformers and how vision-language models build on LLMs.
     optional: true
+  - course: mlops-ship-models
+    note: Ship a vision model like any other. Versioned data, a registry, a service, CI, monitoring and ONNX export.
+    optional: true

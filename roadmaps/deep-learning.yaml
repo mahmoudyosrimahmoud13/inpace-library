@@ -30,3 +30,6 @@ steps:
   - course: karpathy-zero-to-hero
     note: Build backpropagation, a language model and GPT yourself, following Andrej Karpathy's lectures.
     optional: true
+  - course: mlops-ship-models
+    note: Take a model from training to a tested, monitored service. The last day does it for a PyTorch model with ONNX.
+    optional: true
